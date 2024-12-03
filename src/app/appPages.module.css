@@ -1,0 +1,289 @@
+.appLandingPage{
+  position: absolute;
+  min-height: 100vh;
+  width: 100%;
+  background: linear-gradient(rgb(52, 51, 62) 0%, rgb(31, 78, 89) 35%, rgb(47, 40, 183) 100%);
+  border-radius: 2px;
+  color: #ffff;
+  top: 0;
+  overflow-y: auto;
+        height: 100%;
+}
+
+.appsLandingCopy{
+  padding: 10px;
+}
+
+
+.pageContent{
+  padding-bottom: 3rem; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+/* bouncing text at bottom of file, kept separate due to size */
+
+.appButtonsComponent{
+  display: flex;
+  flex-direction: row;
+}
+
+.designCredit{
+  text-align: center;
+}
+
+.landingFooter{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 3rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  
+  min-height: 3rem;
+}
+
+.landingFooter ul{
+  display: flex;
+  flex-direction: row;
+}
+
+.appPageNavLinks ul{
+  display: flex;
+  flex-direction: row;
+}
+/* buttons */
+
+.eurovisionBingo, .bigFinishGenerator,.derekAdams{
+    position: relative;
+    text-align: center;
+  }
+
+.appStoreDiv > p{
+  text-align: center;
+}
+
+.appStoreLinks{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  padding-left: 40px;
+}
+
+.iosAppStoreLogo{
+  width: 40px;
+}
+
+.googlePlayLogo{
+  max-width: 150px;
+  width: auto;
+}
+
+.homeLink {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+
+.buttonImage {
+    display: block;
+    min-height: 150px;
+    max-width: 200px;
+    border: 1px solid black;
+    border-radius: 3px;
+    border-style: groove;
+    width: auto;
+    height: auto;
+    opacity: 0.8;
+    transition: opacity 0.3s ease-in-out;
+    position: relative;
+    margin: 5px;
+    border-radius: 6px;
+    box-shadow: 5px 2px 2px rgb(10,83,200);
+    -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+    mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+    -webkit-mask-size: 800%;
+    mask-size: 800%;
+    -webkit-mask-position: 0;
+    mask-position: 0;
+  }
+
+.buttonImage:hover {
+    transition: mask-position 2s ease,-webkit-mask-position 2s ease;
+    -webkit-mask-position: 120%;
+    mask-position: 120%;
+    opacity: 1;
+}
+
+.buttonText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #011346;
+    padding: 10px 20px;
+    font-size: 25px;
+    font-weight: bold;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1;
+    text-shadow:2px 2px 2px rgb(252, 243, 3);
+  }
+
+
+
+/* DAFT WEE APPS BOUNCE TEXT */
+
+.bouncingText {
+  position: relative;
+  display: flex;
+  font-size: 70px;
+  font-weight: 900;
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+}
+
+.d, .a, .f, .t, .space, .weeApps {
+  position: relative;
+  color: #4cc9f0;
+  text-shadow: 0 3px #4361ee, 0 5px #4361ee, 0 7px #4361ee;
+}
+
+.d {
+  animation: bounce 1s ease infinite;
+  -webkit-animation: bounce 1s ease infinite;
+}
+
+.a {
+  animation: bounce 1s ease infinite .1s;
+  -webkit-animation: bounce 1s ease infinite .1s;
+}
+
+.f {
+  animation: bounce 1s ease infinite .2s;
+  -webkit-animation: bounce 1s ease infinite .2s;
+}
+
+.t {
+  animation: bounce 1s ease infinite .3s;
+  -webkit-animation: bounce 1s ease infinite .3s;
+}
+
+.space {
+  visibility: hidden;
+  width: 25px;
+}
+
+ @keyframes bounce {
+        0%   { transform: scale(1,1) translateY(0); }
+        10%  { transform: scale(1.1,.9) translateY(0); }
+        30%  { transform: scale(.9,1.1)   translateY(-55px);}
+        50%  { transform: scale(1.05,.95) translateY(0); }
+        58%  { transform: scale(1,1) translateY(-7px); }
+        65%  { transform: scale(1,1) translateY(0);}
+        100% { transform: scale(1,1) translateY(0);}
+    }
+
+@-webkit-keyframes bounce {
+       0%   { transform: scale(1,1) translateY(0); }
+        10%  { transform: scale(1.1,.9) translateY(0); }
+        30%  { transform: scale(.9,1.1)   translateY(-55px);}
+        50%  { transform: scale(1.05,.95) translateY(0); }
+        58%  { transform: scale(1,1) translateY(-7px);}
+        65%  { transform: scale(1,1) translateY(0);}
+        100% { transform: scale(1,1) translateY(0);} 
+}
+
+
+@keyframes scale {
+  0% {transform: scaleX(1);}
+  25% {transform: scaleX(0.4);}
+  50% {transform: scaleX(1);}
+  75% {transform: scaleX(0.9);}
+  100% {transform: scaleX(1);}
+}
+
+@-webkit-keyframes scale {
+   0% {transform: scaleX(1);}
+  25% {transform: scaleX(0.4);}
+  50% {transform: scaleX(1);}
+  75% {transform: scaleX(0.9);}
+  100% {transform: scaleX(1);}
+}
+
+
+@media only screen and (max-width: 700px) {
+ 
+  .appButtonsComponent{
+    flex-direction: column;
+  }
+
+  .appsLandingCopy > p{
+    font-size: 12px;
+  }
+
+  .pageContent{
+    overflow-y: auto;
+    padding-bottom: 1.5rem;
+  }
+
+  .landingFooter{
+    min-height: 1.5rem;
+    margin-top: 10%;
+  }
+
+  .bouncingText {
+    font-size: 50px;
+    font-weight: 700;
+  }
+
+  .buttonImage {
+    display: block;
+    min-height: 100px;
+    max-width: 180px;
+}
+
+.buttonText {
+  font-size: 18px;
+}
+}
+
+@media only screen and (max-width: 600px) {
+
+  .appsLandingCopy > p, .appsLandingCopy > aside {
+    font-size: 12px;
+  }
+
+  .bouncingText {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 10%;
+  }
+
+
+}
+
+@media only screen and (max-width: 470px) {
+  .appLandingPage{
+    overflow-y: auto;
+    }
+
+  .appsLandingCopy > p{
+    font-size: 12px;
+  }
+
+  .bouncingText {
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+@media only screen and (max-width: 400px) {
+
+  .bouncingText {
+    font-size: 30px;
+    font-weight: 500;
+  }
+}

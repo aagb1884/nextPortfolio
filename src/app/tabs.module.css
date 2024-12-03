@@ -1,0 +1,90 @@
+.FirstTab > summary > p, .SecondTab > summary > p, .ThirdTab > summary > p {
+    font-size: 22px;
+    line-height: 2.5;
+    padding: 15px;
+    text-align: left;
+  }
+  
+  .SecondTab > ul > li {
+    padding: 10px;
+    text-align: left;
+  }
+
+  .projectDescription {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 18px;
+    line-height: 2;
+  }
+  
+  .projectDescription > p {
+    padding: 5px;
+    text-align: left;
+  }
+
+  .projectDescription > ul {
+    list-style: none;
+  }
+
+  .techStack {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  .project > h2 {
+    background-color: rgb(135, 206, 235, 0.1);
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: skyblue;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px
+  }
+  
+  .podcasting, .published-works > div, .live-events > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .podcasting > p {
+    padding: 10px;
+  }
+  
+  .podcasting > h2, .published-works > h2, .live-events > h2 {
+    width: 100%;
+  } 
+  
+  .liveEventsList > li, .collections > li, .anthologies > li, .journals > lii {
+    line-height: 2.5;
+    border-bottom: solid skyblue 1px;
+    list-style: none;
+  }
+
+  .minimise {
+    text-align: center; 
+    border: 1px solid skyblue;
+    border-radius: 5px; 
+    width: 50%;
+    margin-top: 10px;
+  }
+
+  .slideContainer {
+    width: 100%;
+  }
+  
+  .slideImage {
+    width: 800px;
+  }
+  @media (max-width: 900px) {
+    .slideImage {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,413 @@
+.bfContainer{
+  background-color: #ffffff;
+  position: relative;
+  min-height: 100vh;
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  align-items: center;
+  z-index: 0;
+  width: 100%;
+    /* overflow-y: auto;
+          height: 100%; */
+}
+
+/* header  */
+.bigFinishHeader {
+  background-color: #972C34;
+  color: white;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.headerWithNav{
+  position: fixed;
+  z-index:1;
+  width: 100%;
+  height: 12vh;
+  top: 0;
+  background-color: #972C34;
+  color: white;
+}
+
+.bfAppLinks {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.appPageNavLinks > ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+.appPageNavLinks > ul > li {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.bigFinishHeader > h1 {
+  line-height: 0.9;
+}
+
+.bigFinishHeader > h3 {
+  padding-right: 40px
+}
+
+.the {
+  font-size: 2rem;
+  font-stretch: extra-condensed;
+  margin-left: 5px;
+  margin-right: 10px
+}
+
+.big {
+  font-size: 4.2rem;
+  font-stretch: extra-expanded;
+}
+
+.finish {
+  font-size: 2.2rem;
+  font-weight: bolder;
+  padding-left: 3px;
+}
+
+.boxsetGenerator {
+  font-size: 2rem;
+  margin-left: 10px;
+}
+
+.line {
+  margin: 10px;
+  font-size: 4rem;
+  padding-bottom: 0.1%;
+  font-weight: lighter;
+}
+
+
+.bfAside{
+  padding-top: 15%
+}
+
+/* main screen */
+
+.randomiser {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  height: 100%;
+  margin-top: 30vh;
+  margin-bottom: 70px;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 60%;
+  background-color: #fff;
+  align-items: center;
+  /* justify-content: center; */
+  z-index: 0;
+  overflow-y: scroll;
+}
+
+.randomiserButtons{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  position: relative;
+  align-items: center;
+}
+
+.gifWindow {
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.gifImage {
+  opacity: 0.9;
+  object-fit: contain;
+  width: 100%;
+  height: 225px;
+}
+
+.firstRow, .secondRow {
+  display: flex;
+  flex-direction: row;
+}
+
+/* buttons */
+.bfbuttonContainer {
+  display: flex;
+  border-width: 3px;
+  border-color: #ffd33d; 
+  border-radius: 5px;
+  width: 170px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+.bfbutton{
+  background-color: #972C34;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  align-items: 'center';
+  justify-content: 'center';
+  margin: 5px;
+  padding: 5px;
+  width: 99%;
+  height: 99%;
+  position: relative;
+  top: 0;
+  left: 0;
+  border-radius: 5px;
+  border-width: 3px;
+  border-color: black;
+  flex: 1;
+}
+
+/* generated story */
+.generatedStory {
+  max-width: 80%;
+  margin-top: 20px;
+}
+
+.generatedStory > p {
+  margin-top: 0px;
+  line-height: 1.4;
+  color: black;
+}
+
+.mainCharacter, .location, .villain, .supportingCharacter{
+  text-align: left;
+  line-height: 0.9;
+  margin-top: 5px;
+}
+
+/* clear/share  */
+
+.clearAndShare {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.clearAllButton, .shareButton{
+  margin-top: 5px;
+  background-color: #972C34;
+  color: white;
+  padding: 5px;
+}
+
+.shareButton{
+  background-color: rgb(64, 133, 224);
+}
+
+.socialMediaShare .react-share__ShareButton{
+  margin: 5px;
+}
+
+.bfShareModal{
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+.shareModal {
+  display: flex;
+  background: rgb(64, 133, 224, 0.95);
+  align-items: center;
+  margin: 5px;
+  padding: 6px;
+  border-radius: 5px;
+  box-shadow: 0 30px 40px rgba(0,0,0,.3);
+  width: 100%;
+}
+.socialMediaShare{
+  background: rgba(10, 48, 99, 0.2);
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 5%;
+  width: 85%;
+}
+
+#clipboard {
+  width: 30px;
+  height: 30px;
+}
+
+
+.copyClipboard {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* footer  */
+.bigFinishFooter {
+  background-color: #972C34;
+  color: white;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 70px;
+  z-index: 3;
+}
+
+.footerAppStoreLink {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 18px;
+  padding: 5px;
+  width: 48.5%;
+}
+.footerIosAppStoreLogo {
+  width: 30px;
+  height: auto;
+  margin: 0;
+  display: block;
+}
+
+.line{
+  width: 1%
+}
+
+.fitton {
+  width: 48.5%
+}
+
+@media screen and (max-width: 1000px) {
+  .footerAppStoreLink {
+    gap: 10px;
+  }
+  .footerAppStoreLink > p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 670px) {
+ .bigFinishHeader{
+  height:75px;
+ }
+ .bfAppLinks > .appPageNavLinks > ul > li {
+  font-size: 16px;
+ }
+
+ .bfAppLinks {
+  height: 10%;
+  
+ }
+
+ .ideasAreHard{
+  font-size: 14px;
+ }
+ .the {
+font-size: medium;
+padding-left: 5px;
+ }
+ .big{
+font-size: larger;
+padding-left: 2px;
+ }
+ .finish{
+font-size: larger;
+ }
+ .boxsetGenerator{
+font-size: medium;
+ }
+
+.bigFinishFooter > h1 {
+  padding-left: 5px;
+}
+
+.line {
+  margin: 10px;
+  font-size: 3rem;
+  padding-bottom: 15px;
+}
+.button{
+  margin: 5px;
+}
+
+.fitton{
+  font-size: small;
+  padding: 1%;
+}
+
+.randomiser{
+  margin-top: 120px;
+}
+.footerAppStoreLink > p {
+  font-size: 12px;
+}
+.footerIosAppStoreLogo {
+  width: 25px;
+}
+}
+
+@media only screen and (max-width: 470px) {
+  .ideasAreHard{
+    font-size: 10px;
+   }
+    .bigFinishHeader {
+      font-size: 8px;
+      height: 75px;
+    }
+    .bigFinishFooter{
+      font-size: xx-small
+    }
+    .the {
+      font-size: small;
+      padding-left: 20px;
+       }
+       .big{
+      font-size: medium;
+      padding-left: 2px;
+       }
+       .finish{
+      font-size: medium;
+       }
+       .boxsetGenerator{
+      font-size: small;
+       }
+       /* .randomiser {
+        top: 40%;
+      } */
+      .socialMediaShare .react-share__ShareButton{
+        width: 10px;
+        height: 10px;
+        margin: 10px;
+    }
+      .socialMediaShare {
+        width: 110%;
+    }
+    /* aside{
+      font-size: smaller;
+    } */
+    .footerAppStoreLink > p {
+      font-size: 8px;
+    }
+  }

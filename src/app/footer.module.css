@@ -1,0 +1,60 @@
+.homeFooter {
+    background-color: black;
+    width: 100%;
+    border-radius: 10px;
+    padding-top: 40px;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+    left: 0;
+    bottom: 0;
+    position: static;
+}
+
+.rowOfNavColumns {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+}
+
+.appsClm, .blogClm, .homeClm {
+    display: flex;
+    flex-direction: column;
+    padding-left: 2px;
+    width: 33%;
+    height: 100%;
+    border-left: 1px solid skyblue;
+    font-weight: bold;
+}
+
+.blogClm {
+    justify-content: space-between;
+}
+
+.appsClm, .blogClm, .homeClm > a {
+   font-size: 16px;
+}
+
+.homeClmLinks, .appsClmLinks {
+    list-style-position: inside;
+}
+
+.homeClmLinks > li {
+    color: skyblue;
+    text-decoration: underline;
+}
+
+.appsClmLinks > li, .homeClmLinks > li {
+    font-size: 12px;
+    padding: 5px;
+}
+
+
+@media only screen and (max-width: 577px) {
+    .appsClmLinks > li, .homeClmLinks > li{
+        font-size: 10px;
+    }
+}

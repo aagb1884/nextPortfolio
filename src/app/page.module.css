@@ -16,6 +16,32 @@
   font-family: var(--font-geist-sans);
 }
 
+.Tabs {
+  width: 100%;
+  overflow-y: auto;
+  height: 100vh;
+  background: linear-gradient(rgba(2,0,36,1) 0%, rgba(5,55,66,1) 35%, rgba(2,0,36,1) 100%);
+  border-radius: 1rem;
+  color: #E8F0F2;
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+  @media (max-width: 769px) {
+    padding: 2rem 0;
+  }
+}
+
+#externalLink {
+  width: 20px;
+}
+
+.koFi {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 5%
+}
+
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;
@@ -159,6 +185,17 @@ a.secondary {
     align-items: center;
     justify-content: center;
   }
+
+
+#externalLink {
+  width: 10px;
+  height: 10px;
+}
+
+.koFi > a > img {
+  width: 120px;
+  height: 30px;
+}
 }
 
 @media (prefers-color-scheme: dark) {

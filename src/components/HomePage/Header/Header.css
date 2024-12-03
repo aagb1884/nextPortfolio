@@ -1,0 +1,95 @@
+.fancy {
+  @supports (background-clip: text) or (-webkit-background-clip: text) {
+    background-image: 
+      url("https://www.publicdomainpictures.net/pictures/480000/nahled/sternenhimmel-sterne-himmel-nacht-1668774086Mem.jpg");
+    background-size: 110% auto;
+    background-position: center;
+    color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+	animation: parallax 60s ease infinite alternate;
+  }
+}
+@keyframes parallax {
+	0% {
+	  background-position: 0 0;
+	}
+	70% {
+	  background-position: 80 200px;
+	}
+  }
+
+.header-section{
+  color: #E8F0F2;
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+}
+  
+.links{
+  justify-content: center;
+  margin-left: 15px;
+}
+
+.header-section > nav > ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+}
+
+.Heading{
+  width: auto;
+  height: auto;
+  font-size: 50px;
+  }
+
+  /* tabs */
+
+
+ul.nav {
+  width: 60%;
+  margin: 0 auto 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #39A2DB;
+  border-radius: 2rem;
+  padding-left: 0px;
+  @media (max-width: 768px) {
+    width: 90%;
+  }
+}
+
+ 
+ul.nav li {
+  width: 50%;
+  padding: 1rem;
+  list-style: none;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.7s;
+}
+ 
+ul.nav li:first-child {
+  border-bottom-left-radius: 2rem;
+  border-top-left-radius: 2rem;
+}
+ 
+ul.nav li:last-child {
+  border-bottom-right-radius: 2rem;
+  border-top-right-radius: 2rem;
+}
+ 
+ul.nav li:hover {
+  background: rgba(50, 224, 196, 0.15);
+}
+ 
+ul.nav li.active {
+  background: #39A2DB;
+}
+ 
+.TabContent {
+  font-size: 2rem;
+  text-align: center;
+}

@@ -1,0 +1,25 @@
+import Link from "next/link";
+import styles from '../../appPages.module.css';
+
+const BFGeneratorAppLinks = () => {
+    return ( 
+        <div className={styles.appStoreDiv}>
+                <p>The Big Finish Boxset Generator is available as a mobile/tablet app on the iOS App Store.</p>
+                <div className={styles.appStoreLinks}>
+        <Link href="https://apps.apple.com/gb/app/big-finish-boxset-generator/id6497484877">
+        <img    src="/images/App_Store_(iOS)_2017.svg"
+                alt="iOS app store logo"
+                className={styles.iosAppStoreLogo}
+        /></Link>
+        {/* <Link href="https://play.google.com/store/apps/details?id=com.aagb1884.eurovision_bingo">
+        <img    src="/images/Google_Play.png"
+                alt="google play logo"
+                className={styles.googlePlayLogo}
+        />
+        </Link> */}
+        </div>
+        </div>
+     );
+}
+ 
+export default BFGeneratorAppLinks;
