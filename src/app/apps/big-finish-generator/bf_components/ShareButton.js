@@ -1,6 +1,8 @@
+import styles from '../../../BFApp.module.css';
+
 const ShareButton = ({setShowModal, showModal}) => {
     return ( 
-        <button className="share-button" data-testid="share-button" onClick={() => {setShowModal(!showModal)}}>Share</button>
+        <button className={styles.shareButton} data-testid="share-button" onClick={() => {setShowModal(!showModal)}}>Share</button>
              );
 }
  

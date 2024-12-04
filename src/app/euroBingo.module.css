@@ -1,0 +1,429 @@
+.activeButtonsWrapper{
+display: flex;
+flex-direction: column;
+justify-content: center;
+flex-wrap: true;
+margin: 20px;
+}
+.eurovisionBingoLanding {
+  width: 100%;
+  overflow-y: auto;
+        height: 95%;
+  background: white;
+  border-radius: 1rem;
+  font-size: large;
+  font-weight: bold;
+  position: relative;
+  padding: 20px; 
+  text-align: center;
+  margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+}
+
+.cardWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instructionsUl > ul > li {
+  margin-top: 20px;
+  font-size: large;
+  text-align: left;
+  margin-bottom: 10px;
+  list-style-type: none;
+}
+
+#euroContainer {
+  display: flex;
+  justify-items: center;
+  justify-content: center;
+  margin: auto;
+  width: 90%;
+  padding-top: 50px;
+  background-color: white;
+  overflow:scroll;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 3fr);
+  grid-gap: 0px;
+  margin-bottom: 20px;
+}
+
+.euroBtn {
+  width: 100%;
+  height: 100%;
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+  position: relative;
+  margin: 0.1em;
+  padding: 0.4em;
+  border: 0;
+  border-radius: 0.2em;
+  background-color: #ff1361;
+  color: black;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.euroBtn.Active {
+  top: 2px;
+  left: 1px;
+  box-shadow: none;
+  background-color: #231557;  /* Navy blue */
+  color: whitesmoke;
+}
+
+
+.getCards{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 5px;
+  position: relative;
+  border-radius: 0.2em;
+  border: 0;
+  margin: auto;
+  background-color: #fff800;
+  color:black;
+  text-decoration: none;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+      cursor: pointer;  
+}
+
+.bingo, .bingoDisabled {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  width: 200px;
+  height: 100px;
+  font-size: xx-large;
+  font-weight: bold;
+  padding: 5px;
+  position: relative;
+  border-radius: 0.2em;
+  border: 0;
+  margin: auto;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+.bingo.bingoDisabled {
+  opacity: 0.9; 
+  cursor: not-allowed; 
+  background-color: grey;
+}
+
+.bingo {
+  background-color: #fff800;
+}
+
+img.tickerTape{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 160%;
+  object-fit: cover;
+}
+
+
+.howToUseApp{
+  margin-top: 20px;
+  color: black;
+}
+
+.howToUseApp > header > h2{
+  font-size:large;
+}
+
+.gridItem {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin: 10px;
+}
+
+.gridItemActive {
+  color: #000;
+}
+
+.gridItem:hover:before {
+  opacity: 1;
+}
+
+.gridItem:after {
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% { background-position: 0 0; }
+  50% { background-position: 400% 0; }
+  100% { background-position: 0 0; }
+}
+
+/* code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+.animatedHeader{
+ align-items: center;
+ justify-content: center;
+ margin-bottom: 5px;
+}
+
+.animateCharacter
+{
+  margin-top: 5px;
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: 95% 95%;
+  background-clip: border-box;
+  background-size: 50% 50%;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 120px;
+      text-align: center;
+}
+
+.bingoNav{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(255, 255, 255, 0.6);
+  height: 30px;
+}
+
+.euroBingoLinks {
+  margin-top: 5px;
+  background: rgb(168,10,37);
+  background: linear-gradient(180deg, rgba(168,10,37,0.008) 10%, rgba(54,162,10,1) 52%, rgba(11,88,125,1) 98%, rgba(33,1,16,0.01) 100%);
+}
+
+
+@media only screen and (max-width: 1000px) {
+   .animateCharacter{
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #231557 0%,
+     #44107a 29%,
+     #ff1361 67%,
+     #fff800 100%
+   );
+   background-size: 100% 100%;
+   background-clip: border-box;
+   background-size: 50% 50%;
+   color: #fff;
+   background-clip: text;
+   text-fill-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+       font-size: 100px;
+ }
+ img.tickerTape{
+  
+  height: 180%;
+  
+}
+}
+@media only screen and (max-width: 700px) {
+   .animateCharacter{
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #231557 0%,
+     #44107a 29%,
+     #ff1361 67%,
+     #fff800 100%
+   );
+   background-size: 100% 100%;
+   background-clip: border-box;
+   background-size: 50% 50%;
+   color: #fff;
+   background-clip: text;
+   text-fill-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+       font-size: 80px;
+ }
+ .bingoNav{
+  min-height: 30px;
+  font-size: small;
+}
+
+}
+
+@media only screen and (max-width: 650px) {
+   .animateCharacter{
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #231557 0%,
+     #44107a 29%,
+     #ff1361 67%,
+     #fff800 100%
+   );
+   background-size: 100% 100%;
+   background-clip: border-box;
+   background-size: 50% 50%;
+   color: #fff;
+   background-clip: text;
+   text-fill-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: inline-block;
+       font-size: 60px;
+       min-height: 142px;
+ }
+
+ .gridItem{
+  width: auto;
+ }
+    .bingoNav{
+  height: 20px;
+  font-size: small;
+}
+}
+
+.animateHeader
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #231557 0%,
+    #44107a 29%,
+    #ff1361 67%,
+    #fff800 100%
+  );
+  background-size: 100% 100%;
+  background-clip: border-box;
+  background-size: 200% 100%;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: initial;
+      font-size: 140px;
+}
+
+
+@media only screen and (max-width: 500px) {
+  .animateHeader{
+    text-transform: uppercase;
+   background-image: linear-gradient(
+     -225deg,
+     #231557 0%,
+     #44107a 29%,
+     #ff1361 67%,
+     #fff800 100%
+   );
+   background-size: 100% 100%;
+   background-clip: border-box;
+   background-size: 100% 100%;
+   color: #fff;
+   background-clip: text;
+   text-fill-color: transparent;
+   -webkit-background-clip: text;
+   -webkit-text-fill-color: transparent;
+   animation: textclip 2s linear infinite;
+   display: initial;
+       font-size: 40px;
+ }
+}
+@media only screen and (max-width: 470px) {
+  img.tickerTape{
+    max-width: 100%;
+    height: 180%;
+    
+  }
+  .euroBtn {
+    font-size: large;
+   }
+}
+
+
+  @media only screen and (max-width: 410px) {
+    .animatedHeader{
+         font-size: 35px;
+   }
+    .animateCharacter{
+      min-height: 42px;
+   }
+   
+  }
+.animateSub
+{
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #fff800 0%,
+    #ff1361 29%,
+    #44107a 67%,
+    #231557 100%
+  );
+  background-size: 100% 100%;
+  background-clip: border-box;
+  background-size: 50% 50%;
+  color: #fff;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 72px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}

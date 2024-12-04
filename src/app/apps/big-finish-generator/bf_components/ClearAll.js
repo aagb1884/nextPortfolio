@@ -1,7 +1,9 @@
+import styles from '../../../BFApp.module.css';
+
 const ClearAll = ({clearAll}) => {
 
     return ( 
-<button className="clear-all-button" data-testid="clear-all-button" onClick={clearAll}>Clear All</button>
+<button className={styles.clearAllButton} data-testid="clear-all-button" onClick={clearAll}>Clear All</button>
      );
 }
  

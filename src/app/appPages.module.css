@@ -62,8 +62,12 @@
     text-align: center;
   }
 
-.appStoreDiv > p{
+.appStoreDiv > h3 {
   text-align: center;
+}
+
+.appStoreDiv {
+  line-height: 3;
 }
 
 .appStoreLinks{
@@ -71,6 +75,7 @@
   flex-direction: row;
   justify-content: space-around;
   padding-left: 40px;
+  
 }
 
 .iosAppStoreLogo{

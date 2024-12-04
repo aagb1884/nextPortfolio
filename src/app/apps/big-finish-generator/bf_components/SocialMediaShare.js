@@ -3,6 +3,8 @@ import { RedditShareButton, RedditIcon,
         WhatsappShareButton, WhatsappIcon,
         EmailShareButton, EmailIcon 
     } from 'react-share';
+import styles from '../../../BFApp.module.css';
+import Image from "next/image";
 
 const SocialMediaShare = ({pitch, setShowModal}) => {
 
@@ -30,11 +32,11 @@ const SocialMediaShare = ({pitch, setShowModal}) => {
     };
 
     return ( 
-        <section className="share-modal">
+        <section className={styles.shareModal}>
             <h4 style={{'color': 'white'}}>Share this on your social channels.</h4>
         
-        <div className="social-media-share">
-        <div className="reddit">
+        <div className={styles.socialMediaShare}>
+        <div className={styles.reddit}>
             <RedditShareButton
             url={shareUrl}
             title={shareTitle}
@@ -42,7 +44,7 @@ const SocialMediaShare = ({pitch, setShowModal}) => {
                 <RedditIcon size={30} />
             </RedditShareButton>
         </div>
-        <div className="whatsapp">
+        <div className={styles.whatsapp}>
             <WhatsappShareButton
             url={shareUrl}
             title={shareTitle}
@@ -51,7 +53,7 @@ const SocialMediaShare = ({pitch, setShowModal}) => {
                 <WhatsappIcon size={30} />
             </WhatsappShareButton>
         </div>
-        <div className="email">
+        <div className={styles.email}>
             <EmailShareButton
             url={shareUrl}
             body={shareQuote}
@@ -61,22 +63,24 @@ const SocialMediaShare = ({pitch, setShowModal}) => {
             <EmailIcon size={30} />
             </EmailShareButton>
         </div>
-        <div className="copy-clipboard">
+        <div className={styles.copyClipboard}>
             <button
             onClick={handleCopyClick}
             >
-            <img 
+            <Image
             src="/images/icons8-copy-to-clipboard-48.png"
             alt="Copy to Clipboard icon by Icons8"
             title="Copy to Clipboard (icon by Icons8)"
             id="clipboard"
+            width={30}
+            height={30}
             />
             </button>
         </div>
 
         </div>
         <div 
-        className="close"
+        className={styles.close}
         style={{'color': 'white'}}
         onClick={() => {setShowModal(false)}}>
         X
