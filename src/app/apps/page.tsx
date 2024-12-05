@@ -62,10 +62,10 @@ const AppsLandingPage = () => {
                 </section>
                 <section className={styles.appsLandingCopy}>
                 <aside className={styles.designCredit}>Bouncing Text animation by <Link href="https://lenadesign.org/2021/05/18/css-bouncing-text-animation/">Lena Design <ExternalLinkImage /></Link></aside>
-                <p>Seven (and counting) React apps; some requiring esoteric knowledge of <i>Doctor Who</i>, others less so.</p>
+                <p>Six (and counting) React apps; some requiring esoteric knowledge of <i>Doctor Who</i>, others less so.</p>
                 <p>You can find more information on each on my <Link href="https://github.com/aagb1884">GitHub page <ExternalLinkImage/></Link>.</p>
                 <br />
-                <aside>NB. <i>Wesley Snopes</i>, <i>Derek Adams Management Simulator</i> and <i>Rangers Manager Simulator</i> are probably not suitable for work.</aside>
+                <aside>NB. <i>The Derek Adams Management Simulator</i> and <i>Rangers Manager Simulator</i> are probably not suitable for work.</aside>
                <EuroBingoAppLinks />
                <BFGeneratorAppLinks />
                 </section>

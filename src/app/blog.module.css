@@ -148,30 +148,35 @@
     justify-content: center;
     width: 100%;
 }
-.blogpostContent > div > figure > img {
+.blogpostContent > img {
     max-width: 350px;
     border: 1px skyblue solid;
     border-radius: 5px;
 }
 
-.blogpostContent > div > p {
+.blogpostContent > p {
     font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    line-height: 2;
 }
 
-.blogpostContent > div > blockquote {
+.blogpostContent > blockquote {
     text-align: center;
     padding: 10px;
+    margin: 10px;
+    line-height: 1.5;
+    border-top: 1px skyblue solid;
 }
 
-.blogpostContent > div > ul > li{
+.blogpostContent > ul > li{
     list-style: circle;
    
 }
-.blogpostContent > div > ol > li{
+.blogpostContent > ol > li{
     list-style:decimal;
 }
 
-.blogpostContent > div > ul > li, .blogpost-content > div > ol > li{
+.blogpostContent > ul > li, .blogpost-content > ol > li{
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 10px;
     list-style-position: inside;

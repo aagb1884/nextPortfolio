@@ -1,6 +1,8 @@
 import EuroBingoAppLinks from "../components/eBingoAppLinks";
 import BingoCard from '../eurovision-bingo/ebingo_components/BingoCard';
 import styles from '../../euroBingo.module.css';
+import AppsFooter from "../components/AppsFooter";
+import KoFiLink from "@/app/ui/KoFi";
 
 const EurovisionBingo = () => {
     return ( 
@@ -13,6 +15,10 @@ const EurovisionBingo = () => {
         </main>
         <div className={styles.euroBingoLinks}>
         <EuroBingoAppLinks />
+        <div className={styles.bingoNav}>
+        <AppsFooter />
+        </div>
+        <KoFiLink />
         </div>
         </div>
      );

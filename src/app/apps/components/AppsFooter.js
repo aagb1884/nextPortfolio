@@ -15,7 +15,7 @@ const AppsFooter = () => {
             <Link href="/blog">Blog</Link>
             </li>
             <li>
-            <Link href="/credis">Credits</Link>
+            <Link href="/credits">Credits</Link>
             </li>
         </ul>
         </nav>
