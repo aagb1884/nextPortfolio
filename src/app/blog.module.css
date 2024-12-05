@@ -176,10 +176,16 @@
     list-style:decimal;
 }
 
-.blogpostContent > ul > li, .blogpost-content > ol > li{
+.blogpostContent > ul > li, .blogpostContent > ol > li{
     font-family: Arial, Helvetica, sans-serif;
-    padding-left: 10px;
+    padding-left: 20px;
     list-style-position: inside;
+    line-height: 2;
+    margin: 10px;
+}
+
+.blogpostContent > h3 {
+    text-align: center;
 }
 
 .blogNav {
