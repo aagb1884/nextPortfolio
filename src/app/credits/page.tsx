@@ -1,4 +1,4 @@
-import styles from '../credits.module.css';
+import styles from '../styles/credits.module.css';
 import Link from "next/link";
 import ExternalLinkImage from "../ui/ExternalLink";
 import HomeFooter from '@/components/HomePage/Footer/HomeFooter';
@@ -47,7 +47,9 @@ const Credits = () => {
                 <Link target="_blank" href="https://codepen.io/Linklvarotrigo/pen/PoKMyNO">text-color-animation <ExternalLinkImage /> </Link> by <Link target="_blank" href="https://codepen.io/Linklvarotrigo">Alvaro <ExternalLinkImage /> </Link>
                 </li>
             </ul>
-            {/* <HomeFooter /> */}
+            {/* <HomeFooter 
+            
+            /> */}
         </section>
      );
 }

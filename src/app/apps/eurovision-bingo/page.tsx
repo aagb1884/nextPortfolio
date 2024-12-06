@@ -1,6 +1,6 @@
 import EuroBingoAppLinks from "../components/eBingoAppLinks";
 import BingoCard from '../eurovision-bingo/ebingo_components/BingoCard';
-import styles from '../../euroBingo.module.css';
+import styles from '../../styles/euroBingo.module.css';
 import AppsFooter from "../components/AppsFooter";
 import KoFiLink from "@/app/ui/KoFi";
 

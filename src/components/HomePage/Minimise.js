@@ -1,4 +1,4 @@
-import styles from '../../app/tabs.module.css';
+import styles from '../../app/styles/tabs.module.css';
 
 const Minimise = ({toggleVisibility}) => {
     return ( 

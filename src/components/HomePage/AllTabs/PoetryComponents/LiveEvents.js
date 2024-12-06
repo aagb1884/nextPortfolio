@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Minimise from '../../Minimise';
-import styles from '../../../../app/tabs.module.css';
+import styles from '../../../../app/styles/tabs.module.css';
 import ExternalLinkImage from '@/app/ui/ExternalLink';
 
 const LiveEvents = () => {

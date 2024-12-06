@@ -1,5 +1,5 @@
 import AppsFooter from '../../components/AppsFooter';
-import styles from '../../../BFApp.module.css';
+import styles from '../../../styles/BFApp.module.css';
 
 const BFHeader = () => {
     return ( 

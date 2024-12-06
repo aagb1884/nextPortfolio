@@ -1,7 +1,7 @@
 'use client'
-import Image from "next/image";
-import styles from "./page.module.css";
-import { useState } from "react";
+
+import styles from "./styles/page.module.css";
+import { useState, useRef } from "react";
 import HeaderLinks from '../components/HomePage/Header/HeaderLinks';
 import ContactForm from '../components/HomePage/ContactForm';
 import TabNavItem from '../components/V2/TabNavItem';
@@ -10,10 +10,32 @@ import HomeFooter from '../components/HomePage/Footer/HomeFooter';
 import FirstTab from '../components/HomePage/AllTabs/FirstTab';
 import SecondTab from '../components/HomePage/AllTabs/SecondTab';
 import ThirdTab from '../components/HomePage/AllTabs/ThirdTab';
+import {useRouter} from 'next/navigation';
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState("tab1");
   const [showForm, setShowForm] = useState(false);
+  const navigate = useRouter()
+  const contact = useRef(null);
+  const tabs = useRef(null);
+
+  const executeScroll = (ref) => {
+    if (ref.current) {
+      ref.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+  
+  const goToContactForm = (ref) => {
+    navigate.push('/');
+    executeScroll(ref);
+    setShowForm(true);
+  };
+  
+  const goToTab = (ref, tab) => {
+    navigate.push('/');
+    setActiveTab(tab);
+    executeScroll(ref);
+  };
 
   return (
     <div className={styles.Tabs}>
@@ -22,13 +44,13 @@ export default function Home() {
       showForm={showForm}
       setShowForm={setShowForm} 
       />
-      <div className="form" 
-            // ref={contact}
+      <div className={styles.form}
+            ref={contact}
             >
             {showForm && <ContactForm setShowForm={setShowForm} />}
-          </div>
-      <ul className="nav" 
-      // ref={tabs}
+      </div>
+      <ul className={styles.nav}
+      ref={tabs}
       >
           <TabNavItem title="Software Development" id="tab1" activeTab={activeTab} setActiveTab={setActiveTab}/>
           <TabNavItem title="Freelance Writing" id="tab2" activeTab={activeTab} setActiveTab={setActiveTab}/>
@@ -49,7 +71,11 @@ export default function Home() {
       </div>
       </main>
       <footer>
-        <HomeFooter />
+        <HomeFooter 
+        goToContactForm={goToContactForm}
+        goToTab={goToTab} 
+        contact={contact} 
+        tabs={tabs}/>
       </footer>
     </div>
   );

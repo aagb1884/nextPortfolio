@@ -1,4 +1,4 @@
-.contact-form {
+.contactForm {
     text-align: center;
     margin: 20px auto;
     display: flex;
@@ -8,22 +8,15 @@
     padding: 10px;
   }
   
-  .contact-form-header-button {
-    padding: 8px 20px;
-    background-color: transparent;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-right: 10px;
-  }
   
-  .contact-form-button-div {
+  
+  .contactFormButtonDiv {
     margin: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .contact-form-submit {
+  .contactFormSubmit {
     padding: 8px 20px;
     background-color: #4CAF50;
     color: white;
@@ -32,7 +25,7 @@
     margin: 10px;
     
   }
-  .contact-form-close {
+  .contactFormClose {
     padding: 8px 20px;
     background-color: #af4c4c;
     color: white;
@@ -41,12 +34,12 @@
     margin: 10px;
   }
   
-  .message-text-area {
+  .messageTextArea {
    display: flex;
    justify-content: center;
    min-width: 50%;
   }
 
-  /* minimise */
+
 
  

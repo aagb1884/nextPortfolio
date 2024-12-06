@@ -40,9 +40,6 @@
 
 .homeClmLinks, .appsClmLinks {
     list-style-position: inside;
-}
-
-.homeClmLinks > li {
     color: skyblue;
     text-decoration: underline;
 }
@@ -50,6 +47,8 @@
 .appsClmLinks > li, .homeClmLinks > li {
     font-size: 12px;
     padding: 5px;
+    display: flex;
+   
 }
 
 

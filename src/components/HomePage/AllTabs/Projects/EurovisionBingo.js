@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import Link from 'next/link';
 import Minimise from '../../Minimise';
-import styles from '../../../../app/tabs.module.css';
+import styles from '../../../../app/styles/tabs.module.css';
 import ExternalLinkImage from '@/app/ui/ExternalLink';
 
 const EurovisionBingo = () => {
@@ -35,7 +35,7 @@ const EurovisionBingo = () => {
         <br />
         <Link href="https://github.com/aagb1884/eurovisionBingo">Github Repo <ExternalLinkImage/></Link>
         <br />
-        {/* <Link href="/apps/eurovision-bingo">Play App here</Link> */}
+        <Link href="/apps/eurovision-bingo">Play App here</Link>
         <Minimise toggleVisibility={toggleVisibility} />
         </div>
        

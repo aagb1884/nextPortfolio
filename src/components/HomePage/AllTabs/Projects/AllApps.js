@@ -1,7 +1,7 @@
 import {useState} from 'react';
 import Link from 'next/link';
 import Minimise from '../../Minimise';
-import styles from '../../../../app/tabs.module.css';
+import styles from '../../../../app/styles/tabs.module.css';
 
 const AllApps = () => {
     const [isVisible, setIsVisible] = useState(false);

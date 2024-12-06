@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
-import styles from '../../../app/tabs.module.css';
+import styles from '../../../app/styles/tabs.module.css';
 import ExternalLinkImage from '@/app/ui/ExternalLink';
 
 const images = [
@@ -35,13 +35,15 @@ const SecondTab = () => {
       </ul>
       </section>
       <br />
-  
+      <div className={styles.centeredDiv}>
       <div className={styles.slideContainer}>
         <Zoom scale={0.4}>
+          
           {
             images.map((each, index) => <Image key={index} src={each} width={600} height={400} alt={`Slide ${index + 1}`}/>)
           }
         </Zoom>
+      </div>
       </div>
     </section>
   );

@@ -3,10 +3,12 @@ import { useParams } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import createClient from '../blog_components/client';
 import BlogNav from '../blog_components/blog-nav';
-import styles from '../../blog.module.css';
+import LoadingPage from '@/app/ui/loading';
+import styles from '../../styles/blog.module.css';
 import { PortableText } from '@portabletext/react';
 import {getImageDimensions} from '@sanity/asset-utils'
-import urlBuilder from '@sanity/image-url'
+import urlBuilder from '@sanity/image-url';
+
 
 const Post = () => {
   const [postData, setPostData] = useState(null);
@@ -35,7 +37,7 @@ const Post = () => {
       .catch(console.error);
   }, [slug]);
 
-  if (!postData) return <div className={styles.blogLoad}>Loading...</div>;
+  if (!postData) return <LoadingPage />;
 
   const SampleImageComponent = ({value, isInline}) => {
     const {width, height} = getImageDimensions(value)
@@ -47,13 +49,12 @@ const Post = () => {
           .fit('max')
           .auto('format')
           .url()}
-        alt={value.alt || ' '}
+        alt={value.alt || 'blog-image'}
         loading="lazy"
         style={{
-          // Display alongside text if image appears inside a block text span
           display: isInline ? 'inline-block' : 'block',
-  
-          // Avoid jumping around with aspect-ratio CSS property
+          marginLeft: 'auto', 
+          marginRight: 'auto', 
           aspectRatio: width / height,
         }}
       />
@@ -67,7 +68,7 @@ const Post = () => {
     },
   }
 
-  console.log(postData.body)
+  // console.log(postData.body)
 
   const categories = postData.categories.map((category => `${category.title}; `))
   
@@ -88,11 +89,12 @@ const Post = () => {
       <div className={styles.blogpostContent}> 
       <p className={styles.blogpostDate}>Published on: {postData.publishedAt.split('').slice(0, 10).join('')}</p>
       <p className={styles.blogpostCategories}>Categories: {categories}</p>
-      
+        <div>
       <PortableText
           value={postData.body}
           components={components}
         />
+        </div>
       </div>
       {/* <HomeFooter 
            goToContactForm={goToContactForm}

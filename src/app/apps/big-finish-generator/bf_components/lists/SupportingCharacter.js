@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import styles from '../../../../BFApp.module.css';
+import styles from '../../../../styles/BFApp.module.css';
 
 
 const SupportingCharacter = ({setSupportingCharacter, setShowGif, setGif}) => {

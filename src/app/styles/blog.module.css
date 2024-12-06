@@ -5,7 +5,7 @@
     color: white;
     width: 99%;
     height: 100vh;
-    font-family: 'Hubot Sans';
+    font-family: var(--font-hubotsans);
     overflow: scroll;
 }
 
@@ -97,7 +97,7 @@
     margin: 5px;
 }
 
-.blogPreviewp {
+.blogPreview {
     text-align: justify;
 }
 
@@ -137,30 +137,34 @@
 
 .blogpostCategories {
     border-bottom: 1px skyblue solid;
+    margin-bottom: 10px;
 }
 
 .blogpostContent {
     padding: 30px;
 }
 
-.blogpostContent > div > figure {
+/* .blogpostContent > div > figure {
     display: flex;
     justify-content: center;
     width: 100%;
-}
-.blogpostContent > img {
+} */
+
+.blogpostContent > div > img {
     max-width: 350px;
     border: 1px skyblue solid;
     border-radius: 5px;
 }
 
-.blogpostContent > p {
+.blogpostContent > div > p {
     font-family: Arial, Helvetica, sans-serif;
     margin: 10px;
     line-height: 2;
+    text-align: left !important;
+    display: block;
 }
 
-.blogpostContent > blockquote {
+.blogpostContent > div > blockquote {
     text-align: center;
     padding: 10px;
     margin: 10px;
@@ -168,15 +172,15 @@
     border-top: 1px skyblue solid;
 }
 
-.blogpostContent > ul > li{
+.blogpostContent > div > ul > li{
     list-style: circle;
    
 }
-.blogpostContent > ol > li{
+.blogpostContent > div > ol > li{
     list-style:decimal;
 }
 
-.blogpostContent > ul > li, .blogpostContent > ol > li{
+.blogpostContent > div > ul > li, .blogpostContent > div > ol > li{
     font-family: Arial, Helvetica, sans-serif;
     padding-left: 20px;
     list-style-position: inside;
@@ -184,8 +188,20 @@
     margin: 10px;
 }
 
-.blogpostContent > h3 {
+.blogpostContent > div > h3 {
     text-align: center;
+}
+
+.blogpostContent > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.blogpostContent > div > p, 
+.blogpostContent > div > p span,
+.blogpostContent > div > p strong {
+    text-align: left !important;
 }
 
 .blogNav {

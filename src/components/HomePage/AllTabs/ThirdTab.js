@@ -2,7 +2,7 @@ import React from "react";
 import Podcasting from "../AllTabs/PoetryComponents/Podcasting";
 import PublishedWorks from "../AllTabs/PoetryComponents/PublishedWorks";
 import LiveEvents from "../AllTabs/PoetryComponents/LiveEvents";
-import styles from '../../../app/tabs.module.css';
+import styles from '../../../app/styles/tabs.module.css';
 import ExternalLinkImage from '@/app/ui/ExternalLink';
 
 const ThirdTab = () => {

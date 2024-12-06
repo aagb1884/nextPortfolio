@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import styles from '../../../euroBingo.module.css';
+import styles from '../../../styles/euroBingo.module.css';
 import tickerTape from '../../../../../public/images/ticker_tape.gif'
 import Image from "next/image";
 

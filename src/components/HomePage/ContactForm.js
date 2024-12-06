@@ -1,7 +1,7 @@
 import emailjs from '@emailjs/browser';
 import { Form, Input, TextArea, Button } from 'semantic-ui-react';
 import Swal from 'sweetalert2';
-import './contactform.css'
+import styles from '../../app/styles/contactform.module.css'
 
 
 const ContactForm = ({setShowForm}) => {
@@ -30,11 +30,11 @@ const ContactForm = ({setShowForm}) => {
   };
 
 return (
-    <div className='contact-form'>
+    <div className={styles.contactForm}>
         <h2>Contact Form</h2>
       <Form onSubmit={handleOnSubmit}>
         <Form.Field
-          id='form-input-control-email'
+          id={styles.formInputControlEmail}
           control={Input}
           label='Email'
           name='from_email'
@@ -44,7 +44,7 @@ return (
           iconPosition='left'
         />
         <Form.Field
-          id='form-input-control-last-name'
+          id={styles.formInputControlEmail}
           control={Input}
           label='Name'
           name='from_name'
@@ -53,9 +53,9 @@ return (
           icon='user circle'
           iconPosition='left'
         />
-        <div className='message-text-area'>
+        <div className={styles.messageTextArea}>
         <Form.TextArea
-          id='form-textarea-control-opinion'
+          id={styles.formTextareaControlOpinion}
           control={TextArea}
           label='Message'
           name='message'
@@ -65,9 +65,9 @@ return (
                     margin: '5px', minHeight: '200px', minWidth: '300px'}}
         />
         </div>
-        <div className='contact-form-button-div'>
-        <Button className='contact-form-submit' type='submit' >Send</Button>
-        <Button className='contact-form-close' onClick={() => setShowForm(false)}>Close</Button>
+        <div className={styles.contactFormButtonDiv}>
+        <Button className={styles.contactFormSubmit} type='submit' >Send</Button>
+        <Button className={styles.contactFormClose} onClick={() => setShowForm(false)}>Close</Button>
         </div>
       </Form>
     </div>

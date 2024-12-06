@@ -1,9 +1,9 @@
-
+import styles from '../../../app/styles/Header.module.css'
 
 const Header = () => {
     return ( 
-        <div className="Heading">
-            <h1><span className="fancy">Andrew  Blair's Portfolio</span></h1>
+        <div className={styles.Heading}>
+            <h1><span className={styles.fancy}>Andrew  Blair's Portfolio</span></h1>
         </div>
      );
 }

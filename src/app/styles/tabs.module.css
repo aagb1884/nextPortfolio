@@ -1,8 +1,12 @@
 .FirstTab > summary > p, .SecondTab > summary > p, .ThirdTab > summary > p {
     font-size: 22px;
-    line-height: 2.5;
+    line-height: 2;
     padding: 15px;
     text-align: left;
+  }
+
+  .FirstTab > aside, .ThirdTab > aside {
+    text-align: center;
   }
   
   .SecondTab > ul > li {
@@ -19,12 +23,8 @@
     line-height: 2;
   }
   
-  .projectDescription > p {
-    padding: 5px;
-    text-align: left;
-  }
-
-  .projectDescription > ul {
+ 
+  .projectDescription > li {
     list-style: none;
   }
 
@@ -48,7 +48,10 @@
     font-size: 30px
   }
   
-  .podcasting, .published-works > div, .live-events > div {
+  .publishedWorksh3 {
+    text-align: center;
+  }
+  .podcasting, .published-works > div, .liveEventsList > div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -58,7 +61,7 @@
     padding: 10px;
   }
   
-  .podcasting > h2, .published-works > h2, .live-events > h2 {
+  .podcasting > h2, .published-works > h2, .liveEventsList > h2 {
     width: 100%;
   } 
   
@@ -76,13 +79,19 @@
     margin-top: 10px;
   }
 
+  .centeredDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
   .slideContainer {
+    margin-left: auto;
+    margin-right: auto;
     width: 100%;
   }
   
-  .slideImage {
-    width: 800px;
-  }
   @media (max-width: 900px) {
     .slideImage {
       width: 100%;

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import PithyFooterQuotes from "./lists/PithyFooterQuotes";
-import styles from '../../../BFApp.module.css';
+import styles from '../../../styles/BFApp.module.css';
 import appleLogo from '../../../../../public/images/App-Store-Logo-700x394.png'
 
 const BFFooter = () => {

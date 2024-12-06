@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from '../../appPages.module.css';
+import styles from '../../styles/appPages.module.css';
 
 const EuroBingoAppLinks = () => {
     return ( 

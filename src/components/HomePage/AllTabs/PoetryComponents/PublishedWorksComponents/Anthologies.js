@@ -1,10 +1,10 @@
-import styles from '../../../../../app/tabs.module.css';
+import styles from '../../../../../app/styles/tabs.module.css';
 import ExternalLinkImage from '@/app/ui/ExternalLink';
 
 const Anthologies = () => {
     return ( 
 <section>
-<h3><u>Anthologies</u></h3>
+<h3 className={styles.publishedWorksh3}><u>Anthologies</u></h3>
       <ul className={styles.anthologies}>
         <li><i>Forty Voices Strong</i>, 2019 (Grayson Books) <a href="https://graysonbooks.com/forty-voices-strong.html">[Buy Here<ExternalLinkImage/>]</a></li>
         <li><i>Umbrellas of Edinburgh</i>, 2020 (Shoreline of Infinity) <a href="https://www.shorelineofinfinity.com/product/umbrellas-of-edinburgh/">[Buy Here<ExternalLinkImage/>]</a></li>

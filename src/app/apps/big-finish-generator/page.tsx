@@ -1,5 +1,5 @@
 'use client'
-import styles from '../../BFApp.module.css';
+import styles from '../../styles/BFApp.module.css';
 import BFFooter from './bf_components/BFFooter';
 import BFHeader from './bf_components/BFHeader';
 import ClearAll from './bf_components/ClearAll';

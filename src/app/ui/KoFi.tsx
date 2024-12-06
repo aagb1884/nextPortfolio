@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import kofiImg from '../../../public/images/kofi.png';
-import styles from '../page.module.css';
+import styles from '../styles/page.module.css';
 
 const KoFiLink = () => {
     return ( 

@@ -1,10 +1,10 @@
-import styles from '../../../../../app/tabs.module.css';
+import styles from '../../../../../app/styles/tabs.module.css';
 import ExternalLinkImage from '@/app/ui/ExternalLink';
 
 const CollectionsPamphlets = () => {
     return ( 
     <section>
-     <h3><u>Collections/Pamphlets</u></h3>
+     <h3 className={styles.publishedWorksh3}><u>Collections/Pamphlets</u></h3>
      <ul className={styles.collections}>
         <li><i>An Intense Young Man at An Open Mic Night</i>, 2017 (House of Three Press) [Out of Print]</li>
         <li><i>The R-Pattz Facttz 2020</i>, 2020 (Speculative Books) <a href="https://www.speculativebooks.net/shop/facttz">[Buy Here<ExternalLinkImage/>]</a><br/>

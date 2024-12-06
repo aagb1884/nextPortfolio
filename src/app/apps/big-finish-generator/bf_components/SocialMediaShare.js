@@ -3,7 +3,7 @@ import { RedditShareButton, RedditIcon,
         WhatsappShareButton, WhatsappIcon,
         EmailShareButton, EmailIcon 
     } from 'react-share';
-import styles from '../../../BFApp.module.css';
+import styles from '../../../styles/BFApp.module.css';
 import Image from "next/image";
 
 const SocialMediaShare = ({pitch, setShowModal}) => {

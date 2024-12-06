@@ -4,7 +4,7 @@ import EurovisionBingo from "../AllTabs/Projects/EurovisionBingo";
 import AllApps from "../AllTabs/Projects/AllApps";
 import ScottishFootballSims from "../AllTabs/Projects/ScottishFootballSims";
 import PoetRemixer from "../AllTabs/Projects/PoetRemixer";
-import styles from '../../../app/tabs.module.css';
+import styles from '../../../app/styles/tabs.module.css';
 
 const FirstTab = () => {
 

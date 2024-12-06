@@ -3,7 +3,7 @@ import Image from 'next/image';
 import sfs from '../../../../../public/images/sfs.png'; 
 import Link from 'next/link';
 import Minimise from '../../Minimise';
-import styles from '../../../../app/tabs.module.css';
+import styles from '../../../../app/styles/tabs.module.css';
 import ExternalLinkImage from '@/app/ui/ExternalLink';
 
 const ScottishFootballSims = () => {

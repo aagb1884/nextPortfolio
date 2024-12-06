@@ -1,7 +1,7 @@
 'use client'
 import Winning from "./Winning";
 import ActiveButtons from '../ebingo_components/ActiveButtons';
-import styles from '../../../euroBingo.module.css';
+import styles from '../../../styles/euroBingo.module.css';
 import {useState} from 'react';
 
 const BingoCard = () => {

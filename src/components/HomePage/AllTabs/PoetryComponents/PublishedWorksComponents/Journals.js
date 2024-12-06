@@ -1,10 +1,10 @@
-import styles from '../../../../../app/tabs.module.css';
+import styles from '../../../../../app/styles/tabs.module.css';
 import ExternalLinkImage from '@/app/ui/ExternalLink';
 
 const Journals = () => {
     return ( 
 <section>
-        <h3><u>Journals</u></h3>
+        <h3 className={styles.publishedWorksh3}><u>Journals</u></h3>
       <ul className={styles.journals}>
         <li>Valve #3 [Out of Print]</li>
         <li>Valve #4 [Out of Print]</li>

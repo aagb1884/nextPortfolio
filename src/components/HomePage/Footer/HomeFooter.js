@@ -1,5 +1,5 @@
 import ExternalLinkImage from '@/app/ui/ExternalLink';
-import styles from '../../../app/footer.module.css';
+import styles from '../../../app/styles/footer.module.css';
 import Link from 'next/link';
 import KoFiLink from '@/app/ui/KoFi';
 
@@ -49,7 +49,15 @@ const HomeFooter = ({goToContactForm, goToTab, contact, tabs}) => {
        
 
         <div className={styles.blogClm}>
-        <Link href='/blog'>Blog</Link>
+        <Link href={{
+        pathname: '/blog',
+        query: {
+            state: {
+                goToContactForm, goToTab, 
+                contact, tabs
+            }
+        }
+        }}>Blog</Link>
         <Link href='/credits'>Credits</Link>
         </div> 
         </div>

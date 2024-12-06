@@ -1,4 +1,4 @@
-import styles from '../../../BFApp.module.css';
+import styles from '../../../styles/BFApp.module.css';
 
 const ShareButton = ({setShowModal, showModal}) => {
     return ( 

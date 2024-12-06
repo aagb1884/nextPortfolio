@@ -1,6 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import { Hubot_Sans } from 'next/font/google';
+import "./styles/globals.css";
+
+const hubotSans = Hubot_Sans({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-hubotsans',
+})
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -25,7 +32,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en' suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${hubotSans.variable} ${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>

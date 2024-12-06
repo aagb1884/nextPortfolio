@@ -1,15 +1,15 @@
 'use client'
-import styles from '../blog.module.css';
+import styles from '../styles/blog.module.css';
 import React, { useEffect, useState } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 import createClient from './blog_components/client';
 import avatar from '../../../public/images/avatar_ab.png';
-// import HomeFooter from '../HomeFooter';
+import HomeFooter from '../../components/HomePage/Footer/HomeFooter';
 // import CategorySelect from './category-select';
 
 export default function Blog(
-  // {goToContactForm, goToTab, contact, tabs}
+  {goToContactForm, goToTab, contact, tabs}
 ) {
   const [allPostsData, setAllPosts] = useState(null);
   const [allCategories, setCategories] = useState(null);
@@ -117,12 +117,12 @@ export default function Blog(
         )}
       </div>
 
-      {/* <HomeFooter
+      <HomeFooter
         goToContactForm={goToContactForm}
         goToTab={goToTab}
         contact={contact}
         tabs={tabs}
-      /> */}
+      />
     </section>
   );
 }

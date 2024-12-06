@@ -1,5 +1,5 @@
 import Button from './Button';
-import styles from '../../../euroBingo.module.css';
+import styles from '../../../styles/euroBingo.module.css';
 
 const ActiveButtons = ({ cardArray, buttonStates, handleClick }) => {
    

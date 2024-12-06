@@ -1,4 +1,4 @@
-import styles from '../../../euroBingo.module.css';
+import styles from '../../../styles/euroBingo.module.css';
 
 const Button = ({ index, isActive, handleClick, cliche}) => {
   return (

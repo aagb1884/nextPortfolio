@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from '../../BFApp.module.css';
+import styles from '../../styles/BFApp.module.css';
 
 const AppsFooter = () => {
     return ( 

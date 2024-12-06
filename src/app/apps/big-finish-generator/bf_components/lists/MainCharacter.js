@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import styles from '../../../../BFApp.module.css';
+import styles from '../../../../styles/BFApp.module.css';
 
 const MainCharacter = ({setMainCharacter, setShowGif, setGif}) => {
     const [audio] = useState(typeof window !== 'undefined' ? new Audio('/audio/BigFinish/thalia_1.mp3') : null);
