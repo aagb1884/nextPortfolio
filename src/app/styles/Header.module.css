@@ -45,7 +45,6 @@
   list-style: none;
   display: flex;
   flex-direction: row;
-  padding: 15px;
 }
 
 .contactFormHeaderButton {
@@ -55,4 +54,24 @@
   cursor: pointer;
   margin-right: 10px;
 }
+
+.AboutMe {
+  margin: 10px;
+}
   
+@media only screen and (max-width: 650px) {
+  .Heading{
+    font-size: 35px;
+    }
+  }
+
+  @media only screen and (max-width: 500px) {
+   
+  .Heading{
+    width: auto;
+    height: auto;
+    align-items: center;
+    font-size: 25px;
+    padding: 5px;
+    }
+  }

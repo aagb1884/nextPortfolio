@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from '../../blog.module.css'
+import styles from '../../styles/blog.module.css'
 
 const BlogNav = () => {
     return ( 

@@ -247,6 +247,10 @@ a.secondary {
   width: 120px;
   height: 30px;
 }
+
+.nav {
+  font-size: small;
+}
 }
 
 @media (prefers-color-scheme: dark) {
