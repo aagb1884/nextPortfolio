@@ -40,7 +40,7 @@ const SecondTab = () => {
         <Zoom scale={0.4}>
           
           {
-            images.map((each, index) => <Image key={index} src={each} width={600} height={400} alt={`Slide ${index + 1}`}/>)
+            images.map((each, index) => <Image id={styles.slideshowImg} key={index} src={each} width={575} height={400} alt={`Slide ${index + 1}`}/>)
           }
         </Zoom>
       </div>

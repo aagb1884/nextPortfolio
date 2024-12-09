@@ -17,9 +17,8 @@ const LiveEvents = () => {
         <div className={styles.projectDescription}>
           <br />
       <ul className={styles.liveEventsList}>
-        <li>Auld Enemies - July 2014 – Poetry (Collaboration with <a href="https://www.kirstennorrie.com/">McGillivray <ExternalLinkImage/></a>)<br />
-        <br />
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/w8Pz-z8z8_w" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></li>
+        <li>Auld Enemies - July 2014 – Collaboration with<a href="https://www.kirstennorrie.com/">McGillivray <ExternalLinkImage/></a>
+        <iframe width={560} height={315} src="https://www.youtube.com/embed/w8Pz-z8z8_w" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></li>
         <br />
         <li>Knife Whimsy - PBH Free Fringe 2014</li>
         <li>is this poetry? - PBH Free Fringe 2015</li>

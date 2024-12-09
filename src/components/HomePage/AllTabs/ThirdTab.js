@@ -9,8 +9,7 @@ const ThirdTab = () => {
   return (
     <section className={styles.ThirdTab}>
       <summary>
-      <p>I started writing and performing poetry around 2012, influenced mostly by the people I saw at open mic nights.</p> 
-      <p>As I started reading more I expanded the range of my mimicry, finding my own voice by focussing on taking really stupid ideas incredibly seriously.</p>
+      <p>I started writing and performing poetry around 2012, and am regularly published across the UK.</p> 
       <p>I'm on the <a href="https://www.scottishbooktrust.com/authors/andrew-blair">Scottish Book Trust's Live Literature Author Directory <ExternalLinkImage/></a>.</p>
       <p>If you want to book me an author event (I can do readings and workshops on poetry, writing and podcasting) visit their website to look into funding options.</p>
       <p>There's a list of projects, events and publications I've been involved in below.</p>

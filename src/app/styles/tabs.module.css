@@ -2,6 +2,7 @@
     font-size: 18px;
     line-height: 2;
     padding: 15px;
+    margin: 10px;
     text-align: left;
   }
 
@@ -51,7 +52,7 @@
   .publishedWorksh3 {
     text-align: center;
   }
-  .podcasting, .published-works > div, .liveEventsList > div {
+  .podcasting, .publishedWorks, .liveEventsList {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -61,11 +62,16 @@
     padding: 10px;
   }
   
-  .podcasting > h2, .published-works > h2, .liveEventsList > h2 {
-    width: 100%;
-  } 
   
-  .liveEventsList > li, .collections > li, .anthologies > li, .journals > lii {
+  .liveEventsList > li  {
+    display: flex;
+    flex-direction: column;
+    justify-content:  center;
+    width: 100%;
+    padding: 5px;
+  }
+
+  .liveEventsList > li, .collections > li, .anthologies > li, .journals > li {
     line-height: 2.5;
     border-bottom: solid skyblue 1px;
     list-style: none;
@@ -92,8 +98,33 @@
     width: 100%;
   }
   
-  @media (max-width: 900px) {
-    .slideImage {
+  @media (max-width: 600px) {
+    .slideContainer > Zoom > img {
+      width: 300px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .projectDescription {
+      font-size: 12px;
+    }
+
+    .FirstTab > summary > p, .SecondTab > summary > p, .ThirdTab > summary > p {
+      font-size: 14px;
+    }
+
+    .FirstTab > aside, .ThirdTab > aside {
+      font-size: 14px;
+    }
+
+    .liveEventsList > li > iframe, .projectDescription > iframe,
+     .projectDescription > img {
       width: 100%;
+      height: auto;
+     
+    }
+
+    .project > h2 {
+      font-size: 24px;
     }
   }
