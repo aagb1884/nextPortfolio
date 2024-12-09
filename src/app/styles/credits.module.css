@@ -1,15 +1,18 @@
 .creditsContainer {
     display: flex;
     flex-direction: column;
-    background-color: navy;
+    background: rgb(0,0,128);
+    background: linear-gradient(180deg, rgba(0,0,128,1) 25%, rgba(0,0,0,1) 50%, rgba(1,25,36,1) 100%);
+    margin-bottom: 300px;
     height: 100%;
     width: 100%;
     overflow: scroll;
     border-radius: 5px;
 }
 
-.creditsContainer > h3 {
+.creditsContainer > h1 {
     color: white;
+    text-align: center;
 }
 
 .creditsUl, .imagesUl, .cssUl {

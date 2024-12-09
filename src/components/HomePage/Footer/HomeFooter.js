@@ -2,8 +2,10 @@ import ExternalLinkImage from '@/app/ui/ExternalLink';
 import styles from '../../../app/styles/footer.module.css';
 import Link from 'next/link';
 import KoFiLink from '@/app/ui/KoFi';
+import { useGlobalState } from '@/app/context/GlobalStateContext';
 
-const HomeFooter = ({goToContactForm, goToTab, contact, tabs}) => {
+const HomeFooter = () => {
+    const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
     return ( 
         <nav className={styles.homeFooter}>
 

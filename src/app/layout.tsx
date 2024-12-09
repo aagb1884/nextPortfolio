@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Hubot_Sans } from 'next/font/google';
+import { GlobalStateProvider } from './context/GlobalStateContext';
 import "./styles/globals.css";
 
 const hubotSans = Hubot_Sans({
@@ -31,10 +32,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
+    <GlobalStateProvider>
     <html lang='en' suppressHydrationWarning>
       <body className={`${hubotSans.variable} ${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
     </html>
+    </GlobalStateProvider>
   );
 }

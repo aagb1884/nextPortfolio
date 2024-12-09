@@ -1,12 +1,16 @@
+'use client'
 import styles from '../styles/credits.module.css';
 import Link from "next/link";
 import ExternalLinkImage from "../ui/ExternalLink";
 import HomeFooter from '@/components/HomePage/Footer/HomeFooter';
-// {goToContactForm, goToTab, contact, tabs}
+import { useGlobalState } from '@/app/context/GlobalStateContext';
+
 const Credits = () => {
+    const { showForm, setShowForm, activeTab, setActiveTab} = useGlobalState();
+
     return ( 
         <section className={styles.creditsContainer}>
-            <h3>Credits</h3>
+            <h1>Credits</h1>
 
             <ul className={styles.creditsUl}>
                 <h4>Icons</h4>
@@ -47,9 +51,7 @@ const Credits = () => {
                 <Link target="_blank" href="https://codepen.io/Linklvarotrigo/pen/PoKMyNO">text-color-animation <ExternalLinkImage /> </Link> by <Link target="_blank" href="https://codepen.io/Linklvarotrigo">Alvaro <ExternalLinkImage /> </Link>
                 </li>
             </ul>
-            {/* <HomeFooter 
-            
-            /> */}
+            <HomeFooter />
         </section>
      );
 }
