@@ -6,7 +6,7 @@ import HomeFooter from '@/components/HomePage/Footer/HomeFooter';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 
 const Credits = () => {
-    const { showForm, setShowForm, activeTab, setActiveTab} = useGlobalState();
+    const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
 
     return ( 
         <section className={styles.creditsContainer}>
@@ -51,7 +51,12 @@ const Credits = () => {
                 <Link target="_blank" href="https://codepen.io/Linklvarotrigo/pen/PoKMyNO">text-color-animation <ExternalLinkImage /> </Link> by <Link target="_blank" href="https://codepen.io/Linklvarotrigo">Alvaro <ExternalLinkImage /> </Link>
                 </li>
             </ul>
-            <HomeFooter />
+            <HomeFooter
+        goToContactForm={goToContactForm}
+        goToTab={goToTab}
+        contact={contact}
+        tabs={tabs}
+      />
         </section>
      );
 }

@@ -1,3 +1,4 @@
+'use client'
 import Link from "next/link";
 import Image from "next/image";
 import ExternalLinkImage from "../ui/ExternalLink";
@@ -7,9 +8,11 @@ import BFGeneratorAppLinks from '../apps/components/bfGeneratorLinks';
 import euroBingoGif from '../../../public/images/eurovision_bingo_button.gif';
 import bigFinishGif from '../../../public/images/bigFinish/untempered_schism.gif';
 import deekPrime from '../../../public/images/deekPrime.jpg';
-import KoFiLink from "../ui/KoFi";
+import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
+import { useGlobalState } from '@/app/context/GlobalStateContext';
 
 const AppsLandingPage = () => {
+    
     return ( 
         <div className={styles.appLandingPage}>
             <div className={styles.pageContent}>
@@ -70,15 +73,7 @@ const AppsLandingPage = () => {
                <BFGeneratorAppLinks />
                 </section>
             </div>
-            <div className={styles.homeLink}>
-            <Link href="/">Home</Link>
-            <Link href="/blog">Blog</Link>
-            <Link href="/credits">Credits</Link>
-            </div>
-            <KoFiLink />
-            <div className={styles.landingFooter}>
-           
-            </div>  
+            <HomeFooter />  
         </div>
      );
 }

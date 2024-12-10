@@ -7,10 +7,10 @@ import createClient from './blog_components/client';
 import avatar from '../../../public/images/avatar_ab.png';
 import HomeFooter from '../../components/HomePage/Footer/HomeFooter';
 // import CategorySelect from './category-select';
+import { useGlobalState } from '@/app/context/GlobalStateContext';
 
-export default function Blog(
-  {goToContactForm, goToTab, contact, tabs}
-) {
+export default function Blog() {
+  const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
   const [allPostsData, setAllPosts] = useState(null);
   const [allCategories, setCategories] = useState(null);
   const [categoryFilter, setCategoryFilter] = useState('All');

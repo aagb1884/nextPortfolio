@@ -11,16 +11,14 @@ export const GlobalStateProvider = ({ children }) => {
 
     const executeScroll = (ref) => {
         if (ref && ref.current) {
-          setTimeout(() => {
             ref.current.scrollIntoView({ behavior: 'smooth' });
-          }, 100); 
         }
       };
       
   const goToContactForm = (ref) => {
     navigate.push('/');
-    executeScroll(ref);
     setShowForm(true);
+    executeScroll(ref);
   };
   
   const goToTab = (ref, tab) => {

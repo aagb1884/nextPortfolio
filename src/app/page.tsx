@@ -13,20 +13,10 @@ import ThirdTab from '../components/HomePage/AllTabs/ThirdTab';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 
 export default function Home() {
-  const { showForm, setShowForm, activeTab, setActiveTab} = useGlobalState();
+  const { showForm, setShowForm, activeTab, setActiveTab, goToContactForm, goToTab} = useGlobalState();
 
   const contact = useRef(null);
-  const tabs = useRef(null);
-
-  useEffect(() => {
-    
-    if (contact.current && showForm) {
-      contact.current.scrollIntoView({ behavior: 'smooth' });
-    }
-    else if (tabs.current && activeTab) {
-      tabs.current.scrollIntoView({ behavior: 'smooth' });
-    }
-  }, [showForm, activeTab]);
+  const tabs = useRef(null); 
 
   return (
     <div className={styles.Tabs}>
@@ -35,17 +25,18 @@ export default function Home() {
       showForm={showForm}
       setShowForm={setShowForm} 
       />
-      <div className={styles.form}
-            ref={contact}
-            >
+      <div className={styles.form} ref={contact}>
             {showForm && <ContactForm setShowForm={setShowForm} />}
       </div>
-      <ul className={styles.nav}
-      ref={tabs}
-      >
-          <TabNavItem title="Software Development" id="tab1" activeTab={activeTab} setActiveTab={setActiveTab}/>
-          <TabNavItem title="Freelance Writing" id="tab2" activeTab={activeTab} setActiveTab={setActiveTab}/>
-          <TabNavItem title="Poetry/Spoken Word" id="tab3" activeTab={activeTab} setActiveTab={setActiveTab}/>
+      <ul className={styles.nav} ref={tabs}>
+          <TabNavItem title="Software Development" id="tab1" 
+          activeTab={activeTab} setActiveTab={setActiveTab}
+           />
+          <TabNavItem title="Freelance Writing" id="tab2" 
+          activeTab={activeTab} setActiveTab={setActiveTab}
+         />
+          <TabNavItem title="Poetry/Spoken Word" id="tab3" 
+          activeTab={activeTab} setActiveTab={setActiveTab}/>
         </ul>    
         <div className="tab-content-wrapper">
         <div className="outlet">
@@ -64,7 +55,9 @@ export default function Home() {
       <footer>
         <HomeFooter 
         contact={contact} 
-        tabs={tabs}/>
+        tabs={tabs}
+        goToTab={goToTab}
+        goToContactForm={goToContactForm} />
       </footer>
     </div>
   );

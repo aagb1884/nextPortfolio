@@ -93,6 +93,14 @@ ul.nav li.active {
   text-align: center;
 }
 
+.loading {
+  width: 100%;
+}
+
+.loading > h1 {
+  text-align: center;
+}
+
 @media (prefers-color-scheme: dark) {
   .page {
     --gray-rgb: 255, 255, 255;

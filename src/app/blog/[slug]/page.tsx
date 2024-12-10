@@ -8,9 +8,11 @@ import styles from '../../styles/blog.module.css';
 import { PortableText } from '@portabletext/react';
 import {getImageDimensions} from '@sanity/asset-utils'
 import urlBuilder from '@sanity/image-url';
-
+import HomeFooter from '@/components/HomePage/Footer/HomeFooter';
+import { useGlobalState } from '@/app/context/GlobalStateContext';
 
 const Post = () => {
+  const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
   const [postData, setPostData] = useState(null);
   const { slug } = useParams();
 
@@ -96,12 +98,12 @@ const Post = () => {
         />
         </div>
       </div>
-      {/* <HomeFooter 
-           goToContactForm={goToContactForm}
-           goToTab={goToTab}  
-           contact={contact}
-           tabs={tabs}
-           /> */}
+      <HomeFooter
+        goToContactForm={goToContactForm}
+        goToTab={goToTab}
+        contact={contact}
+        tabs={tabs}
+      />
     </div>
   );
 }
