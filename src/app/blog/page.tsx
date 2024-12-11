@@ -8,6 +8,7 @@ import avatar from '../../../public/images/avatar_ab.png';
 import HomeFooter from '../../components/HomePage/Footer/HomeFooter';
 // import CategorySelect from './category-select';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
+import type { Metadata } from 'next'
 
 export default function Blog() {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
@@ -56,13 +57,16 @@ export default function Blog() {
     setCategoryFilter(category);
   };
 
+  const metadata: Metadata = {
+    title: "Andrew Blair's Blog",
+    description: "Essays and articles about pop culture and software development.",
+  };
+
   const filteredPosts = categoryFilter === 'All'
     ? allPostsData 
     : allPostsData?.filter((post: {}) =>
         post.categories.some((category) => category.title === categoryFilter)
       );
-
-  // console.log(allPostsData ? allPostsData[0]: [])
 
   return (
     <section className={styles.blogContainer}>

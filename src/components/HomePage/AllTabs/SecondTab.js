@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from '../../../app/styles/tabs.module.css';
 import ExternalLinkImage from '@/app/ui/ExternalLink';
@@ -9,6 +8,7 @@ import {
   usePrevNextButtons
 } from '../Embla/EmblaCarouselArrowButtons';
 import useEmblaCarousel from 'embla-carousel-react'
+import Autoplay from 'embla-carousel-autoplay'
 
 const images = [
   '/images/slideshow/lotr_fandom.png',
@@ -25,7 +25,8 @@ const images = [
 
 
 const SecondTab = () => {
-  const [emblaRef, emblaApi] = useEmblaCarousel(images)
+  // const [emblaRef, emblaApi] = useEmblaCarousel(images)
+  const [emblaRef, emblaApi] = useEmblaCarousel(images, [Autoplay()])
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
     useDotButton(emblaApi)

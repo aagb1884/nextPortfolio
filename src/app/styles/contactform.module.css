@@ -7,9 +7,7 @@
     max-width: 80%;
     padding: 10px;
   }
-  
-  
-  
+    
   .contactFormButtonDiv {
     margin: 20px;
     display: flex;
@@ -40,6 +38,38 @@
    min-width: 50%;
   }
 
+  .formField {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .formField label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  
+  .formInput,
+  .formTextArea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .formTextArea {
+    resize: vertical;
+  }
+  
+  .contactFormButtons {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
 
-
- 
+  @media only screen and (max-width:600px) {
+  .contactForm {
+    align-items: center;
+  }
+}

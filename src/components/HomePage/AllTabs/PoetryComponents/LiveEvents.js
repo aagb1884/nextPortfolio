@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Minimise from '../../Minimise';
 import styles from '../../../../app/styles/tabs.module.css';
 import ExternalLinkImage from '@/app/ui/ExternalLink';
+import Link from 'next/link';
 
 const LiveEvents = () => {
 
@@ -17,8 +18,8 @@ const LiveEvents = () => {
         <div className={styles.projectDescription}>
           <br />
       <ul className={styles.liveEventsList}>
-        <li>Auld Enemies - July 2014 – Collaboration with<a href="https://www.kirstennorrie.com/">McGillivray <ExternalLinkImage/></a>
-        <iframe width={560} height={315} src="https://www.youtube.com/embed/w8Pz-z8z8_w" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe></li>
+        <li><p>Auld Enemies - July 2014 – Collaboration with <Link href="https://www.kirstennorrie.com/">McGillivray <ExternalLinkImage/></Link></p></li>
+        <iframe width={560} height={315} src="https://www.youtube.com/embed/w8Pz-z8z8_w" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
         <br />
         <li>Knife Whimsy - PBH Free Fringe 2014</li>
         <li>is this poetry? - PBH Free Fringe 2015</li>

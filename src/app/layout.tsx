@@ -23,7 +23,13 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Andrew Blair's Website",
-  description: "Software developer, journalist, poet.",
+  generator: 'Next.js',
+  description: "Andrew Blair is a writer, performer and software developer from Scotland. He made this website to host his apps, blog and writing credits.",
+  icons: {
+    icon: '/images/favicon.ico'
+  },
+  creator: 'Andrew Blair',
+  keywords: ['Software Developer', 'Poet', 'Performer', 'Edinburgh', 'journalist', 'Den of Geek', 'Doctor Who'],
 };
 
 export default function RootLayout({

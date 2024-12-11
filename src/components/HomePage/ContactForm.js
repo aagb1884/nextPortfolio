@@ -1,13 +1,12 @@
 import emailjs from '@emailjs/browser';
-import { Form, Input, TextArea, Button } from 'semantic-ui-react';
 import Swal from 'sweetalert2';
 import styles from '../../app/styles/contactform.module.css'
 
 
 const ContactForm = ({setShowForm}) => {
-    const SERVICE_ID = process.env.REACT_APP_SERVICE_ID;
-    const TEMPLATE_ID = process.env.REACT_APP_TEMPLATE_ID;
-    const USER_ID = process.env.REACT_APP_USER_ID;
+    const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
+    const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
+    const USER_ID = process.env.NEXT_PUBLIC_USER_ID;
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
@@ -32,44 +31,48 @@ const ContactForm = ({setShowForm}) => {
 return (
     <div className={styles.contactForm}>
         <h2>Contact Form</h2>
-      <Form onSubmit={handleOnSubmit}>
-        <Form.Field
-          id={styles.formInputControlEmail}
-          control={Input}
-          label='Email'
-          name='from_email'
-          placeholder='Email…'
-          required
-          icon='mail'
-          iconPosition='left'
-        />
-        <Form.Field
-          id={styles.formInputControlEmail}
-          control={Input}
-          label='Name'
-          name='from_name'
-          placeholder='Name…'
-          required
-          icon='user circle'
-          iconPosition='left'
-        />
-        <div className={styles.messageTextArea}>
-        <Form.TextArea
-          id={styles.formTextareaControlOpinion}
-          control={TextArea}
-          label='Message'
-          name='message'
-          placeholder='Message…'
-          required
-          style={{ display: 'flex', flexDirection: 'column', 
-                    margin: '5px', minHeight: '200px', minWidth: '300px'}}
-        />
+      <form onSubmit={handleOnSubmit}>
+        <div className={styles.formField}>
+        <label htmlFor="from_email">Email</label>
+          <input
+            type="email"
+            id="from_email"
+            name="from_email"
+            placeholder="Email..."
+            required
+            className={styles.formInput}
+          />
         </div>
-        <div className={styles.contactFormButtonDiv}>
-        <Button className={styles.contactFormSubmit} type='submit' >Send</Button>
-        <Button className={styles.contactFormClose} onClick={() => setShowForm(false)}>Close</Button>
+        
+        <div className={styles.formField}>
+          <label htmlFor="from_name">Name</label>
+          <input
+            type="text"
+            id="from_name"
+            name="from_name"
+            placeholder="Name..."
+            required
+            className={styles.formInput}
+          />
         </div>
-      </Form>
+
+        <div className={styles.formField}>
+          <label htmlFor="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Message..."
+            required
+            className={styles.formTextArea}
+            style={{ display: 'flex', flexDirection: 'column', minHeight: '200px', minWidth: '300px'}}
+          />
+        </div>
+
+         <div className={styles.contactFormButtons}>
+          <button type="submit" className={styles.contactFormSubmit}>Send</button>
+          <button type="button" className={styles.contactFormClose} onClick={() => setShowForm(false)}>Close</button>
+        </div>
+      </form>
     </div>
   );
 };

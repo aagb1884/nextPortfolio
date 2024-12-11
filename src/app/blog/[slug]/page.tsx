@@ -65,12 +65,9 @@ const Post = () => {
   const components = {
     types: {
       image: SampleImageComponent,
-      // Any other custom types you have in your content
-      // Examples: mapLocation, contactForm, code, featuredProjects, latestNews, etc.
     },
   }
 
-  // console.log(postData.body)
 
   const categories = postData.categories.map((category => `${category.title}; `))
   
