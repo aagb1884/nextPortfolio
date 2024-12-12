@@ -1,4 +1,4 @@
-import styles from '../../blog.module.css'
+import styles from '../../styles/blog.module.css'
 
 const CategorySelect = ({handleCategoryFilter, allCategories, allPostsData}) => {
 

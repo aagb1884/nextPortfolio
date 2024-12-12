@@ -6,7 +6,7 @@ import Image from 'next/image';
 import createClient from './blog_components/client';
 import avatar from '../../../public/images/avatar_ab.png';
 import HomeFooter from '../../components/HomePage/Footer/HomeFooter';
-// import CategorySelect from './category-select';
+import CategorySelect from './blog_components/category-select';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 import type { Metadata } from 'next'
 
@@ -59,7 +59,7 @@ export default function Blog() {
 
   const metadata: Metadata = {
     title: "Andrew Blair's Blog",
-    description: "Essays and articles about pop culture and software development.",
+    description: "Essays and articles about pop culture, poetry and software development.",
   };
 
   const filteredPosts = categoryFilter === 'All'
@@ -82,11 +82,11 @@ export default function Blog() {
       </div>
 
       <div className={styles.blogSearchFilter}>
-        {/* <CategorySelect
+        <CategorySelect
           handleCategoryFilter={handleCategoryFilter}
           allCategories={allCategories}
           allPostsData={allPostsData}
-        /> */}
+        />
       </div>
 
       <div className={styles.blogBody}>
