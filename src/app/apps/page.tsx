@@ -10,8 +10,15 @@ import bigFinishGif from '../../../public/images/bigFinish/untempered_schism.gif
 import deekPrime from '../../../public/images/deekPrime.jpg';
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from '@/app/context/GlobalStateContext';
+import type { Metadata } from 'next';
 
 const AppsLandingPage = () => {
+    const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
+
+    const metadata: Metadata = {
+        title: "Daft Wee Apps",
+        description: "Home to some silly apps I've made, such as Eurovision Bingo and The Big Finish Boxset Generator.",
+      };
     
     return ( 
         <div className={styles.appLandingPage}>
@@ -73,7 +80,12 @@ const AppsLandingPage = () => {
                <BFGeneratorAppLinks />
                 </section>
             </div>
-            <HomeFooter />  
+            <HomeFooter
+            goToContactForm={goToContactForm}
+            goToTab={goToTab}
+            contact={contact}
+            tabs={tabs}
+            />
         </div>
      );
 }

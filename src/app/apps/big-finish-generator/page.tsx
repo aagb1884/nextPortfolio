@@ -11,6 +11,7 @@ import Villain from './bf_components/lists/Villain';
 import EventLocation from './bf_components/lists/Location';
 import { useState } from 'react';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 
 const BigFinishGenerator = () => {
     const [mainCharacter, setMainCharacter] = useState("");
@@ -20,6 +21,11 @@ const BigFinishGenerator = () => {
     const [showGif, setShowGif] = useState(false);
     const [gif, setGif] = useState("");
     const [showModal, setShowModal] = useState(false);
+
+    const metadata: Metadata = {
+        title: "The Big Finish Boxset Generator",
+        description: "Generate random combinations of characters and locations to inspire your next Big Finish boxset.",
+      };
 
     function clearAll() {
         setMainCharacter("");

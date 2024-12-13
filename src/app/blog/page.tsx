@@ -8,13 +8,20 @@ import avatar from '../../../public/images/avatar_ab.png';
 import HomeFooter from '../../components/HomePage/Footer/HomeFooter';
 import CategorySelect from './blog_components/category-select';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
-import type { Metadata } from 'next'
+import type { Metadata } from 'next';
 
 export default function Blog() {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
   const [allPostsData, setAllPosts] = useState(null);
   const [allCategories, setCategories] = useState(null);
   const [categoryFilter, setCategoryFilter] = useState('All');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [postsOnDisplay, setPostsonDisplay] = useState(6);
+
+  const metadata: Metadata = {
+    title: "Andrew Blair's Blog",
+    description: "Essays and articles about pop culture, poetry and software development.",
+  };
 
   // Fetch posts
   useEffect(() => {
@@ -56,17 +63,52 @@ export default function Blog() {
   const handleCategoryFilter = (category) => {
     setCategoryFilter(category);
   };
-
-  const metadata: Metadata = {
-    title: "Andrew Blair's Blog",
-    description: "Essays and articles about pop culture, poetry and software development.",
+  
+  //filter and search
+  const handleSearch = (event) => {
+    event.preventDefault();
+    setSearchTerm(event.target.value);
   };
 
-  const filteredPosts = categoryFilter === 'All'
-    ? allPostsData 
-    : allPostsData?.filter((post: {}) =>
-        post.categories.some((category) => category.title === categoryFilter)
-      );
+  const clearSearch = () => {
+    setSearchTerm('');
+    handleCategoryFilter('All')
+  }
+
+  const toLowerCaseSafe = (str: string | null | undefined) => (str ? str.toLowerCase() : '');
+
+  const searchInPostBody = (postBody: any[], searchTerm: string): boolean => {
+    const searchTermLower = toLowerCaseSafe(searchTerm);
+    return postBody.some((item) => 
+      item.children && item.children.some((child: { text: string }) => 
+        toLowerCaseSafe(child.text).includes(searchTermLower)
+      )
+    );
+  };
+
+  let filteredPosts = allPostsData;
+  if (allPostsData && searchTerm.length > 0 || categoryFilter !== 'All' || 
+    (allPostsData && searchTerm.length > 0 && categoryFilter !== 'All' ))
+    filteredPosts = allPostsData?.filter((post: {}) => post.categories.some((category) => {
+      
+      const searchTermLower = toLowerCaseSafe(searchTerm)
+
+      const categoryMatch = categoryFilter === 'All' || categoryFilter === category.title
+      const bodyMatch = searchInPostBody(post.body, searchTerm);
+      return (
+        categoryMatch && (toLowerCaseSafe(post.title).includes(searchTermLower) ||
+        bodyMatch)
+      )
+    })
+  )   
+
+  const postList = filteredPosts ?  filteredPosts.slice(0, postsOnDisplay) : [];
+
+  const hasMorePosts = filteredPosts?.length > 0 ? postsOnDisplay < filteredPosts.length : false;
+
+  const handleShowMorePosts = () => {
+    setPostsonDisplay(prevPostsOnDisplay => prevPostsOnDisplay + 6)
+}
 
   return (
     <section className={styles.blogContainer}>
@@ -86,13 +128,25 @@ export default function Blog() {
           handleCategoryFilter={handleCategoryFilter}
           allCategories={allCategories}
           allPostsData={allPostsData}
+          currentCategory={categoryFilter}
         />
+      </div>
+      <div className={styles.blogSearchFunction}>
+               <input  id={styles.search}
+                placeholder="Search..." 
+                onChange={handleSearch}
+                type="text"
+                name="searchTerm"
+                value={searchTerm}/>
+                <button onClick={clearSearch}>
+                    Clear Search/Filter
+                </button>
       </div>
 
       <div className={styles.blogBody}>
         {/* Show filtered posts or "No posts found" message */}
         {filteredPosts && filteredPosts.length > 0 ? (
-          filteredPosts.map((post, index) => (
+          postList.map((post, index) => (
             <div className={styles.blogpostLink} key={post.slug.current}>
               <Link href={"/blog/" + post.slug.current}>
                 <span className={styles.blogpostHrImgCr}>
@@ -119,8 +173,13 @@ export default function Blog() {
         ) : (
           <p>Posts loading...</p>
         )}
+       
       </div>
-
+      <div className={styles.morePostBtnDiv}>
+        {hasMorePosts && (
+                <button id={styles.morePostBtn} onClick={handleShowMorePosts}>Load More</button>
+            )}
+          </div>
       <HomeFooter
         goToContactForm={goToContactForm}
         goToTab={goToTab}

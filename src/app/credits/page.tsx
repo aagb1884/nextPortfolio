@@ -4,9 +4,15 @@ import Link from "next/link";
 import ExternalLinkImage from "../ui/ExternalLink";
 import HomeFooter from '@/components/HomePage/Footer/HomeFooter';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
+import type { Metadata } from 'next';
 
 const Credits = () => {
     const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
+
+    const metadata: Metadata = {
+        title: "Andrew Blair's Website - Credits Page",
+        description: "Credits for images, icons and code used on the site.",
+      };
 
     return ( 
         <section className={styles.creditsContainer}>
