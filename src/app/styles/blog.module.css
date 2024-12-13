@@ -67,9 +67,15 @@
     1px 1px 0 #007D80;
 }
 
-.blogCategoryFilter {
+.blogCategoryFilter, .blogSearchFunction {
     display: flex;
     justify-content: center;
+    margin: 5px;
+}
+
+#search {
+    font-size: small;
+    padding: 5px;
 }
 
 .blogBody {
@@ -104,6 +110,14 @@
 .blogPreview, .blogDate {
     font-size: 12px;
     line-height: 1;
+}
+
+.morePostBtnDiv {
+    display: flex;
+    justify-content: center;
+}
+#morePostBtn {
+    padding: 5px;
 }
 
 

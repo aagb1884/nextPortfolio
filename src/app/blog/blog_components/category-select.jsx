@@ -1,6 +1,6 @@
 import styles from '../../styles/blog.module.css'
 
-const CategorySelect = ({handleCategoryFilter, allCategories, allPostsData}) => {
+const CategorySelect = ({handleCategoryFilter, allCategories, allPostsData, currentCategory}) => {
 
 const postCategories = allPostsData
 ? allPostsData
@@ -24,9 +24,9 @@ handleCategoryFilter(selectedCategory);
     <div className={styles.blogCategoryFilter}>
     {allCategories &&
     <label>
-    <select onChange={handleChange}>
+    <select onChange={handleChange} value={currentCategory || 'All'}>
         <option value='All'>Filter by Category</option>
-        {allCategories.map((category) => (
+        {allCategories.sort((a,b) => a.title.localeCompare(b.title)).map((category) => (
           <option key={category.title} value={category.title}>
             {category.title}
           </option>
