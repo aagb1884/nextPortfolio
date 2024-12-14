@@ -4,9 +4,9 @@ import styles from '../../app/styles/contactform.module.css'
 
 
 const ContactForm = ({setShowForm}) => {
-    const SERVICE_ID = process.env.NEXT_PUBLIC_SERVICE_ID;
-    const TEMPLATE_ID = process.env.NEXT_PUBLIC_TEMPLATE_ID;
-    const USER_ID = process.env.NEXT_PUBLIC_USER_ID;
+    const SERVICE_ID = process.env.NEXT_PRIVATE_SERVICE_ID;
+    const TEMPLATE_ID = process.env.NEXT_PRIVATE_TEMPLATE_ID;
+    const USER_ID = process.env.NEXT_PRIVATE_USER_ID;
 
   const handleOnSubmit = (e) => {
     e.preventDefault();
