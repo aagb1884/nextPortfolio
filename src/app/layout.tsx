@@ -30,6 +30,11 @@ export const metadata: Metadata = {
   },
   creator: 'Andrew Blair',
   keywords: ['Software Developer', 'Poet', 'Performer', 'Edinburgh', 'journalist', 'Den of Geek', 'Doctor Who'],
+  alternates: {
+      types: {
+        'application/rss+xml': 'https://andrewblair.co.uk/feed.xml',
+      }
+  }
 };
 
 export default function RootLayout({

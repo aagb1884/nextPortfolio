@@ -9,6 +9,8 @@ import HomeFooter from '../../components/HomePage/Footer/HomeFooter';
 import CategorySelect from './blog_components/category-select';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 import type { Metadata } from 'next';
+import RSSFEED from '../ui/rss';
+
 
 export default function Blog() {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
@@ -119,6 +121,7 @@ export default function Blog() {
             <Image src={avatar} id={styles.blogAvatar} alt='avatar' width={100}/>
             <div className={styles.blogAvatarImgText}>with Andrew Blair</div>
           </div>
+          <RSSFEED/>
         </div>
         <h3 className={styles.blogSubtitle}>brain + unclogged = blogged</h3>
       </div>
