@@ -22,7 +22,7 @@ const BigFinishGenerator = () => {
     const [gif, setGif] = useState("");
     const [showModal, setShowModal] = useState(false);
 
-    const metadata: Metadata = {
+    const _metadata: Metadata = {
         title: "The Big Finish Boxset Generator",
         description: "Generate random combinations of characters and locations to inspire your next Big Finish boxset.",
       };

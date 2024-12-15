@@ -2,7 +2,7 @@ import RSS from 'rss';
 import { createClient } from '@sanity/client';
 
 const sanityClient = createClient({
-  projectId: process.env.NEXT_PRIVATE_SANITY_PROJECT_ID, 
+  projectId: process.env.SANITY_PROJECT_ID, 
   dataset: 'production',
   useCdn: false, 
 });

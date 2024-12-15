@@ -7,7 +7,7 @@ import type { Metadata } from 'next';
 
 const EurovisionBingo = () => {
 
-  const metadata: Metadata = {
+  const _metadata: Metadata = {
     title: "Eurovision Bingo",
     description: "A browser-based Bingo app for playing while watching any Eurovision Song Contest.",
   };

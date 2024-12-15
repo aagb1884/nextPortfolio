@@ -20,7 +20,7 @@ export default function Blog() {
   const [searchTerm, setSearchTerm] = useState("");
   const [postsOnDisplay, setPostsonDisplay] = useState(6);
 
-  const metadata: Metadata = {
+  const _metadata: Metadata = {
     title: "Andrew Blair's Blog",
     description: "Essays and articles about pop culture, poetry and software development.",
   };
