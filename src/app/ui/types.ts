@@ -1,5 +1,5 @@
 export type SampleImageComponentProps = {
-    value: string;
+    value: { alt: string };
     isInline: boolean;
   };
 
