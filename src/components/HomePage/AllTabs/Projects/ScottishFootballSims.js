@@ -36,8 +36,9 @@ const ScottishFootballSims = () => {
         <Image src={sfs} alt="Scottish Foootball Simulators Homepage" width="600" height="400" />
         <br />
         <Link href="https://scottish-football-simulators.co.uk/">Link <ExternalLinkImage/> </Link>
-        </div>
-}
+        <Minimise toggleVisibility={toggleVisibility} />
+        </div>  
+      }
        </section>
      )}
  

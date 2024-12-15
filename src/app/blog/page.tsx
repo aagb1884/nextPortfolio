@@ -149,7 +149,7 @@ export default function Blog() {
       <div className={styles.blogBody}>
         {/* Show filtered posts or "No posts found" message */}
         {filteredPosts && filteredPosts.length > 0 ? (
-          postList.map((post, index) => (
+          postList.map((post) => (
             <div className={styles.blogpostLink} key={post.slug.current}>
               <Link href={"/blog/" + post.slug.current}>
                 <span className={styles.blogpostHrImgCr}>
