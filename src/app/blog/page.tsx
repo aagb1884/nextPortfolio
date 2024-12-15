@@ -9,6 +9,7 @@ import HomeFooter from '../../components/HomePage/Footer/HomeFooter';
 import CategorySelect from './blog_components/category-select';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 import type { Metadata } from 'next';
+import { Post } from '@/app/ui/types';
 // import RSSFEED from '../ui/rss';
 
 
@@ -88,14 +89,7 @@ export default function Blog() {
     );
   };
 
-  type Post = {
-    title: string;
-    body: string;
-    publishedAt: string;
-    slug: { current: string };
-    categories: { title: string }[];
-    mainImage: { asset: { url: string } };
-  };
+
 
   let filteredPosts = allPostsData;
   if (allPostsData && searchTerm.length > 0 || categoryFilter !== 'All' || 
