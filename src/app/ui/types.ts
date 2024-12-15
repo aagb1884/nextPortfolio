@@ -1,5 +1,7 @@
+import type { SanityImageAsset } from "@/sanity/types";
+
 export type SampleImageComponentProps = {
-    value: { alt: string };
+    value: SanityImageAsset;
     isInline: boolean;
   };
 
