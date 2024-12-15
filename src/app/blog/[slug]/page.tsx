@@ -42,6 +42,8 @@ const Post = () => {
 
   if (!postData) return <LoadingPage />;
 
+  console.log(postData)
+
   const SampleImageComponent: React.FC<SampleImageComponentProps> = ({value, isInline}) => {
     const {width, height} = getImageDimensions(value)
     return (
