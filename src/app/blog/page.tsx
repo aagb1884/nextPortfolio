@@ -79,7 +79,7 @@ export default function Blog() {
 
   const toLowerCaseSafe = (str: string | null | undefined) => (str ? str.toLowerCase() : '');
 
-  const searchInPostBody = (postBody: any[], searchTerm: string): boolean => {
+  const searchInPostBody = (postBody, searchTerm: string): boolean => {
     const searchTermLower = toLowerCaseSafe(searchTerm);
     return postBody.some((item) => 
       item.children && item.children.some((child: { text: string }) => 

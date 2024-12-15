@@ -42,7 +42,7 @@ const SecondTab = () => {
     <section className={styles.SecondTab}>
       <summary>
       <p>I began blogging about <i>Doctor Who</i> around 2008 to get into the habit of writing regularly, and then submitted work elsewhere.</p>
-      <p>Since then I've covered film and TV festivals, filing reviews and interviews with actors, directors, writers and artists.</p>
+      <p>Since then I&apos;ve covered film and TV festivals, filing reviews and interviews with actors, directors, writers and artists.</p>
       </summary>
       <br />
       <section className={styles.project}>

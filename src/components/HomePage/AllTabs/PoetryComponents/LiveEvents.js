@@ -25,7 +25,7 @@ const LiveEvents = () => {
         <li>is this poetry? - PBH Free Fringe 2015</li>
         <li>McCleary and Blair Panda to the Audience (A Show About Death) - PBH Free Fringe 2016</li>
         <li>The R-Pattz Facttz - Hidden Door 2017</li>
-        <li>The Ambassador's Reception - Poetry as F*ck/Interrobang 2017, Hidden Door 2018</li>
+        <li>The Ambassador&apos;s Reception - Poetry as F*ck/Interrobang 2017, Hidden Door 2018</li>
         <li>Necessarily Looking Backwards - Stanza 2018 <a href="https://stanzapoetry.org/archive/necessarily-looking-backward/">[Read More<ExternalLinkImage/>]</a></li>
         <li>Beyond Any Curtain - Stanza 2021 - 22 <a href="https://artarsenal.in.ua/en/laboratory/proekt/ukraine-scotland-collaborative-literary-project/">[Read More<ExternalLinkImage/>]</a></li>
       </ul>

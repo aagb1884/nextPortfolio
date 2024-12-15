@@ -18,8 +18,7 @@ const AllApps = () => {
             <div className={styles.projectDescription}>
 <br />
                   <h3>Multiple Projects</h3>
-       <p>Some silly apps that I created for fun and to consolidate what I'd learned from my coursework, including the Eurovision Bingo app mentioned above,
-        a Wesley-Snipes themed fact checker, and a text-based adventure game taking you through the recent career of Scottish football manager Derek Adams.
+       <p>Some silly apps that I created for fun and to consolidate what I&apos;d learned from my coursework, including the Eurovision Bingo app mentioned above and a text-based adventure game taking you through the recent career of Scottish football manager Derek Adams.
        </p>
         <br />
         <Link href="/apps">See All Apps</Link>
