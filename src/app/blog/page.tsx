@@ -88,10 +88,19 @@ export default function Blog() {
     );
   };
 
+  type Post = {
+    title: string;
+    body: string;
+    publishedAt: string;
+    slug: { current: string };
+    categories: { title: string }[];
+    mainImage: { asset: { url: string } };
+  };
+
   let filteredPosts = allPostsData;
   if (allPostsData && searchTerm.length > 0 || categoryFilter !== 'All' || 
     (allPostsData && searchTerm.length > 0 && categoryFilter !== 'All' ))
-    filteredPosts = allPostsData?.filter((post: {}) => post.categories.some((category) => {
+    filteredPosts = allPostsData?.filter((post: Post) => post.categories.some((category) => {
       
       const searchTermLower = toLowerCaseSafe(searchTerm)
 
@@ -121,7 +130,7 @@ export default function Blog() {
             <Image src={avatar} id={styles.blogAvatar} alt='avatar' width={100}/>
             <div className={styles.blogAvatarImgText}>with Andrew Blair</div>
           </div>
-          <RSSFEED/>
+          {/* <RSSFEED/> */}
         </div>
         <h3 className={styles.blogSubtitle}>brain + unclogged = blogged</h3>
       </div>
@@ -157,6 +166,7 @@ export default function Blog() {
                     src={post.mainImage.asset.url}
                     alt="blogpost-header"
                     id={styles.blogpostHeaderImg}
+                    // width={200} height={150}
                   />
                   <span>
                     <h2 className={styles.blogLinkText}>{post.title}</h2>
