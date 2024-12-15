@@ -10,6 +10,7 @@ import {getImageDimensions} from '@sanity/asset-utils'
 import urlBuilder from '@sanity/image-url';
 import HomeFooter from '@/components/HomePage/Footer/HomeFooter';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
+import { SampleImageComponentProps } from '@/app/ui/types';
 
 const Post = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
