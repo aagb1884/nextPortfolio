@@ -9,7 +9,7 @@ import HomeFooter from '../../components/HomePage/Footer/HomeFooter';
 import CategorySelect from './blog_components/category-select';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 import type { Metadata } from 'next';
-import RSSFEED from '../ui/rss';
+// import RSSFEED from '../ui/rss';
 
 
 export default function Blog() {
