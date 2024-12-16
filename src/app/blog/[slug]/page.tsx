@@ -10,11 +10,11 @@ import {getImageDimensions} from '@sanity/asset-utils'
 import urlBuilder from '@sanity/image-url';
 import HomeFooter from '@/components/HomePage/Footer/HomeFooter';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
-import { SampleImageComponentProps } from '@/app/ui/types';
+import { SampleImageComponentProps, Post } from '@/app/ui/types';
 
-const Post = () => {
+const BlogPost = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
-  const [postData, setPostData] = useState(null);
+  const [postData, setPostData] = useState<Post | null>(null);
   const { slug } = useParams();
 
   useEffect(() => {
@@ -32,7 +32,8 @@ const Post = () => {
            },
          body,
         "name": author->name,
-        categories[]->
+        categories[]->{
+        title}
        }`,
         { slug }
       )
@@ -41,8 +42,6 @@ const Post = () => {
   }, [slug]);
 
   if (!postData) return <LoadingPage />;
-
-  console.log(postData)
 
   const SampleImageComponent: React.FC<SampleImageComponentProps> = ({value, isInline}) => {
     const {width, height} = getImageDimensions(value)
@@ -71,8 +70,9 @@ const Post = () => {
     },
   }
 
+  console.log(postData.mainImage)
 
-  const categories = postData.categories.map((category => `${category.title}; `))
+  const categories = postData?.categories?.map((category) => `${category.title}; `)
   
   return (
     <div className={styles.blogpostContainer}>
@@ -84,16 +84,16 @@ const Post = () => {
       <div className={styles.blogpostHeaderContainer}>
       <BlogNav />
       <img 
-      src={postData.mainImage.asset.url} 
+      src={postData?.mainImage?.asset?.url || ''} 
       alt="blog-header-image"
       id={styles.blogpostHeaderImageWide} />
       </div>
       <div className={styles.blogpostContent}> 
-      <p className={styles.blogpostDate}>Published on: {postData.publishedAt.split('').slice(0, 10).join('')}</p>
+      <p className={styles.blogpostDate}>Published on: {postData?.publishedAt?.split('').slice(0, 10).join('')}</p>
       <p className={styles.blogpostCategories}>Categories: {categories}</p>
         <div>
       <PortableText
-          value={postData.body}
+          value={postData?.body}
           components={components}
         />
         </div>
@@ -108,4 +108,4 @@ const Post = () => {
   );
 }
 
-export default Post
+export default BlogPost

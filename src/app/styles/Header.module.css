@@ -58,6 +58,29 @@
 .AboutMe {
   margin: 10px;
 }
+
+.loading {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.loading > h1 {
+  text-align: center;
+}
+
+.fill {
+  background-image: url("/images/fill_up.gif");
+  background-size: 110% auto;
+  background-position: center;
+  -webkit-background-clip: content-box;
+  background-clip: content-box;
+  color: transparent;
+}
+
   
 @media only screen and (max-width: 650px) {
   .Heading{

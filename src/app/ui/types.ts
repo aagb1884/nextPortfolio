@@ -10,11 +10,35 @@
     isInline: boolean;
   };
 
-  export type Post = {
+  export interface Category  {
     title: string;
-    body: string;
-    publishedAt: string;
+    [key:string]: string;
+    }
+
+  export interface Post {
+    title: string;
     slug: { current: string };
+    publishedAt: string;
+    mainImage: {
+        asset: {
+        url: string;
+        };
+    };
+    body: any; 
+    name?: string;
+    categories?: {
+        title: string 
+     } [];
+    }
+
+  export type QueryResult = {
+    title: string;
+    slug: { current: string };
+    publishedAt: string;
+    mainImage: {
+        asset: { url: string };
+    };
+    body: any;
+    name?: string;
     categories: { title: string }[];
-    mainImage: { asset: { url: string } };
-  };
+    };

@@ -15,7 +15,7 @@ import { Post } from '@/app/ui/types';
 
 export default function Blog() {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
-  const [allPostsData, setAllPosts] = useState(null);
+  const [allPostsData, setAllPosts] = useState([])
   const [allCategories, setCategories] = useState(null);
   const [categoryFilter, setCategoryFilter] = useState('All');
   const [searchTerm, setSearchTerm] = useState("");
@@ -45,7 +45,7 @@ export default function Blog() {
         }`
       )
       .then((data) => {
-        const sortedPosts = data.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+        const sortedPosts = data.sort((a: any, b: any) => new Date(b.publishedAt).valueOf() - new Date(a.publishedAt).valueOf());
         setAllPosts(sortedPosts);
       })
       .catch(console.error);
@@ -63,12 +63,12 @@ export default function Blog() {
       .catch(console.error);
   }, []);
 
-  const handleCategoryFilter = (category) => {
+  const handleCategoryFilter = (category: string) => {
     setCategoryFilter(category);
   };
   
   //filter and search
-  const handleSearch = (event) => {
+  const handleSearch = (event: any) => {
     event.preventDefault();
     setSearchTerm(event.target.value);
   };
@@ -80,21 +80,21 @@ export default function Blog() {
 
   const toLowerCaseSafe = (str: string | null | undefined) => (str ? str.toLowerCase() : '');
 
-  const searchInPostBody = (postBody, searchTerm: string): boolean => {
+  const searchInPostBody = (postBody: any, searchTerm: string): boolean => {
     const searchTermLower = toLowerCaseSafe(searchTerm);
-    return postBody.some((item) => 
+    return postBody.some((item: any) => 
       item.children && item.children.some((child: { text: string }) => 
         toLowerCaseSafe(child.text).includes(searchTermLower)
       )
     );
   };
 
-
+ 
 
   let filteredPosts = allPostsData;
   if (allPostsData && searchTerm.length > 0 || categoryFilter !== 'All' || 
     (allPostsData && searchTerm.length > 0 && categoryFilter !== 'All' ))
-    filteredPosts = allPostsData?.filter((post: Post) => post.categories.some((category) => {
+    filteredPosts = allPostsData?.filter((post: Post) => post?.categories?.some((category) => {
       
       const searchTermLower = toLowerCaseSafe(searchTerm)
 
@@ -152,7 +152,7 @@ export default function Blog() {
       <div className={styles.blogBody}>
         {/* Show filtered posts or "No posts found" message */}
         {filteredPosts && filteredPosts.length > 0 ? (
-          postList.map((post) => (
+          postList.map((post: Post) => (
             <div className={styles.blogpostLink} key={post.slug.current}>
               <Link href={"/blog/" + post.slug.current}>
                 <span className={styles.blogpostHrImgCr}>
