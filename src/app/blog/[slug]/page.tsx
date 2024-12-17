@@ -70,8 +70,6 @@ const BlogPost = () => {
     },
   }
 
-  console.log(postData.mainImage)
-
   const categories = postData?.categories?.map((category) => `${category.title}; `)
   
   return (

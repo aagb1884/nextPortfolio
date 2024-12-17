@@ -1,6 +1,6 @@
 'use client'
 import styles from '../styles/blog.module.css';
-import React, { useEffect, useState } from "react";
+import React, { SyntheticEvent, useEffect, useState } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 import createClient from './blog_components/client';
@@ -9,7 +9,7 @@ import HomeFooter from '../../components/HomePage/Footer/HomeFooter';
 import CategorySelect from './blog_components/category-select';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 import type { Metadata } from 'next';
-import { Post } from '@/app/ui/types';
+import { Post, PostBodyItem, PostChild } from '@/app/ui/types';
 // import RSSFEED from '../ui/rss';
 
 
@@ -45,7 +45,8 @@ export default function Blog() {
         }`
       )
       .then((data) => {
-        const sortedPosts = data.sort((a: any, b: any) => new Date(b.publishedAt).valueOf() - new Date(a.publishedAt).valueOf());
+        const sortedPosts = data.sort((a: { publishedAt: string }, b: { publishedAt: string }) => 
+          new Date(b.publishedAt).valueOf() - new Date(a.publishedAt).valueOf());
         setAllPosts(sortedPosts);
       })
       .catch(console.error);
@@ -68,9 +69,9 @@ export default function Blog() {
   };
   
   //filter and search
-  const handleSearch = (event: any) => {
+  const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     event.preventDefault();
-    setSearchTerm(event.target.value);
+    setSearchTerm(event.currentTarget.value);
   };
 
   const clearSearch = () => {
@@ -80,16 +81,14 @@ export default function Blog() {
 
   const toLowerCaseSafe = (str: string | null | undefined) => (str ? str.toLowerCase() : '');
 
-  const searchInPostBody = (postBody: any, searchTerm: string): boolean => {
+  const searchInPostBody = (postBody: PostBodyItem[], searchTerm: string): boolean => {
     const searchTermLower = toLowerCaseSafe(searchTerm);
-    return postBody.some((item: any) => 
-      item.children && item.children.some((child: { text: string }) => 
+    return postBody.some((item: PostBodyItem) => 
+      item.children?.some((child: PostChild) => 
         toLowerCaseSafe(child.text).includes(searchTermLower)
       )
     );
   };
-
- 
 
   let filteredPosts = allPostsData;
   if (allPostsData && searchTerm.length > 0 || categoryFilter !== 'All' || 
