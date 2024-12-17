@@ -9,7 +9,7 @@ const LoadingPage = () => {
         <div className={styles.fill}>
         <Image
         src={beard}
-        width={200} height={200}
+        width={200} height={185}
         alt='loading-screen-image'
         ></Image>
         </div>

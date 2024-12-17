@@ -24,7 +24,7 @@
         url: string;
         };
     };
-    body: { _type: string } []; 
+    body: PostBodyItem[]; 
     name?: string;
     categories?: {
         title: string 
@@ -38,7 +38,7 @@
     mainImage: {
         asset: { url: string };
     };
-    body: { _type: string } []; 
+    body: PostBodyItem[]; 
     name?: string;
     categories: { title: string }[];
     };

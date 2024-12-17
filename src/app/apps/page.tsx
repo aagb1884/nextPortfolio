@@ -14,11 +14,6 @@ import type { Metadata } from 'next';
 
 const AppsLandingPage = () => {
     const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
-
-    const _metadata: Metadata = {
-        title: "Daft Wee Apps",
-        description: "Home to some silly apps I've made, such as Eurovision Bingo and The Big Finish Boxset Generator.",
-      };
     
     return ( 
         <div className={styles.appLandingPage}>

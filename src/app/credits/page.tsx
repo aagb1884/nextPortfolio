@@ -9,11 +9,6 @@ import type { Metadata } from 'next';
 const Credits = () => {
     const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
 
-    const _metadata: Metadata = {
-        title: "Andrew Blair's Website - Credits Page",
-        description: "Credits for images, icons and code used on the site.",
-      };
-
     return ( 
         <section className={styles.creditsContainer}>
             <h1>Credits</h1>

@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     icon: '/images/favicon.ico'
   },
   creator: 'Andrew Blair',
-  keywords: ['Software Developer', 'Poet', 'Performer', 'Edinburgh', 'journalist', 'Den of Geek', 'Doctor Who'],
+  keywords: ['Software Developer', 'Poet', 'Performer', 'Edinburgh', 'Robert Pattinson', 'journalist', 'Den of Geek', 'Doctor Who', 'Eurovision Bingo', 'Big Finish Boxset Generator', 'Ideas too Unpopular to Monetise'],
   alternates: {
       types: {
         'application/rss+xml': 'https://andrewblair.co.uk/feed.xml',
