@@ -8,7 +8,6 @@ import avatar from '../../../public/images/avatar_ab.png';
 import HomeFooter from '../../components/HomePage/Footer/HomeFooter';
 import CategorySelect from './blog_components/category-select';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
-import type { Metadata } from 'next';
 import { Post, PostBodyItem, PostChild } from '@/app/ui/types';
 // import RSSFEED from '../ui/rss';
 

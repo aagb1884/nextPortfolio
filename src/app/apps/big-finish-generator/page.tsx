@@ -11,7 +11,6 @@ import Villain from './bf_components/lists/Villain';
 import EventLocation from './bf_components/lists/Location';
 import { useState } from 'react';
 import Image from 'next/image';
-import type { Metadata } from 'next';
 
 const BigFinishGenerator = () => {
     const [mainCharacter, setMainCharacter] = useState("");

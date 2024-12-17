@@ -10,7 +10,6 @@ import bigFinishGif from '../../../public/images/bigFinish/untempered_schism.gif
 import deekPrime from '../../../public/images/deekPrime.jpg';
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from '@/app/context/GlobalStateContext';
-import type { Metadata } from 'next';
 
 const AppsLandingPage = () => {
     const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
