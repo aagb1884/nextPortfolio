@@ -11,7 +11,6 @@ import { useGlobalState } from '@/app/context/GlobalStateContext';
 import { Post, PostBodyItem, PostChild } from '@/app/ui/types';
 // import RSSFEED from '../ui/rss';
 
-
 export default function Blog() {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
   const [allPostsData, setAllPosts] = useState([])

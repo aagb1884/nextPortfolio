@@ -26,9 +26,7 @@
     };
     body: PostBodyItem[]; 
     name?: string;
-    categories?: {
-        title: string 
-     } [];
+    categories?: { title: string } [];
     }
 
   export type QueryResult = {
@@ -38,7 +36,7 @@
     mainImage: {
         asset: { url: string };
     };
-    body: PostBodyItem[]; 
+    body: (PostBodyItem[] | { asset?: any })[]; 
     name?: string;
     categories: { title: string }[];
     };

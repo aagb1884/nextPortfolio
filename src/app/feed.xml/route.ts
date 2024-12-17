@@ -1,5 +1,6 @@
 import RSS from 'rss';
 import { createClient } from '@sanity/client';
+import { Post } from '@/sanity/types';
 
 const sanityClient = createClient({
   projectId: process.env.SANITY_PROJECT_ID, 
@@ -9,7 +10,7 @@ const sanityClient = createClient({
 
 export async function GET() {
 
-  const posts = await sanityClient.fetch(`
+  const posts = await sanityClient.fetch<Post[]>(`
     *[_type == "post"]{
       title,
       slug,
@@ -27,21 +28,22 @@ const feed = new RSS({
     site_url: 'https://localhost:3000',
     feed_url: `https://localhost:3000/feed.xml`,
     // site_url: 'https://andrewblair.co.uk',
-    // feed_url: `https://andrewblair.co.uk/feed.xml/route`,
+    // feed_url: `https://andrewblair.co.uk/feed.xml/`,
     copyright: `${new Date().getFullYear()}`,
     language: 'en',
     pubDate: new Date(),
   });
 
-  posts.forEach((post) => {
+
+  posts.forEach((post: Post) => {
     feed.item({
-      title: post.title,
-      guid: `https://andrewblair.co.uk/blog/${post.slug.current}`,
-      url: `https://andrewblair.co.uk/blog/${post.slug.current}`,
-      date: post.publishedAt,
-      description: post.body[0]?.children[0]?.text, 
+      title: post.title || 'Untitled Post',
+      guid: `https://andrewblair.co.uk/blog/${post?.slug?.current || 'unknown'}`,
+      url: `https://andrewblair.co.uk/blog/${post?.slug?.current || 'unknown'}`,
+      date: post.publishedAt || new Date().toISOString(),
+      description: post?.body?.[0]?.children?.[0]?.text || 'No description available.', 
       author: 'Andrew Blair', 
-      categories: post.categories?.map(category => category.title) || [],
+      categories: post.categories?.map((category) => category.title || 'Uncategorized') || [],
     });
   });
 

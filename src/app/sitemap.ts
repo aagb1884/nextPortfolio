@@ -24,6 +24,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: ['/images/avatar_ab.png']
     },
     {
+      url: 'https://andrewblair.co.uk/apps/eurovision-bingo',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.7,
+      images: ['/images/eurovision_bingo_button.gif']
+    },
+    {
+      url: 'https://andrewblair.co.uk/apps/big-finish-generator',
+      lastModified: new Date(),
+      changeFrequency: 'yearly',
+      priority: 0.7,
+      images: ['/images/bigFinish/untempered_schism.gif']
+    },
+    {
       url: 'https://andrewblair.co.uk/credits',
       lastModified: new Date(),
       changeFrequency: 'yearly',

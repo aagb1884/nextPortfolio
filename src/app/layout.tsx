@@ -24,7 +24,10 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Andrew Blair's Website",
   generator: 'Next.js',
+  openGraph: {
+  title: "Andrew Blair's website",
   description: "Andrew Blair is a writer, performer and software developer from Scotland. He made this website to host his apps, blog and writing credits.",
+  },
   icons: {
     icon: '/images/favicon.ico'
   },
