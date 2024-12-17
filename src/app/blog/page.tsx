@@ -1,6 +1,6 @@
 'use client'
 import styles from '../styles/blog.module.css';
-import React, { SyntheticEvent, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Link from 'next/link';
 import Image from 'next/image';
 import createClient from './blog_components/client';
