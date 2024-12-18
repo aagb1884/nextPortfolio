@@ -4,6 +4,13 @@ import styles from '../../styles/euroBingo.module.css';
 import AppsFooter from "../components/AppsFooter";
 import KoFiLink from "@/app/ui/KoFi";
 
+export const metadata = {
+  title: 'Eurovision Bingo',
+  openGraph: {
+    title: 'Eurovision Bingo',
+  },
+}
+
 const EurovisionBingo = () => {
 
     return ( 
