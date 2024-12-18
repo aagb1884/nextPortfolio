@@ -1,6 +1,7 @@
 import RSS from 'rss';
 import { createClient } from '@sanity/client';
-import { Post } from '@/sanity/types';
+import { Post } from '../ui/types';
+
 
 const sanityClient = createClient({
   projectId: process.env.SANITY_PROJECT_ID, 
@@ -17,10 +18,13 @@ export async function GET() {
       body,
       publishedAt,
       categories[]->{
-        title
-      }
+      title
+      },
     }
-  `);
+  `
+);
+
+console.log(JSON.stringify(posts, null, 2));
 
 const feed = new RSS({
     title: "Andrew Blair's Website",
@@ -34,18 +38,18 @@ const feed = new RSS({
     pubDate: new Date(),
   });
 
-
   posts.forEach((post: Post) => {
     feed.item({
       title: post.title || 'Untitled Post',
       guid: `https://andrewblair.co.uk/blog/${post?.slug?.current || 'unknown'}`,
       url: `https://andrewblair.co.uk/blog/${post?.slug?.current || 'unknown'}`,
       date: post.publishedAt || new Date().toISOString(),
-      description: post?.body?.[0]?.children?.[0]?.text || 'No description available.', 
-      author: 'Andrew Blair', 
-      categories: post.categories?.map((category) => category.title || 'Uncategorized') || [],
+      description: post?.body?.[0]?.children?.[0]?.text || 'No description available.',
+      author: 'Andrew Blair',
+      categories: post.categories?.map((category) => category.title) || [],
     });
   });
+  
 
   return new Response(feed.xml({ indent: true }), {
         headers: {

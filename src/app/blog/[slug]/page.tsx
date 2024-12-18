@@ -69,7 +69,7 @@ const BlogPost = () => {
       image: SampleImageComponent,
     },
   }
-
+  
   const categories = postData?.categories?.map((category) => `${category.title}; `)
   
   return (

@@ -12,35 +12,8 @@
 
   export interface Category  {
     title: string;
-    [key:string]: string;
     }
-
-  export interface Post {
-    title: string;
-    slug: { current: string };
-    publishedAt: string;
-    mainImage: {
-        asset: {
-        url: string;
-        };
-    };
-    body: PostBodyItem[]; 
-    name?: string;
-    categories?: { title: string } [];
-    }
-
-  export type QueryResult = {
-    title: string;
-    slug: { current: string };
-    publishedAt: string;
-    mainImage: {
-        asset: { url: string };
-    };
-    body: (PostBodyItem[] | { asset?: any })[]; 
-    name?: string;
-    categories: { title: string }[];
-    };
-
+    
     export interface PostChild {
       text: string;
       _type: string;
@@ -53,3 +26,30 @@
       _type: string;
       _key: string;
     }
+  export interface Post {
+    title: string;
+    slug: { current: string };
+    publishedAt: string;
+    mainImage: {
+        asset: {
+        url: string;
+        };
+    };
+    body: PostBodyItem[]; 
+    name?: string;
+    categories?: Category[];
+    }
+
+  export type QueryResult = {
+    title: string;
+    slug: { current: string };
+    publishedAt: string;
+    mainImage: {
+        asset: { url: string };
+    };
+    body: PostBodyItem[]; 
+    name?: string;
+    categories: { title: string }[];
+    };
+
+  
