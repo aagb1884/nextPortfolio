@@ -10,9 +10,9 @@ export const metadata = {
 const Credits = () => {
 
     return ( 
-        <div>
+        
         <CreditsPage />
-        </div>
+
      );
 }
  
