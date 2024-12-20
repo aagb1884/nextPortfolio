@@ -1,9 +1,41 @@
+'use client'
 import ExternalLinkImage from '@/app/ui/ExternalLink';
 import styles from '../../../app/styles/footer.module.css';
 import Link from 'next/link';
 import KoFiLink from '@/app/ui/KoFi';
+import createClient from '../../../app/blog/blog_components/client';
+import React, { useEffect, useState } from "react";
 
 const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
+    const [allPostsData, setAllPosts] = useState([])
+
+     // Fetch posts
+      useEffect(() => {
+        createClient
+          .fetch(
+            `*[_type == "post"]{
+              title,
+              slug,
+              publishedAt,
+            }`
+          )
+          .then((data) => {
+            const sortedPosts = data.sort((a, b) => 
+            new Date(b.publishedAt).valueOf() - new Date(a.publishedAt).valueOf()).
+            slice(0, 3)
+            setAllPosts(sortedPosts);
+          })
+          .catch(console.error);
+      }, []);
+
+      const blogLinks = allPostsData.map((post) => (
+        <ul className={styles.appsClmLinks} key={post.slug.current}>
+                <li><Link href={`/blog/${post.slug.current}`} >{post.title}</Link>
+                </li>
+            </ul>
+      ) 
+    )
+
     return ( 
         <nav className={styles.homeFooter}>
 
@@ -58,6 +90,7 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
             }
         }
         }}>Blog</Link>
+        {blogLinks}
         <Link href='/credits'>Credits</Link>
         </div> 
         </div>
