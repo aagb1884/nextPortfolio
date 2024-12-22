@@ -248,7 +248,7 @@
       font-size: 14px;
     }
 
-    .liveEventsList > li > iframe, .projectDescription > iframe,
+    .liveEventsList > iframe, .projectDescription > iframe,
      .projectDescription > img {
       width: 100%;
       height: auto;
