@@ -41,6 +41,16 @@ const CreditsPage = () => {
                 <li>
                 <Link target="_blank" href="https://commons.wikimedia.org/wiki/File:Next_Store_at_Castlepoint.jpg">Next Store at Castlepoint by Dorsetdude <ExternalLinkImage />. </Link>
                 </li>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/photo/portrait-of-smiling-blonde-woman-19161819/">Smiling Blonde Woman by Karina Rymarchuk <ExternalLinkImage />. </Link>
+                </li>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/photo/person-feeling-pain-in-the-knee-11349880/">Person feeling pain in the knee by Towfiqu barbhuiya <ExternalLinkImage />. </Link>
+                </li>
+                <li>
+                <Link target="_blank" href="https://stocksnap.io/photo/heidelberg-germany-WXMQNKRE6Y">Heidelberg <ExternalLinkImage />. </Link> <Link target="_blank" href="https://stocksnap.io/author/29367">Roman Kraft <ExternalLinkImage /></Link>
+                </li>
+         
             </ul>
             <ul className={styles.cssUl}>
             <h4>CSS</h4>

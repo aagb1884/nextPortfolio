@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Hubot_Sans } from 'next/font/google';
 import { GlobalStateProvider } from './context/GlobalStateContext';
+import { GoogleAnalytics } from '@next/third-parties/google'
 import "./styles/globals.css";
 
 const hubotSans = Hubot_Sans({
@@ -51,6 +52,7 @@ export default function RootLayout({
       <body className={`${hubotSans.variable} ${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
+      <GoogleAnalytics gaId="G-HGEZ1SBR1R" />
     </html>
     </GlobalStateProvider>
   );
