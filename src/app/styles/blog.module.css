@@ -166,7 +166,9 @@
 }
 
 .blogpostContent > div > img {
-    max-width: 400px;
+    max-width: 800px;
+    max-height: 400px;
+    width: auto;
     border: 1px skyblue solid;
     border-radius: 5px;
 }
@@ -259,7 +261,7 @@
         max-width: 80%;
     }
     .blogpostContent > div > img {
-        max-width: 300px;
+        max-width: 350px;
     }
     #blogpostHeaderImageWide {
         max-width: 300px;
