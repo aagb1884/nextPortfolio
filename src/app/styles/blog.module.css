@@ -161,6 +161,11 @@
     margin-bottom: 10px;
 }
 
+div.portableText p:first-of-type {
+    font-size: 0em;
+    color: rgb(0, 0, 38);
+  }
+
 .blogpostContent {
     padding: 30px;
 }
