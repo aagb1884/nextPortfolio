@@ -103,13 +103,18 @@
     margin: 5px;
 }
 
+.blogpostInfo {
+    line-height: 2;
+    margin-top: 10px;
+}
+
 .blogPreview {
     text-align: justify;
+    margin-bottom: 5px;
 }
 
 .blogPreview, .blogDate {
     font-size: 12px;
-    line-height: 1;
 }
 
 .morePostBtnDiv {

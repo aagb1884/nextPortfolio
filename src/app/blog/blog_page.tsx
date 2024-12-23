@@ -107,6 +107,8 @@ const BlogPage = () => {
     setPostsonDisplay(prevPostsOnDisplay => prevPostsOnDisplay + 6)
 }
 
+console.log(allPostsData[0])
+
   return (
     <section className={styles.blogContainer}>
       <div className={styles.blogTitles}>
@@ -161,7 +163,9 @@ const BlogPage = () => {
               </Link>
               <div className={styles.blogpostInfo}>
                 <p className={styles.blogPreview}>
-                  {post.body[0].children[0].text.split("").slice(0, 200).join("")}...
+                  {post.body[0]._type === 'block' ? 
+                  post.body[0].children[0].text.split("").slice(0, 200).join("") : 
+                  post.body[1].children[0].text.split("").slice(0, 200).join("")}
                 </p>
                 <p className={styles.blogDate}>
                   {post.publishedAt.split("").slice(0, 10).join("")}
