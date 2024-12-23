@@ -107,8 +107,6 @@ const BlogPage = () => {
     setPostsonDisplay(prevPostsOnDisplay => prevPostsOnDisplay + 6)
 }
 
-console.log(allPostsData[0])
-
   return (
     <section className={styles.blogContainer}>
       <div className={styles.blogTitles}>

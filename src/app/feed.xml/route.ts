@@ -29,10 +29,8 @@ console.log(JSON.stringify(posts, null, 2));
 const feed = new RSS({
     title: "Andrew Blair's Website",
     description: 'Software development, app development, poetry, journalism.',
-    site_url: 'https://localhost:3000',
-    feed_url: `https://localhost:3000/feed.xml`,
-    // site_url: 'https://andrewblair.co.uk',
-    // feed_url: `https://andrewblair.co.uk/feed.xml/`,
+    site_url: 'https://andrewblair.co.uk',
+    feed_url: `https://andrewblair.co.uk/feed.xml/`,
     copyright: `${new Date().getFullYear()}`,
     language: 'en',
     pubDate: new Date(),
