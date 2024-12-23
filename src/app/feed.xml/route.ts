@@ -24,8 +24,6 @@ export async function GET() {
   `
 );
 
-console.log(JSON.stringify(posts, null, 2));
-
 const feed = new RSS({
     title: "Andrew Blair's Website",
     description: 'Software development, app development, poetry, journalism.',
