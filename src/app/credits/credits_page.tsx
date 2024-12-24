@@ -30,6 +30,9 @@ const CreditsPage = () => {
                 <Link target="_blank" href="https://icons8.com/icon/18734/copy-to-clipboard">Copy to Clipboard <ExternalLinkImage /> </Link> icon by <Link target="_blank" href="https://icons8.com">Icons8 <ExternalLinkImage /> </Link>
                 </li>
                 <li>
+                <Link target="_blank" href="https://icons8.com/icon/1OU2pduLotIA/blog">Blog <ExternalLinkImage /> </Link> icon by <Link target="_blank" href="https://icons8.com">Icons8 <ExternalLinkImage /> </Link>
+                </li>
+                <li>
                 <Link href="https://www.flaticon.com/free-icons/external-link" title="external link icons">External link icons created by Yudhi Restu - Flaticon <ExternalLinkImage /> </Link>
                 </li>
             </ul>
