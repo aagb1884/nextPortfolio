@@ -11,6 +11,7 @@ import urlBuilder from '@sanity/image-url';
 import HomeFooter from '@/components/HomePage/Footer/HomeFooter';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 import { SampleImageComponentProps, Post } from '@/app/ui/types';
+import RSSFEED from '@/app/ui/rss';
 
 const BlogpostPage = () => {
     const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
@@ -95,6 +96,7 @@ const BlogpostPage = () => {
           components={components}
         />
         </div>
+      <RSSFEED />
       </div>
       <HomeFooter
         goToContactForm={goToContactForm}
