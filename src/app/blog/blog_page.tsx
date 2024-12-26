@@ -9,7 +9,7 @@ import HomeFooter from '../../components/HomePage/Footer/HomeFooter';
 import CategorySelect from './blog_components/category-select';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 import { Post, PostBodyItem, PostChild } from '@/app/ui/types';
-// import RSSFEED from '../ui/rss';
+import RSSFEED from '../ui/rss';
 
 const BlogPage = () => {
     const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
@@ -111,16 +111,18 @@ const BlogPage = () => {
     <section className={styles.blogContainer}>
       <div className={styles.blogTitles}>
         <div className={styles.blogTitleAvatar}>
+          <div className={styles.notRSS}>
           <h2 className={styles.blogTitle}>OPINIONS TOO UNPOPULAR TO MONETISE</h2>
           <div className={styles.avatarContainer}>
             <Image src={avatar} id={styles.blogAvatar} alt='avatar' width={100}/>
             <div className={styles.blogAvatarImgText}>with Andrew Blair</div>
           </div>
-          {/* <RSSFEED/> */}
+          </div>
+          <RSSFEED/>
         </div>
-        <h3 className={styles.blogSubtitle}>brain + unclogged = blogged</h3>
+        
       </div>
-
+      <h3 className={styles.blogSubtitle}>brain + unclogged = blogged</h3>
       <div className={styles.blogSearchFilter}>
         <CategorySelect
           handleCategoryFilter={handleCategoryFilter}
