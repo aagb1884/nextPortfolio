@@ -1,0 +1,259 @@
+.wesleySnopesApp {
+  text-align: center;
+  justify-content: center;
+  width: 100%;
+  overflow-y: auto;
+        height: 100%;
+  position: relative;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Sigmar', cursive;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(#272727, #1b1b1b);
+  color: rgb(141, 139, 139);
+  display: flex;
+  flex-direction: column;
+}
+
+
+.wesleyHeader{
+  height: 155px;
+  top: 0;
+  width: 100%;
+}
+
+.headerWrapper {
+  display: grid;
+  grid-template-areas: 'overlap';
+  place-content: center;
+  text-transform: uppercase;
+}
+
+.headerWrapper > div {
+  background-clip: text;  
+  -webkit-background-clip: text;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: clamp( 2em, 10vw, 9rem);
+  grid-area: overlap;
+  letter-spacing: 1px;
+  -webkit-text-stroke: 4px transparent;
+}
+
+.mainWesley{
+  margin-bottom: 15px;
+  padding-bottom: 2.7rem; 
+  flex: 1;
+  margin-top: 75px;
+  display: flex;
+  flex-direction: row;
+}
+
+.input {
+  width: 50%;
+}
+
+.iHeard{
+  font-family: 'Bebas Neue', cursive;
+  font-size: xx-large;
+  text-shadow: 2px 2px black;
+  color: #ffb338;
+  letter-spacing: .2rem;
+  margin-bottom: 5px;
+}
+
+.userQuery{
+  width: 500px;
+  height: 200px;
+  background-color: #1b1b1b;
+  color: #ffb338;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.truth, .truthDisabled {
+  color: #1b1b1b;
+  font-weight: bold;
+  font-size: xx-large;
+  border-radius: 5px;
+  box-shadow: 2px 4px #aa7012;
+  margin: 10px;
+  padding: 5px;
+  width: 200px;
+  height: 150px;
+}
+
+.clearButton{
+  background-color:orange;
+  color: #1b1b1b;
+  max-width: 100px;
+  width: auto;
+  padding: 10px;
+  font-size: large;
+}
+
+.truth{
+  background-color:#ffb338;
+}
+
+.truthDisabled{
+  background-color:#747473;
+}
+
+
+
+.wesleyImageSection{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  font-size: 26px;
+}
+
+.wesleyImage{
+  display: block;
+  margin: 20px;
+  border: 0.5px solid gold;
+  border-radius: 5px;
+}
+
+.wesleyFooter{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 72px;
+  min-height: 80px;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.navFooter {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.interfaceLayout{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+header css 
+.wesleyHeader {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} 
+ 
+.headerWrapper {
+  --gold: #ffb338;
+  --light-shadow: #77571d;
+  --dark-shadow: #3e2904;
+}
+
+
+.bg {
+  background-image: repeating-linear-gradient( 105deg, 
+    var(--gold) 0% , 
+    var(--dark-shadow) 5%,
+    var(--gold) 12%);
+  color: transparent;
+  filter: drop-shadow(5px 15px 15px black);
+  transform: scaleY(1.05);
+  transform-origin: top;
+}
+.fg{
+  background-image: repeating-linear-gradient( 5deg,  
+    var(--gold) 0% , 
+    var(--light-shadow) 23%, 
+    var(--gold) 31%);
+  color: #1e2127;
+  transform: scale(1);
+}
+.sh{
+  font-size: larger;
+  letter-spacing: .1rem;
+  background-image: repeating-linear-gradient( 5deg,  
+  var(--gold) 0% , 
+  var(--light-shadow) 23%, 
+  var(--gold) 31%);
+color: #000000;
+transform: scale(1);
+-webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: gold;
+}
+.ftr{
+  font-size: larger;
+  letter-spacing: .1rem;
+  background-image: repeating-linear-gradient( 5deg,  
+  var(--gold) 0% , 
+  var(--light-shadow) 23%, 
+  var(--gold) 31%);
+color: #000000;
+transform: scale(1);
+-webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: gold;
+}
+
+div.responses{
+  color: #ffb338;
+  letter-spacing: .1rem;
+}
+div.bigResponse{
+  font-size: x-large;
+}
+div.footer{
+  position:absolute;
+  left:0;
+  bottom:0;
+  right:0;
+}
+
+
+
+@media only screen and (max-width: 700px) {
+ 
+.wesleyHeader{
+  height: 100px;
+}
+
+.mainWesley{
+  font-size: 14px;
+  width: auto;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+.iHeard{
+  font-size: 22px;
+}
+
+.wesleyImage{
+  max-width: 300px;
+  margin: 1px;
+  width: 100%;
+  object-fit: contain;
+}
+.truth{
+  font-weight: bold;
+  font-size: medium;
+  border-radius: 2px;
+  box-shadow: 1px 2px #aa7012;
+}
+
+.sh{
+  max-width: 500px;
+  margin: 0 auto;
+}
+.ftr{
+  margin: 0 auto;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+  color: gold;
+  -webkit-text-stroke-color: black;
+}
+
+}
+

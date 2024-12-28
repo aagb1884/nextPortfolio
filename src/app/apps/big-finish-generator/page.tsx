@@ -4,6 +4,7 @@ export const metadata = {
     title: 'The Big Finish Boxset Generator',
     openGraph: {
       title: 'The Big Finish Boxset Generator',
+      description: 'Generate your own Big Finish boxset blurbs.'
     },
   }
 
