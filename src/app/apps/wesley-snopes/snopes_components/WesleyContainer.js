@@ -34,22 +34,24 @@ const WesleyContainer = () => {
 
     const [image, setImage] = useState("")
     const [userQuery, setUserQuery] = useState('');
-    const [prevUserQuery, setPrevUserQuery] = useState('F');
+    const [prevUserQuery, setPrevUserQuery] = useState([]);
     const [warning, setWarning] = useState('');
    
 
     function get_random_response() {
-        if (prevUserQuery !== userQuery) {
+        if ((userQuery.length > 1) && prevUserQuery.includes(userQuery) === false) {
         setImage(imgsrcs[Math.floor(Math.random()* imgsrcs.length)])
-        setPrevUserQuery(userQuery)
+        setPrevUserQuery([userQuery, ...prevUserQuery])
         setWarning('');
         } 
         else 
         {
-        setWarning(`YOU HAVE YOUR TRUTH. 
-            ENTER A DIFFERENT QUERY`)
+        setImage('');
+        setWarning(`YOU ALREADY HAVE YOUR TRUTH. ENTER A DIFFERENT QUERY`)
         }
     }
+
+    console.log(prevUserQuery)
 
     function handleInputChange(event) {
         setUserQuery(event.target.value);
@@ -58,14 +60,14 @@ const WesleyContainer = () => {
       function handleClear() {
         setUserQuery('');
         setImage('');
-        setPrevUserQuery('F')
+        setPrevUserQuery([])
       }
 
 
     return ( 
         <main className={styles.mainWesley}>
             <div className={styles.input}>
-            <form>
+            <form className={styles.form}>
                 <label htmlFor="user-query"><h2 className={styles.iHeard}>Hey Wesley, I heard...</h2></label>
                 <div className={styles.interfaceLayout}>
                 <textarea type="text" data-testid="text-input" className={styles.userQuery} id="user-query" name="user-query" maxLength="1000" onChange={handleInputChange}></textarea>
@@ -84,15 +86,15 @@ const WesleyContainer = () => {
                 className={`${styles.truth} ${userQuery.length === 0 ? styles.truthDisabled : ''}`}
                 title="Click here to find out THE TRUTH">IS THAT TRUE?</button>
             </div>
-            
+            <div className={styles.output}>
                 <section className={styles.wesleyImageSection}>
                 <p>{warning}</p>
                 {image && 
                 <Image className={styles.wesleyImage} 
                 src={image} alt="Wesley's Response" 
-                width={525} height={750}/>}
+                width={325} height={400}/>}
                 </section>
-                
+            </div>
             
         </main>
      );

@@ -50,8 +50,14 @@
   flex-direction: row;
 }
 
-.input {
+.input, .output {
   width: 50%;
+}
+
+.output {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .iHeard{
@@ -108,8 +114,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
   font-size: 26px;
+  max-height: 425px;
+  max-width: 350px;
 }
 
 .wesleyImage{
@@ -140,8 +148,8 @@
   justify-content: center;
 }
 
-
-header css 
+/* 
+header css  */
 .wesleyHeader {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -195,6 +203,7 @@ color: #000000;
 transform: scale(1);
 -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: gold;
+    
 }
 
 div.responses{
@@ -225,22 +234,46 @@ div.footer{
   margin-top: 15px;
   display: flex;
   flex-direction: column;
+  width: 100%;
+}
+
+.interfaceLayout {
+  display: flex;
+  flex-direction: row;
 }
 .iHeard{
   font-size: 22px;
 }
-
+.userQuery {
+  height: 50px;
+  font-size: 18px;
+}
+.form {
+  margin: 5px;
+}
+.input {
+  width: 100%;
+}
+.wesleyImageSection {
+  width: 100%;
+  max-height: 450px;
+  height: auto;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
 .wesleyImage{
   max-width: 300px;
+  max-height: 400px;
   margin: 1px;
   width: 100%;
   object-fit: contain;
 }
-.truth{
+.truth, .truthDisabled{
   font-weight: bold;
   font-size: medium;
   border-radius: 2px;
   box-shadow: 1px 2px #aa7012;
+  height: 40px;
 }
 
 .sh{
