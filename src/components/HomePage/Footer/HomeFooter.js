@@ -71,6 +71,9 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
                 <Link href="/apps/big-finish-generator">Big Finish Boxset Generator</Link>
             </li>
             <li>
+                <Link href="/apps/wesley-snopes">Wesley Snopes</Link>
+            </li>
+            <li>
                 <Link href="https://scottish-football-simulators.co.uk/">Scottish Football Simulators <ExternalLinkImage /></Link>
             </li>
             <li>

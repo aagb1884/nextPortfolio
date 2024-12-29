@@ -6,7 +6,6 @@
         height: 100%;
   position: relative;
   min-height: 100vh;
-  margin: 0;
   font-family: 'Sigmar', cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,6 +13,7 @@
   color: rgb(141, 139, 139);
   display: flex;
   flex-direction: column;
+  padding-bottom: 72px;
 }
 
 
@@ -136,6 +136,7 @@
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .navFooter {
@@ -203,7 +204,7 @@ color: #000000;
 transform: scale(1);
 -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: gold;
-    
+  text-align: center;
 }
 
 div.responses{
@@ -254,8 +255,10 @@ div.footer{
 .input {
   width: 100%;
 }
-.wesleyImageSection {
+.output {
   width: 100%;
+}
+.wesleyImageSection {
   max-height: 450px;
   height: auto;
   font-size: 18px;
