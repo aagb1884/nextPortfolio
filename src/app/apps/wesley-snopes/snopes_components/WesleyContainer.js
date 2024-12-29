@@ -1,5 +1,6 @@
 'use client'
-import styles from '../../../styles/wesley.module.css'
+import styles from '../../../styles/wesley.module.css';
+import Modal from '../snopes_components/modal';
 import { useState } from 'react';
 import Image from 'next/image';
 
@@ -36,6 +37,7 @@ const WesleyContainer = () => {
     const [userQuery, setUserQuery] = useState('');
     const [prevUserQuery, setPrevUserQuery] = useState([]);
     const [warning, setWarning] = useState('');
+    const [showModal, setShowModal] = useState(false)
    
 
     function get_random_response() {
@@ -51,7 +53,6 @@ const WesleyContainer = () => {
         }
     }
 
-    console.log(prevUserQuery)
 
     function handleInputChange(event) {
         setUserQuery(event.target.value);
@@ -66,6 +67,12 @@ const WesleyContainer = () => {
 
     return ( 
         <main className={styles.mainWesley}>
+            <button onClick={() => {setShowModal(!showModal)}}>How does this work?</button>
+            { showModal && (
+                <Modal 
+                showModal={showModal}
+                setShowModal={setShowModal} />
+            )}
             <div className={styles.input}>
             <form className={styles.form}>
                 <label htmlFor="user-query"><h2 className={styles.iHeard}>Hey Wesley, I heard...</h2></label>
