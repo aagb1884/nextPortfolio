@@ -8,7 +8,7 @@ import BFGeneratorAppLinks from '../../apps/components/bfGeneratorLinks';
 import euroBingoGif from '../../../../public/images/eurovision_bingo_button.gif';
 import bigFinishGif from '../../../../public/images/bigFinish/untempered_schism.gif';
 import deekPrime from '../../../../public/images/deekPrime.jpg';
-import wesley from '../../../../public/images/wesleySnopes/nonsense.png'
+import wesley from '../../../../public/images/wesleySnopes/button_wesley.png'
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 

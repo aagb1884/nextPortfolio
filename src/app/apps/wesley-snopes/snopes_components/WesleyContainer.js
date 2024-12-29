@@ -2,10 +2,11 @@
 import styles from '../../../styles/wesley.module.css';
 import Modal from '../snopes_components/modal';
 import { useState } from 'react';
+import { useGlobalState } from '@/app/context/GlobalStateContext';
 import Image from 'next/image';
 
 const WesleyContainer = () => {
-
+    const { showModal, setShowModal } = useGlobalState();
     const imgsrcs = [
         '/images/wesleySnopes/sorry_what.png',
         '/images/wesleySnopes/train_to_factville.png',
@@ -37,7 +38,7 @@ const WesleyContainer = () => {
     const [userQuery, setUserQuery] = useState('');
     const [prevUserQuery, setPrevUserQuery] = useState([]);
     const [warning, setWarning] = useState('');
-    const [showModal, setShowModal] = useState(false)
+    
    
 
     function get_random_response() {
@@ -67,7 +68,6 @@ const WesleyContainer = () => {
 
     return ( 
         <main className={styles.mainWesley}>
-            <button onClick={() => {setShowModal(!showModal)}}>How does this work?</button>
             { showModal && (
                 <Modal 
                 showModal={showModal}
