@@ -5,7 +5,7 @@
   overflow-y: scroll;
         height: 100vh;
   position: relative;
-  font-family: 'Sigmar', cursive;
+  font-family: var(--font-sigmar);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: radial-gradient(#272727, #1b1b1b);

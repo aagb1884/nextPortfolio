@@ -12,6 +12,7 @@ import WesleyContainer from './snopes_components/WesleyContainer';
 import WesleyFooter from './snopes_components/WesleyFooter';
 
 const WesleySnopes = () => {
+  
     return ( 
         <div className={styles.wesleySnopesApp}>
         <WesleyHeader />

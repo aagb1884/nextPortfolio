@@ -4,6 +4,7 @@ import Modal from '../snopes_components/modal';
 import { useState } from 'react';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 import Image from 'next/image';
+import Head from 'next/head';
 
 const WesleyContainer = () => {
     const { showModal, setShowModal } = useGlobalState();
@@ -15,7 +16,7 @@ const WesleyContainer = () => {
         {'image': '/images/wesleySnopes/train_to_factville.png', 
         'caption': "We're on the train to Factville baby"},
         {'image': '/images/wesleySnopes/blade.png', 
-        'caption': 'why not?'},
+        'caption': ''},
         {'image': '/images/wesleySnopes/balderdash.png', 
         'caption': 'BALDERDASH'},
         {'image':  '/images/wesleySnopes/bull.png', 
@@ -54,9 +55,9 @@ const WesleyContainer = () => {
         'caption': 'um'},
         {'image':  '/images/wesleySnopes/cow_bumhole.png', 
         'caption': "your cow's bumhole must be the shape of a ruler because that is some fine ass bullshit"},
-        // {'image': '/images/wesleySnopes/pish.png', 
-        //     'caption': "it's pish"},
     ];
+
+    
 
     const [image, setImage] = useState("")
     const [userQuery, setUserQuery] = useState('');
@@ -66,7 +67,7 @@ const WesleyContainer = () => {
    
 
     function get_random_response() {
-        if ((userQuery.length > 0) && prevUserQuery.includes(userQuery) === false) {
+        if ((userQuery.length > 0) && prevUserQuery !== userQuery) {
         setImage(imgsrcs[Math.floor(Math.random()* imgsrcs.length)])
         setPrevUserQuery(userQuery)
         setWarning('');
@@ -126,7 +127,8 @@ const WesleyContainer = () => {
                 alt={image.caption}
                 width={325} height={400}
                 loading={image === imgsrcs[0] ? "eager" : "lazy"}
-                placeholder='blur'/>
+                placeholder='blur'
+                blurDataURL='/images/wesleySnopes/pish.png'/>
                 <p>{image.caption} </p>
                 </>)}
                 </section>

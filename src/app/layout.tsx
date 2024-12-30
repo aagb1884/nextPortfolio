@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Hubot_Sans } from 'next/font/google';
+import { Hubot_Sans, Sigmar } from 'next/font/google';
 import { GlobalStateProvider } from './context/GlobalStateContext';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import "./styles/globals.css";
+
+const sigmar = Sigmar({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-sigmar',
+})
 
 const hubotSans = Hubot_Sans({
   subsets: ['latin'],
@@ -16,6 +22,7 @@ const geistSans = localFont({
   variable: "--font-geist-sans",
   weight: "100 900",
 });
+
 const geistMono = localFont({
   src: "./fonts/GeistMonoVF.woff",
   variable: "--font-geist-mono",
@@ -49,7 +56,7 @@ export default function RootLayout({
   return (
     <GlobalStateProvider>
     <html lang='en' suppressHydrationWarning>
-      <body className={`${hubotSans.variable} ${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${hubotSans.variable} ${sigmar.variable} ${geistSans.variable} ${geistMono.variable}`}>
         {children}
       </body>
       <GoogleAnalytics gaId="G-HGEZ1SBR1R" />
