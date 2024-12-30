@@ -60,20 +60,19 @@ const WesleyContainer = () => {
 
     const [image, setImage] = useState("")
     const [userQuery, setUserQuery] = useState('');
-    const [prevUserQuery, setPrevUserQuery] = useState([]);
+    const [prevUserQuery, setPrevUserQuery] = useState('pqsdfgdf');
     const [warning, setWarning] = useState('');
     
    
 
     function get_random_response() {
-        if ((userQuery.length > 1) && prevUserQuery.includes(userQuery) === false) {
+        if ((userQuery.length > 0) && prevUserQuery.includes(userQuery) === false) {
         setImage(imgsrcs[Math.floor(Math.random()* imgsrcs.length)])
-        setPrevUserQuery([userQuery, ...prevUserQuery])
+        setPrevUserQuery(userQuery)
         setWarning('');
         } 
         else 
         {
-        setImage('');
         setWarning(`YOU ALREADY HAVE YOUR TRUTH. ENTER A DIFFERENT QUERY`)
         }
     }
@@ -86,7 +85,7 @@ const WesleyContainer = () => {
       function handleClear() {
         setUserQuery('');
         setImage('');
-        setPrevUserQuery([])
+        setPrevUserQuery('pqsdfgdf')
       }
 
 
