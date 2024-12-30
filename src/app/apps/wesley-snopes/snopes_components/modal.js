@@ -15,7 +15,7 @@ function Modal ({showModal, setShowModal}) {
             <ul>
                 <li>Type your query into the text box.</li>
                 <li>Check for truth.</li>
-                <li>Until you hit "Clear" you won't be able to check the same query more than once.</li>
+                <li>Until you hit &quot;Clear&quot; you won&apos;t be able to check the same query more than once.</li>
             </ul>
         </section>
         <button onClick={() => {setShowModal(!showModal)}}>Hide Instructions</button>

@@ -126,7 +126,7 @@ const WesleyContainer = () => {
                 src={image.image} alt={image.caption}
                 width={325} height={400}/>
                 <p>{image.caption} </p>
-                </> )}
+                </>)}
                 </section>
             </div>
             
