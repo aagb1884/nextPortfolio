@@ -122,8 +122,11 @@ const WesleyContainer = () => {
                 {image && (
                 <>
                 <Image className={styles.wesleyImage} 
-                src={image.image} alt={image.caption}
-                width={325} height={400}/>
+                src={image.image} 
+                alt={image.caption}
+                width={325} height={400}
+                loading={image === imgsrcs[0] ? "eager" : "lazy"}
+                placeholder='blur'/>
                 <p>{image.caption} </p>
                 </>)}
                 </section>
