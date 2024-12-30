@@ -7,6 +7,7 @@ const GlobalStateContext = createContext();
 export const GlobalStateProvider = ({ children }) => {
     const [showForm, setShowForm] = useState(false);
     const [activeTab, setActiveTab] = useState("tab1");
+    const [showModal, setShowModal] = useState(false)
     const navigate = useRouter()
 
     const executeScroll = (ref) => {
@@ -28,7 +29,8 @@ export const GlobalStateProvider = ({ children }) => {
   };
 
     return (
-        <GlobalStateContext.Provider value={{ goToContactForm, goToTab, showForm, setShowForm, activeTab, setActiveTab }}>
+        <GlobalStateContext.Provider value={{ goToContactForm, goToTab, showForm, setShowForm, 
+        activeTab, setActiveTab, showModal, setShowModal }}>
             {children}
         </GlobalStateContext.Provider>
     );

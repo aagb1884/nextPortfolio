@@ -8,6 +8,7 @@ import BFGeneratorAppLinks from '../../apps/components/bfGeneratorLinks';
 import euroBingoGif from '../../../../public/images/eurovision_bingo_button.gif';
 import bigFinishGif from '../../../../public/images/bigFinish/untempered_schism.gif';
 import deekPrime from '../../../../public/images/deekPrime.jpg';
+import wesley from '../../../../public/images/wesleySnopes/button_wesley.png'
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 
@@ -50,6 +51,17 @@ const AppsPage = () => {
                 </Link>
                 </div>
 
+                <div className={styles.wesleySnopes}>   
+                <Link href="/apps/wesley-snopes">
+                
+                    <Image    src={wesley}
+                            alt="wesley-snopes-button" 
+                        
+                            className={styles.buttonImage}/>
+                    <div className={styles.buttonText}>Wesley Snopes</div>
+                </Link>
+                </div>
+
                 <div className={styles.derekAdams}>   
                 <Link href="https://scottish-football-simulators.co.uk/">
                 
@@ -69,7 +81,7 @@ const AppsPage = () => {
                 <p>Six (and counting) React apps; some requiring esoteric knowledge of <i>Doctor Who</i>, others less so.</p>
                 <p>You can find more information on each on my <Link href="https://github.com/aagb1884">GitHub page <ExternalLinkImage/></Link>.</p>
                 <br />
-                <aside>NB. <i>The Derek Adams Management Simulator</i> and <i>Rangers Manager Simulator</i> are probably not suitable for work.</aside>
+                <aside>NB. <i>Wesley Snopes</i>, the <i>Derek Adams Management Simulator</i> and <i>Rangers Manager Simulator</i> are probably not suitable for work.</aside>
                <EuroBingoAppLinks />
                <BFGeneratorAppLinks />
                 </section>

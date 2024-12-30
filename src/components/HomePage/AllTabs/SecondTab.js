@@ -25,7 +25,6 @@ const images = [
 
 
 const SecondTab = () => {
-  // const [emblaRef, emblaApi] = useEmblaCarousel(images)
   const [emblaRef, emblaApi] = useEmblaCarousel(images, [Autoplay()])
 
   const { selectedIndex, scrollSnaps, onDotButtonClick } =
