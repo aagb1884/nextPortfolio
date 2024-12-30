@@ -9,15 +9,14 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: radial-gradient(#272727, #1b1b1b);
-  color: rgb(141, 139, 139);
+  color: gold;
   display: flex;
   flex-direction: column;
-  padding-bottom: 80px;
-  padding-top: 200px;
+  padding-bottom: 72px;
 }
-
 .wesleyHeader{
-  height: 155px;
+  position: relative;
+  height: 75px;
   top: 0;
   width: 100%;
 }
@@ -29,17 +28,15 @@
 
 .headerWrapper {
   display: grid;
-  grid-template-areas: 'overlap';
   place-content: center;
-  text-transform: uppercase;
 }
 
 .headerWrapper > div {
   background-clip: text;  
   -webkit-background-clip: text;
   font-family: 'Poppins', sans-serif;
-  font-weight: 900;
-  font-size: clamp( 2em, 10vw, 9rem);
+  font-weight: 800;
+  font-size: clamp( 1.5em, 8vw, 8rem);
   grid-area: overlap;
   letter-spacing: 1px;
   -webkit-text-stroke: 4px transparent;
@@ -49,10 +46,9 @@
   margin-bottom: 15px;
   padding-bottom: 2.7rem; 
   flex: 1;
-  margin-top: 75px;
+  margin-top: 100px;
   display: flex;
   flex-direction: row;
-  margin-bottom: 200px;
 }
 
 .input, .output {
@@ -120,7 +116,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  font-size: 26px;
+  font-size: 20px;
   max-height: 425px;
   max-width: 350px;
 }
@@ -200,7 +196,7 @@ transform: scale(1);
   -webkit-text-stroke-color: gold;
 }
 .ftr{
-  font-size: large;
+  font-size: larger;
   letter-spacing: .1rem;
   background-image: repeating-linear-gradient( 5deg,  
   var(--gold) 0% , 
@@ -266,10 +262,6 @@ div.footer{
 }
 
 @media only screen and (max-width: 700px) {
-
-.wesleySnopesApp {
-  padding-top: 10px;
-}
  
 .wesleyHeader{
   height: 100px;

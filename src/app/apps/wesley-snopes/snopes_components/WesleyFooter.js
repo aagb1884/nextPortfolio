@@ -7,7 +7,6 @@ const WesleyFooter = () => {
     const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
     return ( 
         <footer className={styles.wesleyFooter}>
-        <div className={styles.ftr}>NB: I have neither seen nor read Blade.</div>
         <div className={styles.navFooter}>
         <HomeFooter
         goToContactForm={goToContactForm}
