@@ -4,7 +4,6 @@ import Modal from '../snopes_components/modal';
 import { useState } from 'react';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 import Image from 'next/image';
-import Head from 'next/head';
 
 const WesleyContainer = () => {
     const { showModal, setShowModal } = useGlobalState();
