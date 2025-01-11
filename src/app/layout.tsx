@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Hubot_Sans, Sigmar } from 'next/font/google';
+import { Hubot_Sans, Sigmar, Tangerine, Oxanium, Press_Start_2P } from 'next/font/google';
 import { GlobalStateProvider } from './context/GlobalStateContext';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import "./styles/globals.css";
@@ -15,6 +15,26 @@ const hubotSans = Hubot_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-hubotsans',
+})
+
+const tangerine = Tangerine({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-tangerine',
+  weight: '400',
+})
+
+const oxanium = Oxanium({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-oxanium',
+})
+
+const p2p = Press_Start_2P({
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-p2p',
+  weight: '400'
 })
 
 const geistSans = localFont({
@@ -56,7 +76,9 @@ export default function RootLayout({
   return (
     <GlobalStateProvider>
     <html lang='en' suppressHydrationWarning>
-      <body className={`${hubotSans.variable} ${sigmar.variable} ${geistSans.variable} ${geistMono.variable}`}>
+      <body className={`${hubotSans.variable} ${sigmar.variable} 
+      ${geistSans.variable} ${geistMono.variable} ${tangerine.variable}
+      ${oxanium.variable} ${p2p.variable}`}>
         {children}
       </body>
       <GoogleAnalytics gaId="G-HGEZ1SBR1R" />

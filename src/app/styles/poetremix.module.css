@@ -1,0 +1,300 @@
+.poetryApp {
+  text-align: left;
+  overflow: scroll;
+  background-color: white;
+  color: black;
+  height: 100vh;
+}
+
+
+/* header */
+
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 60px;
+  top: 0;
+  height: 100px;
+}
+
+.poetr {
+  font-family: var(--font-tangerine);
+}
+.emixer{
+  font-family: var(--font-oxanium);
+}
+.tool{
+  font-family: var(--font-p2p);
+  margin-left: 1%;
+}
+
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.poetFooter {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 5px;
+}
+
+.column1, .column3 {
+  width: 40%;
+}
+.column2, .column4 {
+  width: 10%
+}
+
+.poemInput {
+  width: 90%;
+  min-height: 500px;
+  max-height: 600px;
+  overflow-y: scroll;
+  margin: 2% 5%;
+  padding: 1%;
+  background-color:mintcream;
+  color: black;
+}
+
+.buttonsColumn, .remixButtons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  color: black;
+}
+
+.buttonsColumn > div > button, .remixButtons > div > button {
+  font-size: 10px;
+  color: black;
+}
+
+.hideShowBtn {
+  border: 1px solid;
+  padding: 5px;
+  margin-bottom: 5px;
+  box-shadow: 3px 6px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.copyBtn {
+  margin-bottom: 5px;
+  background-color: greenyellow;
+}
+
+.splitBtns, .reverseBtns, .randomiseBtns, .miscBtns, .sortBtns {
+  margin: 5px;
+}
+
+.verbs > button, .adj > button, .nouns > button {
+  color: black;
+}
+
+.remixButtons{
+  margin-right: 20%;
+}
+
+.placeholderStyle {
+  color: gray;
+  font-style: italic;
+}
+
+
+.remixedPoem {
+  max-width: 90%;
+  min-height: 500px;
+  max-height: 600px;
+  overflow-y: scroll;
+  margin: 2% 5%;
+  border: solid 1px black;
+  text-align: left;
+  padding: 1%;
+  white-space: break-spaces;
+}
+
+.press-start-2p-regular {
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* buttons  */
+
+/* button {
+  border: 2px solid black;
+  margin: 1px;
+  padding: 2px;
+  width: 100%;
+} */
+
+.clearAllBtn, .clearRemixBtn {
+  background-color: red;
+  color: black;
+  border: 2px solid black;
+  margin: 1px;
+  padding: 2px;
+  width: 100%;
+}
+
+.verbs, .nouns, .adj {
+  margin: 1px;
+  padding: 3px;
+}
+
+.verbs > button {
+  background-color: rgb(0, 255, 255, 0.3);
+  border: 2px solid black;
+  margin: 1px;
+  padding: 2px;
+  width: 100%;
+}
+
+.nouns > button {
+  background-color: rgb(250, 234, 209);
+  border: 2px solid black;
+  margin: 1px;
+  padding: 2px;
+  width: 100%;
+}
+
+.adj > button {
+  background-color: rgb(253, 204, 233);
+  border: 2px solid black;
+  margin: 1px;
+  padding: 2px;
+  width: 100%;
+}
+
+.miscBtns > button {
+  border: 2px solid black;
+  margin: 1px;
+  padding: 2px;
+  width: 100%;
+}
+
+.splitBtns > button {
+  background-color: rgb(208, 168, 246);  
+  border: 2px solid black;
+  margin: 1px;
+  padding: 2px;
+  width: 100%;
+}
+
+.reverseBtns > button {
+  background-color:rgb(180, 250, 180);
+  border: 2px solid black;
+  margin: 1px;
+  padding: 2px;
+  width: 100%;
+} 
+
+.randomiseBtns > button, .randomiseBtn {
+  background-color:rgb(243, 237, 184);
+  border: 2px solid black;
+  margin: 1px;
+  padding: 2px;
+  width: 100%;
+}
+.sortBtns > button {
+  background-color: rgb(231, 148, 148);
+  border: 2px solid black;
+  margin: 1px;
+  padding: 2px;
+  width: 100%;
+}
+
+/* responsive  */
+
+@media (max-width: 950px) {
+  /* button {
+    font-size: 9px;
+  } */
+  .remixButtons > div > button {
+    font-size: 9px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 30px;
+  }
+  .mainContainer {
+    flex-direction: column;
+    padding-top: 0;
+  }
+
+  .column1, .column2, .column3, .column4 {
+    width: 100%;
+  }
+  
+  /* button {
+    font-size: 12px;
+  } */
+
+  .poemInput, .remixedPoem {
+    min-width: 80%;
+    min-height: 180px;
+    max-height: 200px;
+    color: black;
+  }
+
+  .remixButtons {
+    margin-right: 0;
+  }
+
+  .splitBtns, .reverseBtns, .randomiseBtns, 
+  .miscBtns, .sortBtns, .verbs, .nouns, .adj {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .wordTypes {
+    margin: 5px;
+  }
+
+}
+
+.modalWrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.modal {
+  position: relative;
+  width: 50%;
+  min-height: 200px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 3px solid #999;
+  border-radius: 3px;
+  margin: 20px auto;
+  padding: 20px;
+  color: black;
+  text-align: center;
+  line-height: 2;
+}
+
+.modalExitBtn {
+  font-size: 1rem;
+  width: 50%;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 0.5rem 2.5rem;
+  margin: 0.5rem;
+}
+.modalExitBtn:hover {
+  cursor: pointer;
+}

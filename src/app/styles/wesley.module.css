@@ -248,7 +248,7 @@ div.footer{
   z-index: 2;
 }
 
-.modalExit-btn {
+.modalExitBtn {
   font-size: 1.5rem;
   color: var(--primaryColor);
   background-color: var(--secondaryBackground);
@@ -257,7 +257,7 @@ div.footer{
   padding: 0.5rem 2.5rem;
   margin: 0.5rem;
 }
-.modalExit-btn:hover {
+.modalExitBtn:hover {
   cursor: pointer;
 }
 

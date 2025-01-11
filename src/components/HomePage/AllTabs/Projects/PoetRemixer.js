@@ -29,7 +29,7 @@ const PoetRemixer = () => {
         <br />
         <Link href="https://github.com/aagb1884/poetrEMIXERtool">Github Repo <ExternalLinkImage/></Link>
         <br />
-        <Link href="https://poetremixertool.vercel.app/">Link <ExternalLinkImage/></Link>
+        <Link href="/apps/poetremixer">Link</Link>
         <Minimise toggleVisibility={toggleVisibility} />
         </div>
       }
