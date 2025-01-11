@@ -16,6 +16,7 @@ const handleClick = (state, setState) => {
     setState(!state)
 }
 
+/* tslint:disable no-var-requires */
 const posTagger = require('wink-pos-tagger');
 const tagger = posTagger();
 
