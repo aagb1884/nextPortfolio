@@ -2,7 +2,8 @@ import { useState } from "react";
 import RemixFunctions from "./RemixFunctions";
 import ButtonsColumn from "./Buttons";
 import RemixButtons from "./RemixButtons";
-import styles from "../../../styles/poetremix.module.css"
+import styles from "../../../styles/poetremix.module.css";
+import * as posTagger from 'wink-pos-tagger'; 
 
 function MainContainer() {
 const [poem, setPoem] = useState('');
@@ -16,8 +17,8 @@ const handleClick = (state, setState) => {
     setState(!state)
 }
 
-/* tslint:disable no-var-requires */
-const posTagger = require('wink-pos-tagger');
+// /* tslint:disable no-var-requires */
+// const posTagger = require('wink-pos-tagger');
 const tagger = posTagger();
 
 const taggedText = (str) => {
