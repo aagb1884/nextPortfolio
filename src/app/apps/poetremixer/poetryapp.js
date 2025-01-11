@@ -3,7 +3,6 @@ import styles from "../../styles/poetremix.module.css";
 import MainContainer from './components/MainContainer';
 import Modal from './components/modal';
 import { useState } from 'react';
-import Link from "next/link";
 import AppsFooter from "../components/AppsFooter";
 
 function PoetryApp() {

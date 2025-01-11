@@ -12,7 +12,7 @@ function RemixFunctions({wordArray, letterArray, remixedText, setRemixedText}) {
       const mappedLetters = letterArray.map(letter => `${letter} `);
       setRemixedText(mappedLetters.join(''));
     }
-  }, [wordArray, letterArray]);
+  }, [wordArray, letterArray, setRemixedText]);
 
   const placeholderText = remixedText.length === 0 
   ? <span className={styles.placeholderStyle}>Remixed text will appear here.</span> 
