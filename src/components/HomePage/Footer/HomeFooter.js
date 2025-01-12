@@ -79,9 +79,6 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
             <li>
                 <Link href="https://scottish-football-simulators.co.uk/">Scottish Football Simulators <ExternalLinkImage /></Link>
             </li>
-            <li>
-                <Link href="https://poetremixertool.vercel.app/">PoetRemixer Tool <ExternalLinkImage /></Link>
-            </li>
         </ul>
         </div>   
        
