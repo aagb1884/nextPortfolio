@@ -1,10 +1,11 @@
 'use client'
-import { Story, stories } from "@/data/stories";
+import { Story, stories } from "../data/stories";
 import React from "react";
 import { useState, useEffect } from "react";
 import SortableStory from "./SortableStory";
 import { DndContext, DragEndEvent, KeyboardSensor, PointerSensor, TouchSensor, closestCenter, useSensor, useSensors } from "@dnd-kit/core";
 import { SortableContext, arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
+import styles from "../../../styles/drwho.module.css";
 
 export default function StoryList() {
 
@@ -77,8 +78,8 @@ export default function StoryList() {
 
   return (
     <div className="max-w-md mx-auto mt-8">
-      <h2 className="text-2xl font-bold mb-4">Story List</h2>
-      <ul className="bg-white shadow-md rounded-lg">
+      <h2 className={styles.dndHeader}>Story List</h2>
+      <ul className={styles.dndContextUl}>
         <DndContext 
         collisionDetection={closestCenter}
         onDragEnd={handleDragEnd}
@@ -91,13 +92,17 @@ export default function StoryList() {
         </SortableContext>
         </DndContext>
       </ul>
-      <div>
+      <div className={styles.dndButtonDiv}>
       <button onClick={checkScore}
-      disabled={scoreVisible}>Am I Right?</button>
+      disabled={scoreVisible}
+      className={styles.checkScoreBtn}>Have I the right (answers)?</button>
+     <button onClick={reset}
+     className={styles.resetBtn}>Try again</button>
+     </div>
+     <div>
      {scoreVisible && (
       <p>{score}</p>
      )}
-     <button onClick={reset}>Try again</button>
      </div>
     </div>
   );

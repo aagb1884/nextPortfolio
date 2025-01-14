@@ -1,0 +1,36 @@
+.dndHeader {
+    text-align: center;
+}
+
+.storyInfo {
+    display: flex;
+    align-items: center; 
+    touch-action: none;
+    border: solid darkgray 5px;
+    border-radius: 5px;
+    background-color: gray;
+    margin: 10px;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.dndButtonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.resetBtn, .checkScoreBtn {
+    padding: 5px;
+    margin: 5px;
+    border: solid darkgray 2px;
+    border-radius: 5px;
+}
+
+.checkScoreBtn {
+    background-color: green;
+}
+
+.resetBtn {
+    background-color: sienna;
+}
