@@ -24,7 +24,7 @@ export const stories: Story[] = [
   { id: 14, name: "The Crusade", prodCode: "P", doctor: "First", era: "1963 - 1989" },
   { id: 15, name: "The Space Museum", prodCode: "Q", doctor: "First", era: "1963 - 1989" },
   { id: 16, name: "The Chase", prodCode: "R", doctor: "First", era: "1963 - 1989" },
-  { id: 17, name: "The Time Meddler", prodCode: "S", doctor: "First", era: "1963 - 1989"" },
+  { id: 17, name: "The Time Meddler", prodCode: "S", doctor: "First", era: "1963 - 1989" },
   { id: 18, name: "Galaxy 4", prodCode: "T", doctor: "First", era: "1963 - 1989" },
   { id: 19, name: "Mission to the Unknown", prodCode: "T/A", doctor: "First", era: "1963 - 1989" },
   { id: 20, name: "The Myth Makers", prodCode: "U", doctor: "First", era: "1963 - 1989" },
