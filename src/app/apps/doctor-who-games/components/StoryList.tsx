@@ -28,7 +28,7 @@ export default function StoryList() {
  
   function checkAnswers(){
     let i = 0;
-    let correctOrder = [...storyList].sort((a, b) => a.id - b.id);
+    const correctOrder = [...storyList].sort((a, b) => a.id - b.id);
     while (i < storyList.length) {
       if (storyList[i] === correctOrder[i]){
         setScore((prevScore) => prevScore + 1)
@@ -77,7 +77,7 @@ export default function StoryList() {
   )
 
   return (
-    <div className="max-w-md mx-auto mt-8">
+    <div className={styles.drWhoDndContainer}>
       <h2 className={styles.dndHeader}>Story List</h2>
       <ul className={styles.dndContextUl}>
         <DndContext 
