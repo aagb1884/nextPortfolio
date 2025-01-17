@@ -3,28 +3,95 @@ import { Story, stories } from "../data/stories";
 import React from "react";
 import { useState, useEffect } from "react";
 import SortableStory from "./SortableStory";
+import Countdown from "./countdown";
+import Filter from "./Filter";
+import LightHeader from "./LightHeader";
 import { DndContext, DragEndEvent, KeyboardSensor, PointerSensor, TouchSensor, closestCenter, useSensor, useSensors } from "@dnd-kit/core";
 import { SortableContext, arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import styles from "../../../styles/drwho.module.css";
+import Difficulty from "./DifficultySelect";
+import InstructionsModal from "./InstructionsModal";
 
 export default function StoryList() {
+  const [filter, setFilter] = useState('All');
+  const [storyList, setStoryList] = useState<Story[]>([]);
+  const [score, setScore] = useState(0);
+  const [scoreVisible, setScoreVisible] = useState(false);
+  const [duration, setDuration] = useState<number | string>(120);
+  const [timeLeft, setTimeLeft] = useState<number>(0);
+  const [isActive, setIsActive] = useState<boolean>(false);
+  const [showInstructions, setShowInstructions] = useState(false)
+  const [showWin, setShowWin] = useState(false)
+  const [showLose, setShowLose] = useState(false)
 
+  //timer
+  const handleSetDuration = (): void => {
+      if (typeof duration === "number" && duration > 0) {
+        setTimeLeft(duration);
+        setIsActive(false);
+      }
+    };
+
+    // const handleStart = (): void => {
+    //   if (timeLeft > 0) {
+    //     setIsActive(true);
+    //   }
+    // };
+
+    // const handleReset = (): void => {
+    //   setIsActive(false);
+    //   setTimeLeft(typeof duration === "number" ? duration : 0);
+    // };
+
+  useEffect(() => {
+    handleSetDuration();
+  }, [duration])
+
+  const setTimer = (time: number) => {
+    setDuration(time);
+    handleSetDuration();
+    if (isActive) {
+      reset();
+    }
+  }
+
+  useEffect(() => {
+    if (isActive && timeLeft > 0) {
+      const timerId = setInterval(() => {
+        setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
+      }, 1000);
+      
+      return () => clearInterval(timerId);
+    } else if (timeLeft === 0) {
+      setIsActive(false);
+    }
+    }, [isActive, timeLeft]);
+  
+  // filter
+  const handleFilter = (filterTerm: string) => {
+    setFilter(filterTerm)
+    if (isActive) {
+      reset();
+    }
+  }
+
+  const filteredStories = 
+  filter === 'All' ? stories : stories.filter((story) => story.doctor === filter);
+
+  //get stories
   function getRandomStories(){
-    const randomStories = [...stories]
+    return [...filteredStories]
     .map(value => ({value, sort: Math.random()}))
     .sort((a, b) => a.sort - b.sort)
     .map(({ value }) => value)
-    .slice(0,6)
-    return randomStories
+    .slice(0,8)
   } 
 
   useEffect(() => {
-    getRandomStories()
-  }, [])
+    const newRandomStories = getRandomStories();
+    setStoryList(newRandomStories)
+  }, [filter])
 
-  const [storyList, setStoryList] = useState(getRandomStories());
-  const [score, setScore] = useState(0);
-  const [scoreVisible, setScoreVisible] = useState(false)
  
   function checkAnswers(){
     let i = 0;
@@ -33,11 +100,37 @@ export default function StoryList() {
       if (storyList[i] === correctOrder[i]){
         setScore((prevScore) => prevScore + 1)
       }
-      i++;
-      
+      i++;  
     }
   }
  
+
+  const checkScore = () => {
+    console.log('score checked')
+    checkAnswers()
+    setScoreVisible(!scoreVisible)
+  }
+
+  const reset = () => {
+    setIsActive(false);
+    setTimeout(() => {
+      setIsActive(true);
+    }, 2000)
+    setTimeLeft(typeof duration === "number" ? duration : 0);
+    setStoryList(getRandomStories());
+    setScoreVisible(false);
+    setScore(0);
+  }
+
+//dnd functions
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(TouchSensor),
+    useSensor(KeyboardSensor,{
+      coordinateGetter: sortableKeyboardCoordinates
+    }) 
+  )
+
   function handleDragEnd(event: DragEndEvent){
     setScoreVisible(false);
     setScore(0);
@@ -55,30 +148,34 @@ export default function StoryList() {
     })
   }
 
-  const checkScore = () => {
-    console.log('score checked')
-    checkAnswers()
-    setScoreVisible(!scoreVisible)
-  }
-
-  const reset = () => {
-    setStoryList(getRandomStories());
-    setScoreVisible(false);
-    setScore(0);
-  }
-
-
-  const sensors = useSensors(
-    useSensor(PointerSensor),
-    useSensor(TouchSensor),
-    useSensor(KeyboardSensor,{
-      coordinateGetter: sortableKeyboardCoordinates
-    }) 
-  )
 
   return (
     <div className={styles.drWhoDndContainer}>
-      <h2 className={styles.dndHeader}>Story List</h2>
+      <LightHeader />
+      {/* <button onClick={handleStart}>Start timer</button> */}
+      <div className={styles.dropdownMenus}>
+      <Difficulty 
+      duration={duration}
+      setTimer={setTimer} />
+      <Filter 
+      stories={stories}
+      filter={filter}
+      handleFilter={handleFilter} />
+      </div>
+      <button
+      onClick={() => {setShowInstructions(!showInstructions)}}
+      >How to play</button>
+      <button 
+      onClick={() => {setIsActive(true)}}
+      className={styles.beginBtn}
+        >BEGIN</button>
+      {showInstructions && (
+        <InstructionsModal 
+        showInstructions={showInstructions}
+        setShowInstructions={setShowInstructions}/>
+      )}
+      {isActive && (
+        <>
       <ul className={styles.dndContextUl}>
         <DndContext 
         collisionDetection={closestCenter}
@@ -104,6 +201,11 @@ export default function StoryList() {
       <p>{score}</p>
      )}
      </div>
+     <Countdown 
+      timeLeft={timeLeft}
+     />
+     </>
+    )}
     </div>
   );
 }
