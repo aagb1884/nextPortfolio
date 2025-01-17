@@ -1,12 +1,4 @@
-import { Story } from "../data/stories";
-
-function Filter({stories, filter, handleFilter}) {
-
-    // const handleChange = (event) => {
-    //     const selectedFilter = event.target.value;
-    //     const selectedDoctor = stories.find((story: Story) => story.doctor === selectedFilter)
-    //     handleFilter(selectedDoctor);
-    // };
+function Filter({filter, handleFilter}) {
 
     return (
         <div>
