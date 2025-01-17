@@ -21,8 +21,8 @@ export default function StoryList() {
   const [timeLeft, setTimeLeft] = useState<number>(0);
   const [isActive, setIsActive] = useState<boolean>(false);
   const [showInstructions, setShowInstructions] = useState(false)
-  const [showWin, setShowWin] = useState(false)
-  const [showLose, setShowLose] = useState(false)
+  // const [showWin, setShowWin] = useState(false)
+  // const [showLose, setShowLose] = useState(false)
 
   //timer
   const handleSetDuration = (): void => {
@@ -162,13 +162,16 @@ export default function StoryList() {
       filter={filter}
       handleFilter={handleFilter} />
       </div>
+      <div className={styles.buttonRow}>
       <button
       onClick={() => {setShowInstructions(!showInstructions)}}
+      className={styles.dndBtn}
       >How to play</button>
       <button 
       onClick={() => {setIsActive(true)}}
-      className={styles.beginBtn}
+      className={styles.dndBtn}
         >BEGIN</button>
+      </div>
       {showInstructions && (
         <InstructionsModal 
         showInstructions={showInstructions}

@@ -8,12 +8,12 @@ const LightHeader = () => {
         <div className={styles.lightHeader}>
         <Image src={light} width={200} height={123} className={styles.Light}
         alt="Light, an glowing angel, reaching out their arm"/>
-        <h2 className={styles.dndHeader}>I Don't Think Much of Your Catalogue</h2>
+        <h2 className={styles.dndHeader}>I Don&apos;t Think Much of Your Catalogue</h2>
         <Image src={seven} width={170} height={123}
         alt="The Seventh Doctor" className={styles.Seven}/>
         </div>
         <div className={styles.lightSubtitle}>
-        <p>Oh no! There are gaps in Light's massive database of everything!</p>
+        <p>Oh no! There are gaps in Light&apos;s massive database of everything!</p>
         <p>Help them sort these <i>Doctor Who</i> TV stories into order.</p>
         </div>
         </div>

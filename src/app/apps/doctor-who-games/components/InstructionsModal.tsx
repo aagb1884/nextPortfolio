@@ -10,7 +10,8 @@ function InstructionsModal ({showInstructions, setShowInstructions}) {
         >
         <section className={styles.modalText}>
             <h1>How this works</h1> 
-            <p>This is essentially a Wesley Snipes themed Magic 8-Ball</p> 
+            <p>You will be given a list of eight <i>Doctor Who</i> stories.</p> 
+            <p>You need to sort them into chronological order before the time runs out.</p> 
         
             <ul>
                 <li>Type your query into the text box.</li>
