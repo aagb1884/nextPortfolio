@@ -3,6 +3,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 100vh;
+    overflow: scroll;
 }
 
 .lightHeader {
@@ -21,7 +23,6 @@
     text-align: center;
 }
 .Light, .Seven {
-    width: 25%;
     border-radius: 50%;
     border: solid 2px darkblue;
 }
@@ -45,10 +46,18 @@
     flex-direction: row;
 }
 
+.buttonRow {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+}
 
 .dndBtn {
     margin: 5px;
     padding: 5px;
+    min-width: 85px;
 }
 
 .dndContextUl {

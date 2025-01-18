@@ -234,7 +234,10 @@ div.footer{
 }
 
 .modal {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 80%;
   min-height: 200px;
   background-color: rgba(255, 255, 255, 0.95);
@@ -245,6 +248,10 @@ div.footer{
   color: black;
   text-align: center;
   line-height: 2;
+  z-index: 2;
+}
+
+.modalText {
   z-index: 4;
 }
 

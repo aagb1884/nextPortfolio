@@ -11,18 +11,21 @@ import { SortableContext, arrayMove, sortableKeyboardCoordinates } from "@dnd-ki
 import styles from "../../../styles/drwho.module.css";
 import Difficulty from "./DifficultySelect";
 import InstructionsModal from "./InstructionsModal";
+import WinModal from "./Win";
+import LoseModal from "./Lose";
 
 export default function StoryList() {
-  const [filter, setFilter] = useState('All');
+  const [filter, setFilter] = useState<string>('All');
   const [storyList, setStoryList] = useState<Story[]>([]);
-  const [score, setScore] = useState(0);
-  const [scoreVisible, setScoreVisible] = useState(false);
+  const [score, setScore] = useState<number>(0);
+  const [timeVisible, setTimeVisible] = useState<boolean>(false);
+  const [scoreVisible, setScoreVisible] = useState<boolean>(false);
   const [duration, setDuration] = useState<number | string>(120);
-  const [timeLeft, setTimeLeft] = useState<number>(0);
+  const [timeLeft, setTimeLeft] = useState<number>(120);
   const [isActive, setIsActive] = useState<boolean>(false);
-  const [showInstructions, setShowInstructions] = useState(false)
-  // const [showWin, setShowWin] = useState(false)
-  // const [showLose, setShowLose] = useState(false)
+  const [showInstructions, setShowInstructions] = useState<boolean>(false)
+  const [showWin, setShowWin] = useState<boolean>(false)
+  const [showLose, setShowLose] = useState<boolean>(false)
 
   //timer
   const handleSetDuration = (): void => {
@@ -31,17 +34,6 @@ export default function StoryList() {
         setIsActive(false);
       }
     };
-
-    // const handleStart = (): void => {
-    //   if (timeLeft > 0) {
-    //     setIsActive(true);
-    //   }
-    // };
-
-    // const handleReset = (): void => {
-    //   setIsActive(false);
-    //   setTimeLeft(typeof duration === "number" ? duration : 0);
-    // };
 
   useEffect(() => {
     handleSetDuration();
@@ -56,14 +48,15 @@ export default function StoryList() {
   }
 
   useEffect(() => {
-    if (isActive && timeLeft > 0) {
+    if (isActive && timeLeft > 0 && score !== 8) {
+      setTimeVisible(true);
       const timerId = setInterval(() => {
         setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
       }, 1000);
       
       return () => clearInterval(timerId);
-    } else if (timeLeft === 0) {
-      setIsActive(false);
+    } else if (isActive && timeLeft === 0) {
+      setShowLose(!showLose)
     }
     }, [isActive, timeLeft]);
   
@@ -102,23 +95,31 @@ export default function StoryList() {
       }
       i++;  
     }
+    setScoreVisible(true)
+    setTimeout(() => {
+      setScoreVisible(false)
+      setScore(0)
+    }, 4000);
   }
- 
 
-  const checkScore = () => {
-    console.log('score checked')
-    checkAnswers()
-    setScoreVisible(!scoreVisible)
-  }
+ 
+  useEffect(() => {
+    if (score === 8) {
+      setShowWin(!showWin)
+    }
+  }, [score])
+
 
   const reset = () => {
+    setShowLose(false);
+    setShowWin(false);
     setIsActive(false);
     setTimeout(() => {
       setIsActive(true);
     }, 2000)
     setTimeLeft(typeof duration === "number" ? duration : 0);
     setStoryList(getRandomStories());
-    setScoreVisible(false);
+    setTimeVisible(false);
     setScore(0);
   }
 
@@ -132,7 +133,7 @@ export default function StoryList() {
   )
 
   function handleDragEnd(event: DragEndEvent){
-    setScoreVisible(false);
+    setTimeVisible(false);
     setScore(0);
     console.log(event)
     const {active, over}=event;
@@ -152,13 +153,11 @@ export default function StoryList() {
   return (
     <div className={styles.drWhoDndContainer}>
       <LightHeader />
-      {/* <button onClick={handleStart}>Start timer</button> */}
       <div className={styles.dropdownMenus}>
       <Difficulty 
       duration={duration}
       setTimer={setTimer} />
       <Filter 
-      stories={stories}
       filter={filter}
       handleFilter={handleFilter} />
       </div>
@@ -167,6 +166,11 @@ export default function StoryList() {
       onClick={() => {setShowInstructions(!showInstructions)}}
       className={styles.dndBtn}
       >How to play</button>
+        {timeVisible && (
+       <Countdown 
+       timeLeft={timeLeft}
+      />
+     )}
       <button 
       onClick={() => {setIsActive(true)}}
       className={styles.dndBtn}
@@ -176,6 +180,16 @@ export default function StoryList() {
         <InstructionsModal 
         showInstructions={showInstructions}
         setShowInstructions={setShowInstructions}/>
+      )}
+      {showWin && (
+        <WinModal
+        reset={reset}
+        />
+      )}
+      {showLose && (
+        <LoseModal
+        reset={reset}
+        />
       )}
       {isActive && (
         <>
@@ -192,21 +206,19 @@ export default function StoryList() {
         </SortableContext>
         </DndContext>
       </ul>
+      {scoreVisible && (
+       <p>You have {score} corrrect answer(s).</p>
+     )}
       <div className={styles.dndButtonDiv}>
-      <button onClick={checkScore}
-      disabled={scoreVisible}
+      <button onClick={checkAnswers}
+      disabled={!timeVisible}
       className={styles.checkScoreBtn}>Have I the right (answers)?</button>
      <button onClick={reset}
      className={styles.resetBtn}>Try again</button>
      </div>
      <div>
-     {scoreVisible && (
-      <p>{score}</p>
-     )}
      </div>
-     <Countdown 
-      timeLeft={timeLeft}
-     />
+
      </>
     )}
     </div>
