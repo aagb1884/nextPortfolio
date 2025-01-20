@@ -191,14 +191,11 @@ useEffect(() => {
       <div className={styles.filters}>
       <Filter 
       filter={filter}
-      setFilter={setFilter}
       handleFilter={handleFilter}
       />
       <FilterEra 
       filterEra={filterEra}
-      setFilterEra={setFilterEra}
       handleFilterEra={handleFilterEra}
-      
       />
       </div>
       </div>

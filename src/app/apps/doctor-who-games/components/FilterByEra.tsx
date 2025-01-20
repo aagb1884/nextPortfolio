@@ -1,13 +1,11 @@
 interface FilterProps {
     handleFilterEra: (filterTerm: string) => void;
-    setFilterEra: (filter: string) => void;
     filterEra: string;
-  
   }
 
 import styles from "../../../styles/drwho.module.css";
 
-const FilterEra: React.FC<FilterProps> = ({filterEra, setFilterEra, handleFilterEra}) => {
+const FilterEra: React.FC<FilterProps> = ({filterEra, handleFilterEra}) => {
 
     return (
         <div>
