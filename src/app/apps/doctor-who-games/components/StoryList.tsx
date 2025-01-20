@@ -14,6 +14,8 @@ import InstructionsModal from "./InstructionsModal";
 import WinModal from "./Win";
 import LoseModal from "./Lose";
 import FilterEra from "./FilterByEra";
+import HomeFooter from '@/components/HomePage/Footer/HomeFooter';
+import { useGlobalState } from '@/app/context/GlobalStateContext';
 
 export default function StoryList() {
   const [filter, setFilter] = useState<string>('All');
@@ -28,6 +30,7 @@ export default function StoryList() {
   const [showInstructions, setShowInstructions] = useState<boolean>(false)
   const [showWin, setShowWin] = useState<boolean>(false)
   const [showLose, setShowLose] = useState<boolean>(false)
+  const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
 
   //timer
   const handleSetDuration = (): void => {
@@ -261,6 +264,12 @@ useEffect(() => {
 
      </>
     )}
+    <HomeFooter
+        goToContactForm={goToContactForm}
+        goToTab={goToTab}
+        contact={contact}
+        tabs={tabs}
+        />
     </div>
   );
 }

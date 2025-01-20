@@ -1,5 +1,5 @@
 import styles from '../../../styles/wesley.module.css';
-import smugLight from '../../../../../public/images/smug-light.png';
+import smugLight from '../../../../../public/images/curious-light.jpeg';
 import Image from 'next/image';
 
 interface WinProps {
