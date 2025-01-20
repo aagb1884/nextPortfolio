@@ -1,5 +1,5 @@
 interface FilterProps {
-    handleFilter: (filterTerm: string, filterFunction: Function) => void;
+    handleFilter: (filterTerm: string) => void;
     setFilter: (filter: string) => void;
     filter: string;
   }
@@ -15,7 +15,7 @@ const Filter: React.FC<FilterProps> = ({filter, setFilter, handleFilter
        
         value={filter}
         onChange={(e) => {
-        handleFilter(e.target.value, setFilter);
+        handleFilter(e.target.value);
         }}
     className={styles.customSelect}
     aria-label="Filter Stories by Doctor">`

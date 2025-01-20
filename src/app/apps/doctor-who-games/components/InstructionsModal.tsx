@@ -22,7 +22,7 @@ const InstructionsModal: React.FC<InstructionsModalProps> =  ({showInstructions,
                 <li>You can change the difficulty setting, which changes the time limit.</li>
                 <li>You can filter by Doctor (except for Doctors who have fewer than 8 TV stories).</li>
                 <li>If you change the difficulty or filter during a game then a new game will start.</li>
-                <li>You can't use both filters at once.</li>
+                <li>You can&apos;t use both filters at once.</li>
             </ul>
         </section>
         <button className={styles.hideModalBtn} 

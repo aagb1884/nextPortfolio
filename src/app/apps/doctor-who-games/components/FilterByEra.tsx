@@ -1,5 +1,5 @@
 interface FilterProps {
-    handleFilterEra: (filterTerm: string, filterFunction: Function) => void;
+    handleFilterEra: (filterTerm: string) => void;
     setFilterEra: (filter: string) => void;
     filterEra: string;
   
@@ -15,13 +15,13 @@ const FilterEra: React.FC<FilterProps> = ({filterEra, setFilterEra, handleFilter
         
         value={filterEra}
         onChange={(e) => {
-        handleFilterEra(e.target.value, setFilterEra);
+        handleFilterEra(e.target.value);
         }}
     className={styles.customSelect}
     aria-label="Filter Stories by Era">`
     <option value='All'>Filter By Era</option>
-    <option value='1963 - 1996'>1963 - 1996 ("Classic")</option>
-    <option value='2005 - Present Day'>2005 - Present Day ("New Who")</option>
+    <option value='1963 - 1996'>1963 - 1996 (&quot;Classic&quot;)</option>
+    <option value='2005 - Present Day'>2005 - Present Day (&quot;New Who&quot;)</option>
     </select>
     <span className="focus"></span>
 </div>
