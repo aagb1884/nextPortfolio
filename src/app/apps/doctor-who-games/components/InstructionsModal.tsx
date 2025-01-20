@@ -1,7 +1,7 @@
 import styles from '../../../styles/wesley.module.css'
 
 interface InstructionsModalProps {
-    setShowInstructions: (value: boolean) => boolean;
+    setShowInstructions: (value: boolean) => void;
     showInstructions: boolean;
   }
 
