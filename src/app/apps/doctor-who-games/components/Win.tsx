@@ -1,4 +1,6 @@
 import styles from '../../../styles/wesley.module.css';
+import smugLight from '../../../../../public/images/smug-light.png';
+import Image from 'next/image';
 
 interface WinProps {
     reset: () => void;
@@ -15,9 +17,11 @@ const WinModal: React.FC<WinProps> =({reset}) => {
         <section className={styles.modalText}>
             <h1>CORRECT</h1> 
             <p>You got the order right and now Light can destroy all life on Earth!</p> 
-            
+            <Image src={smugLight} alt='Light looking pleased'
+            width={300} />
         </section>
-        <button onClick={reset}>Again?</button>
+        <button className={styles.hideModalBtn} 
+        onClick={reset}>Again?</button>
         </div>
     
         </div>

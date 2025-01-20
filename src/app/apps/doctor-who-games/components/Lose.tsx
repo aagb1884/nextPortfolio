@@ -20,7 +20,8 @@ const LoseModal: React.FC<LoseProps> = ({reset}) => {
             <Image src={sadLight} alt='Light looking peeved'
             width={300} />
         </section>
-        <button onClick={reset}>Try Again?</button>
+        <button className={styles.hideModalBtn} 
+        onClick={reset}>Try Again?</button>
         </div>
     
         </div>

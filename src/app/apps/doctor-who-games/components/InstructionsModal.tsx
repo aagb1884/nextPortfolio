@@ -18,13 +18,15 @@ const InstructionsModal: React.FC<InstructionsModalProps> =  ({showInstructions,
             <p>You will be given a list of eight <i>Doctor Who</i> stories.</p> 
             <p>You need to sort them into chronological order before the time runs out.</p> 
         
-            <ul>
+            <ul className={styles.modalUl}>
                 <li>You can change the difficulty setting, which changes the time limit.</li>
                 <li>You can filter by Doctor (except for Doctors who have fewer than 8 TV stories).</li>
                 <li>If you change the difficulty or filter during a game then a new game will start.</li>
+                <li>You can't use both filters at once.</li>
             </ul>
         </section>
-        <button onClick={() => {setShowInstructions(!showInstructions)}}>Hide Instructions</button>
+        <button className={styles.hideModalBtn} 
+        onClick={() => {setShowInstructions(!showInstructions)}}>Hide Instructions</button>
         </div>
     
         </div>

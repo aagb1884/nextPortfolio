@@ -13,9 +13,11 @@ import Difficulty from "./DifficultySelect";
 import InstructionsModal from "./InstructionsModal";
 import WinModal from "./Win";
 import LoseModal from "./Lose";
+import FilterEra from "./FilterByEra";
 
 export default function StoryList() {
   const [filter, setFilter] = useState<string>('All');
+  const [filterEra, setFilterEra] = useState<string>('All');
   const [storyList, setStoryList] = useState<Story[]>([]);
   const [score, setScore] = useState<number>(0);
   const [timeVisible, setTimeVisible] = useState<boolean>(false);
@@ -56,20 +58,39 @@ useEffect(() => {
     
     return () => clearInterval(timerId);
   } else if (isActive && timeLeft === 0) {
+    setShowInstructions(false);
     setShowLose(!showLose)
   }
   }, [isActive, timeLeft]);
   
   // filter
   const handleFilter = (filterTerm: string) => {
-    setFilter(filterTerm)
+    setFilter(filterTerm);
+    setFilterEra('All');
     if (isActive) {
       reset();
     }
   }
 
-  const filteredStories = 
-  filter === 'All' ? stories : stories.filter((story) => story.doctor === filter);
+  const handleFilterEra = (filterTerm: string) => {
+    setFilterEra(filterTerm);
+    setFilter('All');
+    if (isActive) {
+      reset();
+    }
+  }
+
+  let filteredStories = stories;
+  if (filter !== 'All' || filterEra !== 'All'){
+    filteredStories = stories.filter((story) => {
+      const doctorMatch = story.doctor === filter || filter === 'All';
+      const eraMatch = story.era === filterEra || filterEra === 'All';
+
+      return (
+        doctorMatch && eraMatch
+      )
+    })
+  }
 
   //get stories
   function getRandomStories(){
@@ -83,9 +104,16 @@ useEffect(() => {
   useEffect(() => {
     const newRandomStories = getRandomStories();
     setStoryList(newRandomStories)
-  }, [filter])
+  }, [filter, filterEra])
 
  
+  useEffect(() => {
+    if (score === 8) {
+      setShowWin(!showWin)
+    }
+  }, [score])
+
+// button functions
   function checkAnswers(){
     let i = 0;
     const correctOrder = [...storyList].sort((a, b) => a.id - b.id);
@@ -102,14 +130,6 @@ useEffect(() => {
     }, 4000);
   }
 
- 
-  useEffect(() => {
-    if (score === 8) {
-      setShowWin(!showWin)
-    }
-  }, [score, showWin])
-
-
   const reset = () => {
     setShowLose(false);
     setShowWin(false);
@@ -119,6 +139,17 @@ useEffect(() => {
     }, 2000)
     setTimeLeft(typeof duration === "number" ? duration : 0);
     setStoryList(getRandomStories());
+    setTimeVisible(false);
+    setScore(0);
+  }
+
+  const clearAll = () => {
+    setFilter('All');
+    setFilterEra('All');
+    setShowLose(false);
+    setShowWin(false);
+    setIsActive(false);
+    setTimeLeft(typeof duration === "number" ? duration : 0);
     setTimeVisible(false);
     setScore(0);
   }
@@ -157,9 +188,19 @@ useEffect(() => {
       <Difficulty 
       duration={duration}
       setTimer={setTimer} />
+      <div className={styles.filters}>
       <Filter 
       filter={filter}
-      handleFilter={handleFilter} />
+      setFilter={setFilter}
+      handleFilter={handleFilter}
+      />
+      <FilterEra 
+      filterEra={filterEra}
+      setFilterEra={setFilterEra}
+      handleFilterEra={handleFilterEra}
+      
+      />
+      </div>
       </div>
       <div className={styles.buttonRow}>
       <button
@@ -207,7 +248,7 @@ useEffect(() => {
         </DndContext>
       </ul>
       {scoreVisible && (
-       <p>You have {score} corrrect answer(s).</p>
+       <p>You have {score}/8 corrrect answer(s).</p>
      )}
       <div className={styles.dndButtonDiv}>
       <button onClick={checkAnswers}
@@ -215,6 +256,8 @@ useEffect(() => {
       className={styles.checkScoreBtn}>Have I the right (answers)?</button>
      <button onClick={reset}
      className={styles.resetBtn}>Try again</button>
+     <button onClick={clearAll}
+     className={styles.clearBtn}>Clear all</button>
      </div>
      <div>
      </div>

@@ -10,6 +10,7 @@ const Difficulty: React.FC<DifficultyProps> = ({ setTimer, duration }) => {
         <div className={styles.difficulty}>
         <p className={styles.difficultWord}>Difficulty:</p>
         <select 
+        className={styles.difficultySelect}
         value={duration}
         onChange={(e) => {
           setTimer(parseInt(e.target.value, 10))

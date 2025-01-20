@@ -251,19 +251,20 @@ div.footer{
   z-index: 2;
 }
 
+.modalUl {
+  text-align: left;
+}
+
 .modalText {
   z-index: 4;
 }
 
-.modalExitBtn {
-  font-size: 1.5rem;
-  color: var(--primaryColor);
-  background-color: var(--secondaryBackground);
-  border: 1px solid var(--primaryColor);
-  text-decoration: none;
-  padding: 0.5rem 2.5rem;
-  margin: 0.5rem;
+.hideModalBtn {
+  margin: 5px;
+  padding: 5px;
+  min-width: 85px;
 }
+
 .modalExitBtn:hover {
   cursor: pointer;
 }

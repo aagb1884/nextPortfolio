@@ -41,6 +41,13 @@
     width: 100%;
 }
 
+.filters {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
 .difficulty {
     display: flex;
     flex-direction: row;
@@ -54,10 +61,17 @@
     justify-content: space-between;
 }
 
-.dndBtn {
+.dndBtn, .customSelect {
     margin: 5px;
     padding: 5px;
     min-width: 85px;
+    border-color: #008000;
+    background-color: #000080;
+}
+
+.difficultySelect {
+    border-color: #008000;
+    background-color: #000080;
 }
 
 .dndContextUl {
@@ -87,7 +101,7 @@
     justify-content: space-evenly;
 }
 
-.resetBtn, .checkScoreBtn {
+.resetBtn, .checkScoreBtn, .clearBtn {
     padding: 5px;
     margin: 5px;
     border: solid darkgray 2px;
@@ -99,6 +113,10 @@
 }
 
 .resetBtn {
+    background-color: rgb(255, 51, 0);
+}
+
+.clearBtn {
     background-color: sienna;
 }
 
@@ -108,5 +126,9 @@
     }
     .lightSubtitle, .difficultWord {
         font-size: smaller;
+    }
+    .customSelect {
+        font-size: 10px;
+        width: auto;
     }
 } 
