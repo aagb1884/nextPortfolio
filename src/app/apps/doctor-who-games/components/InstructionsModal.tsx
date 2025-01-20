@@ -1,6 +1,11 @@
 import styles from '../../../styles/wesley.module.css'
 
-function InstructionsModal ({showInstructions, setShowInstructions}) {
+interface InstructionsModalProps {
+    setShowInstructions: () => boolean;
+    showInstructions: boolean;
+  }
+
+const InstructionsModal: React.FC<InstructionsModalProps> =  ({showInstructions, setShowInstructions}) => {
 
     return (
         <div className={styles.modalWrapper}>

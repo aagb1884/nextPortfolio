@@ -2,6 +2,7 @@ import Image from "next/image";
 import styles from "../../../styles/drwho.module.css";
 import light from "../../../../../public/images/light.png";
 import seven from "../../../../../public/images/seven.png";
+
 const LightHeader = () => {
     return ( 
         <div>

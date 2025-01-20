@@ -2,7 +2,11 @@ import styles from '../../../styles/wesley.module.css';
 import sadLight from '../../../../../public/images/sad-light.png';
 import Image from 'next/image';
 
-function LoseModal ({reset}) {
+interface LoseProps {
+    reset: () => void;
+  }
+
+const LoseModal: React.FC<LoseProps> = ({reset}) => {
 
     return (
         <div className={styles.modalWrapper}>

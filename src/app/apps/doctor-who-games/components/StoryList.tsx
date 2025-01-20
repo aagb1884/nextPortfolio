@@ -29,36 +29,36 @@ export default function StoryList() {
 
   //timer
   const handleSetDuration = (): void => {
-      if (typeof duration === "number" && duration > 0) {
-        setTimeLeft(duration);
-        setIsActive(false);
-      }
-    };
-
-  useEffect(() => {
-    handleSetDuration();
-  }, [duration])
-
-  const setTimer = (time: number) => {
-    setDuration(time);
-    handleSetDuration();
-    if (isActive) {
-      reset();
+    if (typeof duration === "number" && duration > 0) {
+      setTimeLeft(duration);
+      setIsActive(false);
     }
+  };
+
+useEffect(() => {
+  handleSetDuration();
+}, [duration])
+
+const setTimer = (time: number) => {
+  setDuration(time);
+  handleSetDuration();
+  if (isActive) {
+    reset();
   }
+}
 
-  useEffect(() => {
-    if (isActive && timeLeft > 0 && score !== 8) {
-      setTimeVisible(true);
-      const timerId = setInterval(() => {
-        setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
-      }, 1000);
-      
-      return () => clearInterval(timerId);
-    } else if (isActive && timeLeft === 0) {
-      setShowLose(!showLose)
-    }
-    }, [isActive, timeLeft]);
+useEffect(() => {
+  if (isActive && timeLeft > 0 && score !== 8) {
+    setTimeVisible(true);
+    const timerId = setInterval(() => {
+      setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
+    }, 1000);
+    
+    return () => clearInterval(timerId);
+  } else if (isActive && timeLeft === 0) {
+    setShowLose(!showLose)
+  }
+  }, [isActive, timeLeft]);
   
   // filter
   const handleFilter = (filterTerm: string) => {
@@ -107,7 +107,7 @@ export default function StoryList() {
     if (score === 8) {
       setShowWin(!showWin)
     }
-  }, [score])
+  }, [score, showWin])
 
 
   const reset = () => {

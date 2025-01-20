@@ -1,13 +1,18 @@
 import styles from "../../../styles/drwho.module.css";
 
-const Difficulty = ({setTimer, duration}) => {
-    return ( 
+interface DifficultyProps {
+  setTimer: (time: number) => void;
+  duration: string | number;
+}
+
+const Difficulty: React.FC<DifficultyProps> = ({ setTimer, duration }) => {
+  return ( 
         <div className={styles.difficulty}>
         <p className={styles.difficultWord}>Difficulty:</p>
         <select 
         value={duration}
         onChange={(e) => {
-          setTimer(parseInt(e.target.value))
+          setTimer(parseInt(e.target.value, 10))
         }}
         >
          <option value={120}>Beginner</option> 

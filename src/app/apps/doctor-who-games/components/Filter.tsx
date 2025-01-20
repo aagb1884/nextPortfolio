@@ -1,4 +1,9 @@
-function Filter({filter, handleFilter}) {
+interface FilterProps {
+    handleFilter: (filterTerm: string) => void;
+    filter: string;
+  }
+
+const Filter: React.FC<FilterProps> = ({filter, handleFilter}) => {
 
     return (
         <div>

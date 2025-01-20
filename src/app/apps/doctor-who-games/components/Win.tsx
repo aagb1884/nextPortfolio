@@ -1,6 +1,10 @@
-import styles from '../../../styles/wesley.module.css'
+import styles from '../../../styles/wesley.module.css';
 
-function WinModal ({reset}) {
+interface WinProps {
+    reset: () => void;
+  }
+
+const WinModal: React.FC<WinProps> =({reset}) => {
 
     return (
         <div className={styles.modalWrapper}>
