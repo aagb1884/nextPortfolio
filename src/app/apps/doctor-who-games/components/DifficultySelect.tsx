@@ -19,7 +19,7 @@ const Difficulty: React.FC<DifficultyProps> = ({ setTimer, duration }) => {
          <option value={120}>Beginner</option> 
          <option value={60}>Intermediate</option> 
          <option value={30}>Expert</option> 
-         <option value={15}>James Cooray Smith</option> 
+         <option value={20}>James Cooray Smith</option> 
         </select>
         </div>
      );
