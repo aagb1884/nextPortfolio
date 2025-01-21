@@ -16,7 +16,7 @@ const InstructionsModal: React.FC<InstructionsModalProps> =  ({showInstructions,
         <section className={styles.modalText}>
             <h1>How this works</h1> 
             <p>You will be given a list of eight <i>Doctor Who</i> stories.</p> 
-            <p>You need to sort them into chronological order before the time runs out.</p> 
+            <p>You need to sort them into broadcast order before the time runs out.</p> 
         
             <ul className={styles.modalUl}>
                 <li>You can change the difficulty setting, which changes the time limit.</li>
