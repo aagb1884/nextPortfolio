@@ -12,13 +12,14 @@ function Modal ({showModal, setShowModal}) {
             <h1>How this works</h1> 
             <p>This is essentially a Wesley Snipes themed Magic 8-Ball</p> 
         
-            <ul>
+            <ul className={styles.modalUl}>
                 <li>Type your query into the text box.</li>
                 <li>Check for truth.</li>
                 <li>Until you hit &quot;Clear&quot; you won&apos;t be able to check the same query more than once.</li>
             </ul>
         </section>
-        <button onClick={() => {setShowModal(!showModal)}}>Hide Instructions</button>
+        <button className={styles.hideModalBtn} 
+        onClick={() => {setShowModal(!showModal)}}>Hide Instructions</button>
         </div>
     
         </div>

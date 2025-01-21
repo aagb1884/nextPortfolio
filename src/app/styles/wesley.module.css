@@ -234,7 +234,10 @@ div.footer{
 }
 
 .modal {
-  position: relative;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 80%;
   min-height: 200px;
   background-color: rgba(255, 255, 255, 0.95);
@@ -248,15 +251,20 @@ div.footer{
   z-index: 2;
 }
 
-.modalExitBtn {
-  font-size: 1.5rem;
-  color: var(--primaryColor);
-  background-color: var(--secondaryBackground);
-  border: 1px solid var(--primaryColor);
-  text-decoration: none;
-  padding: 0.5rem 2.5rem;
-  margin: 0.5rem;
+.modalUl {
+  text-align: left;
 }
+
+.modalText {
+  z-index: 4;
+}
+
+.hideModalBtn {
+  margin: 5px;
+  padding: 5px;
+  min-width: 85px;
+}
+
 .modalExitBtn:hover {
   cursor: pointer;
 }

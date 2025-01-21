@@ -1,0 +1,151 @@
+.drWhoDndContainer {
+    font-family: var(--font-della-respira);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    overflow: scroll;
+    justify-content: space-around;
+}
+
+.lightHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid plum;
+    border-radius: 5px;
+    z-index: 0;
+    top: 0;
+}
+.dndHeader{
+    z-index: 1;
+    font-size: xx-large;
+    width: 50%;
+    text-align: center;
+}
+.Light, .Seven {
+    border-radius: 50%;
+    border: solid 2px darkblue;
+}
+
+.lightSubtitle {
+    text-align: center;
+    margin: 5px;
+    font-size: medium;
+}
+
+.dropdownMenus {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.filters {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.difficulty {
+    display: flex;
+    flex-direction: row;
+}
+
+.buttonRow {
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.dndBtn, .customSelect {
+    margin: 5px;
+    padding: 5px;
+    min-width: 85px;
+    border-color: #008000;
+    background-color: #000080;
+}
+
+.difficultySelect {
+    border-color: #008000;
+    background-color: #000080;
+}
+
+.dndContextUl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.storyInfo {
+    display: flex;
+    align-items: center; 
+    touch-action: none;
+    border: solid royalblue 3px;
+    border-radius: 5px;
+    background-color: purple;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    width: 50%;
+    text-align: center;
+}
+
+.dndButtonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.resetBtn, .checkScoreBtn, .clearBtn {
+    padding: 5px;
+    margin: 5px;
+    border: solid darkgray 2px;
+    border-radius: 5px;
+}
+
+.checkScoreBtn {
+    background-color: green;
+}
+
+.resetBtn {
+    background-color: rgb(255, 51, 0);
+}
+
+.clearBtn {
+    background-color: sienna;
+}
+
+.blueBoxLogo {
+  -webkit-animation: fadeoutin 2s 2 linear forwards;
+  animation: fadeoutin 2s 2 linear forwards;
+}
+
+@-webkit-keyframes fadeoutin {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeoutin {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@media only screen and (max-width: 450px) {
+    .dndHeader {
+        font-size: x-large;
+    }
+    .lightSubtitle, .difficultWord {
+        font-size: smaller;
+    }
+    .customSelect {
+        font-size: 10px;
+        width: auto;
+    }
+} 
