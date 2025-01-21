@@ -122,7 +122,20 @@
     background-color: sienna;
 }
 
+.blueBoxLogo {
+  -webkit-animation: fadeoutin 2s 2 linear forwards;
+  animation: fadeoutin 2s 2 linear forwards;
+}
 
+@-webkit-keyframes fadeoutin {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes fadeoutin {
+  0%,100% { opacity: 1; }
+  50% { opacity: 0; }
+}
 
 @media only screen and (max-width: 450px) {
     .dndHeader {

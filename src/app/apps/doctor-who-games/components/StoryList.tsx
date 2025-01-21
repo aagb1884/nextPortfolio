@@ -16,6 +16,7 @@ import LoseModal from "./Lose";
 import FilterEra from "./FilterByEra";
 import HomeFooter from '@/components/HomePage/Footer/HomeFooter';
 import { useGlobalState } from '@/app/context/GlobalStateContext';
+import WhoLoading from "./Loading";
 
 export default function StoryList() {
   const [filter, setFilter] = useState<string>('All');
@@ -30,6 +31,7 @@ export default function StoryList() {
   const [showInstructions, setShowInstructions] = useState<boolean>(false)
   const [showWin, setShowWin] = useState<boolean>(false)
   const [showLose, setShowLose] = useState<boolean>(false)
+  const [showLoading, setShowLoading] = useState<boolean>(false)
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
 
   //timer
@@ -137,8 +139,10 @@ useEffect(() => {
     setShowLose(false);
     setShowWin(false);
     setIsActive(false);
+    setShowLoading(true)
     setTimeout(() => {
       setIsActive(true);
+      setShowLoading(false)
     }, 2000)
     setTimeLeft(typeof duration === "number" ? duration : 0);
     setStoryList(getRandomStories());
@@ -231,6 +235,9 @@ useEffect(() => {
         <LoseModal
         reset={reset}
         />
+      )}
+      {showLoading && (
+        <WhoLoading />
       )}
       {isActive && (
         <>
