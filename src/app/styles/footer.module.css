@@ -13,6 +13,15 @@
     position: static;
 }
 
+.showHideBtn {
+    margin: 5px;
+    padding: 5px;
+    min-width: 85px;
+    max-width: 100px;
+    border-color: #008000;
+    background-color: #000080;
+}
+
 .rowOfNavColumns {
     margin-top: 5px;
     display: flex;

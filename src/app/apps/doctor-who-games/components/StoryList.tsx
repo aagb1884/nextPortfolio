@@ -14,9 +14,8 @@ import InstructionsModal from "./InstructionsModal";
 import WinModal from "./Win";
 import LoseModal from "./Lose";
 import FilterEra from "./FilterByEra";
-import HomeFooter from '@/components/HomePage/Footer/HomeFooter';
-import { useGlobalState } from '@/app/context/GlobalStateContext';
 import WhoLoading from "./Loading";
+import AppsFooter from "../../components/AppsFooter";
 
 export default function StoryList() {
   const [filter, setFilter] = useState<string>('All');
@@ -32,7 +31,6 @@ export default function StoryList() {
   const [showWin, setShowWin] = useState<boolean>(false)
   const [showLose, setShowLose] = useState<boolean>(false)
   const [showLoading, setShowLoading] = useState<boolean>(false)
-  const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
 
   //timer
   const handleSetDuration = (): void => {
@@ -161,6 +159,8 @@ useEffect(() => {
     setScore(0);
   }
 
+  
+
 //dnd functions
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -190,6 +190,7 @@ useEffect(() => {
 
   return (
     <div className={styles.drWhoDndContainer}>
+      <AppsFooter />
       <LightHeader />
       <div className={styles.dropdownMenus}>
       <Difficulty 
@@ -268,15 +269,8 @@ useEffect(() => {
      </div>
      <div>
      </div>
-
      </>
     )}
-    <HomeFooter
-        goToContactForm={goToContactForm}
-        goToTab={goToTab}
-        contact={contact}
-        tabs={tabs}
-        />
     </div>
   );
 }

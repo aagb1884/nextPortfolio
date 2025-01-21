@@ -8,7 +8,8 @@ import React, { useEffect, useState } from "react";
 
 const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
     const [allPostsData, setAllPosts] = useState([])
-
+    //   const [showNav, setShowNav] = useState(false)
+    
      // Fetch posts
       useEffect(() => {
         createClient
@@ -36,9 +37,14 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
       ) 
     )
 
+    // const showHide = showNav ? 'Hide Nav' : 'Show Nav'
+
     return ( 
         <nav className={styles.homeFooter}>
-
+        {/* <button className={styles.showHideBtn}
+        onClick={() => {setShowNav(!showNav)}}>{showHide}</button>
+        {showNav && ( 
+            <> */}
         <div className={styles.rowOfNavColumns}>
 
         <div className={styles.homeClm}>
@@ -101,8 +107,8 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
         </div> 
         </div>
         <KoFiLink />
-
-        
+        {/* </>
+        )} */}
         </nav>
      );
 }
