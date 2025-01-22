@@ -67,14 +67,12 @@
     margin: 5px;
     padding: 5px;
     min-width: 85px;
+}
+
+.difficultySelect, .dndBtn, .customSelect {
     border-color: #008000;
     background-color: #000080;
     color: white;
-}
-
-.difficultySelect {
-    border-color: #008000;
-    background-color: #000080;
 }
 
 .dndContextUl {
