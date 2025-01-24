@@ -1,3 +1,78 @@
+/* tabs */
+
+.Tabs {
+    width: 100%;
+    overflow-y: auto;
+    height: 100vh;
+    background: linear-gradient(rgba(2,0,36,1) 0%, rgba(5,55,66,1) 35%, rgba(2,0,36,1) 100%);
+    border-radius: 1rem;
+    color: #E8F0F2;
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+    @media (max-width: 769px) {
+      padding: 2rem 0;
+    }
+  }
+
+  ul.nav {
+    width: 60%;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #39A2DB;
+    border-radius: 2rem;
+    padding-left: 0px;
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+  }
+  
+   
+  ul.nav li {
+    width: 50%;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+  }
+   
+  ul.nav li:first-child {
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
+   
+  ul.nav li:last-child {
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+   
+  ul.nav li:hover {
+    background: rgba(50, 224, 196, 0.15);
+  }
+   
+  ul.nav li.active {
+    background: #39A2DB;
+  }
+   
+  .WhoTabContent {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .page {
+      --gray-rgb: 255, 255, 255;
+      --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+      --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+  
+      --button-primary-hover: #ccc;
+      --button-secondary-hover: #1a1a1a;
+    }
+  }
+
 .drWhoDndContainer {
     font-family: var(--font-della-respira);
     display: flex;

@@ -1,3 +1,5 @@
+import WhoGamesTabs from "./WhoGamesTabs";
+
 export const metadata = {
   title: 'Doctor Who Games',
   openGraph: {
@@ -6,12 +8,11 @@ export const metadata = {
   },
 }
 
-import StoryList from "./components/StoryList";
 
 export default function DrWhoDND() {
   return (
     <div>
-      <StoryList />
+      <WhoGamesTabs />
     </div>
   );
 }
