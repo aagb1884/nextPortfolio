@@ -190,8 +190,7 @@ useEffect(() => {
 
   return (
     <div className={styles.drWhoDndContainer}>
-      <AppsFooter />
-      <LightHeader />
+      <p>Help them sort these <i>Doctor Who</i> TV stories into order.</p>
       <div className={styles.dropdownMenus}>
       <Difficulty 
       duration={duration}

@@ -15,7 +15,6 @@ const LightHeader = () => {
         </div>
         <div className={styles.lightSubtitle}>
         <p>Oh no! There are gaps in Light&apos;s massive database of everything!</p>
-        <p>Help them sort these <i>Doctor Who</i> TV stories into order.</p>
         </div>
         </div>
      );
