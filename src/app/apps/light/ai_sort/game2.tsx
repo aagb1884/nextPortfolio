@@ -2,25 +2,25 @@
 import { Story, stories } from "../data/stories";
 import React from "react";
 import { useState, useEffect } from "react";
-import SortableStory from "./SortableStory";
-import Countdown from "./countdown";
-import Filter from "./Filter";
-import LightHeader from "./LightHeader";
+import SortableStory from "../components/SortableStory";
+import Countdown from "../components/countdown";
+import Filter from "../components//Filter";
 import { DndContext, DragEndEvent, KeyboardSensor, PointerSensor, TouchSensor, closestCenter, useSensor, useSensors } from "@dnd-kit/core";
 import { SortableContext, arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import styles from "../../../styles/drwho.module.css";
-import Difficulty from "./DifficultySelect";
-import InstructionsModal from "./InstructionsModal";
-import WinModal from "./Win";
-import LoseModal from "./Lose";
-import FilterEra from "./FilterByEra";
-import WhoLoading from "./Loading";
-import AppsFooter from "../../components/AppsFooter";
+import Difficulty from "../components/DifficultySelect";
+import AiInstructionsModal from "./AiInstructionsModal";
+import WinModal from "../components/Win";
+import LoseModal from "../components//Lose";
+import FilterEra from "../components//FilterByEra";
+import WhoLoading from "../components//Loading";
+import FilterAIProvider from "./FilterByAIProvider";
 
-export default function StoryList() {
+export default function AiList() {
   const [filter, setFilter] = useState<string>('All');
   const [filterEra, setFilterEra] = useState<string>('All');
-  const [storyList, setStoryList] = useState<Story[]>([]);
+  const [filterAIProvider, setFilterAIProvider] = useState<string>('All');
+  const [AiList, setAiList] = useState<Story[]>([]);
   const [score, setScore] = useState<number>(0);
   const [timeVisible, setTimeVisible] = useState<boolean>(false);
   const [scoreVisible, setScoreVisible] = useState<boolean>(false);
@@ -70,6 +70,7 @@ useEffect(() => {
   const handleFilter = (filterTerm: string) => {
     setFilter(filterTerm);
     setFilterEra('All');
+    setFilterAIProvider('All');
     if (isActive) {
       reset();
     }
@@ -78,22 +79,34 @@ useEffect(() => {
   const handleFilterEra = (filterTerm: string) => {
     setFilterEra(filterTerm);
     setFilter('All');
+    setFilterAIProvider('All');
     if (isActive) {
       reset();
     }
   }
 
-  let filteredStories = stories;
-  if (filter !== 'All' || filterEra !== 'All'){
+  const handleFilterAIProvider = (filterTerm: string) => {
+    setFilterAIProvider(filterTerm);
+    setFilter('All');
+    setFilterEra('All');
+    if (isActive) {
+      reset();
+    }
+  }
+
+  let filteredStories = [...stories].filter(story => story.ai > 0);
+  if (filter !== 'All' || filterEra !== 'All' || filterAIProvider !== 'All'){
     filteredStories = stories.filter((story) => {
       const doctorMatch = story.doctor === filter || filter === 'All';
       const eraMatch = story.era === filterEra || filterEra === 'All';
+      const aiMatch = story.ai_type === filterAIProvider || filterAIProvider === 'All';
 
       return (
-        doctorMatch && eraMatch
+        doctorMatch && eraMatch && aiMatch
       )
     })
   }
+
 
   //get stories
   function getRandomStories(){
@@ -106,8 +119,8 @@ useEffect(() => {
 
   useEffect(() => {
     const newRandomStories = getRandomStories();
-    setStoryList(newRandomStories)
-  }, [filter, filterEra])
+    setAiList(newRandomStories)
+  }, [filter, filterEra, filterAIProvider])
 
  
   useEffect(() => {
@@ -116,12 +129,18 @@ useEffect(() => {
     }
   }, [score])
 
+   function compare(a: string | number, b: string | number) {
+    if (a > b) return +1;
+    if (a < b) return -1;
+    return 0;
+}
+
 // button functions
   function checkAnswers(){
     let i = 0;
-    const correctOrder = [...storyList].sort((a, b) => a.id - b.id);
-    while (i < storyList.length) {
-      if (storyList[i] === correctOrder[i]){
+    const correctOrder = [...AiList].sort((a, b) => b.ai - a.ai)
+    while (i < AiList.length) {
+      if (AiList[i] === correctOrder[i]){
         setScore((prevScore) => prevScore + 1)
       }
       i++;  
@@ -143,7 +162,7 @@ useEffect(() => {
       setShowLoading(false)
     }, 2000)
     setTimeLeft(typeof duration === "number" ? duration : 0);
-    setStoryList(getRandomStories());
+    setAiList(getRandomStories());
     setTimeVisible(false);
     setScore(0);
   }
@@ -151,6 +170,7 @@ useEffect(() => {
   const clearAll = () => {
     setFilter('All');
     setFilterEra('All');
+    setFilterAIProvider('All');
     setShowLose(false);
     setShowWin(false);
     setIsActive(false);
@@ -179,7 +199,7 @@ useEffect(() => {
     if (active.id===over?.id){
       return
     }
-    setStoryList(stories=>{
+    setAiList(stories=>{
       const itemOriginalPos = stories.findIndex((item)=>item.id===active.id)
       const itemNewPos = stories.findIndex((item)=>item.id===over?.id)
 
@@ -189,8 +209,8 @@ useEffect(() => {
 
 
   return (
-    <div className={styles.drWhoDndContainer}>
-      <p>Help them sort these <i>Doctor Who</i> TV stories into order.</p>
+    <div className={styles.drWhoDndContainerAI}>
+      <p>Help them sort these <i>Doctor Who</i> TV stories in descending order of Appreciation Index scores.</p>
       <div className={styles.dropdownMenus}>
       <Difficulty 
       duration={duration}
@@ -203,6 +223,10 @@ useEffect(() => {
       <FilterEra 
       filterEra={filterEra}
       handleFilterEra={handleFilterEra}
+      />
+      <FilterAIProvider
+      filterAIProvider={filterAIProvider}
+      handleFilterAIProvider={handleFilterAIProvider}
       />
       </div>
       </div>
@@ -222,7 +246,7 @@ useEffect(() => {
         >BEGIN</button>
       </div>
       {showInstructions && (
-        <InstructionsModal 
+        <AiInstructionsModal 
         showInstructions={showInstructions}
         setShowInstructions={setShowInstructions}/>
       )}
@@ -248,7 +272,7 @@ useEffect(() => {
         sensors={sensors}
         >
         <SortableContext items={stories}>
-        {storyList.map((story: Story) => (
+        {AiList.map((story: Story) => (
           <SortableStory story={story} key={story.id} />
         ))}
         </SortableContext>

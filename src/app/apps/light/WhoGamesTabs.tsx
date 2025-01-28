@@ -4,10 +4,10 @@ import WhoTabNavItem from "./V2/WhoTabNavItem";
 import WhoTabContent from "./V2/WhoTabContent";
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 import { useRef } from "react";
-import StoryList from "./components/StoryList";
-import Game2 from "./game2/game2";
+import StoryList from "./story_sort/StoryList";
+import Game2 from "./ai_sort/game2";
 import AppsFooter from "../components/AppsFooter";
-import LightHeader from "./components/LightHeader";
+import LightHeader from "./story_sort/LightHeader";
 
 const WhoGamesTabs = () => {
     const { activeWhoTab, setActiveWhoTab } = useGlobalState();
@@ -21,10 +21,10 @@ const WhoGamesTabs = () => {
           <WhoTabNavItem title="Story Order" id="whoTab1" 
           activeWhoTab={activeWhoTab} setActiveWhoTab={setActiveWhoTab}
            />
-          <WhoTabNavItem title="Second Game" id="whoTab2" 
+          <WhoTabNavItem title="Appreciation Index" id="whoTab2" 
           activeWhoTab={activeWhoTab} setActiveWhoTab={setActiveWhoTab}
          />
-          {/* <WhoTabNavItem title="Poetry/Spoken Word" id="tab3" 
+          {/* <WhoTabNavItem title="Third Game" id="tab3" 
           activeWhoTab={activeWhoTab} setActiveWhoTab={setActiveWhoTab}/> */}
         </ul>   
         

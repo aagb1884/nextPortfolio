@@ -54,11 +54,11 @@
   }
    
   ul.nav li:hover {
-    background: rgba(50, 224, 196, 0.15);
+    background: rgba(50, 224, 196, 0.35);
   }
    
-  ul.nav li.active {
-    background: #39A2DB;
+  ul.nav li:active {
+    background: #019bed;
   }
    
   .WhoTabContent {
@@ -77,13 +77,18 @@
     }
   }
 
-.drWhoDndContainer {
+.drWhoDndContainer, .drWhoDndContainerAI {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
     color: white;
     font-size: medium;
+}
+
+.drWhoDndContainerAI {
+    background: rgb(136,3,108);
+background: linear-gradient(0deg, rgba(136,3,108,1) 27%, rgba(48,1,38,1) 63%, rgba(0,0,0,1) 100%);
 }
 
 .lightHeader {
@@ -224,7 +229,7 @@
         font-size: smaller;
     }
     .customSelect {
-        font-size: 10px;
-        width: auto;
+        font-size: 9px;
+        width: 90%;
     }
 } 
