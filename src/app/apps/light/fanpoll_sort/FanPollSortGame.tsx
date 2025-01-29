@@ -9,20 +9,20 @@ import { DndContext, DragEndEvent, KeyboardSensor, PointerSensor, TouchSensor, c
 import { SortableContext, arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import styles from "../../../styles/drwho.module.css";
 import Difficulty from "../components/DifficultySelect";
-import InstructionsModal from "./InstructionsModal";
+import FanPollInstructionsModal from "./FanPollInstructionModal";
 import WinModal from "../components/Win";
 import LoseModal from "../components/Lose";
 import FilterEra from "../components/FilterByEra";
 import WhoLoading from "../components/Loading";
 
 interface FilterProps {
-  activeWhoTab: string;
-}
+    activeWhoTab: string;
+  }
 
-const StoryList: React.FC<FilterProps> = ({activeWhoTab}) => {
+const FanPollList: React.FC<FilterProps> = ({activeWhoTab}) => {
   const [filter, setFilter] = useState<string>('All');
   const [filterEra, setFilterEra] = useState<string>('All');
-  const [storyList, setStoryList] = useState<Story[]>([]);
+  const [FanPollList, setFanPollList] = useState<Story[]>([]);
   const [score, setScore] = useState<number>(0);
   const [timeVisible, setTimeVisible] = useState<boolean>(false);
   const [scoreVisible, setScoreVisible] = useState<boolean>(false);
@@ -34,7 +34,7 @@ const StoryList: React.FC<FilterProps> = ({activeWhoTab}) => {
   const [showLose, setShowLose] = useState<boolean>(false)
   const [showLoading, setShowLoading] = useState<boolean>(false)
   const [correctStates, setCorrectStates] = useState<Record<number, boolean>>({});
-  
+
   //timer
   const handleSetDuration = (): void => {
     if (typeof duration === "number" && duration > 0) {
@@ -86,17 +86,19 @@ useEffect(() => {
     }
   }
 
-  let filteredStories = stories;
+  let filteredStories = [...stories].filter(story => story.ranking > 0);
   if (filter !== 'All' || filterEra !== 'All'){
     filteredStories = stories.filter((story) => {
+      const scoresOnly = story.ranking > 0  
       const doctorMatch = story.doctor === filter || filter === 'All';
       const eraMatch = story.era === filterEra || filterEra === 'All';
 
       return (
-        doctorMatch && eraMatch
+        doctorMatch && eraMatch && scoresOnly
       )
     })
   }
+
 
   //get stories
   function getRandomStories(){
@@ -109,7 +111,7 @@ useEffect(() => {
 
   useEffect(() => {
     const newRandomStories = getRandomStories();
-    setStoryList(newRandomStories)
+    setFanPollList(newRandomStories)
   }, [filter, filterEra])
 
  
@@ -122,10 +124,10 @@ useEffect(() => {
 // button functions
   function checkAnswers(){
     let i = 0;
-    const correctOrder = [...storyList].sort((a, b) => a.id - b.id);
+    const correctOrder = [...FanPollList].sort((a, b) => a.ranking - b.ranking || a.id - b.id) 
     const newCorrectStates: Record<number, boolean> = {};
- 
-    storyList.forEach((story, index) => {
+
+    FanPollList.forEach((story, index) => {
         newCorrectStates[story.id] = story === correctOrder[index];
       });
   
@@ -137,6 +139,7 @@ useEffect(() => {
     setTimeout(() => {
       setScoreVisible(false)
       setScore(0)
+      setCorrectStates({});
     }, 1700);
   }
 
@@ -145,13 +148,13 @@ useEffect(() => {
     setShowWin(false);
     setIsActive(false);
     setCorrectStates({});
-    setShowLoading(true);
+    setShowLoading(true)
     setTimeout(() => {
       setIsActive(true);
       setShowLoading(false)
     }, 2000)
     setTimeLeft(typeof duration === "number" ? duration : 0);
-    setStoryList(getRandomStories());
+    setFanPollList(getRandomStories());
     setTimeVisible(false);
     setScore(0);
   }
@@ -187,7 +190,7 @@ useEffect(() => {
     if (active.id===over?.id){
       return
     }
-    setStoryList(stories=>{
+    setFanPollList(stories=>{
       const itemOriginalPos = stories.findIndex((item)=>item.id===active.id)
       const itemNewPos = stories.findIndex((item)=>item.id===over?.id)
 
@@ -197,8 +200,8 @@ useEffect(() => {
 
 
   return (
-    <div className={styles.drWhoDndContainer}>
-      <p>Help them sort these <i>Doctor Who</i> TV stories into order.</p>
+    <div className={styles.drWhoDndContainerFanPoll}>
+      <p>Help them sort these <i>Doctor Who</i> TV stories in descending order of a 2020 fan poll ranking.</p>
       <div className={styles.dropdownMenus}>
       <Difficulty 
       duration={duration}
@@ -231,7 +234,7 @@ useEffect(() => {
         >BEGIN</button>
       </div>
       {showInstructions && (
-        <InstructionsModal 
+        <FanPollInstructionsModal
         showInstructions={showInstructions}
         setShowInstructions={setShowInstructions}/>
       )}
@@ -257,8 +260,10 @@ useEffect(() => {
         sensors={sensors}
         >
         <SortableContext items={stories}>
-        {storyList.map((story: Story) => (
-          <SortableStory story={story} key={story.id} />
+        {FanPollList.map((story: Story) => (
+          <SortableStory 
+          story={story} key={story.id} 
+          isCorrect={correctStates[story.id] || false}/>
         ))}
         </SortableContext>
         </DndContext>
@@ -283,4 +288,4 @@ useEffect(() => {
   );
 }
 
-export default StoryList;
+export default FanPollList;

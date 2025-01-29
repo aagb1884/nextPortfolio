@@ -4,19 +4,23 @@ import React from "react";
 import { useState, useEffect } from "react";
 import SortableStory from "../components/SortableStory";
 import Countdown from "../components/countdown";
-import Filter from "../components//Filter";
+import Filter from "../components/Filter";
 import { DndContext, DragEndEvent, KeyboardSensor, PointerSensor, TouchSensor, closestCenter, useSensor, useSensors } from "@dnd-kit/core";
 import { SortableContext, arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import styles from "../../../styles/drwho.module.css";
 import Difficulty from "../components/DifficultySelect";
 import AiInstructionsModal from "./AiInstructionsModal";
 import WinModal from "../components/Win";
-import LoseModal from "../components//Lose";
-import FilterEra from "../components//FilterByEra";
-import WhoLoading from "../components//Loading";
+import LoseModal from "../components/Lose";
+import FilterEra from "../components/FilterByEra";
+import WhoLoading from "../components/Loading";
 import FilterAIProvider from "./FilterByAIProvider";
 
-export default function AiList() {
+interface FilterProps {
+  activeWhoTab: string;
+}
+
+const AiList: React.FC<FilterProps> = ({activeWhoTab}) => {
   const [filter, setFilter] = useState<string>('All');
   const [filterEra, setFilterEra] = useState<string>('All');
   const [filterAIProvider, setFilterAIProvider] = useState<string>('All');
@@ -31,6 +35,7 @@ export default function AiList() {
   const [showWin, setShowWin] = useState<boolean>(false)
   const [showLose, setShowLose] = useState<boolean>(false)
   const [showLoading, setShowLoading] = useState<boolean>(false)
+  const [correctStates, setCorrectStates] = useState<Record<number, boolean>>({});
 
   //timer
   const handleSetDuration = (): void => {
@@ -97,12 +102,13 @@ useEffect(() => {
   let filteredStories = [...stories].filter(story => story.ai > 0);
   if (filter !== 'All' || filterEra !== 'All' || filterAIProvider !== 'All'){
     filteredStories = stories.filter((story) => {
+      const scoresOnly = story.ai > 0  
       const doctorMatch = story.doctor === filter || filter === 'All';
       const eraMatch = story.era === filterEra || filterEra === 'All';
       const aiMatch = story.ai_type === filterAIProvider || filterAIProvider === 'All';
 
       return (
-        doctorMatch && eraMatch && aiMatch
+        doctorMatch && eraMatch && aiMatch && scoresOnly
       )
     })
   }
@@ -129,34 +135,34 @@ useEffect(() => {
     }
   }, [score])
 
-   function compare(a: string | number, b: string | number) {
-    if (a > b) return +1;
-    if (a < b) return -1;
-    return 0;
-}
-
 // button functions
   function checkAnswers(){
     let i = 0;
-    const correctOrder = [...AiList].sort((a, b) => b.ai - a.ai)
-    while (i < AiList.length) {
-      if (AiList[i] === correctOrder[i]){
-        setScore((prevScore) => prevScore + 1)
-      }
-      i++;  
-    }
+    const correctOrder = [...AiList].sort((a, b) => b.ai - a.ai || a.id - b.id) 
+    const newCorrectStates: Record<number, boolean> = {};
+ 
+    AiList.forEach((story, index) => {
+        newCorrectStates[story.id] = story === correctOrder[index];
+      });
+  
+    setCorrectStates(newCorrectStates);
+    const score = Object.values(newCorrectStates).filter((isCorrect) => isCorrect).length;
+    setScore(score);
+
     setScoreVisible(true)
     setTimeout(() => {
       setScoreVisible(false)
       setScore(0)
-    }, 4000);
+      setCorrectStates({});
+    }, 1700);
   }
 
   const reset = () => {
     setShowLose(false);
     setShowWin(false);
     setIsActive(false);
-    setShowLoading(true)
+    setCorrectStates({});
+    setShowLoading(true);
     setTimeout(() => {
       setIsActive(true);
       setShowLoading(false)
@@ -219,6 +225,7 @@ useEffect(() => {
       <Filter 
       filter={filter}
       handleFilter={handleFilter}
+      activeWhoTab={activeWhoTab}
       />
       <FilterEra 
       filterEra={filterEra}
@@ -273,7 +280,9 @@ useEffect(() => {
         >
         <SortableContext items={stories}>
         {AiList.map((story: Story) => (
-          <SortableStory story={story} key={story.id} />
+          <SortableStory 
+          story={story} key={story.id} 
+          isCorrect={correctStates[story.id] || false}/>
         ))}
         </SortableContext>
         </DndContext>
@@ -297,3 +306,5 @@ useEffect(() => {
     </div>
   );
 }
+
+export default AiList;

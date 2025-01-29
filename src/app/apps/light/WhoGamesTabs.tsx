@@ -5,13 +5,16 @@ import WhoTabContent from "./V2/WhoTabContent";
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 import { useRef } from "react";
 import StoryList from "./story_sort/StoryList";
-import Game2 from "./ai_sort/game2";
 import AppsFooter from "../components/AppsFooter";
 import LightHeader from "./story_sort/LightHeader";
+import AiList from "./ai_sort/AppreciationIndexGame";
+import FanPollList from "./fanpoll_sort/FanPollSortGame";
 
 const WhoGamesTabs = () => {
     const { activeWhoTab, setActiveWhoTab } = useGlobalState();
     const tabs = useRef(null); 
+
+    console.log(activeWhoTab)
     return ( 
         <div className={styles.Tabs}>
             <AppsFooter />
@@ -24,17 +27,20 @@ const WhoGamesTabs = () => {
           <WhoTabNavItem title="Appreciation Index" id="whoTab2" 
           activeWhoTab={activeWhoTab} setActiveWhoTab={setActiveWhoTab}
          />
-          {/* <WhoTabNavItem title="Third Game" id="tab3" 
-          activeWhoTab={activeWhoTab} setActiveWhoTab={setActiveWhoTab}/> */}
+          <WhoTabNavItem title="Fan Poll" id="whoTab3" 
+          activeWhoTab={activeWhoTab} setActiveWhoTab={setActiveWhoTab}/>
         </ul>   
         
         <div className={styles.whoTabContentWrapper}>
         <div className={styles.outlet}>
           <WhoTabContent id="whoTab1" activeWhoTab={activeWhoTab}>
-          <StoryList />
+          <StoryList activeWhoTab={activeWhoTab}/>
           </WhoTabContent>
           <WhoTabContent id="whoTab2" activeWhoTab={activeWhoTab}>
-          <Game2 />
+          <AiList activeWhoTab={activeWhoTab}/>
+          </WhoTabContent>
+          <WhoTabContent id="whoTab3" activeWhoTab={activeWhoTab}>
+          <FanPollList activeWhoTab={activeWhoTab}/>
           </WhoTabContent>
         </div>
         </div>
