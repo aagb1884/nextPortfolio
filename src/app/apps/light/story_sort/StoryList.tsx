@@ -121,7 +121,6 @@ useEffect(() => {
 
 // button functions
   function checkAnswers(){
-    let i = 0;
     const correctOrder = [...storyList].sort((a, b) => a.id - b.id);
     const newCorrectStates: Record<number, boolean> = {};
  
@@ -258,7 +257,9 @@ useEffect(() => {
         >
         <SortableContext items={stories}>
         {storyList.map((story: Story) => (
-          <SortableStory story={story} key={story.id} />
+          <SortableStory story={story} key={story.id} 
+          isCorrect={correctStates[story.id] || false}
+          />
         ))}
         </SortableContext>
         </DndContext>

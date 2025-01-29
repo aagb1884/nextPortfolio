@@ -137,7 +137,6 @@ useEffect(() => {
 
 // button functions
   function checkAnswers(){
-    let i = 0;
     const correctOrder = [...AiList].sort((a, b) => b.ai - a.ai || a.id - b.id) 
     const newCorrectStates: Record<number, boolean> = {};
  

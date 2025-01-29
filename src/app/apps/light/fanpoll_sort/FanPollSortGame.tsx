@@ -123,7 +123,6 @@ useEffect(() => {
 
 // button functions
   function checkAnswers(){
-    let i = 0;
     const correctOrder = [...FanPollList].sort((a, b) => a.ranking - b.ranking || a.id - b.id) 
     const newCorrectStates: Record<number, boolean> = {};
 
