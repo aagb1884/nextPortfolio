@@ -14,7 +14,6 @@ const WhoGamesTabs = () => {
     const { activeWhoTab, setActiveWhoTab } = useGlobalState();
     const tabs = useRef(null); 
 
-    console.log(activeWhoTab)
     return ( 
         <div className={styles.Tabs}>
             <AppsFooter />

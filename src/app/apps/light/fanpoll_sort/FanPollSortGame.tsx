@@ -164,6 +164,7 @@ useEffect(() => {
     setShowLose(false);
     setShowWin(false);
     setIsActive(false);
+    setFanPollList(getRandomStories());
     setTimeLeft(typeof duration === "number" ? duration : 0);
     setTimeVisible(false);
     setScore(0);

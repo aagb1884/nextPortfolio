@@ -179,6 +179,7 @@ useEffect(() => {
     setShowLose(false);
     setShowWin(false);
     setIsActive(false);
+    setAiList(getRandomStories());
     setTimeLeft(typeof duration === "number" ? duration : 0);
     setTimeVisible(false);
     setScore(0);

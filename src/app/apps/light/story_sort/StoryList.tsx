@@ -136,6 +136,7 @@ useEffect(() => {
     setTimeout(() => {
       setScoreVisible(false)
       setScore(0)
+      setCorrectStates({});
     }, 1700);
   }
 
@@ -161,6 +162,8 @@ useEffect(() => {
     setShowLose(false);
     setShowWin(false);
     setIsActive(false);
+    setStoryList(getRandomStories());
+    setCorrectStates({});
     setTimeLeft(typeof duration === "number" ? duration : 0);
     setTimeVisible(false);
     setScore(0);
@@ -197,7 +200,7 @@ useEffect(() => {
 
   return (
     <div className={styles.drWhoDndContainer}>
-      <p>Help them sort these <i>Doctor Who</i> TV stories into order.</p>
+      <p>Help them sort these <i>Doctor Who</i> TV stories into broadcast order.</p>
       <div className={styles.dropdownMenus}>
       <Difficulty 
       duration={duration}

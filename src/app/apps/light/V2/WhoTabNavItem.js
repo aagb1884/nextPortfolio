@@ -6,7 +6,7 @@ const WhoTabNavItem = ({ id, title, activeWhoTab, setActiveWhoTab }) => {
  };
  
 return (
-   <li onClick={handleClick} className={activeWhoTab === id ? "active" : ""}>
+   <li onClick={handleClick} className={activeWhoTab === id ? `activeTab` : ""}>
      { title }
    </li>
  );
