@@ -4,7 +4,12 @@ import { CSS } from "@dnd-kit/utilities";
 import React from "react";
 import styles from "../../../styles/drwho.module.css";
 
-export default function SortableStory({ story }: { story: Story }) {
+interface StoryProps {
+  story: Story;
+  isCorrect: boolean;
+}
+
+const SortableStory: React.FC<StoryProps> = ({ story, isCorrect }) => {
   const { listeners, transform, transition, attributes, setNodeRef } = 
   useSortable({id: story.id})
 
@@ -16,8 +21,10 @@ export default function SortableStory({ story }: { story: Story }) {
   return (
     <li ref={setNodeRef} {...listeners} {...attributes}
     style={style}
-    className={styles.storyInfo}>
+    className={isCorrect ? styles.storyInfoCorrect : styles.storyInfo}>
         {story.name}
     </li>
   );
 }
+
+export default SortableStory

@@ -1,12 +1,15 @@
 interface FilterProps {
     handleFilter: (filterTerm: string) => void;
     filter: string;
+    activeWhoTab: string;
   }
 
 import styles from "../../../styles/drwho.module.css";
 
-const Filter: React.FC<FilterProps> = ({filter, handleFilter
-}) => {
+const Filter: React.FC<FilterProps> = ({filter, handleFilter, activeWhoTab}) => {
+
+    const broadcastOrder =  activeWhoTab === 'whoTab1'
+    const fanPollFilter = activeWhoTab === 'whoTab3'
 
     return (
         <div>
@@ -26,14 +29,14 @@ const Filter: React.FC<FilterProps> = ({filter, handleFilter
     <option value='Fifth' >Fifth Doctor (Peter Davison)</option>
     <option value='Sixth' >Sixth Doctor (Colin Baker)</option>
     <option value='Seventh' >Seventh Doctor (Sylvester McCoy)</option>
-    <option value='Eighth' disabled={true}>Eighth Doctor (Paul McGann)</option>
+    <option value='Eighth' disabled={broadcastOrder}>Eighth Doctor (Paul McGann)</option>
     <option value='Ninth' >Ninth Doctor (Christopher Eccleston)</option>
     <option value='Tenth' >Tenth Doctor (David Tennant)</option>
     <option value='Eleventh' >Eleventh Doctor (Matt Smith)</option>
     <option value='Twelfth' >Twelfth Doctor (Peter Capaldi)</option>
     <option value='Thirteenth' >Thirteenth Doctor (Jodie Whittaker)</option>
-    <option value='Fourteenth' disabled={true}>Fourteenth Doctor (David Tennant)</option>
-    <option value='Fifteenth' >Fifteenth Doctor (Ncuti Gatwa)</option>
+    <option value='Fourteenth' disabled={broadcastOrder || fanPollFilter}>Fourteenth Doctor (David Tennant)</option>
+    <option value='Fifteenth' disabled={fanPollFilter}>Fifteenth Doctor (Ncuti Gatwa)</option>
     </select>
     <span className="focus"></span>
 </div>

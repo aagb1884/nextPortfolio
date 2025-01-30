@@ -36,7 +36,8 @@ a {
 }
 
 a:link {
-  color: skyblue;
+  color: rgb(25, 149, 199);
+  font-weight: 800;
 }
 
 a:hover {

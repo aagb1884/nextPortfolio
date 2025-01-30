@@ -9,6 +9,8 @@ import euroBingoGif from '../../../../public/images/eurovision_bingo_button.gif'
 import bigFinishGif from '../../../../public/images/bigFinish/untempered_schism.gif';
 import deekPrime from '../../../../public/images/deekPrime.jpg';
 import wesley from '../../../../public/images/wesleySnopes/button_wesley.png'
+import poetRemixer from '../../../../public/images/poetrRemixer.png';
+import light from '../../../../public/images/sad-light.png';
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 
@@ -74,11 +76,30 @@ const AppsPage = () => {
                     </div>
                 </Link>
                 </div>
+                <div className={styles.poetRemixer}>
+                <Link href="/apps/poetremixer">
+                
+                    <Image   src={poetRemixer} 
+                            alt="poetRemixer tool link" 
+                          
+                            className={styles.buttonImage} />
+                </Link>
+                </div>
+                <div className={styles.light}>
+                <Link href="/apps/light">
+                
+                    <Image   src={light} 
+                            alt="Doctor Who/Light games link" 
+                          
+                            className={styles.buttonImage} />
+                    <div className={styles.buttonText}>Doctor Who Games</div>
+                </Link>
+                </div>
     
                 </section>
                 <section className={styles.appsLandingCopy}>
                 <aside className={styles.designCredit}>Bouncing Text animation by <Link href="https://lenadesign.org/2021/05/18/css-bouncing-text-animation/">Lena Design <ExternalLinkImage /></Link></aside>
-                <p>Six (and counting) React apps; some requiring esoteric knowledge of <i>Doctor Who</i>, others less so.</p>
+                <p>Nine (and counting) apps; some requiring esoteric knowledge of <i>Doctor Who</i>, others less so.</p>
                 <p>You can find more information on each on my <Link href="https://github.com/aagb1884">GitHub page <ExternalLinkImage/></Link>.</p>
                 <br />
                 <aside>NB. <i>Wesley Snopes</i>, the <i>Derek Adams Management Simulator</i> and <i>Rangers Manager Simulator</i> are probably not suitable for work.</aside>

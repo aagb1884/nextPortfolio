@@ -1,11 +1,108 @@
-.drWhoDndContainer {
+/* tabs */
+
+.Tabs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    text-align: center;
     font-family: var(--font-della-respira);
+    overflow-y: auto;
+    height: 100vh;
+    background-color: black;
+    color: #E8F0F2;
+    font-size: large;
+    font-weight: bold;
+    position: relative;
+    @media (max-width: 769px) {
+      padding: 2rem 0;
+    }
+  }
+
+  ul.nav {
+    width: 60%;
+    margin: 1rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #39A2DB;
+    border-radius: 2rem;
+    padding-left: 0px;
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+  }
+  
+   
+  ul.nav li {
+    width: 50%;
+    padding: 0.5rem;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+  }
+   
+  ul.nav li:first-child {
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
+   
+  ul.nav li:last-child {
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+  }
+   
+  ul.nav li:hover {
+    background: rgba(50, 224, 196, 0.35);
+  }
+   
+  .whoTabActive {
+    background: rgb(1, 155, 237, 0.6);
+  }
+
+  .main {
+    width: 100%;
+  }
+   
+  .WhoTabContent {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    .page {
+      --gray-rgb: 255, 255, 255;
+      --gray-alpha-200: rgba(var(--gray-rgb), 0.145);
+      --gray-alpha-100: rgba(var(--gray-rgb), 0.06);
+  
+      --button-primary-hover: #ccc;
+      --button-secondary-hover: #1a1a1a;
+    }
+  }
+
+.drWhoDndContainer, .drWhoDndContainerAI, .drWhoDndContainerFanPoll {
     display: flex;
     flex-direction: column;
     align-items: center;
     height: 100vh;
-    overflow: scroll;
     color: white;
+    font-size: medium;
+}
+
+.drWhoDndContainer {
+    background: rgb(136, 109, 3);
+    background: linear-gradient(0deg, rgba(136,109,3,1) 27%, rgb(48, 42, 1) 63%, rgba(0,0,0,1) 100%);
+}
+
+.drWhoDndContainerAI {
+    background: rgb(136,3,108);
+    background: linear-gradient(0deg, rgba(136,3,108,1) 27%, rgba(48,1,38,1) 63%, rgba(0,0,0,1) 100%);
+}
+
+.drWhoDndContainerFanPoll {
+  background: rgb(3, 81, 136);
+  background: linear-gradient(0deg, rgb(3, 81, 136, 1) 27%, rgb(1, 20, 48) 63%, rgba(0,0,0,1) 100%);
 }
 
 .lightHeader {
@@ -30,9 +127,11 @@
 }
 
 .lightSubtitle {
+    width: 100%;
+    padding: 0 15px;
+    font-size: medium;
     text-align: center;
     margin: 5px;
-    font-size: medium;
 }
 
 .dropdownMenus {
@@ -82,11 +181,10 @@
     width: 100%;
 }
 
-.storyInfo {
+.storyInfo, .storyInfoCorrect {
     display: flex;
     align-items: center; 
     touch-action: none;
-    border: solid royalblue 3px;
     border-radius: 5px;
     background-color: purple;
     margin: 5px;
@@ -94,6 +192,15 @@
     font-weight: bold;
     width: 50%;
     text-align: center;
+}
+
+.storyInfo {
+    border: solid royalblue 3px;
+}
+
+.storyInfoCorrect {
+  border: solid rgb(0, 128, 0, 0.7) 3px;
+  transition: border-width 0.6s linear;
 }
 
 .dndButtonDiv {
@@ -145,7 +252,15 @@
         font-size: smaller;
     }
     .customSelect {
-        font-size: 10px;
-        width: auto;
+        font-size: 9px;
+        width: 90%;
+    }
+    ul.nav {
+      margin: 0.5rem auto;
+    }
+    ul.nav li {
+      width: 50%;
+      padding: 0.2rem;
+      font-size: medium;
     }
 } 

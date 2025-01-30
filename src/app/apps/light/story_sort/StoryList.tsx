@@ -2,28 +2,29 @@
 import { Story, stories } from "../data/stories";
 import React from "react";
 import { useState, useEffect } from "react";
-import SortableStory from "./SortableStory";
-import Countdown from "./countdown";
-import Filter from "./Filter";
-import LightHeader from "./LightHeader";
+import SortableStory from "../components/SortableStory";
+import Countdown from "../components/countdown";
+import Filter from "../components/Filter";
 import { DndContext, DragEndEvent, KeyboardSensor, PointerSensor, TouchSensor, closestCenter, useSensor, useSensors } from "@dnd-kit/core";
 import { SortableContext, arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import styles from "../../../styles/drwho.module.css";
-import Difficulty from "./DifficultySelect";
+import Difficulty from "../components/DifficultySelect";
 import InstructionsModal from "./InstructionsModal";
-import WinModal from "./Win";
-import LoseModal from "./Lose";
-import FilterEra from "./FilterByEra";
-import WhoLoading from "./Loading";
-import AppsFooter from "../../components/AppsFooter";
+import WinModal from "../components/Win";
+import LoseModal from "../components/Lose";
+import FilterEra from "../components/FilterByEra";
+import WhoLoading from "../components/Loading";
 
-export default function StoryList() {
+interface FilterProps {
+  activeWhoTab: string;
+}
+
+const StoryList: React.FC<FilterProps> = ({activeWhoTab}) => {
   const [filter, setFilter] = useState<string>('All');
   const [filterEra, setFilterEra] = useState<string>('All');
   const [storyList, setStoryList] = useState<Story[]>([]);
   const [score, setScore] = useState<number>(0);
   const [timeVisible, setTimeVisible] = useState<boolean>(false);
-  const [scoreVisible, setScoreVisible] = useState<boolean>(false);
   const [duration, setDuration] = useState<number | string>(120);
   const [timeLeft, setTimeLeft] = useState<number>(120);
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -31,7 +32,8 @@ export default function StoryList() {
   const [showWin, setShowWin] = useState<boolean>(false)
   const [showLose, setShowLose] = useState<boolean>(false)
   const [showLoading, setShowLoading] = useState<boolean>(false)
-
+  const [correctStates, setCorrectStates] = useState<Record<number, boolean>>({});
+  
   //timer
   const handleSetDuration = (): void => {
     if (typeof duration === "number" && duration > 0) {
@@ -118,26 +120,28 @@ useEffect(() => {
 
 // button functions
   function checkAnswers(){
-    let i = 0;
     const correctOrder = [...storyList].sort((a, b) => a.id - b.id);
-    while (i < storyList.length) {
-      if (storyList[i] === correctOrder[i]){
-        setScore((prevScore) => prevScore + 1)
-      }
-      i++;  
-    }
-    setScoreVisible(true)
+    const newCorrectStates: Record<number, boolean> = {};
+ 
+    storyList.forEach((story, index) => {
+        newCorrectStates[story.id] = story === correctOrder[index];
+      });
+  
+    setCorrectStates(newCorrectStates);
+    const score = Object.values(newCorrectStates).filter((isCorrect) => isCorrect).length;
+    setScore(score);
     setTimeout(() => {
-      setScoreVisible(false)
       setScore(0)
-    }, 4000);
+      setCorrectStates({});
+    }, 1700);
   }
 
   const reset = () => {
     setShowLose(false);
     setShowWin(false);
     setIsActive(false);
-    setShowLoading(true)
+    setCorrectStates({});
+    setShowLoading(true);
     setTimeout(() => {
       setIsActive(true);
       setShowLoading(false)
@@ -154,6 +158,8 @@ useEffect(() => {
     setShowLose(false);
     setShowWin(false);
     setIsActive(false);
+    setStoryList(getRandomStories());
+    setCorrectStates({});
     setTimeLeft(typeof duration === "number" ? duration : 0);
     setTimeVisible(false);
     setScore(0);
@@ -190,8 +196,7 @@ useEffect(() => {
 
   return (
     <div className={styles.drWhoDndContainer}>
-      <AppsFooter />
-      <LightHeader />
+      <p>Help them sort these <i>Doctor Who</i> TV stories into broadcast order.</p>
       <div className={styles.dropdownMenus}>
       <Difficulty 
       duration={duration}
@@ -200,6 +205,7 @@ useEffect(() => {
       <Filter 
       filter={filter}
       handleFilter={handleFilter}
+      activeWhoTab={activeWhoTab}
       />
       <FilterEra 
       filterEra={filterEra}
@@ -250,14 +256,13 @@ useEffect(() => {
         >
         <SortableContext items={stories}>
         {storyList.map((story: Story) => (
-          <SortableStory story={story} key={story.id} />
+          <SortableStory story={story} key={story.id} 
+          isCorrect={correctStates[story.id] || false}
+          />
         ))}
         </SortableContext>
         </DndContext>
       </ul>
-      {scoreVisible && (
-       <p>You have {score}/8 corrrect answer(s).</p>
-     )}
       <div className={styles.dndButtonDiv}>
       <button onClick={checkAnswers}
       disabled={!timeVisible}
@@ -274,3 +279,5 @@ useEffect(() => {
     </div>
   );
 }
+
+export default StoryList;

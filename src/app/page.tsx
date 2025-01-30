@@ -1,7 +1,7 @@
 'use client'
 
 import styles from "./styles/page.module.css";
-import { useRef} from "react";
+import { useRef } from "react";
 import HeaderLinks from '../components/HomePage/Header/HeaderLinks';
 import ContactForm from '../components/HomePage/ContactForm';
 import TabNavItem from '../components/V2/TabNavItem';
