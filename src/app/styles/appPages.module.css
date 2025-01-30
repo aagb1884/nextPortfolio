@@ -265,10 +265,14 @@
     margin-bottom: 10%;
   }
 
-
+  .appButtonsComponent {
+    grid-template-columns: auto auto;
+  }
 }
 
 @media only screen and (max-width: 470px) {
+
+  
   .appLandingPage{
     overflow-y: auto;
     }

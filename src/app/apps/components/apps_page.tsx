@@ -63,7 +63,16 @@ const AppsPage = () => {
                     <div className={styles.buttonText}>Wesley Snopes</div>
                 </Link>
                 </div>
-
+                <div className={styles.light}>
+                <Link href="/apps/light">
+                
+                    <Image   src={light} 
+                            alt="Doctor Who/Light games link" 
+                          
+                            className={styles.buttonImage} />
+                    <div className={styles.buttonText}>Doctor Who Games</div>
+                </Link>
+                </div>
                 <div className={styles.derekAdams}>   
                 <Link href="https://scottish-football-simulators.co.uk/">
                 
@@ -83,16 +92,6 @@ const AppsPage = () => {
                             alt="poetRemixer tool link" 
                           
                             className={styles.buttonImage} />
-                </Link>
-                </div>
-                <div className={styles.light}>
-                <Link href="/apps/light">
-                
-                    <Image   src={light} 
-                            alt="Doctor Who/Light games link" 
-                          
-                            className={styles.buttonImage} />
-                    <div className={styles.buttonText}>Doctor Who Games</div>
                 </Link>
                 </div>
     
