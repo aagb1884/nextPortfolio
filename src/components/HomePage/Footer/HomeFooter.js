@@ -83,7 +83,7 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
                 <Link href="/apps/poetremixer">PoetRemixer Tool</Link>
             </li>
             <li>
-                <Link href="/apps/doctor-who-games">Doctor Who Game Page</Link>
+                <Link href="/apps/light">Doctor Who Game Page</Link>
             </li>
             <li>
                 <Link href="https://scottish-football-simulators.co.uk/">Scottish Football Simulators <ExternalLinkImage /></Link>

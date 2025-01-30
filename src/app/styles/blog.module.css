@@ -264,7 +264,6 @@ div.portableText p:first-of-type {
 @media only screen and (max-width: 1215px) {
     .blogBody {
         display: grid;
-        
     }
 }
 

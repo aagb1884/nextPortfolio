@@ -57,8 +57,12 @@
     background: rgba(50, 224, 196, 0.35);
   }
    
-  .activeTab {
-    background: #019bed;
+  .whoTabActive {
+    background: rgb(1, 155, 237, 0.6);
+  }
+
+  .main {
+    width: 100%;
   }
    
   .WhoTabContent {

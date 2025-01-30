@@ -27,7 +27,6 @@ const AiList: React.FC<FilterProps> = ({activeWhoTab}) => {
   const [AiList, setAiList] = useState<Story[]>([]);
   const [score, setScore] = useState<number>(0);
   const [timeVisible, setTimeVisible] = useState<boolean>(false);
-  const [scoreVisible, setScoreVisible] = useState<boolean>(false);
   const [duration, setDuration] = useState<number | string>(120);
   const [timeLeft, setTimeLeft] = useState<number>(120);
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -147,10 +146,7 @@ useEffect(() => {
     setCorrectStates(newCorrectStates);
     const score = Object.values(newCorrectStates).filter((isCorrect) => isCorrect).length;
     setScore(score);
-
-    setScoreVisible(true)
     setTimeout(() => {
-      setScoreVisible(false)
       setScore(0)
       setCorrectStates({});
     }, 1700);
@@ -287,9 +283,6 @@ useEffect(() => {
         </SortableContext>
         </DndContext>
       </ul>
-      {scoreVisible && (
-       <p>You have {score}/8 corrrect answer(s).</p>
-     )}
       <div className={styles.dndButtonDiv}>
       <button onClick={checkAnswers}
       disabled={!timeVisible}
