@@ -105,6 +105,11 @@
   background: linear-gradient(0deg, rgb(3, 81, 136, 1) 27%, rgb(1, 20, 48) 63%, rgba(0,0,0,1) 100%);
 }
 
+.headerContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 .lightHeader {
     display: flex;
     flex-direction: row;
@@ -127,7 +132,7 @@
 }
 
 .lightSubtitle {
-    width: 100%;
+    width: 80%;
     padding: 0 15px;
     font-size: medium;
     text-align: center;

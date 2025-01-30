@@ -5,7 +5,7 @@ import seven from "../../../../../public/images/seven.png";
 
 const LightHeader = () => {
     return ( 
-        <div>
+        <div className={styles.headerContainer}>
         <div className={styles.lightHeader}>
         <Image src={light} width={200} height={123} className={styles.Light}
         alt="Light, an glowing angel, reaching out their arm"/>

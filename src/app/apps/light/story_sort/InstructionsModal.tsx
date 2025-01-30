@@ -8,7 +8,8 @@ interface InstructionsModalProps {
 const InstructionsModal: React.FC<InstructionsModalProps> =  ({showInstructions, setShowInstructions}) => {
 
     return (
-        <div className={styles.modalWrapper}>
+        <div onClick={() => {setShowInstructions(!showInstructions)}} 
+        className={styles.modalWrapper}>
         <div
           className={styles.modal}
           onClick={e => e.stopPropagation()}

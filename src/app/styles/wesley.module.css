@@ -234,11 +234,13 @@ div.footer{
 }
 
 .modal {
-  position: absolute;
+  position: fixed;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   width: 80%;
+  max-width: 600px;
+  max-height: 80vh;
   min-height: 200px;
   background-color: rgba(255, 255, 255, 0.95);
   border: 3px solid #999;
@@ -249,6 +251,7 @@ div.footer{
   text-align: center;
   line-height: 2;
   z-index: 5;
+  overflow-y: auto;
 }
 
 .modalUl {
@@ -276,6 +279,11 @@ div.footer{
 }
 
 .modal {
+  max-height: 70vh;
+  top: 40%;
+}
+
+.modalText {
   font-size: smaller;
 }
 
