@@ -16,9 +16,11 @@ interface Song {
 }
 
 interface JsonData{
-  items: [
-    song: Song
-  ]
+  items: {
+    songs: [
+        song: Song
+    ]
+    }
 }
 
 const BarlowPage: React.FC<JsonData> = ({items}) => {
@@ -95,7 +97,7 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
       setIsCorrect(false)
       setIsIncorrect(false)
 
-  const userSong = items.find(song => song.title.toLowerCase() === userAnswer.toLowerCase())
+  const userSong = items.songs.find(song => song.title.toLowerCase() === userAnswer.toLowerCase())
 
     if (!userSong || currentSong && userSong && previousAnswers.includes(userSong) === true ||
       currentSong && currentSong.chart_position < userSong.chart_position) {
