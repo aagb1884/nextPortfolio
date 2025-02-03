@@ -7,6 +7,7 @@ import RestartBtn from './components/restart';
 import Countdown from './components/countdown';
 import StartModal from './components/startModal';
 import Score from './components/score';
+import styles from '@/app/styles/barlow.module.css';
 
 interface Song {
     title: string,
@@ -151,10 +152,12 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
         
     
   return (
-    <div className="bg-red-400 grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Setting the Gary Bar Low</h1>
+    <div className={styles.barlowPage}>
+      {!startModal && (
+        <h1 className={styles.barlowTitle}>Setting the Gary Bar Low</h1>
+      )}
       <div className='flex-row'>
-      <button className="bg-indigo-600 text-white rounded-md border m-2 p-2"
+      <button className={styles.barlowBtn}
       onClick={() => {openInstructions()}}
       disabled={!isActive}
       >What do I do here?</button>
@@ -198,14 +201,14 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
       
       <form onSubmit={checkAnswer}>
           <input
-            className="rounded-md border-2 border-indigo-600 p-2"
+            className={styles.barlowInput}
             name="userAnswer"
             value={userAnswer}
             onChange={handleChange}
             placeholder="Enter Song title..."
           />
           <button
-            className="rounded-md border border-indigo-600 m-2 p-2"
+            className={styles.barlowBtn}
             type="submit"
             disabled={userAnswer.length === 0}
           >

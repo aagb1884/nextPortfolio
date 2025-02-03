@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import { Hubot_Sans, Sigmar, Tangerine, Oxanium, 
-  Della_Respira, Press_Start_2P } from 'next/font/google';
+  Della_Respira, Press_Start_2P, Londrina_Sketch } from 'next/font/google';
 import { GlobalStateProvider } from './context/GlobalStateContext';
 import { GoogleAnalytics } from '@next/third-parties/google'
 import "./styles/globals.css";
@@ -41,6 +41,12 @@ const p2p = Press_Start_2P({
 const dellaRespira = Della_Respira({
   subsets: ['latin'],
   variable: '--font-della-respira',
+  weight: '400'
+})
+
+const londrina_sketch = Londrina_Sketch({
+  subsets: ['latin'],
+  variable: '--font-londrina-sketch',
   weight: '400'
 })
 
@@ -85,7 +91,7 @@ export default function RootLayout({
     <html lang='en' suppressHydrationWarning>
       <body className={`${hubotSans.variable} ${sigmar.variable} 
       ${geistSans.variable} ${geistMono.variable} ${tangerine.variable}
-      ${oxanium.variable} ${p2p.variable} ${dellaRespira.variable}`}>
+      ${oxanium.variable} ${p2p.variable} ${dellaRespira.variable} ${londrina_sketch.variable}`}>
         {children}
       </body>
       <GoogleAnalytics gaId="G-HGEZ1SBR1R" />
