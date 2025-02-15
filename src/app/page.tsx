@@ -1,5 +1,6 @@
 'use client'
 
+import Link from "next/link";
 import styles from "./styles/page.module.css";
 import { useRef } from "react";
 import HeaderLinks from '../components/HomePage/Header/HeaderLinks';
@@ -25,6 +26,7 @@ export default function Home() {
       showForm={showForm}
       setShowForm={setShowForm} 
       />
+    
       <div className={styles.form} ref={contact}>
             {showForm && <ContactForm setShowForm={setShowForm} />}
       </div>
