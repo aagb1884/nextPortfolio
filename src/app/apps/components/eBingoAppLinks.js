@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from '../../styles/appPages.module.css';
 import Image from "next/image";
 import appStore from '../../../../public/images/App_Store_(iOS)_2017.png';
-import googleplay from '../../../../public/images/google_play.png';
+import googleplay from '../../../../public/images/google_play.png'
 
 const EuroBingoAppLinks = () => {
     return ( 
