@@ -1,6 +1,5 @@
 'use client'
 
-import Link from "next/link";
 import styles from "./styles/page.module.css";
 import { useRef } from "react";
 import HeaderLinks from '../components/HomePage/Header/HeaderLinks';
