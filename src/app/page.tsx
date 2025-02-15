@@ -26,11 +26,7 @@ export default function Home() {
       showForm={showForm}
       setShowForm={setShowForm} 
       />
-      <div className={styles.webring}>
-      <Link href="https://join-the-cool.club/members/andrew?prev" >⬅️</Link>
-      <Link href="https://join-the-cool.club/members/andrew" >🧊</Link>
-      <Link href="https://join-the-cool.club/members/andrew?next" >➡️</Link>
-      </div>
+    
       <div className={styles.form} ref={contact}>
             {showForm && <ContactForm setShowForm={setShowForm} />}
       </div>

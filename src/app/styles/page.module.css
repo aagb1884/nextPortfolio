@@ -45,8 +45,18 @@
 
 .webring {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.webringLinks {
+  display: flex;
+  flex-direction: row;
+}
+
+.webringText {
+  font-size: x-small;
 }
 
 /* tabs */
