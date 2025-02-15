@@ -43,6 +43,12 @@
   margin: 1%;
 }
 
+.webring {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 /* tabs */
 
 
