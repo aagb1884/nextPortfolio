@@ -53,10 +53,10 @@
 .barlowModalTitle {
     font-family: var(--font-londrina-sketch);
     font-size: 6vb;
-    color: black;
+    color: rgb(6, 192, 6);
     text-shadow: 0 .15ch 7px rgba(255, 0, 0, 0.7),  0 -2px 6px  rgb(128, 0, 128, 0.8);
     -webkit-text-stroke-width: 0.2px;
-    -webkit-text-stroke-color: rgb(1, 60, 1);
+    -webkit-text-stroke-color: rgb(211, 245, 211);
     line-height: 1;
 }
 
@@ -100,46 +100,92 @@
 
 /* flicker */
 
-
 @keyframes flickerAnimation {
-    0%   { opacity:1; }
-    50%  { opacity:0; }
-    100% { opacity:1; }
+    0% {opacity: 1; left: 0%}
+	40% {opacity: 0.3; }
+	60% {opacity: 1; left: 40%}
+	70% {opacity: 0.3}
+	80% {opacity: 1}
+	90% {opacity: 0.5}
+	100% {opacity: 1; left: 80%}
   }
   @-o-keyframes flickerAnimation{
-    0%   { opacity:1; }
-    50%  { opacity:0.5; }
-    100% { opacity:0.7; }
+    0% {opacity: 1; left: 0%}
+	40% {opacity: 0.3; }
+	60% {opacity: 1; left: 40%}
+	70% {opacity: 0.3}
+	80% {opacity: 1}
+	90% {opacity: 0.5}
+	100% {opacity: 1; left: 80%}
   }
   @-moz-keyframes flickerAnimation{
-    0%   { opacity:1; }
-    50%  { opacity:0.2; }
-    100% { opacity:0.5; }
+    0% {opacity: 1; left: 0%}
+	40% {opacity: 0.3; }
+	60% {opacity: 1; left: 40%}
+	70% {opacity: 0.3}
+	80% {opacity: 1}
+	90% {opacity: 0.5}
+	100% {opacity: 1; left: 80%}
   }
   @-webkit-keyframes flickerAnimation{
-    0%   { opacity:1; }
-    50%  { opacity:0; }
-    100% { opacity:1; }
-  }
-  .animateFlicker {
+    0% {opacity: 1; left: 0%}
+	40% {opacity: 0.3; }
+	60% {opacity: 1; left: 40%}
+	70% {opacity: 0.3}
+	80% {opacity: 1}
+	90% {opacity: 0.5}
+	100% {opacity: 1; left: 80%}
+}
+  
+  .animateFlicker,
+  .animateFlicker2,
+  .animateFlicker3,
+  .animateFlicker4,
+  .animateFlicker5 {
+    z-index: 2;
     position: absolute;
-    left: 0;
     bottom: 0;
-     -webkit-animation: flickerAnimation 5s infinite;
-     -moz-animation: flickerAnimation 5s infinite;
-     -o-animation: flickerAnimation 5s infinite;
-      animation: flickerAnimation 5s infinite;
+     -webkit-animation: flickerAnimation 20s linear reverse infinite;
+     -moz-animation: flickerAnimation 20s linear reverse infinite;
+     -o-animation: flickerAnimation 20s linear reverse infinite;
+     animation: flickerAnimation 20s linear reverse infinite;
+  }
+
+  .animateFlicker {
+    left: 0;
+  }
+  .animateFlicker2 {
+    left: 20%;
+  }
+  .animateFlicker3 {
+    left: 40%;
+  }
+  .animateFlicker4 {
+    left: 60%;
+  }
+  .animateFlicker5 {
+    left: 80%;
   }
 
 /* responsive */
 
 @media only screen and (max-width: 450px) {
     .barlowTitle {
-        font-size: 7vb;
+        margin: 20px;
+        font-size: 6vb;
     }
 
     .form {
         display: flex;
         flex-direction: column;
+    }
+
+    .animateFlicker, 
+    .animateFlicker2,
+    .animateFlicker3,
+    .animateFlicker4,
+    .animateFlicker5    {
+        width: 50px;
+        height: 70px;
     }
 }

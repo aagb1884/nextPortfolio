@@ -1,16 +1,15 @@
 interface restartProps {
     reset: () => void;
-    isActive: boolean
   }
 
   import styles from '@/app/styles/barlow.module.css';
   
-  const RestartBtn: React.FC<restartProps> = ({reset, isActive}) => {
+  const RestartBtn: React.FC<restartProps> = ({reset}) => {
     return (
     <button 
     className={styles.barlowBtn}
-      onClick={reset}
-      disabled={!isActive}>
+    onClick={reset}
+    >
         Restart
       </button>
     )

@@ -64,6 +64,7 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
     } else if (isActive && timeLeft === 0) {
       setModalOpen(false);
       setLost(!lost)
+      setIsActive(false)
     }
     }, [isActive, timeLeft]);
    
@@ -71,6 +72,7 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
     if (livesLeft === 0){
     setLost(true)
     setTimeLeft(0)
+    setIsActive(false)
     } else if (livesLeft < 0){
       reset()
     }
@@ -123,6 +125,7 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
     setModalOpen(false);
     setLost(false);
     setScore(0);
+    setDuration(60)
     setTimeLeft(60);
     setLost(false);
     setStartModal(false);
@@ -172,7 +175,6 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
       disabled={!isActive}
       >What do I do here?</button>
       <RestartBtn
-      isActive={isActive}
       reset={reset}
       />
       </div>
@@ -219,7 +221,8 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
         )}
       </main>
       {isActive && (
-      <BarlowFlicker />
+      <BarlowFlicker 
+      score={score}/>
       )}
      
     </div>

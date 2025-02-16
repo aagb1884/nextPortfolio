@@ -56,6 +56,9 @@ const CreditsPage = () => {
                 <li>
                 <Link target="_blank" href="https://stocksnap.io/photo/heidelberg-germany-WXMQNKRE6Y">Heidelberg <ExternalLinkImage />. </Link> <Link target="_blank" href="https://stocksnap.io/author/29367">Roman Kraft <ExternalLinkImage /></Link>
                 </li>
+                <li>
+                <Link target="_blank" href="https://commons.wikimedia.org/wiki/File:Progress_Live_2011_Tour,_Sunderland_Stadium_of_Light_Gary_Barlow_(5783550505).jpg">Progress Live 2011 Tour, Sunderland Stadium of Light Gary Barlow <ExternalLinkImage />. </Link> <Link target="_blank" href="https://www.flickr.com/people/22017657@N05">vagueonthehow <ExternalLinkImage /></Link>
+                </li>
          
             </ul>
             <ul className={styles.cssUl}>
