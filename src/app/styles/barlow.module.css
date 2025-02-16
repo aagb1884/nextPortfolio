@@ -156,15 +156,19 @@
   }
   .animateFlicker2 {
     left: 20%;
+    filter: hue-rotate(90deg);
   }
   .animateFlicker3 {
     left: 40%;
+    filter: hue-rotate(180deg);
   }
   .animateFlicker4 {
     left: 60%;
+    filter: hue-rotate(275deg);
   }
   .animateFlicker5 {
     left: 80%;
+    filter: hue-rotate(360deg);
   }
 
 /* responsive */

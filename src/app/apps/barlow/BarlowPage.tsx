@@ -163,7 +163,6 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
         <LoseModal
         setLost={setLost}
         reset={reset}
-        isActive={isActive}
         score={score}
         />
       )}

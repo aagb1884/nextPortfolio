@@ -6,11 +6,10 @@ import styles from '@/app/styles/barlow.module.css';
 interface loseProps {
     setLost: (filterTerm: boolean) => void;
     reset: () => void;
-    isActive: boolean;
     score: number;
   }
   
-  const LoseModal: React.FC<loseProps> = ({setLost, reset, isActive, score}) => {
+  const LoseModal: React.FC<loseProps> = ({setLost, reset, score}) => {
 
     return (
         <div className={styles.startModalWrapper}>
@@ -26,7 +25,6 @@ interface loseProps {
         Close</button>
         <RestartBtn
         reset={reset}
-        isActive={isActive}
         />
         </div>
         </div>
