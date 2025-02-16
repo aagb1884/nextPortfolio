@@ -7,6 +7,7 @@ import RestartBtn from './components/restart';
 import Countdown from './components/countdown';
 import StartModal from './components/startModal';
 import Score from './components/score';
+import BarlowFlicker from './components/flickerImg';
 import styles from '@/app/styles/barlow.module.css';
 
 interface Song {
@@ -217,7 +218,10 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
           </div>          
         )}
       </main>
-      
+      {isActive && (
+      <BarlowFlicker />
+      )}
+     
     </div>
   );
 }

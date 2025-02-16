@@ -98,6 +98,39 @@
     font-family: var(--font-londrina-solid);
   }
 
+/* flicker */
+
+
+@keyframes flickerAnimation {
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  @-o-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0.5; }
+    100% { opacity:0.7; }
+  }
+  @-moz-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0.2; }
+    100% { opacity:0.5; }
+  }
+  @-webkit-keyframes flickerAnimation{
+    0%   { opacity:1; }
+    50%  { opacity:0; }
+    100% { opacity:1; }
+  }
+  .animateFlicker {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+     -webkit-animation: flickerAnimation 5s infinite;
+     -moz-animation: flickerAnimation 5s infinite;
+     -o-animation: flickerAnimation 5s infinite;
+      animation: flickerAnimation 5s infinite;
+  }
+
 /* responsive */
 
 @media only screen and (max-width: 450px) {
