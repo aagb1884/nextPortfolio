@@ -16,17 +16,21 @@
     -webkit-text-stroke-color: green;}
 .barlowTitle{
     font-size: 10vb;
+    text-align: center;
 }
 .barlowSubtitle{
     font-size: 5vb;
-}
-.barlowModalTitle {
-    font-family: var(--font-londrina-sketch);
-    font-size: 6vb;
-    color: black;
-    text-shadow: 0 .15ch 7px rgba(255, 0, 0, 0.7),  0 -2px 6px  rgb(128, 0, 128, 0.8);
-    -webkit-text-stroke-width: 0.2px;
-    -webkit-text-stroke-color: rgb(1, 60, 1);
+    text-align: center;
+}   
+
+.gameUI {
+    position: relative;
+    display: grid;
+    place-content: center;
+    align-items: center;
+    justify-items: center;
+    margin: 1% 0;
+    top: 20%;
 }
 
 .barlowBtn {
@@ -44,10 +48,17 @@
     color: white;
 }
 
-
-/* className="rounded-md border-2 border-indigo-600 p-2" */
-
 /* modal */
+
+.barlowModalTitle {
+    font-family: var(--font-londrina-sketch);
+    font-size: 6vb;
+    color: black;
+    text-shadow: 0 .15ch 7px rgba(255, 0, 0, 0.7),  0 -2px 6px  rgb(128, 0, 128, 0.8);
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: rgb(1, 60, 1);
+    line-height: 1;
+}
 
 .startModalWrapper {
     position: fixed;
@@ -55,6 +66,7 @@
     top: 0;
     width: 100%;
     height: 100vh;
+    z-index: 5;
   }
   
   .startModal {
@@ -79,5 +91,22 @@
     background-color: maroon;
   }
 
+  .sModalTxt, .score {
+    color: white;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: green;
+    font-family: var(--font-londrina-solid);
+  }
 
-/* "rounded-md bg-red-950 p-2 text-white justify-center fixed z-10 h-100 overflow-y-auto"> */
+/* responsive */
+
+@media only screen and (max-width: 450px) {
+    .barlowTitle {
+        font-size: 7vb;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+}

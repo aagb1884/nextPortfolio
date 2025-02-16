@@ -52,14 +52,6 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
     handleSetDuration();
   }, [duration])
   
-  const setTimer = (time: number) => {
-    setDuration(time);
-    handleSetDuration();
-    if (isActive) {
-      reset();
-    }
-  }
-  
   useEffect(() => {
     if (isActive && timeLeft > 0) {
       setTimeVisible(true);
@@ -73,12 +65,6 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
       setLost(!lost)
     }
     }, [isActive, timeLeft]);
-
-    const lose = () => {
-      setLost(true)
-      setTimeLeft(0)
-      setTimeVisible(false)
-    }
    
   useEffect(() => {
     if (livesLeft === 0){
@@ -157,16 +143,6 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
            <h2 className={styles.barlowSubtitle}>Demo Version</h2>
         </>
       )}
-      <div className='flex-row'>
-      <button className={styles.barlowBtn}
-      onClick={() => {openInstructions()}}
-      disabled={!isActive}
-      >What do I do here?</button>
-      <RestartBtn
-      isActive={isActive}
-      reset={reset}
-      />
-      </div>
       {/* modals */}
       {startModal && (
         <StartModal
@@ -188,8 +164,17 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
         />
       )}
       
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-      
+      <main className={styles.gameUI}>
+      <div className={styles.btns}>
+      <button className={styles.barlowBtn}
+      onClick={() => {openInstructions()}}
+      disabled={!isActive}
+      >What do I do here?</button>
+      <RestartBtn
+      isActive={isActive}
+      reset={reset}
+      />
+      </div>
       {timeVisible && (
         <div className='flex-row'>
        <Countdown 
@@ -201,7 +186,9 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
       </div>
       )}
       
-      <form onSubmit={checkAnswer}>
+      <form 
+      className={styles.form}
+      onSubmit={checkAnswer}>
           <input
             className={styles.barlowInput}
             name="userAnswer"

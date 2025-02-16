@@ -1,7 +1,6 @@
 import RestartBtn from "./restart";
 import Image from "next/image";
 import barlowGif from "@/app/images/take-that-gary-barlow.gif";
-
 import styles from '@/app/styles/barlow.module.css';
 
 interface loseProps {
@@ -21,7 +20,7 @@ interface loseProps {
         <Image src={barlowGif} className="flex justify-center"
         alt="Gary Barlow singing live, looking deeply uncomfortable"/>
         </div>
-        <p>You scored {score}</p>
+        <p className={styles.score}>You scored {score}</p>
         <button className={styles.barlowBtn}
         onClick={() => setLost(false)}>
         Close</button>
