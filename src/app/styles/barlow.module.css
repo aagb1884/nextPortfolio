@@ -8,13 +8,18 @@
     color: black;
 }
 
-.barlowTitle{
+.barlowTitle, .barlowSubtitle{
     font-family: var(--font-londrina-sketch);
-    font-size: 10vb;
+
     text-shadow: 0 .15ch 7px rgb(255, 0, 0, 0.7),  0 -2px 6px  rgb(128, 0, 128, 0.8);
     -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: green;}
-
+.barlowTitle{
+    font-size: 10vb;
+}
+.barlowSubtitle{
+    font-size: 5vb;
+}
 .barlowModalTitle {
     font-family: var(--font-londrina-sketch);
     font-size: 6vb;

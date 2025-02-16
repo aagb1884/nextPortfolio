@@ -115,16 +115,14 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
       userSong.chart_position >= currentSong.chart_position) {
       setIsCorrect(true)
       setPreviousAnswers([...previousAnswers, userSong])
-      setScore(score + timeLeft)
-      setTimeLeft(60)
+      setScore(score + 1)
       setCurrentSong(userSong);
     }
 
     else {
       setIsCorrect(true)
       setPreviousAnswers([...previousAnswers, userSong])
-      setScore(score + timeLeft)
-      setTimeLeft(60)
+      setScore(score + 1)
     }
   }
 
@@ -154,7 +152,10 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
   return (
     <div className={styles.barlowPage}>
       {!startModal && (
-        <h1 className={styles.barlowTitle}>Setting the Gary Bar Low</h1>
+        <>
+           <h1 className={styles.barlowTitle}>Setting the Gary Bar Low</h1>
+           <h2 className={styles.barlowSubtitle}>Demo Version</h2>
+        </>
       )}
       <div className='flex-row'>
       <button className={styles.barlowBtn}
@@ -183,6 +184,7 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
         setLost={setLost}
         reset={reset}
         isActive={isActive}
+        score={score}
         />
       )}
       
