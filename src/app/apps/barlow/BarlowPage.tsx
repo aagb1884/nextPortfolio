@@ -9,6 +9,8 @@ import StartModal from './components/startModal';
 import Score from './components/score';
 import BarlowFlicker from './components/flickerImg';
 import styles from '@/app/styles/barlow.module.css';
+import AppsFooter from '../components/AppsFooter';
+import DemoModal from './components/demo';
 
 interface Song {
     title: string,
@@ -34,12 +36,35 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
   const [isIncorrect, setIsIncorrect] = useState(false);
   const [livesLeft, setLivesLeft] = useState(3);
   const [modalOpen, setModalOpen] = useState(false);
+  const [demoModal, setDemoModal] = useState(false);
   const [lost, setLost] = useState(false);
   const [score, setScore] = useState<number>(0);
   const [timeVisible, setTimeVisible] = useState<boolean>(false);
   const [duration, setDuration] = useState<number | string>(60);
   const [timeLeft, setTimeLeft] = useState<number>(50);
   const [isActive, setIsActive] = useState<boolean>(false);
+  const [audio] = useState(typeof window !== 'undefined' ? new Audio('/audio/vivaldi-147363.mp3') : null);
+
+  //audio
+
+  useEffect(()=> {
+    if (audio && isActive) {
+      audio.play()
+    }
+    else if (audio && !isActive ) {
+      audio.pause()
+      audio.currentTime = 0;
+    }
+
+    return () => {
+      if (audio) {
+        audio.pause();
+        audio.currentTime = 0;
+      }
+    };
+  }, [isActive, audio])
+
+  
 
     //timer
     const handleSetDuration = (): void => {
@@ -63,6 +88,7 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
       return () => clearInterval(timerId);
     } else if (isActive && timeLeft === 0) {
       setModalOpen(false);
+      setDemoModal(false);
       setLost(!lost)
       setIsActive(false)
     }
@@ -129,6 +155,7 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
     setTimeLeft(60);
     setLost(false);
     setStartModal(false);
+    setDemoModal(false);
     setIsActive(true);
   }
 
@@ -141,13 +168,21 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
     
   return (
     <div className={styles.barlowPage}>
+      <AppsFooter />
       {!startModal && (
         <>
            <h1 className={styles.barlowTitle}>Setting the Gary Bar Low</h1>
            <h2 className={styles.barlowSubtitle}>Demo Version</h2>
+           <button className={styles.barlowBtn}
+          onClick={() => {setDemoModal(true)}}
+          >What&apos;s in the full version?</button>
         </>
       )}
       {/* modals */}
+      {demoModal && (
+        <DemoModal 
+        setDemoModal={setDemoModal}/>
+      )}
       {startModal && (
         <StartModal
         setStartModal={setStartModal}

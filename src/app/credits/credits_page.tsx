@@ -73,6 +73,12 @@ const CreditsPage = () => {
                 <Link target="_blank" href="https://codepen.io/Linklvarotrigo/pen/PoKMyNO">text-color-animation <ExternalLinkImage /> </Link> by <Link target="_blank" href="https://codepen.io/Linklvarotrigo">Alvaro <ExternalLinkImage /> </Link>
                 </li>
             </ul>
+            <ul className={styles.cssUl}>
+            <h4>Music</h4>
+                <li>
+                <Link target="_blank" href="https://pixabay.com/users/lorenzobuczek-16982400/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=147363">Vivaldi's 'Four Seasons'</Link> from <Link href="https://pixabay.com/users/lorenzobuczek-16982400/">Lorenzo Buczek on Pixabay <ExternalLinkImage /> </Link>
+                </li>
+            </ul>
             <HomeFooter
         goToContactForm={goToContactForm}
         goToTab={goToTab}
@@ -84,3 +90,4 @@ const CreditsPage = () => {
 }
  
 export default CreditsPage;
+

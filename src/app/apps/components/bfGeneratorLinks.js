@@ -13,12 +13,12 @@ const BFGeneratorAppLinks = () => {
                 className={styles.iosAppStoreLogo}
                 width={40} height={40}
         /></Link>
-        {/* <Link href="https://play.google.com/store/apps/details?id=com.aagb1884.eurovision_bingo">
+        <Link href="https://play.google.com/store/apps/details?id=com.aagb1884.BigFinishGeneratorApp">
         <img    src="/images/Google_Play.png"
                 alt="google play logo"
                 className={styles.googlePlayLogo}
         />
-        </Link> */}
+        </Link>
         </div>
         </div>
      );
