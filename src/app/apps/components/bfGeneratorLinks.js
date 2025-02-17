@@ -7,7 +7,7 @@ import googleplay from '@/images/google_play.png';
 const BFGeneratorAppLinks = () => {
     return ( 
         <div className={styles.appStoreDiv}>
-                <p>The Big Finish Boxset Generator is available as a mobile/tablet app on the iOS App Store.</p>
+                <p>The Big Finish Boxset Generator is available as a mobile/tablet app on Google Play and the iOS App Store.</p>
                 <div className={styles.appStoreLinks}>
         <Link href="https://apps.apple.com/gb/app/big-finish-boxset-generator/id6497484877">
         <Image  src={appStore}
