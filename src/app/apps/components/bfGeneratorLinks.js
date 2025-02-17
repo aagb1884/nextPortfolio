@@ -20,6 +20,7 @@ const BFGeneratorAppLinks = () => {
         <Image    src={googleplay}
                 alt="google play logo"
                 className={styles.googlePlayLogo}
+                width={40} height={40}
         />
         </Link>
         </div>
