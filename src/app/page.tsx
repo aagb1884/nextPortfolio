@@ -25,6 +25,7 @@ export default function Home() {
       showForm={showForm}
       setShowForm={setShowForm} 
       />
+    
       <div className={styles.form} ref={contact}>
             {showForm && <ContactForm setShowForm={setShowForm} />}
       </div>
