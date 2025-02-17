@@ -56,6 +56,9 @@ const CreditsPage = () => {
                 <li>
                 <Link target="_blank" href="https://stocksnap.io/photo/heidelberg-germany-WXMQNKRE6Y">Heidelberg <ExternalLinkImage />. </Link> <Link target="_blank" href="https://stocksnap.io/author/29367">Roman Kraft <ExternalLinkImage /></Link>
                 </li>
+                <li>
+                <Link target="_blank" href="https://commons.wikimedia.org/wiki/File:Progress_Live_2011_Tour,_Sunderland_Stadium_of_Light_Gary_Barlow_(5783550505).jpg">Progress Live 2011 Tour, Sunderland Stadium of Light Gary Barlow <ExternalLinkImage />. </Link> <Link target="_blank" href="https://www.flickr.com/people/22017657@N05">vagueonthehow <ExternalLinkImage /></Link>
+                </li>
          
             </ul>
             <ul className={styles.cssUl}>
@@ -70,6 +73,12 @@ const CreditsPage = () => {
                 <Link target="_blank" href="https://codepen.io/Linklvarotrigo/pen/PoKMyNO">text-color-animation <ExternalLinkImage /> </Link> by <Link target="_blank" href="https://codepen.io/Linklvarotrigo">Alvaro <ExternalLinkImage /> </Link>
                 </li>
             </ul>
+            <ul className={styles.cssUl}>
+            <h4>Music</h4>
+                <li>
+                <Link target="_blank" href="https://pixabay.com/users/lorenzobuczek-16982400/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=147363">Vivaldi's 'Four Seasons'</Link> from <Link href="https://pixabay.com/users/lorenzobuczek-16982400/">Lorenzo Buczek on Pixabay <ExternalLinkImage /> </Link>
+                </li>
+            </ul>
             <HomeFooter
         goToContactForm={goToContactForm}
         goToTab={goToTab}
@@ -81,3 +90,4 @@ const CreditsPage = () => {
 }
  
 export default CreditsPage;
+

@@ -2,7 +2,7 @@ import Link from "next/link";
 import styles from '../../styles/appPages.module.css';
 import Image from "next/image";
 import appStore from '../../../../public/images/App_Store_(iOS)_2017.png';
-// import googleplay from '@/images/google_play.png';
+import googleplay from '@/images/google_play.png';
 
 const BFGeneratorAppLinks = () => {
     return ( 
@@ -15,12 +15,13 @@ const BFGeneratorAppLinks = () => {
                 className={styles.iosAppStoreLogo}
                 width={40} height={40}
         /></Link>
-        {/* <Link href="https://play.google.com/store/apps/details?id=com.aagb1884.eurovision_bingo">
+
+        <Link href="https://play.google.com/store/apps/details?id=com.aagb1884.BigFinishGeneratorApp">
         <img    src={googleplay}
                 alt="google play logo"
                 className={styles.googlePlayLogo}
         />
-        </Link> */}
+        </Link>
         </div>
         </div>
      );

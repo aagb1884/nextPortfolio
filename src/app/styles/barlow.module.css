@@ -1,0 +1,195 @@
+.barlowPage {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background-color: rgb(255, 173, 173);
+    color: black;
+}
+
+.barlowTitle, .barlowSubtitle{
+    font-family: var(--font-londrina-sketch);
+
+    text-shadow: 0 .15ch 7px rgb(255, 0, 0, 0.7),  0 -2px 6px  rgb(128, 0, 128, 0.8);
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: green;}
+.barlowTitle{
+    font-size: 10vb;
+    text-align: center;
+}
+.barlowSubtitle{
+    font-size: 5vb;
+    text-align: center;
+}   
+
+.gameUI {
+    position: relative;
+    display: grid;
+    place-content: center;
+    align-items: center;
+    justify-items: center;
+    margin: 1% 0;
+    top: 20%;
+}
+
+.barlowBtn {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+}
+
+.barlowInput {
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* modal */
+
+.barlowModalTitle {
+    font-family: var(--font-londrina-sketch);
+    font-size: 6vb;
+    color: rgb(6, 192, 6);
+    text-shadow: 0 .15ch 7px rgba(255, 0, 0, 0.7),  0 -2px 6px  rgb(128, 0, 128, 0.8);
+    -webkit-text-stroke-width: 0.2px;
+    -webkit-text-stroke-color: rgb(211, 245, 211);
+    line-height: 1;
+}
+
+.startModalWrapper {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 5;
+  }
+  
+  .startModal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    min-height: 200px;
+    background-color: rgba(255, 255, 255, 0.95);
+    border: 3px solid #999;
+    border-radius: 3px;
+    margin: 20px auto;
+    padding: 20px;
+    color: black;
+    text-align: center;
+    line-height: 2;
+    z-index: 5;
+    overflow-y: auto;
+    background-color: maroon;
+  }
+
+  .sModalTxt, .score {
+    color: white;
+    -webkit-text-stroke-width: 0.1px;
+    -webkit-text-stroke-color: green;
+    font-family: var(--font-londrina-solid);
+  }
+
+/* flicker */
+
+@keyframes flickerAnimation {
+    0% {opacity: 1; left: 0%}
+	40% {opacity: 0.3; }
+	60% {opacity: 1; left: 40%}
+	70% {opacity: 0.3}
+	80% {opacity: 1}
+	90% {opacity: 0.5}
+	100% {opacity: 1; left: 80%}
+  }
+  @-o-keyframes flickerAnimation{
+    0% {opacity: 1; left: 0%}
+	40% {opacity: 0.3; }
+	60% {opacity: 1; left: 40%}
+	70% {opacity: 0.3}
+	80% {opacity: 1}
+	90% {opacity: 0.5}
+	100% {opacity: 1; left: 80%}
+  }
+  @-moz-keyframes flickerAnimation{
+    0% {opacity: 1; left: 0%}
+	40% {opacity: 0.3; }
+	60% {opacity: 1; left: 40%}
+	70% {opacity: 0.3}
+	80% {opacity: 1}
+	90% {opacity: 0.5}
+	100% {opacity: 1; left: 80%}
+  }
+  @-webkit-keyframes flickerAnimation{
+    0% {opacity: 1; left: 0%}
+	40% {opacity: 0.3; }
+	60% {opacity: 1; left: 40%}
+	70% {opacity: 0.3}
+	80% {opacity: 1}
+	90% {opacity: 0.5}
+	100% {opacity: 1; left: 80%}
+}
+  
+  .animateFlicker,
+  .animateFlicker2,
+  .animateFlicker3,
+  .animateFlicker4,
+  .animateFlicker5 {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+     -webkit-animation: flickerAnimation 20s linear reverse infinite;
+     -moz-animation: flickerAnimation 20s linear reverse infinite;
+     -o-animation: flickerAnimation 20s linear reverse infinite;
+     animation: flickerAnimation 20s linear reverse infinite;
+  }
+
+  .animateFlicker {
+    left: 0;
+  }
+  .animateFlicker2 {
+    left: 20%;
+    filter: hue-rotate(90deg);
+  }
+  .animateFlicker3 {
+    left: 40%;
+    filter: hue-rotate(180deg);
+  }
+  .animateFlicker4 {
+    left: 60%;
+    filter: hue-rotate(275deg);
+  }
+  .animateFlicker5 {
+    left: 80%;
+    filter: hue-rotate(360deg);
+  }
+
+/* responsive */
+
+@media only screen and (max-width: 450px) {
+    .barlowTitle {
+        margin: 20px;
+        font-size: 6vb;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .animateFlicker, 
+    .animateFlicker2,
+    .animateFlicker3,
+    .animateFlicker4,
+    .animateFlicker5    {
+        width: 50px;
+        height: 70px;
+    }
+}
