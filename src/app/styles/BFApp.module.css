@@ -268,11 +268,17 @@
   padding: 5px;
   width: 48.5%;
 }
-.footerIosAppStoreLogo {
+.footerAppStoreLogo {
   width: 30px;
   height: auto;
   margin: 0;
   display: block;
+}
+.appIcons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 2px;
 }
 
 .line{

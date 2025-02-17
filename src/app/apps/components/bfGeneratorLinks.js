@@ -17,7 +17,7 @@ const BFGeneratorAppLinks = () => {
         /></Link>
 
         <Link href="https://play.google.com/store/apps/details?id=com.aagb1884.BigFinishGeneratorApp">
-        <img    src={googleplay}
+        <Image    src={googleplay}
                 alt="google play logo"
                 className={styles.googlePlayLogo}
         />

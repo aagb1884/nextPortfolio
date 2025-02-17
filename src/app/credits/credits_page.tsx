@@ -76,7 +76,7 @@ const CreditsPage = () => {
             <ul className={styles.cssUl}>
             <h4>Music</h4>
                 <li>
-                <Link target="_blank" href="https://pixabay.com/users/lorenzobuczek-16982400/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=147363">Vivaldi's 'Four Seasons'</Link> from <Link href="https://pixabay.com/users/lorenzobuczek-16982400/">Lorenzo Buczek on Pixabay <ExternalLinkImage /> </Link>
+                <Link target="_blank" href="https://pixabay.com/users/lorenzobuczek-16982400/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=147363">Vivaldi&apos;s Four Seasons</Link> from <Link href="https://pixabay.com/users/lorenzobuczek-16982400/">Lorenzo Buczek on Pixabay <ExternalLinkImage /> </Link>
                 </li>
             </ul>
             <HomeFooter
