@@ -55,13 +55,20 @@ transform-origin: top;
 }
 
 .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: relative;
     margin-top: 10%;
+    width: 100%;
 }
 
 .rngInput, .rngBtn {
     padding: 5px;
     margin: 2px;
+    width: 75%;
+    max-width: 300px;
+    text-align: center;
 }
 
 .rngBtn {

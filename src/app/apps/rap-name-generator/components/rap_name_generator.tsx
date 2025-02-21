@@ -25,6 +25,8 @@ const RapNameGenerator = () => {
         }, 30500)
     }
 
+    const btnText = rapName.length > 0 ? `You don't need another one.` : `What's my rap name?`
+
     return ( 
         <section className={styles.rng}>
         <header className={styles.rngHeader}>
@@ -43,14 +45,15 @@ const RapNameGenerator = () => {
             name="userName"
             value={userName}
             onChange={handleChange}
-            placeholder="Type your name..."
+            disabled={rapName.length > 0}
+            placeholder={rapName.length > 0 ? "You've got a rap name now." : "Type your name..."}
           />
           <button
             className={styles.rngBtn}
             type="submit"
             disabled={userName.length === 0}
-          >
-            What's my rap name?
+          > 
+            {btnText}
           </button>
         </form>
         {showModal && (
