@@ -79,6 +79,45 @@ const CreditsPage = () => {
                 <Link target="_blank" href="https://pixabay.com/users/lorenzobuczek-16982400/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=147363">Vivaldi&apos;s Four Seasons</Link> from <Link href="https://pixabay.com/users/lorenzobuczek-16982400/">Lorenzo Buczek on Pixabay <ExternalLinkImage /> </Link>
                 </li>
             </ul>
+            <ul className={styles.cssUl}>
+            <h4>Video</h4>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/video/a-man-is-standing-in-front-of-a-building-4782045/">A Man is Standing in front of a building</Link>. Video by cottonbro studio.<ExternalLinkImage />
+                </li>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/video/a-man-riding-a-bike-in-the-corridor-7969625/">Man riding bike in the corridor</Link>. Video by cottonbro studio.<ExternalLinkImage />
+                </li>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/video/a-woman-in-black-is-doing-a-skateboard-trick-4594927/">Woman doing a skateboard trick</Link>. Video by cottonbro studio.<ExternalLinkImage />
+                </li>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/video/man-rapping-7972147/">Man rapping</Link>. Video by cottonbro studio.<ExternalLinkImage />
+                </li>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/video/a-hip-hop-dancer-2675513/">A hip hop dancer</Link>. Video by Mixkit - Free Video Assets.<ExternalLinkImage /> 
+                </li>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/video/neon-club-disco-led-18557111/">Neon lighting</Link>. Video by Pachon in Motion.<ExternalLinkImage /> 
+                </li>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/video/white-noise-and-random-patterns-flashing-8482774/">A hip hop dancer</Link>. Video by Davis Vidal.<ExternalLinkImage /> 
+                </li>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/video/a-computer-hard-drive-part-spinning-in-operation-3289546/">A computer hard drive spinning</Link>. Video by Paice Street.<ExternalLinkImage /> 
+                </li>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/video/close-up-of-gears-on-a-machine-in-a-factory-10040029/">Gears on a machine</Link>. Video by Los Muertos Crew.<ExternalLinkImage /> 
+                </li>
+                <li>
+                <Link target="_blank" href="https://www.pexels.com/video/a-person-operating-audio-mixer-7586157/">Audio mixing</Link>. Video by Los Muertos Crew.<ExternalLinkImage /> 
+                </li>
+                <li>
+                <Link target="_blank" href="https://pixabay.com/videos/sound-recording-microphone-121114/">Sound recording</Link> from <Link href="https://pixabay.com/users/blackmarketmusic-2976878/"> Black Market Music on Pixabay <ExternalLinkImage /> </Link>
+                </li>
+                <li>
+                <Link target="_blank" href="https://pixabay.com/videos/dj-scratch-scratching-hang-up-7382/">DJ Scratching</Link> from <Link href="https://pixabay.com/users/mrganso-607585/"> Mr Ganso on Pixabay <ExternalLinkImage /> </Link>
+                </li>
+            </ul>
             <HomeFooter
         goToContactForm={goToContactForm}
         goToTab={goToTab}

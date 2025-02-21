@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import { Hubot_Sans, Sigmar, Tangerine, Oxanium, 
+import { Hubot_Sans, Sigmar, Tangerine, Oxanium, Notable,
   Della_Respira, Press_Start_2P, Londrina_Sketch, Londrina_Solid } from 'next/font/google';
 import { GlobalStateProvider } from './context/GlobalStateContext';
 import { GoogleAnalytics } from '@next/third-parties/google'
@@ -56,6 +56,12 @@ const londrina_solid = Londrina_Solid({
   weight: '400'
 })
 
+const notable = Notable({
+  subsets: ['latin'],
+  variable: "--font-notable",
+  weight: "400"
+})
+
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
   variable: "--font-geist-sans",
@@ -79,7 +85,7 @@ export const metadata: Metadata = {
     icon: '/images/favicon.ico'
   }, 
   creator: 'Andrew Blair',
-  keywords: ['Software Developer', 'Poet', 'Performer', 'Edinburgh', 'Robert Pattinson', 'journalist', 'Den of Geek', 'Doctor Who', 'Eurovision Bingo', 'Big Finish Boxset Generator', 'Ideas too Unpopular to Monetise'],
+  keywords: ['Software Developer', 'blog', 'Poet', 'Performer', 'Edinburgh', 'Robert Pattinson', 'journalist', 'Den of Geek', 'Doctor Who', 'Eurovision Bingo', 'Big Finish Boxset Generator', 'Ideas too Unpopular to Monetise'],
   alternates: {
       types: {
         'application/rss+xml': 'https://andrewblair.co.uk/feed.xml',
@@ -98,7 +104,7 @@ export default function RootLayout({
       <body className={`${hubotSans.variable} ${sigmar.variable} 
       ${geistSans.variable} ${geistMono.variable} ${tangerine.variable}
       ${oxanium.variable} ${p2p.variable} ${dellaRespira.variable} 
-      ${londrina_sketch.variable} ${londrina_solid.variable}`}>
+      ${londrina_sketch.variable} ${londrina_solid.variable} ${notable.variable}`}>
         {children}
       </body>
       <GoogleAnalytics gaId="G-HGEZ1SBR1R" />
