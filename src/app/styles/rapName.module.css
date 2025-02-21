@@ -22,7 +22,7 @@
     height: auto;
     top: 0;
     width: 100%;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
   } 
   
 .headerWrapper {
@@ -59,7 +59,7 @@ transform-origin: top;
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-top: 10%;
+    /* margin-top: 10%; */
     width: 100%;
 }
 
@@ -121,4 +121,12 @@ transform-origin: top;
     justify-content: center;
     line-height: 2;
     z-index: 5;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .video {
+        max-width: 95%;
+        height: auto;
+    }
+
   }

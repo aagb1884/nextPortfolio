@@ -11,6 +11,7 @@ import deekPrime from '../../../../public/images/deekPrime.jpg';
 import wesley from '../../../../public/images/wesleySnopes/button_wesley.png'
 import poetRemixer from '../../../../public/images/poetrRemixer.png';
 import light from '../../../../public/images/sad-light.png';
+import rng from '../../../../public/images/rng.png';
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from '@/app/context/GlobalStateContext';
 
@@ -63,6 +64,13 @@ const AppsPage = () => {
                     <div className={styles.buttonText}>Wesley Snopes</div>
                 </Link>
                 </div>
+                <div className={styles.poetRemixer}>
+                <Link href="/apps/rap-name-generator">
+                    <Image   src={rng} 
+                            alt="rap name generator link" 
+                            className={styles.buttonImage} />
+                </Link>
+                </div>
                 <div className={styles.light}>
                 <Link href="/apps/light">
                 
@@ -71,6 +79,16 @@ const AppsPage = () => {
                           
                             className={styles.buttonImage} />
                     <div className={styles.buttonText}>Doctor Who Games</div>
+                </Link>
+                </div>
+               
+                <div className={styles.poetRemixer}>
+                <Link href="/apps/poetremixer">
+                
+                    <Image   src={poetRemixer} 
+                            alt="poetRemixer tool link" 
+                          
+                            className={styles.buttonImage} />
                 </Link>
                 </div>
                 <div className={styles.derekAdams}>   
@@ -85,16 +103,6 @@ const AppsPage = () => {
                     </div>
                 </Link>
                 </div>
-                <div className={styles.poetRemixer}>
-                <Link href="/apps/poetremixer">
-                
-                    <Image   src={poetRemixer} 
-                            alt="poetRemixer tool link" 
-                          
-                            className={styles.buttonImage} />
-                </Link>
-                </div>
-    
                 </section>
                 <section className={styles.appsLandingCopy}>
                 <aside className={styles.designCredit}>Bouncing Text animation by <Link href="https://lenadesign.org/2021/05/18/css-bouncing-text-animation/">Lena Design <ExternalLinkImage /></Link></aside>

@@ -70,24 +70,31 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
         <Link href='/apps'>Apps</Link>
         <br />
         <ul className={styles.appsClmLinks}>
-            <li>
-                <Link href='/apps/eurovision-bingo'>Eurovision Bingo</Link>
-            </li>
+            
             <li>
                 <Link href="/apps/big-finish-generator">Big Finish Boxset Generator</Link>
-            </li>
-            <li>
-                <Link href="/apps/wesley-snopes">Wesley Snopes</Link>
-            </li>
-            <li>
-                <Link href="/apps/poetremixer">PoetRemixer Tool</Link>
             </li>
             <li>
                 <Link href="/apps/light">Doctor Who Game Page</Link>
             </li>
             <li>
-                <Link href="https://scottish-football-simulators.co.uk/">Scottish Football Simulators <ExternalLinkImage /></Link>
+                <Link href='/apps/eurovision-bingo'>Eurovision Bingo</Link>
             </li>
+            <li>
+                <Link href="/apps/poetremixer">PoetRemixer Tool</Link>
+            </li>
+            <li>
+                <Link href="/apps/rap-name-generator">Rap Name Generator</Link>
+            </li>
+            {/* <li>
+                <Link href="/apps/barlow">Setting the Gary Bar Low</Link>
+            </li> */}
+            <li>
+                <Link href="/apps/wesley-snopes">Wesley Snopes</Link>
+            </li>
+            <li>
+                <Link href="https://scottish-football-simulators.co.uk/">Scottish Football Simulators <ExternalLinkImage /></Link>
+            </li> 
         </ul>
         </div>   
        
