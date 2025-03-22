@@ -1,7 +1,9 @@
 'use client'
 
-import { get } from 'http';
+import styles from "@/app/styles/sciFiName.module.css";
 import {useState} from 'react';
+import Image from "next/image";
+import AppsFooter from "../components/AppsFooter";
 
 interface JsonData{
     syllables: {
@@ -16,7 +18,7 @@ interface JsonData{
   
 
 const SciFiNamePage: React.FC<JsonData> = ({syllables}) => {
-    const [name, setName] = useState<String>("");
+    const [name, setName] = useState<string>("");
     const [noOfSyllables, setNumberOfSyllables] = useState(1);
 
     function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -38,12 +40,27 @@ const SciFiNamePage: React.FC<JsonData> = ({syllables}) => {
     }
 
     }
-    //   const randomElement = syllables.single[Math.floor(Math.random() * syllables.single.length)];
 
-    //   console.log('random', randomElement, 'no of syllables', noOfSyllables)
+    const handleCopyClick = async () => {
+        try {
+            await window.navigator.clipboard.writeText(name);
+            alert("Copied to clipboard!");
+        } catch (err) {
+            console.error(
+                "Unable to copy to clipboard.",
+                err
+            );
+            alert("Copy to clipboard failed.");
+        }
+    };
+
 
     return ( 
-        <main>
+        <main className={styles.sciFiNameMain}>
+            <AppsFooter />
+            <h1 className={styles.sciFiTitle}>Sci Fi Character Name Generator</h1>
+            <div className={styles.noOfSyllablesDiv}>
+            Number of Syllables:
             <input 
             value={noOfSyllables}
             onChange={handleChange}
@@ -51,14 +68,31 @@ const SciFiNamePage: React.FC<JsonData> = ({syllables}) => {
             min={1}
             max={10}
             name='noOfSyllables'
+            className={styles.noOfSyllablesInput}
             />
+            </div>
             <button
-            onClick={() => {getRandomName(noOfSyllables)}}>
+            onClick={() => {getRandomName(noOfSyllables)}}
+            className={styles.getNameBtn}>
                 Get Sci Fi Name
             </button>
-            <div>
+            <div className={styles.name}>
                 {name}
             </div>
+            <div className={styles.copyClipboard}>
+            <button
+            onClick={handleCopyClick}
+            >
+            <Image
+            src="/images/icons8-copy-to-clipboard-48.png"
+            alt="Copy to Clipboard icon by Icons8"
+            title="Copy to Clipboard (icon by Icons8)"
+            id="clipboard"
+            width={30}
+            height={30}
+            />
+            </button>
+        </div>
         </main>
      );
 }

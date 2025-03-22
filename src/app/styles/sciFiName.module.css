@@ -1,0 +1,38 @@
+.sciFiNameMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+    margin: 5px;
+}
+
+.sciFiTitle {
+    text-align: center;
+    color:blueviolet;
+}
+
+.noOfSyllablesDiv {
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.noOfSyllablesInput {
+    width: 20%;
+    text-align: center;
+}
+
+.getNameBtn {
+    padding: 5px;
+}
+
+.name {
+    margin: 10px;
+}
+
+.copyClipboard {
+    margin: 10px;
+}
+.copyClipboard:hover {
+    cursor: pointer;
+}
