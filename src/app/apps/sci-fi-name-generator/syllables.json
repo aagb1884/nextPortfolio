@@ -1,16 +1,23 @@
 {
     "single": [
-        "Kwak", "Drem", "Stak", "Mim", "Wan", "Boon", 
+        "Kwak", "Drem", "Stak", "Mim", "Wan", "Boon", "Nir", "Nor", "Cal", "Cri", "Suv",
         "Dap",
-        "Steve",
+        "Stev",
         "Kar",
-        "Sharth",
+        "Shar",
         "Deb",
         "Hel"
     ],
     "syllables": [
         "Quok", "Ni", "Joos", "Reb", "Strar", "Gant", "Chort", "Za", "Pris", "Vod", "Ploo", "Men", "Gort", "Ling",
         "Em", "El", "Eq", "Ew", "Er", "Et", "Ey", "Eu", "Ei", "Eo", "Ep", "Ea", "Es", "En", "Ed", "Ef", "Ee", "Eg",
-        "Eh", "Ej", "Ek", "Ez", "Ex", "Ec", "Ev", "Eb"
+        "Eh", "Ej", "Ek", "Ez", "Ex", "Ec", "Ev", "Eb", "Ee", "Am", "Al", "Aq", "Aw", "Ar", "At", "Ay", "Au", "Ai", 
+        "Ao", "Ap", "Aa", "As", "An", "Ad", "Af", "Ae", "Ag", "Ah", "Aj", "Ak", "Az", "Ax", "Ac", "Av", "Ab", "Ae",
+         "Im", "Il", "Iq", "Iw", "Ir", "It", "Iy", "Iu", "Ii", "Io", "Ip", "Ia", "Is", "In", "Id", "If", "Ie", "Ig",
+        "Ih", "Ij", "Ik", "Iz", "Ix", "Ic", "Iv", "Ib", "Ie",  "Om", "Ol", "Oq", "Ow", "Or", "Ot", "Oy", "Ou", "Oi", 
+        "Oo", "Op", "Oa", "Os", "On", "Od", "Of", "Oe", "Og", "Oh", "Oj", "Ok", "Oz", "Ox", "Oc", "Ov", "Ob", "Oe", 
+        "Um", "Ul", "Uq", "Uw", "Ur", "Ut", "Uy", "Uu", "Ui", "Uo", "Up", "Ua", "Us", "Un", "Ud", "Uf", "Ue", "Ug",
+        "Uh", "Uj", "Uk", "Uz", "Ux", "Uc", "Uv", "Ub", "Ue", "Km", "Kl", "Kr", "Ky", "Ku", "Ki", 
+        "Ko", "Ka", "Ks", "Kn", "Ke", "Kh", "Kk", "Kz", "Kx", "Th", "Qu", "Que", "Qui", "Quo", "Qua"
     ]
 }
