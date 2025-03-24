@@ -7,6 +7,12 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --sz: 10vmin;
+    --on: #03a9f4;
+    --of: #fff0;
+    --gr: #666666;
+    --tr: all 0.5s ease 0s;
+    --lg: var(--of);
   }
 }
 
@@ -49,4 +55,3 @@ a:hover {
     color-scheme: dark;
   }
 }
-

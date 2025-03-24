@@ -1,38 +1,262 @@
+.sciFiContainer {
+  background-color: rgb(131, 218, 205);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 0;
+}
+
 .sciFiNameMain {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5px;
-    margin: 5px;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  padding: 5px;
+  margin: 5px;
+  font-family: var(--font-digital);
+  font-size: 18px;
+  color: yellow;
+  text-align: center;
+  z-index: 1;
+}
+
+.SciFiLinks {
+  color: navy;
+}
+
+.nonComputerText {
+  font-family: var(--font-oswald);
+  color: white;
 }
 
 .sciFiTitle {
-    text-align: center;
-    color:blueviolet;
+  text-align: center;
+  color: blueviolet;
+  font-size: 48px;
 }
 
 .noOfSyllablesDiv {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
 }
 
 .noOfSyllablesInput {
-    width: 20%;
-    text-align: center;
+  width: 20%;
+  text-align: center;
+  font-family: var(--font-digital);
 }
 
-.getNameBtn {
-    padding: 5px;
+.Btn1,
+.Btn2,
+.Btn3 {
+  padding: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(15px);
+  z-index: 3;
+}
+
+.Btn1:hover,
+.Btn2:hover,
+.Btn3:hover {
+  border: 2px solid gold;
+}
+
+.filters {
+  margin: 10px;
+}
+
+.btnRow {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.digitalReadout,
+.noOfSyllablesInput {
+  background-color: black;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px;
+  min-height: 25px;
+  min-width: 60px;
+  text-align: left;
+  color: yellow;
 }
 
 .name {
-    margin: 10px;
+  margin: 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: var(--font-tektur);
+  background-color: black;
+  color: yellow;
+  border-radius: 3px;
+  width: 50%;
+  height: 50px;
 }
 
 .copyClipboard {
-    margin: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .copyClipboard:hover {
-    cursor: pointer;
+  cursor: pointer;
+}
+.copyBtn {
+  width: 30px;
+}
+
+/* toggle  */
+.chibnallToggle {
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.toggle {
+  position: relative;
+  width: 50px;
+  height: 20px;
+  z-index: 5;
+}
+
+.toggle > label {
+  display: flex;
+  align-items: center;
+}
+
+.toggle > label > span {
+  margin: 0 auto;
+}
+
+/* Hide default HTML checkbox */
+.toggle > input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin-right: 5px;
+  border-radius: 20%;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 15px;
+  width: 15px;
+  left: 4px;
+  bottom: 3px;
+  background-color: rgb(150, 246, 232);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(38, 39, 83);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(38, 39, 83);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* animated cursor  */
+
+.cursor {
+  -webkit-animation: fadeoutin 1s infinite linear forwards;
+  animation: fadeoutin 1s infinite linear forwards;
+}
+
+@-webkit-keyframes fadeoutin {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeoutin {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+/* modal */
+
+.modalWrapper {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.modal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  max-height: 80vh;
+  min-height: 200px;
+  background-color: rgba(255, 255, 255);
+  border: 3px solid #999;
+  border-radius: 3px;
+  margin: 20px auto;
+  padding: 20px;
+  color: black;
+  text-align: center;
+  line-height: 2;
+  z-index: 20;
+  overflow-y: auto;
+}
+
+.modalUl {
+  text-align: left;
+}
+
+.modalText {
+  z-index: 10;
+}
+
+.hideModalBtn {
+  margin: 5px;
+  padding: 5px;
+  min-width: 85px;
+}
+
+.modalExitBtn:hover {
+  cursor: pointer;
 }

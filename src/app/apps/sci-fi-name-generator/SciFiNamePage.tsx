@@ -4,6 +4,8 @@ import styles from "@/app/styles/sciFiName.module.css";
 import { useState } from "react";
 import Image from "next/image";
 import AppsFooter from "../components/AppsFooter";
+import Cursor from "./cursor";
+import InstructionsModal from "./InstructionsModal";
 
 interface JsonData {
   syllables: {
@@ -15,7 +17,9 @@ interface JsonData {
 const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
   const [name, setName] = useState<string>("");
   const [noOfSyllables, setNumberOfSyllables] = useState(1);
+  const [showInstructions, setShowInstructions] = useState(false);
   const [chibnallFilter, setChibnallFilter] = useState(false);
+  const [copyMessage, setCopyMessage] = useState<string>("");
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
     setNumberOfSyllables(e.target.valueAsNumber);
@@ -29,6 +33,13 @@ const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
     return array[Math.floor(Math.random() * array.length)];
   };
 
+  const getRandomSyllables = (array: string[]) => {
+    const scrambled = array.sort(() => 0.5 - Math.random());
+    const noSyllablesRequired = noOfSyllables - 1;
+    const getSyllables = scrambled?.slice(0, noSyllablesRequired);
+    return getSyllables.join("").toLowerCase();
+  };
+
   function getRandomName(number: number) {
     const chibnallOne = chibnallFilteredStrings(syllables.single);
     const chibnallLong = chibnallFilteredStrings(syllables.syllables);
@@ -37,42 +48,77 @@ const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
       setName(randomElement);
     } else if (chibnallFilter && number > 1) {
       const randomElement = getRandomFirstSyllable(chibnallOne);
-      const scrambled = chibnallLong?.sort(() => 0.5 - Math.random());
-      const noSyllablesRequired = noOfSyllables - 1;
-      const getSyllables = scrambled?.slice(0, noSyllablesRequired);
-      const joinSyllables = getSyllables.join("").toLowerCase();
+      const joinSyllables = getRandomSyllables(chibnallLong);
       setName(randomElement + joinSyllables);
     } else if (number === 1) {
       const randomElement = getRandomFirstSyllable(syllables.single);
       setName(randomElement);
     } else if (number > 1) {
-      const randomElement =
-        syllables.single[Math.floor(Math.random() * syllables.single.length)];
-      const scrambled = syllables.syllables?.sort(() => 0.5 - Math.random());
-      const noSyllablesRequired = noOfSyllables - 1;
-      const getSyllables = scrambled?.slice(0, noSyllablesRequired);
-      const joinSyllables = getSyllables.join("").toLowerCase();
+      const randomElement = getRandomFirstSyllable(syllables.single);
+      const joinSyllables = getRandomSyllables(syllables.syllables);
       setName(randomElement + joinSyllables);
     }
   }
 
+  function addPunctuation(punctuation: string) {
+    if (name.length === 0) {
+      return "";
+    } else {
+      const l = name.length + 1;
+      const randomIndex = Math.floor(Math.random() * l);
+      console.log(["k", "k", "d", "a"].splice(randomIndex, 0, punctuation));
+      const spliced = name
+        .split("")
+        .splice(randomIndex, 0, punctuation)
+        .join("");
+      console.log(spliced);
+    }
+  }
+  console.log(addPunctuation(" "));
+
   const handleCopyClick = async () => {
     try {
       await window.navigator.clipboard.writeText(name);
-      alert("Copied to clipboard!");
+      setCopyMessage("Copied to clipboard.");
     } catch (err) {
       console.error("Unable to copy to clipboard.", err);
-      alert("Copy to clipboard failed.");
+      setCopyMessage("Copy to clipboard failed.");
     }
+    setTimeout(() => {
+      setCopyMessage("");
+    }, 10000);
+  };
+
+  const handleChibnallFilter = () => {
+    setChibnallFilter(!chibnallFilter);
   };
 
   return (
     <main className={styles.sciFiNameMain}>
-      <AppsFooter />
+      <div className={styles.sciFiLinks}>
+        <AppsFooter />
+      </div>
+
       <h1 className={styles.sciFiTitle}>Sci Fi Character Name Generator</h1>
-      <button>How Does This Work?</button>
+      <button
+        onClick={() => {
+          setShowInstructions(!showInstructions);
+        }}
+        className={styles.Btn1}
+      >
+        How Does This Work?
+      </button>
+      {showInstructions && (
+        <InstructionsModal
+          setShowInstructions={setShowInstructions}
+          showInstructions={showInstructions}
+        />
+      )}
       <div className={styles.noOfSyllablesDiv}>
-        Number of Syllables:
+        <p className={styles.nonComputerText}>
+          Number of Syllables:&nbsp;&nbsp;
+        </p>
+
         <input
           value={noOfSyllables}
           onChange={handleChange}
@@ -82,25 +128,50 @@ const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
           name="noOfSyllables"
           className={styles.noOfSyllablesInput}
         />
+      </div>
+
+      <div className={styles.filters}>
+        <div className={styles.chibnallToggle}>
+          <p className={styles.nonComputerText}>Chibnall Filter:&nbsp;</p>
+          <label className={styles.toggle}>
+            <input
+              type="checkbox"
+              checked={chibnallFilter}
+              onChange={handleChibnallFilter}
+            />
+            <span className={styles.slider}></span>
+          </label>
+          <p className={styles.digitalReadout}>
+            {chibnallFilter ? " Active" : " Inactive"}
+          </p>
+        </div>
+      </div>
+      <div className={styles.btnRow}>
         <button
           onClick={() => {
-            setChibnallFilter(!chibnallFilter);
+            getRandomName(noOfSyllables);
           }}
+          className={styles.Btn2}
         >
-          Chibnall Filter
+          Get Sci Fi Name
+        </button>
+        <button
+          onClick={() => {
+            setName("");
+          }}
+          className={styles.Btn3}
+        >
+          Clear
         </button>
       </div>
-      <button
-        onClick={() => {
-          getRandomName(noOfSyllables);
-        }}
-        className={styles.getNameBtn}
-      >
-        Get Sci Fi Name
-      </button>
-      <div className={styles.name}>{name}</div>
+      <div className={styles.name}>
+        {name}
+        <Cursor />
+      </div>
+
       <div className={styles.copyClipboard}>
-        <button onClick={handleCopyClick}>
+        <p className={styles.nonComputerText}>Copy to clipboard</p>
+        <button onClick={handleCopyClick} className={styles.copyBtn}>
           <Image
             src="/images/icons8-copy-to-clipboard-48.png"
             alt="Copy to Clipboard icon by Icons8"
@@ -110,6 +181,10 @@ const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
             height={30}
           />
         </button>
+        <p className={styles.digitalReadout}>
+          {copyMessage}
+          <Cursor />
+        </p>
       </div>
     </main>
   );
