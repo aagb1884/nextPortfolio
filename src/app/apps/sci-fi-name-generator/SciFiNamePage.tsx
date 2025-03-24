@@ -66,15 +66,13 @@ const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
     } else {
       const l = name.length + 1;
       const randomIndex = Math.floor(Math.random() * l);
-      console.log(["k", "k", "d", "a"].splice(randomIndex, 0, punctuation));
-      const spliced = name
-        .split("")
-        .splice(randomIndex, 0, punctuation)
-        .join("");
-      console.log(spliced);
+      const newArray = name.split("")
+      newArray.splice(randomIndex, 0, punctuation)
+      setName(newArray.join(""))
     }
   }
-  console.log(addPunctuation(" "));
+
+
 
   const handleCopyClick = async () => {
     try {
@@ -145,6 +143,17 @@ const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
             {chibnallFilter ? " Active" : " Inactive"}
           </p>
         </div>
+        <div className={styles.btnRow}>
+        <button onClick={() => {addPunctuation(" ")}}
+            className={styles.btn4}>
+            Add Space
+        </button>
+        <button onClick={() => {addPunctuation("-")}}
+            className={styles.btn5}>
+            Add Hyphen
+        </button>
+        </div>
+      
       </div>
       <div className={styles.btnRow}>
         <button
@@ -170,16 +179,8 @@ const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
       </div>
 
       <div className={styles.copyClipboard}>
-        <p className={styles.nonComputerText}>Copy to clipboard</p>
-        <button onClick={handleCopyClick} className={styles.copyBtn}>
-          <Image
-            src="/images/icons8-copy-to-clipboard-48.png"
-            alt="Copy to Clipboard icon by Icons8"
-            title="Copy to Clipboard (icon by Icons8)"
-            id="clipboard"
-            width={30}
-            height={30}
-          />
+        <button onClick={handleCopyClick} className={styles.btn6}>
+        Copy to clipboard
         </button>
         <p className={styles.digitalReadout}>
           {copyMessage}

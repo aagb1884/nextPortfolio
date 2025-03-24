@@ -1,5 +1,4 @@
 import styles from "@/app/styles/sciFiName.module.css";
-import Link from "next/link";
 
 interface InstructionsModalProps {
   setShowInstructions: (value: boolean) => void;

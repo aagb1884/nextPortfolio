@@ -166,6 +166,21 @@ const CreditsPage = () => {
             vagueonthehow <ExternalLinkImage />
           </Link>
         </li>
+        <li>
+          <Link
+            target="_blank"
+            href="https://www.flickr.com/photos/creative_stock/5227842611"
+          >
+            electronic circuit board{" "}
+            <ExternalLinkImage />.{" "}
+          </Link>{" "}
+          <Link
+            target="_blank"
+            href="https://www.flickr.com/photos/creative_stock/"
+          >
+            Creativity103 <ExternalLinkImage />
+          </Link>
+        </li>
       </ul>
       <ul className={styles.cssUl}>
         <h4>CSS</h4>
