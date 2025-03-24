@@ -39,7 +39,7 @@ const SciFiNamePage: React.FC<JsonData> = ({syllables}) => {
     }
     else if (chibnallFilter && number > 1) {
         const randomElement = chibnallOne[Math.floor(Math.random() * chibnallOne.length)];
-        const scrambled = chibnallLong?.sort((a,b) => 0.5 - Math.random());
+        const scrambled = chibnallLong?.sort(() => 0.5 - Math.random());
         const noSyllablesRequired = noOfSyllables - 1
         const getSyllables = scrambled?.slice(0, noSyllablesRequired);
         const joinSyllables = getSyllables.join("").toLowerCase()
@@ -51,7 +51,7 @@ const SciFiNamePage: React.FC<JsonData> = ({syllables}) => {
     }
     else if (number > 1) {
         const randomElement = syllables.single[Math.floor(Math.random() * syllables.single.length)];
-        const scrambled = syllables.syllables?.sort((a,b) => 0.5 - Math.random());
+        const scrambled = syllables.syllables?.sort(() => 0.5 - Math.random());
         const noSyllablesRequired = noOfSyllables - 1
         const getSyllables = scrambled?.slice(0, noSyllablesRequired);
         const joinSyllables = getSyllables.join("").toLowerCase()
@@ -90,8 +90,10 @@ const SciFiNamePage: React.FC<JsonData> = ({syllables}) => {
             name='noOfSyllables'
             className={styles.noOfSyllablesInput}
             />
+            </div>
+            <div className={styles.filters}>
             <button onClick={() => {setChibnallFilter(!chibnallFilter)}}>
-                Chibnall Filter
+            Chibnall Filter
             </button>
             </div>
             <button

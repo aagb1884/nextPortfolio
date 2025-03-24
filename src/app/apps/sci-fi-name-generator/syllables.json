@@ -1,23 +1,25 @@
 {
     "single": [
-        "Kwak", "Drem", "Stak", "Mim", "Wan", "Boon", "Nir", "Nor", "Cal", "Cri", "Suv",
-        "Dap",
-        "Stev",
-        "Kar",
-        "Shar",
-        "Deb",
-        "Hel"
+        "Kwak", "Drem", "Stak", "Mim", "Wan", "Boon", "Nir", "Nor", "Cal", "Cri", "Suve", "Dap", "Stev","Kar",
+        "Shar", "Deb", "Hel", "Bev", "Gree", "Po", "Ru", "Zan", "Kaz", "Rek", "Bee", "Dev", "Ave", "Dane",
+        "Noon"
     ],
     "syllables": [
         "Quok", "Ni", "Joos", "Reb", "Strar", "Gant", "Chort", "Za", "Pris", "Vod", "Ploo", "Men", "Gort", "Ling",
         "Em", "El", "Eq", "Ew", "Er", "Et", "Ey", "Eu", "Ei", "Eo", "Ep", "Ea", "Es", "En", "Ed", "Ef", "Ee", "Eg",
         "Eh", "Ej", "Ek", "Ez", "Ex", "Ec", "Ev", "Eb", "Ee", "Am", "Al", "Aq", "Aw", "Ar", "At", "Ay", "Au", "Ai", 
         "Ao", "Ap", "Aa", "As", "An", "Ad", "Af", "Ae", "Ag", "Ah", "Aj", "Ak", "Az", "Ax", "Ac", "Av", "Ab", "Ae",
-         "Im", "Il", "Iq", "Iw", "Ir", "It", "Iy", "Iu", "Ii", "Io", "Ip", "Ia", "Is", "In", "Id", "If", "Ie", "Ig",
+        "Im", "Il", "Iq", "Iw", "Ir", "It", "Iy", "Iu", "Ii", "Io", "Ip", "Ia", "Is", "In", "Id", "If", "Ie", "Ig",
         "Ih", "Ij", "Ik", "Iz", "Ix", "Ic", "Iv", "Ib", "Ie",  "Om", "Ol", "Oq", "Ow", "Or", "Ot", "Oy", "Ou", "Oi", 
         "Oo", "Op", "Oa", "Os", "On", "Od", "Of", "Oe", "Og", "Oh", "Oj", "Ok", "Oz", "Ox", "Oc", "Ov", "Ob", "Oe", 
         "Um", "Ul", "Uq", "Uw", "Ur", "Ut", "Uy", "Uu", "Ui", "Uo", "Up", "Ua", "Us", "Un", "Ud", "Uf", "Ue", "Ug",
-        "Uh", "Uj", "Uk", "Uz", "Ux", "Uc", "Uv", "Ub", "Ue", "Km", "Kl", "Kr", "Ky", "Ku", "Ki", 
-        "Ko", "Ka", "Ks", "Kn", "Ke", "Kh", "Kk", "Kz", "Kx", "Th", "Qu", "Que", "Qui", "Quo", "Qua"
+        "Uh", "Uj", "Uk", "Uz", "Ux", "Uc", "Uv", "Ub", "Ue", "Km", "Kl", "Kr", "Ky", "Ku", "Ki", "Ko", "Ka", "Ks", 
+        "Kn", "Ke", "Kh", "Kk", "Kz", "Kx", "Th", "Qu", "Que", "Qui", "Quo", "Qua", "Tar", "Ran", "T", "Bo", "Be",
+        "Ba", "Bi", "Bu", "Co", "Ce", "Ca", "Ci", "Cu", "Do", "De", "Da", "Di", "Du", "Fo", "Fe", "Fa", "Fi", "Fu",
+        "Go", "Ge", "Ga", "Gi", "Gu", "Ho", "He", "Ha", "Hi", "Hu", "Jo", "Je", "Ja", "Ji", "Ju", "Lo", "Le", "La", 
+        "Li", "Lu", "Mo", "Me", "Ma", "Mi", "Mu", "No", "Ne", "Na", "Ni", "Nu", "Po", "Pe", "Pa", "Pi", "Pu",
+        "Ro", "Re", "Ra", "Ri", "Ru", "So", "Se", "Sa", "Si", "Su", "To", "Te", "Ta", "Ti", "Tu", "Vo", "Ve", "Va",
+        "Vi", "Vu", "Wo", "We", "Wa", "Wi", "Wu", "Xo", "Xe", "Xa", "Xi", "Xu", "Yo", "Ye", "Ya", "Yi", "Yu",
+        "Zo", "Ze", "Za", "Zi", "Zu", "Ian", "Lan"
     ]
 }
