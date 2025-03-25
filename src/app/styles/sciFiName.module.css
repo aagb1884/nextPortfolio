@@ -10,7 +10,6 @@
   width: 100%;
   align-items: center;
   padding: 5px;
-  margin: 5px;
   font-family: var(--font-digital);
   font-size: 18px;
   color: yellow;
@@ -21,13 +20,8 @@
   -webkit-backdrop-filter: blur(5px);
 }
 
-.SciFiLinks {
+.sciFiLinks {
   color: navy;
-}
-
-.nonComputerText {
-  font-family: var(--font-oswald);
-  color: white;
 }
 
 .sciFiTitle {
@@ -36,10 +30,83 @@
   font-size: 48px;
 }
 
+.Btn1,
+.Btn2,
+.Btn3,
+.btn4,
+.btn5,
+.btn6 {
+  padding: 7px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 20px;
+  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  z-index: 3;
+  color: black;
+}
+
+.Btn2 {
+  background-color: rgb(173, 255, 47, 0.45);
+}
+
+.Btn3 {
+  background-color: rgb(255, 20, 147, 0.45);
+}
+
+.Btn1,
+.btn6 {
+  background-color: rgba(255, 255, 255, 0.45);
+}
+
+.btn4 {
+  background-color: rgba(188, 186, 186, 0.45);
+}
+
+.btn4:disabled,
+.Btn3:disabled,
+.btn6:disabled {
+  background-color: rgba(72, 71, 71, 0.85);
+}
+
+.btn4:disabled:hover,
+.Btn4:disabled:hover,
+.btn6:disabled:hover {
+  cursor: none;
+  animation: none;
+}
+
+.Btn1:hover,
+.Btn2:hover,
+.Btn3:hover,
+.btn4:hover,
+.btn6:hover {
+  animation: glow 1s infinite alternate;
+  cursor: pointer;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px -10px rgb(255, 215, 0);
+  }
+  to {
+    box-shadow:
+      inset 0 0 5 5px rgba(255, 215, 0, 0.55),
+      0 0 5 5px rgba(255, 215, 0, 0.55),
+      inset 0 0 var(--box-blur) var(--glow),
+      0 0 var(--box-blur) var(--glow);
+  }
+}
+
 .noOfSyllablesDiv {
   display: flex;
   flex-direction: row;
   margin: 10px;
+}
+
+.nonComputerText {
+  font-family: var(--font-oswald);
+  color: white;
 }
 
 .noOfSyllablesInput {
@@ -48,34 +115,8 @@
   font-family: var(--font-digital);
 }
 
-.Btn1,
-.Btn2,
-.Btn3,
-.btn4,
-.btn5,
-.btn6 {
-  padding: 5px;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.45);
-  box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.25);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
-  z-index: 3;
-  color: black;
-}
-
-.Btn1:hover,
-.Btn2:hover,
-.Btn3:hover,
-.btn4:hover, 
-.btn5:hover, 
-.btn6:hover {
-  border: 2px solid gold;
-}
-
 .filters {
-    width: 100%;
+  width: 100%;
   margin: 10px;
   display: flex;
   flex-direction: column;
@@ -124,10 +165,12 @@
 }
 
 /* toggle  */
-.chibnallToggle {
+.chibnallToggle,
+.surnameToggle {
   display: flex;
   align-items: center;
   z-index: 2;
+  margin: 5px;
 }
 
 .toggle {
