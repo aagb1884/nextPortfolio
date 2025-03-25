@@ -202,6 +202,15 @@ const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
 
           <button
             onClick={() => {
+              addPunctuation("'");
+            }}
+            className={styles.btn4}
+          >
+            Add Apostrophe
+          </button>
+
+          <button
+            onClick={() => {
               addPunctuation("-");
             }}
             className={styles.btn4}
