@@ -2,7 +2,6 @@
 
 import styles from "@/app/styles/sciFiName.module.css";
 import { useState } from "react";
-import Image from "next/image";
 import AppsFooter from "../components/AppsFooter";
 import Cursor from "./cursor";
 import InstructionsModal from "./InstructionsModal";
@@ -60,14 +59,25 @@ const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
     }
   }
 
+  function capitalise (array: string[]) {
+  
+for(var num:number = 0;num<array.length;num++) {
+   if (array[num] === "-" || array[num] === " ") {
+      array[num +1] = array[num + 1].toUpperCase()
+   }
+   
+}return array}
+
+
   function addPunctuation(punctuation: string) {
     if (name.length === 0) {
       return "";
     } else {
-      const l = name.length + 1;
+      const l = name.length;
       const randomIndex = Math.floor(Math.random() * l);
       const newArray = name.split("")
       newArray.splice(randomIndex, 0, punctuation)
+      capitalise(newArray)
       setName(newArray.join(""))
     }
   }
