@@ -7,6 +7,8 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --blur: 0.75rem;
+    --box-blur: calc(0.5 * var(--blur));
   }
 }
 
@@ -49,4 +51,3 @@ a:hover {
     color-scheme: dark;
   }
 }
-
