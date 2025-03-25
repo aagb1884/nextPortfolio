@@ -96,7 +96,7 @@ const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
   }
 
   function capitalise(array: string[]) {
-    for (var num: number = 0; num < array.length; num++) {
+    for (const num: number = 0; num < array.length; num++) {
       if (array[num] === "-" || array[num] === " ") {
         array[num + 1] = array[num + 1].toUpperCase();
       }
