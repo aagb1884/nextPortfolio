@@ -103,6 +103,12 @@
   display: flex;
   flex-direction: row;
   margin: 10px;
+  align-items: center;
+}
+
+.syllableRange {
+  display: flex;
+  flex-direction: column;
 }
 
 .nonComputerText {
@@ -111,9 +117,15 @@
 }
 
 .noOfSyllablesInput {
-  width: 20%;
+  min-width: 20%;
+  height: 50%;
   text-align: center;
   font-family: var(--font-digital);
+  background-color: black;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 5px;
+  color: yellow;
 }
 
 .filters {
@@ -131,8 +143,7 @@
   justify-content: center;
 }
 
-.digitalReadout,
-.noOfSyllablesInput {
+.digitalReadout {
   background-color: black;
   border-radius: 3px;
   padding: 5px;
@@ -152,7 +163,7 @@
   color: yellow;
   border-radius: 3px;
   width: 80%;
-  height: 50px;
+  min-height: 50px;
 }
 
 .copyClipboard {
@@ -324,5 +335,10 @@ input:checked + .slider:before {
 
   .modalText {
     font-size: smaller;
+  }
+
+  .name {
+    width: 90%;
+    font-size: 14px;
   }
 }

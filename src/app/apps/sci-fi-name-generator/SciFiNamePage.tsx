@@ -160,19 +160,19 @@ const SciFiNamePage: React.FC<JsonData> = ({ syllables }) => {
         />
       )}
       <div className={styles.noOfSyllablesDiv}>
-        <p className={styles.nonComputerText}>
-          Number of Syllables:&nbsp;&nbsp;
-        </p>
-
-        <input
-          value={noOfSyllables}
-          onChange={handleChange}
-          type="number"
-          min={1}
-          max={10}
-          name="noOfSyllables"
-          className={styles.noOfSyllablesInput}
-        />
+        <div className={styles.syllableRange}>
+          <p className={styles.nonComputerText}>Number of Syllables:&nbsp;</p>
+          <input
+            value={noOfSyllables}
+            onChange={handleChange}
+            type="range"
+            min="1"
+            max="15"
+            name="noOfSyllables"
+            className={styles.range}
+          />
+        </div>
+        <p className={styles.noOfSyllablesInput}>{noOfSyllables}</p>
       </div>
 
       <div className={styles.filters}>
