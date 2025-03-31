@@ -28,7 +28,7 @@ const InstructionsModal: React.FC<InstructionsModalProps> = ({
           </p>
           <p>
             Set the number of syllables you want in your name (the maximum
-            allowed is ten [10]).
+            allowed is fifteen [15]).
           </p>
           <p>Click on &quot;GET SCI FI NAME&quot;.</p>
           <p>You can use the filters to add spaces and hyphens.</p>
