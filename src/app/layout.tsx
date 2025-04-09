@@ -15,7 +15,6 @@ import {
 } from "./fonts";
 import { GlobalStateProvider } from "./context/GlobalStateContext";
 import { GoogleAnalytics } from "@next/third-parties/google";
-import GoogleAdsense from "./GoogleAdsense";
 import "./styles/globals.css";
 
 const digital = localFont({
@@ -74,7 +73,6 @@ export default function RootLayout({
           {children}
         </body>
         <GoogleAnalytics gaId="G-HGEZ1SBR1R" />
-        <GoogleAdsense pId="1604534999874469" />
       </html>
     </GlobalStateProvider>
   );
