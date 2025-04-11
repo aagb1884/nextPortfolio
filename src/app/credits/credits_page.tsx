@@ -58,6 +58,18 @@ const CreditsPage = () => {
         <li>
           <Link
             target="_blank"
+            href="https://www.flaticon.com/free-icon/application_5996260?term=app&page=1&position=61&origin=tag&related_id=5996260"
+          >
+            Apps Icon <ExternalLinkImage />{" "}
+          </Link>{" "}
+          icon by{" "}
+          <Link target="_blank" href="https://www.flaticon.com/authors/anggara">
+            FlatIcon <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link
+            target="_blank"
             href="https://icons8.com/icon/18734/copy-to-clipboard"
           >
             Copy to Clipboard <ExternalLinkImage />{" "}
@@ -171,8 +183,7 @@ const CreditsPage = () => {
             target="_blank"
             href="https://www.flickr.com/photos/creative_stock/5227842611"
           >
-            electronic circuit board{" "}
-            <ExternalLinkImage />.{" "}
+            electronic circuit board <ExternalLinkImage />.{" "}
           </Link>{" "}
           <Link
             target="_blank"
