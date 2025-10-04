@@ -150,8 +150,6 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
         </div>
       </div>
       <KoFiLink />
-      {/* </>
-        )} */}
     </nav>
   );
 };
