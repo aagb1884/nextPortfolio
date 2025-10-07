@@ -4,6 +4,7 @@ import KoFiLink from "@/app/ui/KoFi";
 import backgroundVortex from "../../../../public/images/drWhoQuiz/vortex.jpg"
 import Image from "next/image";
 import Header from "./components/header";
+import RoundButtons from "./components/RoundButtons";
 
 export const metadata = {
   title: "Doctor Who Quiz",
@@ -16,29 +17,21 @@ export const metadata = {
 
 const drWhoQuiz = () => {
   return (
-    <div className="background-vortex-div"
-     style={{
-        position: "relative",
-        width: "100vw",
-        height: "100vh",
-      }}>
-      <Image src={backgroundVortex} fill={true} alt="Background Vortex" />
-    <div className={styles.drWhoQuizLanding}>
-      
-     <header className={styles.drWhoQuizHeader}>
-        <Header />
-      </header>
-      <main>
-        
-      </main>
+  <div className={styles.mainContainer}>
+  <div className={styles.backgroundVortexDiv}>
+    <Image src={backgroundVortex} fill={true} alt="Background Vortex" />
+  </div>
 
-      <footer className={styles.whoQuizFooter}>
-        <AppsFooter />
-       
-        <KoFiLink />
-        </footer>
-      </div>
-      </div>
+  <div className={styles.drWhoQuizLanding}>
+    <Header />
+    <RoundButtons />
+  </div>
+
+  <footer className={styles.whoQuizFooter}>
+    <AppsFooter />
+    <KoFiLink />
+  </footer>
+</div>
   );
 };
 

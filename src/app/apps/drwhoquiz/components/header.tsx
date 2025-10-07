@@ -1,12 +1,14 @@
 import Image from "next/image";
-import drWhoLogo from "../../../../../public/images/drWhoQuiz/Doctor-Who-Quiz-Logo.png"
+import drWhoLogo from "../../../../../public/images/drWhoQuiz/Doctor-Who-Logo.png"
 
 const Header = () => {
-    return (
-                <Image src={drWhoLogo} 
+    return (<header>
+                <Image 
+                    src={drWhoLogo} 
+                    width={100}
                      alt="dr-who-logo"
-                     width ={400}
-                     height={125} />
+                     />
+                     </header>
      );
 }
  

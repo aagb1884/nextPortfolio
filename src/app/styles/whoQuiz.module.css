@@ -1,17 +1,126 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.backgroundVortexDiv{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+}
+
 .drWhoQuizLanding {
-    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    height: 100vh;
+    height: auto;
+    padding-bottom: 15vh;
     width: 100%;
     color: white;
     font-size: medium;
 }
 
 .whoQuizFooter {
-    background-color: rgba(116, 116, 184, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(224, 236, 245, 0.8);
+    color: black;
     border-radius: 5px;
+    width: 100%;
+    height: 15vh;
+    padding-top: 1%;
 }
+
+/* round pages css */
+
+.quizCopy {
+    margin: 2%;
+    line-height: 200%;
+    padding: 5%;
+    border-radius: 5px;
+    background-color: rgb(240, 248, 255, 0.8);
+    color: black;
+    text-align: center;
+}
+
+/* round buttons css */
+
+.roundButtonsComponent {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-content: center;
+  padding: 10px;
+  margin: 2%;
+  border-style: inset;
+  width: 95%;
+}
+
+.roundButton {
+  position: relative;
+  margin: 5px;
+  overflow: hidden;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.buttonImage {
+  display: block;
+  opacity: 0.8;
+  transition: opacity 0.3s ease-in-out;
+  position: relative;
+  margin: 5px;
+  border-radius: 6px;
+  box-shadow: 5px 2px 2px rgb(10,83,200);
+  -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+  mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+  -webkit-mask-size: 800%;
+  mask-size: 800%;
+  -webkit-mask-position: 0;
+  mask-position: 0;
+}
+
+.buttonImage:hover {
+  transition: mask-position 2s ease,-webkit-mask-position 2s ease;
+  -webkit-mask-position: 120%;
+  mask-position: 120%;
+  opacity: 1;
+}
+
+.buttonText {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  color: rgb(252, 243, 176);
+  padding: 5px 10px;
+  font-size: 15px;
+  font-weight: bold;
+  transition: opacity 0.3s ease-in-out;
+  z-index: 1;
+  text-shadow:2px 2px #032687
+}
+
+.roundButton:hover .buttonImage {
+  opacity: 0.6;
+}
+
+.roundButton:hover .buttonText {
+  opacity: 1;
+}
+
+.goodDogs, .firstQuestion, .general, .allGreek, .oddOneOut, .colinCliffhanger, .productionCodes, 
+.inhuman, .howLong, .introsPop, .introsIncidental, .playedThemselves, .wheeln{
+  position: relative;
+  text-align: center;
+}
+
 
