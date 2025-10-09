@@ -1,0 +1,72 @@
+'use client'
+import React, { useState, useEffect } from "react";
+import styles from "@/app/styles/whoQuiz.module.css"
+import { Question } from "../data/questions";
+import Image from "next/image";
+import { set } from "sanity";
+
+interface QuestionProps {
+    index: number;
+  question: Question;
+  checkAnswer: (string: string) => void;
+  isAnswerCorrect: boolean | null;
+  setIsActive: (bool: boolean) =>  void;
+}
+
+const QuestionComponent = ({index, question, checkAnswer, isAnswerCorrect, setIsActive}: QuestionProps) => {
+      const [userAnswer, setUserAnswer] = useState<string>("");
+
+       const handleAnswerSubmit = () => {
+        checkAnswer(userAnswer);
+        setUserAnswer("");
+        setIsActive(false)
+    }
+
+    return ( <section className={styles.quizQuestion}>
+        <p style={{fontWeight: "bold"}}>Question {index + 1}.</p>
+        {question.question && <p>{question.question}</p>}
+        {question.image && <Image src={question.image.url} alt={question.image.alt} width={400} height={300} />}
+        {question.audio && <button onClick={() => {setIsActive(true)}}>Play Audio</button>}
+        <div className={styles.questionInput}>
+        {!question.options && (
+            <input type="text" 
+            value={userAnswer} 
+            id="input" 
+            placeholder="Type your answer here..." 
+            className={styles.textbox}
+            onChange={(e) => setUserAnswer(e.target.value)}/> 
+        )}
+        {question.options && 
+          <div className={styles.multipleChoice}>
+      { question.options.map((option, index) => (
+        <label className={styles.radio} key={index}>
+          <input
+            id="multiple-choice"
+            type="radio"
+            name="answer"
+            value={option}
+            onChange={(e) => setUserAnswer(e.target.value)}
+            checked={userAnswer === option}
+          />
+          {option}
+        </label>
+       
+      ))} </div>}
+         
+
+    <button id="submit" 
+    className={styles.buton} 
+    onClick={handleAnswerSubmit}
+    >NEXT</button>
+    </div>
+      {isAnswerCorrect === true && (
+            <p className={styles.correct}>Correct!</p>
+        )}
+        {isAnswerCorrect === false && (
+            <p className={styles.wrong} >Incorrect, sorry.</p>
+        )}
+</section>
+     );
+}
+ 
+export default QuestionComponent;

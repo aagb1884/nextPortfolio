@@ -1,16 +1,21 @@
 import React from "react";
-import { RedditShareButton, RedditIcon,
+import { 
         WhatsappShareButton, WhatsappIcon,
         EmailShareButton, EmailIcon 
     } from 'react-share';
-import styles from '@/app/styles/whoQuiz.module.css';
+import styles from '../../../styles/BFApp.module.css';
 import Image from "next/image";
 
-const SocialMediaShare = ({pitch, setShowModal}) => {
+interface Props {
+    result: string;
+    setShowModal: (bool:boolean) => void;
+}
 
-    const shareUrl = "https:/andrewblair.co.uk/apps/big-finish-generator/";
-    const shareQuote = `The new Big Finish boxset: ${pitch}.`;
-    const shareTitle = "The Big Finish Boxset Generator";
+const SocialMediaShare = ({result, setShowModal}: Props) => {
+
+    const shareUrl = "https:/andrewblair.co.uk/apps/drwhoquiz/";
+    const shareQuote = `${result}.`;
+    const shareTitle = "A Big Bunch of Doctor Who Quizzes? Each more fiendish than the last?";
 
     const bigOlShareText = `${shareTitle}:
     
@@ -36,14 +41,6 @@ const SocialMediaShare = ({pitch, setShowModal}) => {
             <h4 style={{'color': 'white'}}>Share this on your social channels.</h4>
         
         <div className={styles.socialMediaShare}>
-        <div className={styles.reddit}>
-            <RedditShareButton
-            url={shareUrl}
-            title={shareTitle}
-            >
-                <RedditIcon size={30} />
-            </RedditShareButton>
-        </div>
         <div className={styles.whatsapp}>
             <WhatsappShareButton
             url={shareUrl}

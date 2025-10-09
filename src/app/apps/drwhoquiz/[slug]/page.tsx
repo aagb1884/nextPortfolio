@@ -21,7 +21,7 @@ export default async function RoundPage({ params }: { params: { slug: string } }
     <Image src={backgroundVortex} fill={true} alt="Background Vortex" />
     </div>
     <div className={styles.drWhoQuizLanding}>
-    <PageContent round={round} />
+    <PageContent name={round.slug} round={round} />
     </div>
     <footer className={styles.whoQuizFooter}>
     <AppsFooter />
