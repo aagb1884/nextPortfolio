@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import styles from "@/app/styles/whoQuiz.module.css"
 import { Question } from "../data/questions";
 import Image from "next/image";
-import { set } from "sanity";
+import Countdown from "@/app/ui/Countdown";
 
 interface QuestionProps {
     index: number;
@@ -11,9 +11,11 @@ interface QuestionProps {
   checkAnswer: (string: string) => void;
   isAnswerCorrect: boolean | null;
   setIsActive: (bool: boolean) =>  void;
+  timeLeft: number;
+  roundScore: number;
 }
 
-const QuestionComponent = ({index, question, checkAnswer, isAnswerCorrect, setIsActive}: QuestionProps) => {
+const QuestionComponent = ({index, question, checkAnswer, isAnswerCorrect, setIsActive, timeLeft, roundScore}: QuestionProps) => {
       const [userAnswer, setUserAnswer] = useState<string>("");
 
        const handleAnswerSubmit = () => {
@@ -23,7 +25,11 @@ const QuestionComponent = ({index, question, checkAnswer, isAnswerCorrect, setIs
     }
 
     return ( <section className={styles.quizQuestion}>
-        <p style={{fontWeight: "bold"}}>Question {index + 1}.</p>
+        <div className={styles.infoRow}>
+            <Countdown timeLeft={timeLeft}/>
+              <p style={{fontWeight: "bold"}}>Question {index + 1}.</p>
+            <p>Score: {roundScore}</p>
+        </div>
         {question.question && <p>{question.question}</p>}
         {question.image && <Image src={question.image.url} alt={question.image.alt} width={400} height={300} />}
         {question.audio && <button onClick={() => {setIsActive(true)}}>Play Audio</button>}

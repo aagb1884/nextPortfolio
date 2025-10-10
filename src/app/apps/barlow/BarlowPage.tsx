@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import Modal from './components/modal';
 import LoseModal from './components/lose';
 import RestartBtn from './components/restart';
-import Countdown from './components/countdown';
+import Countdown from '@/app/ui/Countdown';
 import StartModal from './components/startModal';
 import Score from './components/score';
 import BarlowFlicker from './components/flickerImg';

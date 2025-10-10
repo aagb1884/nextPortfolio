@@ -12,6 +12,7 @@ export const roundBtns: roundBtn[] = [
     {style: "colinCliffhanger", link: "colin-cliffhanger", src: "/images/drWhoQuiz/button_images/colin_cliffhanger.jpeg", alt: "The Cliffhanger Faces of Colin Baker round button", text: "Colin's Cliffhanger Faces"},
     {style: "introsPop", link: "intros-pop", src: "/images/drWhoQuiz/button_images/tainted_love.gif", alt: "Pop Intros round button", text: "Intros - Pop"},
     {style: "general", link: "general", src: "/images/drWhoQuiz/button_images/general_knowledge.jpg", alt: "General Knowledge round button", text: "General Knowledge"},
+    {style: "generals", link: "generals", src: "/images/drWhoQuiz/button_images/Finch_General.jpeg", alt: "Knowledge of Generals round button", text: "Knowledge of Generals"},
     {style: "oddOneOut", link: "odd-one-out", src: "/images/drWhoQuiz/button_images/odd_one_out.jpg", alt: "Odd One Out round button", text: "Odd One Out"},
     {style: "goodDogs", link: "good-dogs", src: "/images/drWhoQuiz/button_images/good_dog.jpeg", alt: "Good dogs round button", text: "They're Good Dogs"},
     {style: "inhuman", link: "inhuman", src: "/images/drWhoQuiz/button_images/theyre_inhuman.png", alt: "Inhuman round button", text: "They're Inhuman"},

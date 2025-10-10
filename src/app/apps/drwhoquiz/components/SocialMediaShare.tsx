@@ -17,11 +17,11 @@ const SocialMediaShare = ({result, setShowModal}: Props) => {
     const shareQuote = `${result}.`;
     const shareTitle = "A Big Bunch of Doctor Who Quizzes? Each more fiendish than the last?";
 
-    const bigOlShareText = `${shareTitle}:
+    const bigOlShareText = `${shareTitle}
     
     ${shareQuote}
     
-    Generate yours at ${shareUrl}`
+    Try yourself at ${shareUrl}`
 
     const handleCopyClick = async () => {
         try {

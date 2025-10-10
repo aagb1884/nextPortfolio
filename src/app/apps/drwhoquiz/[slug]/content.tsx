@@ -6,7 +6,9 @@ import styles from "@/app/styles/whoQuiz.module.css"
 import QuestionComponent from "../components/Question";
 import ShareButton from "../../big-finish-generator/bf_components/ShareButton";
 import SocialMediaShare from "../components/SocialMediaShare";
-
+import Header from "../components/header";
+import InstructionsModal from "../components/InstructionsModal";
+import CreditsModal from "../components/CreditsModal";
 
 interface PageContentProps {
   round: Round;
@@ -22,38 +24,14 @@ const PageContent = ({round, name}: PageContentProps) => {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
     const [roundScore, setRoundScore] = useState<number>(0);
     const [showModal, setShowModal] = useState<boolean>(false);
+    const [showInstructionsModal, setShowInstructionsModal] = useState<boolean>(false);
+    const [showCreditModal, setShowCreditModal] = useState<boolean>(false);
      const [isActive, setIsActive] = useState<boolean>(false);
-  
-    //audio
-  
-    const audioRef = useRef<HTMLAudioElement | null>(null);
+     const [duration, setDuration] = useState<number>(60)
+  const [timeLeft, setTimeLeft] = useState<number>(60);
 
-// When currentQuestionIndex changes, update the audio
-useEffect(() => {
-  if (typeof window !== 'undefined') {
-    const newAudio = new Audio(round.questions[currentQuestionIndex].audio);
-    audioRef.current = newAudio;
-  }
-}, [currentQuestionIndex]);
 
-// Handle playback when isActive changes
-useEffect(() => {
-  const audio = audioRef.current;
-  if (audio && isActive) {
-    audio.play();
-  } else if (audio && !isActive) {
-    audio.pause();
-    audio.currentTime = 0;
-  }
-
-  return () => {
-    if (audio) {
-      audio.pause();
-      audio.currentTime = 0;
-    }
-  };
-}, [isActive]);
-
+// question and answer handling
     
       const set10Questions = (array: Question[]) => {
         const ten = [...array].sort(() => Math.random() - 0.5).slice(0, 10)
@@ -80,12 +58,13 @@ useEffect(() => {
             (correctAnswers.includes(answer) ||
             lowercaseAnswers.includes(answer)) && answer.trim() !== ''
           ) {
-            setRoundScore(roundScore + 1);
+            setRoundScore(roundScore + timeLeft);
             setIsAnswerCorrect(true);
+            handleAnswer();
           } else {
             setIsAnswerCorrect(false);
           }
-          handleAnswer();
+          
       };
 
       
@@ -94,16 +73,16 @@ useEffect(() => {
     const currentQuestion = quizRound[currentQuestionIndex];
     return (
       <div className={`${name}_question`}>
+      
          <QuestionComponent
+         timeLeft={timeLeft}
         index={currentQuestionIndex}
           question={currentQuestion}
           checkAnswer={checkAnswer}
           isAnswerCorrect={isAnswerCorrect}
           setIsActive={setIsActive}
-        />
-        <br />
-        <br />
-        {/* <Countdown key={currentQuestionIndex} /> */}
+          roundScore={roundScore}
+        />       
       </div>
     );
   };
@@ -112,23 +91,87 @@ useEffect(() => {
     setCurrentQuestionIndex(0)
     set10Questions(round.questions)
     setIsActive(false)
+    
   }
 
-  const result = `I played ${round.name} and scored ${roundScore}/10`
+
+  //timer 
+  const handleSetDuration = (): void => {
+      if (typeof duration === "number" && duration > 0) {
+        setTimeLeft(duration);
+      }
+    };
+
+    useEffect(() => {
+    handleSetDuration();
+  }, [duration])
+  
+  useEffect(() => {
+   const timerId = setInterval(() => {
+    setTimeLeft((prev) => prev - 1);
+  }, 1000);
+
+  return () => clearInterval(timerId);
+  }, [])
+
+  useEffect(() => {
+  if (timeLeft <= 0) {
+    setCurrentQuestionIndex((prev) => prev + 1);
+    setTimeLeft(duration); }
+}, [timeLeft]);
+
+  useEffect(() => {
+  setTimeLeft(duration);
+}, [currentQuestionIndex]);
+
+
+    //audio
+  
+    const audioRef = useRef<HTMLAudioElement | null>(null);
+
+useEffect(() => {
+  if (typeof window !== 'undefined') {
+    const newAudio = new Audio(round.questions[currentQuestionIndex].audio);
+    audioRef.current = newAudio;
+  }
+}, [currentQuestionIndex]);
+
+useEffect(() => {
+  const audio = audioRef.current;
+  if (audio && isActive) {
+    audio.play();
+  } else if (audio && !isActive) {
+    audio.pause();
+    audio.currentTime = 0;
+  }
+
+  return () => {
+    if (audio) {
+      audio.pause();
+      audio.currentTime = 0;
+    }
+  };
+}, [isActive]);
+
+  const result = `I played the "${round.name}" round and scored ${roundScore}`
 
 
     return ( 
+      <>
+      <Header setShowCredit={setShowCreditModal} setShowInstructions={setShowInstructionsModal}/>
     <div className={styles.quizCopy}>
         {showModal && <SocialMediaShare result={result} setShowModal={setShowModal}/>}
+        {showInstructionsModal && <InstructionsModal setModalOpen={setShowInstructionsModal}/>}
+        {showCreditModal && <CreditsModal setModalOpen={setShowCreditModal}/>}
       <h1>{round.name}</h1>
       {round.copy && <p>{round.copy}</p>}
-      {round.hint && <aside>{round.hint}</aside>}
+      {round.hint && <aside className={styles.aside}>{round.hint}</aside>}
       {!showQuiz && !roundOver && <button onClick={() => {set10Questions(round.questions)}}>Start Quiz</button>}
        <div>
         {showQuiz && renderQuiz()}
         {!showQuiz && roundOver && (
         <div className={styles.quizOver}>
-          <p>Round Completed! You scored {roundScore}/10</p> 
+          <p>Round Completed! You scored {roundScore}</p> 
           <ShareButton setShowModal={setShowModal} showModal={showModal} />
           <button onClick={() => reset()}>Try Again?</button> 
           
@@ -137,6 +180,7 @@ useEffect(() => {
       </div>
       <Link href={"/apps/drwhoquiz"}>Back to Quizzes</Link>
      </div>
+     </>
      );
 }
  
