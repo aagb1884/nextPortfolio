@@ -14,6 +14,8 @@ const CreditsModal: React.FC<modalProps> = ({setModalOpen}) => {
         <p className={styles.sModalTxt}><i>Doctor Who</i>, <i>Torchwood</i>, <i>The Sarah Jane Adventures</i> and <i>K9 and Company</i> are copyright of the BBC.</p>
         <p className={styles.sModalTxt}>The TARDIS is a trademark of the BBC.</p>
         <p className={styles.sModalTxt}>The Daleks are a trademark of the Terry Nation Estate.</p>
+        <br />
+        <p className={styles.sModalTxt}>All information probably correct as of November 2025.</p>
         <button className={styles.btn}
         onClick={() => setModalOpen(false)}>
         Close</button>

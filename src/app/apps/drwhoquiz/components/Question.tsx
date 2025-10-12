@@ -1,7 +1,7 @@
 'use client'
 import React, { useState, useEffect } from "react";
 import styles from "@/app/styles/whoQuiz.module.css"
-import { Question } from "../data/questions";
+import { Question, CyberQuestion } from "../data/questions";
 import Image from "next/image";
 import Countdown from "@/app/ui/Countdown";
 
@@ -44,7 +44,7 @@ const QuestionComponent = ({index, question, checkAnswer, isAnswerCorrect, setIs
         )}
         {question.options && 
           <div className={styles.multipleChoice}>
-      { question.options.map((option, index) => (
+      {question.options.map((option, index) => (
         <label className={styles.radio} key={index}>
           <input
             id="multiple-choice"
@@ -58,7 +58,6 @@ const QuestionComponent = ({index, question, checkAnswer, isAnswerCorrect, setIs
         </label>
        
       ))} </div>}
-         
 
     <button id="submit" 
     className={styles.buton} 

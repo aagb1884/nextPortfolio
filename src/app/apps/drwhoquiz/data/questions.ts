@@ -11,12 +11,30 @@ export interface Question {
         audio?: string;
     }
 
+export interface plotPoint {
+  id: number;
+  point: string;
+}
+
+export interface CyberQuestion {
+  story: string;
+  plot: plotPoint[]
+}
+
+export interface CyberRound {
+  name: string;
+  slug: string;
+  copy?: string;
+  hint?: string;
+  questions: CyberQuestion[];
+}
+
 export interface Round {
   name: string;
   slug: string;
   copy?: string;
   hint?: string;
-  questions: Question[]
+  questions: Question[];
 }
 
 export const rounds: Round[] = [
@@ -46,6 +64,12 @@ export const rounds: Round[] = [
         {question: "Name one of the two non-festive episodes that feature 'Merry Xmas Everybody' by Slade.", answers: ["Turn Left", "Power of Three"]},
         {question: "Name a story that features a T-Rex.", answers: ["Doctor Who and the Silurians", "The Silurians", "Invasion of the Dinosaurs", "Dinosaurs on a Spaceship", "Deep Breath"]},
         {question: "What was the name of the event that led to a 're-negotiation of the sheep-human relationship'?", answers: ["Woolly Rebellion", "The Woolly Rebellion"]},
+        {question: "What dance does Tegan do in 'Black Orchid'?", answers: ["Charleston", "The Charleston"]},
+        {question: "What type of curry does Sylvia Noble make?", answers: ["Tuna Madras"]},
+        {question: "What episode opens by depicting the invention of television?", answers: ["The Giggle"]},
+        {question: "In which story does the Doctor put on a German accent and smash a clerk's head off a table? ", answers: ["The Highlanders"]},
+        {question: "What foodstuff is the War Doctor introduced to in 'The Day of the Doctor'? ", answers: ["Cup a soup", "Cup-a-soup"]},
+        {question: "In what episode does the last surviving member of the Freedom Fifteen appear?", answers: ["The Long Game"]},
     ]
 },
     {   name: "Knowledge of Generals",
@@ -70,6 +94,7 @@ export const rounds: Round[] = [
         {question: "Who was given the job of setting up UNIT?", answers: ["General Farquhar", "Farquhar"]},
         {question: "Who did the Doctor suppose 'came up through the ranks'?", answers: ["General Chellak", "Chellak"]},
         {question: "What rank was General Williams when he accidentally ignited the Human-Draconian war?", answers: ["Lieutenant"]},
+        {question: "Guy Siner, who played General Ravon in 'Genesis of the Daleks', later found fame in which sitcom?", answers: ["Allo Allo", "'Allo! 'Allo!"]},
     ]
 },
 {
@@ -91,6 +116,9 @@ export const rounds: Round[] = [
             {question: "Dog who remains unbothered when his landlord owner disappears in 'Night Terrors'. Shares his name with a unit of measurement.", answers: ["Bernard"]},
             {question: "In 'Image of the Fendahl' what does Colby's dog Leakey find?", answers: ["Dead body", "dead guy", "dead man", "corpse"]},
             {question: "Who invented K9?", answers: ["Marius", "Professor Marius"]},
+            {question: "In Victorian London, what did the Cybermen convert dogs into?", answers: ["Cybershades"]},
+            {question: "What was the onomatopoeic name of the robot dog the Doctor when working at a department store in 'Closing Time'?", answers: ["Yappy"]},
+            {question: "True or false: there are dogs in the human colony on Vulcan in 'Power of the Daleks'?", answers: ["True"]},
         ]   
 },
 {
@@ -103,7 +131,7 @@ export const rounds: Round[] = [
             {question: "What is the name of the Ood that reaches out to the Doctor and Donna in 'Planet Of The Ood'?", answers: ["Sigma", "Ood Sigma"]},
             {question: "Which letter of the alphabet connects 'Kinda', 'The Parting Of The Ways' and a Season 24 story?", answers: ["Delta"]},
             {question: "What is the name of the planet of evil in 'Planet Of Evil'?", answers: ["Zeta Minor"]},
-            {question: "What names does the Doctor give the humanised Daleks in 'Evil of the Daleks'?", answers: ["Alpha, Beta, Omega", "Alpha Beta Omega", "Alpha, Beta and Omega", "Beta Omega Alpha", "Omega Beta Alpha"]},
+            {question: "Name one of the humanised Daleks in 'Evil of the Daleks'?", answers: ["Alpha", "Beta", "Omega"]},
             {question: "In 'A Good Man Goes To War', what is the name of Lorna Bucket's pondless, river-y homeland?", answers: ["Gamma Forest"]},
             {question: "Which character is played by Jonathan Bailey in 'Time Heist'?", answers: ["Psi"]},
             {question: "On which human colony is it illegal to be unhappy?", answers: ["Terra Alpha"]},
@@ -113,7 +141,16 @@ export const rounds: Round[] = [
             {question: "Which three-time TV baddy was K9 to battle in the unproduced movie spin-off K9: Timequake?", answers: ["Omega"]},
             {question: "Where was the Dominator ship on course for before it landed on Dulkis?", answers: ["Epsilon"]},
             {question: "Which letter of the alphabet is a Judoon most likely to say?", answers: ["Rho"]},
+            {question: "What star system were Cessair of Diplos and the Ogri from?", answers: ["Tau Ceti"]},
             {question: "What was the name of the evil corporation in 'Torchwood: Miracle Day'?", answers: ["Phicorp"]},
+            {question: "Which character from 'Vengeance on Varos' is a homonym of Ηη?", answers: ["Etta"]},
+            {question: "How might the soldiers of the Ninth Legion write the number for Sarah Jane Smith and the Thirteenth Doctor's debut seasons?", answers: ["XI"]},
+            {question: "Which bureaucrat was sent to investigate disappearances under Helen A's regime?", answers: ["Trevor Sigma"]},
+            {question: "What sonic screwdriver setting breaks through artificial ivy?", answers: ["Theta Omega"]},
+            {question: "What type of blaster did River Song threaten and destroy a Dalek with?", answers: ["Alpha Meson"]},
+            {question: "What was the name of the planet of the Mentors in 'Mindwarp'? ", answers: ["Thoros Beta"]},
+            {question: "What did the Tenth Doctor claim to have invented on Queen Elizabeth II's coronation day? ", answers: ["Betamax"]},
+            {question: "True or false: the word 'iota' does not appear in televised Doctor Who.", answers: ["True"]},
         ]   
 },
 {
@@ -132,9 +169,15 @@ export const rounds: Round[] = [
             {question: "…does the Davison era opening title sequence last (seconds)?", answers: ["36"]},
             {question: "…did Terrence Dicks script edit the show for (years)?", answers: ["6"]},
             {question: "…between the guard saying he had a boyfriend and the guard getting killed in Resolution (seconds)?", answers: ["10"]},
+            {question: "…between Carole Ann Ford's last two onscreen appearances as Susan? (years)?", answers: ["43"]},
+            {question: "...was the Fourth Doctor's scarf when he was searching for the Key to Time (feet)?", answers: ["18"]},
+            {question: "...does Kerblam employees paid leave last when operations are suspended for a month? (weeks)", answers: ["2"]},
+            {question: "...is the long game we first see in 'The Long Game' (years)?", answers: ["100"]},
+            {question: "…does Rose say she'll be at the end of 'World War Three' (seconds)?", answers: ["10"]},
         
         ]   
 },
+
 {
         name: "You Played Yourself",
         slug: "played-themselves",
@@ -156,6 +199,11 @@ export const rounds: Round[] = [
             {question: "Killed by Cybermen while presenting 'Ghostwatch'.", answers: ["Alastair Appleton"]},
             {question: "Jazz musician whose gig the Doctor and Ace go to.", answers: ["Courtney Pine"]},
             {question: "A newsreader across three decades, who also reported on War Machine attacks in Sixties London.", answers: ["Kenneth Kendall"]},
+            {question: "Former X-Factor judge who appeared endorsing a murderous psychopath.", answers: ["Sharon Osborne"]},
+            {question: "She interviewed Conrad Clark on 'The One Show'.", answers: ["Alex Jones"]},
+            {question: "In 2925 he is released from cryogenic suspension.", answers: ["Rylan Clark", "Rylan"]},
+            {question: "Comedian and presenter who briefly appeared in 'Lucky Day' insulting Jonathan Ross.", answers: ["Joel Dommett"]},
+            {question: "He interviewed Roger ap Gwilliam, asking if he wanted to fire a nuclear weapon.", answers: ["Amol Rajan"]},
         ]   
 },
 {
@@ -239,6 +287,7 @@ export const rounds: Round[] = [
             {question: "Rose", answers: ["Clive"]},
             {question: "The Girl in the Fireplace", answers: ["Reinette", "Madame de Pompadour", "Jeanne-Antoinette Poisson"]},
             {question: "The Impossible Astronaut", answers: ["Charles II", "Charles the Second", "Charles Second", "Charles", "King Charles II"]},
+            {question: "Black Orchid", answers: ["Lady Cranleigh"]},
         ]   
 },
 {
@@ -334,6 +383,16 @@ export const rounds: Round[] = [
                 answers: ['The Ribos Operation']},
             {question: "Which of these Doctor Who actors has not voiced a character in Wallace and Gromit?", options: ['Mark Gattiss', 'Adjoa Anjoh', 'Sanjeev Bhaskar', 'Anne Reid'], answers: ["Sanjeev Bhaskar"]},
             {question: "Which of these is not a name created by Chris Chibnall?",  options: ['Qurunx', 'Feekat', 'Awsok', 'Ekzor'], answers: ["Ekzor"]},
+            {question: "Which of these Doctor Who stories doesn't feature an actor who appeared in 'Father Ted'?",  
+              options: ['The Next Doctor', 'The Interstellar Song Contest', 'Ascension of the Cybermen', 'Horror of Fang Rock'], answers: ["Ascension of the Cybermen"]},
+            {question: "Which of these underground stations hasn't featured in an episode of Doctor Who?",  
+              options: ['Canary Wharf', 'Novosibirsk', 'Covent Garden', 'White City'], answers: ["Canary Wharf"]},
+            {question: "Which of these stories does not feature Autons?",  
+              options: ['Spearhead from Space', 'The Five Doctors', 'Rose', 'The Pandorica Opens'], answers: ["The Five Doctors"]},
+            {question: "Who has not acted in both Doctor Who and a Paddington fllm?",  
+              options: ['Kayvan Novak', 'Alexander Armstrong', 'Geoffrey Palmer', 'Jessica Hynes'], answers: ["Alexander Armstrong"]},
+            {question: "Which of these actors played a character who survived til the end of the story?",  
+              options: ['Geoffrey Palmer', 'Paul Darrow', 'Janet Henfrey', 'Michael Sheard'], answers: ["Michael Sheard"]},
         ]  
 },
 {
@@ -416,7 +475,87 @@ export const rounds: Round[] = [
                     'The Aztecs, The Chase, Planet of the Giants, Edge of Destruction, The Time Meddler, An Unearthly Child, The Massacre, An Unearthly Child, The Chase, Marco Polo', 
                     "You can't spell 'Eric Saward' with production codes"],
           answers: ["You can't spell 'Eric Saward' with production codes"],
-        }
+        },
+         {
+          question: "Which episode's production code is also the name of an Australian beer?",
+          options: ['Image of the Fendahl', 
+                    'Forest of the Dead', 
+                    'The Next Doctor', 
+                    "The Invasion of Time"],
+          answers: ["Image of the Fendahl"],
+        },
+         {
+          question: "Which story's production code is 5.6/5?",
+          options: ['The Lodger', 
+                    'Survival', 
+                    'Army of Ghosts', 
+                    "Bad Wolf"],
+          answers: ["Bad Wolf"],
+        },
+         {
+          question: "Which story's production code sounds like someone sleeping?",
+          options: ['The Celestial Toymaker', 
+                    'The Space Pirates', 
+                    'Planet of the Spiders', 
+                    "The Keeper of Traken"],
+          answers: ["Planet of the Spiders"],
+        },
+         {
+          question: "Which two stories share the production code 7C?",
+          options: ['The Awakening/Frontios', 
+                    'Terror of the Vervoids/The Ultimate Foe', 
+                    'Delta and the Bannermen/Dragonfire', 
+                    "Dinosaurs on a Spaceship/A Town Called Mercy"],
+          answers: ["Terror of the Vervoids/The Ultimate Foe"],
+        },
+         {
+          question: "Which story has the production code they ask you to say at the dentist?",
+          options: ['The Space Pirates', 
+                    'The War Games', 
+                    'Spearhead from Space', 
+                    "Doctor Who and the Silurians"],
+          answers: ["Spearhead from Space"],
+        },
+         {
+          question: "Which two stories have production codes that spell out what's inside the moon?",
+          options: ['The Keys of Marinus, The Highlanders', 
+                    'The Keys of Marinus, The Underwater Menace', 
+                    'The Aztecs, The Underwater Menace', 
+                    "The Sensorites, The Highlanders"],
+          answers: ["The Keys of Marinus, The Underwater Menace"],
+        },
+         {
+          question: "If H From Steps was known based on the corresponding Doctor Who story, would he be called:",
+          options: ['The Aztecs from Steps', 
+                    'The Sensorites from Steps', 
+                    'The Reign of Terror from Steps', 
+                    "The Dalek Invasion of Earth from Steps"],
+          answers: ["The Reign of Terror from Steps"],
+        },
+         {
+          question: "What stories' production codes spell 'HELP'?",
+          options: ['The Sensorites, The Keys of Marinus, The Romans, The Crusade', 
+                    'The Reign of Terror, The Keys of Marinus, The Rescue, The Crusade', 
+                    'Planet of Giants, The Aztecs, The Romans, The Crusade', 
+                    "The Sensorites, The Aztecs, The Rescue, The Web Planet"],
+          answers: ["The Reign of Terror, The Keys of Marinus, The Rescue, The Crusade"],
+        },
+         {
+          question: "What was the production code for the first Fifith Doctor story, 'Castrovalva'?",
+          options: ['5A', 
+                    '5.1', 
+                    '5.4', 
+                    "5Z"],
+          answers: ["5Z"],
+        },
+         {
+          question: "What stories' production codes spell 'Ace'?",
+          options: ['An Unearthly Child, The Edge of Destruction, The Keys of Marinus', 
+                    'An Unearthly Child, Marco Polo, The Keys of Marinus', 
+                    'An Unearthly Child, The Edge of Destruction, The Aztecs', 
+                    "An Unearthly Child, Marco Polo, The Aztecs"],
+          answers: ["An Unearthly Child, The Edge of Destruction, The Keys of Marinus"],
+        },
         ]  
 },
 {
@@ -496,7 +635,60 @@ export const rounds: Round[] = [
         ]  
 },
 
+
       ];
 
 
-   
+  export const LogicalRound: CyberRound = {
+        name: "Logical",
+        slug: "logical",
+        copy: "You will be given the name of a Cyberman story, and a breakdown of their plan in that story in random order.",
+        hint: "Your job is to put their plan into the correct order. You have sixty (60) seconds.",        
+        questions: [
+            {story: 'The Wheel in Space', plot: [  
+              {id: 1,  point: "The Cybermen decide they need the Earth's mineral wealth."},
+              {id: 2,  point: "The Cybermen get some Bernalium, I guess."},
+              {id: 3,  point: "The Cybermen take control of the Silver Carrier, a supply vessel, and set it drifting off course with a servo robot on board."},
+              {id: 4,  point: "When the Doctor and Jamie board the vessel, the robot detects them and pilots the Silver Carrier towards the titular scientific, non-military space station."},
+              {id: 5,  point: "The robot also sends some white pods containing Cybermats towards the titular scientific, non-military space station."},
+              {id: 6,  point: "The Cybermats will destroy the titular scientific, non-military space station's Bernalium, which powers their defensive laser."},
+              {id: 7,  point: "The Cybermen send a star nova so that the crew of the titular scientific, non-military space station will need to fire their defensive laser."},
+              {id: 8,  point: "The titular scientific, non-military space station will realise they are out of Bernalium."},
+              {id: 9,  point: "The titular scientific, non-military space station will absolutely have to try boarding the Silver Carrier in case there is some Bernalium on board."},
+              {id: 10,  point: "Cybermen hidden on board the Silver Carrier will then take over the minds of whoever is sent to investigate so that they can take the Cybermen to the titular scientific, non-military space station hidden in Bernalium crates."},
+              {id: 11,  point: "The Cybermen then repair the laser so that the meteors from the exploding star don't hit the titular scientific, non-military space station, as they need to use it as a homing beacon for the Cyberfleet."},
+              {id: 12,  point: "The Cybermen invade the Earth!"},
+        ]  
+},
+            {story: 'The Moonbase', plot: [  
+              {id: 1,  point: "The Cybermen decide they need the Earth's mineral wealth."},
+              {id: 2,  point: "The Cybermen get some Bernalium, I guess."},
+              {id: 3,  point: "The Cybermen take control of the Silver Carrier, a supply vessel, and set it drifting off course with a servo robot on board."},
+              {id: 4,  point: "When the Doctor and Jamie board the vessel, the robot detects them and pilots the Silver Carrier towards the titular scientific, non-military space station."},
+              {id: 5,  point: "The robot also sends some white pods containing Cybermats towards the titular scientific, non-military space station."},
+              {id: 6,  point: "The Cybermats will destroy the titular scientific, non-military space station's Bernalium, which powers their defensive laser."},
+              {id: 7,  point: "The Cybermen send a star nova so that the crew of the titular scientific, non-military space station will need to fire their defensive laser."},
+              {id: 8,  point: "The titular scientific, non-military space station will realise they are out of Bernalium."},
+              {id: 9,  point: "The titular scientific, non-military space station will absolutely have to try boarding the Silver Carrier in case there is some Bernalium on board."},
+              {id: 10,  point: "Cybermen hidden on board the Silver Carrier will then take over the minds of whoever is sent to investigate so that they can take the Cybermen to the titular scientific, non-military space station hidden in Bernalium crates."},
+              {id: 11,  point: "The Cybermen then repair the laser so that the meteors from the exploding star don't hit the titular scientific, non-military space station, as they need to use it as a homing beacon for the Cyberfleet."},
+              {id: 12,  point: "The Cybermen invade the Earth!"},
+        ]  
+},
+            {story: 'Earthshock', plot: [  
+              {id: 1,  point: "The Cybermen decide they need the Earth's mineral wealth."},
+              {id: 2,  point: "The Cybermen get some Bernalium, I guess."},
+              {id: 3,  point: "The Cybermen take control of the Silver Carrier, a supply vessel, and set it drifting off course with a servo robot on board."},
+              {id: 4,  point: "When the Doctor and Jamie board the vessel, the robot detects them and pilots the Silver Carrier towards the titular scientific, non-military space station."},
+              {id: 5,  point: "The robot also sends some white pods containing Cybermats towards the titular scientific, non-military space station."},
+              {id: 6,  point: "The Cybermats will destroy the titular scientific, non-military space station's Bernalium, which powers their defensive laser."},
+              {id: 7,  point: "The Cybermen send a star nova so that the crew of the titular scientific, non-military space station will need to fire their defensive laser."},
+              {id: 8,  point: "The titular scientific, non-military space station will realise they are out of Bernalium."},
+              {id: 9,  point: "The titular scientific, non-military space station will absolutely have to try boarding the Silver Carrier in case there is some Bernalium on board."},
+              {id: 10,  point: "Cybermen hidden on board the Silver Carrier will then take over the minds of whoever is sent to investigate so that they can take the Cybermen to the titular scientific, non-military space station hidden in Bernalium crates."},
+              {id: 11,  point: "The Cybermen then repair the laser so that the meteors from the exploding star don't hit the titular scientific, non-military space station, as they need to use it as a homing beacon for the Cyberfleet."},
+              {id: 12,  point: "The Cybermen invade the Earth!"},
+        ]  
+},
+        ]
+}

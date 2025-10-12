@@ -21,5 +21,6 @@ export const roundBtns: roundBtn[] = [
     {style: "productionCodes", link: "production-codes", src: "/images/drWhoQuiz/button_images/production_codes.png", alt: "Production Codes round button", text: "Seize the Codes of Production"},
     {style: "introsIncidental", link: "intros-incidental", src: "/images/drWhoQuiz/button_images/incidental_music.jpeg", alt: "Incidental Intros round button", text: "Intros - Incidental Music"},
     {style: "playedThemselves", link: "played-themselves", src: "/images/drWhoQuiz/button_images/played_yourself.png", alt: "You've Played Yourself round button", text: "You've Played Yourself"},
-    {style: "howLong", link: "how-long", src: "/images/drWhoQuiz/button_images/how_long.png", alt: "How Long... round button", text: "How Long..."}
+    {style: "howLong", link: "how-long", src: "/images/drWhoQuiz/button_images/how_long.png", alt: "How Long... round button", text: "How Long..."},
+    {style: "logical", link: "logical", src: "/images/drWhoQuiz/button_images/controller.jpg", alt: "Logical... round button", text: "Our Race is also logical"}
 ]
