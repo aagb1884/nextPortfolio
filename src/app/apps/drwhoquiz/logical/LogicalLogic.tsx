@@ -119,7 +119,6 @@ useEffect(() => {
       });
   
     setCorrectStates(newCorrectStates);
-    const score = Object.values(newCorrectStates).filter((isCorrect) => isCorrect).length;
     setRoundScore(timeLeft);
     setRoundOver(true)
     setShowQuiz(false)
