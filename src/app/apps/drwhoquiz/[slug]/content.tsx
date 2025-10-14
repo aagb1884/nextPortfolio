@@ -67,8 +67,6 @@ const PageContent = ({round, name}: PageContentProps) => {
           
       };
 
-      
-
     const renderQuiz = () => {
     const currentQuestion = quizRound[currentQuestionIndex];
     return (
@@ -76,6 +74,7 @@ const PageContent = ({round, name}: PageContentProps) => {
       
          <QuestionComponent
          timeLeft={timeLeft}
+         skip={handleAnswer}
         index={currentQuestionIndex}
           question={currentQuestion}
           checkAnswer={checkAnswer}
@@ -91,9 +90,7 @@ const PageContent = ({round, name}: PageContentProps) => {
     setCurrentQuestionIndex(0)
     set10Questions(round.questions)
     setIsActive(false)
-    
   }
-
 
   //timer 
   const handleSetDuration = (): void => {
@@ -164,7 +161,7 @@ useEffect(() => {
         {showInstructionsModal && <InstructionsModal setModalOpen={setShowInstructionsModal}/>}
         {showCreditModal && <CreditsModal setModalOpen={setShowCreditModal}/>}
       <h1>{round.name}</h1>
-      {round.copy && <p>{round.copy}</p>}
+      {round.copy && <p className={styles.copy}>{round.copy}</p>}
       {round.hint && <aside className={styles.aside}>{round.hint}</aside>}
       {!showQuiz && !roundOver && <button onClick={() => {set10Questions(round.questions)}}>Start Quiz</button>}
        <div>
@@ -178,8 +175,9 @@ useEffect(() => {
         </div>  
         )}
       </div>
-      <Link href={"/apps/drwhoquiz"}>Back to Quizzes</Link>
+      <Link className={styles.link} href={"/apps/drwhoquiz"}>Back to Quizzes</Link>
      </div>
+     <input type="hidden" onSubmit={() => {setDuration(60)}} />
      </>
      );
 }

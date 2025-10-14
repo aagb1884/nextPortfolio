@@ -2,13 +2,16 @@
 import { DndContext, DragEndEvent, KeyboardSensor, PointerSensor, TouchSensor, closestCenter, useSensor, useSensors } from "@dnd-kit/core";
 import { SortableContext, arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
 import styles from "@/app/styles/whoQuiz.module.css"
-import { useState } from "react";
+import Link from "next/link";
+import { useState, useEffect } from "react";
 import { CyberQuestion, CyberRound, plotPoint } from "../data/questions";
 import SocialMediaShare from "../components/SocialMediaShare";
 import InstructionsModal from "../components/InstructionsModal";
 import CreditsModal from "../components/CreditsModal";
 import Header from "../components/header";
-import SortablePlotPoint from "./SortablePlotPoint"
+import SortablePlotPoint from "./SortablePlotPoint";
+import Countdown from "@/app/ui/Countdown";
+import ShareButton from "../../big-finish-generator/bf_components/ShareButton";
 
 interface LogicProps {
     round: CyberRound;
@@ -24,22 +27,32 @@ const LogicalLogic = ({round}:LogicProps) => {
     const [showQuiz, setShowQuiz] = useState<boolean>(false)
     const [roundOver, setRoundOver] = useState<boolean>(false)
     const [correctStates, setCorrectStates] = useState<Record<number, boolean>>({});
+    const [duration, setDuration] = useState<number>(120)
+    const [timeLeft, setTimeLeft] = useState<number>(120);
 
     function randomisePlotPoints(array: plotPoint[]){
-    setPlotPoints([...array]
-    .map(value => ({value, sort: Math.random()}))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value))
+        setPlotPoints([...array]
+        .map(value => ({value, sort: Math.random()}))
+        .sort((a, b) => a.sort - b.sort)
+        .map(({ value }) => value))
   } 
 
-      const shuffleArray = (array: CyberQuestion[]) => {
-              const shuffPlot = [...array].sort(() => Math.random() - 0.5).slice(0, 1)
-              setCurrentStory(shuffPlot)
-              randomisePlotPoints(currentStory[0].plot)
-              setShowQuiz(true)
-            }
+    const shuffleArray = (array: CyberQuestion[]) => {
+        const shuffPlot = [...array].sort(() => Math.random() - 0.5).slice(0, 1)
+        setCurrentStory(shuffPlot)
+        }
 
-      console.log(plotPoints.map((point) => point))
+  useEffect(() => {
+  if (round?.questions?.length) {
+    shuffleArray(round.questions);
+  }
+}, [round]);
+
+useEffect(() => {
+  if (currentStory.length > 0 && currentStory[0]?.plot) {
+    randomisePlotPoints(currentStory[0].plot);
+  }
+}, [currentStory]);
 
 
     //dnd functions
@@ -59,34 +72,92 @@ const LogicalLogic = ({round}:LogicProps) => {
           return
         }
         setPlotPoints(stories=>{
-          const itemOriginalPos = stories.findIndex((item)=>item.order===active.id)
-          const itemNewPos = stories.findIndex((item)=>item.order===over?.id)
+          const itemOriginalPos = stories.findIndex((item)=>item.id===active.id)
+          const itemNewPos = stories.findIndex((item)=>item.id===over?.id)
     
           return arrayMove(stories, itemOriginalPos, itemNewPos)
         })
       }
 
 
-    
+        //timer 
+        const handleSetDuration = (): void => {
+            if (typeof duration === "number" && duration > 0) {
+              setTimeLeft(duration);
+            }
+          };
+      
+        useEffect(() => {
+          handleSetDuration();
+        }, [duration])
+        
+        useEffect(() => {
+         const timerId = setInterval(() => {
+          setTimeLeft((prev) => prev - 1);
+        }, 1000);
+      
+        return () => clearInterval(timerId);
+        }, [])
+      
+        useEffect(() => {
+        if (timeLeft <= 0) {
+          setRoundOver(true)
+        setShowQuiz(false) 
+    }
+      }, [timeLeft]);
+
+
+    // button functions
+
+  function checkAnswers(){
+    const correctOrder = [...plotPoints].sort((a, b) => a.id - b.id) 
+    console.log(correctOrder)
+    const newCorrectStates: Record<number, boolean> = {};
+ 
+    plotPoints.forEach((point, index) => {
+        newCorrectStates[point.id] = point === correctOrder[index];
+      });
+  
+    setCorrectStates(newCorrectStates);
+    const score = Object.values(newCorrectStates).filter((isCorrect) => isCorrect).length;
+    setRoundScore(timeLeft);
+    setRoundOver(true)
+    setShowQuiz(false)
+  }
+
+   const reset = () => {
+    shuffleArray(round.questions)
+    randomisePlotPoints(currentStory[0].plot)
+    setTimeLeft(120)
+    setRoundOver(false)
+    setShowQuiz(true)
+  }
 
   const result = `I played the "${round.name}" round and scored ${roundScore}`
 
     return ( 
         <>
         <Header setShowCredit={setShowCreditModal} setShowInstructions={setShowInstructionsModal} />
-         <div className={styles.quizCopy}>
-             {showModal && <SocialMediaShare result={result} setShowModal={setShowModal}/>}
+        <div className={styles.quizCopy}>
+        {showModal && <SocialMediaShare result={result} setShowModal={setShowModal}/>}
         {showInstructionsModal && <InstructionsModal setModalOpen={setShowInstructionsModal}/>}
         {showCreditModal && <CreditsModal setModalOpen={setShowCreditModal}/>}
-        <h1>{round.name}</h1>
-            <p>{round.copy}</p>
-            <aside className={styles.aside}>{round.hint}</aside>
-            {!showQuiz && !roundOver && <button onClick={() => {shuffleArray(round.questions)}}>Start Quiz</button>}
-       
-        <p>Logic</p>
-           {showQuiz && (
+        <h1 className={styles.logicHeader}>{round.name}</h1>
+        
+        {!showQuiz && !roundOver && 
         <>
-      <ul className={styles.dndContextUl}>
+        <p className={styles.copy}>{round.copy}</p>
+        <aside className={styles.aside}>{round.hint}</aside>
+        <button onClick={() => {setShowQuiz(true)}}>Start Quiz</button>
+        </>}
+
+        {showQuiz && (
+        <>
+        <div className={styles.infoRow}>
+        <h2>{currentStory[0].story}</h2>
+        <Countdown timeLeft={timeLeft}/>
+        </div>
+        <ul className={styles.dndContextUl}>
         <DndContext 
         collisionDetection={closestCenter}
         onDragEnd={handleDragEnd}
@@ -101,11 +172,23 @@ const LogicalLogic = ({round}:LogicProps) => {
         </SortableContext>
         </DndContext>
       </ul>
+      <button onClick={checkAnswers}>Check Answers</button> 
       </>
       )}
+       {!showQuiz && roundOver && (
+        <div className={styles.quizOver}>
+            <h2>ALL DONE</h2>
+          <p>You scored {roundScore}</p> 
+          <ShareButton setShowModal={setShowModal} showModal={showModal} />
+          <button onClick={() => reset()}>Try Again?</button> 
+          
+        </div>  
+        )}
+        <Link className={styles.link} href={"/apps/drwhoquiz"}>Back to Quizzes</Link>
         </div>
+        <input type="hidden" onSubmit={() => {setDuration(120)}} />
         </>
      );
 }
  
-export default LogicalLogic;
+export default LogicalLogic; 

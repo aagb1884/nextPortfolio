@@ -1,12 +1,13 @@
 'use client'
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "@/app/styles/whoQuiz.module.css"
-import { Question, CyberQuestion } from "../data/questions";
+import { Question } from "../data/questions";
 import Image from "next/image";
 import Countdown from "@/app/ui/Countdown";
 
 interface QuestionProps {
-    index: number;
+  index: number;
+  skip: () => void;
   question: Question;
   checkAnswer: (string: string) => void;
   isAnswerCorrect: boolean | null;
@@ -15,7 +16,7 @@ interface QuestionProps {
   roundScore: number;
 }
 
-const QuestionComponent = ({index, question, checkAnswer, isAnswerCorrect, setIsActive, timeLeft, roundScore}: QuestionProps) => {
+const QuestionComponent = ({index, skip, question, checkAnswer, isAnswerCorrect, setIsActive, timeLeft, roundScore}: QuestionProps) => {
       const [userAnswer, setUserAnswer] = useState<string>("");
 
        const handleAnswerSubmit = () => {
@@ -23,6 +24,8 @@ const QuestionComponent = ({index, question, checkAnswer, isAnswerCorrect, setIs
         setUserAnswer("");
         setIsActive(false)
     }
+
+   
 
     return ( <section className={styles.quizQuestion}>
         <div className={styles.infoRow}>
@@ -60,9 +63,13 @@ const QuestionComponent = ({index, question, checkAnswer, isAnswerCorrect, setIs
       ))} </div>}
 
     <button id="submit" 
-    className={styles.buton} 
+    className={styles.button} 
     onClick={handleAnswerSubmit}
-    >NEXT</button>
+    >Submit</button>
+    <button id="submit" 
+    className={styles.skipBtn} 
+    onClick={skip}
+    >Skip</button>
     </div>
       {isAnswerCorrect === true && (
             <p className={styles.correct}>Correct!</p>

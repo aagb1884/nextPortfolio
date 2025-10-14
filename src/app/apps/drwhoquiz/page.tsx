@@ -3,8 +3,8 @@ import AppsFooter from "../components/AppsFooter";
 import KoFiLink from "@/app/ui/KoFi";
 import backgroundVortex from "../../../../public/images/drWhoQuiz/vortex.jpg"
 import Image from "next/image";
-import Header from "./components/header";
-import RoundButtons from "./components/RoundButtons";
+import MainQuizPageContent from "./content";
+
 
 export const metadata = {
   title: "Doctor Who Quiz",
@@ -21,12 +21,7 @@ const drWhoQuiz = () => {
   <div className={styles.backgroundVortexDiv}>
     <Image src={backgroundVortex} fill={true} alt="Background Vortex" />
   </div>
-
-  <div className={styles.drWhoQuizLanding}>
-    <Header />
-    <RoundButtons />
-  </div>
-
+    <MainQuizPageContent />
   <footer className={styles.whoQuizFooter}>
     <AppsFooter />
     <KoFiLink />

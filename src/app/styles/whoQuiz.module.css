@@ -5,6 +5,7 @@
     justify-items: center;
     width: 100vw;
     min-height: 100vh;
+    font-family: var(--font-della-respira);
 }
 
 .backgroundVortexDiv{
@@ -57,10 +58,24 @@
     background-color: rgb(240, 248, 255, 0.8);
     color: black;
     text-align: center;
+     display: flex;
+    flex-direction: column;
+}
+
+.copy {
+  text-align: justify;
+  font-size: medium;
+  margin-top: 1%;
 }
 
 .aside {
-    font-size: small;
+  text-align: justify;
+  font-size: small;
+}
+
+.link {
+  font-size: medium;
+  text-decoration: underline;
 }
 
 .quizQuestion {
@@ -106,6 +121,18 @@
     font-size: large;
     background-color: rgba(3,38,135, 0.6);
     padding: 2%;
+}
+
+.button {
+  margin-bottom: 1%;
+  padding: auto;
+}
+
+.skipBtn {
+  margin-top: 1%;
+  background-color: orange;
+  color: black;
+  padding: 0.5%;
 }
 
 .textbox {
@@ -170,13 +197,13 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -40%);
-  color: rgb(252, 243, 176);
+  color: rgb(246, 229, 107);
   padding: 5px 10px;
   font-size: 15px;
   font-weight: bold;
   transition: opacity 0.3s ease-in-out;
   z-index: 1;
-  text-shadow:2px 2px #032687
+  text-shadow:2px 2px 3px #032687, 0 0 6px rgb(143, 1, 1);
 }
 
 .roundButton:hover .buttonImage {
@@ -266,7 +293,6 @@
     max-width: 600px;
     max-height: 80vh;
     min-height: 200px;
-    background-color: rgba(255, 255, 255, 0.95);
     border: 3px solid #999;
     border-radius: 3px;
     margin: 20px auto;
@@ -276,17 +302,15 @@
     line-height: 2;
     z-index: 5;
     overflow-y: auto;
-    background-color: maroon;
+    background-color: skyblue;
     display: flex;
     flex-direction: column;
 
   }
 
   .sModalTxt, .sModalHTxt {
-    color: white;
     -webkit-text-stroke-width: 0.1px;
     -webkit-text-stroke-color: green;
-    font-family: var(--font-londrina-solid);
   }
 
   .sModalHTxt {
@@ -296,3 +320,63 @@
   .btn {
     margin-top: 2%;
   }
+
+ /* sorting */
+
+ .logicHeader {
+  margin-bottom: 2%;
+ }
+
+.storyInfo, .storyInfoCorrect {
+    display: flex;
+    align-items: center; 
+    touch-action: none;
+    border-radius: 5px;
+    background-color: rgb(3, 0, 3);
+    color: white;
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    width: 85%;
+    text-align: center;
+    font-size: small;
+}
+
+.storyInfo {
+    border: double rgb(218, 225, 248) 5px;
+
+}
+
+.storyInfoCorrect {
+  border: solid rgb(0, 128, 0, 0.7) 4px;
+  transition: border-width 0.6s linear;
+}
+
+.dndButtonDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.dndContextUl {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@media only screen and (max-width: 450px) {
+
+
+.roundButtonsComponent {
+  grid-template-columns: 50% 50%;
+}
+
+}
+@media only screen and (min-width: 450px) and (max-width: 600px) {
+
+.roundButtonsComponent {
+  grid-template-columns: 33% 33% 33%;
+}
+
+}

@@ -5,7 +5,7 @@ import { roundBtns } from "../data/round-btns";
 
 const btnMap = roundBtns.map((round) => {
     return (
-           <div className={`styles.${round.style}`}>
+           <div key={round.style} className={`styles.${round.style}`}>
                 <Link href={`/apps/drwhoquiz/${round.link}`} className={styles.roundButton}>
                         <Image src={`${round.src}`}
                                 alt={`${round.alt}`}
