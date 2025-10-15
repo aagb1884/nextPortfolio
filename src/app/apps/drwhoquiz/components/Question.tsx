@@ -33,9 +33,14 @@ const QuestionComponent = ({index, skip, question, checkAnswer, isAnswerCorrect,
               <p style={{fontWeight: "bold"}}>Question {index + 1}.</p>
             <p>Score: {roundScore}</p>
         </div>
-        {question.question && <p>{question.question}</p>}
-        {question.image && <Image src={question.image.url} alt={question.image.alt} width={400} height={300} />}
-        {question.audio && <button onClick={() => {setIsActive(true)}}>Play Audio</button>}
+        {question.question && <p className={styles.questionText}>{question.question}</p>}
+        
+        {question.image && <div className={styles.qImageDiv}>
+          <Image className={styles.quizImage} src={question.image.url} alt={question.image.alt} width={400} height={300} 
+        /> </div>}
+        
+        {question.audio && <button className={styles.btn}  onClick={() => {setIsActive(true)}}>Play Audio</button>}
+
         <div className={styles.questionInput}>
         {!question.options && (
             <input type="text" 
@@ -53,6 +58,7 @@ const QuestionComponent = ({index, skip, question, checkAnswer, isAnswerCorrect,
             id="multiple-choice"
             type="radio"
             name="answer"
+            className={styles.radioInput}
             value={option}
             onChange={(e) => setUserAnswer(e.target.value)}
             checked={userAnswer === option}
@@ -63,7 +69,7 @@ const QuestionComponent = ({index, skip, question, checkAnswer, isAnswerCorrect,
       ))} </div>}
 
     <button id="submit" 
-    className={styles.button} 
+    className={styles.btn} 
     onClick={handleAnswerSubmit}
     >Submit</button>
     <button id="submit" 
@@ -71,12 +77,18 @@ const QuestionComponent = ({index, skip, question, checkAnswer, isAnswerCorrect,
     onClick={skip}
     >Skip</button>
     </div>
-      {isAnswerCorrect === true && (
+    <div className={styles.isCorrect}>
+    {isAnswerCorrect === true && (
             <p className={styles.correct}>Correct!</p>
         )}
         {isAnswerCorrect === false && (
             <p className={styles.wrong} >Incorrect, sorry.</p>
         )}
+         {isAnswerCorrect === null && (
+    <p className={styles.placeholder}>&nbsp;</p> 
+  )}
+    </div>
+      
 </section>
      );
 }

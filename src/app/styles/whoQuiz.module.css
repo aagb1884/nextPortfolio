@@ -52,7 +52,6 @@
 
 .quizCopy {
     margin: 2%;
-    line-height: 200%;
     padding: 2%;
     border-radius: 5px;
     background-color: rgb(240, 248, 255, 0.8);
@@ -60,17 +59,26 @@
     text-align: center;
      display: flex;
     flex-direction: column;
+    overflow: scroll;
+    width: 90%;
+    height: 90%;
+    align-items: center;
+}
+
+.roundName {
+  margin: 2% 0;
 }
 
 .copy {
   text-align: justify;
   font-size: medium;
-  margin-top: 1%;
+  margin: 2% 0;
 }
 
 .aside {
   text-align: justify;
   font-size: small;
+  margin: 2% 0;
 }
 
 .link {
@@ -82,14 +90,27 @@
     border-top: 2px solid #032687;
     padding-top: 5%;
     padding: 5px;
-    max-width: 100%;
-    width: auto;
+    width: 400px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: space-around;
     justify-content: space-between;
     align-items: center;
+}
+
+.qImageDiv {
+  width: 400px;
+  height: 300px;
+  margin: 4% 0;
+  display: flex;
+  align-items: center;
+}
+
+.quizImage {
+  width: 100%;
+  height: auto;
+  border: 2px groove black;
 }
 
 .infoRow {
@@ -99,12 +120,24 @@
     justify-content: space-evenly;
 }
 
+.questionText {
+  display: flex;
+  height: 100px;
+  align-items: center;
+  margin: 4% 0;
+}
+
 .questionInput {
     display: flex;
     flex-direction: column;
     margin: 5%;
     max-width: 100%;
     width: auto;
+    align-items: center;
+}
+
+.multipleChoice {
+  height: 350px;
 }
 
 .correct{
@@ -123,9 +156,16 @@
     padding: 2%;
 }
 
-.button {
-  margin-bottom: 1%;
-  padding: auto;
+.placeholder {
+  visibility: hidden;
+  height: 62.5px;
+}
+
+.btn {
+  margin: 4% 0;
+  padding: 2px;
+  background-color: #032687;
+  width: 250px;
 }
 
 .skipBtn {
@@ -133,19 +173,20 @@
   background-color: orange;
   color: black;
   padding: 0.5%;
+  width: 250px;
 }
 
 .textbox {
     padding: 1%;
-    
     width: 300px;
-    margin-bottom: 5%;
+    margin-bottom: 4%;
 }
 
 .quizOver {
     display: flex;
     flex-direction: column;
     padding: 1%;
+    align-items: center;
 }
 
 /* round buttons css */
@@ -233,6 +274,15 @@
   -ms-user-select: none;
   user-select: none;
   padding: 2px;
+  text-align: left;
+  max-height: 100px;
+  height: auto;
+}
+
+.radioInput {
+    margin-right: 5px;
+    max-width: 100%;
+    width: auto;
 }
 
 .checkmark {
@@ -243,6 +293,7 @@
   width: 25px;
   background-color: #eee;
   border-radius: 50%;
+
 }
 
 /* When the radio button is checked, add a blue background */
@@ -367,7 +418,11 @@
 
 @media only screen and (max-width: 450px) {
 
-
+.qImageDiv {
+  max-width: 90%;
+  width: 90%;
+  height: 350px;
+}
 .roundButtonsComponent {
   grid-template-columns: 50% 50%;
 }
@@ -378,5 +433,24 @@
 .roundButtonsComponent {
   grid-template-columns: 33% 33% 33%;
 }
+}
 
+@media only screen and (min-width: 850px)  {
+.btn {
+  margin: 1% 0;
+}
+.textbox {
+    margin-bottom: 2%;
+}
+.questionText {
+  height: 60px;
+  margin: 2% 0;
+}
+.copy {
+  margin: 1% 0;
+}
+
+.aside {
+  margin: 1% 0;
+}
 }

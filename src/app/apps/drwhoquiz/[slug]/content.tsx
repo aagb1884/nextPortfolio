@@ -35,6 +35,13 @@ const PageContent = ({round, name}: PageContentProps) => {
     
       const set10Questions = (array: Question[]) => {
         const ten = [...array].sort(() => Math.random() - 0.5).slice(0, 10)
+
+        if (ten[0]?.audio) {
+    const newAudio = new Audio(ten[0].audio);
+    audioRef.current = newAudio;
+  }
+
+
         setQuizRound(ten)
         setShowQuiz(true)
       }
@@ -127,21 +134,24 @@ const PageContent = ({round, name}: PageContentProps) => {
     const audioRef = useRef<HTMLAudioElement | null>(null);
 
 useEffect(() => {
-  if (typeof window !== 'undefined') {
-    const newAudio = new Audio(round.questions[currentQuestionIndex].audio);
+  if (typeof window !== 'undefined' && quizRound.length === 10) {
+    const newAudio = new Audio(quizRound[currentQuestionIndex].audio);
     audioRef.current = newAudio;
   }
 }, [currentQuestionIndex]);
 
 useEffect(() => {
   const audio = audioRef.current;
-  if (audio && isActive) {
-    audio.play();
+ if (audio && isActive) {
+    audio
+      .play()
+      .catch((err) => {
+        console.warn("Autoplay failed:", err);
+      });
   } else if (audio && !isActive) {
     audio.pause();
     audio.currentTime = 0;
   }
-
   return () => {
     if (audio) {
       audio.pause();
@@ -149,6 +159,7 @@ useEffect(() => {
     }
   };
 }, [isActive]);
+
 
    const result = `I played the "${round.name}" round and scored ${roundScore}`
 
@@ -160,17 +171,17 @@ useEffect(() => {
         {showModal && <SocialMediaShare result={result} setShowModal={setShowModal}/>}
         {showInstructionsModal && <InstructionsModal setModalOpen={setShowInstructionsModal}/>}
         {showCreditModal && <CreditsModal setModalOpen={setShowCreditModal}/>}
-      <h1>{round.name}</h1>
+      <h1 className={styles.roundName}>{round.name}</h1>
       {round.copy && <p className={styles.copy}>{round.copy}</p>}
       {round.hint && <aside className={styles.aside}>{round.hint}</aside>}
-      {!showQuiz && !roundOver && <button onClick={() => {set10Questions(round.questions)}}>Start Quiz</button>}
+      {!showQuiz && !roundOver && <button className={styles.btn} onClick={() => {set10Questions(round.questions)}}>Start Quiz</button>}
        <div>
         {showQuiz && renderQuiz()}
         {!showQuiz && roundOver && (
         <div className={styles.quizOver}>
           <p>Round Completed! You scored {roundScore}</p> 
           <ShareButton setShowModal={setShowModal} showModal={showModal} />
-          <button onClick={() => reset()}>Try Again?</button> 
+          <button className={styles.btn} onClick={() => reset()}>Try Again?</button> 
           
         </div>  
         )}
