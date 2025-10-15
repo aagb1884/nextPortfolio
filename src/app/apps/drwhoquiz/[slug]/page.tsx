@@ -8,8 +8,9 @@ import AppsFooter from '../../components/AppsFooter';
 import KoFiLink from '@/app/ui/KoFi';
 import PageContent from './content';
 
-export default async function RoundPage({ params }: { params: { slug: string } }) {
-  const round = rounds.find((r) => r.slug === params.slug);
+export default async function RoundPage({ params }: {params: Promise<{ slug: string }>}){
+  const { slug } = await params;
+  const round = rounds.find((r) => r.slug === slug);
 
   if (!round) {
     notFound();
