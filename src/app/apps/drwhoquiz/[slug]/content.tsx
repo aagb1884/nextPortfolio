@@ -29,7 +29,9 @@ const PageContent = ({round, name}: PageContentProps) => {
      const [isActive, setIsActive] = useState<boolean>(false);
      const [duration, setDuration] = useState<number>(60)
   const [timeLeft, setTimeLeft] = useState<number>(60);
-
+const [progress, setProgress] = useState<number>(0);
+const [audioDuration, setAudioDuration] = useState<number>(0);
+const [currentTime, setCurrentTime] = useState<number>(0);
 
 // question and answer handling
     
@@ -51,6 +53,8 @@ const PageContent = ({round, name}: PageContentProps) => {
         if (currentQuestionIndex < quizRound.length - 1) {
           setCurrentQuestionIndex((prev) => prev + 1);
           setIsActive(false)
+          setProgress(0)
+          setCurrentTime(0)
         } else {
           setShowQuiz(false);
           setRoundOver(true);
@@ -87,7 +91,11 @@ const PageContent = ({round, name}: PageContentProps) => {
           checkAnswer={checkAnswer}
           isAnswerCorrect={isAnswerCorrect}
           setIsActive={setIsActive}
+          isActive={isActive}
           roundScore={roundScore}
+          progress={progress}
+          audioDuration={audioDuration}
+          currentTime={currentTime}
         />       
       </div>
     );
@@ -137,8 +145,24 @@ useEffect(() => {
   if (typeof window !== 'undefined' && quizRound.length === 10) {
     const newAudio = new Audio(quizRound[currentQuestionIndex].audio);
     audioRef.current = newAudio;
+
+    const handleLoadedMetadata = () => {
+      setAudioDuration(newAudio.duration);
+    };
+
+    const handleTimeUpdate = () => {
+      setCurrentTime(newAudio.currentTime);
+      setProgress((newAudio.currentTime / newAudio.duration) * 100);
+    };
+    newAudio.addEventListener('loadedmetadata', handleLoadedMetadata);
+    newAudio.addEventListener('timeupdate', handleTimeUpdate);
+
+    return () => {
+      newAudio.removeEventListener('loadedmetadata', handleLoadedMetadata);
+      newAudio.removeEventListener('timeupdate', handleTimeUpdate);
+    };
   }
-}, [currentQuestionIndex]);
+}, [currentQuestionIndex, quizRound]);
 
 useEffect(() => {
   const audio = audioRef.current;
@@ -159,6 +183,7 @@ useEffect(() => {
     }
   };
 }, [isActive]);
+
 
 
    const result = `I played the "${round.name}" round and scored ${roundScore}`

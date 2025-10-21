@@ -12,11 +12,15 @@ interface QuestionProps {
   checkAnswer: (string: string) => void;
   isAnswerCorrect: boolean | null;
   setIsActive: (bool: boolean) =>  void;
+  isActive: boolean;
   timeLeft: number;
   roundScore: number;
+  progress: number;
+  audioDuration: number;
+  currentTime: number;
 }
 
-const QuestionComponent = ({index, skip, question, checkAnswer, isAnswerCorrect, setIsActive, timeLeft, roundScore}: QuestionProps) => {
+const QuestionComponent = ({index, skip, question, checkAnswer, isAnswerCorrect, setIsActive, isActive, timeLeft, roundScore, progress, audioDuration, currentTime}: QuestionProps) => {
       const [userAnswer, setUserAnswer] = useState<string>("");
 
        const handleAnswerSubmit = () => {
@@ -26,7 +30,6 @@ const QuestionComponent = ({index, skip, question, checkAnswer, isAnswerCorrect,
     }
 
    
-
     return ( <section className={styles.quizQuestion}>
         <div className={styles.infoRow}>
             <Countdown timeLeft={timeLeft}/>
@@ -39,7 +42,15 @@ const QuestionComponent = ({index, skip, question, checkAnswer, isAnswerCorrect,
           <Image className={styles.quizImage} src={question.image.url} alt={question.image.alt} width={400} height={300} 
         /> </div>}
         
-        {question.audio && <button className={styles.btn}  onClick={() => {setIsActive(true)}}>Play Audio</button>}
+        {question.audio && (
+          <>
+          <button className={styles.btn}  onClick={() => {setIsActive(!isActive)}}>{isActive ? 'Reset Audio' : 'Play Audio'}</button>
+          <div>
+          <progress value={progress} max="100" />
+          <div>{Math.floor(currentTime) < 10 ? `0:0${Math.floor(currentTime)}` : `0:${Math.floor(currentTime)}`}</div>
+          </div>
+          </>
+          )}
 
         <div className={styles.questionInput}>
         {!question.options && (
