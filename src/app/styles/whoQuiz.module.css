@@ -1,68 +1,70 @@
 .mainContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    justify-items: center;
-    width: 100vw;
-    min-height: 100vh;
-    font-family: var(--font-della-respira);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-items: center;
+  width: 100vw;
+  min-height: 100vh;
+  font-family: var(--font-della-respira);
+  overflow: hidden;
 }
 
-.backgroundVortexDiv{
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -1;
+.backgroundVortexDiv {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
 }
 
 .whoQuizNav {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    align-items: center;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fdf5b9;
 }
 
 .drWhoQuizLanding {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-    padding-bottom: 15vh;
-    width: 100%;
-    color: white;
-    font-size: medium;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  padding-bottom: 15vh;
+  width: 100%;
+  color: white;
+  font-size: medium;
 }
 
 .whoQuizFooter {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: rgba(224, 236, 245, 0.8);
-    color: black;
-    border-radius: 5px;
-    width: 100%;
-    height: 15vh;
-    padding-top: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(224, 236, 245, 0.8);
+  color: black;
+  border-radius: 5px;
+  width: 100%;
+  height: 15vh;
+  padding-top: 1%;
 }
 
 /* round pages css */
 
 .quizCopy {
-    margin: 2%;
-    padding: 2%;
-    border-radius: 5px;
-    background-color: rgb(240, 248, 255, 0.8);
-    color: black;
-    text-align: center;
-     display: flex;
-    flex-direction: column;
-    overflow: scroll;
-    width: 90%;
-    height: 90%;
-    align-items: center;
+  margin: 2%;
+  padding: 2%;
+  border-radius: 5px;
+  background-color: rgb(240, 248, 255, 0.8);
+  color: black;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow: scroll;
+  width: 90%;
+  height: 90%;
+  align-items: center;
 }
 
 .roundName {
@@ -87,21 +89,21 @@
 }
 
 .quizQuestion {
-    border-top: 2px solid #032687;
-    padding-top: 5%;
-    padding: 5px;
-    width: 400px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: space-around;
-    justify-content: space-between;
-    align-items: center;
+  border-top: 2px solid #032687;
+  padding-top: 5%;
+  padding: 5px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: space-around;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .qImageDiv {
   width: 400px;
-  height: 300px;
+  height: 350px;
   margin: 4% 0;
   display: flex;
   align-items: center;
@@ -109,15 +111,16 @@
 
 .quizImage {
   width: 100%;
+  max-height: 350px;
   height: auto;
   border: 2px groove black;
 }
 
 .infoRow {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
 }
 
 .questionText {
@@ -125,35 +128,42 @@
   height: 100px;
   align-items: center;
   margin: 4% 0;
+  padding: 0 2px;
 }
 
 .questionInput {
-    display: flex;
-    flex-direction: column;
-    margin: 5%;
-    max-width: 100%;
-    width: auto;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+  max-width: 100%;
+  width: auto;
+  align-items: center;
 }
 
 .multipleChoice {
   height: 350px;
 }
 
-.correct{
-    color: rgb(141, 241, 141);
-    font-weight: bold;
-    font-size: large;
-    background-color: rgba(3,38,135, 0.6);
-      padding: 2%;
+.isCorrect {
+  height: 70px;
+}
+
+.correct,
+.wrong {
+  font-weight: bold;
+  font-size: large;
+  background-color: rgba(3, 38, 135, 0.6);
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+}
+
+.correct {
+  color: rgb(141, 241, 141);
 }
 
 .wrong {
-    color: red;
-    font-weight: bold;
-    font-size: large;
-    background-color: rgba(3,38,135, 0.6);
-    padding: 2%;
+  color: red;
 }
 
 .placeholder {
@@ -177,16 +187,17 @@
 }
 
 .textbox {
-    padding: 1%;
-    width: 300px;
-    margin-bottom: 4%;
+  padding: 1%;
+  width: 300px;
+  margin-bottom: 4%;
 }
 
 .quizOver {
-    display: flex;
-    flex-direction: column;
-    padding: 1%;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1%;
+  align-items: center;
+  border-top: 2px solid #032687;
 }
 
 /* round buttons css */
@@ -217,9 +228,19 @@
   position: relative;
   margin: 5px;
   border-radius: 6px;
-  box-shadow: 5px 2px 2px rgb(10,83,200);
-  -webkit-mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
-  mask-image: linear-gradient(45deg,#000 25%,rgba(0,0,0,.2) 50%,#000 75%);
+  box-shadow: 5px 2px 2px rgb(10, 83, 200);
+  -webkit-mask-image: linear-gradient(
+    45deg,
+    #000 25%,
+    rgba(0, 0, 0, 0.2) 50%,
+    #000 75%
+  );
+  mask-image: linear-gradient(
+    45deg,
+    #000 25%,
+    rgba(0, 0, 0, 0.2) 50%,
+    #000 75%
+  );
   -webkit-mask-size: 800%;
   mask-size: 800%;
   -webkit-mask-position: 0;
@@ -227,7 +248,9 @@
 }
 
 .buttonImage:hover {
-  transition: mask-position 2s ease,-webkit-mask-position 2s ease;
+  transition:
+    mask-position 2s ease,
+    -webkit-mask-position 2s ease;
   -webkit-mask-position: 120%;
   mask-position: 120%;
   opacity: 1;
@@ -244,7 +267,9 @@
   font-weight: bold;
   transition: opacity 0.3s ease-in-out;
   z-index: 1;
-  text-shadow:2px 2px 3px #032687, 0 0 6px rgb(143, 1, 1);
+  text-shadow:
+    2px 2px 3px #032687,
+    0 0 6px rgb(143, 1, 1);
 }
 
 .roundButton:hover .buttonImage {
@@ -255,12 +280,22 @@
   opacity: 1;
 }
 
-.goodDogs, .firstQuestion, .general, .allGreek, .oddOneOut, .colinCliffhanger, .productionCodes, 
-.inhuman, .howLong, .introsPop, .introsIncidental, .playedThemselves, .wheeln{
+.goodDogs,
+.firstQuestion,
+.general,
+.allGreek,
+.oddOneOut,
+.colinCliffhanger,
+.productionCodes,
+.inhuman,
+.howLong,
+.introsPop,
+.introsIncidental,
+.playedThemselves,
+.wheeln {
   position: relative;
   text-align: center;
 }
-
 
 /* radio buttons design */
 .radio {
@@ -280,9 +315,9 @@
 }
 
 .radioInput {
-    margin-right: 5px;
-    max-width: 100%;
-    width: auto;
+  margin-right: 5px;
+  max-width: 100%;
+  width: auto;
 }
 
 .checkmark {
@@ -293,12 +328,11 @@
   width: 25px;
   background-color: #eee;
   border-radius: 50%;
-
 }
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -323,79 +357,79 @@
   background: white;
 }
 
-
 /* modals */
 
 .startModalWrapper {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 5;
-  }
-  
-  .startModal {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
-    max-width: 600px;
-    max-height: 80vh;
-    min-height: 200px;
-    border: 3px solid #999;
-    border-radius: 3px;
-    margin: 20px auto;
-    padding: 20px;
-    color: black;
-    text-align: left;
-    line-height: 2;
-    z-index: 5;
-    overflow-y: auto;
-    background-color: skyblue;
-    display: flex;
-    flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 5;
+}
 
-  }
+.startModal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 600px;
+  max-height: 80vh;
+  min-height: 200px;
+  border: 3px solid #999;
+  border-radius: 3px;
+  margin: 20px auto;
+  padding: 20px;
+  color: black;
+  text-align: left;
+  line-height: 2;
+  z-index: 5;
+  overflow-y: auto;
+  background-color: skyblue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .sModalTxt, .sModalHTxt {
-    -webkit-text-stroke-width: 0.1px;
-    -webkit-text-stroke-color: green;
-  }
+.sModalTxt,
+.sModalHTxt {
+  -webkit-text-stroke-width: 0.1px;
+  -webkit-text-stroke-color: green;
+}
 
-  .sModalHTxt {
-    text-align: center;
-  }
+.sModalHTxt {
+  text-align: center;
+}
 
-  .btn {
-    margin-top: 2%;
-  }
+.btn {
+  margin-top: 2%;
+}
 
- /* sorting */
+/* sorting */
 
- .logicHeader {
+.logicHeader {
   margin-bottom: 2%;
- }
+}
 
-.storyInfo, .storyInfoCorrect {
-    display: flex;
-    align-items: center; 
-    touch-action: none;
-    border-radius: 5px;
-    background-color: rgb(3, 0, 3);
-    color: white;
-    margin: 5px;
-    padding: 5px;
-    font-weight: bold;
-    width: 85%;
-    text-align: center;
-    font-size: small;
+.storyInfo,
+.storyInfoCorrect {
+  display: flex;
+  align-items: center;
+  touch-action: none;
+  border-radius: 5px;
+  background-color: rgb(3, 0, 3);
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  font-weight: bold;
+  width: 85%;
+  text-align: center;
+  font-size: small;
 }
 
 .storyInfo {
-    border: double rgb(218, 225, 248) 5px;
-
+  border: double rgb(218, 225, 248) 5px;
 }
 
 .storyInfoCorrect {
@@ -404,53 +438,50 @@
 }
 
 .dndButtonDiv {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
 
 .dndContextUl {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 @media only screen and (max-width: 450px) {
-
-.qImageDiv {
-  max-width: 90%;
-  width: 90%;
-  height: 350px;
-}
-.roundButtonsComponent {
-  grid-template-columns: 50% 50%;
-}
-
+  .qImageDiv {
+    max-width: 90%;
+    width: 90%;
+    height: 350px;
+  }
+  .roundButtonsComponent {
+    grid-template-columns: 50% 50%;
+  }
 }
 @media only screen and (min-width: 450px) and (max-width: 600px) {
+  .roundButtonsComponent {
+    grid-template-columns: 33% 33% 33%;
+  }
+}
 
-.roundButtonsComponent {
-  grid-template-columns: 33% 33% 33%;
-}
-}
-
-@media only screen and (min-width: 850px)  {
-.btn {
-  margin: 1% 0;
-}
-.textbox {
+@media only screen and (min-width: 850px) {
+  .btn {
+    margin: 1% 0;
+  }
+  .textbox {
     margin-bottom: 2%;
-}
-.questionText {
-  height: 60px;
-  margin: 2% 0;
-}
-.copy {
-  margin: 1% 0;
-}
+  }
+  .questionText {
+    height: 60px;
+    margin: 2% 0;
+  }
+  .copy {
+    margin: 1% 0;
+  }
 
-.aside {
-  margin: 1% 0;
-}
+  .aside {
+    margin: 1% 0;
+  }
 }

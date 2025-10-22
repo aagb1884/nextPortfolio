@@ -1,4 +1,3 @@
-
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import React from "react";
@@ -11,21 +10,25 @@ interface StoryProps {
 }
 
 const SortableStory: React.FC<StoryProps> = ({ plotPoint, isCorrect }) => {
-  const { listeners, transform, transition, attributes, setNodeRef } = 
-  useSortable({id: plotPoint.id})
+  const { listeners, transform, transition, attributes, setNodeRef } =
+    useSortable({ id: plotPoint.id });
 
   const style = {
     transition,
-    transform:CSS.Transform.toString(transform)
-  }
-  
+    transform: CSS.Transform.toString(transform),
+  };
+
   return (
-    <li ref={setNodeRef} {...listeners} {...attributes}
-    style={style}
-    className={isCorrect ? styles.storyInfoCorrect : styles.storyInfo}>
-        {plotPoint.point}
+    <li
+      ref={setNodeRef}
+      {...listeners}
+      {...attributes}
+      style={style}
+      className={isCorrect ? styles.storyInfoCorrect : styles.storyInfo}
+    >
+      {plotPoint.point}
     </li>
   );
-}
+};
 
-export default SortableStory
+export default SortableStory;
