@@ -31,7 +31,7 @@ export const GlobalStateProvider = ({ children }) => {
 
     return (
         <GlobalStateContext.Provider value={{ goToContactForm, goToTab, showForm, setShowForm, 
-        activeTab, setActiveTab, showModal, setShowModal, activeWhoTab, setActiveWhoTab }}>
+        activeTab, setActiveTab, showModal, setShowModal, activeWhoTab, setActiveWhoTab, executeScroll }}>
             {children}
         </GlobalStateContext.Provider>
     );

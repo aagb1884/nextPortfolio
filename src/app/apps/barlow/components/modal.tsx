@@ -1,4 +1,4 @@
-interface modalProps {
+export interface modalProps {
     setModalOpen: (filterTerm: boolean) => void;
   }
   
