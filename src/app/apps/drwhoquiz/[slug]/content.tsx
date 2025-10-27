@@ -66,7 +66,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
     const correctAnswers = quizRound[currentQuestionIndex].answers;
 
     if (
-      (correctAnswers.includes(answer) || lowercaseAnswers.includes(answer)) &&
+      (correctAnswers.includes(answer.toLowerCase()) || lowercaseAnswers.includes(answer.toLowerCase())) &&
       answer.trim() !== ""
     ) {
       setRoundScore(roundScore + timeLeft);
