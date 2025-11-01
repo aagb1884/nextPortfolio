@@ -392,7 +392,7 @@ export const rounds: Round[] = [
     name: "It's all Greek to Me",
     slug: "greek",
     copy: "A round based on letters of the Greek alphabet.",
-    hint: "We are looking for answers as English words, not Greek letters.",
+    hint: "We are looking for answers as English words, not Greek letters, i.e. 'Lambda' not 'Λλ'.",
     questions: [
       {
         question: "Which Federation diplomat was voiced by Ysanne Churchman?",
@@ -453,7 +453,7 @@ export const rounds: Round[] = [
       {
         question:
           "Where was the Dominator ship on course for before it landed on Dulkis?",
-        answers: ["Epsilon"],
+        answers: ["Epsilon 4", "Epsilon"],
       },
       {
         question:
@@ -872,8 +872,8 @@ export const rounds: Round[] = [
       {
         question: "The Girl in the Fireplace",
         answers: [
-          "Reinette",
           "Madame de Pompadour",
+          "Reinette",
           "Jeanne-Antoinette Poisson",
         ],
       },
@@ -885,6 +885,7 @@ export const rounds: Round[] = [
           "Charles Second",
           "Charles",
           "King Charles II",
+          "The King who brought back partying",
         ],
       },
       { question: "Black Orchid", answers: ["Lady Cranleigh"] },
@@ -903,9 +904,9 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor looks upset.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "Mindwarp",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -938,7 +939,7 @@ export const rounds: Round[] = [
           url: "/images/drWhoQuiz/colin_cliffhangers/colin_cliffhanger_5.jpeg",
           alt: "The Sixth Doctor with his eyes closed, head lolling.",
         },
-        answers: ["Two Doctors", "The Two Doctors"],
+        answers: ["The Two Doctors", "Two Doctors"],
       },
       {
         question: "",
@@ -955,10 +956,10 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor looks haughty and defiant.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "The Mysterious Planet",
           "Mysterious Planet",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -967,7 +968,7 @@ export const rounds: Round[] = [
           url: "/images/drWhoQuiz/colin_cliffhangers/colin_cliffhanger_8.jpeg",
           alt: "The Sixth Doctor despairs.",
         },
-        answers: ["Twin Dilemma", "The Twin Dilemma"],
+        answers: ["The Twin Dilemma", "Twin Dilemma"],
       },
       {
         question: "",
@@ -976,9 +977,9 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor, lying in sand, cries for help.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "The Ultimate Foe",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -996,9 +997,9 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor, bathed in blue light, looks aghast.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "Mindwarp",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -1008,9 +1009,9 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor looks defiant.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "Mindwarp",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -1020,9 +1021,9 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor, connected to some equipment, writhes and screams.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "Mindwarp",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -1032,10 +1033,10 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor looks worried.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "The Mysterious Planet",
           "Mysterious Planet",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -1044,7 +1045,7 @@ export const rounds: Round[] = [
           url: "/images/drWhoQuiz/colin_cliffhangers/colin_cliffhanger_20.jpg",
           alt: "The Sixth Doctor, lying on his back and wearing black, looks concerned.",
         },
-        answers: ["Mark of the Rani", "The Mark of the Rani"],
+        answers: ["The Mark of the Rani", "Mark of the Rani"],
       },
       {
         question: "",
@@ -1052,7 +1053,7 @@ export const rounds: Round[] = [
           url: "/images/drWhoQuiz/colin_cliffhangers/colin_cliffhanger_21.jpg",
           alt: "The Sixth Doctor looks both worried and smug.",
         },
-        answers: ["Twin Dilemma", "The Twin Dilemma"],
+        answers: ["The Twin Dilemma", "Twin Dilemma"],
       },
     ],
   },
@@ -1156,7 +1157,7 @@ export const rounds: Round[] = [
           url: "/images/drWhoQuiz/inhuman_round/inhuman_12.png",
           alt: "White round objects embedded in a grey wall, a cable just visible in the top left.",
         },
-        answers: ["Day of the Doctor", "The Day of the Doctor"],
+        answers: ["The Day of the Doctor", "Day of the Doctor"],
       },
       {
         question: "",
@@ -1719,7 +1720,7 @@ export const rounds: Round[] = [
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_2.mp3",
-        answers: ["End of the World", "The End of the World"],
+        answers: ["The End of the World", "End of the World"],
       },
       {
         question: "Which story does this song feature in?",
@@ -1735,8 +1736,8 @@ export const rounds: Round[] = [
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_5.mp3",
         answers: [
-          "Big Bang",
           "The Big Bang",
+          "Big Bang",
           "The Pandorica Opens/The Big Bang",
         ],
       },
@@ -1759,20 +1760,20 @@ export const rounds: Round[] = [
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_9.mp3",
         answers: [
-          "Rebel Flesh",
           "The Rebel Flesh",
+          "Rebel Flesh",
           "The Rebel Flesh/The Almost People",
         ],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_10.mp3",
-        answers: ["Power of the Doctor", "The Power of the Doctor"],
+        answers: ["The Power of the Doctor", "Power of the Doctor"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_11.mp3",
-        answers: ["Power of Three", "The Power of Three"],
+        answers: ["The Power of Three", "Power of Three"],
       },
       {
         question: "Which story does this song feature in?",
@@ -1792,12 +1793,12 @@ export const rounds: Round[] = [
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_15.mp3",
-        answers: ["Sound of Drums", "The Sound of Drums"],
+        answers: ["The Sound of Drums", "Sound of Drums"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_16.mp3",
-        answers: ["Last of the Time Lords", "The Last of the Time Lords"],
+        answers: ["The Last of the Time Lords", "Last of the Time Lords"],
       },
       {
         question: "Which story does this song feature in?",
@@ -1807,7 +1808,7 @@ export const rounds: Round[] = [
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_18.mp3",
-        answers: ["The Angels Take Manhattan"],
+        answers: ["The Angels Take Manhattan", "Angels Take Manhattan"],
       },
       {
         question: "Which story does this song feature in?",
@@ -2152,52 +2153,36 @@ export const rounds: Round[] = [
         answers: [
           "The Brain of Morbius",
           "Brain of Morbius",
-          "Resurrection of the Daleks"
+          "Resurrection of the Daleks",
         ],
       },
       {
         question: "Shot by customs officer while on drug-induced comedown.",
-        answers: [
-          "Nightmare of Eden"
-        ],
+        answers: ["Nightmare of Eden"],
       },
       {
         question: "Decapitated by Roundheads",
-        answers: [
-          "The Awakening"
-        ],
+        answers: ["The Awakening"],
       },
       {
         question: "Turned into tree by land mine.",
-        answers: [
-          "The Mark of the Rani",
-          "Mark of the Rani"
-        ],
+        answers: ["The Mark of the Rani", "Mark of the Rani"],
       },
       {
         question: "Stabbed by alien who refused to pay restaurant bill.",
-        answers: [
-          "The Two Doctors",
-          "Two Doctors"
-        ],
+        answers: ["The Two Doctors", "Two Doctors"],
       },
       {
         question: "Beaten to death with tree branch.",
-        answers: [
-          "Revelation of the Daleks",
-        ],
+        answers: ["Revelation of the Daleks"],
       },
       {
         question: "Turned into soup by angel.",
-        answers: [
-          "Ghost light", "Ghostlight"
-        ],
+        answers: ["Ghost light", "Ghostlight"],
       },
       {
         question: "Dragged down own waste disposal unit.",
-        answers: [
-          "Paradise Towers"
-        ],
+        answers: ["Paradise Towers"],
       },
     ],
   },
