@@ -112,4 +112,11 @@ export const roundBtns: roundBtn[] = [
     alt: "How Long... round button",
     text: "How Long...",
   },
+  {
+    style: "deaths",
+    link: "deaths",
+    src: "/images/drWhoQuiz/button_images/death.jpg",
+    alt: "Death! round button",
+    text: "Death!",
+  },
 ];

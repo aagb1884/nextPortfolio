@@ -51,17 +51,17 @@ export const rounds: Round[] = [
       {
         question:
           "True or false: Richard Hearne lost the role of the Fourth Doctor because he wanted to play it as his other character Mr Pastry?",
-        answers: ["True"],
+        answers: ["True", "Correct", "Yes"],
       },
       {
         question:
           "True or false: Spike Milligan lost the role of the Fourth Doctor because he wanted input into the scripts?",
-        answers: ["False"],
+        answers: ["False", "No"],
       },
       {
         question:
           "Which companion started referring to the TARDIS as 'Time and Relative Dimensions in Space'?",
-        answers: ["Vicki"],
+        answers: ["Vicki", "Vikki"],
       },
       {
         question:
@@ -90,6 +90,7 @@ export const rounds: Round[] = [
           "K9, Drathro",
           "Drathro and K9",
           "Drathro K9",
+          "Drathro, K9",
         ],
       },
       {
@@ -104,7 +105,7 @@ export const rounds: Round[] = [
       },
       {
         question: "How many words per minute can Donna type?",
-        answers: ["100", "hundred"],
+        answers: ["100", "hundred", "a hundred", "one hundred"],
       },
       {
         question:
@@ -124,7 +125,7 @@ export const rounds: Round[] = [
       {
         question:
           "Where do Benton and Yates take the Brigadier's helicopter to?",
-        answers: ["Devil's End"],
+        answers: ["Devil's End", "Devils End"],
       },
       {
         question: "What is the desert planet in 'The Chase' called?",
@@ -141,12 +142,12 @@ export const rounds: Round[] = [
       },
       {
         question: "Is cress ever mentioned onscreen in Doctor Who?",
-        answers: ["No"],
+        answers: ["No", "It is not", "False", "Nope", "Nah"],
       },
       {
         question:
           "Name one of the two non-festive episodes that feature 'Merry Xmas Everybody' by Slade.",
-        answers: ["Turn Left", "Power of Three"],
+        answers: ["Turn Left", "Power of Three", "The Power of Three"],
       },
       {
         question: "Name a story that features a T-Rex.",
@@ -174,12 +175,12 @@ export const rounds: Round[] = [
       {
         question:
           "What episode opens by depicting the invention of television?",
-        answers: ["The Giggle"],
+        answers: ["The Giggle", "Giggle"],
       },
       {
         question:
           "In which story does the Doctor put on a German accent and smash a clerk's head off a table? ",
-        answers: ["The Highlanders"],
+        answers: ["The Highlanders", "Highlanders"],
       },
       {
         question:
@@ -189,7 +190,7 @@ export const rounds: Round[] = [
       {
         question:
           "In what episode does the last surviving member of the Freedom Fifteen appear?",
-        answers: ["The Long Game"],
+        answers: ["The Long Game", "Long Game"],
       },
     ],
   },
@@ -201,7 +202,7 @@ export const rounds: Round[] = [
       {
         question:
           "What is the name of the army General from 'Invasion of the Dinosaurs'?",
-        answers: ["General Finch", "Finch"],
+        answers: ["Finch", "General Finch"],
       },
       {
         question:
@@ -212,15 +213,16 @@ export const rounds: Round[] = [
         question:
           "What war zone would you find General Smythe in in 'The War Games'?",
         answers: [
+          "1917 War Zone",
           "World War 1",
           "World War One",
-          "1917 War Zone",
           "First World War",
+          "WW1",
         ],
       },
       {
         question: "What was Sontaran General Staal's nickname?",
-        answers: ["The undefeated"],
+        answers: ["The undefeated", "undefeated"],
       },
       {
         question: "What was the leader of the Gaztak merecenaries in 'Meglos'?",
@@ -265,7 +267,7 @@ export const rounds: Round[] = [
       },
       {
         question: "What did the Master win in 'The Sound of Drums'?",
-        answers: ["General Election", "Election"],
+        answers: ["A General Election", "General Election", "Election"],
       },
       {
         question:
@@ -283,11 +285,11 @@ export const rounds: Round[] = [
       },
       {
         question: "Who was given the job of setting up UNIT?",
-        answers: ["General Farquhar", "Farquhar"],
+        answers: ["Farquhar", "General Farquhar"],
       },
       {
         question: "Who did the Doctor suppose 'came up through the ranks'?",
-        answers: ["General Chellak", "Chellak"],
+        answers: ["Chellak", "General Chellak"],
       },
       {
         question:
@@ -297,7 +299,7 @@ export const rounds: Round[] = [
       {
         question:
           "Guy Siner, who played General Ravon in 'Genesis of the Daleks', later found fame in which sitcom?",
-        answers: ["Allo Allo", "'Allo! 'Allo!"],
+        answers: ["'Allo! 'Allo!", "Allo Allo"],
       },
     ],
   },
@@ -340,7 +342,7 @@ export const rounds: Round[] = [
       },
       {
         question:
-          "Very good dog Gromit featured in the BBC One Christmas idents before which episode?",
+          "Very good dog Gromit featured in the BBC One Christmas idents before which David Tennant episode?",
         answers: ["The Next Doctor", "Next Doctor"],
       },
       {
@@ -366,7 +368,7 @@ export const rounds: Round[] = [
       {
         question:
           "In 'Image of the Fendahl' what does Colby's dog Leakey find?",
-        answers: ["Dead body", "dead guy", "dead man", "corpse"],
+        answers: ["A dead body", "dead body", "dead guy", "dead man", "corpse"],
       },
       { question: "Who invented K9?", answers: ["Marius", "Professor Marius"] },
       {
@@ -376,13 +378,13 @@ export const rounds: Round[] = [
       },
       {
         question:
-          "What was the onomatopoeic name of the robot dog the Doctor when working at a department store in 'Closing Time'?",
+          "What was the onomatopoeic name of the robot dog the Doctor plays with in the department store in 'Closing Time'?",
         answers: ["Yappy"],
       },
       {
         question:
           "True or false: there are dogs in the human colony on Vulcan in 'Power of the Daleks'?",
-        answers: ["True"],
+        answers: ["True", "Correct", "Yes"],
       },
     ],
   },
@@ -390,7 +392,7 @@ export const rounds: Round[] = [
     name: "It's all Greek to Me",
     slug: "greek",
     copy: "A round based on letters of the Greek alphabet.",
-    hint: "We are looking for answers as English words, not Greek letters.",
+    hint: "We are looking for answers as English words, not Greek letters, i.e. 'Lambda' not 'Λλ'.",
     questions: [
       {
         question: "Which Federation diplomat was voiced by Ysanne Churchman?",
@@ -451,7 +453,7 @@ export const rounds: Round[] = [
       {
         question:
           "Where was the Dominator ship on course for before it landed on Dulkis?",
-        answers: ["Epsilon"],
+        answers: ["Epsilon 4", "Epsilon"],
       },
       {
         question:
@@ -505,7 +507,7 @@ export const rounds: Round[] = [
       {
         question:
           "True or false: the word 'iota' does not appear in televised Doctor Who.",
-        answers: ["True"],
+        answers: ["True", "correct", "Yes"],
       },
     ],
   },
@@ -513,7 +515,7 @@ export const rounds: Round[] = [
     name: "How Long...",
     slug: "how-long",
     copy: "How long, in terms of time, were the following...",
-    hint: "All answers rounded to nearest whole number, measurements specified in each question.",
+    hint: "All answers are numeric and rounded to nearest whole number, measurements specified in each question.",
     questions: [
       {
         question:
@@ -532,8 +534,8 @@ export const rounds: Round[] = [
       },
       {
         question:
-          "…did the United Nations Intelligence Taskforce last for (years)?",
-        answers: ["21"],
+          "…did the United Nations Intelligence Taskforce appear on screen for (years)?",
+        answers: ["37"],
       },
       {
         question:
@@ -664,7 +666,7 @@ export const rounds: Round[] = [
       },
       {
         question:
-          "Appears as a hologram warning the Doctor and Belinda that the Earth was destroyed on 24 May 2025.",
+          "Appears as a hologram informing the Doctor and Belinda that the Earth was destroyed on 24 May 2025.",
         answers: ["Graham Norton"],
       },
       {
@@ -870,8 +872,8 @@ export const rounds: Round[] = [
       {
         question: "The Girl in the Fireplace",
         answers: [
-          "Reinette",
           "Madame de Pompadour",
+          "Reinette",
           "Jeanne-Antoinette Poisson",
         ],
       },
@@ -883,6 +885,7 @@ export const rounds: Round[] = [
           "Charles Second",
           "Charles",
           "King Charles II",
+          "The King who brought back partying",
         ],
       },
       { question: "Black Orchid", answers: ["Lady Cranleigh"] },
@@ -901,9 +904,9 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor looks upset.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "Mindwarp",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -936,7 +939,7 @@ export const rounds: Round[] = [
           url: "/images/drWhoQuiz/colin_cliffhangers/colin_cliffhanger_5.jpeg",
           alt: "The Sixth Doctor with his eyes closed, head lolling.",
         },
-        answers: ["Two Doctors", "The Two Doctors"],
+        answers: ["The Two Doctors", "Two Doctors"],
       },
       {
         question: "",
@@ -953,10 +956,10 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor looks haughty and defiant.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "The Mysterious Planet",
           "Mysterious Planet",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -965,7 +968,7 @@ export const rounds: Round[] = [
           url: "/images/drWhoQuiz/colin_cliffhangers/colin_cliffhanger_8.jpeg",
           alt: "The Sixth Doctor despairs.",
         },
-        answers: ["Twin Dilemma", "The Twin Dilemma"],
+        answers: ["The Twin Dilemma", "Twin Dilemma"],
       },
       {
         question: "",
@@ -974,9 +977,9 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor, lying in sand, cries for help.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "The Ultimate Foe",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -994,9 +997,9 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor, bathed in blue light, looks aghast.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "Mindwarp",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -1006,9 +1009,9 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor looks defiant.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "Mindwarp",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -1018,9 +1021,9 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor, connected to some equipment, writhes and screams.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "Mindwarp",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -1030,10 +1033,10 @@ export const rounds: Round[] = [
           alt: "The Sixth Doctor looks worried.",
         },
         answers: [
+          "The Trial of a Time Lord",
           "The Mysterious Planet",
           "Mysterious Planet",
           "Trial of a Time Lord",
-          "The Trial of a Time Lord",
         ],
       },
       {
@@ -1042,7 +1045,7 @@ export const rounds: Round[] = [
           url: "/images/drWhoQuiz/colin_cliffhangers/colin_cliffhanger_20.jpg",
           alt: "The Sixth Doctor, lying on his back and wearing black, looks concerned.",
         },
-        answers: ["Mark of the Rani", "The Mark of the Rani"],
+        answers: ["The Mark of the Rani", "Mark of the Rani"],
       },
       {
         question: "",
@@ -1050,7 +1053,7 @@ export const rounds: Round[] = [
           url: "/images/drWhoQuiz/colin_cliffhangers/colin_cliffhanger_21.jpg",
           alt: "The Sixth Doctor looks both worried and smug.",
         },
-        answers: ["Twin Dilemma", "The Twin Dilemma"],
+        answers: ["The Twin Dilemma", "Twin Dilemma"],
       },
     ],
   },
@@ -1154,7 +1157,7 @@ export const rounds: Round[] = [
           url: "/images/drWhoQuiz/inhuman_round/inhuman_12.png",
           alt: "White round objects embedded in a grey wall, a cable just visible in the top left.",
         },
-        answers: ["Day of the Doctor", "The Day of the Doctor"],
+        answers: ["The Day of the Doctor", "Day of the Doctor"],
       },
       {
         question: "",
@@ -1717,7 +1720,7 @@ export const rounds: Round[] = [
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_2.mp3",
-        answers: ["End of the World", "The End of the World"],
+        answers: ["The End of the World", "End of the World"],
       },
       {
         question: "Which story does this song feature in?",
@@ -1733,8 +1736,8 @@ export const rounds: Round[] = [
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_5.mp3",
         answers: [
-          "Big Bang",
           "The Big Bang",
+          "Big Bang",
           "The Pandorica Opens/The Big Bang",
         ],
       },
@@ -1757,20 +1760,20 @@ export const rounds: Round[] = [
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_9.mp3",
         answers: [
-          "Rebel Flesh",
           "The Rebel Flesh",
+          "Rebel Flesh",
           "The Rebel Flesh/The Almost People",
         ],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_10.mp3",
-        answers: ["Power of the Doctor", "The Power of the Doctor"],
+        answers: ["The Power of the Doctor", "Power of the Doctor"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_11.mp3",
-        answers: ["Power of Three", "The Power of Three"],
+        answers: ["The Power of Three", "Power of Three"],
       },
       {
         question: "Which story does this song feature in?",
@@ -1790,12 +1793,12 @@ export const rounds: Round[] = [
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_15.mp3",
-        answers: ["Sound of Drums", "The Sound of Drums"],
+        answers: ["The Sound of Drums", "Sound of Drums"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_16.mp3",
-        answers: ["Last of the Time Lords", "The Last of the Time Lords"],
+        answers: ["The Last of the Time Lords", "Last of the Time Lords"],
       },
       {
         question: "Which story does this song feature in?",
@@ -1805,7 +1808,7 @@ export const rounds: Round[] = [
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_18.mp3",
-        answers: ["The Angels Take Manhattan"],
+        answers: ["The Angels Take Manhattan", "Angels Take Manhattan"],
       },
       {
         question: "Which story does this song feature in?",
@@ -1833,6 +1836,7 @@ export const rounds: Round[] = [
     name: "Intros Round - Incidental Music",
     slug: "intros-incidental",
     copy: "Click on the play button to hear roughly 10 seconds of music composed for an episode of Doctor Who, then name the story it is from.",
+    hint: "If you get that one: no, it's not an error.",
     questions: [
       {
         question: "Which story does this music feature in?",
@@ -2038,6 +2042,147 @@ export const rounds: Round[] = [
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_41.mp3",
         answers: ["The Wheel in Space", "Wheel in Space"],
+      },
+    ],
+  },
+  {
+    name: "Death!",
+    slug: "deaths",
+    copy: "Identify the story from the described character death.",
+    hint: "NB. For the sake of argument, living deaths count here.",
+    questions: [
+      {
+        question: "Drowned in a vat of fondant surprise.",
+        answers: ["The Happiness Patrol", "Happiness Patrol"],
+      },
+      {
+        question: "Electrocuted in undersea kung fu gambit.",
+        answers: ["Warriors of the Deep"],
+      },
+      {
+        question: "Shot in face at point blank range in front of his family.",
+        answers: ["Rose"],
+      },
+      {
+        question: "Atomised by gargoyle.",
+        answers: ["The Daemons", "Daemons"],
+      },
+      {
+        question: "Pushed into giant brain.",
+        answers: ["Planet of the Ood"],
+      },
+      {
+        question: "Cannibal in nappy poisoned by plant.",
+        answers: ["Vengeance on Varos"],
+      },
+      {
+        question: "Eaten by teachers.",
+        answers: ["School Reunion"],
+      },
+      {
+        question: "Stabbed through the heart with spaceship.",
+        answers: ["State of Decay"],
+      },
+      {
+        question: "Organs harvested by clockwork robots.",
+        answers: ["The Girl in the Fireplace", "Girl in the Fireplace"],
+      },
+      {
+        question: "Thrown into centre of the Earth by giant spider.",
+        answers: ["The Runaway Bride", "Runaway Bride"],
+      },
+      {
+        question: "SatNav drove her into river.",
+        answers: [
+          "The Sontaran Stratagem",
+          "Sontaran Stratagem",
+          "The Sontaran Stratagem/The Poison Sky",
+        ],
+      },
+      {
+        question: "Eaten by the Master.",
+        answers: ["The End of Time", "End of Time", "The End of Time Part One"],
+      },
+      {
+        question: "Fell off a cloud.",
+        answers: ["The Snowmen"],
+      },
+      {
+        question: "Dissected by creature hiding in carpet.",
+        answers: ["Flatline"],
+      },
+      {
+        question: "Suffocated by snake materialising in windpipe.",
+        answers: ["Survivors of the Flux"],
+      },
+      {
+        question: "Killed by bubble wrap.",
+        answers: ["Kerblam!", "Kerblam"],
+      },
+      {
+        question: "Drained of energy by vampiric celestial body.",
+        answers: ["The Tenth Planet", "Tenth Planet"],
+      },
+      {
+        question: "Utterly disintegrated by shop window dummy.",
+        answers: ["Spearhead from Space"],
+      },
+      {
+        question: "Smothered by own chair.",
+        answers: ["Terror of the Autons"],
+      },
+      {
+        question: "Thrown off thousand metre high building.",
+        answers: ["The Sun Makers", "Sun Makers", "Sunmakers", "The Sunmakers"],
+      },
+      {
+        question: "Mauled by sacred beast.",
+        answers: [
+          "The Curse of Peladon",
+          "The Monster of Peladon",
+          "Curse of Peladon",
+          "Monster of Peladon",
+        ],
+      },
+      {
+        question: "Consumed by giant space wasp grub.",
+        answers: ["The Ark in Space", "Ark in Space"],
+      },
+      {
+        question: "Bullet to the guts.",
+        answers: [
+          "The Brain of Morbius",
+          "Brain of Morbius",
+          "Resurrection of the Daleks",
+        ],
+      },
+      {
+        question: "Shot by customs officer while on drug-induced comedown.",
+        answers: ["Nightmare of Eden"],
+      },
+      {
+        question: "Decapitated by Roundheads",
+        answers: ["The Awakening"],
+      },
+      {
+        question: "Turned into tree by land mine.",
+        answers: ["The Mark of the Rani", "Mark of the Rani"],
+      },
+      {
+        question: "Stabbed by alien who refused to pay restaurant bill.",
+        answers: ["The Two Doctors", "Two Doctors"],
+      },
+      {
+        question: "Beaten to death with tree branch.",
+        answers: ["Revelation of the Daleks"],
+      },
+      {
+        question: "Turned into soup by angel.",
+        answers: ["Ghost light", "Ghostlight"],
+      },
+      {
+        question: "Dragged down own waste disposal unit.",
+        answers: ["Paradise Towers"],
       },
     ],
   },
