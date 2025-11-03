@@ -51,15 +51,15 @@ const GoochChoiceModal: React.FC<GoochProps> = ({
           You get points for guessing which story the picture is from, BUT...
         </p>
         <p className={styles.sModalTxt}>
-          If you play your 'IT'S GOOCH' card, and it IS GOOCH you could double
-          your points...
+          If you play your &lsquo;IT&apos;S GOOCH&lsquo; card, and it IS GOOCH
+          you could double your points...
         </p>
         <p className={styles.sModalTxt}>
           Or, in the event the picture IS NOT GOOCH, halve them.
         </p>
         <p className={styles.sModalTxt}>MAKE YOUR CHOICE</p>
         <button className={styles.btn} onClick={() => isGooch()}>
-          Yes, it's Gooch
+          Yes, it&apos;s Gooch
         </button>
         <button className={styles.btn} onClick={() => isNotGooch()}>
           No, it is not Gooch

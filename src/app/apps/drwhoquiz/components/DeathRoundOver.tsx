@@ -166,17 +166,19 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
       )}
       {goochReady && !showScore && (
         <>
-        <p>You have now scored {roundScore} points.</p>
+          <p>You have now scored {roundScore} points.</p>
           <button onClick={goochReveal}>Is it Gooch?</button>
         </>
       )}
       {showScore && (
         <>
           {doublePoints && (
-            <p>It was Gooch! You were right. You've doubled your points.</p>
+            <p>
+              It was Gooch! You were right. You&apos;ve doubled your points.
+            </p>
           )}
           {halfPoints && (
-            <p>It wasn't Gooch. You were wrong. Your points are halved.</p>
+            <p>It wasn&apos;t Gooch. You were wrong. Your points are halved.</p>
           )}
           {noGoochRight && <p>You were wise not to choose Gooch.</p>}
           {goochWrong && <p>You were fooolish not to choose Gooch.</p>}
