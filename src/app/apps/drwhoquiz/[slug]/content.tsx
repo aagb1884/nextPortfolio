@@ -1,5 +1,5 @@
 "use client";
-import { Question, Round } from "../data/questions";
+import { DeathImages, Question, Round } from "../data/questions";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "@/app/styles/whoQuiz.module.css";
@@ -9,6 +9,8 @@ import SocialMediaShare from "../components/SocialMediaShare";
 import Header from "../components/header";
 import InstructionsModal from "../components/InstructionsModal";
 import CreditsModal from "../components/CreditsModal";
+import GoochChoiceModal from "../components/GoochChoiceModal";
+import DeathRoundOver from "../components/DeathRoundOver";
 
 interface PageContentProps {
   round: Round;
@@ -22,7 +24,14 @@ const PageContent = ({ round, name }: PageContentProps) => {
   const [isAnswerCorrect, setIsAnswerCorrect] = useState<boolean | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
   const [roundScore, setRoundScore] = useState<number>(0);
+  const [deathRoundScore, setDeathRoundScore] = useState<number>(0);
   const [showModal, setShowModal] = useState<boolean>(false);
+  // gooch guessing game
+  const [showGoochChoiceModal, setShowGoochChoiceModal] =
+    useState<boolean>(false);
+  const [goochGuess, setGoochGuess] = useState<boolean | null>(null);
+  const [isGooch, setIsGooch] = useState<boolean>(false);
+  const [deathImage, setDeathImage] = useState<Question | undefined>();
   const [showInstructionsModal, setShowInstructionsModal] =
     useState<boolean>(false);
   const [showCreditModal, setShowCreditModal] = useState<boolean>(false);
@@ -31,19 +40,53 @@ const PageContent = ({ round, name }: PageContentProps) => {
   const [timeLeft, setTimeLeft] = useState<number>(60);
   const [progress, setProgress] = useState<number>(0);
   const [currentTime, setCurrentTime] = useState<number>(0);
+const [showScore, setShowScore] = useState<boolean | null>(null);
+  // is it gooch game
+
+  const isDeathRound = round.name === "Death!";
+
+  const deathRoundReset = () => {
+    setCurrentQuestionIndex(0);
+    setIsActive(false);
+    setShowScore(null)
+    setRoundOver(false)
+    setDeathRoundScore(0)
+    setRoundScore(0)
+    if (isDeathRound) {
+      setShowGoochChoiceModal(true);
+    }
+  };
+
+  const randomDeathImage = (array: Question[]) => {
+    const one = [...array].sort(() => Math.random() - 0.5).slice(0, 1);
+    setDeathImage(one[0]);
+    if (
+      deathImage !== undefined &&
+      deathImage.answers.includes("Terror of the Autons")
+    ) {
+      setIsGooch(true);
+    } else {
+      setIsGooch(false);
+    }
+  };
+
 
   // question and answer handling
 
   const set10Questions = (array: Question[]) => {
-    const ten = [...array].sort(() => Math.random() - 0.5).slice(0, 10);
+    if (isDeathRound && goochGuess === null) {
+      setShowGoochChoiceModal(true);
+    } else {
+      const ten = [...array].sort(() => Math.random() - 0.5).slice(0, 10);
 
-    if (ten[0]?.audio) {
-      const newAudio = new Audio(ten[0].audio);
-      audioRef.current = newAudio;
+      if (ten[0]?.audio) {
+        const newAudio = new Audio(ten[0].audio);
+        audioRef.current = newAudio;
+      }
+
+      setQuizRound(ten);
+      setShowQuiz(true);
     }
-
-    setQuizRound(ten);
-    setShowQuiz(true);
   };
 
   const handleAnswer = () => {
@@ -66,10 +109,14 @@ const PageContent = ({ round, name }: PageContentProps) => {
     const correctAnswers = quizRound[currentQuestionIndex].answers;
 
     if (
-      (correctAnswers.includes(answer.toLowerCase()) || lowercaseAnswers.includes(answer.toLowerCase())) &&
+      (correctAnswers.includes(answer.toLowerCase()) ||
+        lowercaseAnswers.includes(answer.toLowerCase())) &&
       answer.trim() !== ""
     ) {
       setRoundScore(roundScore + timeLeft);
+      if (isDeathRound) {
+        setDeathRoundScore((prev) => prev + 1)
+      }
       setTimeout(() => {
         setIsAnswerCorrect(null);
       }, 5000);
@@ -142,11 +189,11 @@ const PageContent = ({ round, name }: PageContentProps) => {
   }, [currentQuestionIndex]);
 
   //audio
-
+  
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && quizRound.length === 10) {
+    if (typeof window !== "undefined" && quizRound.length === 10 && !isDeathRound) {
       const newAudio = new Audio(quizRound[currentQuestionIndex].audio);
       audioRef.current = newAudio;
 
@@ -196,6 +243,16 @@ const PageContent = ({ round, name }: PageContentProps) => {
           <InstructionsModal setModalOpen={setShowInstructionsModal} />
         )}
         {showCreditModal && <CreditsModal setModalOpen={setShowCreditModal} />}
+        {showGoochChoiceModal && (
+          <GoochChoiceModal
+            setModalOpen={setShowGoochChoiceModal}
+            setGoochGuess={setGoochGuess}
+            set10Questions={set10Questions}
+            questions={round.questions}
+            randomDeathImage={randomDeathImage}
+            setShowScore={setShowScore}
+          />
+        )}
         <h1 className={styles.roundName}>{round.name}</h1>
         {round.copy && <p className={styles.copy}>{round.copy}</p>}
         {round.hint && <aside className={styles.aside}>{round.hint}</aside>}
@@ -211,7 +268,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
         )}
         <div>
           {showQuiz && renderQuiz()}
-          {!showQuiz && roundOver && (
+          {!showQuiz && roundOver && !isDeathRound && (
             <div className={styles.quizOver}>
               <p>Round Completed! You scored {roundScore}</p>
               <ShareButton setShowModal={setShowModal} showModal={showModal} />
@@ -219,6 +276,24 @@ const PageContent = ({ round, name }: PageContentProps) => {
                 Try Again?
               </button>
             </div>
+          )}
+
+          {isDeathRound && roundOver && (
+            <DeathRoundOver
+              deathRoundReset={deathRoundReset}
+              isGooch={isGooch}
+              goochGuess={goochGuess}
+              roundScore={roundScore}
+              setRoundScore={setRoundScore}
+              showModal={showModal}
+              setShowModal={setShowModal}
+              deathImage={deathImage}
+              setShowScore={setShowScore}
+              showScore={showScore}
+              deathRoundScore={deathRoundScore}
+              setIsAnswerCorrect={setIsAnswerCorrect}
+              isAnswerCorrect={isAnswerCorrect}
+            />
           )}
         </div>
         <Link className={styles.link} href={"/apps/drwhoquiz"}>
