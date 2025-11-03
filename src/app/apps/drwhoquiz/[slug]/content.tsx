@@ -1,5 +1,5 @@
 "use client";
-import { DeathImages, Question, Round } from "../data/questions";
+import { Question, Round } from "../data/questions";
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import styles from "@/app/styles/whoQuiz.module.css";
