@@ -8,8 +8,8 @@ import diamond_wall from "../../../../../public/images/drWhoQuiz/diamond_wall.pn
 
 interface DeathRoundOverProps {
   deathRoundReset: () => void;
-  isGooch: boolean;
-  goochGuess: boolean | null;
+  isGoodge: boolean;
+  goodgeGuess: boolean | null;
   roundScore: number;
   showModal: boolean;
   setShowModal: (b: boolean) => void;
@@ -19,12 +19,12 @@ interface DeathRoundOverProps {
   showScore: boolean | null;
   deathRoundScore: number;
   setIsAnswerCorrect: (b: boolean) => void;
-  isAnswerCorrect: boolean | null
+  isAnswerCorrect: boolean | null;
 }
 const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
   deathRoundReset,
-  isGooch,
-  goochGuess,
+  isGoodge,
+  goodgeGuess,
   roundScore,
   showModal,
   setShowModal,
@@ -37,14 +37,14 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
   isAnswerCorrect,
 }) => {
   const [userAnswer, setUserAnswer] = useState<string>("");
-  const [goochReady, setGoochReady] = useState<boolean>(false);
+  const [goodgeReady, setGoodgeReady] = useState<boolean>(false);
   const win =
     typeof window !== "undefined"
-      ? new Audio("/audio/BigFinish/thalia_1.mp3")
+      ? new Audio("/audio/DrWhoQuiz/isGoodge.mp3")
       : null;
   const lose =
     typeof window !== "undefined"
-      ? new Audio("/audio/BigFinish/thalia_4.mp3")
+      ? new Audio("/audio/DrWhoQuiz/notGoodge.mp3")
       : null;
 
   const playSoundEffect = (audio: HTMLAudioElement | null) => {
@@ -54,15 +54,15 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
     }
   };
 
-  const doublePoints = isGooch && goochGuess;
-  const halfPoints = !isGooch && goochGuess;
-  const noGoochRight = !isGooch && !goochGuess;
-  const goochWrong = isGooch && !goochGuess;
+  const doublePoints = isGoodge && goodgeGuess;
+  const halfPoints = !isGoodge && goodgeGuess;
+  const noGoodgeRight = !isGoodge && !goodgeGuess;
+  const goodgeWrong = isGoodge && !goodgeGuess;
 
-  const goochReveal = () => {
-    if (doublePoints || (goochWrong && win !== null)) {
+  const goodgeReveal = () => {
+    if (doublePoints || (goodgeWrong && win !== null)) {
       playSoundEffect(win);
-    } else if (halfPoints || (noGoochRight && lose !== null)) {
+    } else if (halfPoints || (noGoodgeRight && lose !== null)) {
       playSoundEffect(lose);
     }
     updateScore();
@@ -89,14 +89,14 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
     if (doublePoints) {
       setRoundScore(roundScore * 2);
     } else if (halfPoints) {
-      setRoundScore(roundScore / 2);
+      setRoundScore(Math.round(roundScore / 2));
     } else return;
   };
 
   const handleAnswerSubmit = () => {
     checkAnswer(userAnswer);
     setUserAnswer("");
-    setGoochReady(true);
+    setGoodgeReady(true);
   };
 
   const skip = () => {
@@ -108,7 +108,7 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
     <div className={styles.quizOver}>
       {!showScore && deathImage?.question && deathImage.image && (
         <>
-          {!goochReady && <p>Round Completed! You scored {roundScore}</p>}
+          {!goodgeReady && <p>Round Completed! You scored {roundScore}</p>}
           <p>But, for a bonus point...</p>
           <p className={styles.questionText}>{deathImage.question}</p>
           <div className={styles.qImageDiv}>
@@ -164,24 +164,30 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
           </div>
         </>
       )}
-      {goochReady && !showScore && (
+      {goodgeReady && !showScore && (
         <>
           <p>You have now scored {roundScore} points.</p>
-          <button onClick={goochReveal}>Is it Gooch?</button>
+          <button onClick={goodgeReveal}>Is it Goodge?</button>
         </>
       )}
       {showScore && (
         <>
           {doublePoints && (
             <p>
-              It was Gooch! You were right. You&apos;ve doubled your points.
+              It&apos;s Goodge! You were right. You&apos;ve doubled your points.
             </p>
           )}
           {halfPoints && (
-            <p>It wasn&apos;t Gooch. You were wrong. Your points are halved.</p>
+            <div className={styles.deathRoundOver}>
+              <p>
+                It&apos;s <b>not</b> Goodge.
+              </p>
+              <p>You were wrong.</p>
+              <p>Your points are halved.</p>
+            </div>
           )}
-          {noGoochRight && <p>You were wise not to choose Gooch.</p>}
-          {goochWrong && <p>You were fooolish not to choose Gooch.</p>}
+          {noGoodgeRight && <p>You were wise not to choose Goodge.</p>}
+          {goodgeWrong && <p>You were fooolish not to choose Goodge.</p>}
           <p>You have scored {roundScore} points.</p>
           <ShareButton setShowModal={setShowModal} showModal={showModal} />
           <button className={styles.btn} onClick={() => deathRoundReset()}>

@@ -206,11 +206,14 @@
   margin-bottom: 4%;
 }
 
-.quizOver {
+.quizOver, .deathRoundOver {
   display: flex;
   flex-direction: column;
   padding: 1%;
   align-items: center;
+}
+
+.quizOver {
   border-top: 2px solid #032687;
 }
 

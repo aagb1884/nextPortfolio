@@ -2193,7 +2193,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["Terror of the Autons"],
     image: {
-      url: "/images/drWhoQuiz/deaths/gooch_terror_autons.jpg",
+      url: "/images/drWhoQuiz/deaths/goodge_terror_autons.jpg",
       alt: "A man in a lab coat lies inside a lunch box.",
     },
   },

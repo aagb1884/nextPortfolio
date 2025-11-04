@@ -9,7 +9,7 @@ import SocialMediaShare from "../components/SocialMediaShare";
 import Header from "../components/header";
 import InstructionsModal from "../components/InstructionsModal";
 import CreditsModal from "../components/CreditsModal";
-import GoochChoiceModal from "../components/GoochChoiceModal";
+import GoodgeChoiceModal from "../components/GoodgeChoiceModal";
 import DeathRoundOver from "../components/DeathRoundOver";
 
 interface PageContentProps {
@@ -26,11 +26,11 @@ const PageContent = ({ round, name }: PageContentProps) => {
   const [roundScore, setRoundScore] = useState<number>(0);
   const [deathRoundScore, setDeathRoundScore] = useState<number>(0);
   const [showModal, setShowModal] = useState<boolean>(false);
-  // gooch guessing game
-  const [showGoochChoiceModal, setShowGoochChoiceModal] =
+  // goodge guessing game states
+  const [showGoodgeChoiceModal, setShowGoodgeChoiceModal] =
     useState<boolean>(false);
-  const [goochGuess, setGoochGuess] = useState<boolean | null>(null);
-  const [isGooch, setIsGooch] = useState<boolean>(false);
+  const [goodgeGuess, setGoodgeGuess] = useState<boolean | null>(null);
+  const [isGoodge, setIsGoodge] = useState<boolean>(false);
   const [deathImage, setDeathImage] = useState<Question | undefined>();
   const [showInstructionsModal, setShowInstructionsModal] =
     useState<boolean>(false);
@@ -40,20 +40,21 @@ const PageContent = ({ round, name }: PageContentProps) => {
   const [timeLeft, setTimeLeft] = useState<number>(60);
   const [progress, setProgress] = useState<number>(0);
   const [currentTime, setCurrentTime] = useState<number>(0);
-const [showScore, setShowScore] = useState<boolean | null>(null);
-  // is it gooch game
+  const [showScore, setShowScore] = useState<boolean | null>(null);
 
+  // is it goodge game
   const isDeathRound = round.name === "Death!";
 
   const deathRoundReset = () => {
     setCurrentQuestionIndex(0);
     setIsActive(false);
-    setShowScore(null)
-    setRoundOver(false)
-    setDeathRoundScore(0)
-    setRoundScore(0)
+    setIsAnswerCorrect(null)
+    setShowScore(null);
+    setRoundOver(false);
+    setDeathRoundScore(0);
+    setRoundScore(0);
     if (isDeathRound) {
-      setShowGoochChoiceModal(true);
+      setShowGoodgeChoiceModal(true);
     }
   };
 
@@ -64,18 +65,17 @@ const [showScore, setShowScore] = useState<boolean | null>(null);
       deathImage !== undefined &&
       deathImage.answers.includes("Terror of the Autons")
     ) {
-      setIsGooch(true);
+      setIsGoodge(true);
     } else {
-      setIsGooch(false);
+      setIsGoodge(false);
     }
   };
-
 
   // question and answer handling
 
   const set10Questions = (array: Question[]) => {
-    if (isDeathRound && goochGuess === null) {
-      setShowGoochChoiceModal(true);
+    if (isDeathRound && goodgeGuess === null) {
+      setShowGoodgeChoiceModal(true);
     } else {
       const ten = [...array].sort(() => Math.random() - 0.5).slice(0, 10);
 
@@ -115,7 +115,7 @@ const [showScore, setShowScore] = useState<boolean | null>(null);
     ) {
       setRoundScore(roundScore + timeLeft);
       if (isDeathRound) {
-        setDeathRoundScore((prev) => prev + 1)
+        setDeathRoundScore((prev) => prev + 1);
       }
       setTimeout(() => {
         setIsAnswerCorrect(null);
@@ -189,11 +189,15 @@ const [showScore, setShowScore] = useState<boolean | null>(null);
   }, [currentQuestionIndex]);
 
   //audio
-  
+
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && quizRound.length === 10 && !isDeathRound) {
+    if (
+      typeof window !== "undefined" &&
+      quizRound.length === 10 &&
+      !isDeathRound
+    ) {
       const newAudio = new Audio(quizRound[currentQuestionIndex].audio);
       audioRef.current = newAudio;
 
@@ -243,12 +247,10 @@ const [showScore, setShowScore] = useState<boolean | null>(null);
           <InstructionsModal setModalOpen={setShowInstructionsModal} />
         )}
         {showCreditModal && <CreditsModal setModalOpen={setShowCreditModal} />}
-        {showGoochChoiceModal && (
-          <GoochChoiceModal
-            setModalOpen={setShowGoochChoiceModal}
-            setGoochGuess={setGoochGuess}
-            set10Questions={set10Questions}
-            questions={round.questions}
+        {showGoodgeChoiceModal && (
+          <GoodgeChoiceModal
+            setModalOpen={setShowGoodgeChoiceModal}
+            setGoodgeGuess={setGoodgeGuess}
             randomDeathImage={randomDeathImage}
             setShowScore={setShowScore}
           />
@@ -281,8 +283,8 @@ const [showScore, setShowScore] = useState<boolean | null>(null);
           {isDeathRound && roundOver && (
             <DeathRoundOver
               deathRoundReset={deathRoundReset}
-              isGooch={isGooch}
-              goochGuess={goochGuess}
+              isGoodge={isGoodge}
+              goodgeGuess={goodgeGuess}
               roundScore={roundScore}
               setRoundScore={setRoundScore}
               showModal={showModal}
