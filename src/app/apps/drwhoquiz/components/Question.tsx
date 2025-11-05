@@ -142,7 +142,7 @@ const QuestionComponent = ({
           >
             Submit
           </button>
-          <button id="submit" className={styles.skipBtn} onClick={skip}>
+          <button id="skip" className={styles.skipBtn} onClick={skip}>
             Skip
           </button>
         </div>

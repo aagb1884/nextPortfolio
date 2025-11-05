@@ -2188,6 +2188,189 @@ export const rounds: Round[] = [
   },
 ];
 
+export const DeathImages: Question[] = [
+  {
+    question: "What story does this death scene come from?",
+    answers: ["Terror of the Autons"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/goodge_terror_autons.jpg",
+      alt: "A man in a lab coat lies inside a lunch box.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["The Creature from the Pit", "Creature from the Pit"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/adrasta.png",
+      alt: "A woman in black lies covered in what looks like cobwebs.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["The King's Demons", "King's Demons"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/arrow.png",
+      alt: "A man riding a white horse across grass throws his arms up in pain.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["The Sound of Drums", "Sound of Drums"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/cabinet_deaths.png",
+      alt: "A man in a dark suit lies across a shiny wooden table as gas curls around him.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["The Crimson Horror", "Crimson Horror"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/crimson_horror.jpg",
+      alt: "A man lies on a slab, sheet pulled down to his shoulders, with bright red skin.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["Dot and Bubble"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/dot_bubble.png",
+      alt: "A big orange slug-like creature is enveloping someone wearing yellow checked trousers.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["Doomsday"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/eastenders_skull.png",
+      alt: "A burnt-looking human head is gripped by two suckers.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["The Green Death", "Green Death"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/green_death.webp",
+      alt: "A man wearing a miner's helmet, eyes closed, his skin glowing green.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["The Five Doctors", "Five Doctors"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/immortality.png",
+      alt: "A frieze of a figure with an ornate collar, the face alive somehow beneath the rock.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["The End of the World", "End of the World"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/jabe.png",
+      alt: "A man looks back along a walkway in a huge chamber, a figure on fire in the background.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["Time and the Rani"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/Lakertyan_skeleton.webp",
+      alt: "A skeleton - mostly humanoid but with a tail and crest - lies among rocks.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["Remembrance of the Daleks"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/lightning.png",
+      alt: "A man holding a glass sphere standing on metal stairs outdoors, zapped by lightning from below.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["The Parting of the Ways", "Parting of the Ways"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/lynda.png",
+      alt: "A woman reacts in horror as glass shatters all around her.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["Logopolis"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/monitor.png",
+      alt: "A bearded man in robes gasps as parts of his body randomly dissolve.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["The Claws of Axos", "Claws of Axos"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/pigbin.png",
+      alt: "A man lies against gravel, wearing a scarf and dirty jacket, his hat fallen, his face white.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["Pyramids of Mars"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/pyramids_poacher.jpg",
+      alt: "A man in tweed suit and cap is crushed between two large Egyptian mummies.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["It Takes You Away"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/ribbons.png",
+      alt: "A small white furry creature emerges from the skull of what looks like a half-eaten corpse.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["The Dalek Invasion of Earth", "Dalek Invasion of Earth"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/roboman.png",
+      alt: "Monochrome: a figure in a metal helmet lies face down in a river.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["The Deadly Assassin", "Deadly Assassin"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/runcible.png",
+      alt: "A robed figure lies splayed on the floor, a large blade sticking out of their back.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["Earthshock"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/snyder.png",
+      alt: "A green, gungy smoking substance with a name badge reading 'Snyder' in the middle of it.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: [
+      "The Trial of a Time Lord",
+      "Terror of the Vervoids",
+      "Trial of a Time Lord",
+    ],
+    image: {
+      url: "/images/drWhoQuiz/deaths/terror_vervoids.png",
+      alt: "A woman screams as a man's body glows and spasms as he is electrocuted in a dark corridor.",
+    },
+  },
+  {
+    question: "What story does this death scene come from?",
+    answers: ["Time Heist"],
+    image: {
+      url: "/images/drWhoQuiz/deaths/time_heist.png",
+      alt: "A brown skinned man in a suit, his head sunken as if his brain has turned to liquid.",
+    },
+  },
+];
+
 export const LogicalRound: CyberRound = {
   name: "You Know. Our ways.",
   slug: "logical",
