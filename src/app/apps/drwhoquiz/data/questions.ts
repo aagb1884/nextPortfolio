@@ -192,6 +192,10 @@ export const rounds: Round[] = [
           "In what episode does the last surviving member of the Freedom Fifteen appear?",
         answers: ["The Long Game", "Long Game"],
       },
+      {
+        question: "What do Jackie and Pete Tyler name their son?",
+        answers: ["Tony"],
+      },
     ],
   },
   {
@@ -300,6 +304,20 @@ export const rounds: Round[] = [
         question:
           "Guy Siner, who played General Ravon in 'Genesis of the Daleks', later found fame in which sitcom?",
         answers: ["'Allo! 'Allo!", "Allo Allo"],
+      },
+      {
+        question: "General Cheng Teik appears in which UNIT story?",
+        answers: ["The Mind of Evil", "Mind of Evil"],
+      },
+      {
+        question:
+          "What name was used by one of the War Lords in their simulation of World War 1?",
+        answers: ["Smythe", "General Smythe"],
+      },
+      {
+        question:
+          "What species was General Nikolai Hermack, Space Corps officer?",
+        answers: ["Human"],
       },
     ],
   },
@@ -627,6 +645,16 @@ export const rounds: Round[] = [
         question: "…did K9 Mark 1 last on the show (stories)?",
         answers: ["5"],
       },
+      {
+        question:
+          "…was Delia Derbyshire's version of the theme music used? (years)",
+        answers: ["16"],
+      },
+      {
+        question:
+          "…do the Ribosian seasons of Icetime and Suntime last? (Levithian years)",
+        answers: ["32"],
+      },
     ],
   },
 
@@ -947,6 +975,10 @@ export const rounds: Round[] = [
         ],
       },
       { question: "The Angels Take Manhattan", answers: ["River Song"] },
+      {
+        question: "The Five Doctors (sort of)",
+        answers: ["Colonel Crichton", "Crichton"],
+      },
     ],
   },
   {
@@ -2838,6 +2870,55 @@ export const LogicalRound: CyberRound = {
           id: 10,
           point:
             "Hope no one can de-activate the radio beam that guides the bombs to Earth.",
+        },
+      ],
+    },
+    {
+      story: "The Next Doctor",
+      plot: [
+        {
+          id: 1,
+          point:
+            "Having escaped the Void in small numbers, build a conversion dreadnought.",
+        },
+        {
+          id: 2,
+          point: "Establish secret factory under flipping great river.",
+        },
+        {
+          id: 3,
+          point:
+            "Decide best labour force available is small victorian children.",
+        },
+        {
+          id: 4,
+          point: "Seek willing accomplice in charge of multiple children.",
+        },
+        {
+          id: 5,
+          point: "Murder someone friendly with multiple workhouse managers.",
+        },
+        {
+          id: 6,
+          point: "Capture and part-convert managers at ensuing funeral.",
+        },
+        {
+          id: 7,
+          point:
+            "Workhouse managers will then bring their many children to secret base.",
+        },
+        {
+          id: 8,
+          point:
+            "Children will be used to work electricity-generating machine..",
+        },
+        {
+          id: 9,
+          point: "Inevitably betray accomplice and wire her into dreadnought.",
+        },
+        {
+          id: 10,
+          point: "The Cyber King shall rise!",
         },
       ],
     },
