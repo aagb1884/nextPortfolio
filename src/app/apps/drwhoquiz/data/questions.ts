@@ -2162,7 +2162,7 @@ export const rounds: Round[] = [
       },
       {
         question: "Decapitated by Roundheads",
-        answers: ["The Awakening"],
+        answers: ["The Awakening", "Awakening"],
       },
       {
         question: "Turned into tree by land mine.",
@@ -2365,7 +2365,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["Time Heist"],
     image: {
-      url: "/images/drWhoQuiz/deaths/time_heist.png",
+      url: "/images/drWhoQuiz/deaths/time_heist.jpg",
       alt: "A brown skinned man in a suit, his head sunken as if his brain has turned to liquid.",
     },
   },

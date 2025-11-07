@@ -32,6 +32,11 @@ const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
         <p className={styles.sModalTxt}>
           The Daleks are a trademark of the Terry Nation Estate.
         </p>
+        <p className={styles.sModalTxt}>
+          Exploding Dalek illustration by{" "}
+          <Link href="https://tardis.fandom.com/wiki/Roy_Knipe">Roy Knipe</Link>
+          .
+        </p>
         <br />
         <p className={styles.sModalTxt}>
           All information probably correct as of November 2025.

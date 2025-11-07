@@ -86,6 +86,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
 
       setQuizRound(ten);
       setShowQuiz(true);
+      setTimeLeft(60)
     }
   };
 
