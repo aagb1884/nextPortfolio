@@ -233,7 +233,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
   }, [isActive]);
 
   const result = `I played the "${round.name}" round and scored ${roundScore}`;
-
+  console.log(roundScore)
   return (
     <>
       <Header

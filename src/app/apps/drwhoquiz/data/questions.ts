@@ -2193,7 +2193,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["Terror of the Autons"],
     image: {
-      url: "/images/drWhoQuiz/deaths/goodge_terror_autons.jpg",
+      url: "/images/drWhoQuiz/deaths/death_1.jpg",
       alt: "A man in a lab coat lies inside a lunch box.",
     },
   },
@@ -2201,7 +2201,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["The Creature from the Pit", "Creature from the Pit"],
     image: {
-      url: "/images/drWhoQuiz/deaths/adrasta.png",
+      url: "/images/drWhoQuiz/deaths/death_2.png",
       alt: "A woman in black lies covered in what looks like cobwebs.",
     },
   },
@@ -2209,7 +2209,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["The King's Demons", "King's Demons"],
     image: {
-      url: "/images/drWhoQuiz/deaths/arrow.png",
+      url: "/images/drWhoQuiz/deaths/death_3.png",
       alt: "A man riding a white horse across grass throws his arms up in pain.",
     },
   },
@@ -2217,7 +2217,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["The Sound of Drums", "Sound of Drums"],
     image: {
-      url: "/images/drWhoQuiz/deaths/cabinet_deaths.png",
+      url: "/images/drWhoQuiz/deaths/death_4.png",
       alt: "A man in a dark suit lies across a shiny wooden table as gas curls around him.",
     },
   },
@@ -2225,7 +2225,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["The Crimson Horror", "Crimson Horror"],
     image: {
-      url: "/images/drWhoQuiz/deaths/crimson_horror.jpg",
+      url: "/images/drWhoQuiz/deaths/death_5.jpg",
       alt: "A man lies on a slab, sheet pulled down to his shoulders, with bright red skin.",
     },
   },
@@ -2233,7 +2233,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["Dot and Bubble"],
     image: {
-      url: "/images/drWhoQuiz/deaths/dot_bubble.png",
+      url: "/images/drWhoQuiz/deaths/death_6.png",
       alt: "A big orange slug-like creature is enveloping someone wearing yellow checked trousers.",
     },
   },
@@ -2241,7 +2241,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["Doomsday"],
     image: {
-      url: "/images/drWhoQuiz/deaths/eastenders_skull.png",
+      url: "/images/drWhoQuiz/deaths/death_7.png",
       alt: "A burnt-looking human head is gripped by two suckers.",
     },
   },
@@ -2249,7 +2249,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["The Green Death", "Green Death"],
     image: {
-      url: "/images/drWhoQuiz/deaths/green_death.webp",
+      url: "/images/drWhoQuiz/deaths/death_8.webp",
       alt: "A man wearing a miner's helmet, eyes closed, his skin glowing green.",
     },
   },
@@ -2257,7 +2257,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["The Five Doctors", "Five Doctors"],
     image: {
-      url: "/images/drWhoQuiz/deaths/immortality.png",
+      url: "/images/drWhoQuiz/deaths/death_9.png",
       alt: "A frieze of a figure with an ornate collar, the face alive somehow beneath the rock.",
     },
   },
@@ -2265,7 +2265,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["The End of the World", "End of the World"],
     image: {
-      url: "/images/drWhoQuiz/deaths/jabe.png",
+      url: "/images/drWhoQuiz/deaths/death_10.png",
       alt: "A man looks back along a walkway in a huge chamber, a figure on fire in the background.",
     },
   },
@@ -2273,7 +2273,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["Time and the Rani"],
     image: {
-      url: "/images/drWhoQuiz/deaths/Lakertyan_skeleton.webp",
+      url: "/images/drWhoQuiz/deaths/death_11.webp",
       alt: "A skeleton - mostly humanoid but with a tail and crest - lies among rocks.",
     },
   },
@@ -2281,7 +2281,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["Remembrance of the Daleks"],
     image: {
-      url: "/images/drWhoQuiz/deaths/lightning.png",
+      url: "/images/drWhoQuiz/deaths/death_12.png",
       alt: "A man holding a glass sphere standing on metal stairs outdoors, zapped by lightning from below.",
     },
   },
@@ -2289,7 +2289,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["The Parting of the Ways", "Parting of the Ways"],
     image: {
-      url: "/images/drWhoQuiz/deaths/lynda.png",
+      url: "/images/drWhoQuiz/deaths/death_13.png",
       alt: "A woman reacts in horror as glass shatters all around her.",
     },
   },
@@ -2297,7 +2297,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["Logopolis"],
     image: {
-      url: "/images/drWhoQuiz/deaths/monitor.png",
+      url: "/images/drWhoQuiz/deaths/death_14.png",
       alt: "A bearded man in robes gasps as parts of his body randomly dissolve.",
     },
   },
@@ -2305,7 +2305,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["The Claws of Axos", "Claws of Axos"],
     image: {
-      url: "/images/drWhoQuiz/deaths/pigbin.png",
+      url: "/images/drWhoQuiz/deaths/death_15.png",
       alt: "A man lies against gravel, wearing a scarf and dirty jacket, his hat fallen, his face white.",
     },
   },
@@ -2313,7 +2313,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["Pyramids of Mars"],
     image: {
-      url: "/images/drWhoQuiz/deaths/pyramids_poacher.jpg",
+      url: "/images/drWhoQuiz/deaths/death_16.jpg",
       alt: "A man in tweed suit and cap is crushed between two large Egyptian mummies.",
     },
   },
@@ -2321,7 +2321,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["It Takes You Away"],
     image: {
-      url: "/images/drWhoQuiz/deaths/ribbons.png",
+      url: "/images/drWhoQuiz/deaths/death_17.png",
       alt: "A small white furry creature emerges from the skull of what looks like a half-eaten corpse.",
     },
   },
@@ -2329,7 +2329,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["The Dalek Invasion of Earth", "Dalek Invasion of Earth"],
     image: {
-      url: "/images/drWhoQuiz/deaths/roboman.png",
+      url: "/images/drWhoQuiz/deaths/death_18.png",
       alt: "Monochrome: a figure in a metal helmet lies face down in a river.",
     },
   },
@@ -2337,7 +2337,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["The Deadly Assassin", "Deadly Assassin"],
     image: {
-      url: "/images/drWhoQuiz/deaths/runcible.png",
+      url: "/images/drWhoQuiz/deaths/death_19.png",
       alt: "A robed figure lies splayed on the floor, a large blade sticking out of their back.",
     },
   },
@@ -2345,7 +2345,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["Earthshock"],
     image: {
-      url: "/images/drWhoQuiz/deaths/snyder.png",
+      url: "/images/drWhoQuiz/deaths/death_20.png",
       alt: "A green, gungy smoking substance with a name badge reading 'Snyder' in the middle of it.",
     },
   },
@@ -2357,7 +2357,7 @@ export const DeathImages: Question[] = [
       "Trial of a Time Lord",
     ],
     image: {
-      url: "/images/drWhoQuiz/deaths/terror_vervoids.png",
+      url: "/images/drWhoQuiz/deaths/death_21.png",
       alt: "A woman screams as a man's body glows and spasms as he is electrocuted in a dark corridor.",
     },
   },
@@ -2365,7 +2365,7 @@ export const DeathImages: Question[] = [
     question: "What story does this death scene come from?",
     answers: ["Time Heist"],
     image: {
-      url: "/images/drWhoQuiz/deaths/time_heist.jpg",
+      url: "/images/drWhoQuiz/deaths/death_22.jpg",
       alt: "A brown skinned man in a suit, his head sunken as if his brain has turned to liquid.",
     },
   },

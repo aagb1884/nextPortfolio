@@ -100,8 +100,8 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
   };
 
   const skip = () => {
-    updateScore();
     setUserAnswer("");
+    setGoodgeReady(true)
   };
 
   return (
@@ -130,27 +130,30 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
               }}
             />
           </div>
-
-          <div className={styles.questionInput}>
-            <input
-              type="text"
-              value={userAnswer}
-              id="input"
-              placeholder="Type your answer here..."
-              className={styles.textbox}
-              onChange={(e) => setUserAnswer(e.target.value)}
-            />
-          </div>
-          <button
-            id="submit"
-            className={styles.btn}
-            onClick={handleAnswerSubmit}
-          >
-            Submit
-          </button>
-          <button id="skip" className={styles.skipBtn} onClick={skip}>
-            Skip
-          </button>
+          {!goodgeReady && (
+            <>
+              <div className={styles.questionInput}>
+                <input
+                  type="text"
+                  value={userAnswer}
+                  id="input"
+                  placeholder="Type your answer here..."
+                  className={styles.textbox}
+                  onChange={(e) => setUserAnswer(e.target.value)}
+                />
+              </div>
+              <button
+                id="submit"
+                className={styles.btn}
+                onClick={handleAnswerSubmit}
+              >
+                Submit
+              </button>
+              <button id="skip" className={styles.skipBtn} onClick={skip}>
+                Skip
+              </button>{" "}
+            </>
+          )}
           <div className={styles.isCorrect}>
             {isAnswerCorrect === true && (
               <p className={styles.correct}>Correct!</p>
