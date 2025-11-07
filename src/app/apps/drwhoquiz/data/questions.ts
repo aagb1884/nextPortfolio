@@ -386,6 +386,24 @@ export const rounds: Round[] = [
           "True or false: there are dogs in the human colony on Vulcan in 'Power of the Daleks'?",
         answers: ["True", "Correct", "Yes"],
       },
+      {
+        question: "In which story does an unseen dog meet an Auton?",
+        answers: ["Spearhead from Space"],
+      },
+      {
+        question:
+          " Prior to filming The Pirate Planet, where did a Dog bite Tom Baker?",
+        answers: ["Face", "Lip", "Upper lip"],
+      },
+      {
+        question: "In what season finale is London full of wild dogs?",
+        answers: ["The Last of the Time Lords", "Last of the Time Lords"],
+      },
+      {
+        question:
+          "In which Pertwee story do we see a dog before we see a human?",
+        answers: ["Invasion of the Dinosaurs"],
+      },
     ],
   },
   {
@@ -599,6 +617,15 @@ export const rounds: Round[] = [
         question:
           "…between Matt Smith's announcement and David Tennant's regeneration (days)?",
         answers: ["363"],
+      },
+      {
+        question:
+          "…between the announcement of RTD1 and the announcement of RTD2 (years)?",
+        answers: ["19"],
+      },
+      {
+        question: "…did K9 Mark 1 last on the show (stories)?",
+        answers: ["5"],
       },
     ],
   },
@@ -862,7 +889,17 @@ export const rounds: Round[] = [
         question: "The Christmas Invasion",
         answers: ["Jackie", "Jackie Tyler"],
       },
-      { question: "The Snowmen", answers: ["Clara"] },
+      {
+        question: "The Snowmen",
+        answers: [
+          "Clara",
+          "Clara Oswald",
+          "Jenny",
+          "Mr Punch",
+          "The Doctor",
+          "Eleventh Doctor",
+        ],
+      },
       { question: "The War Machines", answers: ["WOTAN"] },
       {
         question: "World Enough and Time",
@@ -889,6 +926,27 @@ export const rounds: Round[] = [
         ],
       },
       { question: "Black Orchid", answers: ["Lady Cranleigh"] },
+      {
+        question: "Boom Town",
+        answers: ["Idris", "Idris Hopper", "Secretary"],
+      },
+      {
+        question: "Let's Kill Hitler",
+        answers: ["The Doctor", "Eleventh Doctor"],
+      },
+      {
+        question: "Asylum of the Daleks",
+        answers: [
+          "The Doctor",
+          "Eleventh Doctor",
+          "Darla",
+          "Darla von Karlsen",
+          "Dalek",
+          "the Daleks",
+          "Dalek Prime Minister",
+        ],
+      },
+      { question: "The Angels Take Manhattan", answers: ["River Song"] },
     ],
   },
   {
@@ -1485,7 +1543,7 @@ export const rounds: Round[] = [
       },
       {
         question:
-          "Who has not appeared in both Doctor Who and The Sarah Jane Adventures?",
+          "Who has not been in both Doctor Who and The Sarah Jane Adventures?",
         options: [
           "Bradley Walsh",
           "Mina Anwar",
@@ -1493,6 +1551,70 @@ export const rounds: Round[] = [
           "Suranne Jones",
         ],
         answers: ["Nigel Havers"],
+      },
+      {
+        question: "Who has not been in both Doctor Who and Bridgerton?",
+        options: [
+          "James Fleet",
+          "Claudia Jessie",
+          "Golda Rosheuvel",
+          "Anthony Head",
+        ],
+        answers: ["James Fleet"],
+      },
+      {
+        question: "Which companion exit is the odd one out?",
+        options: ["Vicki", "Jo", "Amy", "Leela"],
+        answers: ["Vicki"],
+      },
+      {
+        question:
+          "Who has never written a Doctor Who story with 'Planet' in the title?",
+        options: [
+          "Russell T. Davies",
+          "Terry Nation",
+          "Steven Moffat",
+          "Douglas Adams",
+        ],
+        answers: ["Steven Moffat"],
+      },
+      {
+        question:
+          "Which of these 'Carry On' film regulars has never appeared in Doctor Who?",
+        options: [
+          "Barbara Windsor",
+          "Bernard Bresslaw",
+          "Joan Sims",
+          "Jim Dale",
+        ],
+        answers: ["Jim Dale"],
+      },
+      {
+        question:
+          "Who has not appeared in both Doctor Who and the 2005 movie Charlie and the Chocolate Factory?",
+        options: ["Deep Roy", "Peter Sallis", "Kevin Eldon", "Annette Badland"],
+        answers: ["Peter Sallis"],
+      },
+      {
+        question:
+          "Who has not featured in both Doctor Who and a Marvel Cinematic Universe film?",
+        options: [
+          "Ben Bailey Smith",
+          "Jenna Coleman",
+          "Peter Serafinowicz",
+          "Mark Gatiss",
+        ],
+        answers: ["Ben Bailey Smith"],
+      },
+      {
+        question: "Who's the odd one out, marriage wise?",
+        options: [
+          "Marilyn Monroe",
+          "Countess Scarlioni",
+          "Martha Jones",
+          "Lucy Saxon",
+        ],
+        answers: ["Martha Jones"],
       },
     ],
   },
@@ -1704,6 +1826,17 @@ export const rounds: Round[] = [
         answers: [
           "An Unearthly Child, The Edge of Destruction, The Keys of Marinus",
         ],
+      },
+      {
+        question:
+          "Which story’s production code is beloved by phone mast conspiracy theorists?",
+        options: [
+          "Destiny of the Daleks",
+          "City of Death",
+          "The Creature from the Pit",
+          "Kinda",
+        ],
+        answers: ["The Creature from the Pit"],
       },
     ],
   },
@@ -2183,6 +2316,71 @@ export const rounds: Round[] = [
       {
         question: "Dragged down own waste disposal unit.",
         answers: ["Paradise Towers"],
+      },
+      {
+        question: "Impaled on easel.",
+        answers: ["Vincent and the Doctor"],
+      },
+      {
+        question: "Falls into engine while trapped on fork-lift truck.",
+        answers: ["Voyage of the Damned"],
+      },
+      {
+        question: "A replica of the Titanic lands on Buckingham Palace.",
+        answers: ["Turn Left"],
+      },
+      {
+        question: "Eaten by hyper-evolved eye mucus.",
+        answers: ["Sleep No More"],
+      },
+      {
+        question: "DNA rewritten by disgruntled son.",
+        answers: ["Spyfall"],
+      },
+      {
+        question: "Shot by sister/work colleague.",
+        answers: ["The Dalek Master Plan", "Dalek Master Plan"],
+      },
+      {
+        question: "Shot by concerned history teacher.",
+        answers: ["The Rescue"],
+      },
+      {
+        question: "Horny Italian has neck broken.",
+        answers: ["The Tenth Planet"],
+      },
+      {
+        question: "Set on fire by metal snake.",
+        answers: ["Death to the Daleks"],
+      },
+      {
+        question: "Pushed off mountain by gang of witches.",
+        answers: ["The Brain of Morbius", "Brain of Morbius"],
+      },
+      {
+        question: "Falls into composting machine.",
+        answers: ["The Seeds of Doom", "Seeds of Doom"],
+      },
+      {
+        question: "Electrocuted by lil green shape shifter.",
+        answers: ["The Horror of Fang Rock", "Horror of Fang Rock"],
+      },
+      {
+        question:
+          "Transformed into furious dog-creature then sprayed with fire extinguishers.",
+        answers: ["Inferno"],
+      },
+      {
+        question: "Erased from time with special gun.",
+        answers: ["The Invasion of Time", "Invasion of Time"],
+      },
+      {
+        question: "Butler-induced explosion.",
+        answers: ["City of Death"],
+      },
+      {
+        question: "Steamed alive by rival henchperson.",
+        answers: ["Pyramids of Mars"],
       },
     ],
   },
