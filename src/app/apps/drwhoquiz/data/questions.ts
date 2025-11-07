@@ -214,17 +214,6 @@ export const rounds: Round[] = [
         answers: ["Heart"],
       },
       {
-        question:
-          "What war zone would you find General Smythe in in 'The War Games'?",
-        answers: [
-          "1917 War Zone",
-          "World War 1",
-          "World War One",
-          "First World War",
-          "WW1",
-        ],
-      },
-      {
         question: "What was Sontaran General Staal's nickname?",
         answers: ["The undefeated", "undefeated"],
       },
