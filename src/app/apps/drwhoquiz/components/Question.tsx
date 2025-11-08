@@ -8,7 +8,7 @@ import { useGlobalState } from "@/app/context/GlobalStateContext";
 
 interface QuestionProps {
   index: number;
-  skip: () => void;
+  handleAnswer: () => void;
   question: Question;
   checkAnswer: (string: string) => void;
   isAnswerCorrect: boolean | null;
@@ -23,7 +23,7 @@ interface QuestionProps {
 
 const QuestionComponent = ({
   index,
-  skip,
+  handleAnswer,
   question,
   checkAnswer,
   isAnswerCorrect,
@@ -37,6 +37,11 @@ const QuestionComponent = ({
 }: QuestionProps) => {
   const [userAnswer, setUserAnswer] = useState<string>("");
   const { executeScroll } = useGlobalState();
+
+  const skip = () => {
+    handleAnswer()
+    setUserAnswer("")
+  }
 
   const handleAnswerSubmit = () => {
     checkAnswer(userAnswer);

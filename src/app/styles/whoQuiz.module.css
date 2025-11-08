@@ -112,10 +112,19 @@
   left: 0;
 }
 
-.quizImage, .diamondWall {
-  width: 100%;
-  max-height: 350px;
+.quizImage {
   height: auto;
+  max-height: 350px;
+}
+
+.diamondWall {
+  height: 350px;
+  object-fit: fill;
+}
+
+.quizImage,
+.diamondWall {
+  width: 100%;
   border: 2px groove black;
   top: 0;
   left: 0;
@@ -126,7 +135,7 @@
 }
 
 .diamondWall {
-   position: absolute;
+  position: absolute;
 }
 
 .infoRow {
@@ -206,7 +215,8 @@
   margin-bottom: 4%;
 }
 
-.quizOver, .deathRoundOver {
+.quizOver,
+.deathRoundOver {
   display: flex;
   flex-direction: column;
   padding: 1%;
@@ -223,6 +233,7 @@
   display: grid;
   grid-template-columns: 25% 25% 25% 25%;
   justify-content: center;
+  justify-items: center;
   padding: 10px;
   margin: 2%;
   border-style: inset;
@@ -477,9 +488,9 @@
     grid-template-columns: 50% 50%;
   }
 
-.quizQuestion {
-   width: 100%;
-}
+  .quizQuestion {
+    width: 100%;
+  }
 }
 @media only screen and (min-width: 450px) and (max-width: 600px) {
   .roundButtonsComponent {

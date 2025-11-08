@@ -2368,7 +2368,7 @@ export const rounds: Round[] = [
       },
       {
         question: "Horny Italian has neck broken.",
-        answers: ["The Tenth Planet"],
+        answers: ["The Tenth Planet", "Tenth Planet"],
       },
       {
         question: "Set on fire by metal snake.",

@@ -30,7 +30,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
   const [showGoodgeChoiceModal, setShowGoodgeChoiceModal] =
     useState<boolean>(false);
   const [goodgeGuess, setGoodgeGuess] = useState<boolean | null>(null);
-  const [isGoodge, setIsGoodge] = useState<boolean>(false);
+  const [isGoodge, setIsGoodge] = useState<boolean | null>(null);
   const [deathImage, setDeathImage] = useState<Question | undefined>();
   const [showInstructionsModal, setShowInstructionsModal] =
     useState<boolean>(false);
@@ -53,6 +53,8 @@ const PageContent = ({ round, name }: PageContentProps) => {
     setRoundOver(false);
     setDeathRoundScore(0);
     setRoundScore(0);
+    setIsGoodge(null)
+    setDeathImage(undefined)
     if (isDeathRound) {
       setShowGoodgeChoiceModal(true);
     }
@@ -60,17 +62,14 @@ const PageContent = ({ round, name }: PageContentProps) => {
 
   const randomDeathImage = (array: Question[]) => {
     const one = [...array].sort(() => Math.random() - 0.5).slice(0, 1);
-    setDeathImage(one[0]);
-    if (
-      deathImage !== undefined &&
-      deathImage.answers.includes("Terror of the Autons")
-    ) {
+     const selected = one[0];
+     setDeathImage(selected);
+    if (selected?.answers.includes("Terror of the Autons")) {
       setIsGoodge(true);
     } else {
-      setIsGoodge(false);
+      setIsGoodge(false)
     }
-  };
-
+  }
   // question and answer handling
 
   const set10Questions = (array: Question[]) => {
@@ -137,7 +136,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
       <div className={`${name}_question`}>
         <QuestionComponent
           timeLeft={timeLeft}
-          skip={handleAnswer}
+          handleAnswer={handleAnswer}
           index={currentQuestionIndex}
           question={currentQuestion}
           checkAnswer={checkAnswer}
@@ -233,7 +232,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
   }, [isActive]);
 
   const result = `I played the "${round.name}" round and scored ${roundScore}`;
-  console.log(roundScore)
+ 
   return (
     <>
       <Header

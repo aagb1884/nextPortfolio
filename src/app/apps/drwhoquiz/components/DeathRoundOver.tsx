@@ -113,11 +113,13 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
           <p className={styles.questionText}>{deathImage.question}</p>
           <div className={styles.qImageDiv}>
             <Image
-              className={styles.quizImage}
+              className={styles.diamondWall}
               src={deathImage.image.url}
               alt={deathImage.image.alt}
-              width={300}
-              height={250}
+              width={0}
+              height={0}
+              layout="fill"
+              objectFit="contain"
             />
             <Image
               className={styles.diamondWall}
