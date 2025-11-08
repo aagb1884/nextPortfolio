@@ -8,7 +8,7 @@ import diamond_wall from "../../../../../public/images/drWhoQuiz/diamond_wall.pn
 
 interface DeathRoundOverProps {
   deathRoundReset: () => void;
-  isGoodge: boolean;
+  isGoodge: boolean | null;
   goodgeGuess: boolean | null;
   roundScore: number;
   showModal: boolean;
