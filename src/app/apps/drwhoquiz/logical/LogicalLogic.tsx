@@ -226,7 +226,16 @@ const LogicalLogic = ({ round }: LogicProps) => {
                 </SortableContext>
               </DndContext>
             </ul>
-            <button className={styles.btn} onClick={checkAnswers}>
+            <button
+              className={styles.btn}
+              onClick={checkAnswers}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  checkAnswers();
+                }
+              }}
+            >
               Check Answers
             </button>
           </>

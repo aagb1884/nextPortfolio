@@ -6,6 +6,7 @@ import { Question } from "../data/questions";
 import Image from "next/image";
 import diamond_wall from "../../../../../public/images/drWhoQuiz/diamond_wall.png";
 
+
 interface DeathRoundOverProps {
   deathRoundReset: () => void;
   isGoodge: boolean | null;
@@ -142,6 +143,12 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
                   placeholder="Type your answer here..."
                   className={styles.textbox}
                   onChange={(e) => setUserAnswer(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      handleAnswerSubmit();
+                    }
+                  }}
                 />
               </div>
               <button

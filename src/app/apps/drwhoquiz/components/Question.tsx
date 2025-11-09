@@ -119,6 +119,12 @@ const QuestionComponent = ({
               placeholder="Type your answer here..."
               className={styles.textbox}
               onChange={(e) => setUserAnswer(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  handleAnswerSubmit();
+                }
+              }}
             />
           )}
           {question.options && (
@@ -133,6 +139,12 @@ const QuestionComponent = ({
                     value={option}
                     onChange={(e) => setUserAnswer(e.target.value)}
                     checked={userAnswer === option}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        handleAnswerSubmit();
+                      }
+                    }}
                   />
                   {option}
                 </label>
