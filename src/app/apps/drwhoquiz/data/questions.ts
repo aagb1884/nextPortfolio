@@ -1498,6 +1498,14 @@ export const rounds: Round[] = [
         },
         answers: ["Terror of the Zygons"],
       },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_45.jpg",
+          alt: "A green tray holding a plate with a toastie on it, and a mug with brown foam and Christmas patterns in it.",
+        },
+        answers: ["Joy to the World"],
+      },
     ],
   },
   {
@@ -1728,6 +1736,56 @@ export const rounds: Round[] = [
           "Lucy Saxon",
         ],
         answers: ["Martha Jones"],
+      },
+      {
+        question: "Who is the odd one out of this Dalek-themed group?",
+        options: ["Rusty", "van Staten", "Omega", "Sec"],
+        answers: ["van Staten"],
+      },
+      {
+        question: "Who is the odd Sontaran out?",
+        options: ["Linx", "Styre", "Staal", "Skaak"],
+        answers: ["Linx"],
+      },
+      {
+        question: "Which of these historical events is the odd one out?",
+        options: [
+          "The Great Fire of London",
+          "The Gunfight at the O.K. Corral",
+          "The Highland Clearances",
+          "The Partition of India",
+        ],
+        answers: ["The Highland Clearances"],
+      },
+      {
+        question: "Which is the odd one out?",
+        options: [
+          "The Daemons",
+          "Warriors of the Deep",
+          "The Time Monster",
+          "The Underwater Menace",
+        ],
+        answers: ["Warriors of the Deep"],
+      },
+      {
+        question: "Which is the odd one out?",
+        options: [
+          "Smith and Jones",
+          "The Seeds of Death",
+          "Frontier in Space",
+          "The Greatest Show in the Galaxy",
+        ],
+        answers: ["The Greatest Show in the Galaxy"],
+      },
+      {
+        question: "Which is the odd one out?",
+        options: [
+          "The Curse of Fenric",
+          "Terminus",
+          "The Girl Who Died",
+          "The Time Meddler",
+        ],
+        answers: ["Terminus"],
       },
     ],
   },
