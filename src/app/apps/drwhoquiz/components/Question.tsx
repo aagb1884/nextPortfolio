@@ -36,6 +36,7 @@ const QuestionComponent = ({
   showQuiz,
 }: QuestionProps) => {
   const [userAnswer, setUserAnswer] = useState<string>("");
+  const [options, setOptions] = useState<string[] | null>(null)
   const { executeScroll } = useGlobalState();
 
   const skip = () => {
@@ -63,6 +64,12 @@ const QuestionComponent = ({
       executeScroll(questionRef);
     }
   }, [showQuiz]);
+
+  useEffect(() => {
+    if (question.options) {
+      setOptions([...question.options].sort(() => Math.random() - 0.5));
+    }
+  }, [question])
 
   return (
     <section className={styles.quizQuestion} ref={questionRef}>
@@ -129,26 +136,27 @@ const QuestionComponent = ({
           )}
           {question.options && (
             <div className={styles.multipleChoice}>
-              {question.options.map((option, index) => (
-                <label className={styles.radio} key={index}>
-                  <input
-                    id="multiple-choice"
-                    type="radio"
-                    name="answer"
-                    className={styles.radioInput}
-                    value={option}
-                    onChange={(e) => setUserAnswer(e.target.value)}
-                    checked={userAnswer === option}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter") {
-                        e.preventDefault();
-                        handleAnswerSubmit();
-                      }
-                    }}
-                  />
-                  {option}
-                </label>
-              ))}{" "}
+              {
+                options?.map((option, index) => (
+                  <label className={styles.radio} key={index}>
+                    <input
+                      id="multiple-choice"
+                      type="radio"
+                      name="answer"
+                      className={styles.radioInput}
+                      value={option}
+                      onChange={(e) => setUserAnswer(e.target.value)}
+                      checked={userAnswer === option}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          e.preventDefault();
+                          handleAnswerSubmit();
+                        }
+                      }}
+                    />
+                    {option}
+                  </label>
+                ))}{" "}
             </div>
           )}
 
