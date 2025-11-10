@@ -1406,6 +1406,98 @@ export const rounds: Round[] = [
         },
         answers: ["The Story and the Engine", "Story and the Engine"],
       },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_34.png",
+          alt: "The night sky over London. Explosions and smoke. Searchlights. Huge grey balloons in the air.",
+        },
+        answers: [
+          "The Empty Child",
+          "Empty Child",
+          "The Empty Child/The Doctor Dances",
+        ],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_35.png",
+          alt: "A store room lit by strip lights. Metal shelves containing hundreds of cans of beans.",
+        },
+        answers: ["Eve of the Daleks"],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_36.jpg",
+          alt: "A large wooden sailing vessel at sea, barely moving. The sky above it is grey.",
+        },
+        answers: ["Legend of the Sea Devils"],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_37.png",
+          alt: "A grey-brown, Eighties looking car driving along a road.",
+        },
+        answers: ["Father's Day"],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_38.webp",
+          alt: "A Cybermen head behind glass.",
+        },
+        answers: ["Dalek"],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_39.webp",
+          alt: "A round black ship on squatting on three bent legs, on a muddy/rocky landscape with orange sky.",
+        },
+        answers: ["City of Death"],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_40.jpg",
+          alt: "A grubby corner wall with 'Pex Lives' graffitied onto it.",
+        },
+        answers: ["Paradise Towers"],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_41.jpg",
+          alt: "Monochrome. Small, chess-piece-sized figures on a board. They look like bulky bears.",
+        },
+        answers: ["The Abominable Snowmen", "Abominable Snowmen"],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_42.jpg",
+          alt: "Monochrome. The head of a carved figure with one central eye.",
+        },
+        answers: ["The Ark"],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_43.jpg",
+          alt: "Monochrome. Atop a small hill of sand is a wooden horse.",
+        },
+        answers: ["The Myth Makers", "Myth Makers"],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_44.jpg",
+          alt: "In a sandy quarry is a bulky black and silver craft, supported on huge stanchions.",
+        },
+        answers: ["Terror of the Zygons"],
+      },
     ],
   },
   {
