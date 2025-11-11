@@ -1,6 +1,6 @@
 "use client";
 import styles from "@/app/styles/whoQuiz.module.css";
-import { Question, DeathImages } from "../data/questions";
+import { Question, DeathImages } from "../../data/questions";
 
 interface GoodgeProps {
   setModalOpen: (filterTerm: boolean) => void;
@@ -19,7 +19,7 @@ const GoodgeChoiceModal: React.FC<GoodgeProps> = ({
     setGoodgeGuess(true);
     randomDeathImage(DeathImages);
     setShowScore(false);
-     setModalOpen(false);
+    setModalOpen(false);
   }
 
   function isNotGoodge() {
@@ -30,7 +30,8 @@ const GoodgeChoiceModal: React.FC<GoodgeProps> = ({
   }
 
   return (
-    <div className={styles.startModalWrapper}>
+    <>
+      <div className={styles.startModalWrapper} />
       <div className={styles.startModal}>
         <h2 className={styles.sModalHTxt}>Is It Goodge?</h2>
         <p className={styles.sModalTxt}>
@@ -58,7 +59,7 @@ const GoodgeChoiceModal: React.FC<GoodgeProps> = ({
           No, it is not Goodge
         </button>
       </div>
-    </div>
+    </>
   );
 };
 

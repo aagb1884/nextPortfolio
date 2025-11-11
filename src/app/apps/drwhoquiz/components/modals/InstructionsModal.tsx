@@ -1,13 +1,14 @@
 "use client";
-import { modalProps } from "../../barlow/components/modal";
+import { modalProps } from "../../../barlow/components/modal";
 import styles from "@/app/styles/whoQuiz.module.css";
 
 const InstructionsModal: React.FC<modalProps> = ({ setModalOpen }) => {
   return (
-    <div
-      className={styles.startModalWrapper}
-      onClick={() => setModalOpen(false)}
-    >
+    <>
+      <div
+        className={styles.startModalWrapper}
+        onClick={() => setModalOpen(false)}
+      />
       <div className={styles.startModal}>
         <h2 className={styles.sModalHTxt}>How to Play</h2>
         <p className={styles.sModalTxt}>Pick a quiz on the main page.</p>
@@ -36,7 +37,7 @@ const InstructionsModal: React.FC<modalProps> = ({ setModalOpen }) => {
           Close
         </button>
       </div>
-    </div>
+    </>
   );
 };
 

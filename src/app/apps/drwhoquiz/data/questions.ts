@@ -451,7 +451,7 @@ export const rounds: Round[] = [
       {
         question: "Name one of the humanised Daleks in 'Evil of the Daleks'?",
         answers: ["Alpha", "Beta", "Omega"],
-        officialAnswer: "Alpha, Beta or Omega."
+        officialAnswer: "Alpha, Beta or Omega.",
       },
       {
         question:
@@ -749,7 +749,7 @@ export const rounds: Round[] = [
       },
       {
         question: "In 2925 he is released from cryogenic suspension.",
-        answers: ["Rylan Clark", "Rylan"],
+        answers: ["Rylan", "Rylan Clark"],
       },
       {
         question:
@@ -824,11 +824,11 @@ export const rounds: Round[] = [
       { question: "Horse of Destruction", answers: ["The Myth Makers"] },
       {
         question: "The Brink of Disaster",
-        answers: ["Edge of Destruction", "The Edge of Destruction"],
+        answers: ["The Edge of Destruction", "Edge of Destruction"],
       },
       {
         question: "The Screaming Jungle",
-        answers: ["The Keys of Marinus", "The Edge of Destruction"],
+        answers: ["The Keys of Marinus", "Keys of Marinus"],
       },
       {
         question: "Sentence of Death",
@@ -906,17 +906,18 @@ export const rounds: Round[] = [
           "Doctor Who",
           "First Doctor",
         ],
+        officialAnswer: "Ian Chesteron or Doctor Who.",
       },
       { question: "The Name of the Doctor", answers: ["Dr Simeon", "Simeon"] },
       { question: "The Empty Child", answers: ["Rose"] },
       {
         question: "The Wedding of River Song",
-        answers: ["Dorium", "Dorium Maldovar", "Blue guy"],
+        answers: ["Dorium Maldovar", "Dorium", "Blue guy"],
       },
       { question: "The Next Doctor", answers: ["Rosita"] },
       {
         question: "The Christmas Invasion",
-        answers: ["Jackie", "Jackie Tyler"],
+        answers: ["Jackie Tyler", "Jackie"],
       },
       {
         question: "The Snowmen",
@@ -928,6 +929,7 @@ export const rounds: Round[] = [
           "The Doctor",
           "Eleventh Doctor",
         ],
+        officialAnswer: "Clara. Or Jenny. Or The Doctor. Or Mr Punch.",
       },
       { question: "The War Machines", answers: ["WOTAN"] },
       {
@@ -946,18 +948,18 @@ export const rounds: Round[] = [
       {
         question: "The Impossible Astronaut",
         answers: [
+          "King Charles II",
           "Charles II",
           "Charles the Second",
           "Charles Second",
           "Charles",
-          "King Charles II",
           "The King who brought back partying",
         ],
       },
       { question: "Black Orchid", answers: ["Lady Cranleigh"] },
       {
         question: "Boom Town",
-        answers: ["Idris", "Idris Hopper", "Secretary"],
+        answers: ["Idris Hopper", "Idris", "Secretary"],
       },
       {
         question: "Let's Kill Hitler",
@@ -973,7 +975,10 @@ export const rounds: Round[] = [
           "Dalek",
           "the Daleks",
           "Dalek Prime Minister",
+          "Dalek Parliament",
         ],
+        officialAnswer:
+          "Darla von Karlsen. Or the Dalek Prime Minster and Parliament. And the Doctor. Lots.",
       },
       { question: "The Angels Take Manhattan", answers: ["River Song"] },
       {
@@ -1336,7 +1341,7 @@ export const rounds: Round[] = [
           url: "/images/drWhoQuiz/inhuman_round/inhuman_23.png",
           alt: "A silver finger reached out to a metallic keypad with art deco borders.",
         },
-        answers: ["Robots of Death"],
+        answers: ["The Robots of Death", "Robots of Death"],
       },
       {
         question: "",
@@ -1556,6 +1561,8 @@ export const rounds: Round[] = [
           "Peter Capaldi",
         ],
         answers: ["Christopher Eccleston"],
+        officialAnswer:
+          "Christopher Eccleston is credited as 'Doctor Who' instead of 'The Doctor'.",
       },
       {
         question:
@@ -1699,6 +1706,7 @@ export const rounds: Round[] = [
         question: "Which companion exit is the odd one out?",
         options: ["Vicki", "Jo", "Amy", "Leela"],
         answers: ["Vicki"],
+        officialAnswer: "Vicki, as everyone else chose to leave.",
       },
       {
         question:
@@ -1748,16 +1756,20 @@ export const rounds: Round[] = [
           "Lucy Saxon",
         ],
         answers: ["Martha Jones"],
+        officialAnswer: "Martha Jones married a human.",
       },
       {
         question: "Who is the odd one out of this Dalek-themed group?",
         options: ["Rusty", "van Staten", "Omega", "Sec"],
         answers: ["van Staten"],
+        officialAnswer: "van Staten is not a name given to a Dalek.",
       },
       {
         question: "Who is the odd Sontaran out?",
         options: ["Linx", "Styre", "Staal", "Skaak"],
         answers: ["Linx"],
+        officialAnswer:
+          "Styre, Staal and Skaak all have the word 'Sontaran' in the title of their stories and Linx doesn't.",
       },
       {
         question: "Which of these historical events is the odd one out?",
@@ -1768,6 +1780,8 @@ export const rounds: Round[] = [
           "The Partition of India",
         ],
         answers: ["The Highland Clearances"],
+        officialAnswer:
+          "The Highland Clearances have not featured in an episode of Doctor Who.",
       },
       {
         question: "Which is the odd one out?",
@@ -1778,6 +1792,8 @@ export const rounds: Round[] = [
           "The Underwater Menace",
         ],
         answers: ["Warriors of the Deep"],
+        officialAnswer:
+          "Warriors of the Deep does not offer an explanation for the sinking of Atlantis.",
       },
       {
         question: "Which is the odd one out?",
@@ -1788,6 +1804,8 @@ export const rounds: Round[] = [
           "The Greatest Show in the Galaxy",
         ],
         answers: ["The Greatest Show in the Galaxy"],
+        officialAnswer:
+          "None of 'The Greatest Show in the Galaxy' takes place on the moon.",
       },
       {
         question: "Which is the odd one out?",
@@ -1798,6 +1816,8 @@ export const rounds: Round[] = [
           "The Time Meddler",
         ],
         answers: ["Terminus"],
+        officialAnswer:
+          "Terminus is inspired by Viking mythology, the others actually feature Vikings.",
       },
     ],
   },
@@ -1850,6 +1870,7 @@ export const rounds: Round[] = [
           "The Power of the Daleks",
         ],
         answers: ["The War Machines"],
+        officialAnswer: "The War Machines: BB.",
       },
       {
         question: "What story has the most sarcastic sounding production code?",
@@ -1860,6 +1881,7 @@ export const rounds: Round[] = [
           "Carnival of Monsters",
         ],
         answers: ["The Time Monster"],
+        officialAnswer: "The Time Monster: OOO",
       },
       {
         question: "What story's production code implies it to be hardcore?",
@@ -1870,6 +1892,7 @@ export const rounds: Round[] = [
           "Planet of the Spiders",
         ],
         answers: ["Death to the Daleks"],
+        officialAnswer: "Death to the Daleks: XXX",
       },
       {
         question: "Which story has production code 5A?",
@@ -1921,6 +1944,7 @@ export const rounds: Round[] = [
           "The Invasion of Time",
         ],
         answers: ["Image of the Fendahl"],
+        officialAnswer: "Image of the Fendahl: 4X",
       },
       {
         question: "Which story's production code is 5.6/5?",
@@ -1936,6 +1960,7 @@ export const rounds: Round[] = [
           "The Keeper of Traken",
         ],
         answers: ["Planet of the Spiders"],
+        officialAnswer: "Planet of the Spiders: ZZZ",
       },
       {
         question: "Which two stories share the production code 7C?",
@@ -1957,6 +1982,7 @@ export const rounds: Round[] = [
           "Doctor Who and the Silurians",
         ],
         answers: ["Spearhead from Space"],
+        officialAnswer: "Spearhead from Space: AAA",
       },
       {
         question:
@@ -1994,7 +2020,7 @@ export const rounds: Round[] = [
       },
       {
         question:
-          "What was the production code for the first Fifith Doctor story, 'Castrovalva'?",
+          "What was the production code for the first Fifth Doctor story, 'Castrovalva'?",
         options: ["5A", "5.1", "5.4", "5Z"],
         answers: ["5Z"],
       },
@@ -2012,7 +2038,7 @@ export const rounds: Round[] = [
       },
       {
         question:
-          "Which story’s production code is beloved by phone mast conspiracy theorists?",
+          "Which story's production code is beloved by phone mast conspiracy theorists?",
         options: [
           "Destiny of the Daleks",
           "City of Death",
@@ -2020,6 +2046,7 @@ export const rounds: Round[] = [
           "Kinda",
         ],
         answers: ["The Creature from the Pit"],
+        officialAnswer: "The Creature from the Pit: 5G",
       },
     ],
   },
@@ -2060,7 +2087,7 @@ export const rounds: Round[] = [
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_6.mp3",
-        answers: ["Arachnids in the UK'"],
+        answers: ["Arachnids in the UK"],
       },
       {
         question: "Which story does this song feature in?",
@@ -2459,6 +2486,7 @@ export const rounds: Round[] = [
           "Curse of Peladon",
           "Monster of Peladon",
         ],
+        officialAnswer: "The Curse of Peladon or The Monster of Peladon.",
       },
       {
         question: "Consumed by giant space wasp grub.",
@@ -2471,6 +2499,7 @@ export const rounds: Round[] = [
           "Brain of Morbius",
           "Resurrection of the Daleks",
         ],
+        officialAnswer: "The Brain of Morbius or Resurrection of the Daleks.",
       },
       {
         question: "Shot by customs officer while on drug-induced comedown.",
@@ -2518,7 +2547,7 @@ export const rounds: Round[] = [
       },
       {
         question: "DNA rewritten by disgruntled son.",
-        answers: ["Spyfall"],
+        answers: ["Spyfall", "Spyfall Part Two"],
       },
       {
         question: "Shot by sister/work colleague.",

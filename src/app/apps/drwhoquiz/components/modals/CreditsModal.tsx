@@ -1,14 +1,15 @@
 "use client";
 import Link from "next/link";
-import { modalProps } from "../../barlow/components/modal";
+import { modalProps } from "../../../barlow/components/modal";
 import styles from "@/app/styles/whoQuiz.module.css";
 
 const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
   return (
-    <div
-      className={styles.startModalWrapper}
-      onClick={() => setModalOpen(false)}
-    >
+    <>
+      <div
+        className={styles.startModalWrapper}
+        onClick={() => setModalOpen(false)}
+      />
       <div className={styles.startModal}>
         <h2 className={styles.sModalHTxt}>Quiz Credits</h2>
         <p className={styles.sModalTxt}>
@@ -45,7 +46,7 @@ const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
           Close
         </button>
       </div>
-    </div>
+    </>
   );
 };
 

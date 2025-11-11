@@ -5,6 +5,9 @@ import { Question } from "../data/questions";
 import Image from "next/image";
 import Countdown from "@/app/ui/Countdown";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
+import { handleAudio } from "../data/functions";
+import { Skip } from "./buttons/Skip";
+import { Submit } from "./buttons/Submit";
 
 interface QuestionProps {
   index: number;
@@ -35,29 +38,22 @@ const QuestionComponent = ({
   progress,
   currentTime,
   showQuiz,
-  addWrongAnswer
+  addWrongAnswer,
 }: QuestionProps) => {
   const [userAnswer, setUserAnswer] = useState<string>("");
-  const [options, setOptions] = useState<string[] | null>(null)
+  const [options, setOptions] = useState<string[] | null>(null);
   const { executeScroll } = useGlobalState();
 
   const skip = () => {
-    handleAnswer()
-    setUserAnswer("")
-    addWrongAnswer(question)
-  }
+    handleAnswer();
+    setUserAnswer("");
+    addWrongAnswer(question);
+  };
 
   const handleAnswerSubmit = () => {
     checkAnswer(userAnswer);
     setUserAnswer("");
     setIsActive(false);
-  };
-
-  const handleAudio = () => {
-    setTimeout(() => {
-      setIsActive(false);
-    }, 11000);
-    setIsActive(true);
   };
 
   const questionRef = useRef(null);
@@ -72,7 +68,7 @@ const QuestionComponent = ({
     if (question.options) {
       setOptions([...question.options].sort(() => Math.random() - 0.5));
     }
-  }, [question])
+  }, [question]);
 
   return (
     <section className={styles.quizQuestion} ref={questionRef}>
@@ -104,7 +100,7 @@ const QuestionComponent = ({
               disabled={isActive}
               className={styles.btn}
               onClick={() => {
-                handleAudio();
+                handleAudio(setIsActive);
               }}
             >
               Play Audio
@@ -139,40 +135,30 @@ const QuestionComponent = ({
           )}
           {question.options && (
             <div className={styles.multipleChoice}>
-              {
-                options?.map((option, index) => (
-                  <label className={styles.radio} key={index}>
-                    <input
-                      id="multiple-choice"
-                      type="radio"
-                      name="answer"
-                      className={styles.radioInput}
-                      value={option}
-                      onChange={(e) => setUserAnswer(e.target.value)}
-                      checked={userAnswer === option}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter") {
-                          e.preventDefault();
-                          handleAnswerSubmit();
-                        }
-                      }}
-                    />
-                    {option}
-                  </label>
-                ))}{" "}
+              {options?.map((option, index) => (
+                <label className={styles.radio} key={index}>
+                  <input
+                    id="multiple-choice"
+                    type="radio"
+                    name="answer"
+                    className={styles.radioInput}
+                    value={option}
+                    onChange={(e) => setUserAnswer(e.target.value)}
+                    checked={userAnswer === option}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        handleAnswerSubmit();
+                      }
+                    }}
+                  />
+                  {option}
+                </label>
+              ))}{" "}
             </div>
           )}
-
-          <button
-            id="submit"
-            className={styles.btn}
-            onClick={handleAnswerSubmit}
-          >
-            Submit
-          </button>
-          <button id="skip" className={styles.skipBtn} onClick={skip}>
-            Skip
-          </button>
+          <Submit handleAnswerSubmit={handleAnswerSubmit} />
+          <Skip skip={skip} />
         </div>
       </div>
       <div className={styles.isCorrect}>

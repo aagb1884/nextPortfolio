@@ -5,7 +5,10 @@ import ShareButton from "../../big-finish-generator/bf_components/ShareButton";
 import { Question } from "../data/questions";
 import Image from "next/image";
 import diamond_wall from "../../../../../public/images/drWhoQuiz/diamond_wall.png";
-
+import { WrongButton } from "./buttons/WrongButton";
+import { TryAgain } from "./buttons/TryAgain";
+import { Skip } from "./buttons/Skip";
+import { Submit } from "./buttons/Submit";
 
 interface DeathRoundOverProps {
   deathRoundReset: () => void;
@@ -21,6 +24,7 @@ interface DeathRoundOverProps {
   deathRoundScore: number;
   setIsAnswerCorrect: (b: boolean) => void;
   isAnswerCorrect: boolean | null;
+  setModalOpen: (filterTerm: boolean) => void;
 }
 const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
   deathRoundReset,
@@ -36,6 +40,7 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
   deathRoundScore,
   setIsAnswerCorrect,
   isAnswerCorrect,
+  setModalOpen,
 }) => {
   const [userAnswer, setUserAnswer] = useState<string>("");
   const [goodgeReady, setGoodgeReady] = useState<boolean>(false);
@@ -102,7 +107,7 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
 
   const skip = () => {
     setUserAnswer("");
-    setGoodgeReady(true)
+    setGoodgeReady(true);
   };
 
   return (
@@ -151,16 +156,8 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
                   }}
                 />
               </div>
-              <button
-                id="submit"
-                className={styles.btn}
-                onClick={handleAnswerSubmit}
-              >
-                Submit
-              </button>
-              <button id="skip" className={styles.skipBtn} onClick={skip}>
-                Skip
-              </button>{" "}
+              <Submit handleAnswerSubmit={handleAnswerSubmit} />
+              <Skip skip={skip} />
             </>
           )}
           <div className={styles.isCorrect}>
@@ -179,7 +176,9 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
       {goodgeReady && !showScore && (
         <>
           <p>You have now scored {roundScore} points.</p>
-          <button onClick={goodgeReveal}>Is it Goodge?</button>
+          <button className={styles.btnAlt} onClick={goodgeReveal}>
+            Is it Goodge?
+          </button>
         </>
       )}
       {showScore && (
@@ -202,9 +201,8 @@ const DeathRoundOver: React.FC<DeathRoundOverProps> = ({
           {goodgeWrong && <p>You were fooolish not to choose Goodge.</p>}
           <p>You have scored {roundScore} points.</p>
           <ShareButton setShowModal={setShowModal} showModal={showModal} />
-          <button className={styles.btn} onClick={() => deathRoundReset()}>
-            Try Again?
-          </button>
+          <WrongButton setModalOpen={setModalOpen} />
+          <TryAgain reset={deathRoundReset} />
         </>
       )}
     </div>

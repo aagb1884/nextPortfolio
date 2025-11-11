@@ -1,8 +1,8 @@
 "use client";
 import Header from "./components/header";
-import RoundButtons from "./components/RoundButtons";
-import InstructionsModal from "./components/InstructionsModal";
-import CreditsModal from "./components/CreditsModal";
+import RoundButtons from "./components/buttons/RoundButtons";
+import InstructionsModal from "./components/modals/InstructionsModal";
+import CreditsModal from "./components/modals/CreditsModal";
 import styles from "../../styles/whoQuiz.module.css";
 import { useState } from "react";
 

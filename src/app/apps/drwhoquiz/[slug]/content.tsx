@@ -7,11 +7,13 @@ import QuestionComponent from "../components/Question";
 import ShareButton from "../../big-finish-generator/bf_components/ShareButton";
 import SocialMediaShare from "../components/SocialMediaShare";
 import Header from "../components/header";
-import InstructionsModal from "../components/InstructionsModal";
-import CreditsModal from "../components/CreditsModal";
-import GoodgeChoiceModal from "../components/GoodgeChoiceModal";
+import InstructionsModal from "../components/modals/InstructionsModal";
+import CreditsModal from "../components/modals/CreditsModal";
+import GoodgeChoiceModal from "../components/modals/GoodgeChoiceModal";
 import DeathRoundOver from "../components/DeathRoundOver";
-import WrongAnswersModal from "../components/WrongAnswersModal";
+import WrongAnswersModal from "../components/modals/WrongAnswersModal";
+import { WrongButton } from "../components/buttons/WrongButton";
+import { TryAgain } from "../components/buttons/TryAgain";
 
 interface PageContentProps {
   round: Round;
@@ -202,13 +204,14 @@ const PageContent = ({ round, name }: PageContentProps) => {
   //audio
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const hasAudio = !!quizRound?.[currentQuestionIndex]?.audio
+  const hasAudio = !!quizRound?.[currentQuestionIndex]?.audio;
 
   useEffect(() => {
     if (
       typeof window !== "undefined" &&
       quizRound.length === 10 &&
-      !isDeathRound && hasAudio
+      !isDeathRound &&
+      hasAudio
     ) {
       const newAudio = new Audio(quizRound[currentQuestionIndex].audio);
       audioRef.current = newAudio;
@@ -290,17 +293,12 @@ const PageContent = ({ round, name }: PageContentProps) => {
           {showQuiz && renderQuiz()}
           {!showQuiz && roundOver && !isDeathRound && (
             <div className={styles.quizOver}>
-              <p>Round Completed! You scored {roundScore}</p>
+              <p style={{ margin: "2px" }}>
+                Round Completed! You scored {roundScore}
+              </p>
               <ShareButton setShowModal={setShowModal} showModal={showModal} />
-              <button
-                className={styles.btn}
-                onClick={() => setAnswersModal(true)}
-              >
-                See Wrong Answers
-              </button>
-              <button className={styles.btn} onClick={() => reset()}>
-                Try Again?
-              </button>
+              <WrongButton setModalOpen={setAnswersModal} />
+              <TryAgain reset={reset} />
             </div>
           )}
 
@@ -319,6 +317,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
               deathRoundScore={deathRoundScore}
               setIsAnswerCorrect={setIsAnswerCorrect}
               isAnswerCorrect={isAnswerCorrect}
+              setModalOpen={setAnswersModal}
             />
           )}
         </div>
