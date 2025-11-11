@@ -12,6 +12,7 @@ import wesley from "../../../../public/images/wesleySnopes/button_wesley.png";
 import poetRemixer from "../../../../public/images/poetrRemixer.png";
 import light from "../../../../public/images/sad-light.png";
 import rng from "../../../../public/images/rng.png";
+import drWhoQuiz from "../../../../public/images/drWhoQuiz/Doctor-Who-Quiz-Logo.png"
 import sfng from "@/app/images/scifinamegen.png";
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
@@ -112,6 +113,15 @@ const AppsPage = () => {
                 Scottish Football Simulators
                 <ExternalLinkImage />
               </div>
+            </Link>
+          </div>
+          <div className={styles.drWhoQuiz}>
+            <Link href="/apps/drwhoquiz">
+              <Image
+                src={drWhoQuiz}
+                alt="Dr Who quiz link"
+                className={styles.buttonImage}
+              />
             </Link>
           </div>
         </section>

@@ -104,6 +104,9 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
               <li>
                 <Link href="/apps/poetremixer">PoetRemixer Tool</Link>
               </li>
+              <li>
+                <Link href="/apps/drwhoquiz">Doctor Who Quizzes</Link>
+              </li>
             </ul>
             <ul className={styles.appsClmLinks2}>
               <li>

@@ -67,7 +67,8 @@
 .poetRemixer,
 .light,
 .rngApp,
-.sfngApp {
+.sfngApp,
+.drWhoQuiz {
   position: relative;
   text-align: center;
 }
