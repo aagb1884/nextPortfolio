@@ -9,6 +9,7 @@ export interface Question {
   answers: string[];
   image?: Image;
   audio?: string;
+  officialAnswer?: string;
 }
 
 export interface plotPoint {
@@ -85,8 +86,8 @@ export const rounds: Round[] = [
         question:
           "Which two characters in Doctor Who were voiced by David Brierley?",
         answers: [
+          "K9 and Drathro",
           "K9 Drathro",
-          "K9 and drathro",
           "K9, Drathro",
           "Drathro and K9",
           "Drathro K9",
@@ -148,6 +149,7 @@ export const rounds: Round[] = [
         question:
           "Name one of the two non-festive episodes that feature 'Merry Xmas Everybody' by Slade.",
         answers: ["Turn Left", "Power of Three", "The Power of Three"],
+        officialAnswer: "Turn Left or The Power of Three.",
       },
       {
         question: "Name a story that features a T-Rex.",
@@ -158,6 +160,8 @@ export const rounds: Round[] = [
           "Dinosaurs on a Spaceship",
           "Deep Breath",
         ],
+        officialAnswer:
+          "Doctor Who and the Silurians, Invasion of the Dinosaurs, Dinosaurs on a Spaceship or Deep Breath.",
       },
       {
         question:
@@ -166,7 +170,7 @@ export const rounds: Round[] = [
       },
       {
         question: "What dance does Tegan do in 'Black Orchid'?",
-        answers: ["Charleston", "The Charleston"],
+        answers: ["The Charleston", "Charleston"],
       },
       {
         question: "What type of curry does Sylvia Noble make?",
@@ -206,7 +210,7 @@ export const rounds: Round[] = [
       {
         question:
           "What is the name of the army General from 'Invasion of the Dinosaurs'?",
-        answers: ["Finch", "General Finch"],
+        answers: ["General Finch", "Finch"],
       },
       {
         question:
@@ -219,7 +223,7 @@ export const rounds: Round[] = [
       },
       {
         question: "What was the leader of the Gaztak merecenaries in 'Meglos'?",
-        answers: ["Grugger", "General Grugger"],
+        answers: ["General Grugger", "Grugger"],
       },
       {
         question: "Name a Doctor Who character played by John Abineri.",
@@ -233,6 +237,8 @@ export const rounds: Round[] = [
           "Leader of the Swampies",
           "Ranquin",
         ],
+        officialAnswer:
+          "Van Lutyens, General Carrington, Richard Railton or Ranquin.",
       },
       {
         question:
@@ -242,35 +248,40 @@ export const rounds: Round[] = [
       {
         question:
           "What was the name of the General the Slitheen killed in Downing Street?",
-        answers: ["Asquith", "General Asquith"],
+        answers: ["General Asquith", "Asquith"],
       },
       {
         question:
           "In 'The Tenth Planet' who told the Doctor 'I don't like your face'?",
-        answers: ["Cutler", "General Cutler"],
+        answers: ["General Cutler", "Cutler"],
       },
       {
         question: "Which general did the Tenth Doctor point a gun at?",
-        answers: ["Cobb", "General Cobb"],
+        answers: ["General Cobb", "Cobb"],
       },
       {
         question:
           "What is the name of the army General from 'The Stolen Earth'?",
-        answers: ["Sanchez", "General Sanchez"],
+        answers: ["General Sanchez", "Sanchez"],
       },
       {
         question: "What did the Master win in 'The Sound of Drums'?",
-        answers: ["A General Election", "General Election", "Election"],
+        answers: [
+          "The General Election",
+          "A General Election",
+          "General Election",
+          "Election",
+        ],
       },
       {
         question:
           "Which UN official was among the monks' victims in 'The Pyramid at the End of the World'?",
-        answers: ["Secretary General", "The Secretary General"],
+        answers: ["The Secretary General", "Secretary General"],
       },
       {
         question:
           "Who does Graham end up pretending to be after the intervention of King James I?",
-        answers: ["Witchfinder General", "The Witchfinder General"],
+        answers: ["The Witchfinder General", "Witchfinder General"],
       },
       {
         question: "What job did Yaz's mum have at Jack Robertson's hotel?",
@@ -278,11 +289,11 @@ export const rounds: Round[] = [
       },
       {
         question: "Who was given the job of setting up UNIT?",
-        answers: ["Farquhar", "General Farquhar"],
+        answers: ["General Farquhar", "Farquhar"],
       },
       {
         question: "Who did the Doctor suppose 'came up through the ranks'?",
-        answers: ["Chellak", "General Chellak"],
+        answers: ["General Chellak", "Chellak"],
       },
       {
         question:
@@ -301,7 +312,7 @@ export const rounds: Round[] = [
       {
         question:
           "What name was used by one of the War Lords in their simulation of World War 1?",
-        answers: ["Smythe", "General Smythe"],
+        answers: ["General Smythe", "Smythe"],
       },
       {
         question:
@@ -377,7 +388,7 @@ export const rounds: Round[] = [
           "In 'Image of the Fendahl' what does Colby's dog Leakey find?",
         answers: ["A dead body", "dead body", "dead guy", "dead man", "corpse"],
       },
-      { question: "Who invented K9?", answers: ["Marius", "Professor Marius"] },
+      { question: "Who invented K9?", answers: ["Professor Marius", "Marius"] },
       {
         question:
           "In Victorian London, what did the Cybermen convert dogs into?",
@@ -426,7 +437,7 @@ export const rounds: Round[] = [
       {
         question:
           "What is the name of the Ood that reaches out to the Doctor and Donna in 'Planet Of The Ood'?",
-        answers: ["Sigma", "Ood Sigma"],
+        answers: ["Ood Sigma", "Sigma"],
       },
       {
         question:
@@ -440,6 +451,7 @@ export const rounds: Round[] = [
       {
         question: "Name one of the humanised Daleks in 'Evil of the Daleks'?",
         answers: ["Alpha", "Beta", "Omega"],
+        officialAnswer: "Alpha, Beta or Omega."
       },
       {
         question:

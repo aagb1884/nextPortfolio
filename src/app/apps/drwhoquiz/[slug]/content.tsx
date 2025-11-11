@@ -11,6 +11,7 @@ import InstructionsModal from "../components/InstructionsModal";
 import CreditsModal from "../components/CreditsModal";
 import GoodgeChoiceModal from "../components/GoodgeChoiceModal";
 import DeathRoundOver from "../components/DeathRoundOver";
+import WrongAnswersModal from "../components/WrongAnswersModal";
 
 interface PageContentProps {
   round: Round;
@@ -26,6 +27,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
   const [roundScore, setRoundScore] = useState<number>(0);
   const [deathRoundScore, setDeathRoundScore] = useState<number>(0);
   const [showModal, setShowModal] = useState<boolean>(false);
+  const [showAnswersModal, setAnswersModal] = useState<boolean>(false);
   // goodge guessing game states
   const [showGoodgeChoiceModal, setShowGoodgeChoiceModal] =
     useState<boolean>(false);
@@ -41,6 +43,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
   const [progress, setProgress] = useState<number>(0);
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [showScore, setShowScore] = useState<boolean | null>(null);
+  const [wrongAnswers, setWrongAnswers] = useState<Question[]>([]);
 
   // is it goodge game
   const isDeathRound = round.name === "Death!";
@@ -48,13 +51,14 @@ const PageContent = ({ round, name }: PageContentProps) => {
   const deathRoundReset = () => {
     setCurrentQuestionIndex(0);
     setIsActive(false);
-    setIsAnswerCorrect(null)
+    setIsAnswerCorrect(null);
     setShowScore(null);
     setRoundOver(false);
     setDeathRoundScore(0);
     setRoundScore(0);
-    setIsGoodge(null)
-    setDeathImage(undefined)
+    setIsGoodge(null);
+    setDeathImage(undefined);
+    setWrongAnswers([]);
     if (isDeathRound) {
       setShowGoodgeChoiceModal(true);
     }
@@ -62,14 +66,14 @@ const PageContent = ({ round, name }: PageContentProps) => {
 
   const randomDeathImage = (array: Question[]) => {
     const one = [...array].sort(() => Math.random() - 0.5).slice(0, 1);
-     const selected = one[0];
-     setDeathImage(selected);
+    const selected = one[0];
+    setDeathImage(selected);
     if (selected?.answers.includes("Terror of the Autons")) {
       setIsGoodge(true);
     } else {
-      setIsGoodge(false)
+      setIsGoodge(false);
     }
-  }
+  };
   // question and answer handling
 
   const set10Questions = (array: Question[]) => {
@@ -85,7 +89,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
 
       setQuizRound(ten);
       setShowQuiz(true);
-      setTimeLeft(60)
+      setTimeLeft(60);
     }
   };
 
@@ -101,6 +105,10 @@ const PageContent = ({ round, name }: PageContentProps) => {
       setRoundOver(true);
     }
   };
+
+  function addWrongAnswer(question: Question) {
+    setWrongAnswers([...wrongAnswers, question]);
+  }
 
   function checkAnswer(answer: string) {
     const lowercaseAnswers = quizRound[currentQuestionIndex].answers.map((e) =>
@@ -147,6 +155,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
           progress={progress}
           currentTime={currentTime}
           showQuiz={showQuiz}
+          addWrongAnswer={addWrongAnswer}
         />
       </div>
     );
@@ -156,6 +165,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
     setCurrentQuestionIndex(0);
     set10Questions(round.questions);
     setIsActive(false);
+    setWrongAnswers([]);
   };
 
   //timer
@@ -181,6 +191,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
     if (timeLeft <= 0) {
       setCurrentQuestionIndex((prev) => prev + 1);
       setTimeLeft(duration);
+      addWrongAnswer(quizRound[currentQuestionIndex]);
     }
   }, [timeLeft]);
 
@@ -191,12 +202,13 @@ const PageContent = ({ round, name }: PageContentProps) => {
   //audio
 
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const hasAudio = !!quizRound?.[currentQuestionIndex]?.audio
 
   useEffect(() => {
     if (
       typeof window !== "undefined" &&
       quizRound.length === 10 &&
-      !isDeathRound
+      !isDeathRound && hasAudio
     ) {
       const newAudio = new Audio(quizRound[currentQuestionIndex].audio);
       audioRef.current = newAudio;
@@ -232,7 +244,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
   }, [isActive]);
 
   const result = `I played the "${round.name}" round and scored ${roundScore}`;
- 
+
   return (
     <>
       <Header
@@ -255,6 +267,12 @@ const PageContent = ({ round, name }: PageContentProps) => {
             setShowScore={setShowScore}
           />
         )}
+        {showAnswersModal && (
+          <WrongAnswersModal
+            setModalOpen={setAnswersModal}
+            wrongAnswers={wrongAnswers}
+          />
+        )}
         <h1 className={styles.roundName}>{round.name}</h1>
         {round.copy && <p className={styles.copy}>{round.copy}</p>}
         {round.hint && <aside className={styles.aside}>{round.hint}</aside>}
@@ -274,6 +292,12 @@ const PageContent = ({ round, name }: PageContentProps) => {
             <div className={styles.quizOver}>
               <p>Round Completed! You scored {roundScore}</p>
               <ShareButton setShowModal={setShowModal} showModal={showModal} />
+              <button
+                className={styles.btn}
+                onClick={() => setAnswersModal(true)}
+              >
+                See Wrong Answers
+              </button>
               <button className={styles.btn} onClick={() => reset()}>
                 Try Again?
               </button>

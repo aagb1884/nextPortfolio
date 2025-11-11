@@ -19,6 +19,7 @@ interface QuestionProps {
   progress: number;
   currentTime: number;
   showQuiz: boolean;
+  addWrongAnswer: (s: Question) => void;
 }
 
 const QuestionComponent = ({
@@ -34,6 +35,7 @@ const QuestionComponent = ({
   progress,
   currentTime,
   showQuiz,
+  addWrongAnswer
 }: QuestionProps) => {
   const [userAnswer, setUserAnswer] = useState<string>("");
   const [options, setOptions] = useState<string[] | null>(null)
@@ -42,6 +44,7 @@ const QuestionComponent = ({
   const skip = () => {
     handleAnswer()
     setUserAnswer("")
+    addWrongAnswer(question)
   }
 
   const handleAnswerSubmit = () => {
