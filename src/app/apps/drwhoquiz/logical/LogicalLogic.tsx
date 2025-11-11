@@ -19,8 +19,8 @@ import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
 import { CyberQuestion, CyberRound, plotPoint } from "../data/questions";
 import SocialMediaShare from "../components/SocialMediaShare";
-import InstructionsModal from "../components/InstructionsModal";
-import CreditsModal from "../components/CreditsModal";
+import InstructionsModal from "../components/modals/InstructionsModal";
+import CreditsModal from "../components/modals/CreditsModal";
 import Header from "../components/header";
 import SortablePlotPoint from "./SortablePlotPoint";
 import Countdown from "@/app/ui/Countdown";
@@ -48,13 +48,13 @@ const LogicalLogic = ({ round }: LogicProps) => {
   const [duration, setDuration] = useState<number>(120);
   const [timeLeft, setTimeLeft] = useState<number>(120);
   const { executeScroll } = useGlobalState();
-   const questionRef = useRef(null);
-  
-    useEffect(() => {
-      if (showQuiz) {
-        executeScroll(questionRef);
-      }
-    }, [showQuiz]);
+  const questionRef = useRef(null);
+
+  useEffect(() => {
+    if (showQuiz) {
+      executeScroll(questionRef);
+    }
+  }, [showQuiz]);
 
   function randomisePlotPoints(array: plotPoint[]) {
     setPlotPoints(

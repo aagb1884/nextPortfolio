@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/app/styles/whoQuiz.module.css";
-import { roundBtns } from "../data/round-btns";
+import { roundBtns } from "../../data/round-btns";
 
 const btnMap = roundBtns.map((round) => {
   return (

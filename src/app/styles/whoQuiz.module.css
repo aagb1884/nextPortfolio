@@ -145,12 +145,22 @@
   justify-content: space-evenly;
 }
 
-.questionText {
+.questionText,
+.wrongText,
+.wrongAnswer {
   display: flex;
-  height: 100px;
   align-items: center;
-  margin: 4%;
   padding: 0 2px;
+  margin: 2%;
+}
+
+.questionText,
+.wrongAnswer {
+  height: 100px;
+}
+
+.wrongText {
+  height: 200px;
 }
 
 .questionInput {
@@ -193,12 +203,27 @@
   height: 62.5px;
 }
 
-.btn {
+.btn,
+.btnAlt,
+.disabled {
   margin: 4% 0;
   padding: 2px;
-  color: white;
-  background-color: #032687;
   width: 250px;
+}
+
+.btn {
+  background-color: #032687;
+  color: white;
+}
+
+.btnAlt {
+  background-color: red;
+  color: white;
+}
+
+.disabled {
+  background-color: grey;
+  color: darkgray;
 }
 
 .skipBtn {
@@ -412,7 +437,7 @@
   color: black;
   text-align: left;
   line-height: 2;
-  z-index: 5;
+  z-index: 10;
   overflow-y: auto;
   background-color: skyblue;
   display: flex;
@@ -430,8 +455,18 @@
   text-align: center;
 }
 
-.btn {
-  margin-top: 2%;
+.answerList {
+  padding: 4px;
+  list-style: none;
+  border-bottom: #032687 1px solid;
+}
+
+.buttonRow {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-evenly;
+  height: 50px;
 }
 
 /* sorting */
