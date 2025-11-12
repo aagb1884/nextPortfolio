@@ -200,6 +200,104 @@ export const rounds: Round[] = [
         question: "What do Jackie and Pete Tyler name their son?",
         answers: ["Tony"],
       },
+      {
+        question:
+          "What filming location does 'The Masque of the Mandragora' share with the original version of 'The Prisoner'?",
+        answers: ["Portmeirion"],
+      },
+      {
+        question:
+          "Who returned to Doctor Who in a new role for 'Nikola Tesla's Night of Terror'?",
+        answers: ["Robert Glenister"],
+      },
+      {
+        question: "What country does 'Can You Hear Me?' start in?",
+        answers: ["Syria"],
+      },
+      {
+        question: "What is the name of the undertaker in 'The Unquiet Dead'?",
+        answers: ["Gabriel Sneed", "Sneed"],
+      },
+      {
+        question:
+          "Name one of the shows broadcast by the Game Station (formerly Satellite 5)?",
+        answers: [
+          "Big Brother",
+          "Stars in Their Eyes",
+          "Wipeout",
+          "Ground Force",
+          "Call My Bluff",
+          "Countdown",
+        ],
+        officialAnswer:
+          "Big Brother, Stars in Their Eyes, Wipeout, Gound Force, Countdown or Call My Bluff.",
+      },
+      {
+        question: "How do the Sycorax hypnotise a third of humanity?",
+        answers: ["Blood control"],
+      },
+      {
+        question: "What story implies that the Cult of Skaro kidnapped a pig?",
+        answers: [
+          "Daleks in Manhattan",
+          "Evolution of the Daleks",
+          "Daleks in Manhattan/Evolution of the Daleks",
+        ],
+      },
+      {
+        question: "Who plays Caecilius in 'The Fires of Pompeii'?",
+        answers: ["Peter Capaldi"],
+      },
+      {
+        question:
+          "In 'The Pandorica Opens', what does the oldest message in creation say?",
+        answers: ["Hello sweetie"],
+      },
+      {
+        question:
+          "What does the Doctor see in his hotel room in 'The God Complex'?",
+        answers: [
+          "The crack in time",
+          "crack in time",
+          "a crack in time",
+          "a crack",
+          "crack",
+        ],
+      },
+      {
+        question:
+          "What impossible-sounding book does Clara discover in the TARDIS?",
+        answers: ["The History of the Time War"],
+      },
+      {
+        question:
+          "What are Gallifreyans made to stare into when they reach the age of 8?",
+        answers: ["The Untempered Schism", "Untempered Schism", "time vortex"],
+      },
+      {
+        question:
+          "Who appears in Bill's flat when she's in the middle of a date?",
+        answers: ["The Pope", "Pope"],
+      },
+      {
+        question: "Name a character played by Alan Cumming",
+        answers: [
+          "Lux",
+          "King James VI",
+          "James VI",
+          "King James I",
+          "James I",
+        ],
+        officialAnswer: "Lux or King James VI and I",
+      },
+      {
+        question: "What is Ryan infected with on Orphan 55?",
+        answers: ["A Hopper virus", "hopper virus"],
+      },
+      {
+        question: "What did Swarm and Azure use to trap survivors of the Flux?",
+        answers: ["Passenger", "Passenger Form"],
+      },
     ],
   },
   {
@@ -318,6 +416,19 @@ export const rounds: Round[] = [
         question:
           "What species was General Nikolai Hermack, Space Corps officer?",
         answers: ["Human"],
+      },
+      {
+        question:
+          "General Ding Xiaolian appears in which Twelfth Doctor story?",
+        answers: [
+          "THe Pyramid at the End of the World",
+          "Pyramid at the End of the World",
+        ],
+      },
+      {
+        question:
+          "In the book 'Alien Bodies', through which exit does the Doctor leave General Tchike's forty-sixth floor office?",
+        answers: ["The window", "window"],
       },
     ],
   },
@@ -760,6 +871,11 @@ export const rounds: Round[] = [
         question:
           "He interviewed Roger ap Gwilliam, asking if he wanted to fire a nuclear weapon.",
         answers: ["Amol Rajan"],
+      },
+      {
+        question:
+          "The then BBC Breakfast journalist reported on the sudden appearance of trees across the world.",
+        answers: ["Jenny Hill"],
       },
     ],
   },
@@ -1808,7 +1924,7 @@ export const rounds: Round[] = [
           "None of 'The Greatest Show in the Galaxy' takes place on the moon.",
       },
       {
-        question: "Which is the odd one out?",
+        question: "Which story is the odd one out?",
         options: [
           "The Curse of Fenric",
           "Terminus",
@@ -1818,6 +1934,25 @@ export const rounds: Round[] = [
         answers: ["Terminus"],
         officialAnswer:
           "Terminus is inspired by Viking mythology, the others actually feature Vikings.",
+      },
+      {
+        question: "Who is the odd one out?",
+        options: ["Yvonne Hartman", "Craig Owens", "Bill Potts", "Ricky Smith"],
+        answers: ["Ricky Smith"],
+        officialAnswer:
+          "The Cybermen kill Ricky Smith and try to convert the others.",
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "Human Nature",
+          "Thin Ice",
+          "The Day of the Doctor",
+          "Earthshock",
+        ],
+        answers: ["The Day of the Doctor"],
+        officialAnswer:
+          "The Day of the Doctor does not feature any children being killed.",
       },
     ],
   },
@@ -2172,6 +2307,11 @@ export const rounds: Round[] = [
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_22.mp3",
         answers: ["Rosa"],
+      },
+      {
+        question: "Which story does this song feature in?",
+        audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_23.mp3",
+        answers: ["Rogue"],
       },
     ],
   },
