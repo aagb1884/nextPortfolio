@@ -520,6 +520,14 @@
 }
 
 @media only screen and (max-width: 450px) {
+  .btn,
+  .btnAlt,
+  .disabled,
+  .skipBtn {
+    padding: 2%;
+    font-size: 16px;
+  }
+
   .qImageDiv {
     max-width: 90%;
     width: 90%;
