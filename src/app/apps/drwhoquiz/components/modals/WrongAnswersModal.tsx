@@ -89,13 +89,33 @@ const WrongAnswersModal: React.FC<modalProps> = ({
         {wrongAnswer?.question && (
           <p className={styles.wrongText}>{wrongAnswer?.question}</p>
         )}
+        {wrongAnswer?.options && (
+          <div className={styles.qImageDiv}>
+            <ul>
+              {wrongAnswer.options.map((opt, index) => (
+                <li
+                  key={index}
+                  className={opt === wrongAnswer.answers[0] ? styles.right : ""}
+                >
+                  {opt}
+                </li>
+              ))}
+            </ul>
+            {wrongAnswer?.officialAnswer && (
+              <p style={{marginTop: "5%"}}>
+                <i>{wrongAnswer.officialAnswer}</i>
+              </p>
+            )}
+          </div>
+        )}
+        {!wrongAnswer?.options && (
         <p className={styles.wrongAnswer}>
           <i>
-            {wrongAnswer?.officialAnswer
+            {wrongAnswer?.officialAnswer 
               ? wrongAnswer?.officialAnswer
               : wrongAnswer?.answers[0]}
           </i>
-        </p>
+        </p>)}
         <div className={styles.buttonRow}>
           <button
             className={`${styleBck}`}
