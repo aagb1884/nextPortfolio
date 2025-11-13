@@ -206,7 +206,7 @@
 .btn,
 .btnAlt,
 .disabled {
-  margin: 4% 0;
+  margin: 2%;
   padding: 2px;
   width: 250px;
 }
@@ -534,7 +534,9 @@
 }
 
 @media only screen and (min-width: 850px) {
-  .btn {
+  .btn,
+  .btnAlt,
+  .disabled {
     margin: 1% 0;
   }
   .textbox {

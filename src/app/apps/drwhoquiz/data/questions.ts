@@ -860,7 +860,7 @@ export const rounds: Round[] = [
       },
       {
         question: "In 2925 he is released from cryogenic suspension.",
-        answers: ["Rylan", "Rylan Clark"],
+        answers: ["Rylan", "Rylan Clark", "Rylan Clark-Neal"],
       },
       {
         question:
@@ -2733,6 +2733,178 @@ export const rounds: Round[] = [
       {
         question: "Steamed alive by rival henchperson.",
         answers: ["Pyramids of Mars"],
+      },
+    ],
+  },
+  {
+    name: "Seek new life and...dance",
+    slug: "strictly",
+    copy: "Name the Strictly Come Dancing contestant from their first dance of the competition and their first appearance in Doctor Who on TV.",
+    hint: "Keeeeep guessing!",
+    questions: [
+      {
+        question: "Cha cha cha in Silence In The Library",
+        answers: ["Colin Salmon"],
+      },
+      {
+        question: "Samba in The Eleventh Hour",
+        answers: ["Nina Wadia"],
+      },
+      {
+        question: "Cha cha cha in Rise Of The Cybermen",
+        answers: ["Don Warrington"],
+      },
+      {
+        question: "Tango in The Trial Of A Time Lord",
+        answers: ["Lynda Bellingham"],
+      },
+      {
+        question: "Cha cha cha in The Unicorn And The Wasp",
+        answers: ["Felicity Kendal"],
+      },
+      {
+        question: "Cha cha cha in Aliens of London",
+        answers: ["Matt Baker"],
+      },
+      {
+        question: "Cha cha cha in Lucky Day",
+        answers: ["Alex Jones"],
+      },
+      {
+        question: "Waltz in The Church On Ruby Road",
+        answers: ["Anita Dobson"],
+      },
+      {
+        question: "Cha cha cha in Last Christmas",
+        answers: ["Natalie Gumede"],
+      },
+      {
+        question: "Tango in Rose",
+        answers: ["Mark Benton"],
+      },
+      {
+        question: "Tango in Dinosaurs On A Spaceship",
+        answers: ["Sunetra Sarker"],
+      },
+      {
+        question: "Cha cha cha in The Doctor, The Widow, And The Wardrobe",
+        answers: ["Bill Bailey"],
+      },
+      {
+        question: "Jive in The Well",
+        answers: ["Rose Ayling-Ellis"],
+      },
+      {
+        question: "Cha cha cha in The Impossible Planet",
+        answers: ["Will Thorp"],
+      },
+      {
+        question: "Cha cha cha in Partners In Crime ",
+        answers: ["Verona Joseph"],
+      },
+      {
+        question: "Tango in The Time Warrior",
+        answers: ["June Brown"],
+      },
+      {
+        question: "Foxtrot in The Happiness Patrol",
+        answers: ["Sheila Hancock"],
+      },
+      {
+        question: "Tango in The Woman Who Lived",
+        answers: ["Rufus Hound"],
+      },
+      {
+        question: "Viennese Waltz in Nightmare in Silver",
+        answers: ["Tamzin Outhwaite"],
+      },
+      {
+        question: "Cha cha cha in Dinosaurs on a Spaceship",
+        answers: ["Robert Webb"],
+      },
+      {
+        question: "Cha cha cha in Let's Kill Hitler",
+        answers: ["Davood Ghadami"],
+      },
+      {
+        question: "Viennese Waltz in Silence in the Library",
+        answers: ["Alex Kingston"],
+      },
+    ],
+  },
+  {
+    name: "All Hail King Hydroflax!",
+    slug: "taskmaster",
+    copy: "Name the Taskmaster performer from the season in which they appeared and their first appearance in Doctor Who on TV.",
+    hint: "All the information is on the task.",
+    questions: [
+      {
+        question: "Season 1 and The Husbands Of River Song",
+        answers: ["Greg Davies"],
+      },
+      {
+        question: "Season 1 and Mummy On The Orient Express",
+        answers: ["Frank Skinner"],
+      },
+      {
+        question: "Season 2 and The Tsuranga Conundrum",
+        answers: ["Ben Bailey Smith"],
+      },
+      {
+        question: "Season 5 and Eve Of The Daleks",
+        answers: ["Aisling Bea"],
+      },
+      {
+        question: "Season 9 and Torchwood: Children Of Earth",
+        answers: ["Katy Wix"],
+      },
+      {
+        question: "Season 10 and Destination Skaro",
+        answers: ["Mawaan Rizwan"],
+      },
+      {
+        question: "New Year Treat #1 and Joy To The World",
+        answers: ["Nicola Coughlan"],
+      },
+      {
+        question: "New Year Treat #1 and The Devil's Chord",
+        answers: ["Shirley Ballas"],
+      },
+      {
+        question: "New Year Treat #1 and The Interstellar Song Contest ",
+        answers: ["Rylan", "Rylan Clark", "Rylan Clark-Neal"],
+      },
+      {
+        question: "Season 11 and Resolution",
+        answers: ["Charlotte Ritchie"],
+      },
+      {
+        question: "Season 11 and Kerblam!",
+        answers: ["Lee Mack"],
+      },
+      {
+        question: "Season 13 and Gridlock",
+        answers: ["Ardal O'Hanlon"],
+      },
+      {
+        question: "New Year Treat #4 and The Legend Of Ruby Sunday",
+        answers: ["Lenny Rush"],
+      },
+      {
+        question: "Season 17 and Silence In The Library",
+        answers: ["Steve Pemberton"],
+      },
+      {
+        question: "Season 18 and The Lodger",
+        answers: ["Babátúndé Aléshé", "Babatunde Aleshe"],
+      },
+      {
+        question: "Season 20 and Sleep No More",
+        answers: ["Reece Shearsmith"],
+      },
+      {
+        question: "Season 20 and Death In Heaven",
+        answers: ["Sanjeev Bhaskar"],
       },
     ],
   },

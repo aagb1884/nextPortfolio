@@ -50,6 +50,13 @@ export const roundBtns: roundBtn[] = [
     text: "Knowledge of Generals",
   },
   {
+    style: "strictly",
+    link: "strictly",
+    src: "/images/drWhoQuiz/button_images/strictly.webp",
+    alt: "Strictly round button",
+    text: "Strictly",
+  },
+  {
     style: "oddOneOut",
     link: "odd-one-out",
     src: "/images/drWhoQuiz/button_images/odd_one_out.jpg",
@@ -118,5 +125,12 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/death.jpg",
     alt: "Death! round button",
     text: "Death!",
+  },
+  {
+    style: "taskmaster",
+    link: "taskmaster",
+    src: "/images/drWhoQuiz/button_images/hydroflax.jpeg",
+    alt: "Taskmster round button",
+    text: "All hail King Hydroflax!",
   },
 ];
