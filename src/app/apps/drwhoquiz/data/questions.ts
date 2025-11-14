@@ -3113,7 +3113,7 @@ export const rounds: Round[] = [
       {
         question:
           "Which transtemporal adventuress travelled the multiverse in a double-decker bus?",
-        answers: ["Irish Wildthyme"],
+        answers: ["Iris Wildthyme"],
       },
       {
         question:
