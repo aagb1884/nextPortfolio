@@ -4,11 +4,16 @@ import styles from "@/app/styles/whoQuiz.module.css";
 import { roundBtn } from "../../data/round-btns";
 
 type rndBtnProps = {
-  roundButtons: roundBtn[]
-}
-const RoundButtons = ({roundButtons} : rndBtnProps) => {
-
-  const btnMap = roundButtons.map((round) => {
+  roundButtons: roundBtn[] | undefined;
+  setVisibleQuizzes: (x: any) => void;
+  mobile: boolean;
+};
+const RoundButtons = ({
+  roundButtons,
+  setVisibleQuizzes,
+  mobile,
+}: rndBtnProps) => {
+  const btnMap = roundButtons?.map((round) => {
     return (
       <div key={round.style} className={`styles.${round.style}`}>
         <Link
@@ -27,7 +32,24 @@ const RoundButtons = ({roundButtons} : rndBtnProps) => {
       </div>
     );
   });
-  return <section className={styles.roundButtonsComponent}>{btnMap}</section>;
+  return (
+    <section className={styles.roundButtonsComponent}>
+      {btnMap}
+      {mobile && (
+        <div className={styles.seeMore}>
+          <button
+            id="visible"
+            className={styles.skipBtn}
+            onClick={() => {
+              setVisibleQuizzes((prev: number) => prev + 10);
+            }}
+          >
+            See More Quizzes
+          </button>
+        </div>
+      )}
+    </section>
+  );
 };
 
 export default RoundButtons;

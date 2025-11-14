@@ -12,16 +12,19 @@ const MainQuizPageContent = () => {
   const [showInstructionsModal, setShowInstructionsModal] =
     useState<boolean>(false);
   const [showCreditModal, setShowCreditModal] = useState<boolean>(false);
-  const [roundButtons, setRoundButtons] = useState<roundBtn[]>(roundBtns)
+  const [roundButtons, setRoundButtons] = useState<roundBtn[] | undefined>();
+  const [visibleQuizzes, setVisibleQuizzes] = useState<number>(10);
   const { width } = useWindowDimensions();
-  const mobile = width !== undefined && width < 451;
+  const mobile = width !== undefined && width < 485;
 
   useEffect(() => {
     if (mobile) {
-      const sliced = roundBtns.slice(0,10)
-      setRoundButtons(sliced)
+      const sliced = roundBtns.slice(0, visibleQuizzes);
+      setRoundButtons(sliced);
+    } else {
+      setRoundButtons(roundBtns);
     }
-  }, [width])
+  }, [width, visibleQuizzes]);
 
   return (
     <div className={styles.drWhoQuizLanding}>
@@ -33,7 +36,11 @@ const MainQuizPageContent = () => {
         <InstructionsModal setModalOpen={setShowInstructionsModal} />
       )}
       {showCreditModal && <CreditsModal setModalOpen={setShowCreditModal} />}
-      <RoundButtons roundButtons={roundButtons}/>
+      <RoundButtons
+        roundButtons={roundButtons}
+        setVisibleQuizzes={setVisibleQuizzes}
+        mobile={mobile}
+      />
     </div>
   );
 };
