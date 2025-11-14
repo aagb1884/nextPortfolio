@@ -1,4 +1,4 @@
-interface roundBtn {
+export type roundBtn = {
   style: string;
   link: string;
   src: string;
