@@ -1,30 +1,55 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/app/styles/whoQuiz.module.css";
-import { roundBtns } from "../../data/round-btns";
+import { roundBtn } from "../../data/round-btns";
 
-const btnMap = roundBtns.map((round) => {
+type rndBtnProps = {
+  roundButtons: roundBtn[] | undefined;
+  setVisibleQuizzes: (x: any) => void;
+  mobile: boolean;
+  needButton: boolean;
+};
+const RoundButtons = ({
+  roundButtons,
+  setVisibleQuizzes,
+  mobile,
+  needButton,
+}: rndBtnProps) => {
+  const btnMap = roundButtons?.map((round) => {
+    return (
+      <div key={round.style} className={`styles.${round.style}`}>
+        <Link
+          href={`/apps/drwhoquiz/${round.link}`}
+          className={styles.roundButton}
+        >
+          <Image
+            src={`${round.src}`}
+            alt={`${round.alt}`}
+            width={150}
+            height={100}
+            className={styles.buttonImage}
+          />
+          <div className={styles.buttonText}>{round.text}</div>
+        </Link>
+      </div>
+    );
+  });
   return (
-    <div key={round.style} className={`styles.${round.style}`}>
-      <Link
-        href={`/apps/drwhoquiz/${round.link}`}
-        className={styles.roundButton}
-      >
-        <Image
-          src={`${round.src}`}
-          alt={`${round.alt}`}
-          width={150}
-          height={100}
-          className={styles.buttonImage}
-        />
-        <div className={styles.buttonText}>{round.text}</div>
-      </Link>
+    <div className={styles.seeMore}>
+      <section className={styles.roundButtonsComponent}>{btnMap}</section>
+      {mobile && needButton && (
+        <button
+          id="visible"
+          className={styles.skipBtn}
+          onClick={() => {
+            setVisibleQuizzes((prev: number) => prev + 10);
+          }}
+        >
+          See More Quizzes
+        </button>
+      )}
     </div>
   );
-});
-
-const RoundButtons = () => {
-  return <section className={styles.roundButtonsComponent}>{btnMap}</section>;
 };
 
 export default RoundButtons;

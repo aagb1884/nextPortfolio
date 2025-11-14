@@ -236,7 +236,7 @@
 }
 
 .textbox {
-  padding: 1%;
+  padding: 2%;
   width: 300px;
   margin-bottom: 4%;
 }
@@ -264,6 +264,14 @@
   margin: 2%;
   border-style: inset;
   width: 100%;
+}
+
+.seeMore {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
 }
 
 .roundButton {
@@ -519,13 +527,17 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 450px) {
+@media only screen and (max-width: 485px) {
   .btn,
   .btnAlt,
   .disabled,
   .skipBtn {
     padding: 2%;
     font-size: 16px;
+  }
+
+  .textbox {
+    padding: 3%;
   }
 
   .qImageDiv {
@@ -541,7 +553,7 @@
     width: 100%;
   }
 }
-@media only screen and (min-width: 450px) and (max-width: 600px) {
+@media only screen and (min-width: 485px) and (max-width: 600px) {
   .roundButtonsComponent {
     grid-template-columns: 33% 33% 33%;
   }
