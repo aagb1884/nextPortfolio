@@ -16,6 +16,8 @@ const MainQuizPageContent = () => {
   const [visibleQuizzes, setVisibleQuizzes] = useState<number>(10);
   const { width } = useWindowDimensions();
   const mobile = width !== undefined && width < 485;
+  const needButton =
+    roundButtons !== undefined && roundButtons?.length >= visibleQuizzes;
 
   useEffect(() => {
     if (mobile) {
@@ -40,6 +42,7 @@ const MainQuizPageContent = () => {
         roundButtons={roundButtons}
         setVisibleQuizzes={setVisibleQuizzes}
         mobile={mobile}
+        needButton={needButton}
       />
     </div>
   );

@@ -7,11 +7,13 @@ type rndBtnProps = {
   roundButtons: roundBtn[] | undefined;
   setVisibleQuizzes: (x: any) => void;
   mobile: boolean;
+  needButton: boolean;
 };
 const RoundButtons = ({
   roundButtons,
   setVisibleQuizzes,
   mobile,
+  needButton,
 }: rndBtnProps) => {
   const btnMap = roundButtons?.map((round) => {
     return (
@@ -33,22 +35,20 @@ const RoundButtons = ({
     );
   });
   return (
-    <section className={styles.roundButtonsComponent}>
-      {btnMap}
-      {mobile && (
-        <div className={styles.seeMore}>
-          <button
-            id="visible"
-            className={styles.skipBtn}
-            onClick={() => {
-              setVisibleQuizzes((prev: number) => prev + 10);
-            }}
-          >
-            See More Quizzes
-          </button>
-        </div>
+    <div className={styles.seeMore}>
+      <section className={styles.roundButtonsComponent}>{btnMap}</section>
+      {mobile && needButton && (
+        <button
+          id="visible"
+          className={styles.skipBtn}
+          onClick={() => {
+            setVisibleQuizzes((prev: number) => prev + 10);
+          }}
+        >
+          See More Quizzes
+        </button>
       )}
-    </section>
+    </div>
   );
 };
 

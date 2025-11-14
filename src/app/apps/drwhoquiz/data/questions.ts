@@ -877,6 +877,11 @@ export const rounds: Round[] = [
           "The then BBC Breakfast journalist reported on the sudden appearance of trees across the world.",
         answers: ["Jenny Hill"],
       },
+      {
+        question:
+          "Curmudgeonly peer who appears on TV in 'The Power of Three'.",
+        answers: ["Alan Sugar"],
+      },
     ],
   },
   {
@@ -2905,6 +2910,194 @@ export const rounds: Round[] = [
       {
         question: "Season 20 and Death In Heaven",
         answers: ["Sanjeev Bhaskar"],
+      },
+    ],
+  },
+  {
+    name: "The Wilderness Years",
+    slug: "wilderness",
+    copy: "Questions about Doctor Who in the years it was off air between 1989 and 2005.",
+    questions: [
+      {
+        question:
+          "Name a story that was to be loosely adapted as part of John Leekley's Series Bible for Amblin television.",
+        answers: [
+          "The Smugglers",
+          "The Talons of Weng-Chieng",
+          "Talons of Weng-Chieng",
+          "Earthshock",
+          "Horror of Fang Rock",
+          "The Celestial Toymaker",
+          "Celestial Toymaker",
+          "The Gunfighters",
+          "Gunfighters",
+          "Tomb of the Cybermen",
+          "The Ark in Space",
+          "Ark in Space",
+          "The Abominable Snowmen",
+          "Abominable Snowmen",
+        ],
+        officialAnswer:
+          "The Smugglers, The Talons of Weng-Chieng, Earthshock, Horror of Fang Rock, The Celestial Toymaker, The Gunfighters, Tomb of the Cybermen, The Ark in Space or The Abominable Snowmen.",
+      },
+      {
+        question:
+          "What was the name of the proposed 30th anniversary special commissioned by BBC Enterprises?",
+        answers: ["The Dark Dimension"],
+      },
+      {
+        question:
+          "Name one of the writers behind a 2001 pitch for Doctor Who that would have seen an amnesiac Doctor selling antiques in an English village.",
+        answers: ["Mark Gatiss", "Clayton Hickman", "Gareth Roberts"],
+        officialAnswer: "Mark Gatiss, Gareth Roberts or Clayton Hickman",
+      },
+      {
+        question:
+          "Name the stage actor who claimed to have been cast as the Doctor in in 1991, and filmed a pilot called 'Doctor Who and the Monsters of Ness'.",
+        answers: ["David Burton"],
+      },
+      {
+        question:
+          "The New Adventures novels killed off which Seventies TV companion?",
+        answers: ["Liz Shaw", "Elizabeth Shaw"],
+      },
+      {
+        question:
+          "The New Adventures were marketed as 'Too broad and **** for the small screen.' - what's the missing word? ",
+        answers: ["Deep"],
+      },
+      {
+        question:
+          "Which New Adventures novelists would go on to write for Series 2 (2006)?",
+        answers: [
+          "Matt Jones",
+          "Matthew Jones",
+          "Mark Gatiss",
+          "Russell T. Davies",
+          "RTD",
+        ],
+      },
+      {
+        question:
+          "What was the name of the past Doctors range that Virgin Books published alongside the New Adventures?",
+        answers: ["The Missing Adventures", "Missing Adventures"],
+      },
+      {
+        question:
+          "Name one of the two books published by Virgin were based on fan films.",
+        answers: ["Downtime", "Shakedown"],
+        officialAnswer: "Shakedown or Downtime.",
+      },
+      {
+        question:
+          "Missing Adventure novel 'The Dark Path' provides an origin story for which recurring villain?",
+        answers: ["The Master"],
+      },
+      {
+        question:
+          "Which Sixth Doctor computer programmer companion appeared in two Missing Adventure novels?",
+        answers: ["Grant Markham", "Grant"],
+      },
+      {
+        question:
+          "Who wrote two third Doctor radio stories broadcast in 1993 and 1996?",
+        answers: ["Barry Letts"],
+      },
+      {
+        question:
+          "What radio station was 'The Paradise of Death' originally broadcast on?",
+        answers: ["BBC Radio 5", "Radio 5"],
+      },
+      {
+        question:
+          "What radio station was 'The Ghosts of N-Space' originally broadcast on?",
+        answers: ["BBC Radio 2", "Radio 2"],
+      },
+      {
+        question:
+          "In 'The Ghosts of N-Space' we meet which regular character's great-uncle, Mario?",
+        answers: [
+          "The Brigadier",
+          "The Brig",
+          "Brigadier",
+          "Alastair Gordon Lethbridge-Stewart",
+        ],
+      },
+      {
+        question:
+          "The TV Movie was broadcast in America against the penultimate, cliffhanger-led episode of which long running U.S. sitcom?",
+        answers: ["Roseanne"],
+      },
+      {
+        question:
+          "Jo Wright, the BBC Executive Producer for the Doctor Who TV Movie, suggested the film start with which actor playing the Doctor?",
+        answers: ["Tom Baker"],
+        officialAnswer:
+          "Tom Baker, but to be fair she also suggested Paul McGann for the Eighth Doctor.",
+      },
+      {
+        question:
+          "According to the 1994 series bible, what was the name of the Doctor's father?",
+        answers: ["Ulysses"],
+      },
+      {
+        question:
+          "Who connects the 1996 Doctor Who TV Movie and 2011's 'Christopher and His Kind', starring Matt Smith?",
+        answers: ["Geoffrey Sax"],
+      },
+      {
+        question:
+          "Rachel Talalay directed episodes of which rebooted Dennis Spooner series in the year 2000?",
+        answers: ["Randall and Hopkirk (Deceased)", "Randall and Hopkirk"],
+      },
+      {
+        question:
+          "Which Nineties BBC One show connects the director of 'Destiny of the Daleks' and the writer of 'Terminus'?",
+        answers: ["Bugs"],
+      },
+      {
+        question:
+          "In the fan declensions of the Nineties, you were either a Gun or a…?",
+        answers: ["Frock"],
+      },
+      {
+        question:
+          "The P.R.O.B.E. spin-off films featured early dramatic work from members of which comedy group?",
+        answers: ["The League of Gentlemen", "League of Gentlemen"],
+      },
+      {
+        question:
+          "Which Doctor Who actor plays the first ever murder victim in 'Jonathan Creek'?",
+        answers: ["Colin Baker"],
+      },
+      {
+        question:
+          "Starting in 1991, which BBV Productions series featured Colin Baker and Nicola Bryant as slightly disguised versions of the Sixth Doctor and Peri?",
+        answers: ["The Stranger"],
+      },
+      {
+        question:
+          "Which 1993 fan-made ecological thriller featured four of the five surviving Doctors?",
+        answers: ["The Airzone Solution", "Airzone Solution"],
+      },
+      {
+        question:
+          "Big Finish Audio Productions started making dramas based on which New Adventures character?",
+        answers: [
+          "Bernice Summerfield",
+          "Benny",
+          "Professor Bernice Summerfield",
+        ],
+      },
+      {
+        question:
+          "Big Finish took their name from an episode of which Steven Moffat-penned series?",
+        answers: ["Press Gang"],
+      },
+      {
+        question:
+          "Which now-regular character first appeared in the spin-off drama 'Downtime'?",
+        answers: ["Kate Lethbridge-Stewart", "Kate Stewart"],
       },
     ],
   },

@@ -4,7 +4,7 @@ export type roundBtn = {
   src: string;
   alt: string;
   text: string;
-}
+};
 
 export const roundBtns: roundBtn[] = [
   {
@@ -55,6 +55,13 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/strictly.webp",
     alt: "Strictly round button",
     text: "Strictly",
+  },
+  {
+    style: "wilderness",
+    link: "wilderness",
+    src: "/images/drWhoQuiz/button_images/wilderness.jpg",
+    alt: "Wilderness Years round button",
+    text: "The Wilderness Years",
   },
   {
     style: "oddOneOut",
