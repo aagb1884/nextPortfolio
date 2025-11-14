@@ -5,12 +5,14 @@ import InstructionsModal from "./components/modals/InstructionsModal";
 import CreditsModal from "./components/modals/CreditsModal";
 import styles from "../../styles/whoQuiz.module.css";
 import { useState } from "react";
+import { useWindowDimensions } from "./data/functions";
 
 const MainQuizPageContent = () => {
   const [showInstructionsModal, setShowInstructionsModal] =
     useState<boolean>(false);
   const [showCreditModal, setShowCreditModal] = useState<boolean>(false);
-
+  const { width } = useWindowDimensions();
+  console.log(width);
   return (
     <div className={styles.drWhoQuizLanding}>
       <Header

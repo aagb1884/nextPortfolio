@@ -1948,7 +1948,7 @@ export const rounds: Round[] = [
           "Human Nature",
           "Thin Ice",
           "The Day of the Doctor",
-          "Earthshock",
+          "School Reunion",
         ],
         answers: ["The Day of the Doctor"],
         officialAnswer:

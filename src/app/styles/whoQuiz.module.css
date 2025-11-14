@@ -236,7 +236,7 @@
 }
 
 .textbox {
-  padding: 1%;
+  padding: 2%;
   width: 300px;
   margin-bottom: 4%;
 }
@@ -526,6 +526,10 @@
   .skipBtn {
     padding: 2%;
     font-size: 16px;
+  }
+
+  .textbox {
+    padding: 3%;
   }
 
   .qImageDiv {
