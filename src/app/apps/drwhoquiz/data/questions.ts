@@ -767,6 +767,12 @@ export const rounds: Round[] = [
           "…do the Ribosian seasons of Icetime and Suntime last? (Levithian years)",
         answers: ["32"],
       },
+      {
+        question:
+          "…between the announcement for 'Scream of the Shalka' and the announcement of the revived BBC 1 version of the show? (Days)",
+        answers: ["79"],
+        officialAnswer: "79 - from 9th July to 26 September 2003.",
+      },
     ],
   },
 
@@ -3098,6 +3104,46 @@ export const rounds: Round[] = [
         question:
           "Which now-regular character first appeared in the spin-off drama 'Downtime'?",
         answers: ["Kate Lethbridge-Stewart", "Kate Stewart"],
+      },
+      {
+        question:
+          "Which time-travelling, ritualistic voodoo cult debuted in 'Alien Bodies'?",
+        answers: ["Faction Paradox", "The Faction", "House Paradox"],
+      },
+      {
+        question:
+          "Which transtemporal adventuress travelled the multiverse in a double-decker bus?",
+        answers: ["Irish Wildthyme"],
+      },
+      {
+        question:
+          "In July 1999 Big Finish released their debut Doctor Who audio drama, 'The Sirens of Time'. What was their second Doctor Who audio drama called?",
+        answers: ["Phantasmagoria"],
+      },
+      {
+        question:
+          "'The Marian Conspiracy' introduced Big Finish's first newly created companion. What is her name?",
+        answers: ["Evelyn Smythe", "Evelyn"],
+      },
+      {
+        question:
+          "2003 webcast 'Scream of the Shalka' was animated by which studio?",
+        answers: ["Cosgrove Hall"],
+      },
+      {
+        question:
+          "The cast for 'Scream of the Shalka' included Richard E. Grant (Dr Simeon), Sophie Okonedo (Liz 10), Derek Jacobi (Professor Yana) and which other actor who later played a role in the TV series?",
+        answers: ["David Tennant"],
+      },
+      {
+        question:
+          "In November 2000 Big Finish brought back which character from the Doctor Who Magazine comic strip?",
+        answers: ["Frobisher"],
+      },
+      {
+        question:
+          "In May 1998 we saw the Eighth Doctor do what in the Doctor Who Magazine comic strip?",
+        answers: ["Regenerate"],
       },
     ],
   },
