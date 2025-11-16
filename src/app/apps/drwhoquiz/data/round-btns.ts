@@ -140,4 +140,11 @@ export const roundBtns: roundBtn[] = [
     alt: "Taskmster round button",
     text: "All hail King Hydroflax!",
   },
+  {
+    style: "children",
+    link: "children",
+    src: "/images/drWhoQuiz/button_images/timeless_child.webp",
+    alt: "Children Can Hear It Sometimes round button",
+    text: "Except children...",
+  },
 ];
