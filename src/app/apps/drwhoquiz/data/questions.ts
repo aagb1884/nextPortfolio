@@ -3157,23 +3157,23 @@ export const rounds: Round[] = [
   {
     name: "Children Can Hear It Sometimes",
     slug: "children",
-    copy: "Guess the Doctor Who mnster based on my son's descriptions on seeing them for the first time.",
+    copy: "Guess the Doctor Who monster based on my son's descriptions on seeing them for the first time.",
     hint: "Look, some of these are going to annoy you and you're just going to have to accept that.",
     questions: [
       {
-        question: "Furry Cyborg pig",
+        question: "Furry Cyborg pig.",
         answers: ["Tetrap", "Tetraps"],
       },
       {
-        question: "Green-eyed evil skeleton face",
+        question: "Green-eyed evil skeleton face.",
         answers: ["The Malus", "Malus"],
       },
       {
-        question: "A troll wearing lots of bags",
+        question: "A troll wearing lots of bags.",
         answers: ["Varga Plant", "Varga Plants"],
       },
       {
-        question: "A grey, plain-faced metal man",
+        question: "A grey, plain-faced metal man.",
         answers: ["Raston Warrior Robot"],
       },
       {
@@ -3189,31 +3189,31 @@ export const rounds: Round[] = [
         answers: ["Sil", "Mentor", "Mentors"],
       },
       {
-        question: "White and grey metal beards",
+        question: "White and grey metal beards.",
         answers: ["Cryon", "Cryons"],
       },
       {
-        question: "Unhappy man stitched together with wool",
+        question: "Unhappy man stitched together with wool.",
         answers: ["Melkur"],
       },
       {
-        question: "Green, tentacled, mossy, no face",
+        question: "Green, tentacled, mossy, no face.",
         answers: ["Krynoid", "Krynoids"],
       },
       {
-        question: "Weird, grumpy, dangerous pig",
+        question: "Weird, grumpy, dangerous pig.",
         answers: ["Rill", "Rills"],
       },
       {
-        question: "Circular heads with triangular noses and tinfoil eyes",
+        question: "Circular heads with triangular noses and tinfoil eyes.",
         answers: ["Quarks", "Quark"],
       },
       {
-        question: "Cursed toothbrush",
+        question: "Cursed toothbrush.",
         answers: ["Cybermat", "Cybermats"],
       },
       {
-        question: "Metal armour. Green, red, violent",
+        question: "Metal armour. Green, red, violent.",
         answers: ["Ice Warrior", "Ice Warriors"],
       },
       {
@@ -3221,67 +3221,67 @@ export const rounds: Round[] = [
         answers: ["The Judoon", "Judoon"],
       },
       {
-        question: "A fly from Star Wars",
+        question: "A fly from Star Wars.",
         answers: ["Tritovore"],
       },
       {
-        question: "Weird white baby monkey",
+        question: "Weird white baby monkey.",
         answers: ["Beep the Meep", "Beep", "The Meeps", "Meeps"],
       },
       {
-        question: "KILLER WORM",
+        question: "KILLER WORM.",
         answers: ["Giant maggot"],
       },
       {
-        question: "Red twiggy earth monster",
+        question: "Red twiggy earth monster.",
         answers: ["Axon", "Axons"],
       },
       {
-        question: "HAMMER TANK",
+        question: "HAMMER TANK.",
         answers: ["War machine"],
       },
       {
-        question: "Scorpion",
+        question: "Scorpion.",
         answers: ["Skithra"],
       },
       {
-        question: "Gary from Spongebob",
+        question: "Gary from Spongebob.",
         answers: ["The Morphoton Brain", "Morphoton"],
       },
       {
-        question: "Black cloaks",
-        answers: ["Remnant", "Remnants"],
+        question: "Black cloaks.",
+        answers: ["Remnant", "Remnants", "Carpet monsters"],
       },
       {
-        question: "Upside-down tin-can ice-cream cone",
+        question: "Upside-down tin-can ice-cream cone.",
         answers: ["Chumbleys", "Chumbley"],
       },
       {
-        question: "Gold-ish unhappy mad robot",
+        question: "Gold-ish unhappy mad robot.",
         answers: ["Omega"],
       },
       {
-        question: "Dog dinosaur in a cloak",
+        question: "Dog dinosaur in a cloak.",
         answers: ["Sutekh"],
       },
       {
-        question: "FISH TANK ALIEN BRAIN",
+        question: "FISH TANK ALIEN BRAIN.",
         answers: ["Morbius"],
       },
       {
-        question: "Garlic",
+        question: "Garlic.",
         answers: ["Adipose"],
       },
       {
-        question: "Grey zombie-head in a tuxedo",
+        question: "Grey zombie-head in a tuxedo.",
         answers: ["Silence", "The Silence"],
       },
       {
-        question: "Scary dinosaur worm",
+        question: "Scary dinosaur worm.",
         answers: ["Prisoner Zero"],
       },
       {
-        question: "Angry/sad robot",
+        question: "Angry/sad robot.",
         answers: ["Smiler", "Smilers"],
       },
       {
