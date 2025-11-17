@@ -37,7 +37,8 @@ const InstructionsModal: React.FC<modalProps> = ({ setModalOpen }) => {
           into order.
         </p>
         <p className={styles.sModalTxt}>
-          Any answers you don't get right can be shown at the end of the round.
+          Any answers you don&apos;t get right can be shown at the end of the
+          round.
         </p>
         <button className={styles.btn} onClick={() => setModalOpen(false)}>
           Close
