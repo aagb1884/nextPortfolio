@@ -273,11 +273,11 @@
   justify-content: space-evenly;
 }
 
-.navBtn {
+.navBtn,
+.resetBtn {
   max-width: 60px;
   max-height: 50px;
   border-radius: 5px;
-  background-color: aquamarine;
   width: auto;
   height: auto;
   display: flex;
@@ -286,10 +286,21 @@
   justify-content: center;
 }
 
-.navBtnTxt {
-  font-size: xx-small;
+.navBtn {
+  background-color: aquamarine;
+}
+.resetBtn {
+  background-color: coral;
+}
+
+.navBtnTxt,
+.reset {
   margin: 0 1px;
   margin-top: 2px;
+}
+
+.navBtnTxt {
+  font-size: xx-small;
 }
 
 .navBtnImg {

@@ -6,10 +6,11 @@ import NavBar from "../NavBar";
 
 type rndBtnProps = {
   roundButtons: roundBtn[] | undefined;
-  setRoundButtons: () => void;
+  setRoundButtons: (x: roundBtn[]) => void;
   setVisibleQuizzes: (x: any) => void;
   mobile: boolean;
   needButton: boolean;
+  filterRounds: (z: string) => void;
 };
 const RoundButtons = ({
   roundButtons,
@@ -17,7 +18,9 @@ const RoundButtons = ({
   setVisibleQuizzes,
   mobile,
   needButton,
+  filterRounds,
 }: rndBtnProps) => {
+  console.log("Rounds", roundButtons);
   const btnMap = roundButtons?.map((round) => {
     return (
       <div key={round.style} className={`styles.${round.style}`}>
@@ -43,6 +46,7 @@ const RoundButtons = ({
         mobile={mobile}
         roundButtons={roundButtons}
         setRoundButtons={setRoundButtons}
+        filterRounds={filterRounds}
       />
       <section className={styles.roundButtonsComponent}>{btnMap}</section>
       {mobile && needButton && (

@@ -26,8 +26,6 @@ export const useWindowDimensions = (): WindowDimentions => {
 
 // functions
 
-import { roundBtn } from "./round-btns";
-
 export const handleAudio = (set: (b: boolean) => void) => {
   setTimeout(() => {
     set(false);

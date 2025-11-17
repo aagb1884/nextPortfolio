@@ -102,6 +102,42 @@ const CreditsPage = () => {
         </li>
         <li>
           <Link
+            target="_blank"
+            href="https://icons8.com/icon/QqQ9t0fbQ4Yw/shuffle"
+          >
+            Shuffle <ExternalLinkImage />{" "}
+          </Link>{" "}
+          icon by{" "}
+          <Link target="_blank" href="https://icons8.com">
+            Icons8 <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            href="https://icons8.com/icon/iWO20ZvCeU53/audio"
+          >
+            Audio <ExternalLinkImage />{" "}
+          </Link>{" "}
+          icon by{" "}
+          <Link target="_blank" href="https://icons8.com">
+            Icons8 <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            href="https://icons8.com/icon/QcJO6lyhsxBi/image"
+          >
+            Image <ExternalLinkImage />{" "}
+          </Link>{" "}
+          icon by{" "}
+          <Link target="_blank" href="https://icons8.com">
+            Icons8 <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link
             href="https://www.flaticon.com/free-icons/external-link"
             title="external link icons"
           >
@@ -191,6 +227,25 @@ const CreditsPage = () => {
           >
             Creativity103 <ExternalLinkImage />
           </Link>
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            href="https://commons.wikimedia.org/wiki/File:Doctor_Who_logo_1963-1967path.svg"
+          >
+            Doctor Who logo 1963 - 1967 <ExternalLinkImage />.{" "}
+          </Link>{" "}
+          <Link
+            target="_blank"
+            href="https://de.wikipedia.org/wiki/Benutzer:JoKalliauer"
+          >
+            Johannes Kalliauer <ExternalLinkImage />
+          </Link>
+        </li>
+        <li>
+          <Link target="_blank" href="https://www.throup.org.uk/doctor_who.php">
+            Doctor Who logo 2005 <ExternalLinkImage />{" "}
+          </Link>{" "}
         </li>
       </ul>
       <ul className={styles.cssUl}>

@@ -27,6 +27,7 @@ export interface CyberRound {
   slug: string;
   copy?: string;
   hint?: string;
+  tags?: string[];
   questions: CyberQuestion[];
 }
 
@@ -35,6 +36,7 @@ export interface Round {
   slug: string;
   copy?: string;
   hint?: string;
+  tags?: string[];
   questions: Question[];
 }
 
@@ -894,6 +896,7 @@ export const rounds: Round[] = [
     name: "A Quiz of Necessity",
     slug: "episode-names",
     copy: "Going by official story names, can you name the serial in which each of these individual First Doctor episode titles belongs?",
+    tags: ["Classic"],
     questions: [
       { question: "The Rescue", answers: ["The Daleks"] },
       { question: "The Dead Planet", answers: ["The Daleks"] },
@@ -1119,6 +1122,7 @@ export const rounds: Round[] = [
     slug: "colin-cliffhanger",
     copy: "Simply tell us which story this Colin Baker Cliffhanger Face is from.",
     hint: "Remember: 'Time Lord' not 'Timelord'.",
+    tags: ["Classic", "Picture"],
     questions: [
       {
         question: "",
@@ -1285,6 +1289,7 @@ export const rounds: Round[] = [
     slug: "inhuman",
     copy: "Simply tell us which story the inanimate object in the picture is from.",
     hint: "Yes, spaceships count as inanimate objects.",
+    tags: ["Picture"],
     questions: [
       {
         question: "",
@@ -1656,6 +1661,7 @@ export const rounds: Round[] = [
     name: "Odd One Out",
     slug: "odd-one-out",
     copy: "Pick the correct answer from four options.",
+    tags: ["Multiple Choice"],
     questions: [
       {
         question: "Which of these authors have not written Doctor Who books?",
@@ -1972,6 +1978,7 @@ export const rounds: Round[] = [
     slug: "production-codes",
     copy: "Pick the correct answer from four options.",
     hint: "A production code is an alphanumberic designation used to uniquely identify episodes within a television series.",
+    tags: ["Multiple Choice"],
     questions: [
       {
         question: "What stories' production codes spell 'MARS'?",
@@ -2200,6 +2207,7 @@ export const rounds: Round[] = [
     name: "Intros Round - Pop",
     slug: "intros-pop",
     copy: "Click on the play button to hear 10 seconds of a song used in an episode of Doctor Who, then name the story it is from.",
+    tags: ["Music"],
     questions: [
       {
         question: "Which story does this song feature in?",
@@ -2331,6 +2339,7 @@ export const rounds: Round[] = [
     slug: "intros-incidental",
     copy: "Click on the play button to hear roughly 10 seconds of music composed for an episode of Doctor Who, then name the story it is from.",
     hint: "If you get that one: no, it's not an error.",
+    tags: ["Music"],
     questions: [
       {
         question: "Which story does this music feature in?",
@@ -2848,6 +2857,7 @@ export const rounds: Round[] = [
     slug: "taskmaster",
     copy: "Name the Taskmaster performer from the season in which they appeared and their first appearance in Doctor Who on TV.",
     hint: "All the information is on the task.",
+    tags: ["New Who"],
     questions: [
       {
         question: "Season 1 and The Husbands Of River Song",
@@ -2916,6 +2926,10 @@ export const rounds: Round[] = [
       {
         question: "Season 20 and Death In Heaven",
         answers: ["Sanjeev Bhaskar"],
+      },
+      {
+        question: "New Year Treat #5 and The Well",
+        answers: ["Rose Ayling-Ellis"],
       },
     ],
   },
@@ -3337,6 +3351,7 @@ export const LogicalRound: CyberRound = {
   slug: "logical",
   copy: "You will be given the name of a Cyberman story, and a breakdown of their plan in that story in random order.",
   hint: "Your job is to put their plan into the correct order. You have two minutes.",
+  tags: ["Sort"],
   questions: [
     {
       story: "The Wheel in Space",
