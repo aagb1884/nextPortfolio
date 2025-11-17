@@ -1971,6 +1971,18 @@ export const rounds: Round[] = [
         officialAnswer:
           "The Day of the Doctor does not feature any children being killed.",
       },
+      {
+        question: "Which story is the odd one out odd one out?",
+        options: [
+          "The Massacre",
+          "Black Orchid",
+          "The Androids of Tara",
+          "School Reunion",
+        ],
+        answers: ["School Reunion"],
+        officialAnswer:
+          "School Reunion does not involve doubles/doppelgangers.",
+      },
     ],
   },
   {
