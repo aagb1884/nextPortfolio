@@ -266,6 +266,48 @@
   width: 100%;
 }
 
+.navBar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.navBtn {
+  max-width: 60px;
+  max-height: 50px;
+  border-radius: 5px;
+  background-color: aquamarine;
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navBtnTxt {
+  font-size: xx-small;
+  margin: 0 1px;
+  margin-top: 2px;
+}
+
+.navBtnImg {
+  max-width: 49px;
+  width: 100%;
+}
+
+.navBtnImgSq {
+  width: auto;
+}
+
+.navBtnImg,
+.navBtnImgSq {
+  max-height: 30px;
+  height: auto;
+  margin: 4px;
+}
+
 .seeMore {
   display: flex;
   flex-direction: column;

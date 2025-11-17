@@ -40,6 +40,7 @@ const MainQuizPageContent = () => {
       {showCreditModal && <CreditsModal setModalOpen={setShowCreditModal} />}
       <RoundButtons
         roundButtons={roundButtons}
+        setRoundButtons={setRoundButtons}
         setVisibleQuizzes={setVisibleQuizzes}
         mobile={mobile}
         needButton={needButton}

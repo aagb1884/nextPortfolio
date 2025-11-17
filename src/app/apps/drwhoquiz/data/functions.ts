@@ -19,12 +19,14 @@ export const useWindowDimensions = (): WindowDimentions => {
     handleResize();
     window.addEventListener("resize", handleResize);
     return (): void => window.removeEventListener("resize", handleResize);
-  }, []); 
+  }, []);
 
   return windowDimensions;
 };
 
 // functions
+
+import { roundBtn } from "./round-btns";
 
 export const handleAudio = (set: (b: boolean) => void) => {
   setTimeout(() => {

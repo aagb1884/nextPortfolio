@@ -2,15 +2,18 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "@/app/styles/whoQuiz.module.css";
 import { roundBtn } from "../../data/round-btns";
+import NavBar from "../NavBar";
 
 type rndBtnProps = {
   roundButtons: roundBtn[] | undefined;
+  setRoundButtons: () => void;
   setVisibleQuizzes: (x: any) => void;
   mobile: boolean;
   needButton: boolean;
 };
 const RoundButtons = ({
   roundButtons,
+  setRoundButtons,
   setVisibleQuizzes,
   mobile,
   needButton,
@@ -36,6 +39,11 @@ const RoundButtons = ({
   });
   return (
     <div className={styles.seeMore}>
+      <NavBar
+        mobile={mobile}
+        roundButtons={roundButtons}
+        setRoundButtons={setRoundButtons}
+      />
       <section className={styles.roundButtonsComponent}>{btnMap}</section>
       {mobile && needButton && (
         <button
