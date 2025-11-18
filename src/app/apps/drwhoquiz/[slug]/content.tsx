@@ -297,7 +297,9 @@ const PageContent = ({ round, name }: PageContentProps) => {
                 Round Completed! You scored {roundScore}
               </p>
               <ShareButton setShowModal={setShowModal} showModal={showModal} />
-              <WrongButton setModalOpen={setAnswersModal} />
+              {wrongAnswers.length !== 0 && (
+                <WrongButton setModalOpen={setAnswersModal} />
+              )}
               <TryAgain reset={reset} />
             </div>
           )}

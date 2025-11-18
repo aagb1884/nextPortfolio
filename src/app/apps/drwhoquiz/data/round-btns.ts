@@ -65,6 +65,14 @@ export const roundBtns: roundBtn[] = [
     tags: [""],
   },
   {
+    style: "classic",
+    link: "classic",
+    src: "/images/drWhoQuiz/button_images/bw_vortex.jpg",
+    alt: "Classic Series round button",
+    text: '"The Classic Series"',
+    tags: ["Classic", ""],
+  },
+  {
     style: "wilderness",
     link: "wilderness",
     src: "/images/drWhoQuiz/button_images/wilderness.jpg",

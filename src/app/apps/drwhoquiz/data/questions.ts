@@ -60,6 +60,7 @@ export const rounds: Round[] = [
         question:
           "True or false: Spike Milligan lost the role of the Fourth Doctor because he wanted input into the scripts?",
         answers: ["False", "No"],
+        officialAnswer: "No, it was Michael Bentine.",
       },
       {
         question:
@@ -431,6 +432,146 @@ export const rounds: Round[] = [
         question:
           "In the book 'Alien Bodies', through which exit does the Doctor leave General Tchike's forty-sixth floor office?",
         answers: ["The window", "window"],
+      },
+    ],
+  },
+  {
+    name: 'The "Classic" Series',
+    slug: "classic",
+    copy: "Questions about Doctor Who from 1963 - 1989.",
+    questions: [
+      {
+        question:
+          "What is the job of the first person we ever see in the show?",
+        answers: ["Policeman", "Police Officer"],
+      },
+      {
+        question:
+          "What is the last word spoken in the original run of Doctor Who?",
+        answers: ["Do"],
+      },
+      {
+        question: "Which Doctor first said the word 'Gallifrey'?",
+        answers: ["Third", "3rd", "Pertwee", "Jon Pertwee"],
+      },
+      {
+        question: "True or false: the Doctor was friends with Chairman Mao?",
+        answers: ["True", "Yes", "Correct", "Hell yeah"],
+      },
+      {
+        question:
+          "How many series did Patrick Troughton, Peter Davison and Sylvester McCoy play the role for?",
+        answers: ["3", "Three"],
+      },
+      {
+        question:
+          "After the Daleks, who was the second returning villain in the show's history?",
+        answers: ["The Monk", "The Meddling Monk"],
+      },
+      {
+        question:
+          "Which Doctor Who Script Editor also contributed multiple scripts to Gerry Anderson shows such as 'Fireball XL5' and 'Stingray'?",
+        answers: ["Dennis Spooner"],
+      },
+      {
+        question: "Which story saw the introduction of UNIT?",
+        answers: ["The Invasion"],
+      },
+      {
+        question:
+          "What is the only story (so far) to not feature any of the regular cast?",
+        answers: ["Mission to the Unknown"],
+      },
+      {
+        question:
+          "Sylvester McCoy auditioned for the role opposite which former companion actor?",
+        answers: ["Janet Fielding"],
+      },
+      {
+        question:
+          "How many Doctor Who stories were broadcast between 1963 and 1989?",
+        answers: ["155", "One hundred and fifty-five"],
+      },
+      {
+        question: "Which story is set in Australia in 2018?",
+        answers: ["The Enemy of the World"],
+      },
+      {
+        question:
+          "'The Daemons' is one of three five-part stories. Name one of the others.",
+        answers: ["The Mind Robber", "The Dominators"],
+        officialAnswer: "The Dominators or The Mind Robber.",
+      },
+      {
+        question:
+          "Which Dalek operator also played a short-lived miner in 'The Green Death'?",
+        answers: ["John Scott Martin"],
+      },
+      {
+        question:
+          "Which story marks Michael Wisher's - the original Davros - final appearance in Doctor Who?",
+        answers: ["Planet of Evil"],
+      },
+      {
+        question:
+          "1976's 'The Masque of the Mandragora' was Louis Marks' last script for the series. In what year was his first one broadcast?",
+        answers: ["1964"],
+      },
+      {
+        question:
+          "The opening sequence of which story is intended as a homage to the film 'Death in Venice'?",
+        answers: ["The Leisure Hive"],
+      },
+      {
+        question:
+          "What is the - so far - only Doctor Who story to significantly feature the Barnet bypass?",
+        answers: ["Logopolis"],
+      },
+      {
+        question:
+          "Peter Grimwade both wrote and directed episodes of Doctor Who. Name one of the other two people to have done this.",
+        answers: ["Terence Dudley", "Barry Letts"],
+        officialAnswer: "Terence Dudley or Barry Letts",
+      },
+      {
+        question:
+          "In which of his three appearances in Doctor Who does Hugh Walters play someone who is not horribly murdered?",
+        answers: ["The Chase"],
+      },
+      {
+        question:
+          "When trapped on Earth between 'Resurrection of the Daleks' and 'Attack of the Cybermen', what did Lytton disguise himself as?",
+        answers: ["Policeman", "Police Officer"],
+      },
+      {
+        question:
+          "Name the hirsute Andromedan scoundrel who was caught up in the adventures of the Sixth and Seventh Doctors.",
+        answers: ["Sabalom Glitz", "Glitz"],
+      },
+      {
+        question:
+          "While Wales featured more regularly after the production moved to Cardiff, there were two stories set in Wales during the original run: 'The Green Death' and…?",
+        answers: ["Delta and the Bannermen"],
+      },
+      {
+        question:
+          "In 'Remembrance of the Daleks' and 'An Unearthly Child', Ace and Susan both pick up a school book called…what?",
+        answers: ["The French Revolution"],
+      },
+      {
+        question:
+          "'Remembrance of the Daleks' was the sixth Doctor Who credit for which actor?",
+        answers: ["Peter Halliday"],
+      },
+      {
+        question:
+          "'Battlefield' reunited Nicholas Courtney with an actor he'd worked with on his first Doctor Who appearance: who was it?",
+        answers: ["Jean Marsh"],
+      },
+      {
+        question:
+          "After Robert Holmes, who is the second most prolific writer from the original run of Doctor Who?",
+        answers: ["Terry Nation"],
       },
     ],
   },
