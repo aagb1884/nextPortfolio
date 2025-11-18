@@ -576,6 +576,12 @@ export const rounds: Round[] = [
     ],
   },
   {
+    name: "New Who",
+    slug: "nuwho",
+    copy: "Questions about Doctor Who from 2005 - Present Day",
+    questions: [],
+  },
+  {
     name: "They're good dogs",
     slug: "good-dogs",
     copy: "A round based on dogs and/or dog-like characters.",

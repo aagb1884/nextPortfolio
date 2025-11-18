@@ -81,6 +81,14 @@ export const roundBtns: roundBtn[] = [
     tags: [""],
   },
   {
+    style: "newwho",
+    link: "nuwho",
+    src: "/images/drWhoQuiz/button_images/cribbins.webp",
+    alt: "New Who round button",
+    text: "New Who",
+    tags: ["New Who", ""],
+  },
+  {
     style: "oddOneOut",
     link: "odd-one-out",
     src: "/images/drWhoQuiz/button_images/odd_one_out.jpg",
