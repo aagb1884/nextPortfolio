@@ -176,4 +176,11 @@ export const roundBtns: roundBtn[] = [
     text: "All hail King Hydroflax!",
     tags: ["New Who", ""],
   },
+  {
+    style: "children",
+    link: "children",
+    src: "/images/drWhoQuiz/button_images/timeless_child.webp",
+    alt: "Children Can Hear It Sometimes round button",
+    text: "Except children...",
+  },
 ];
