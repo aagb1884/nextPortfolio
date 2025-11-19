@@ -4,7 +4,8 @@ import { ClassicBtn } from "./buttons/ClassicBtn";
 import { NewWhoBtn } from "./buttons/NewWhoBtn";
 import { AudioRounds } from "./buttons/AudioBtn";
 import { PictureRounds } from "./buttons/ImageBtn";
-import { roundBtn } from "../data/round-btns";
+import { roundBtn, roundBtns } from "../data/round-btns";
+import { MultipleChoice } from "./buttons/MultipleChoice";
 
 type navBarProps = {
   mobile: boolean;
@@ -23,6 +24,7 @@ const NavBar = ({
     <div className={styles.navBar}>
       <AudioRounds mobile={mobile} filterRounds={filterRounds} />
       <PictureRounds mobile={mobile} filterRounds={filterRounds} />
+      <MultipleChoice mobile={mobile} filterRounds={filterRounds} />
       <Shuffle
         mobile={mobile}
         roundButtons={roundButtons}
@@ -33,7 +35,7 @@ const NavBar = ({
       <button
         className={styles.resetBtn}
         onClick={() => {
-          filterRounds("");
+          setRoundButtons(roundBtns);
         }}
       >
         <p className={styles.reset}>Reset</p>

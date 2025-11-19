@@ -30,7 +30,7 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/colin_cliffhanger.jpeg",
     alt: "The Cliffhanger Faces of Colin Baker round button",
     text: "Colin's Cliffhanger Faces",
-    tags: ["Classic", "Picture", ""],
+    tags: ["Classic", "Picture"],
   },
   {
     style: "introsPop",
@@ -38,7 +38,7 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/tainted_love.gif",
     alt: "Pop Intros round button",
     text: "Intros - Pop",
-    tags: ["Music", ""],
+    tags: ["Music"],
   },
   {
     style: "general",
@@ -70,7 +70,7 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/bw_vortex.jpg",
     alt: "Classic Series round button",
     text: '"The Classic Series"',
-    tags: ["Classic", ""],
+    tags: ["Classic"],
   },
   {
     style: "wilderness",
@@ -86,7 +86,7 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/cribbins.webp",
     alt: "New Who round button",
     text: "New Who",
-    tags: ["New Who", ""],
+    tags: ["New Who"],
   },
   {
     style: "oddOneOut",
@@ -94,7 +94,7 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/odd_one_out.jpg",
     alt: "Odd One Out round button",
     text: "Odd One Out",
-    tags: ["Multiple Choice", ""],
+    tags: ["Multiple Choice"],
   },
   {
     style: "goodDogs",
@@ -110,7 +110,7 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/theyre_inhuman.png",
     alt: "Inhuman round button",
     text: "They're Inhuman",
-    tags: ["Picture", ""],
+    tags: ["Picture"],
   },
   {
     style: "necessity",
@@ -118,7 +118,7 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/quiz_of_necessity.jpeg",
     alt: "Episode Names round button",
     text: "",
-    tags: ["Classic", ""],
+    tags: ["Classic"],
   },
   {
     style: "wheel",
@@ -126,7 +126,7 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/wheel_in_space.jpg",
     alt: "Cyberman Plans round button",
     text: "You Know. Our Ways.",
-    tags: ["Sort", ""],
+    tags: ["Sort"],
   },
   {
     style: "productionCodes",
@@ -134,7 +134,7 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/production_codes.png",
     alt: "Production Codes round button",
     text: "Seize the Codes of Production",
-    tags: ["Multiple Choice", ""],
+    tags: ["Multiple Choice"],
   },
   {
     style: "introsIncidental",
@@ -142,7 +142,7 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/incidental_music.jpeg",
     alt: "Incidental Intros round button",
     text: "Intros - Incidental Music",
-    tags: ["Music", ""],
+    tags: ["Music"],
   },
   {
     style: "playedThemselves",
@@ -174,7 +174,7 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/hydroflax.jpeg",
     alt: "Taskmster round button",
     text: "All hail King Hydroflax!",
-    tags: ["New Who", ""],
+    tags: ["New Who"],
   },
   {
     style: "children",
@@ -182,5 +182,6 @@ export const roundBtns: roundBtn[] = [
     src: "/images/drWhoQuiz/button_images/timeless_child.webp",
     alt: "Children Can Hear It Sometimes round button",
     text: "Except children...",
+    tags: [""]
   },
 ];

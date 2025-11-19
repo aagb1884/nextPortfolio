@@ -295,8 +295,9 @@
 
 .navBtnTxt,
 .reset {
-  margin: 0 2px;
+  margin: 0 1px;
   margin-top: 2px;
+  color: black;
 }
 
 .navBtnTxt {
@@ -316,7 +317,7 @@
 .navBtnImgSq {
   max-height: 30px;
   height: auto;
-  margin: 4px;
+  margin: 1px;
 }
 
 .seeMore {

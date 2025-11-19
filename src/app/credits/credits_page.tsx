@@ -127,6 +127,18 @@ const CreditsPage = () => {
         <li>
           <Link
             target="_blank"
+            href="https://icons8.com/icon/83271/multiple-choice"
+          >
+            Multiple Choice <ExternalLinkImage />{" "}
+          </Link>{" "}
+          icon by{" "}
+          <Link target="_blank" href="https://icons8.com">
+            Icons8 <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link
+            target="_blank"
             href="https://icons8.com/icon/QcJO6lyhsxBi/image"
           >
             Image <ExternalLinkImage />{" "}
