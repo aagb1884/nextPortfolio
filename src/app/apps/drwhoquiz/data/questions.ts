@@ -579,7 +579,105 @@ export const rounds: Round[] = [
     name: "New Who",
     slug: "nuwho",
     copy: "Questions about Doctor Who from 2005 - Present Day",
-    questions: [],
+    questions: [
+      {
+        question:
+          "The mystery woman in 'The End of Time', intended to be the Doctor's mother, was played by which actress?",
+        answers: ["Claire Bloom"],
+      },
+      {
+        question:
+          "Which stadium in Cardiff has been a recurring filming location for the show since 2005? ",
+        answers: ["The Millennium Stadium", "Millennium Stadium"],
+      },
+      {
+        question:
+          "True or false: Brian Hayles, the creator of the Ice Warriors, has written more individual episodes of Doctor Who than Chris Chibnall?",
+        answers: ["True", "Yes", "Correct"],
+      },
+      {
+        question:
+          "What alien race is named after a restaurant where the Series 1 writers ate together?",
+        answers: ["The Chula", "Chula"],
+      },
+      {
+        question:
+          "From what location is John Lumic sceptical that Dr Kendrick will be able to contact Geneva?",
+        answers: ["From beyond the grave", "Beyond the grave"],
+      },
+      {
+        question:
+          "'The Impossible Planet/The Satan Pit' used sound effects also heard in which popular computer game?",
+        answers: ["Doom"],
+      },
+      {
+        question: "'Gridlock' revisited which location first seen in Series 2?",
+        answers: ["New Earth", "New New York"],
+        officialAnswer: "New Earth and New New York",
+      },
+      {
+        question:
+          "Complete the Cult of Skaro: Dalek Sec, Dalek Caan, Dalek Jast, Dalek …?",
+        answers: ["Thay"],
+      },
+      {
+        question:
+          "Counting two-parters as single stories, how many stories did Cult of Skaro members appear in?",
+        answers: ["3", "Three"],
+      },
+      {
+        question:
+          "'Blink' is based on a Steve Moffat short story that appeared in what publication?",
+        answers: [
+          "The Doctor Who Annual 2006",
+          "Doctor Who Annual",
+          "2006 Doctor Who annual",
+        ],
+      },
+      {
+        question:
+          "'42' was so-called based on the work of Douglas Adams and which then-contemporary real-time American drama?",
+        answers: ["24"],
+      },
+      {
+        question: "What is the name of the damaged spaceship in '42'?",
+        answers: ["SS Penhallion", "Penhallion"],
+      },
+      {
+        question:
+          "'Fear Her' was brought into production when a script about the Green Knight myth fell through. Which actor/comedian/presenter wrote the latter?",
+        answers: ["Stephen Fry"],
+      },
+      {
+        question:
+          "What mode of transport is still popular on the alternate Earth of 'Rise of the Cybermen'? ",
+        answers: ["Zeppelin"],
+      },
+      {
+        question:
+          "The role of Creet in 'Utopia' was cast via a competition on which Children's BBC show?",
+        answers: ["Blue Peter"],
+      },
+      {
+        question:
+          "Russell T. Davies commented that he would do the final draft on most scripts, apart from Steven Moffat's, Chris Chibnall's, Matthew Graham's, and who else's?",
+        answers: ["Stephen Greenhorn"],
+      },
+      {
+        question:
+          "Stephen Greenhorn, writer of 'The Lazarus Experiment' and 'The Doctor's Daughter', wrote a musical featuring the music of which - David Tennant endorsed - band?",
+        answers: ["The Proclaimers"],
+      },
+      {
+        question:
+          "What language does the stallholder in Pompeii think Donna is speaking?",
+        answers: ["Welsh"],
+      },
+      {
+        question: "Bannakafalatta what?",
+        answers: ["Cyborg", "Stop", "Proud"],
+      },
+    ],
   },
   {
     name: "They're good dogs",
