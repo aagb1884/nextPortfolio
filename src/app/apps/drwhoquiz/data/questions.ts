@@ -677,6 +677,49 @@ export const rounds: Round[] = [
         question: "Bannakafalatta what?",
         answers: ["Cyborg", "Stop", "Proud"],
       },
+      {
+        question: "How many planets are missing in the Medusa Cascade?",
+        answers: ["27"],
+      },
+      {
+        question:
+          "What organisation do we finally meet on screen in 'The Stolen Earth'?",
+        answers: ["The Shadow Proclamation", "Shadow Proclamation"],
+      },
+      {
+        question:
+          "'Voyage of the Damned' has the highest viewing figures for a Doctor Who story since the show returned in 2005. Which story has the second highest?",
+        answers: ["The Next Doctor", "Next Doctor"],
+      },
+      {
+        question:
+          "Which story features the Master shooting Rassilon with lasers from his hands?",
+        answers: ["The End of Time", "End of Time"],
+      },
+      {
+        question:
+          "Name a foodstuff rejected by the Doctor before he settles on fish fingers and custard.",
+        answers: [
+          "Apple",
+          "Yoghurt",
+          "Bacon",
+          "Beans",
+          "Bread and butter",
+          "Carrots",
+        ],
+        officialAnswer:
+          "Apple, yoghurt, bacon, beans, bread and butter, or carrots",
+      },
+      {
+        question:
+          "What name is given to the Daleks by Bracewell, their ersatz creator?",
+        answers: ["Ironsides"],
+      },
+      {
+        question:
+          "The director of three Series 5 episodes shares his name with which 18th Century Scottish economist?",
+        answers: ["Adam Smith"],
+      },
     ],
   },
   {
