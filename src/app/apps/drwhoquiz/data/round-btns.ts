@@ -137,6 +137,14 @@ export const roundBtns: roundBtn[] = [
     tags: ["Multiple Choice"],
   },
   {
+    style: "easy",
+    link: "easy",
+    src: "/images/drWhoQuiz/button_images/easy.png",
+    alt: "Easy round button",
+    text: "Easy as Pie",
+    tags: [""],
+  },
+  {
     style: "introsIncidental",
     link: "intros-incidental",
     src: "/images/drWhoQuiz/button_images/incidental_music.jpeg",

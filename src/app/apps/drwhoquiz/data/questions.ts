@@ -720,6 +720,208 @@ export const rounds: Round[] = [
           "The director of three Series 5 episodes shares his name with which 18th Century Scottish economist?",
         answers: ["Adam Smith"],
       },
+      {
+        question:
+          "What medium was an earlier version of 'The Lodger' published in?",
+        answers: ["Comic", "Comics"],
+      },
+      {
+        question:
+          "What American state was part of 'The Impossible Astronaut/Day of the Moon' filmed in?",
+        answers: ["Utah"],
+      },
+      {
+        question:
+          "Which Series 6 story shares its name with a 1998 Semisonic hit single?",
+        answers: ["Closing Time"],
+      },
+      {
+        question:
+          "In 'The Rebel Flesh' what sport are Amy and Rory playing while listening to Muse?",
+        answers: ["Darts"],
+      },
+      {
+        question:
+          "What is the name of the pyramid base in 'The Wedding of River Song'?",
+        answers: ["Area 52"],
+      },
+      {
+        question: "What is the name of the Ice Warrior in 'Cold War'?",
+        answers: ["Skaldak"],
+      },
+      {
+        question:
+          "What building does the Doctor drive a motorbike up the side of?",
+        answers: ["The Shard"],
+      },
+      {
+        question: "What family is Clara working for as a nanny in Series 7?",
+        answers: ["The Maitlands", "Maitlands"],
+      },
+      {
+        question: "What city does Strax visit on his weekends off?",
+        answers: ["Glasgow"],
+      },
+      {
+        question:
+          "What material is the Cyberman that attacks the Doctor on Trenzalore made out of?",
+        answers: ["Wood"],
+      },
+      {
+        question: "What does the Doctor steal in 'Listen'?",
+        answers: ["Coffee", "Mug of coffee", "Cup of coffee"],
+      },
+      {
+        question: "Where is the 3W Institute based?",
+        answers: ["St Paul's Cathedral"],
+      },
+      {
+        question:
+          "According to the Doctor, the existence of which movie explains why people keep invading Earth?",
+        answers: ["Alien"],
+      },
+      {
+        question:
+          "The roar for the Fisher King was provided by the singer of which band?",
+        answers: ["Slipknot"],
+      },
+      {
+        question:
+          "Which antagonists appear across the Christmas specials 'The Husbands of River Song' and 'The Return of Doctor Mysterio'?",
+        answers: ["Harmony Shoal"],
+      },
+      {
+        question:
+          "In Series 10 the Doctor is working as a university lecturer in which city?",
+        answers: ["Bristol"],
+      },
+      {
+        question: "What is The Tsuranga?",
+        answers: ["A hospital ship", "Hospital ship", "Hospital", "Spaceship"],
+      },
+      {
+        question: "Dan Lewis lives near which football stadium?",
+        answers: ["Anfield"],
+      },
+      {
+        question:
+          "How many Doctor Who stories have the Weeping Angels appeared in, including cameos?",
+        answers: ["12"],
+      },
+      {
+        question:
+          "Which creature features in both 'Love & Monsters' and the Pandorica Alliance? ",
+        answers: ["The Hoix", "Hoix"],
+      },
+    ],
+  },
+  {
+    name: "Easy as Pie",
+    slug: "easy",
+    copy: "Questions about Doctor Who that I hope are fairly easy.",
+    questions: [
+      {
+        question: "What landmark is the Nestene base beneath in 'Rose'? ",
+        answers: ["The London Eye", "London Eye"],
+      },
+      {
+        question: "What organisation had John Lumic as CEO?",
+        answers: ["Cybus Industries"],
+      },
+      {
+        question:
+          "Where did the Doctor say goodbye to Rose Tyler in 'Journey's End'?",
+        answers: ["Bad Wolf Bay"],
+      },
+      {
+        question: "Who knocked four times?",
+        answers: ["Wilfred Mott", "Wilf"],
+      },
+      {
+        question: "The bulk of which story takes place in Bowie Base One?",
+        answers: ["The Waters of Mars", "Waters of Mars"],
+      },
+      {
+        question: "What are Jenny, Vastra and Strax collectively known as?",
+        answers: ["The Paternoster Gang", "Paternoster Gang"],
+      },
+      {
+        question: "Where in London did Rose and Jackie Tyler live?",
+        answers: ["The Powell Estate", "Powell Estate"],
+      },
+      {
+        question: "What village did Amy and Rory grow up in?",
+        answers: ["Leadworth"],
+      },
+      {
+        question: "What are you advised not to do on meeting a Weeping Angel?",
+        answers: ["Blink"],
+      },
+      {
+        question: "What are the 13th Doctor's first words?",
+        answers: ["Oh brilliant"],
+      },
+      {
+        question: "What are the 10th Doctor's last words?",
+        answers: ["I don't want to go"],
+      },
+      {
+        question: "What does the 12th Doctor not like about his kidneys?",
+        answers: ["The colour", "Colour"],
+      },
+      {
+        question:
+          "What does the 10th Doctor have cut off by the Sycorax leader?",
+        answers: ["His hand", "Hand", "Not that"],
+      },
+      {
+        question:
+          "What name did the Master use when he entered British politics?",
+        answers: ["Harold Saxon", "Mr Saxon"],
+      },
+      {
+        question: "In what conflict did the Doctor and Rose meet Captain Jack?",
+        answers: ["World War Two", "World War 2", "Second World War"],
+      },
+      {
+        question: "Which Doctor fought in the Time War?",
+        answers: ["The War Doctor", "War Doctor"],
+      },
+      {
+        question:
+          "Which organisation was founded by Queen Victoria in response to the Doctor and Rose's actions?",
+        answers: [
+          "The Torchwood Institute",
+          "Torchwood Institute",
+          "Torchwood",
+        ],
+      },
+      {
+        question: "What street did Sarah Jane Smith live on?",
+        answers: ["Bannerman Road"],
+      },
+      {
+        question:
+          "In their very first appearance, what opponent did UNIT successfully fight?",
+        answers: ["The Cybermen", "Cybermen"],
+      },
+      {
+        question: "Which Doctor wore cricketing clothes?",
+        answers: ["The Fifth", "Fifth", "5th"],
+      },
+      {
+        question:
+          "Which recurring villain first appeared on the show kidnapping a circus in order to burgle a museum?",
+        answers: ["The Master"],
+      },
+      {
+        question: "Which UNIT Scientist worked alongside her Zygon duplicate?",
+        answers: ["Petronella Osgood", "Osgood"],
+      },
+      {
+        question: "Which actor has played the Doctor in the most series?",
+        answers: ["Tom Baker"],
+      },
     ],
   },
   {
