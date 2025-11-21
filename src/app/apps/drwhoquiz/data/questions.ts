@@ -3482,8 +3482,8 @@ export const rounds: Round[] = [
           "Name a story that was to be loosely adapted as part of John Leekley's Series Bible for Amblin television.",
         answers: [
           "The Smugglers",
-          "The Talons of Weng-Chieng",
-          "Talons of Weng-Chieng",
+          "The Talons of Weng-Chiang",
+          "Talons of Weng-Chiang",
           "Earthshock",
           "Horror of Fang Rock",
           "The Celestial Toymaker",
@@ -3497,7 +3497,7 @@ export const rounds: Round[] = [
           "Abominable Snowmen",
         ],
         officialAnswer:
-          "The Smugglers, The Talons of Weng-Chieng, Earthshock, Horror of Fang Rock, The Celestial Toymaker, The Gunfighters, Tomb of the Cybermen, The Ark in Space or The Abominable Snowmen.",
+          "The Smugglers, The Talons of Weng-Chiang, Earthshock, Horror of Fang Rock, The Celestial Toymaker, The Gunfighters, Tomb of the Cybermen, The Ark in Space or The Abominable Snowmen.",
       },
       {
         question:
