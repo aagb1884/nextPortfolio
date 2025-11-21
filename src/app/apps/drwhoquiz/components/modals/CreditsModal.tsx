@@ -42,6 +42,25 @@ const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
         <p className={styles.sModalTxt}>
           All information probably correct as of November 2025.
         </p>
+        <ul>
+          Sources:
+          <li>
+            <Link href="https://tardis.fandom.com/">TARDIS Fandom</Link>
+          </li>
+          <li>
+            <Link href="https://tardis.wiki/wiki/Doctor_Who_Wiki">
+              TARDIS Wiki
+            </Link>
+          </li>
+          <li>
+            <Link href="http://www.chakoteya.net/DoctorWho/">
+              chakoteya.net Transcripts
+            </Link>
+          </li>
+          <li>
+            <Link href="http://www.shannonsullivan.com/doctorwho/">A Brief History of Time Travel</Link>
+          </li>
+        </ul>
         <button className={styles.btn} onClick={() => setModalOpen(false)}>
           Close
         </button>
