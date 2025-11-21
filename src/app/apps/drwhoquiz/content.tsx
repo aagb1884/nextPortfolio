@@ -28,6 +28,15 @@ const MainQuizPageContent = () => {
     }
   }, [width, visibleQuizzes]);
 
+  const filterRounds = (x: string) => {
+    if (roundButtons !== undefined) {
+      const filtered: roundBtn[] = roundBtns?.filter((round) =>
+        round.tags?.includes(x)
+      );
+      setRoundButtons(filtered);
+    }
+  };
+
   return (
     <div className={styles.drWhoQuizLanding}>
       <Header
@@ -40,9 +49,11 @@ const MainQuizPageContent = () => {
       {showCreditModal && <CreditsModal setModalOpen={setShowCreditModal} />}
       <RoundButtons
         roundButtons={roundButtons}
+        setRoundButtons={setRoundButtons}
         setVisibleQuizzes={setVisibleQuizzes}
         mobile={mobile}
         needButton={needButton}
+        filterRounds={filterRounds}
       />
     </div>
   );

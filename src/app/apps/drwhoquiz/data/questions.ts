@@ -27,6 +27,7 @@ export interface CyberRound {
   slug: string;
   copy?: string;
   hint?: string;
+  tags?: string[];
   questions: CyberQuestion[];
 }
 
@@ -35,6 +36,7 @@ export interface Round {
   slug: string;
   copy?: string;
   hint?: string;
+  tags?: string[];
   questions: Question[];
 }
 
@@ -58,6 +60,7 @@ export const rounds: Round[] = [
         question:
           "True or false: Spike Milligan lost the role of the Fourth Doctor because he wanted input into the scripts?",
         answers: ["False", "No"],
+        officialAnswer: "No, it was Michael Bentine.",
       },
       {
         question:
@@ -429,6 +432,525 @@ export const rounds: Round[] = [
         question:
           "In the book 'Alien Bodies', through which exit does the Doctor leave General Tchike's forty-sixth floor office?",
         answers: ["The window", "window"],
+      },
+    ],
+  },
+  {
+    name: 'The "Classic" Series',
+    slug: "classic",
+    copy: "Questions about Doctor Who from 1963 - 1989.",
+    questions: [
+      {
+        question:
+          "What is the job of the first person we ever see in the show?",
+        answers: ["Policeman", "Police Officer"],
+      },
+      {
+        question:
+          "What is the last word spoken in the original run of Doctor Who?",
+        answers: ["Do"],
+      },
+      {
+        question: "Which Doctor first said the word 'Gallifrey'?",
+        answers: ["Third", "3rd", "Pertwee", "Jon Pertwee"],
+      },
+      {
+        question: "True or false: the Doctor was friends with Chairman Mao?",
+        answers: ["True", "Yes", "Correct", "Hell yeah"],
+      },
+      {
+        question:
+          "How many series did Patrick Troughton, Peter Davison and Sylvester McCoy play the role for?",
+        answers: ["3", "Three"],
+      },
+      {
+        question:
+          "After the Daleks, who was the second returning villain in the show's history?",
+        answers: ["The Monk", "The Meddling Monk"],
+      },
+      {
+        question:
+          "Which Doctor Who Script Editor also contributed multiple scripts to Gerry Anderson shows such as 'Fireball XL5' and 'Stingray'?",
+        answers: ["Dennis Spooner"],
+      },
+      {
+        question: "Which story saw the introduction of UNIT?",
+        answers: ["The Invasion"],
+      },
+      {
+        question:
+          "What is the only story (so far) to not feature any of the regular cast?",
+        answers: ["Mission to the Unknown"],
+      },
+      {
+        question:
+          "Sylvester McCoy auditioned for the role opposite which former companion actor?",
+        answers: ["Janet Fielding"],
+      },
+      {
+        question:
+          "How many Doctor Who stories were broadcast between 1963 and 1989?",
+        answers: ["155", "One hundred and fifty-five"],
+      },
+      {
+        question: "Which story is set in Australia in 2018?",
+        answers: ["The Enemy of the World"],
+      },
+      {
+        question:
+          "'The Daemons' is one of three five-part stories. Name one of the others.",
+        answers: ["The Mind Robber", "The Dominators"],
+        officialAnswer: "The Dominators or The Mind Robber.",
+      },
+      {
+        question:
+          "Which Dalek operator also played a short-lived miner in 'The Green Death'?",
+        answers: ["John Scott Martin"],
+      },
+      {
+        question:
+          "Which story marks Michael Wisher's - the original Davros - final appearance in Doctor Who?",
+        answers: ["Planet of Evil"],
+      },
+      {
+        question:
+          "1976's 'The Masque of the Mandragora' was Louis Marks' last script for the series. In what year was his first one broadcast?",
+        answers: ["1964"],
+      },
+      {
+        question:
+          "The opening sequence of which story is intended as a homage to the film 'Death in Venice'?",
+        answers: ["The Leisure Hive"],
+      },
+      {
+        question:
+          "What is the - so far - only Doctor Who story to significantly feature the Barnet bypass?",
+        answers: ["Logopolis"],
+      },
+      {
+        question:
+          "Peter Grimwade both wrote and directed episodes of Doctor Who. Name one of the other two people to have done this.",
+        answers: ["Terence Dudley", "Barry Letts"],
+        officialAnswer: "Terence Dudley or Barry Letts",
+      },
+      {
+        question:
+          "In which of his three appearances in Doctor Who does Hugh Walters play someone who is not horribly murdered?",
+        answers: ["The Chase"],
+      },
+      {
+        question:
+          "When trapped on Earth between 'Resurrection of the Daleks' and 'Attack of the Cybermen', what did Lytton disguise himself as?",
+        answers: ["Policeman", "Police Officer"],
+      },
+      {
+        question:
+          "Name the hirsute Andromedan scoundrel who was caught up in the adventures of the Sixth and Seventh Doctors.",
+        answers: ["Sabalom Glitz", "Glitz"],
+      },
+      {
+        question:
+          "While Wales featured more regularly after the production moved to Cardiff, there were two stories set in Wales during the original run: 'The Green Death' and…?",
+        answers: ["Delta and the Bannermen"],
+      },
+      {
+        question:
+          "In 'Remembrance of the Daleks' and 'An Unearthly Child', Ace and Susan both pick up a school book called…what?",
+        answers: ["The French Revolution"],
+      },
+      {
+        question:
+          "'Remembrance of the Daleks' was the sixth Doctor Who credit for which actor?",
+        answers: ["Peter Halliday"],
+      },
+      {
+        question:
+          "'Battlefield' reunited Nicholas Courtney with an actor he'd worked with on his first Doctor Who appearance: who was it?",
+        answers: ["Jean Marsh"],
+      },
+      {
+        question:
+          "After Robert Holmes, who is the second most prolific writer from the original run of Doctor Who?",
+        answers: ["Terry Nation"],
+      },
+    ],
+  },
+  {
+    name: "New Who",
+    slug: "nuwho",
+    copy: "Questions about Doctor Who from 2005 - Present Day",
+    questions: [
+      {
+        question:
+          "The mystery woman in 'The End of Time', intended to be the Doctor's mother, was played by which actress?",
+        answers: ["Claire Bloom"],
+      },
+      {
+        question:
+          "Which stadium in Cardiff has been a recurring filming location for the show since 2005? ",
+        answers: ["The Millennium Stadium", "Millennium Stadium"],
+      },
+      {
+        question:
+          "True or false: Brian Hayles, the creator of the Ice Warriors, has written more individual episodes of Doctor Who than Chris Chibnall?",
+        answers: ["True", "Yes", "Correct"],
+      },
+      {
+        question:
+          "What alien race is named after a restaurant where the Series 1 writers ate together?",
+        answers: ["The Chula", "Chula"],
+      },
+      {
+        question:
+          "From what location is John Lumic sceptical that Dr Kendrick will be able to contact Geneva?",
+        answers: ["From beyond the grave", "Beyond the grave"],
+      },
+      {
+        question:
+          "'The Impossible Planet/The Satan Pit' used sound effects also heard in which popular computer game?",
+        answers: ["Doom"],
+      },
+      {
+        question: "'Gridlock' revisited which location first seen in Series 2?",
+        answers: ["New Earth", "New New York"],
+        officialAnswer: "New Earth and New New York",
+      },
+      {
+        question:
+          "Complete the Cult of Skaro: Dalek Sec, Dalek Caan, Dalek Jast, Dalek …?",
+        answers: ["Thay"],
+      },
+      {
+        question:
+          "Counting two-parters as single stories, how many stories did Cult of Skaro members appear in?",
+        answers: ["3", "Three"],
+      },
+      {
+        question:
+          "'Blink' is based on a Steve Moffat short story that appeared in what publication?",
+        answers: [
+          "The Doctor Who Annual 2006",
+          "Doctor Who Annual",
+          "2006 Doctor Who annual",
+        ],
+      },
+      {
+        question:
+          "'42' was so-called based on the work of Douglas Adams and which then-contemporary real-time American drama?",
+        answers: ["24"],
+      },
+      {
+        question: "What is the name of the damaged spaceship in '42'?",
+        answers: ["SS Penhallion", "Penhallion"],
+      },
+      {
+        question:
+          "'Fear Her' was brought into production when a script about the Green Knight myth fell through. Which actor/comedian/presenter wrote the latter?",
+        answers: ["Stephen Fry"],
+      },
+      {
+        question:
+          "What mode of transport is still popular on the alternate Earth of 'Rise of the Cybermen'? ",
+        answers: ["Zeppelin"],
+      },
+      {
+        question:
+          "The role of Creet in 'Utopia' was cast via a competition on which Children's BBC show?",
+        answers: ["Blue Peter"],
+      },
+      {
+        question:
+          "Russell T. Davies commented that he would do the final draft on most scripts, apart from Steven Moffat's, Chris Chibnall's, Matthew Graham's, and who else's?",
+        answers: ["Stephen Greenhorn"],
+      },
+      {
+        question:
+          "Stephen Greenhorn, writer of 'The Lazarus Experiment' and 'The Doctor's Daughter', wrote a musical featuring the music of which - David Tennant endorsed - band?",
+        answers: ["The Proclaimers"],
+      },
+      {
+        question:
+          "What language does the stallholder in Pompeii think Donna is speaking?",
+        answers: ["Welsh"],
+      },
+      {
+        question: "Bannakafalatta what?",
+        answers: ["Cyborg", "Stop", "Proud"],
+      },
+      {
+        question: "How many planets are missing in the Medusa Cascade?",
+        answers: ["27"],
+      },
+      {
+        question:
+          "What organisation do we finally meet on screen in 'The Stolen Earth'?",
+        answers: ["The Shadow Proclamation", "Shadow Proclamation"],
+      },
+      {
+        question:
+          "'Voyage of the Damned' has the highest viewing figures for a Doctor Who story since the show returned in 2005. Which story has the second highest?",
+        answers: ["The Next Doctor", "Next Doctor"],
+      },
+      {
+        question:
+          "Which story features the Master shooting Rassilon with lasers from his hands?",
+        answers: ["The End of Time", "End of Time"],
+      },
+      {
+        question:
+          "Name a foodstuff rejected by the Doctor before he settles on fish fingers and custard.",
+        answers: [
+          "Apple",
+          "Yoghurt",
+          "Bacon",
+          "Beans",
+          "Bread and butter",
+          "Carrots",
+        ],
+        officialAnswer:
+          "Apple, yoghurt, bacon, beans, bread and butter, or carrots",
+      },
+      {
+        question:
+          "What name is given to the Daleks by Bracewell, their ersatz creator?",
+        answers: ["Ironsides"],
+      },
+      {
+        question:
+          "The director of three Series 5 episodes shares his name with which 18th Century Scottish economist?",
+        answers: ["Adam Smith"],
+      },
+      {
+        question:
+          "What medium was an earlier version of 'The Lodger' published in?",
+        answers: ["Comic", "Comics"],
+      },
+      {
+        question:
+          "What American state was part of 'The Impossible Astronaut/Day of the Moon' filmed in?",
+        answers: ["Utah"],
+      },
+      {
+        question:
+          "Which Series 6 story shares its name with a 1998 Semisonic hit single?",
+        answers: ["Closing Time"],
+      },
+      {
+        question:
+          "In 'The Rebel Flesh' what sport are Amy and Rory playing while listening to Muse?",
+        answers: ["Darts"],
+      },
+      {
+        question:
+          "What is the name of the pyramid base in 'The Wedding of River Song'?",
+        answers: ["Area 52"],
+      },
+      {
+        question: "What is the name of the Ice Warrior in 'Cold War'?",
+        answers: ["Skaldak"],
+      },
+      {
+        question:
+          "What building does the Doctor drive a motorbike up the side of?",
+        answers: ["The Shard"],
+      },
+      {
+        question: "What family is Clara working for as a nanny in Series 7?",
+        answers: ["The Maitlands", "Maitlands"],
+      },
+      {
+        question: "What city does Strax visit on his weekends off?",
+        answers: ["Glasgow"],
+      },
+      {
+        question:
+          "What material is the Cyberman that attacks the Doctor on Trenzalore made out of?",
+        answers: ["Wood"],
+      },
+      {
+        question: "What does the Doctor steal in 'Listen'?",
+        answers: ["Coffee", "Mug of coffee", "Cup of coffee"],
+      },
+      {
+        question: "Where is the 3W Institute based?",
+        answers: ["St Paul's Cathedral"],
+      },
+      {
+        question:
+          "According to the Doctor, the existence of which movie explains why people keep invading Earth?",
+        answers: ["Alien"],
+      },
+      {
+        question:
+          "The roar for the Fisher King was provided by the singer of which band?",
+        answers: ["Slipknot"],
+      },
+      {
+        question:
+          "Which antagonists appear across the Christmas specials 'The Husbands of River Song' and 'The Return of Doctor Mysterio'?",
+        answers: ["Harmony Shoal"],
+      },
+      {
+        question:
+          "In Series 10 the Doctor is working as a university lecturer in which city?",
+        answers: ["Bristol"],
+      },
+      {
+        question: "What is The Tsuranga?",
+        answers: ["A hospital ship", "Hospital ship", "Hospital", "Spaceship"],
+      },
+      {
+        question: "Dan Lewis lives near which football stadium?",
+        answers: ["Anfield"],
+      },
+      {
+        question:
+          "How many Doctor Who stories have the Weeping Angels appeared in, including cameos?",
+        answers: ["12"],
+      },
+      {
+        question:
+          "Which creature features in both 'Love & Monsters' and the Pandorica Alliance? ",
+        answers: ["The Hoix", "Hoix"],
+      },
+    ],
+  },
+  {
+    name: "Easy as Pie",
+    slug: "easy",
+    copy: "Questions about Doctor Who that I hope are fairly easy.",
+    questions: [
+      {
+        question: "What landmark is the Nestene base beneath in 'Rose'? ",
+        answers: ["The London Eye", "London Eye"],
+      },
+      {
+        question: "What organisation had John Lumic as CEO?",
+        answers: ["Cybus Industries"],
+      },
+      {
+        question:
+          "Where did the Doctor say goodbye to Rose Tyler in 'Journey's End'?",
+        answers: ["Bad Wolf Bay"],
+      },
+      {
+        question: "Who knocked four times?",
+        answers: ["Wilfred Mott", "Wilf"],
+      },
+      {
+        question: "The bulk of which story takes place in Bowie Base One?",
+        answers: ["The Waters of Mars", "Waters of Mars"],
+      },
+      {
+        question: "What are Jenny, Vastra and Strax collectively known as?",
+        answers: ["The Paternoster Gang", "Paternoster Gang"],
+      },
+      {
+        question: "Where in London did Rose and Jackie Tyler live?",
+        answers: ["The Powell Estate", "Powell Estate"],
+      },
+      {
+        question: "What village did Amy and Rory grow up in?",
+        answers: ["Leadworth"],
+      },
+      {
+        question: "What are you advised not to do on meeting a Weeping Angel?",
+        answers: ["Blink"],
+      },
+      {
+        question: "What are the 13th Doctor's first words?",
+        answers: ["Oh brilliant"],
+      },
+      {
+        question: "What are the 10th Doctor's last words?",
+        answers: ["I don't want to go"],
+      },
+      {
+        question: "What does the 12th Doctor not like about his kidneys?",
+        answers: ["The colour", "Colour"],
+      },
+      {
+        question:
+          "What does the 10th Doctor have cut off by the Sycorax leader?",
+        answers: ["His hand", "Hand", "Not that"],
+      },
+      {
+        question:
+          "What name did the Master use when he entered British politics?",
+        answers: ["Harold Saxon", "Mr Saxon"],
+      },
+      {
+        question: "In what conflict did the Doctor and Rose meet Captain Jack?",
+        answers: ["World War Two", "World War 2", "Second World War"],
+      },
+      {
+        question: "Which Doctor fought in the Time War?",
+        answers: ["The War Doctor", "War Doctor"],
+      },
+      {
+        question:
+          "Which organisation was founded by Queen Victoria in response to the Doctor and Rose's actions?",
+        answers: [
+          "The Torchwood Institute",
+          "Torchwood Institute",
+          "Torchwood",
+        ],
+      },
+      {
+        question: "What street did Sarah Jane Smith live on?",
+        answers: ["Bannerman Road"],
+      },
+      {
+        question:
+          "In their very first appearance, what opponent did UNIT successfully fight?",
+        answers: ["The Cybermen", "Cybermen"],
+      },
+      {
+        question: "Which Doctor wore cricketing clothes?",
+        answers: ["The Fifth", "Fifth", "5th"],
+      },
+      {
+        question:
+          "Which recurring villain first appeared on the show kidnapping a circus in order to burgle a museum?",
+        answers: ["The Master"],
+      },
+      {
+        question: "Which UNIT Scientist worked alongside her Zygon duplicate?",
+        answers: ["Petronella Osgood", "Osgood"],
+      },
+      {
+        question: "Which actor has played the Doctor in the most series?",
+        answers: ["Tom Baker"],
+      },
+      {
+        question:
+          "Name one of the Eighties companions who returned in 'The Power of the Doctor'? ",
+        answers: ["Tegan", "Tegan Jovanka", "Ace"],
+        officialAnswer: "Ace or Tegan",
+      },
+      {
+        question:
+          "What creatures is Ruby Sunday plagued by before meeting the Doctor?",
+        answers: ["Goblins"],
+      },
+      {
+        question:
+          "Which villain from the Doctor's past returns for 'The Empire of Death'? ",
+        answers: ["Sutekh", "Sutekh the Destroyer"],
+      },
+      {
+        question: "What is Belinda Chandra's job? ",
+        answers: ["Nurse"],
+      },
+      {
+        question:
+          "In 'Wild Blue Yonder', what substance does the Doctor use to ward off monsters at the edge of the universe?",
+        answers: ["Salt"],
+      },
+      {
+        question:
+          "What character returned in 'The Giggle' having last appeared in 1966?",
+        answers: ["The Toymaker", "Toymaker"],
       },
     ],
   },
@@ -901,6 +1423,7 @@ export const rounds: Round[] = [
     name: "A Quiz of Necessity",
     slug: "episode-names",
     copy: "Going by official story names, can you name the serial in which each of these individual First Doctor episode titles belongs?",
+    tags: ["Classic"],
     questions: [
       { question: "The Rescue", answers: ["The Daleks"] },
       { question: "The Dead Planet", answers: ["The Daleks"] },
@@ -1126,6 +1649,7 @@ export const rounds: Round[] = [
     slug: "colin-cliffhanger",
     copy: "Simply tell us which story this Colin Baker Cliffhanger Face is from.",
     hint: "Remember: 'Time Lord' not 'Timelord'.",
+    tags: ["Classic", "Picture"],
     questions: [
       {
         question: "",
@@ -1292,6 +1816,7 @@ export const rounds: Round[] = [
     slug: "inhuman",
     copy: "Simply tell us which story the inanimate object in the picture is from.",
     hint: "Yes, spaceships count as inanimate objects.",
+    tags: ["Picture"],
     questions: [
       {
         question: "",
@@ -1663,6 +2188,7 @@ export const rounds: Round[] = [
     name: "Odd One Out",
     slug: "odd-one-out",
     copy: "Pick the correct answer from four options.",
+    tags: ["Multiple Choice"],
     questions: [
       {
         question: "Which of these authors have not written Doctor Who books?",
@@ -1972,6 +2498,18 @@ export const rounds: Round[] = [
         officialAnswer:
           "The Day of the Doctor does not feature any children being killed.",
       },
+      {
+        question: "Which story is the odd one out odd one out?",
+        options: [
+          "The Massacre",
+          "Black Orchid",
+          "The Androids of Tara",
+          "School Reunion",
+        ],
+        answers: ["School Reunion"],
+        officialAnswer:
+          "School Reunion does not involve doubles/doppelgangers.",
+      },
     ],
   },
   {
@@ -1979,6 +2517,7 @@ export const rounds: Round[] = [
     slug: "production-codes",
     copy: "Pick the correct answer from four options.",
     hint: "A production code is an alphanumberic designation used to uniquely identify episodes within a television series.",
+    tags: ["Multiple Choice"],
     questions: [
       {
         question: "What stories' production codes spell 'MARS'?",
@@ -2207,6 +2746,7 @@ export const rounds: Round[] = [
     name: "Intros Round - Pop",
     slug: "intros-pop",
     copy: "Click on the play button to hear 10 seconds of a song used in an episode of Doctor Who, then name the story it is from.",
+    tags: ["Music"],
     questions: [
       {
         question: "Which story does this song feature in?",
@@ -2338,6 +2878,7 @@ export const rounds: Round[] = [
     slug: "intros-incidental",
     copy: "Click on the play button to hear roughly 10 seconds of music composed for an episode of Doctor Who, then name the story it is from.",
     hint: "If you get that one: no, it's not an error.",
+    tags: ["Music"],
     questions: [
       {
         question: "Which story does this music feature in?",
@@ -2855,6 +3396,7 @@ export const rounds: Round[] = [
     slug: "taskmaster",
     copy: "Name the Taskmaster performer from the season in which they appeared and their first appearance in Doctor Who on TV.",
     hint: "All the information is on the task.",
+    tags: ["New Who"],
     questions: [
       {
         question: "Season 1 and The Husbands Of River Song",
@@ -2923,6 +3465,10 @@ export const rounds: Round[] = [
       {
         question: "Season 20 and Death In Heaven",
         answers: ["Sanjeev Bhaskar"],
+      },
+      {
+        question: "New Year Treat #5 and The Well",
+        answers: ["Rose Ayling-Ellis"],
       },
     ],
   },
@@ -3485,6 +4031,7 @@ export const LogicalRound: CyberRound = {
   slug: "logical",
   copy: "You will be given the name of a Cyberman story, and a breakdown of their plan in that story in random order.",
   hint: "Your job is to put their plan into the correct order. You have two minutes.",
+  tags: ["Sort"],
   questions: [
     {
       story: "The Wheel in Space",

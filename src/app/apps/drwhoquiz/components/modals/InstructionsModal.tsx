@@ -11,7 +11,10 @@ const InstructionsModal: React.FC<modalProps> = ({ setModalOpen }) => {
       />
       <div className={styles.startModal}>
         <h2 className={styles.sModalHTxt}>How to Play</h2>
-        <p className={styles.sModalTxt}>Pick a quiz on the main page.</p>
+        <p className={styles.sModalTxt}>
+          Pick a quiz on the main page. Most rounds are a mix of all eras of the
+          show, though there are some filters if you prefer to focus.
+        </p>
         <p className={styles.sModalTxt}>
           When you start a quiz you will be shown a question. You have sixty
           (60) seconds to answer it.
@@ -32,6 +35,10 @@ const InstructionsModal: React.FC<modalProps> = ({ setModalOpen }) => {
           There are ten questions per quiz, except the &apos;You Know, Our
           Ways&apos; round. There you have 2 minutes to sort a Cyberman plot
           into order.
+        </p>
+        <p className={styles.sModalTxt}>
+          Any answers you don&apos;t get right can be shown at the end of the
+          round.
         </p>
         <button className={styles.btn} onClick={() => setModalOpen(false)}>
           Close
