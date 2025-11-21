@@ -922,6 +922,36 @@ export const rounds: Round[] = [
         question: "Which actor has played the Doctor in the most series?",
         answers: ["Tom Baker"],
       },
+      {
+        question:
+          "Name one of the Eighties companions who returned in 'The Power of the Doctor'? ",
+        answers: ["Tegan", "Tegan Jovanka", "Ace"],
+        officialAnswer: "Ace or Tegan",
+      },
+      {
+        question:
+          "What creatures is Ruby Sunday plagued by before meeting the Doctor?",
+        answers: ["Goblins"],
+      },
+      {
+        question:
+          "Which villain from the Doctor's past returns for 'The Empire of Death'? ",
+        answers: ["Sutekh", "Sutekh the Destroyer"],
+      },
+      {
+        question: "What is Belinda Chandra's job? ",
+        answers: ["Nurse"],
+      },
+      {
+        question:
+          "In 'Wild Blue Yonder', what substance does the Doctor use to ward off monsters at the edge of the universe?",
+        answers: ["Salt"],
+      },
+      {
+        question:
+          "What character returned in 'The Giggle' having last appeared in 1966?",
+        answers: ["The Toymaker", "Toymaker"],
+      },
     ],
   },
   {
