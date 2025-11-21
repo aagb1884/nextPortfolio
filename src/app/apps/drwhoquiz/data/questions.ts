@@ -582,6 +582,112 @@ export const rounds: Round[] = [
         question: "What was the longest story in the show's original run?",
         answers: ["The Trial of a Time Lord", "Trial of a Time Lord"],
       },
+      {
+        question: "Name one of the Script Editors from the First Doctor era.",
+        answers: [
+          "David Whitaker",
+          "Dennis Spooner",
+          "Donald Tosh",
+          "Gerry Davis",
+        ],
+        officialAnswer:
+          "David Whitaker, Dennis Spooner, Donald Tosh or Gerry Davis",
+      },
+      {
+        question: "What story does companion Steven Taylor depart in?",
+        answers: ["The Savages"],
+      },
+      {
+        question: "What Second Doctor story is set at Gatwick Airport?",
+        answers: ["The Faceless Ones", "Faceless Ones"],
+      },
+      {
+        question:
+          "What piece of music was regularly used to underscore scenes of advancing monsters?",
+        answers: ["Space Adventure (Part 2)", "Space Adventure"],
+      },
+      {
+        question:
+          "What was the name of the stunt team who worked on multiple Third Doctor stories?",
+        answers: ["HAVOC"],
+      },
+      {
+        question:
+          "Which Season 9 story was influenced by one of the writers' neighbours moving to South Africa?",
+        answers: ["The Mutants"],
+      },
+      {
+        question:
+          "In 'Spearhead from Space' we learn that the Doctor has what on his right arm?",
+        answers: ["A tattoo", "Tattoo"],
+      },
+      {
+        question: "What is the name of Jon Pertwee's 1972 spoken word single?",
+        answers: ["Who Is The Doctor?"],
+      },
+      {
+        question:
+          "Name one of the battle zones in which the Third Doctor claimed to have been shot in the leg.",
+        answers: ["Crimea", "Gallipoli", "El Alamein"],
+        officialAnswer: "Crimea, Gallipoli, or El Alamein.",
+      },
+      {
+        question:
+          "Tom Baker's performance in what film convinced Barry Letts to cast him in Doctor Who?",
+        answers: ["The Golden Voyage of Sinbad", "Golden Voyage of Sinbad"],
+      },
+      {
+        question:
+          "How many new humanoid companions - counting a new actor as a new character - debuted alongside Tom Baker?",
+        answers: ["7", "Seven"],
+      },
+      {
+        question:
+          "Which Fourth Doctor story briefly had the working title 'The Day God Went Mad'?",
+        answers: ["The Face of Evil", "Face of Evil"],
+      },
+      {
+        question:
+          "What does the Doctor order a pint of in 'The Android Invasion'?",
+        answers: ["Ginger beer"],
+      },
+      {
+        question:
+          "What sitcom was Peter Davison also recording during his first two series as the Doctor?",
+        answers: ["Sink or Swim"],
+      },
+      {
+        question:
+          "How many High Council members do the Time Lords lose in 'The Five Doctors'?",
+        answers: ["2", "Two"],
+      },
+      {
+        question:
+          "Which story features the 'Ministers of Enlightenment and Persuasion'?",
+        answers: ["Four to Doomsday"],
+      },
+      {
+        question:
+          "How many of the show's former Script Editors wrote for the Fifth Doctor?",
+        answers: ["3", "Three"],
+        officialAnswer:
+          "3 - Terrance Dicks, Robert Holmes and Christopher Bidmead.",
+      },
+      {
+        question:
+          "According to the Doctor, what would have been a more technically accurate title for 'The Caves of Androzani'?",
+        answers: ["The Blow Holes of Androzani"],
+      },
+      {
+        question:
+          "Before being cast as the Sixth Doctor, Colin Baker appeared in which Fifth Doctor story?",
+        answers: ["Arc of Infinity"],
+      },
+      {
+        question:
+          "Colin Baker's Sixth Doctor wore a badge of what animal on his lapel?",
+        answers: ["Cat"],
+      },
     ],
   },
   {
