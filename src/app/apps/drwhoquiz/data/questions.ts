@@ -573,6 +573,15 @@ export const rounds: Round[] = [
           "After Robert Holmes, who is the second most prolific writer from the original run of Doctor Who?",
         answers: ["Terry Nation"],
       },
+      {
+        question:
+          "Which Doctor was described as 'an old geezer with white hair'?",
+        answers: ["First", "1st", "Hartnell"],
+      },
+      {
+        question: "What was the longest story in the show's original run?",
+        answers: ["The Trial of a Time Lord", "Trial of a Time Lord"],
+      },
     ],
   },
   {
@@ -939,7 +948,7 @@ export const rounds: Round[] = [
         answers: ["Sutekh", "Sutekh the Destroyer"],
       },
       {
-        question: "What is Belinda Chandra's job? ",
+        question: "What was both Rory Williams' and Belinda Chandra's job?",
         answers: ["Nurse"],
       },
       {
@@ -951,6 +960,34 @@ export const rounds: Round[] = [
         question:
           "What character returned in 'The Giggle' having last appeared in 1966?",
         answers: ["The Toymaker", "Toymaker"],
+      },
+      {
+        question: "What English city are Ryan and Yaz from?",
+        answers: ["Sheffield"],
+      },
+      {
+        question: "What is Donna's mum's name?",
+        answers: ["Sylvia", "Sylvia Noble"],
+      },
+      {
+        question:
+          "What activity does Yaz immediately associate with Halloween?",
+        answers: ["Trick or treat"],
+      },
+      {
+        question: "What is the very first episode of Doctor Who called?",
+        answers: ["An Unearthly Child"],
+      },
+      {
+        question: "Which Doctors appear in the 1996 TV Movie?",
+        answers: [
+          "Seventh and Eighth",
+          "Seventh Eighth",
+          "7th and 8th",
+          "7th 8th",
+          "McCoy and McGann",
+          "McCoy MCGann",
+        ],
       },
     ],
   },
