@@ -1344,6 +1344,11 @@ export const rounds: Round[] = [
       },
       {
         question:
+          "…between the end of Series 10 and its soundtrack being released (years)?",
+        answers: ["8"],
+      },
+      {
+        question:
           "…does the Twelfth Doctor take to bring Clara the takeaway coffee she sends him for at the end of 'Deep Breath' (weeks)?",
         answers: ["3"],
       },
@@ -3627,10 +3632,264 @@ export const rounds: Round[] = [
     name: "Who Said That?",
     slug: "said",
     copy: "Tell us which character said these words.",
+    hint: "Always specify the incarnation, e.g. 'Sixth Doctor'.",
     questions: [
       {
-        question: "",
-        answers: [""],
+        question: `"Rank has its privileges."`,
+        answers: ["Mike Yates", "Captain Yates", "Captain Mike Yates", "Yates"],
+      },
+      {
+        question: `"You're talking about one of the most powerful blokes in the cosmos."`,
+        answers: ["Second Doctor", "The Second Doctor"],
+      },
+      {
+        question: `"Gratitude's the last thing you'll ever have, or any sort of common sense either."`,
+        answers: ["Barbara Wright", "Barbara", "Queen Babs"],
+      },
+      {
+        question: `"Bring me knitting."`,
+        answers: ["Eighth Doctor", "The Eighth Doctor"],
+      },
+      {
+        question: `"Do you know any nice people?"`,
+        answers: ["Ace"],
+      },
+      {
+        question: `"Nothing can prevent the catharsis of spurious morality"`,
+        answers: ["The Valeyard", "Valeyard"],
+      },
+      {
+        question: `"Welcome to heaven. Would you like some tea?"`,
+        answers: ["Missy", "The Master"],
+      },
+      {
+        question: `"I'm present, and enjoying myself enormously."`,
+        answers: ["The Master"],
+      },
+      {
+        question: `"Save your breath for the Timelash, Doctor. Most people depart with a scream."`,
+        answers: ["Tekker", "Maylin Tekker"],
+      },
+      {
+        question: `"Have the lift maintenance engineer shot."`,
+        answers: ["Morgus", "Trau Morgus"],
+      },
+      {
+        question: `"Of course, if she was a real lady, I wouldn't be in her boudoir."`,
+        answers: ["Redvers Fenn-Cooper", "Redvers"],
+      },
+      {
+        question: `"Doctor, you have destroyed my dreams! I'll destroy you!"`,
+        answers: ["The Marshal", "The Marshal of Solos", "Marshal"],
+      },
+      {
+        question: `"I don't know who you are, what you are or where you come from. But you can get off the moon now."`,
+        answers: ["Hobson"],
+      },
+      {
+        question: `"This isn't going to be big on dignity."`,
+        answers: ["Eleventh Doctor", "The Eleventh Doctor"],
+      },
+      {
+        question: `"Perhaps we've landed in a world of mad men!"`,
+        answers: ["Victoria Waterfield", "Victoria"],
+      },
+      {
+        question: `"I'd rather face the Chumblies than you any day."`,
+        answers: ["Steven Taylor", "Steven"],
+      },
+      {
+        question: `"AND I DON'T LIKE YOUR FACE."`,
+        answers: ["General Cutler", "Cutler"],
+      },
+      {
+        question: `"Resistance is inadvisable."`,
+        answers: ["Styggron"],
+      },
+      {
+        question: `"Shoes."`,
+        answers: ["Third Doctor", "The Third Doctor"],
+      },
+      {
+        question: `"Chap with wings there. Five rounds, rapid"`,
+        answers: [
+          "The Brigadier",
+          "The Brig",
+          "Brigadier",
+          "Alastair Gordon Lethbridge-Stewart",
+        ],
+      },
+      {
+        question: `"Do they have Mice in Atlantis?"`,
+        answers: ["Jo Grant", "Jo"],
+      },
+      {
+        question: `"That's how you get your kicks, like the good little Nietzschean you are, right?"`,
+        answers: ["The B.O.S.S.", "B.O.S.S.", "BOSS"],
+      },
+      {
+        question: `"You have a primary and a secondary reproductive cycle. It is an inefficient system, you should change it."`,
+        answers: ["Linx"],
+      },
+      {
+        question: `"Gremlins can get into everything, old girl. First law of the sea."`,
+        answers: ["Harry Sullivan", "Harry"],
+      },
+      {
+        question: `"She is a norm. All norms are our enemies."`,
+        answers: ["Gerrill"],
+      },
+      {
+        question: `"I could always sell flowers, couldn't I? You know, lovely fresh violets, guv."`,
+        answers: ["Sarah Jane Smith", "Sarah Jane", "Sarah"],
+      },
+      {
+        question: `"What a magnificent head."`,
+        answers: ["Dr Mehendri Solon", "Mehendri Solon", "Solon"],
+      },
+      {
+        question: `"We're helping the plant world, the sergeant and I. In different ways, of course."`,
+        answers: ["Harrison Chase"],
+      },
+      {
+        question: `"As I believe I told you long ago, Doctor, you will never amount to anything in the galaxy while you retain your propensity for vulgar facetiousness."`,
+        answers: ["Borusa"],
+      },
+      {
+        question: `"Enjoy your death as I enjoyed killing you!"`,
+        answers: ["Leela"],
+      },
+      {
+        question: `"Please do not throw hands at me.`,
+        answers: ["D84"],
+      },
+      {
+        question: `"You will do as the Doctor instructs, or I will cut out your heart."`,
+        answers: ["Leela"],
+      },
+      {
+        question: `"The backblast backlash will bounce back and destroy everything."`,
+        answers: ["Romana", "Romana II", "The Second Romana"],
+      },
+      {
+        question: `"I'm just saying that a lot of the time you don't really make sense."`,
+        answers: ["Adric"],
+      },
+      {
+        question: `"It's the end, but the moment has been prepared for."`,
+        answers: ["Fourth Doctor", "The Fourth Doctor"],
+      },
+      {
+        question: `"You are a Time Lord, a lord of time. Are there lords in such a small domain?"`,
+        answers: ["Striker", "Captain Striker"],
+      },
+      {
+        question: `"Does it offend you?"`,
+        answers: ["Fifth Doctor", "The Fifth Doctor"],
+      },
+      {
+        question: `"Dissatisfied customers usually just don't leave a tip."`,
+        answers: ["Oscar Botcherby", "Oscar"],
+      },
+      {
+        question: `"Go away, Mel."`,
+        answers: ["Sixth Doctor", "The Sixth Doctor"],
+      },
+      {
+        question: `"Are these old ladies annoying you?"`,
+        answers: ["Pex"],
+      },
+      {
+        question: `"Love has never been noted for its rationality."`,
+        answers: ["Seventh Doctor", "The Seventh Doctor"],
+      },
+      {
+        question: `"I can feel one of my moods coming on."`,
+        answers: ["The Kandyman", "Kandyman"],
+      },
+      {
+        question: `"Don't interrupt me when I'm eulogising."`,
+        answers: ["Fenric"],
+      },
+      {
+        question: `"Kill yourself."`,
+        answers: ["Ninth Doctor", "The Ninth Doctor"],
+      },
+      {
+        question: `"No one upsets my mum."`,
+        answers: ["Rose Tyler", "Rose"],
+      },
+      {
+        question: `"This is the story of how I died."`,
+        answers: ["Rose Tyler", "Rose"],
+      },
+      {
+        question: `"I don't want to go."`,
+        answers: ["Tenth Doctor", "The Tenth Doctor"],
+      },
+      {
+        question: `"I'll always remember when the Doctor was me."`,
+        answers: ["Eleventh Doctor", "The Eleventh Doctor"],
+      },
+      {
+        question: `"Personally I think that's a hell of a bird"`,
+        answers: ["Twelfth Doctor", "The Twelfth Doctor"],
+      },
+      {
+        question: `"Tag. You're it."`,
+        answers: ["Thirteenth Doctor", "The Thirteenth Doctor"],
+      },
+      {
+        question: `"I must get the tab."`,
+        answers: ["Morgaine"],
+      },
+      {
+        question: `"Bones of the hand. Carpal bones, proximal row. Scaphoid, lunate, triquetal, pisiform."`,
+        answers: ["Martha Jones", "Martha"],
+      },
+      {
+        question: `"It's the same rain."`,
+        answers: ["Sally Sparrow"],
+      },
+      {
+        question: `"Noddy's not real—is he?"`,
+        answers: ["Donna Noble", "Donna"],
+      },
+      {
+        question: `"Sir, I am opposed to your current apathy."`,
+        answers: ["Strax"],
+      },
+      {
+        question: `"Something old. Something new. Something borrowed. Something blue."`,
+        answers: ["Amy Pond", "Amy"],
+      },
+      {
+        question: `"And remember, Doctor… I'm just as real as you are."`,
+        answers: ["Robin Hood", "Robin of Loxley"],
+      },
+      {
+        question: `"Do you think I care for you so little that betraying me would make a difference?"`,
+        answers: ["Twelfth Doctor", "The Twelfth Doctor"],
+      },
+      {
+        question: `"Die with whoever comes after me."`,
+        answers: ["Clara Oswald", "Clara"],
+      },
+      {
+        question: `"Like a penguin with his arse on fire."`,
+        answers: ["Bill Potts", "Bill"],
+      },
+      {
+        question: `"Banksy doesn't have one of those… Or have I?"`,
+        answers: ["Thirteenth Doctor", "The Thirteenth Doctor"],
+      },
+      {
+        question: `"Time travelers are great. Like, the best -- like, wow"`,
+        answers: ["Fifteenth Doctor", "The Fifteenth Doctor"],
+      },
+      {
+        question: `"I am not one of your adventures."`,
+        answers: ["Belinda Chandra", "Belinda"],
       },
     ],
   },

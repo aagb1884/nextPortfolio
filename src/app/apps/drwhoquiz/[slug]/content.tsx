@@ -119,9 +119,8 @@ const PageContent = ({ round, name }: PageContentProps) => {
     const correctAnswers = quizRound[currentQuestionIndex].answers;
 
     if (
-      (correctAnswers.includes(answer.toLowerCase()) ||
-        lowercaseAnswers.includes(answer.toLowerCase())) &&
-      answer.trim() !== ""
+      (correctAnswers.includes(answer.trim()) ||
+        lowercaseAnswers.includes(answer.toLowerCase().trim())) 
     ) {
       setRoundScore(roundScore + timeLeft);
       if (isDeathRound) {
