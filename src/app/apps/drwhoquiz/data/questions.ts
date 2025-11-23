@@ -301,6 +301,21 @@ export const rounds: Round[] = [
         question: "What did Swarm and Azure use to trap survivors of the Flux?",
         answers: ["Passenger", "Passenger Form"],
       },
+      {
+        question:
+          "Name one of the locations that inhabitants of the Dalek asylum came from.",
+        answers: ["Spiridon", "Kembel", "Aridius", "Vulcan", "Exillon"],
+        officialAnswer: "Spiridon, Kembel, Aridius, Vulcan or Exillon.",
+      },
+      {
+        question: "Who shot Amy and Rory's childhood friend Mels?",
+        answers: ["Adolf Hitler", "Hitler"],
+      },
+      {
+        question:
+          "What is the name of the subterranean Exillon befriended by the Third Doctor and Sarah Jane Smith?",
+        answers: ["Bellal"],
+      },
     ],
   },
   {
@@ -1328,6 +1343,11 @@ export const rounds: Round[] = [
           "Lady Cassandra O'Brien.Δ17",
           "Lady Cassandra O'Brien Dot Delta Seventeen",
         ],
+      },
+      {
+        question:
+          "What letter do the First Doctor and Tegan utilise to cross a trap-laden chessboard?",
+        answers: ["Pi"],
       },
     ],
   },
@@ -2436,12 +2456,7 @@ export const rounds: Round[] = [
       {
         question:
           "Which of these Doctor Who actors has not voiced a character in Wallace and Gromit?",
-        options: [
-          "Mark Gattiss",
-          "Adjoa Anjoh",
-          "Sanjeev Bhaskar",
-          "Anne Reid",
-        ],
+        options: ["Mark Gatiss", "Adjoa Anjoh", "Sanjeev Bhaskar", "Anne Reid"],
         answers: ["Sanjeev Bhaskar"],
       },
       {
@@ -2665,6 +2680,24 @@ export const rounds: Round[] = [
         answers: ["School Reunion"],
         officialAnswer:
           "School Reunion does not involve doubles/doppelgangers.",
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "Victory of the Daleks",
+          "A Good Man Goes to War",
+          "The Wedding of River Song",
+          "The Pandorica Opens",
+        ],
+        answers: ["The Pandorica Opens"],
+        officialAnswer:
+          "The Pandorica Opens does not feature a cameo from Mark Gatiss.",
+      },
+      {
+        question: "Who is the odd one out?",
+        options: ["Colin Baker", "Karen Gillan", "Verada Sethu", "Paul McGann"],
+        answers: ["Paul McGann"],
+        officialAnswer: "Paul McGann had not appeared in another role in the show before being cast as a lead.",
       },
     ],
   },
