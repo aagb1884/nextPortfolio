@@ -1708,7 +1708,15 @@ export const rounds: Round[] = [
         ],
         officialAnswer: "Ian Chesteron or Doctor Who.",
       },
-      { question: "The Name of the Doctor", answers: ["Dr Simeon", "Simeon"] },
+      {
+        question: "The Name of the Doctor",
+        answers: [
+          "Dr Simeon",
+          "Simeon",
+          "The Great Intelligence",
+          "Great Intelligence",
+        ],
+      },
       { question: "The Empty Child", answers: ["Rose"] },
       {
         question: "The Wedding of River Song",
@@ -3612,6 +3620,17 @@ export const rounds: Round[] = [
       {
         question: "New Year Treat #5 and The Well",
         answers: ["Rose Ayling-Ellis"],
+      },
+    ],
+  },
+  {
+    name: "Who Said That?",
+    slug: "said",
+    copy: "Tell us which character said these words.",
+    questions: [
+      {
+        question: "",
+        answers: [""],
       },
     ],
   },

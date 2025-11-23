@@ -518,6 +518,11 @@
   text-align: center;
 }
 
+.sModalLink {
+  color: darkred;
+  text-decoration: underline;
+}
+
 .answerList {
   padding: 4px;
   list-style: none;

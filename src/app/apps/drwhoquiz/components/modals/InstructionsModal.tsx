@@ -1,8 +1,10 @@
 "use client";
 import { modalProps } from "../../../barlow/components/modal";
 import styles from "@/app/styles/whoQuiz.module.css";
+import { useGlobalState } from "@/app/context/GlobalStateContext";
 
 const InstructionsModal: React.FC<modalProps> = ({ setModalOpen }) => {
+  const {goToContactForm, contact} = useGlobalState();
   return (
     <>
       <div
@@ -40,6 +42,12 @@ const InstructionsModal: React.FC<modalProps> = ({ setModalOpen }) => {
           Any answers you don&apos;t get right can be shown at the end of the
           round.
         </p>
+        <p onClick={() => {
+              goToContactForm(contact)}}
+            className={styles.sModalLink}>
+          Any queries or suggestions please use the contact form on the home page.
+        </p>
+
         <button className={styles.btn} onClick={() => setModalOpen(false)}>
           Close
         </button>
