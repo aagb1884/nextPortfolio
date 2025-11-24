@@ -270,7 +270,7 @@ export const rounds: Round[] = [
       {
         question:
           "What impossible-sounding book does Clara discover in the TARDIS?",
-        answers: ["The History of the Time War"],
+        answers: ["The History of the Time War", "History of the Time War"],
       },
       {
         question:
@@ -315,6 +315,36 @@ export const rounds: Round[] = [
         question:
           "What is the name of the subterranean Exillon befriended by the Third Doctor and Sarah Jane Smith?",
         answers: ["Bellal"],
+      },
+      {
+        question:
+          "Which tentacled alien race come from the same star system as the Sensorites?",
+        answers: ["The Ood", "Ood"],
+      },
+      {
+        question:
+          "Which story formed a loose sequel to 1966's 'The Smugglers'?",
+        answers: ["The Curse of the Black Spot", "Curse of the Black Spot"],
+      },
+      {
+        question:
+          "Which entity that featured in two Season 5 stories returned as the main antagonist for Series 7b",
+        answers: ["The Great Intelligence", "Great Intelligence"],
+      },
+      {
+        question:
+          "The Ice Warriors returned in 2013's 'Cold War' - what was the last story they appeared in before this?",
+        answers: ["The Monster of Peladon", "Monster of Peladon"],
+      },
+      {
+        question:
+          "True or False: the Second Doctor Handbook describes 'Dimensions in Time' as 'a dreadful travesty of a Doctor Who story'?",
+        answers: ["True", "Correct", "Yep"],
+      },
+      {
+        question:
+          "What does the Doctor do in 'The Lazarus Experiment' that he hadn't done for quite some time?",
+        answers: ["Reverse the polarity"],
       },
     ],
   },
@@ -940,8 +970,16 @@ export const rounds: Round[] = [
       },
       {
         question:
-          "Which creature features in both 'Love & Monsters' and the Pandorica Alliance? ",
+          "Which creature features in both 'Love & Monsters' and the Pandorica Alliance?",
         answers: ["The Hoix", "Hoix"],
+      },
+      {
+        question: "Where does the 13th Doctor get her outfit from?",
+        answers: ["A charity shop", "Charity shop"],
+      },
+      {
+        question: "What does Graham put on his feet in 'Spyfall'?",
+        answers: ["Laser shoes"],
       },
     ],
   },
@@ -1109,6 +1147,41 @@ export const rounds: Round[] = [
           "McCoy and McGann",
           "McCoy MCGann",
         ],
+      },
+      {
+        question: "Which recurring character returns in the episode 'Utopia'?",
+        answers: ["The Master"],
+      },
+      {
+        question:
+          "What constellation is the Doctor's home planet of Gallifrey in?",
+        answers: ["Kasterborous"],
+      },
+      {
+        question: "What is the name of the Dalek's home planet?",
+        answers: ["Skaro"],
+      },
+      {
+        question:
+          "What river does the Doctor accidentally drain in 'The Runaway Bride'?",
+        answers: ["River Thames", "The Thames", "Thames"],
+      },
+      {
+        question: "What TV story does River Song first appear in?",
+        answers: [
+          "Silence in the Library",
+          "Silence in the Library/Forest of the Dead",
+        ],
+      },
+      {
+        question:
+          "Who played 'Doctor Who' in two Sixties films, adapted from the first two Dalek stories?",
+        answers: ["Peter Cushing"],
+      },
+      {
+        question:
+          "As of November 2025, who was the actor to most recently play the Master?",
+        answers: ["Sacha Dhawan"],
       },
     ],
   },
@@ -1622,6 +1695,10 @@ export const rounds: Round[] = [
       },
       {
         question: "Volcano",
+        answers: ["The Dalek Master Plan", "Dalek Master Plan"],
+      },
+      {
+        question: "Coronas of the Sun",
         answers: ["The Dalek Master Plan", "Dalek Master Plan"],
       },
       {
@@ -2358,6 +2435,30 @@ export const rounds: Round[] = [
         },
         answers: ["Joy to the World"],
       },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_46.png",
+          alt: "In a dimly lit corridor two cylindrical storage containers wait ominously.",
+        },
+        answers: ["Earthshock"],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_47.png",
+          alt: "A partly opaque glass bowl, with a gas ignited flame coming from its centre. Behind it are more ornate candles and lights.",
+        },
+        answers: ["The Unquiet Dead", "Unquiet Dead"],
+      },
+      {
+        question: "",
+        image: {
+          url: "/images/drWhoQuiz/inhuman_round/inhuman_48.webp",
+          alt: "Above woodland and villages a tower emerges from rock.",
+        },
+        answers: ["State of Decay"],
+      },
     ],
   },
   {
@@ -2697,7 +2798,67 @@ export const rounds: Round[] = [
         question: "Who is the odd one out?",
         options: ["Colin Baker", "Karen Gillan", "Verada Sethu", "Paul McGann"],
         answers: ["Paul McGann"],
-        officialAnswer: "Paul McGann had not appeared in another role in the show before being cast as a lead.",
+        officialAnswer:
+          "Paul McGann had not appeared in another role in the show before being cast as a lead.",
+      },
+      {
+        question: "Which story is the o d on  ou ?",
+        options: [
+          "Marco Polo",
+          "The Aztecs",
+          "The Myth Makers",
+          "The Highlanders",
+        ],
+        answers: ["The Aztecs"],
+        officialAnswer:
+          "As of 23/11/2025 only The Aztecs is not completely missing from the archives.",
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "The Tenth Planet",
+          "Destiny of the Daleks",
+          "Mawdryn Undead",
+          "Let's Kill Hitler",
+        ],
+        answers: ["Mawdryn Undead"],
+        officialAnswer: "Mawdryn Undead has no regeneration scenes.",
+      },
+      {
+        question: "Which is the odd one out?",
+        options: [
+          "Kit Kat advert",
+          "Pornography",
+          "Q",
+          "The sixth draft of 'Dalek'",
+        ],
+        answers: ["The sixth draft of 'Dalek'"],
+        officialAnswer:
+          "No Daleks featured in the sixth draft of 'Dalek', whereas they have featured in the other three.",
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "Planet of Giants",
+          "The Invisible Enemy",
+          "Into the Dalek",
+          "Amy's Choice",
+        ],
+        answers: ["Amy's Choice"],
+        officialAnswer:
+          "'Amy's Choice' does not feature anyone getting miniaturised.",
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "The Devil's Chord",
+          "The Chase",
+          "The Evil of the Daleks",
+          "Delta and the Bannermen",
+        ],
+        answers: ["Delta and the Bannermen"],
+        officialAnswer:
+          "'Delta and the Bannermen' does not feature The Beatles or their music.",
       },
     ],
   },
