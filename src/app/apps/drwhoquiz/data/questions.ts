@@ -3164,6 +3164,117 @@ export const rounds: Round[] = [
         officialAnswer:
           "'Delta and the Bannermen' does not feature The Beatles or their music.",
       },
+      {
+        question: "Pretty elementary one this: Which story is the odd one out?",
+        options: [
+          "The Crimson Horror",
+          "Journey to the Centre of the TARDIS",
+          "The Bells of St. John",
+          "Hide",
+        ],
+        answers: ["Hide"],
+        officialAnswer:
+          "'Hide' was not written by someone who also wrote for 'Sherlock'.",
+        tags: ["New"],
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "Terror of the Autons",
+          "The Time Warrior",
+          "The Wheel in Space",
+          "The Tenth Planet",
+        ],
+        answers: ["The Wheel in Space"],
+        officialAnswer:
+          "'The Wheel in Space' is not the debut story of a famous monster.",
+        tags: ["Classic"],
+      },
+      {
+        question: "Monster-wise, which story is the odd one out?",
+        options: [
+          "The Abominable Snowmen",
+          "The Web of Fear",
+          "The Five Doctors",
+          "Frontier in Space",
+        ],
+        answers: ["Frontier in Space"],
+        officialAnswer: "'Frontier in Space' does not feature a Yeti.",
+        tags: ["Classic"],
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "The Invasion",
+          "The Seeds of Doom",
+          "Battlefield",
+          "The Curse of Peladon",
+        ],
+        answers: ["The Curse of Peladon"],
+        officialAnswer: "'The Curse of Peladon' does not feature UNIT.",
+        tags: ["Classic"],
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "The Christmas Invasion",
+          "The Sontaran Stratagem",
+          "The Star Beast",
+          "The Hungry Earth",
+        ],
+        answers: ["The Hungry Earth"],
+        officialAnswer: "'The Hungry Earth' does not feature UNIT.",
+        tags: ["New"],
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "Time and the Rani",
+          "The Dalek Master Plan",
+          "The Armageddon Factor",
+          "Underworld",
+        ],
+        answers: ["Underworld"],
+        officialAnswer: "'Underworld' does not feature another Time Lord.",
+        tags: ["Classic"],
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "Dragonfire",
+          "Fury from the Deep",
+          "The Faceless Ones",
+          "The Celestial Toymaker",
+        ],
+        answers: ["The Celestial Toymaker"],
+        officialAnswer:
+          "'The Celestial Toymaker' is not a companion departure story.",
+        tags: ["Classic"],
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "The Deadly Assassin",
+          "The Invasion of Time",
+          "Arc of Infinity",
+          "The Trial of a Time Lord",
+        ],
+        answers: ["The Trial of a Time Lord"],
+        officialAnswer: "'The Trial of a Time Lord' is not set on Gallifrey.",
+        tags: ["Classic"],
+      },
+      {
+        question: "Which story is the odd one out?",
+        options: [
+          "The End of Time",
+          "Hell Bent",
+          "The Timeless Children",
+          "The Last of the Time Lords",
+        ],
+        answers: ["The Last of the Time Lords"],
+        officialAnswer: "'The Last of the Time Lords' isn't set on Gallifrey, the others are at least partly set there.",
+        tags: ["New"],
+      },
     ],
   },
   {
