@@ -46,7 +46,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [showScore, setShowScore] = useState<boolean | null>(null);
   const [wrongAnswers, setWrongAnswers] = useState<Question[]>([]);
-  const [filterType, setFilterType] = useState<String | null>(null);
+  const [filterType, setFilterType] = useState<string | null>(null);
 
   // is it goodge game
   const isDeathRound = round.name === "Death!";
