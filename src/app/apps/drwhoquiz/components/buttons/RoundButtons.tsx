@@ -20,7 +20,6 @@ const RoundButtons = ({
   needButton,
   filterRounds,
 }: rndBtnProps) => {
-  console.log("Rounds", roundButtons);
   const btnMap = roundButtons?.map((round) => {
     return (
       <div key={round.style} className={`styles.${round.style}`}>

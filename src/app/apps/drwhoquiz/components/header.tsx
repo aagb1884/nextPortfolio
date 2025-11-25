@@ -13,6 +13,7 @@ const Header = ({ setShowCredit, setShowInstructions }: HeaderProps) => {
   return (
     <header className={styles.whoQuizNav}>
       <p
+        className={styles.modalBtn}
         onClick={() => {
           setShowInstructions(true);
         }}
@@ -23,6 +24,7 @@ const Header = ({ setShowCredit, setShowInstructions }: HeaderProps) => {
         <Image src={drWhoLogo} width={200} alt="dr-who-logo" />
       </Link>
       <p
+        className={styles.modalBtn}
         onClick={() => {
           setShowCredit(true);
         }}

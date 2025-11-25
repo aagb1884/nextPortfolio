@@ -46,6 +46,7 @@ const PageContent = ({ round, name }: PageContentProps) => {
   const [currentTime, setCurrentTime] = useState<number>(0);
   const [showScore, setShowScore] = useState<boolean | null>(null);
   const [wrongAnswers, setWrongAnswers] = useState<Question[]>([]);
+  const [filterType, setFilterType] = useState<String | null>(null);
 
   // is it goodge game
   const isDeathRound = round.name === "Death!";
@@ -119,8 +120,8 @@ const PageContent = ({ round, name }: PageContentProps) => {
     const correctAnswers = quizRound[currentQuestionIndex].answers;
 
     if (
-      (correctAnswers.includes(answer.trim()) ||
-        lowercaseAnswers.includes(answer.toLowerCase().trim())) 
+      correctAnswers.includes(answer.trim()) ||
+      lowercaseAnswers.includes(answer.toLowerCase().trim())
     ) {
       setRoundScore(roundScore + timeLeft);
       if (isDeathRound) {
@@ -138,6 +139,27 @@ const PageContent = ({ round, name }: PageContentProps) => {
       setIsAnswerCorrect(false);
     }
   }
+
+  const filterQuestions = (x: string) => {
+    const filtered: Question[] = round?.questions.filter((question) =>
+      question.tags?.includes(x)
+    );
+    return filtered;
+  };
+
+  const enoughNewQuestions = filterQuestions("New").length >= 10;
+  const enoughClassicQuestions = filterQuestions("Classic").length >= 10;
+
+  const setNewQuestions = () => {
+    const newQuestions = filterQuestions("New");
+    set10Questions(newQuestions);
+    setFilterType("New");
+  };
+  const setClassicQuestions = () => {
+    const newQuestions = filterQuestions("Classic");
+    set10Questions(newQuestions);
+    setFilterType("Classic");
+  };
 
   const renderQuiz = () => {
     const currentQuestion = quizRound[currentQuestionIndex];
@@ -163,10 +185,24 @@ const PageContent = ({ round, name }: PageContentProps) => {
   };
 
   const reset = () => {
-    setCurrentQuestionIndex(0);
-    set10Questions(round.questions);
-    setIsActive(false);
-    setWrongAnswers([]);
+    if (filterType === "New") {
+      setCurrentQuestionIndex(0);
+      const newQuestions = filterQuestions("New");
+      set10Questions(newQuestions);
+      setIsActive(false);
+      setWrongAnswers([]);
+    } else if (filterType === "Classic") {
+      setCurrentQuestionIndex(0);
+      const newQuestions = filterQuestions("Classic");
+      set10Questions(newQuestions);
+      setIsActive(false);
+      setWrongAnswers([]);
+    } else {
+      setCurrentQuestionIndex(0);
+      set10Questions(round.questions);
+      setIsActive(false);
+      setWrongAnswers([]);
+    }
   };
 
   //timer
@@ -279,15 +315,40 @@ const PageContent = ({ round, name }: PageContentProps) => {
         {round.copy && <p className={styles.copy}>{round.copy}</p>}
         {round.hint && <aside className={styles.aside}>{round.hint}</aside>}
         {!showQuiz && !roundOver && (
-          <button
-            className={styles.btn}
-            onClick={() => {
-              set10Questions(round.questions);
-            }}
-          >
-            Start Quiz
-          </button>
+          <>
+            <button
+              className={styles.btn}
+              onClick={() => {
+                set10Questions(round.questions);
+              }}
+            >
+              Start Quiz
+            </button>
+            <div className={styles.btnRow}>
+              {enoughNewQuestions && (
+                <button
+                  className={styles.newBtn}
+                  onClick={() => {
+                    setNewQuestions();
+                  }}
+                >
+                  New Series Questions Only
+                </button>
+              )}
+              {enoughClassicQuestions && (
+                <button
+                  className={styles.classicBtn}
+                  onClick={() => {
+                    setClassicQuestions();
+                  }}
+                >
+                  Classic Series Questions Only
+                </button>
+              )}
+            </div>
+          </>
         )}
+
         <div>
           {showQuiz && renderQuiz()}
           {!showQuiz && roundOver && !isDeathRound && (

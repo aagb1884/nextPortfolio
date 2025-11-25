@@ -10,6 +10,7 @@ export interface Question {
   image?: Image;
   audio?: string;
   officialAnswer?: string;
+  tags?: string[];
 }
 
 export interface plotPoint {
@@ -50,22 +51,26 @@ export const rounds: Round[] = [
         question:
           "How many episodes does Turlough appear in where he isn't wearing his school uniform?",
         answers: ["3", "Three"],
+        tags: ["Classic"],
       },
       {
         question:
           "True or false: Richard Hearne lost the role of the Fourth Doctor because he wanted to play it as his other character Mr Pastry?",
         answers: ["True", "Correct", "Yes"],
+        tags: ["Classic"],
       },
       {
         question:
           "True or false: Spike Milligan lost the role of the Fourth Doctor because he wanted input into the scripts?",
         answers: ["False", "No"],
         officialAnswer: "No, it was Michael Bentine.",
+        tags: ["Classic"],
       },
       {
         question:
           "Which companion started referring to the TARDIS as 'Time and Relative Dimensions in Space'?",
         answers: ["Vicki", "Vikki"],
+        tags: ["Classic"],
       },
       {
         question:
@@ -78,12 +83,18 @@ export const rounds: Round[] = [
           "Orange, scarlet",
           "orange scarlet",
         ],
+        tags: ["Classic"],
       },
-      { question: "What is the moon?", answers: ["An egg", "Egg"] },
+      {
+        question: "What is the moon?",
+        answers: ["An egg", "Egg"],
+        tags: ["New"],
+      },
       {
         question:
           "What does Rosa Parks have named after her that 'changed the universe'?",
         answers: ["An asteroid", "Asteroid"],
+        tags: ["New"],
       },
       {
         question:
@@ -96,63 +107,76 @@ export const rounds: Round[] = [
           "Drathro K9",
           "Drathro, K9",
         ],
+        tags: ["Classic"],
       },
       {
         question:
           "Which city is both Jodie Whittaker's middle name and the location of Ruby White's phony institute in The Sarah Jane Adventures?",
         answers: ["Auckland"],
+        tags: ["New"],
       },
       {
         question:
           "In 'The Doctor, The Widow, And The Wardrobe', which planet do the harvesters come from?",
         answers: ["Androzani Major"],
+        tags: ["New"],
       },
       {
         question: "How many words per minute can Donna type?",
         answers: ["100", "hundred", "a hundred", "one hundred"],
+        tags: ["New"],
       },
       {
         question:
           "What brand of ice lolly had tie-in adverts featuring the Second Doctor and the Daleks?",
         answers: ["Sky Ray"],
+        tags: ["Classic"],
       },
       {
         question:
           "Which jazz tune is performed by the Seventh Doctor and then Earl Sigma on harmonica throughout 'The Happiness Patrol'?",
         answers: ["As Time Goes By"],
+        tags: ["Classic"],
       },
       {
         question:
           "What character from 'New Earth' do the Doctor and Rose eat in 'The End of the World'?",
         answers: ["Chip"],
+        tags: ["New"],
       },
       {
         question:
           "Where do Benton and Yates take the Brigadier's helicopter to?",
         answers: ["Devil's End", "Devils End"],
+        tags: ["Classic"],
       },
       {
         question: "What is the desert planet in 'The Chase' called?",
         answers: ["Aridius"],
+        tags: ["Classic"],
       },
       {
         question: "In 'World War 3' what is the password to UNIT's website?",
         answers: ["buffalo"],
+        tags: ["New"],
       },
       {
         question:
           "In 'Tooth and Claw' the Doctor describes 1979 as a 'hell of a year', noting 'China invades Vietnam. The Muppet Movie. Margaret Thatcher…' and what other historical event?",
         answers: ["Skylab"],
+        tags: ["New"],
       },
       {
         question: "Is cress ever mentioned onscreen in Doctor Who?",
         answers: ["No", "It is not", "False", "Nope", "Nah"],
+        tags: ["Classic", "New"],
       },
       {
         question:
           "Name one of the two non-festive episodes that feature 'Merry Xmas Everybody' by Slade.",
         answers: ["Turn Left", "Power of Three", "The Power of Three"],
         officialAnswer: "Turn Left or The Power of Three.",
+        tags: ["New"],
       },
       {
         question: "Name a story that features a T-Rex.",
@@ -165,61 +189,74 @@ export const rounds: Round[] = [
         ],
         officialAnswer:
           "Doctor Who and the Silurians, Invasion of the Dinosaurs, Dinosaurs on a Spaceship or Deep Breath.",
+        tags: ["Classic", "New"],
       },
       {
         question:
           "What was the name of the event that led to a 're-negotiation of the sheep-human relationship'?",
         answers: ["Woolly Rebellion", "The Woolly Rebellion"],
+        tags: ["New"],
       },
       {
         question: "What dance does Tegan do in 'Black Orchid'?",
         answers: ["The Charleston", "Charleston"],
+        tags: ["Classic"],
       },
       {
         question: "What type of curry does Sylvia Noble make?",
         answers: ["Tuna Madras"],
+        tags: ["New"],
       },
       {
         question:
           "What episode opens by depicting the invention of television?",
         answers: ["The Giggle", "Giggle"],
+        tags: ["New"],
       },
       {
         question:
           "In which story does the Doctor put on a German accent and smash a clerk's head off a table? ",
         answers: ["The Highlanders", "Highlanders"],
+        tags: ["Classic"],
       },
       {
         question:
           "What foodstuff is the War Doctor introduced to in 'The Day of the Doctor'? ",
         answers: ["Cup a soup", "Cup-a-soup"],
+        tags: ["New"],
       },
       {
         question:
           "In what episode does the last surviving member of the Freedom Fifteen appear?",
         answers: ["The Long Game", "Long Game"],
+        tags: ["New"],
       },
       {
         question: "What do Jackie and Pete Tyler name their son?",
         answers: ["Tony"],
+        tags: ["New"],
       },
       {
         question:
           "What filming location does 'The Masque of the Mandragora' share with the original version of 'The Prisoner'?",
         answers: ["Portmeirion"],
+        tags: ["Classic"],
       },
       {
         question:
           "Who returned to Doctor Who in a new role for 'Nikola Tesla's Night of Terror'?",
         answers: ["Robert Glenister"],
+        tags: ["New"],
       },
       {
         question: "What country does 'Can You Hear Me?' start in?",
         answers: ["Syria"],
+        tags: ["New"],
       },
       {
         question: "What is the name of the undertaker in 'The Unquiet Dead'?",
         answers: ["Gabriel Sneed", "Sneed"],
+        tags: ["New"],
       },
       {
         question:
@@ -234,10 +271,12 @@ export const rounds: Round[] = [
         ],
         officialAnswer:
           "Big Brother, Stars in Their Eyes, Wipeout, Gound Force, Countdown or Call My Bluff.",
+        tags: ["New"],
       },
       {
         question: "How do the Sycorax hypnotise a third of humanity?",
         answers: ["Blood control"],
+        tags: ["New"],
       },
       {
         question: "What story implies that the Cult of Skaro kidnapped a pig?",
@@ -246,15 +285,18 @@ export const rounds: Round[] = [
           "Evolution of the Daleks",
           "Daleks in Manhattan/Evolution of the Daleks",
         ],
+        tags: ["New"],
       },
       {
         question: "Who plays Caecilius in 'The Fires of Pompeii'?",
         answers: ["Peter Capaldi"],
+        tags: ["New"],
       },
       {
         question:
           "In 'The Pandorica Opens', what does the oldest message in creation say?",
         answers: ["Hello sweetie"],
+        tags: ["New"],
       },
       {
         question:
@@ -266,21 +308,25 @@ export const rounds: Round[] = [
           "a crack",
           "crack",
         ],
+        tags: ["New"],
       },
       {
         question:
           "What impossible-sounding book does Clara discover in the TARDIS?",
         answers: ["The History of the Time War", "History of the Time War"],
+        tags: ["New"],
       },
       {
         question:
           "What are Gallifreyans made to stare into when they reach the age of 8?",
         answers: ["The Untempered Schism", "Untempered Schism", "time vortex"],
+        tags: ["New"],
       },
       {
         question:
           "Who appears in Bill's flat when she's in the middle of a date?",
         answers: ["The Pope", "Pope"],
+        tags: ["New"],
       },
       {
         question: "Name a character played by Alan Cumming",
@@ -292,59 +338,71 @@ export const rounds: Round[] = [
           "James I",
         ],
         officialAnswer: "Lux or King James VI and I",
+        tags: ["New"],
       },
       {
         question: "What is Ryan infected with on Orphan 55?",
         answers: ["A Hopper virus", "hopper virus"],
+        tags: ["New"],
       },
       {
         question: "What did Swarm and Azure use to trap survivors of the Flux?",
         answers: ["Passenger", "Passenger Form"],
+        tags: ["New"],
       },
       {
         question:
           "Name one of the locations that inhabitants of the Dalek asylum came from.",
         answers: ["Spiridon", "Kembel", "Aridius", "Vulcan", "Exillon"],
         officialAnswer: "Spiridon, Kembel, Aridius, Vulcan or Exillon.",
+        tags: ["Classic", "New"],
       },
       {
         question: "Who shot Amy and Rory's childhood friend Mels?",
         answers: ["Adolf Hitler", "Hitler"],
+        tags: ["New"],
       },
       {
         question:
           "What is the name of the subterranean Exillon befriended by the Third Doctor and Sarah Jane Smith?",
         answers: ["Bellal"],
+        tags: ["Classic"],
       },
       {
         question:
           "Which tentacled alien race come from the same star system as the Sensorites?",
         answers: ["The Ood", "Ood"],
+        tags: ["Classic", "New"],
       },
       {
         question:
           "Which story formed a loose sequel to 1966's 'The Smugglers'?",
         answers: ["The Curse of the Black Spot", "Curse of the Black Spot"],
+        tags: ["Classic", "New"],
       },
       {
         question:
           "Which entity that featured in two Season 5 stories returned as the main antagonist for Series 7b",
         answers: ["The Great Intelligence", "Great Intelligence"],
+        tags: ["Classic", "New"],
       },
       {
         question:
           "The Ice Warriors returned in 2013's 'Cold War' - what was the last story they appeared in before this?",
         answers: ["The Monster of Peladon", "Monster of Peladon"],
+        tags: ["Classic"],
       },
       {
         question:
           "True or False: the Second Doctor Handbook describes 'Dimensions in Time' as 'a dreadful travesty of a Doctor Who story'?",
         answers: ["True", "Correct", "Yep"],
+        tags: ["Classic"],
       },
       {
         question:
           "What does the Doctor do in 'The Lazarus Experiment' that he hadn't done for quite some time?",
         answers: ["Reverse the polarity"],
+        tags: ["New"],
       },
     ],
   },
@@ -357,19 +415,23 @@ export const rounds: Round[] = [
         question:
           "What is the name of the army General from 'Invasion of the Dinosaurs'?",
         answers: ["General Finch", "Finch"],
+        tags: ["Classic"],
       },
       {
         question:
           "Into which internal organ did General Sholakh plant the standard of the Empire?",
         answers: ["Heart"],
+        tags: ["Classic"],
       },
       {
         question: "What was Sontaran General Staal's nickname?",
         answers: ["The undefeated", "undefeated"],
+        tags: ["New"],
       },
       {
         question: "What was the leader of the Gaztak merecenaries in 'Meglos'?",
         answers: ["General Grugger", "Grugger"],
+        tags: ["Classic"],
       },
       {
         question: "Name a Doctor Who character played by John Abineri.",
@@ -385,30 +447,35 @@ export const rounds: Round[] = [
         ],
         officialAnswer:
           "Van Lutyens, General Carrington, Richard Railton or Ranquin.",
+        tags: ["Classic"],
       },
       {
         question:
           "Which Time Lord took 'The General' as not only their rank but primary name?",
         answers: ["The General"],
+        tags: ["New"],
       },
       {
         question:
           "What was the name of the General the Slitheen killed in Downing Street?",
         answers: ["General Asquith", "Asquith"],
+        tags: ["New"],
       },
       {
-        question:
-          "In 'The Tenth Planet' who told the Doctor 'I don't like your face'?",
+        question: "In 'The Tenth Planet' who was in charge of the Polar base?",
         answers: ["General Cutler", "Cutler"],
+        tags: ["Classic"],
       },
       {
         question: "Which general did the Tenth Doctor point a gun at?",
         answers: ["General Cobb", "Cobb"],
+        tags: ["New"],
       },
       {
         question:
           "What is the name of the army General from 'The Stolen Earth'?",
         answers: ["General Sanchez", "Sanchez"],
+        tags: ["New"],
       },
       {
         question: "What did the Master win in 'The Sound of Drums'?",
@@ -418,52 +485,63 @@ export const rounds: Round[] = [
           "General Election",
           "Election",
         ],
+        tags: ["New"],
       },
       {
         question:
           "Which UN official was among the monks' victims in 'The Pyramid at the End of the World'?",
         answers: ["The Secretary General", "Secretary General"],
+        tags: ["New"],
       },
       {
         question:
           "Who does Graham end up pretending to be after the intervention of King James I?",
         answers: ["The Witchfinder General", "Witchfinder General"],
+        tags: ["New"],
       },
       {
         question: "What job did Yaz's mum have at Jack Robertson's hotel?",
         answers: ["General Manager"],
+        tags: ["New"],
       },
       {
         question: "Who was given the job of setting up UNIT?",
         answers: ["General Farquhar", "Farquhar"],
+        tags: ["New"],
       },
       {
         question: "Who did the Doctor suppose 'came up through the ranks'?",
         answers: ["General Chellak", "Chellak"],
+        tags: ["Classic"],
       },
       {
         question:
           "What rank was General Williams when he accidentally ignited the Human-Draconian war?",
         answers: ["Lieutenant"],
+        tags: ["Classic"],
       },
       {
         question:
           "Guy Siner, who played General Ravon in 'Genesis of the Daleks', later found fame in which sitcom?",
         answers: ["'Allo! 'Allo!", "Allo Allo"],
+        tags: ["Classic"],
       },
       {
         question: "General Cheng Teik appears in which UNIT story?",
         answers: ["The Mind of Evil", "Mind of Evil"],
+        tags: ["Classic"],
       },
       {
         question:
           "What name was used by one of the War Lords in their simulation of World War 1?",
         answers: ["General Smythe", "Smythe"],
+        tags: ["Classic"],
       },
       {
         question:
           "What species was General Nikolai Hermack, Space Corps officer?",
         answers: ["Human"],
+        tags: ["Classic"],
       },
       {
         question:
@@ -472,6 +550,7 @@ export const rounds: Round[] = [
           "THe Pyramid at the End of the World",
           "Pyramid at the End of the World",
         ],
+        tags: ["New"],
       },
       {
         question:
@@ -704,7 +783,9 @@ export const rounds: Round[] = [
       {
         question:
           "How many High Council members do the Time Lords lose in 'The Five Doctors'?",
-        answers: ["2", "Two"],
+        answers: ["4", "Four"],
+        officialAnswer:
+          "Four - the President, the Castellan, and two members who venture into the Death Zone.",
       },
       {
         question:
@@ -933,7 +1014,7 @@ export const rounds: Round[] = [
       },
       {
         question: "Where is the 3W Institute based?",
-        answers: ["St Paul's Cathedral"],
+        answers: ["St Paul's Cathedral", "St Paul's", "St Pauls"],
       },
       {
         question:
@@ -991,69 +1072,85 @@ export const rounds: Round[] = [
       {
         question: "What landmark is the Nestene base beneath in 'Rose'? ",
         answers: ["The London Eye", "London Eye"],
+        tags: ["New"],
       },
       {
         question: "What organisation had John Lumic as CEO?",
         answers: ["Cybus Industries"],
+        tags: ["New"],
       },
       {
         question:
           "Where did the Doctor say goodbye to Rose Tyler in 'Journey's End'?",
         answers: ["Bad Wolf Bay"],
+        tags: ["New"],
       },
       {
         question: "Who knocked four times?",
         answers: ["Wilfred Mott", "Wilf"],
+        tags: ["New"],
       },
       {
         question: "The bulk of which story takes place in Bowie Base One?",
         answers: ["The Waters of Mars", "Waters of Mars"],
+        tags: ["New"],
       },
       {
         question: "What are Jenny, Vastra and Strax collectively known as?",
         answers: ["The Paternoster Gang", "Paternoster Gang"],
+        tags: ["New"],
       },
       {
         question: "Where in London did Rose and Jackie Tyler live?",
         answers: ["The Powell Estate", "Powell Estate"],
+        tags: ["New"],
       },
       {
         question: "What village did Amy and Rory grow up in?",
         answers: ["Leadworth"],
+        tags: ["New"],
       },
       {
         question: "What are you advised not to do on meeting a Weeping Angel?",
         answers: ["Blink"],
+        tags: ["New"],
       },
       {
         question: "What are the 13th Doctor's first words?",
-        answers: ["Oh brilliant"],
+        answers: ["Oh brilliant", "Oh, brilliant"],
+        tags: ["New"],
       },
       {
         question: "What are the 10th Doctor's last words?",
         answers: ["I don't want to go"],
+        tags: ["New"],
       },
       {
         question: "What does the 12th Doctor not like about his kidneys?",
         answers: ["The colour", "Colour"],
+        tags: ["New"],
       },
       {
         question:
           "What does the 10th Doctor have cut off by the Sycorax leader?",
         answers: ["His hand", "Hand", "Not that"],
+        tags: ["New"],
       },
       {
         question:
           "What name did the Master use when he entered British politics?",
         answers: ["Harold Saxon", "Mr Saxon"],
+        tags: ["New"],
       },
       {
         question: "In what conflict did the Doctor and Rose meet Captain Jack?",
         answers: ["World War Two", "World War 2", "Second World War"],
+        tags: ["New"],
       },
       {
         question: "Which Doctor fought in the Time War?",
         answers: ["The War Doctor", "War Doctor"],
+        tags: ["New"],
       },
       {
         question:
@@ -1063,79 +1160,96 @@ export const rounds: Round[] = [
           "Torchwood Institute",
           "Torchwood",
         ],
+        tags: ["New"],
       },
       {
         question: "What street did Sarah Jane Smith live on?",
         answers: ["Bannerman Road"],
+        tags: ["New"],
       },
       {
         question:
           "In their very first appearance, what opponent did UNIT successfully fight?",
         answers: ["The Cybermen", "Cybermen"],
+        tags: ["Classic"],
       },
       {
         question: "Which Doctor wore cricketing clothes?",
         answers: ["The Fifth", "Fifth", "5th"],
+        tags: ["Classic"],
       },
       {
         question:
           "Which recurring villain first appeared on the show kidnapping a circus in order to burgle a museum?",
         answers: ["The Master"],
+        tags: ["Classic"],
       },
       {
         question: "Which UNIT Scientist worked alongside her Zygon duplicate?",
         answers: ["Petronella Osgood", "Osgood"],
+        tags: ["New"],
       },
       {
         question: "Which actor has played the Doctor in the most series?",
         answers: ["Tom Baker"],
+        tags: ["Classic"],
       },
       {
         question:
           "Name one of the Eighties companions who returned in 'The Power of the Doctor'? ",
         answers: ["Tegan", "Tegan Jovanka", "Ace"],
         officialAnswer: "Ace or Tegan",
+        tags: ["New", "Classic"],
       },
       {
         question:
           "What creatures is Ruby Sunday plagued by before meeting the Doctor?",
         answers: ["Goblins"],
+        tags: ["New"],
       },
       {
         question:
           "Which villain from the Doctor's past returns for 'The Empire of Death'? ",
         answers: ["Sutekh", "Sutekh the Destroyer"],
+        tags: ["New", "Classic"],
       },
       {
         question: "What was both Rory Williams' and Belinda Chandra's job?",
         answers: ["Nurse"],
+        tags: ["New"],
       },
       {
         question:
           "In 'Wild Blue Yonder', what substance does the Doctor use to ward off monsters at the edge of the universe?",
         answers: ["Salt"],
+        tags: ["New"],
       },
       {
         question:
           "What character returned in 'The Giggle' having last appeared in 1966?",
         answers: ["The Toymaker", "Toymaker"],
+        tags: ["New", "Classic"],
       },
       {
         question: "What English city are Ryan and Yaz from?",
         answers: ["Sheffield"],
+        tags: ["New"],
       },
       {
         question: "What is Donna's mum's name?",
         answers: ["Sylvia", "Sylvia Noble"],
+        tags: ["New"],
       },
       {
         question:
           "What activity does Yaz immediately associate with Halloween?",
         answers: ["Trick or treat"],
+        tags: ["New"],
       },
       {
         question: "What is the very first episode of Doctor Who called?",
         answers: ["An Unearthly Child"],
+        tags: ["Classic"],
       },
       {
         question: "Which Doctors appear in the 1996 TV Movie?",
@@ -1147,24 +1261,29 @@ export const rounds: Round[] = [
           "McCoy and McGann",
           "McCoy MCGann",
         ],
+        tags: ["Classic"],
       },
       {
         question: "Which recurring character returns in the episode 'Utopia'?",
         answers: ["The Master"],
+        tags: ["New"],
       },
       {
         question:
           "What constellation is the Doctor's home planet of Gallifrey in?",
         answers: ["Kasterborous"],
+        tags: ["New", "Classic"],
       },
       {
         question: "What is the name of the Dalek's home planet?",
         answers: ["Skaro"],
+        tags: ["New", "Classic"],
       },
       {
         question:
           "What river does the Doctor accidentally drain in 'The Runaway Bride'?",
         answers: ["River Thames", "The Thames", "Thames"],
+        tags: ["New"],
       },
       {
         question: "What TV story does River Song first appear in?",
@@ -1172,6 +1291,7 @@ export const rounds: Round[] = [
           "Silence in the Library",
           "Silence in the Library/Forest of the Dead",
         ],
+        tags: ["New"],
       },
       {
         question:
@@ -1182,6 +1302,7 @@ export const rounds: Round[] = [
         question:
           "As of November 2025, who was the actor to most recently play the Master?",
         answers: ["Sacha Dhawan"],
+        tags: ["New"],
       },
     ],
   },
@@ -1194,43 +1315,52 @@ export const rounds: Round[] = [
         question:
           "What two-word term is given to Karvanista and the Lupari's call to defend Earth from the Flux?",
         answers: ["Species Recall"],
+        tags: ["New"],
       },
       {
         question: "In 'Rise Of The Cybermen', what breed of dog is Rose?",
         answers: ["Yorkshire Terrier"],
+        tags: ["New"],
       },
       {
         question:
           "On the good ship Terminus, the Garm is in charge of the decontamination process for what condition?",
         answers: ["Lazar's Disease", "Lazar's", "Lazars", "Lazars Disease"],
+        tags: ["Classic"],
       },
       {
         question:
           "Where does Sarah Jane Smith meet a dog and start whistling 'Daddy Wouldn't Buy Me A Bow Wow'?",
         answers: ["Aberdeen"],
+        tags: ["New", "Classic"],
       },
       {
         question: "In which village does Sarah Jane Smith first meet K9?",
         answers: ["Moreton Harwood"],
+        tags: ["Classic"],
       },
       {
         question: "Which planet has got dogs with no noses?",
         answers: ["Barcelona"],
+        tags: ["New"],
       },
       {
         question:
           "Prisoner Zero imitates Leadworth resident Barney Collins and his dog - what breed is the dog?",
         answers: ["Rottweiler"],
+        tags: ["New"],
       },
       {
         question:
           "Very good dog Gromit featured in the BBC One Christmas idents before which David Tennant episode?",
         answers: ["The Next Doctor", "Next Doctor"],
+        tags: ["New"],
       },
       {
         question:
           "In which story did Colin Baker inadvertently rub dog poo on his face?",
         answers: ["The Mark of the Rani", "Mark of the Rani"],
+        tags: ["Classic"],
       },
       {
         question:
@@ -1241,50 +1371,64 @@ export const rounds: Round[] = [
         question:
           "Producer John Nathan-Turner's dog, who occasionally cameoed in the show, shared her name with which soft drink?",
         answers: ["Pepsi"],
+        tags: ["Classic"],
       },
       {
         question:
           "Dog who remains unbothered when his landlord owner disappears in 'Night Terrors'. Shares his name with a unit of measurement.",
         answers: ["Bernard"],
+        tags: ["New"],
       },
       {
         question:
           "In 'Image of the Fendahl' what does Colby's dog Leakey find?",
         answers: ["A dead body", "dead body", "dead guy", "dead man", "corpse"],
+        tags: ["Classic"],
       },
-      { question: "Who invented K9?", answers: ["Professor Marius", "Marius"] },
+      {
+        question: "Who invented K9?",
+        answers: ["Professor Marius", "Marius"],
+        tags: ["Classic"],
+      },
       {
         question:
           "In Victorian London, what did the Cybermen convert dogs into?",
         answers: ["Cybershades"],
+        tags: ["New"],
       },
       {
         question:
           "What was the onomatopoeic name of the robot dog the Doctor plays with in the department store in 'Closing Time'?",
         answers: ["Yappy"],
+        tags: ["New"],
       },
       {
         question:
           "True or false: there are dogs in the human colony on Vulcan in 'Power of the Daleks'?",
         answers: ["True", "Correct", "Yes"],
+        tags: ["Classic"],
       },
       {
         question: "In which story does an unseen dog meet an Auton?",
         answers: ["Spearhead from Space"],
+        tags: ["Classic"],
       },
       {
         question:
           " Prior to filming The Pirate Planet, where did a Dog bite Tom Baker?",
         answers: ["Face", "Lip", "Upper lip"],
+        tags: ["Classic"],
       },
       {
         question: "In what season finale is London full of wild dogs?",
         answers: ["The Last of the Time Lords", "Last of the Time Lords"],
+        tags: ["New"],
       },
       {
         question:
           "In which Pertwee story do we see a dog before we see a human?",
         answers: ["Invasion of the Dinosaurs"],
+        tags: ["Classic"],
       },
     ],
   },
@@ -1297,54 +1441,65 @@ export const rounds: Round[] = [
       {
         question: "Which Federation diplomat was voiced by Ysanne Churchman?",
         answers: ["Alpha Centauri"],
+        tags: ["Classic", "New"],
       },
       {
         question:
           "What is the name of the Ood that reaches out to the Doctor and Donna in 'Planet Of The Ood'?",
         answers: ["Ood Sigma", "Sigma"],
+        tags: ["New"],
       },
       {
         question:
           "Which letter of the alphabet connects 'Kinda', 'The Parting Of The Ways' and a Season 24 story?",
         answers: ["Delta"],
+        tags: ["New", "Classic"],
       },
       {
         question: "What is the name of the planet of evil in 'Planet Of Evil'?",
         answers: ["Zeta Minor"],
+        tags: ["Classic"],
       },
       {
         question: "Name one of the humanised Daleks in 'Evil of the Daleks'?",
         answers: ["Alpha", "Beta", "Omega"],
         officialAnswer: "Alpha, Beta or Omega.",
+        tags: ["Classic"],
       },
       {
         question:
           "In 'A Good Man Goes To War', what is the name of Lorna Bucket's pondless, river-y homeland?",
         answers: ["Gamma Forest"],
+        tags: ["New"],
       },
       {
         question:
           "Which character is played by Jonathan Bailey in 'Time Heist'?",
         answers: ["Psi"],
+        tags: ["New"],
       },
       {
         question: "On which human colony is it illegal to be unhappy?",
         answers: ["Terra Alpha"],
+        tags: ["Classic"],
       },
       {
         question:
           "What letter connects 'The Five Doctors', 'Midnight', and 'Flatline'?",
         answers: ["Pi"],
+        tags: ["New", "Classic"],
       },
       {
         question:
           "According to Drax in 'The Armageddon Factor', what was the Doctor's nickname at the Academy?",
         answers: ["Theta Sigma"],
+        tags: ["Classic"],
       },
       {
         question:
           "Which bewhiskered Gond scientist helped Jamie attack the Kroton's ship with sulphuric acid?",
         answers: ["Beta"],
+        tags: ["Classic"],
       },
       {
         question:
@@ -1355,60 +1510,72 @@ export const rounds: Round[] = [
         question:
           "Where was the Dominator ship on course for before it landed on Dulkis?",
         answers: ["Epsilon 4", "Epsilon"],
+        tags: ["Classic"],
       },
       {
         question:
           "Which letter of the alphabet is a Judoon most likely to say?",
         answers: ["Rho"],
+        tags: ["New"],
       },
       {
         question: "What star system were Cessair of Diplos and the Ogri from?",
         answers: ["Tau Ceti"],
+        tags: ["Classic"],
       },
       {
         question:
           "What was the name of the evil corporation in 'Torchwood: Miracle Day'?",
         answers: ["Phicorp"],
+        tags: ["New"],
       },
       {
         question:
           "Which character from 'Vengeance on Varos' is a homonym of Ηη?",
         answers: ["Etta"],
+        tags: ["Classic"],
       },
       {
         question:
           "How might the soldiers of the Ninth Legion write the number for Sarah Jane Smith and the Thirteenth Doctor's debut seasons?",
         answers: ["XI"],
+        tags: ["New", "Classic"],
       },
       {
         question:
           "Which bureaucrat was sent to investigate disappearances under Helen A's regime?",
         answers: ["Trevor Sigma"],
+        tags: ["Classic"],
       },
       {
         question:
           "What sonic screwdriver setting breaks through artificial ivy?",
         answers: ["Theta Omega"],
+        tags: ["Classic"],
       },
       {
         question:
           "What type of blaster did River Song threaten and destroy a Dalek with?",
         answers: ["Alpha Meson"],
+        tags: ["New"],
       },
       {
         question:
           "What was the name of the planet of the Mentors in 'Mindwarp'? ",
         answers: ["Thoros Beta"],
+        tags: ["Classic"],
       },
       {
         question:
           "What did the Tenth Doctor claim to have invented on Queen Elizabeth II's coronation day? ",
         answers: ["Betamax"],
+        tags: ["New"],
       },
       {
         question:
           "True or false: the word 'iota' does not appear in televised Doctor Who.",
         answers: ["True", "correct", "Yes"],
+        tags: ["New", "Classic"],
       },
       {
         question: "What was Lady Cassandra O'Brien's full name?",
@@ -1416,11 +1583,13 @@ export const rounds: Round[] = [
           "Lady Cassandra O'Brien.Δ17",
           "Lady Cassandra O'Brien Dot Delta Seventeen",
         ],
+        tags: ["New"],
       },
       {
         question:
           "What letter do the First Doctor and Tegan utilise to cross a trap-laden chessboard?",
         answers: ["Pi"],
+        tags: ["Classic"],
       },
     ],
   },
@@ -1434,114 +1603,137 @@ export const rounds: Round[] = [
         question:
           "…does Mordred's maniacal laugh last for in 'Battlefield' (seconds)?",
         answers: ["25"],
+        tags: ["Classic"],
       },
       {
         question:
           "…between the end of Series 10 and its soundtrack being released (years)?",
         answers: ["8"],
+        tags: ["New"],
       },
       {
         question:
           "…does the Twelfth Doctor take to bring Clara the takeaway coffee she sends him for at the end of 'Deep Breath' (weeks)?",
         answers: ["3"],
+        tags: ["New"],
       },
       {
         question:
           "…is the panning shot on Brighton beach in 'The Leisure Hive' (seconds)?",
         answers: ["90"],
+        tags: ["Classic"],
       },
       {
         question:
           "…did the United Nations Intelligence Taskforce appear on screen for (years)?",
         answers: ["37"],
+        tags: ["New", "Classic"],
       },
       {
         question:
           "…is the countdown to the detonation of the reality bomb (rels)?",
         answers: ["200"],
+        tags: ["New"],
       },
       {
         question: "…is the fuse meant to be on Ace's Nitro-Nine (seconds)?",
         answers: ["10"],
+        tags: ["Classic"],
       },
       {
         question:
           "…is the chase sequence in 'Planet of the Spiders' Part 2 (minutes)? ",
         answers: ["12"],
+        tags: ["Classic"],
       },
       {
         question:
           "…does the Davison era opening title sequence last (seconds)?",
         answers: ["36"],
+        tags: ["Classic"],
       },
       {
         question: "…did Terrence Dicks script edit the show for (years)?",
         answers: ["6"],
+        tags: ["Classic"],
       },
       {
         question:
           "…between the guard saying he had a boyfriend and the guard getting killed in Resolution (seconds)?",
         answers: ["10"],
+        tags: ["New"],
       },
       {
         question:
           "…between Carole Ann Ford's last two onscreen appearances as Susan? (years)?",
         answers: ["43"],
+        tags: ["New", "Classic"],
       },
       {
         question:
           "...was the Fourth Doctor's scarf when he was searching for the Key to Time (feet)?",
         answers: ["18"],
+        tags: ["Classic"],
       },
       {
         question:
           "...does Kerblam employees paid leave last when operations are suspended for a month? (weeks)",
         answers: ["2"],
+        tags: ["New"],
       },
       {
         question:
           "...is the long game we first see in 'The Long Game' (years)?",
         answers: ["100"],
+        tags: ["New"],
       },
       {
         question:
           "…does Rose say she'll be at the end of 'World War Three' (seconds)?",
         answers: ["10"],
+        tags: ["New"],
       },
       {
         question:
           "…between the Doctor meeting Ryan's dad and telling him off (seconds)?",
         answers: ["11"],
+        tags: ["New"],
       },
       {
         question:
           "…between Matt Smith's announcement and David Tennant's regeneration (days)?",
         answers: ["363"],
+        tags: ["New"],
       },
       {
         question:
           "…between the announcement of RTD1 and the announcement of RTD2 (years)?",
         answers: ["19"],
+        tags: ["New"],
       },
       {
         question: "…did K9 Mark 1 last on the show (stories)?",
         answers: ["5"],
+        tags: ["Classic"],
       },
       {
         question:
           "…was Delia Derbyshire's version of the theme music used? (years)",
         answers: ["16"],
+        tags: ["Classic"],
       },
       {
         question:
           "…do the Ribosian seasons of Icetime and Suntime last? (Levithian years)",
         answers: ["32"],
+        tags: ["Classic"],
       },
       {
         question:
           "…between the announcement for 'Scream of the Shalka' and the announcement of the revived BBC 1 version of the show? (Days)",
         answers: ["79"],
         officialAnswer: "79 - from 9th July to 26 September 2003.",
+        tags: ["New"],
       },
     ],
   },
@@ -1555,108 +1747,134 @@ export const rounds: Round[] = [
         question:
           "The honeyed tones of this repeated meme featured in 'The Stolen Earth'.",
         answers: ["Richard Dawkins"],
+        tags: ["New"],
       },
       {
         question:
           "Which other 'Stolen Earth' guest previously appealed to Russell T. Davies to be in the show, saying: “I just want to wear a white coat and carry a clipboard and walk down a corridor saying 'I think it's alive, Doctor'”? ",
         answers: ["Paul O'Grady"],
+        tags: ["New"],
       },
       {
         question:
           "This journalist was political editor of the BBC when he appeared in 'Aliens Of London'.",
         answers: ["Andrew Marr"],
+        tags: ["New"],
       },
       {
         question:
           "Not to be confused with the Ood Elder voice actor, who appeared as himself in 'The Power Of Three'?",
         answers: ["Brian Cox"],
+        tags: ["New"],
       },
       {
         question:
           "This Blue Peter presenter was seen making a buttercream cake shaped like a Slitheen spaceship in 'Aliens Of London' and later interviewed Minions who hijacked the TARDIS in a BBC Radio 1 skit.",
         answers: ["Matt Baker"],
+        tags: ["New"],
       },
       {
         question:
           "This Series 5 guest-star said he “always wanted to open the door of the TARDIS” and he did, introducing Doctor Who cast members past and present on the 1985 'Children In Need' broadcast.",
         answers: ["Patrick Moore"],
+        tags: ["New"],
       },
       {
         question:
           "Which TV medium declared that nobody needed him anymore in 'Army of Ghosts'? ",
         answers: ["Derek Acorah"],
+        tags: ["New"],
       },
       {
         question:
           "Alongside Sian Williams, this much-missed BBC Breakfast presenter interviews Charles Dickens about his new Christmas special in 'The Wedding Of River Song'.",
         answers: ["Bill Turnbull"],
+        tags: ["New"],
       },
       {
         question:
           "Prior to appearing on Strictly Come Dancing in 2010, which terrible human being described Mr Saxon as 'a very fine man' and 'handsome too'?",
         answers: ["Anne Widdecombe"],
+        tags: ["New"],
       },
       {
         question:
           "Name the supporter and namesake of Mr Saxon who went on to win Strictly Come Dancing in 2011.",
         answers: ["Harry Judd"],
+        tags: ["New"],
       },
-      { question: "Killed by goblins.", answers: ["Davina McCall"] },
+      {
+        question: "Killed by goblins.",
+        answers: ["Davina McCall"],
+        tags: ["New"],
+      },
       {
         question:
           "Reported on a peace conference about to be invaded by Daleks.",
         answers: ["Alex McIntosh"],
+        tags: ["Classic"],
       },
       {
         question:
           "Appears as a hologram informing the Doctor and Belinda that the Earth was destroyed on 24 May 2025.",
         answers: ["Graham Norton"],
+        tags: ["New"],
       },
       {
         question: "Killed by Cybermen while presenting 'Ghostwatch'.",
         answers: ["Alastair Appleton"],
+        tags: ["New"],
       },
       {
         question: "Jazz musician whose gig the Doctor and Ace go to.",
         answers: ["Courtney Pine"],
+        tags: ["Classic"],
       },
       {
         question:
           "A newsreader across three decades, who also reported on War Machine attacks in Sixties London.",
         answers: ["Kenneth Kendall"],
+        tags: ["Classic"],
       },
       {
         question:
           "Former X-Factor judge who appeared endorsing a murderous psychopath.",
         answers: ["Sharon Osborne"],
+        tags: ["New"],
       },
       {
         question: "She interviewed Conrad Clark on 'The One Show'.",
         answers: ["Alex Jones"],
+        tags: ["New"],
       },
       {
         question: "In 2925 he is released from cryogenic suspension.",
         answers: ["Rylan", "Rylan Clark", "Rylan Clark-Neal"],
+        tags: ["New"],
       },
       {
         question:
           "Comedian and presenter who briefly appeared in 'Lucky Day' insulting Jonathan Ross.",
         answers: ["Joel Dommett"],
+        tags: ["New"],
       },
       {
         question:
           "He interviewed Roger ap Gwilliam, asking if he wanted to fire a nuclear weapon.",
         answers: ["Amol Rajan"],
+        tags: ["New"],
       },
       {
         question:
           "The then BBC Breakfast journalist reported on the sudden appearance of trees across the world.",
         answers: ["Jenny Hill"],
+        tags: ["New"],
       },
       {
         question:
           "Curmudgeonly peer who appears on TV in 'The Power of Three'.",
         answers: ["Alan Sugar"],
+        tags: ["New"],
       },
     ],
   },
@@ -1809,6 +2027,7 @@ export const rounds: Round[] = [
           "First Doctor",
         ],
         officialAnswer: "Ian Chesteron or Doctor Who.",
+        tags: ["Classic"],
       },
       {
         question: "The Name of the Doctor",
@@ -1818,16 +2037,19 @@ export const rounds: Round[] = [
           "The Great Intelligence",
           "Great Intelligence",
         ],
+        tags: ["New"],
       },
-      { question: "The Empty Child", answers: ["Rose"] },
+      { question: "The Empty Child", answers: ["Rose"], tags: ["New"] },
       {
         question: "The Wedding of River Song",
         answers: ["Dorium Maldovar", "Dorium", "Blue guy"],
+        tags: ["New"],
       },
-      { question: "The Next Doctor", answers: ["Rosita"] },
+      { question: "The Next Doctor", answers: ["Rosita"], tags: ["New"] },
       {
         question: "The Christmas Invasion",
         answers: ["Jackie Tyler", "Jackie"],
+        tags: ["New"],
       },
       {
         question: "The Snowmen",
@@ -1840,13 +2062,19 @@ export const rounds: Round[] = [
           "Eleventh Doctor",
         ],
         officialAnswer: "Clara. Or Jenny. Or The Doctor. Or Mr Punch.",
+        tags: ["New"],
       },
-      { question: "The War Machines", answers: ["WOTAN"] },
+      { question: "The War Machines", answers: ["WOTAN"], tags: ["Classic"] },
       {
         question: "World Enough and Time",
         answers: ["Missy", "Master", "The Master"],
+        tags: ["New"],
       },
-      { question: "Silver Nemesis", answers: ["Lady Peinforte", "Peinforte"] },
+      {
+        question: "Silver Nemesis",
+        answers: ["Lady Peinforte", "Peinforte"],
+        tags: ["Classic"],
+      },
       {
         question: "The Girl in the Fireplace",
         answers: [
@@ -1854,6 +2082,7 @@ export const rounds: Round[] = [
           "Reinette",
           "Jeanne-Antoinette Poisson",
         ],
+        tags: ["New"],
       },
       {
         question: "The Impossible Astronaut",
@@ -1865,8 +2094,13 @@ export const rounds: Round[] = [
           "Charles",
           "The King who brought back partying",
         ],
+        tags: ["New"],
       },
-      { question: "Black Orchid", answers: ["Lady Cranleigh"] },
+      {
+        question: "Black Orchid",
+        answers: ["Lady Cranleigh"],
+        tags: ["Classic"],
+      },
       {
         question: "Boom Town",
         answers: ["Idris Hopper", "Idris", "Secretary"],
@@ -1874,6 +2108,7 @@ export const rounds: Round[] = [
       {
         question: "Let's Kill Hitler",
         answers: ["The Doctor", "Eleventh Doctor"],
+        tags: ["New"],
       },
       {
         question: "Asylum of the Daleks",
@@ -1889,11 +2124,17 @@ export const rounds: Round[] = [
         ],
         officialAnswer:
           "Darla von Karlsen. Or the Dalek Prime Minster and Parliament. And the Doctor. Lots.",
+        tags: ["New"],
       },
-      { question: "The Angels Take Manhattan", answers: ["River Song"] },
+      {
+        question: "The Angels Take Manhattan",
+        answers: ["River Song"],
+        tags: ["New"],
+      },
       {
         question: "The Five Doctors (sort of)",
         answers: ["Colonel Crichton", "Crichton"],
+        tags: ["Classic"],
       },
     ],
   },
@@ -2078,6 +2319,7 @@ export const rounds: Round[] = [
           alt: "A squat, boxy ark ship",
         },
         answers: ["Four to Doomsday"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2086,6 +2328,7 @@ export const rounds: Round[] = [
           alt: "Monochrome. Dials and lights, two buttons marked 'water.",
         },
         answers: ["The Edge of Destruction", "Edge of Destruction"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2094,6 +2337,7 @@ export const rounds: Round[] = [
           alt: "The Third Doctor stands in a high-tech room full of shining metal, spooling tapes and controls.",
         },
         answers: ["The Green Death", "Green Death"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2102,6 +2346,7 @@ export const rounds: Round[] = [
           alt: "Monochrome. A small spacecraft arrives on a landing pad on an alien planet.",
         },
         answers: ["The Dalek Master Plan", "Dalek Master Plan"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2110,6 +2355,7 @@ export const rounds: Round[] = [
           alt: "A grey console with multicoloured switches and a small disc sticking out from a slot.",
         },
         answers: ["Warriors of the Deep"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2118,6 +2364,7 @@ export const rounds: Round[] = [
           alt: "A box with a red plastic border, holding what looks like a film projector and reel.",
         },
         answers: ["Blink"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2126,6 +2373,7 @@ export const rounds: Round[] = [
           alt: "A spaceship with many decks, similar to a cruise liner, flying past a pale planet.",
         },
         answers: ["Nightmare of Eden"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2134,6 +2382,7 @@ export const rounds: Round[] = [
           alt: "Six metal plates, with two rows of grilles on each.",
         },
         answers: ["Logopolis"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2142,6 +2391,7 @@ export const rounds: Round[] = [
           alt: "Wreathed in smoke, a dark domed device sits on top of a control plinth.",
         },
         answers: ["The Mind of Evil", "Mind of Evil"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2150,6 +2400,7 @@ export const rounds: Round[] = [
           alt: "A sleak spacecraft arrives next to a squat, dark space station.",
         },
         answers: ["Resurrection of the Daleks"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2158,6 +2409,7 @@ export const rounds: Round[] = [
           alt: "Some grey triangular decorations in front of a purpley-brown velour-looking wall, all overlit.",
         },
         answers: ["Arc of Infinity"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2166,6 +2418,7 @@ export const rounds: Round[] = [
           alt: "White round objects embedded in a grey wall, a cable just visible in the top left.",
         },
         answers: ["The Day of the Doctor", "Day of the Doctor"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2174,6 +2427,7 @@ export const rounds: Round[] = [
           alt: "A strange helmet, metallic and with what looks like computer-enhanced binoculars built into the front.",
         },
         answers: ["The War Games", "War Games"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2182,6 +2436,7 @@ export const rounds: Round[] = [
           alt: "A massive, brutal lump of a spacecraft.",
         },
         answers: ["Ascension of the Cybermen"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2190,6 +2445,7 @@ export const rounds: Round[] = [
           alt: "A very plain, dull corridor wall with a potted plant offering some respite from the monotony.",
         },
         answers: ["Timelash"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2198,6 +2454,7 @@ export const rounds: Round[] = [
           alt: "The Doctor stumbles out from a cylindrical base, its sides covered in dull white/grey metallic plates.",
         },
         answers: ["Carnival of Monsters"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2206,6 +2463,7 @@ export const rounds: Round[] = [
           alt: "What looks life a soft domed hat covered in indents, like the underside of an egg carton.",
         },
         answers: ["The Moonbase", "Moonbase"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2214,6 +2472,7 @@ export const rounds: Round[] = [
           alt: "A ship in orbit, a blinding white light emitting from its centre.",
         },
         answers: ["The Ghost Monument", "Ghost Monument"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2222,6 +2481,7 @@ export const rounds: Round[] = [
           alt: "A cassette inside a dark box with multicoloured buttons, with a red sun motif on top coverering a beigee grille.",
         },
         answers: ["Silver Nemesis"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2230,6 +2490,7 @@ export const rounds: Round[] = [
           alt: "Sheer, grey, brutal towers with plantlife overflowing from upper balconies.",
         },
         answers: ["Paradise Towers"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2238,6 +2499,7 @@ export const rounds: Round[] = [
           alt: "A computer bank and grey walls with metal grilles covering a section.",
         },
         answers: ["The Horns of Nimon", "Horns of Nimon"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2246,6 +2508,7 @@ export const rounds: Round[] = [
           alt: "A man in a tweed jacket holds a car wing mirror connected to a circular brass device with yellow midsection.",
         },
         answers: ["Vincent and the Doctor"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2254,6 +2517,7 @@ export const rounds: Round[] = [
           alt: "A silver finger reached out to a metallic keypad with art deco borders.",
         },
         answers: ["The Robots of Death", "Robots of Death"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2262,6 +2526,7 @@ export const rounds: Round[] = [
           alt: "Monochrome. A record plays on a gramophone with a transistor radio next to it.",
         },
         answers: ["The Time Meddler", "Time Meddler"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2270,6 +2535,7 @@ export const rounds: Round[] = [
           alt: "An archway covereed in cabling and circuits, emitting pale blue lightning.",
         },
         answers: ["The End of Time", "End of Time", "End of Time Part One"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2278,6 +2544,7 @@ export const rounds: Round[] = [
           alt: "Monochrome. A clear plastic dome covers circuitry.",
         },
         answers: ["The Wheel in Space", "Wheel in Space"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2286,6 +2553,7 @@ export const rounds: Round[] = [
           alt: "A round, cast iron cooking device.",
         },
         answers: ["War of the Sontarans"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2294,6 +2562,7 @@ export const rounds: Round[] = [
           alt: "A small, turquoise, metallic device with lights on is front and top, and small whirring arms.",
         },
         answers: ["The Robot Revolution", "Robot Revolution"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2302,6 +2571,7 @@ export const rounds: Round[] = [
           alt: "A large cardboard box labelled 'Masoki'",
         },
         answers: ["Resolution"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2310,6 +2580,7 @@ export const rounds: Round[] = [
           alt: "A large, red blur above a dark metallic walkway.",
         },
         answers: ["The End of the World", "End of the World"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2318,6 +2589,7 @@ export const rounds: Round[] = [
           alt: "A brown shoe on top of a short cylinder, with glowing green sides.",
         },
         answers: ["Boom"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2326,6 +2598,7 @@ export const rounds: Round[] = [
           alt: "A metallic wing from a vehicle smashing into the face of a clock tower.",
         },
         answers: ["Aliens of London", "Aliens of London/World War Three"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2334,6 +2607,7 @@ export const rounds: Round[] = [
           alt: "An electric razor, held in front of brown shelves.",
         },
         answers: ["The Story and the Engine", "Story and the Engine"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2346,6 +2620,7 @@ export const rounds: Round[] = [
           "Empty Child",
           "The Empty Child/The Doctor Dances",
         ],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2354,6 +2629,7 @@ export const rounds: Round[] = [
           alt: "A store room lit by strip lights. Metal shelves containing hundreds of cans of beans.",
         },
         answers: ["Eve of the Daleks"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2362,6 +2638,7 @@ export const rounds: Round[] = [
           alt: "A large wooden sailing vessel at sea, barely moving. The sky above it is grey.",
         },
         answers: ["Legend of the Sea Devils"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2370,6 +2647,7 @@ export const rounds: Round[] = [
           alt: "A grey-brown, Eighties looking car driving along a road.",
         },
         answers: ["Father's Day"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2378,6 +2656,7 @@ export const rounds: Round[] = [
           alt: "A Cybermen head behind glass.",
         },
         answers: ["Dalek"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2386,6 +2665,7 @@ export const rounds: Round[] = [
           alt: "A round black ship on squatting on three bent legs, on a muddy/rocky landscape with orange sky.",
         },
         answers: ["City of Death"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2394,6 +2674,7 @@ export const rounds: Round[] = [
           alt: "A grubby corner wall with 'Pex Lives' graffitied onto it.",
         },
         answers: ["Paradise Towers"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2402,6 +2683,7 @@ export const rounds: Round[] = [
           alt: "Monochrome. Small, chess-piece-sized figures on a board. They look like bulky bears.",
         },
         answers: ["The Abominable Snowmen", "Abominable Snowmen"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2410,6 +2692,7 @@ export const rounds: Round[] = [
           alt: "Monochrome. The head of a carved figure with one central eye.",
         },
         answers: ["The Ark"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2418,6 +2701,7 @@ export const rounds: Round[] = [
           alt: "Monochrome. Atop a small hill of sand is a wooden horse.",
         },
         answers: ["The Myth Makers", "Myth Makers"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2426,6 +2710,7 @@ export const rounds: Round[] = [
           alt: "In a sandy quarry is a bulky black and silver craft, supported on huge stanchions.",
         },
         answers: ["Terror of the Zygons"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2434,6 +2719,7 @@ export const rounds: Round[] = [
           alt: "A green tray holding a plate with a toastie on it, and a mug with brown foam and Christmas patterns in it.",
         },
         answers: ["Joy to the World"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2442,6 +2728,7 @@ export const rounds: Round[] = [
           alt: "In a dimly lit corridor two cylindrical storage containers wait ominously.",
         },
         answers: ["Earthshock"],
+        tags: ["Classic"],
       },
       {
         question: "",
@@ -2450,6 +2737,7 @@ export const rounds: Round[] = [
           alt: "A partly opaque glass bowl, with a gas ignited flame coming from its centre. Behind it are more ornate candles and lights.",
         },
         answers: ["The Unquiet Dead", "Unquiet Dead"],
+        tags: ["New"],
       },
       {
         question: "",
@@ -2458,6 +2746,7 @@ export const rounds: Round[] = [
           alt: "Above woodland and villages a tower emerges from rock.",
         },
         answers: ["State of Decay"],
+        tags: ["Classic"],
       },
     ],
   },
@@ -2500,6 +2789,7 @@ export const rounds: Round[] = [
         answers: ["Christopher Eccleston"],
         officialAnswer:
           "Christopher Eccleston is credited as 'Doctor Who' instead of 'The Doctor'.",
+        tags: ["New"],
       },
       {
         question:
@@ -2511,6 +2801,7 @@ export const rounds: Round[] = [
           "Explode The Bomb",
         ],
         answers: ["Fire Your Weaponry"],
+        tags: ["Classic"],
       },
       {
         question: "Which of these is not an actual plan of the Doctor's?",
@@ -2521,6 +2812,7 @@ export const rounds: Round[] = [
           "Terraform Skaro into a verdant pastoral idyll",
         ],
         answers: ["Terraform Skaro into a verdant pastoral idyll"],
+        tags: ["Classic"],
       },
       {
         question:
@@ -2532,6 +2824,7 @@ export const rounds: Round[] = [
           "Children of the Erinella",
         ],
         answers: ["Children of the Erinella"],
+        tags: ["Classic"],
       },
       {
         question: "Which actor has not been in a Big Finish audio play?",
@@ -2553,6 +2846,7 @@ export const rounds: Round[] = [
           "Kinda",
         ],
         answers: ["The Ribos Operation"],
+        tags: ["Classic"],
       },
       {
         question:
@@ -2564,6 +2858,7 @@ export const rounds: Round[] = [
         question: "Which of these is not a name created by Chris Chibnall?",
         options: ["Qurunx", "Feekat", "Awsok", "Ekzor"],
         answers: ["Ekzor"],
+        tags: ["New"],
       },
       {
         question:
@@ -2575,6 +2870,7 @@ export const rounds: Round[] = [
           "Horror of Fang Rock",
         ],
         answers: ["Ascension of the Cybermen"],
+        tags: ["New"],
       },
       {
         question:
@@ -2623,6 +2919,7 @@ export const rounds: Round[] = [
           "Suranne Jones",
         ],
         answers: ["Nigel Havers"],
+        tags: ["New"],
       },
       {
         question: "Who has not been in both Doctor Who and Bridgerton?",
@@ -2633,6 +2930,7 @@ export const rounds: Round[] = [
           "Anthony Head",
         ],
         answers: ["James Fleet"],
+        tags: ["New"],
       },
       {
         question: "Which companion exit is the odd one out?",
@@ -2678,6 +2976,7 @@ export const rounds: Round[] = [
           "Mark Gatiss",
         ],
         answers: ["Ben Bailey Smith"],
+        tags: ["New"],
       },
       {
         question: "Who's the odd one out, marriage wise?",
@@ -2726,6 +3025,7 @@ export const rounds: Round[] = [
         answers: ["Warriors of the Deep"],
         officialAnswer:
           "Warriors of the Deep does not offer an explanation for the sinking of Atlantis.",
+        tags: ["Classic"],
       },
       {
         question: "Which is the odd one out?",
@@ -2757,6 +3057,7 @@ export const rounds: Round[] = [
         answers: ["Ricky Smith"],
         officialAnswer:
           "The Cybermen kill Ricky Smith and try to convert the others.",
+        tags: ["New"],
       },
       {
         question: "Which story is the odd one out?",
@@ -2769,6 +3070,7 @@ export const rounds: Round[] = [
         answers: ["The Day of the Doctor"],
         officialAnswer:
           "The Day of the Doctor does not feature any children being killed.",
+        tags: ["New"],
       },
       {
         question: "Which story is the odd one out odd one out?",
@@ -2793,6 +3095,7 @@ export const rounds: Round[] = [
         answers: ["The Pandorica Opens"],
         officialAnswer:
           "The Pandorica Opens does not feature a cameo from Mark Gatiss.",
+        tags: ["New"],
       },
       {
         question: "Who is the odd one out?",
@@ -2812,6 +3115,7 @@ export const rounds: Round[] = [
         answers: ["The Aztecs"],
         officialAnswer:
           "As of 23/11/2025 only The Aztecs is not completely missing from the archives.",
+        tags: ["Classic"],
       },
       {
         question: "Which story is the odd one out?",
@@ -2880,6 +3184,7 @@ export const rounds: Round[] = [
         answers: [
           "The Romans, An Unearthly Child, The Chase, The Time Meddler",
         ],
+        tags: ["Classic"],
       },
       {
         question: "What stories' production codes spell 'MOON'?",
@@ -2890,6 +3195,7 @@ export const rounds: Round[] = [
           "The Romans, The Ice Warriors, The Web Planet",
         ],
         answers: ["The Romans, The Ice Warriors, The Web Planet"],
+        tags: ["Classic"],
       },
       {
         question: "What stories' production codes spell 'YAZ'?",
@@ -2902,6 +3208,7 @@ export const rounds: Round[] = [
         answers: [
           "The Celestial Toymaker, An Unearthly Child, The Gunfighters",
         ],
+        tags: ["Classic"],
       },
       {
         question: "What story's production code is also a type of gun?",
@@ -2913,6 +3220,7 @@ export const rounds: Round[] = [
         ],
         answers: ["The War Machines"],
         officialAnswer: "The War Machines: BB.",
+        tags: ["Classic"],
       },
       {
         question: "What story has the most sarcastic sounding production code?",
@@ -2924,6 +3232,7 @@ export const rounds: Round[] = [
         ],
         answers: ["The Time Monster"],
         officialAnswer: "The Time Monster: OOO",
+        tags: ["Classic"],
       },
       {
         question: "What story's production code implies it to be hardcore?",
@@ -2935,6 +3244,7 @@ export const rounds: Round[] = [
         ],
         answers: ["Death to the Daleks"],
         officialAnswer: "Death to the Daleks: XXX",
+        tags: ["Classic"],
       },
       {
         question: "Which story has production code 5A?",
@@ -2945,6 +3255,7 @@ export const rounds: Round[] = [
           "The Ribos Operation",
         ],
         answers: ["The Ribos Operation"],
+        tags: ["Classic"],
       },
       {
         question: "Which story has production code 6A?",
@@ -2955,6 +3266,7 @@ export const rounds: Round[] = [
           "Attack of the Cybermen",
         ],
         answers: ["Black Orchid"],
+        tags: ["Classic"],
       },
       {
         question: "What is the last story to have a production code?",
@@ -2965,6 +3277,7 @@ export const rounds: Round[] = [
           "The Power of the Doctor",
         ],
         answers: ["The Wedding of River Song"],
+        tags: ["New"],
       },
       {
         question: "What stories' production codes spell 'Eric Saward'?",
@@ -2975,6 +3288,7 @@ export const rounds: Round[] = [
           "You can't spell 'Eric Saward' with production codes",
         ],
         answers: ["You can't spell 'Eric Saward' with production codes"],
+        tags: ["Classic"],
       },
       {
         question:
@@ -3025,6 +3339,7 @@ export const rounds: Round[] = [
         ],
         answers: ["Spearhead from Space"],
         officialAnswer: "Spearhead from Space: AAA",
+        tags: ["Classic"],
       },
       {
         question:
@@ -3047,6 +3362,7 @@ export const rounds: Round[] = [
           "The Dalek Invasion of Earth from Steps",
         ],
         answers: ["The Reign of Terror from Steps"],
+        tags: ["Classic"],
       },
       {
         question: "What stories' production codes spell 'HELP'?",
@@ -3059,12 +3375,14 @@ export const rounds: Round[] = [
         answers: [
           "The Reign of Terror, The Keys of Marinus, The Rescue, The Crusade",
         ],
+        tags: ["Classic"],
       },
       {
         question:
           "What was the production code for the first Fifth Doctor story, 'Castrovalva'?",
         options: ["5A", "5.1", "5.4", "5Z"],
         answers: ["5Z"],
+        tags: ["Classic"],
       },
       {
         question: "What stories' production codes spell 'Ace'?",
@@ -3077,6 +3395,7 @@ export const rounds: Round[] = [
         answers: [
           "An Unearthly Child, The Edge of Destruction, The Keys of Marinus",
         ],
+        tags: ["Classic"],
       },
       {
         question:
@@ -3089,6 +3408,7 @@ export const rounds: Round[] = [
         ],
         answers: ["The Creature from the Pit"],
         officialAnswer: "The Creature from the Pit: 5G",
+        tags: ["Classic"],
       },
     ],
   },
@@ -3102,21 +3422,25 @@ export const rounds: Round[] = [
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_1.mp3",
         answers: ["Remembrance of the Daleks"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_2.mp3",
         answers: ["The End of the World", "End of the World"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_3.mp3",
         answers: ["Colony in Space"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_4.mp3",
         answers: ["Aliens of London", "Aliens of London/World War Three"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
@@ -3126,21 +3450,25 @@ export const rounds: Round[] = [
           "Big Bang",
           "The Pandorica Opens/The Big Bang",
         ],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_6.mp3",
         answers: ["Arachnids in the UK"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_7.mp3",
         answers: ["Revelation of the Daleks"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_8.mp3",
         answers: ["Love & Monsters"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
@@ -3150,76 +3478,97 @@ export const rounds: Round[] = [
           "Rebel Flesh",
           "The Rebel Flesh/The Almost People",
         ],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_10.mp3",
         answers: ["The Power of the Doctor", "Power of the Doctor"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_11.mp3",
         answers: ["The Power of Three", "Power of Three"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_12.mp3",
         answers: ["Love & Monsters"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_13.mp3",
         answers: ["The Giggle"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_14.mp3",
         answers: ["Cold War"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_15.mp3",
         answers: ["The Sound of Drums", "Sound of Drums"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_16.mp3",
         answers: ["The Last of the Time Lords", "Last of the Time Lords"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_17.mp3",
         answers: ["Vincent and the Doctor"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_18.mp3",
         answers: ["The Angels Take Manhattan", "Angels Take Manhattan"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_19.mp3",
         answers: ["Tooth and Claw"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_20.mp3",
         answers: ["Rise of the Cybermen"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_21.mp3",
         answers: ["Sleep No More"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_22.mp3",
         answers: ["Rosa"],
+        tags: ["New"],
       },
       {
         question: "Which story does this song feature in?",
         audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_23.mp3",
         answers: ["Rogue"],
+        tags: ["New"],
+      },
+      {
+        question: "Which story does this song feature in?",
+        audio: "/audio/DrWhoQuiz/intros_pop/pop_intro_24.mp3",
+        answers: ["The Return of Doctor Mysterio", "Return of Doctor Mysterio"],
+        tags: ["New"],
       },
     ],
   },
@@ -3234,206 +3583,307 @@ export const rounds: Round[] = [
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_1.mp3",
         answers: ["The Krotons", "Krotons"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_2.mp3",
         answers: ["A Christmas Carol", "Christmas Carol"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_3.mp3",
         answers: ["The Caves of Androzani", "Caves of Androzani"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_4.mp3",
         answers: ["The Big Bang", "Big Bang"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_5.mp3",
         answers: ["The Timeless Children", "Timeless Children"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_6.mp3",
         answers: ["Blink"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_7.mp3",
         answers: ["City of Death"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_8.mp3",
         answers: ["Death to the Daleks"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_9.mp3",
         answers: ["Delta and the Bannermen"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_10.mp3",
         answers: ["Demons of the Punjab"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_11.mp3",
         answers: ["Doomsday"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_12.mp3",
         answers: ["Earthshock"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_13.mp3",
         answers: ["Enlightenment"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_14.mp3",
         answers: ["The Curse of Fenric", "Curse of Fenric"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_15.mp3",
         answers: ["The Five Doctors", "Five Doctors"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_16.mp3",
         answers: ["Genesis of the Daleks"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_17.mp3",
         answers: ["The Gunfighters"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_18.mp3",
         answers: ["The Invasion"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_19.mp3",
         answers: ["Journey's End"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_20.mp3",
         answers: ["Logopolis"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_21.mp3",
         answers: ["The Rings of Akhaten", "Rings of Akhaten"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_22.mp3",
         answers: ["The Macra Terror", "Macra Terror"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_23.mp3",
         answers: ["The Mark of the Rani", "Mark of the Rani"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_24.mp3",
         answers: ["The Mind of Evil", "Mind of Evil"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_25.mp3",
         answers: ["Rose"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_26.mp3",
         answers: ["The Sea Devils", "Sea Devils"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_27.mp3",
         answers: ["Heaven Sent"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_28.mp3",
         answers: ["The Silurians", "Doctor Who and the Silurians"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_29.mp3",
         answers: ["The Interstellar Song Contest", "Interstellar Song Contest"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_30.mp3",
         answers: ["Survival"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_31.mp3",
         answers: ["Terror of the Zygons"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_32.mp3",
         answers: ["The Chase"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_33.mp3",
         answers: ["The Daleks"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_34.mp3",
         answers: ["Time and the Rani"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_35.mp3",
         answers: ["The TV Movie", "TV Movie", "TVM", "Doctor Who"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_36.mp3",
         answers: ["The Underwater Menace", "Underwater Menace"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_37.mp3",
         answers: ["Utopia"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_38.mp3",
         answers: ["The End of Time", "End of Time"],
+        tags: ["New"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_39.mp3",
         answers: ["Vengeance on Varos"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_40.mp3",
         answers: ["The Visitation"],
+        tags: ["Classic"],
       },
       {
         question: "Which story does this music feature in?",
         audio: "/audio/DrWhoQuiz/incidental/incidental_41.mp3",
         answers: ["The Wheel in Space", "Wheel in Space"],
+        tags: ["Classic"],
+      },
+      {
+        question: "Which story does this music feature in?",
+        audio: "/audio/DrWhoQuiz/incidental/incidental_42.mp3",
+        answers: ["Resurrection of the Daleks"],
+        tags: ["Classic"],
+      },
+      {
+        question: "Which story does this music feature in?",
+        audio: "/audio/DrWhoQuiz/incidental/incidental_43.mp3",
+        answers: ["Mawdryn Undead"],
+        tags: ["Classic"],
+      },
+      {
+        question: "Which story does this music feature in?",
+        audio: "/audio/DrWhoQuiz/incidental/incidental_44.mp3",
+        answers: ["Arc of Infinity"],
+        tags: ["Classic"],
+      },
+      {
+        question: "Which story does this music feature in?",
+        audio: "/audio/DrWhoQuiz/incidental/incidental_45.mp3",
+        answers: ["The Keeper of Traken", "Keeper of Traken"],
+        tags: ["Classic"],
+      },
+      {
+        question: "Which story does this music feature in?",
+        audio: "/audio/DrWhoQuiz/incidental/incidental_46.mp3",
+        answers: ["The Two Doctors", "Two Doctors"],
+        tags: ["Classic"],
+      },
+      {
+        question: "Which story does this music feature in?",
+        audio: "/audio/DrWhoQuiz/incidental/incidental_47.mp3",
+        answers: ["The Girl in the Fireplace", "Girl in the Fireplace"],
+        tags: ["New"],
+      },
+      {
+        question: "Which story does this music feature in?",
+        audio: "/audio/DrWhoQuiz/incidental/incidental_48.mp3",
+        answers: [
+          "The Impossible Planet",
+          "The Satan Pit",
+          "The Impossible Planet/The Satan Pit",
+          "Impossible Planet",
+          "Satan Pit",
+        ],
+        tags: ["New"],
+      },
+      {
+        question: "Which story does this music feature in?",
+        audio: "/audio/DrWhoQuiz/incidental/incidental_49.mp3",
+        answers: ["Ascension of the Cybermen"],
+        tags: ["New"],
+      },
+      {
+        question: "Which story does this music feature in?",
+        audio: "/audio/DrWhoQuiz/incidental/incidental_50.mp3",
+        answers: ["The Devil's Chord", "Devil's Chord"],
+        tags: ["New"],
       },
     ],
   },
@@ -3446,42 +3896,52 @@ export const rounds: Round[] = [
       {
         question: "Drowned in a vat of fondant surprise.",
         answers: ["The Happiness Patrol", "Happiness Patrol"],
+        tags: ["Classic"],
       },
       {
         question: "Electrocuted in undersea kung fu gambit.",
         answers: ["Warriors of the Deep"],
+        tags: ["Classic"],
       },
       {
         question: "Shot in face at point blank range in front of his family.",
         answers: ["Rose"],
+        tags: ["New"],
       },
       {
         question: "Atomised by gargoyle.",
         answers: ["The Daemons", "Daemons"],
+        tags: ["Classic"],
       },
       {
         question: "Pushed into giant brain.",
         answers: ["Planet of the Ood"],
+        tags: ["New"],
       },
       {
         question: "Cannibal in nappy poisoned by plant.",
         answers: ["Vengeance on Varos"],
+        tags: ["Classic"],
       },
       {
         question: "Eaten by teachers.",
         answers: ["School Reunion"],
+        tags: ["New"],
       },
       {
         question: "Stabbed through the heart with spaceship.",
         answers: ["State of Decay"],
+        tags: ["Classic"],
       },
       {
         question: "Organs harvested by clockwork robots.",
         answers: ["The Girl in the Fireplace", "Girl in the Fireplace"],
+        tags: ["New"],
       },
       {
         question: "Thrown into centre of the Earth by giant spider.",
         answers: ["The Runaway Bride", "Runaway Bride"],
+        tags: ["New"],
       },
       {
         question: "SatNav drove her into river.",
@@ -3490,42 +3950,52 @@ export const rounds: Round[] = [
           "Sontaran Stratagem",
           "The Sontaran Stratagem/The Poison Sky",
         ],
+        tags: ["New"],
       },
       {
         question: "Eaten by the Master.",
         answers: ["The End of Time", "End of Time", "The End of Time Part One"],
+        tags: ["New"],
       },
       {
         question: "Fell off a cloud.",
         answers: ["The Snowmen"],
+        tags: ["New"],
       },
       {
         question: "Dissected by creature hiding in carpet.",
         answers: ["Flatline"],
+        tags: ["New"],
       },
       {
         question: "Suffocated by snake materialising in windpipe.",
         answers: ["Survivors of the Flux"],
+        tags: ["New"],
       },
       {
         question: "Killed by bubble wrap.",
         answers: ["Kerblam!", "Kerblam"],
+        tags: ["New"],
       },
       {
         question: "Drained of energy by vampiric celestial body.",
         answers: ["The Tenth Planet", "Tenth Planet"],
+        tags: ["Classic"],
       },
       {
         question: "Utterly disintegrated by shop window dummy.",
         answers: ["Spearhead from Space"],
+        tags: ["Classic"],
       },
       {
         question: "Smothered by own chair.",
         answers: ["Terror of the Autons"],
+        tags: ["Classic"],
       },
       {
         question: "Thrown off thousand metre high building.",
         answers: ["The Sun Makers", "Sun Makers", "Sunmakers", "The Sunmakers"],
+        tags: ["Classic"],
       },
       {
         question: "Mauled by sacred beast.",
@@ -3536,10 +4006,12 @@ export const rounds: Round[] = [
           "Monster of Peladon",
         ],
         officialAnswer: "The Curse of Peladon or The Monster of Peladon.",
+        tags: ["Classic"],
       },
       {
         question: "Consumed by giant space wasp grub.",
         answers: ["The Ark in Space", "Ark in Space"],
+        tags: ["Classic"],
       },
       {
         question: "Bullet to the guts.",
@@ -3549,99 +4021,123 @@ export const rounds: Round[] = [
           "Resurrection of the Daleks",
         ],
         officialAnswer: "The Brain of Morbius or Resurrection of the Daleks.",
+        tags: ["Classic"],
       },
       {
         question: "Shot by customs officer while on drug-induced comedown.",
         answers: ["Nightmare of Eden"],
+        tags: ["Classic"],
       },
       {
         question: "Decapitated by Roundheads",
         answers: ["The Awakening", "Awakening"],
+        tags: ["Classic"],
       },
       {
         question: "Turned into tree by land mine.",
         answers: ["The Mark of the Rani", "Mark of the Rani"],
+        tags: ["Classic"],
       },
       {
         question: "Stabbed by alien who refused to pay restaurant bill.",
         answers: ["The Two Doctors", "Two Doctors"],
+        tags: ["Classic"],
       },
       {
         question: "Beaten to death with tree branch.",
         answers: ["Revelation of the Daleks"],
+        tags: ["Classic"],
       },
       {
         question: "Turned into soup by angel.",
         answers: ["Ghost light", "Ghostlight"],
+        tags: ["Classic"],
       },
       {
         question: "Dragged down own waste disposal unit.",
         answers: ["Paradise Towers"],
+        tags: ["Classic"],
       },
       {
         question: "Impaled on easel.",
         answers: ["Vincent and the Doctor"],
+        tags: ["New"],
       },
       {
         question: "Falls into engine while trapped on fork-lift truck.",
         answers: ["Voyage of the Damned"],
+        tags: ["New"],
       },
       {
         question: "A replica of the Titanic lands on Buckingham Palace.",
         answers: ["Turn Left"],
+        tags: ["New"],
       },
       {
         question: "Eaten by hyper-evolved eye mucus.",
         answers: ["Sleep No More"],
+        tags: ["New"],
       },
       {
         question: "DNA rewritten by disgruntled son.",
         answers: ["Spyfall", "Spyfall Part Two"],
+        tags: ["New"],
       },
       {
         question: "Shot by sister/work colleague.",
         answers: ["The Dalek Master Plan", "Dalek Master Plan"],
+        tags: ["Classic"],
       },
       {
         question: "Shot by concerned history teacher.",
         answers: ["The Rescue"],
+        tags: ["Classic"],
       },
       {
         question: "Horny Italian has neck broken.",
         answers: ["The Tenth Planet", "Tenth Planet"],
+        tags: ["Classic"],
       },
       {
         question: "Set on fire by metal snake.",
         answers: ["Death to the Daleks"],
+        tags: ["Classic"],
       },
       {
         question: "Pushed off mountain by gang of witches.",
         answers: ["The Brain of Morbius", "Brain of Morbius"],
+        tags: ["Classic"],
       },
       {
         question: "Falls into composting machine.",
         answers: ["The Seeds of Doom", "Seeds of Doom"],
+        tags: ["Classic"],
       },
       {
         question: "Electrocuted by lil green shape shifter.",
         answers: ["The Horror of Fang Rock", "Horror of Fang Rock"],
+        tags: ["Classic"],
       },
       {
         question:
           "Transformed into furious dog-creature then sprayed with fire extinguishers.",
         answers: ["Inferno"],
+        tags: ["Classic"],
       },
       {
         question: "Erased from time with special gun.",
         answers: ["The Invasion of Time", "Invasion of Time"],
+        tags: ["Classic"],
       },
       {
         question: "Butler-induced explosion.",
         answers: ["City of Death"],
+        tags: ["Classic"],
       },
       {
         question: "Steamed alive by rival henchperson.",
         answers: ["Pyramids of Mars"],
+        tags: ["Classic"],
       },
     ],
   },
@@ -3654,14 +4150,17 @@ export const rounds: Round[] = [
       {
         question: "Cha cha cha in Silence In The Library",
         answers: ["Colin Salmon"],
+        tags: ["New"],
       },
       {
         question: "Samba in The Eleventh Hour",
         answers: ["Nina Wadia"],
+        tags: ["New"],
       },
       {
         question: "Cha cha cha in Rise Of The Cybermen",
         answers: ["Don Warrington"],
+        tags: ["New"],
       },
       {
         question: "Tango in The Trial Of A Time Lord",
@@ -3670,74 +4169,92 @@ export const rounds: Round[] = [
       {
         question: "Cha cha cha in The Unicorn And The Wasp",
         answers: ["Felicity Kendal"],
+        tags: ["New"],
       },
       {
         question: "Cha cha cha in Aliens of London",
         answers: ["Matt Baker"],
+        tags: ["New"],
       },
       {
         question: "Cha cha cha in Lucky Day",
         answers: ["Alex Jones"],
+        tags: ["New"],
       },
       {
         question: "Waltz in The Church On Ruby Road",
         answers: ["Anita Dobson"],
+        tags: ["New"],
       },
       {
         question: "Cha cha cha in Last Christmas",
         answers: ["Natalie Gumede"],
+        tags: ["New"],
       },
       {
         question: "Tango in Rose",
         answers: ["Mark Benton"],
+        tags: ["New"],
       },
       {
         question: "Tango in Dinosaurs On A Spaceship",
         answers: ["Sunetra Sarker"],
+        tags: ["New"],
       },
       {
         question: "Cha cha cha in The Doctor, The Widow, And The Wardrobe",
         answers: ["Bill Bailey"],
+        tags: ["New"],
       },
       {
         question: "Jive in The Well",
         answers: ["Rose Ayling-Ellis"],
+        tags: ["New"],
       },
       {
         question: "Cha cha cha in The Impossible Planet",
         answers: ["Will Thorp"],
+        tags: ["New"],
       },
       {
         question: "Cha cha cha in Partners In Crime ",
         answers: ["Verona Joseph"],
+        tags: ["New"],
       },
       {
         question: "Tango in The Time Warrior",
         answers: ["June Brown"],
+        tags: ["Classic"],
       },
       {
         question: "Foxtrot in The Happiness Patrol",
         answers: ["Sheila Hancock"],
+        tags: ["Classic"],
       },
       {
         question: "Tango in The Woman Who Lived",
         answers: ["Rufus Hound"],
+        tags: ["New"],
       },
       {
         question: "Viennese Waltz in Nightmare in Silver",
         answers: ["Tamzin Outhwaite"],
+        tags: ["New"],
       },
       {
         question: "Cha cha cha in Dinosaurs on a Spaceship",
         answers: ["Robert Webb"],
+        tags: ["New"],
       },
       {
         question: "Cha cha cha in Let's Kill Hitler",
         answers: ["Davood Ghadami"],
+        tags: ["New"],
       },
       {
         question: "Viennese Waltz in Silence in the Library",
         answers: ["Alex Kingston"],
+        tags: ["New"],
       },
     ],
   },
@@ -3831,78 +4348,97 @@ export const rounds: Round[] = [
       {
         question: `"Rank has its privileges."`,
         answers: ["Mike Yates", "Captain Yates", "Captain Mike Yates", "Yates"],
+        tags: ["Classic"],
       },
       {
         question: `"You're talking about one of the most powerful blokes in the cosmos."`,
         answers: ["Second Doctor", "The Second Doctor"],
+        tags: ["Classic"],
       },
       {
         question: `"Gratitude's the last thing you'll ever have, or any sort of common sense either."`,
         answers: ["Barbara Wright", "Barbara", "Queen Babs"],
+        tags: ["Classic"],
       },
       {
         question: `"Bring me knitting."`,
         answers: ["Eighth Doctor", "The Eighth Doctor"],
+        tags: ["New"],
       },
       {
         question: `"Do you know any nice people?"`,
         answers: ["Ace"],
+        tags: ["Classic"],
       },
       {
         question: `"Nothing can prevent the catharsis of spurious morality"`,
         answers: ["The Valeyard", "Valeyard"],
+        tags: ["Classic"],
       },
       {
         question: `"Welcome to heaven. Would you like some tea?"`,
         answers: ["Missy", "The Master"],
+        tags: ["New"],
       },
       {
         question: `"I'm present, and enjoying myself enormously."`,
         answers: ["The Master"],
+        tags: ["Classic"],
       },
       {
         question: `"Save your breath for the Timelash, Doctor. Most people depart with a scream."`,
         answers: ["Tekker", "Maylin Tekker"],
+        tags: ["Classic"],
       },
       {
         question: `"Have the lift maintenance engineer shot."`,
         answers: ["Morgus", "Trau Morgus"],
+        tags: ["Classic"],
       },
       {
         question: `"Of course, if she was a real lady, I wouldn't be in her boudoir."`,
         answers: ["Redvers Fenn-Cooper", "Redvers"],
+        tags: ["Classic"],
       },
       {
         question: `"Doctor, you have destroyed my dreams! I'll destroy you!"`,
         answers: ["The Marshal", "The Marshal of Solos", "Marshal"],
+        tags: ["Classic"],
       },
       {
         question: `"I don't know who you are, what you are or where you come from. But you can get off the moon now."`,
         answers: ["Hobson"],
+        tags: ["Classic"],
       },
       {
         question: `"This isn't going to be big on dignity."`,
         answers: ["Eleventh Doctor", "The Eleventh Doctor"],
+        tags: ["New"],
       },
       {
         question: `"Perhaps we've landed in a world of mad men!"`,
         answers: ["Victoria Waterfield", "Victoria"],
+        tags: ["Classic"],
       },
       {
         question: `"I'd rather face the Chumblies than you any day."`,
         answers: ["Steven Taylor", "Steven"],
+        tags: ["Classic"],
       },
       {
         question: `"AND I DON'T LIKE YOUR FACE."`,
         answers: ["General Cutler", "Cutler"],
+        tags: ["Classic"],
       },
       {
         question: `"Resistance is inadvisable."`,
         answers: ["Styggron"],
+        tags: ["Classic"],
       },
       {
         question: `"Shoes."`,
         answers: ["Third Doctor", "The Third Doctor"],
+        tags: ["Classic"],
       },
       {
         question: `"Chap with wings there. Five rounds, rapid"`,
@@ -3912,178 +4448,222 @@ export const rounds: Round[] = [
           "Brigadier",
           "Alastair Gordon Lethbridge-Stewart",
         ],
+        tags: ["Classic"],
       },
       {
         question: `"Do they have Mice in Atlantis?"`,
         answers: ["Jo Grant", "Jo"],
+        tags: ["Classic"],
       },
       {
         question: `"That's how you get your kicks, like the good little Nietzschean you are, right?"`,
         answers: ["The B.O.S.S.", "B.O.S.S.", "BOSS"],
+        tags: ["Classic"],
       },
       {
         question: `"You have a primary and a secondary reproductive cycle. It is an inefficient system, you should change it."`,
         answers: ["Linx"],
+        tags: ["Classic"],
       },
       {
         question: `"Gremlins can get into everything, old girl. First law of the sea."`,
         answers: ["Harry Sullivan", "Harry"],
+        tags: ["Classic"],
       },
       {
         question: `"She is a norm. All norms are our enemies."`,
-        answers: ["Gerrill"],
+        answers: ["Gerrill", "Muto"],
+        tags: ["Classic"],
       },
       {
         question: `"I could always sell flowers, couldn't I? You know, lovely fresh violets, guv."`,
         answers: ["Sarah Jane Smith", "Sarah Jane", "Sarah"],
+        tags: ["Classic"],
       },
       {
         question: `"What a magnificent head."`,
         answers: ["Dr Mehendri Solon", "Mehendri Solon", "Solon"],
+        tags: ["Classic"],
       },
       {
         question: `"We're helping the plant world, the sergeant and I. In different ways, of course."`,
         answers: ["Harrison Chase"],
+        tags: ["Classic"],
       },
       {
         question: `"As I believe I told you long ago, Doctor, you will never amount to anything in the galaxy while you retain your propensity for vulgar facetiousness."`,
         answers: ["Borusa"],
+        tags: ["Classic"],
       },
       {
         question: `"Enjoy your death as I enjoyed killing you!"`,
         answers: ["Leela"],
+        tags: ["Classic"],
       },
       {
         question: `"Please do not throw hands at me.`,
         answers: ["D84"],
+        tags: ["Classic"],
       },
       {
         question: `"You will do as the Doctor instructs, or I will cut out your heart."`,
         answers: ["Leela"],
+        tags: ["Classic"],
       },
       {
         question: `"The backblast backlash will bounce back and destroy everything."`,
         answers: ["Romana", "Romana II", "The Second Romana"],
+        tags: ["Classic"],
       },
       {
         question: `"I'm just saying that a lot of the time you don't really make sense."`,
         answers: ["Adric"],
+        tags: ["Classic"],
       },
       {
         question: `"It's the end, but the moment has been prepared for."`,
         answers: ["Fourth Doctor", "The Fourth Doctor"],
+        tags: ["Classic"],
       },
       {
         question: `"You are a Time Lord, a lord of time. Are there lords in such a small domain?"`,
         answers: ["Striker", "Captain Striker"],
+        tags: ["Classic"],
       },
       {
         question: `"Does it offend you?"`,
         answers: ["Fifth Doctor", "The Fifth Doctor"],
+        tags: ["Classic"],
       },
       {
         question: `"Dissatisfied customers usually just don't leave a tip."`,
         answers: ["Oscar Botcherby", "Oscar"],
+        tags: ["Classic"],
       },
       {
         question: `"Go away, Mel."`,
         answers: ["Sixth Doctor", "The Sixth Doctor"],
+        tags: ["Classic"],
       },
       {
         question: `"Are these old ladies annoying you?"`,
         answers: ["Pex"],
+        tags: ["Classic"],
       },
       {
         question: `"Love has never been noted for its rationality."`,
         answers: ["Seventh Doctor", "The Seventh Doctor"],
+        tags: ["Classic"],
       },
       {
         question: `"I can feel one of my moods coming on."`,
         answers: ["The Kandyman", "Kandyman"],
+        tags: ["Classic"],
       },
       {
         question: `"Don't interrupt me when I'm eulogising."`,
         answers: ["Fenric"],
+        tags: ["Classic"],
       },
       {
         question: `"Kill yourself."`,
         answers: ["Ninth Doctor", "The Ninth Doctor"],
+        tags: ["New"],
       },
       {
         question: `"No one upsets my mum."`,
         answers: ["Rose Tyler", "Rose"],
+        tags: ["New"],
       },
       {
         question: `"This is the story of how I died."`,
         answers: ["Rose Tyler", "Rose"],
+        tags: ["New"],
       },
       {
         question: `"I don't want to go."`,
         answers: ["Tenth Doctor", "The Tenth Doctor"],
+        tags: ["New"],
       },
       {
         question: `"I'll always remember when the Doctor was me."`,
         answers: ["Eleventh Doctor", "The Eleventh Doctor"],
+        tags: ["New"],
       },
       {
         question: `"Personally I think that's a hell of a bird"`,
         answers: ["Twelfth Doctor", "The Twelfth Doctor"],
+        tags: ["New"],
       },
       {
         question: `"Tag. You're it."`,
         answers: ["Thirteenth Doctor", "The Thirteenth Doctor"],
+        tags: ["New"],
       },
       {
         question: `"I must get the tab."`,
         answers: ["Morgaine"],
+        tags: ["Classic"],
       },
       {
         question: `"Bones of the hand. Carpal bones, proximal row. Scaphoid, lunate, triquetal, pisiform."`,
         answers: ["Martha Jones", "Martha"],
+        tags: ["New"],
       },
       {
         question: `"It's the same rain."`,
         answers: ["Sally Sparrow"],
+        tags: ["New"],
       },
       {
         question: `"Noddy's not real—is he?"`,
         answers: ["Donna Noble", "Donna"],
+        tags: ["New"],
       },
       {
         question: `"Sir, I am opposed to your current apathy."`,
         answers: ["Strax"],
+        tags: ["New"],
       },
       {
         question: `"Something old. Something new. Something borrowed. Something blue."`,
         answers: ["Amy Pond", "Amy"],
+        tags: ["New"],
       },
       {
         question: `"And remember, Doctor… I'm just as real as you are."`,
         answers: ["Robin Hood", "Robin of Loxley"],
+        tags: ["New"],
       },
       {
         question: `"Do you think I care for you so little that betraying me would make a difference?"`,
         answers: ["Twelfth Doctor", "The Twelfth Doctor"],
+        tags: ["New"],
       },
       {
         question: `"Die with whoever comes after me."`,
         answers: ["Clara Oswald", "Clara"],
+        tags: ["New"],
       },
       {
         question: `"Like a penguin with his arse on fire."`,
         answers: ["Bill Potts", "Bill"],
+        tags: ["New"],
       },
       {
         question: `"Banksy doesn't have one of those… Or have I?"`,
         answers: ["Thirteenth Doctor", "The Thirteenth Doctor"],
+        tags: ["New"],
       },
       {
         question: `"Time travelers are great. Like, the best -- like, wow"`,
         answers: ["Fifteenth Doctor", "The Fifteenth Doctor"],
+        tags: ["New"],
       },
       {
         question: `"I am not one of your adventures."`,
         answers: ["Belinda Chandra", "Belinda"],
+        tags: ["New"],
       },
     ],
   },
@@ -4325,126 +4905,157 @@ export const rounds: Round[] = [
       {
         question: "Furry Cyborg pig.",
         answers: ["Tetrap", "Tetraps"],
+        tags: ["Classic"],
       },
       {
         question: "Green-eyed evil skeleton face.",
         answers: ["The Malus", "Malus"],
+        tags: ["Classic"],
       },
       {
         question: "A troll wearing lots of bags.",
         answers: ["Varga Plant", "Varga Plants"],
+        tags: ["Classic"],
       },
       {
         question: "A grey, plain-faced metal man.",
         answers: ["Raston Warrior Robot"],
+        tags: ["Classic"],
       },
       {
         question: "Furry, weird, brown, icy.",
         answers: ["Yeti", "Yetis"],
+        tags: ["Classic"],
       },
       {
         question: "Kind of looks like a bird that's been fishing?",
         answers: ["Sea Devil", "Sea Devils"],
+        tags: ["Classic"],
       },
       {
         question: "Brown. Shiny. Kind of looks like a Greek helmet.",
         answers: ["Sil", "Mentor", "Mentors"],
+        tags: ["Classic"],
       },
       {
         question: "White and grey metal beards.",
         answers: ["Cryon", "Cryons"],
+        tags: ["Classic"],
       },
       {
         question: "Unhappy man stitched together with wool.",
         answers: ["Melkur"],
+        tags: ["Classic"],
       },
       {
         question: "Green, tentacled, mossy, no face.",
         answers: ["Krynoid", "Krynoids"],
+        tags: ["Classic"],
       },
       {
         question: "Weird, grumpy, dangerous pig.",
         answers: ["Rill", "Rills"],
+        tags: ["Classic"],
       },
       {
         question: "Circular heads with triangular noses and tinfoil eyes.",
         answers: ["Quarks", "Quark"],
+        tags: ["Classic"],
       },
       {
         question: "Cursed toothbrush.",
         answers: ["Cybermat", "Cybermats"],
+        tags: ["Classic"],
       },
       {
         question: "Metal armour. Green, red, violent.",
         answers: ["Ice Warrior", "Ice Warriors"],
+        tags: ["Classic"],
       },
       {
         question: "Rhino!",
         answers: ["The Judoon", "Judoon"],
+        tags: ["New"],
       },
       {
         question: "A fly from Star Wars.",
         answers: ["Tritovore"],
+        tags: ["New"],
       },
       {
         question: "Weird white baby monkey.",
         answers: ["Beep the Meep", "Beep", "The Meeps", "Meeps"],
+        tags: ["New"],
       },
       {
         question: "KILLER WORM.",
         answers: ["Giant maggot"],
+        tags: ["Classic"],
       },
       {
         question: "Red twiggy earth monster.",
         answers: ["Axon", "Axons"],
+        tags: ["Classic"],
       },
       {
         question: "HAMMER TANK.",
         answers: ["War machine"],
+        tags: ["Classic"],
       },
       {
         question: "Scorpion.",
         answers: ["Skithra"],
+        tags: ["New"],
       },
       {
         question: "Gary from Spongebob.",
         answers: ["The Morphoton Brain", "Morphoton"],
+        tags: ["Classic"],
       },
       {
         question: "Black cloaks.",
         answers: ["Remnant", "Remnants", "Carpet monsters"],
+        tags: ["New"],
       },
       {
         question: "Upside-down tin-can ice-cream cone.",
         answers: ["Chumbleys", "Chumbley"],
+        tags: ["Classic"],
       },
       {
         question: "Gold-ish unhappy mad robot.",
         answers: ["Omega"],
+        tags: ["Classic"],
       },
       {
         question: "Dog dinosaur in a cloak.",
         answers: ["Sutekh"],
+        tags: ["New"],
       },
       {
         question: "FISH TANK ALIEN BRAIN.",
         answers: ["Morbius"],
+        tags: ["Classic"],
       },
       {
         question: "Garlic.",
         answers: ["Adipose"],
+        tags: ["New"],
       },
       {
         question: "Grey zombie-head in a tuxedo.",
         answers: ["Silence", "The Silence"],
+        tags: ["New"],
       },
       {
         question: "Scary dinosaur worm.",
         answers: ["Prisoner Zero"],
+        tags: ["New"],
       },
       {
         question: "Angry/sad robot.",
         answers: ["Smiler", "Smilers"],
+        tags: ["New"],
       },
       {
         question: "Skin. Skin. SKIN.",
@@ -4454,6 +5065,7 @@ export const rounds: Round[] = [
           "Lady Cassandra O'Brien",
           "Lady Cassandra O'BrienCassandra O'Brien.Δ17",
         ],
+        tags: ["New"],
       },
     ],
   },
