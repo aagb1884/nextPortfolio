@@ -1062,6 +1062,14 @@ export const rounds: Round[] = [
         question: "What does Graham put on his feet in 'Spyfall'?",
         answers: ["Laser shoes"],
       },
+      {
+        question: "What episode was broadcast on October 31st 2021?",
+        answers: ["The Halloween Apocalypse", "Halloween Apocalypse"],
+      },
+      {
+        question: "In which episode does the Doctor lose his sight?",
+        answers: ["Oxygen"],
+      },
     ],
   },
   {
@@ -1151,6 +1159,16 @@ export const rounds: Round[] = [
         question: "Which Doctor fought in the Time War?",
         answers: ["The War Doctor", "War Doctor"],
         tags: ["New"],
+      },
+      {
+        question: "What number Doctor was Matt Smith?",
+        answers: ["Eleventh", "Eleven", "11"],
+        tags: ["New"],
+      },
+      {
+        question: "What number Doctor was Sylvester McCoy?",
+        answers: ["Seventh", "Seven", "7"],
+        tags: ["Classic"],
       },
       {
         question:
@@ -1303,6 +1321,13 @@ export const rounds: Round[] = [
           "As of November 2025, who was the actor to most recently play the Master?",
         answers: ["Sacha Dhawan"],
         tags: ["New"],
+      },
+      {
+        question:
+          "True or False: the Daleks appeared in the very first Doctor Who story?",
+        answers: ["False", "No", "Wrong"],
+        officialAnswer: "False, they appeared in the second ever Doctor Who story.",
+        tags: ["Classic"],
       },
     ],
   },
@@ -3272,7 +3297,8 @@ export const rounds: Round[] = [
           "The Last of the Time Lords",
         ],
         answers: ["The Last of the Time Lords"],
-        officialAnswer: "'The Last of the Time Lords' isn't set on Gallifrey, the others are at least partly set there.",
+        officialAnswer:
+          "'The Last of the Time Lords' isn't set on Gallifrey, the others are at least partly set there.",
         tags: ["New"],
       },
     ],
