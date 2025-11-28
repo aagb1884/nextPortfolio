@@ -7,6 +7,15 @@ import AppsFooter from "../../components/AppsFooter";
 import KoFiLink from "@/app/ui/KoFi";
 import PageContent from "./content";
 
+export const metadata = {
+  title: "A Doctor Who Quiz",
+  openGraph: {
+    title: "A Doctor Who Quiz",
+    description:
+      "Someone is sharing this Doctor Who quiz, probably because it&apos;s so mint.",
+  },
+};
+
 export default async function RoundPage({
   params,
 }: {
