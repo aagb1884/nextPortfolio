@@ -62,7 +62,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.7,
       images: [
-        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsad-light.5f6aeb92.png&w=1080&q=75",
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsad-light.5f6aeb92.png&amp;w=1080&amp;q=75",
       ],
     },
     {
@@ -71,7 +71,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.7,
       images: [
-        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDoctor-Who-Quiz-Logo.db1551df.png&w=3840&q=75",
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDoctor-Who-Quiz-Logo.db1551df.png&amp;w=3840&amp;q=75",
       ],
     },
     {
@@ -80,7 +80,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.7,
       images: [
-        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FpoetrRemixer.14b90c1e.png&w=1200&q=75",
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FpoetrRemixer.14b90c1e.png&amp;w=1200&amp;q=75",
       ],
     },
     {
@@ -89,7 +89,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.7,
       images: [
-        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frng.074bce04.png&w=1200&q=75",
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frng.074bce04.png&amp;w=1200&amp;q=75",
       ],
     },
     {
@@ -98,7 +98,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.7,
       images: [
-        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbutton_wesley.adfd84a7.png&w=3840&q=75",
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbutton_wesley.adfd84a7.png&amp;w=3840&amp;q=75",
       ],
     },
     {
