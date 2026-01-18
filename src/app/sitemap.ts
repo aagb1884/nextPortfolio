@@ -53,7 +53,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "yearly",
       priority: 0.7,
       images: [
-        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fscifinamegen.a7b2d54a.png&w=3840&q=75",
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fscifinamegen.a7b2d54a.png&amp;w=3840&amp;q=75",
       ],
     },
     {
