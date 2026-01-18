@@ -52,24 +52,54 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.7,
+      images: [
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fscifinamegen.a7b2d54a.png&w=3840&q=75",
+      ],
     },
     {
       url: "https://andrewblair.co.uk/apps/light",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.7,
+      images: [
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fsad-light.5f6aeb92.png&w=1080&q=75",
+      ],
     },
     {
       url: "https://andrewblair.co.uk/apps/drwhoquiz",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.7,
+      images: [
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FDoctor-Who-Quiz-Logo.db1551df.png&w=3840&q=75",
+      ],
     },
     {
       url: "https://andrewblair.co.uk/apps/poetremixer",
       lastModified: new Date(),
       changeFrequency: "yearly",
       priority: 0.7,
+      images: [
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FpoetrRemixer.14b90c1e.png&w=1200&q=75",
+      ],
+    },
+    {
+      url: "https://andrewblair.co.uk/apps/rap-name-generator",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.7,
+      images: [
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Frng.074bce04.png&w=1200&q=75",
+      ],
+    },
+    {
+      url: "https://andrewblair.co.uk/apps/wesley-snopes",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.7,
+      images: [
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fbutton_wesley.adfd84a7.png&w=3840&q=75",
+      ],
     },
     {
       url: "https://andrewblair.co.uk/credits",
