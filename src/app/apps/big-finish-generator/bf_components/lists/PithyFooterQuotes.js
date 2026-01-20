@@ -20,6 +20,7 @@ const PithyFooterQuotes = () => {
     "Davison says he's going to cancel a writer again",
     "please don't make Jason tap dance for coins",
     "a refuge for the divorced since 1996",
+    "we've got young people now",
   ];
 
   const randomIndex = Math.floor(Math.random() * footerQuotes.length);
