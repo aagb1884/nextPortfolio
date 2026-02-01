@@ -3,8 +3,6 @@ import Link from "next/link";
 import Image from "next/image";
 import ExternalLinkImage from "../../ui/ExternalLink";
 import styles from "../../styles/appPages.module.css";
-import EuroBingoAppLinks from "../../apps/components/eBingoAppLinks";
-import BFGeneratorAppLinks from "../../apps/components/bfGeneratorLinks";
 import euroBingoGif from "../../../../public/images/eurovision_bingo_button.gif";
 import bigFinishGif from "../../../../public/images/bigFinish/untempered_schism.gif";
 import deekPrime from "../../../../public/images/deekPrime.jpg";
@@ -12,10 +10,12 @@ import wesley from "../../../../public/images/wesleySnopes/button_wesley.png";
 import poetRemixer from "../../../../public/images/poetrRemixer.png";
 import light from "../../../../public/images/sad-light.png";
 import rng from "../../../../public/images/rng.png";
-import drWhoQuiz from "../../../../public/images/drWhoQuiz/Doctor-Who-Quiz-Logo.png"
+import drWhoQuiz from "../../../../public/images/drWhoQuiz/Doctor-Who-Quiz-Logo.png";
 import sfng from "@/app/images/scifinamegen.png";
+import barlow from "../barlow/opengraph-image.png";
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
+import AppLinks from "./appLinks";
 
 const AppsPage = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
@@ -124,6 +124,15 @@ const AppsPage = () => {
               />
             </Link>
           </div>
+          <div className={styles.barlow}>
+            <Link href="/apps/barlow">
+              <Image
+                src={barlow}
+                alt="Setting the Barlow link"
+                className={styles.buttonImage}
+              />
+            </Link>
+          </div>
         </section>
         <section className={styles.appsLandingCopy}>
           <aside className={styles.designCredit}>
@@ -149,8 +158,9 @@ const AppsPage = () => {
             <i>Derek Adams Management Simulator</i> and{" "}
             <i>Rangers Manager Simulator</i> are probably not suitable for work.
           </aside>
-          <EuroBingoAppLinks />
-          <BFGeneratorAppLinks />
+          {/* <EuroBingoAppLinks />
+          <BFGeneratorAppLinks /> */}
+          <AppLinks />
         </section>
       </div>
       <HomeFooter
