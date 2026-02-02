@@ -21,9 +21,9 @@ const appInfo = [
   { name: "Setting the Gary Bar Low", iosLink: "#", androidLink: "#" },
 ];
 
-const mappedAppInfo = appInfo.map((app) => {
+const mappedAppInfo = appInfo.map((app, index) => {
   return (
-    <div className={styles.appStoreLinks}>
+    <div key={index} className={styles.appStoreLinks}>
       <h3 className={styles.appStoreSection1}>{app.name}</h3>
       <Link href={app.iosLink} className={styles.appStoreSection2}>
         <Image
