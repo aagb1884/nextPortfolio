@@ -1,4 +1,4 @@
-import EuroBingoAppLinks from "../components/eBingoAppLinks";
+import EBAppLinks from "../eurovision-bingo/ebingo_components/EBAppLinks";
 import BingoCard from "../eurovision-bingo/ebingo_components/BingoCard";
 import styles from "../../styles/euroBingo.module.css";
 import AppsFooter from "../components/AppsFooter";
@@ -23,7 +23,7 @@ const EurovisionBingo = () => {
         <BingoCard />
       </main>
       <div className={styles.euroBingoLinks}>
-        <EuroBingoAppLinks />
+        <EBAppLinks />
         <div className={styles.bingoNav}>
           <AppsFooter />
         </div>

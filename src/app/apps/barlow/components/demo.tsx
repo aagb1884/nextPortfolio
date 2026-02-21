@@ -1,8 +1,8 @@
 interface modalProps {
   setDemoModal: (filterTerm: boolean) => void;
 }
-
 import styles from "@/app/styles/barlow.module.css";
+import BarlowAppLinks from "./BarlowAppLinks";
 
 const DemoModal: React.FC<modalProps> = ({ setDemoModal }) => {
   return (
@@ -15,6 +15,7 @@ const DemoModal: React.FC<modalProps> = ({ setDemoModal }) => {
         <p className={styles.sModalTxt}>Works offline.</p>
         <p className={styles.sModalTxt}>High Scores.</p>
         <p className={styles.sModalTxt}>Original music.</p>
+        <BarlowAppLinks />
         <button
           className={styles.barlowBtn}
           onClick={() => setDemoModal(false)}

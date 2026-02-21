@@ -1,33 +1,32 @@
-'use client'
+"use client";
 
-import { useState, useEffect } from 'react';
-import Modal from './components/modal';
-import LoseModal from './components/lose';
-import RestartBtn from './components/restart';
-import Countdown from '@/app/ui/Countdown';
-import StartModal from './components/startModal';
-import Score from './components/score';
-import BarlowFlicker from './components/flickerImg';
-import styles from '@/app/styles/barlow.module.css';
-import AppsFooter from '../components/AppsFooter';
-import DemoModal from './components/demo';
+import { useState, useEffect } from "react";
+import Modal from "./components/modal";
+import LoseModal from "./components/lose";
+import RestartBtn from "./components/restart";
+import Countdown from "@/app/ui/Countdown";
+import StartModal from "./components/startModal";
+import Score from "./components/score";
+import BarlowFlicker from "./components/flickerImg";
+import styles from "@/app/styles/barlow.module.css";
+import AppsFooter from "../components/AppsFooter";
+import DemoModal from "./components/demo";
+import BarlowAppLinks from "./components/BarlowAppLinks";
 
 interface Song {
-    title: string,
-    artist: string,
-    chart_position: number,
-    year_released: number
+  title: string;
+  artist: string;
+  chart_position: number;
+  year_released: number;
 }
 
-interface JsonData{
+interface JsonData {
   items: {
-    songs: [
-        song: Song
-    ]
-    }
+    songs: [song: Song];
+  };
 }
 
-const BarlowPage: React.FC<JsonData> = ({items}) => {
+const BarlowPage: React.FC<JsonData> = ({ items }) => {
   const [startModal, setStartModal] = useState(true);
   const [currentSong, setCurrentSong] = useState<Song | null>(null);
   const [userAnswer, setUserAnswer] = useState("");
@@ -43,16 +42,19 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
   const [duration, setDuration] = useState<number | string>(60);
   const [timeLeft, setTimeLeft] = useState<number>(50);
   const [isActive, setIsActive] = useState<boolean>(false);
-  const [audio] = useState(typeof window !== 'undefined' ? new Audio('/audio/vivaldi-147363.mp3') : null);
+  const [audio] = useState(
+    typeof window !== "undefined"
+      ? new Audio("/audio/vivaldi-147363.mp3")
+      : null
+  );
 
   //audio
 
-  useEffect(()=> {
+  useEffect(() => {
     if (audio && isActive) {
-      audio.play()
-    }
-    else if (audio && !isActive ) {
-      audio.pause()
+      audio.play();
+    } else if (audio && !isActive) {
+      audio.pause();
       audio.currentTime = 0;
     }
 
@@ -62,84 +64,91 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
         audio.currentTime = 0;
       }
     };
-  }, [isActive, audio])
+  }, [isActive, audio]);
 
-  
+  //timer
+  const handleSetDuration = (): void => {
+    if (typeof duration === "number" && duration > 0) {
+      setTimeLeft(duration);
+      setIsActive(false);
+    }
+  };
 
-    //timer
-    const handleSetDuration = (): void => {
-      if (typeof duration === "number" && duration > 0) {
-        setTimeLeft(duration);
-        setIsActive(false);
-      }
-    };
-  
   useEffect(() => {
     handleSetDuration();
-  }, [duration])
-  
+  }, [duration]);
+
   useEffect(() => {
     if (isActive && timeLeft > 0) {
       setTimeVisible(true);
       const timerId = setInterval(() => {
         setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
       }, 1000);
-      
+
       return () => clearInterval(timerId);
     } else if (isActive && timeLeft === 0) {
       setModalOpen(false);
       setDemoModal(false);
-      setLost(!lost)
-      setIsActive(false)
+      setLost(!lost);
+      setIsActive(false);
     }
-    }, [isActive, timeLeft]);
-   
+  }, [isActive, timeLeft]);
+
   useEffect(() => {
-    if (livesLeft === 0){
-    setLost(true)
-    setTimeLeft(0)
-    setIsActive(false)
-    } else if (livesLeft < 0){
-      reset()
+    if (livesLeft === 0) {
+      setLost(true);
+      setTimeLeft(0);
+      setIsActive(false);
+    } else if (livesLeft < 0) {
+      reset();
     }
-  }, [livesLeft, timeLeft])
-   
+  }, [livesLeft, timeLeft]);
+
   function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-      setUserAnswer(e.target.value);
-    } 
-      
+    setUserAnswer(e.target.value);
+  }
+
   const checkAnswer = (e: React.FormEvent) => {
-      e.preventDefault();
-      setIsCorrect(false)
-      setIsIncorrect(false)
+    e.preventDefault();
+    setIsCorrect(false);
+    setIsIncorrect(false);
 
-  const userSong = items.songs.find(song => song.title.toLowerCase() === userAnswer.toLowerCase())
+    const userSong = items.songs.find(
+      (song) => song.title.toLowerCase() === userAnswer.toLowerCase()
+    );
 
-    if (!userSong || currentSong && userSong && previousAnswers.includes(userSong) === true ||
-      currentSong && currentSong.chart_position < userSong.chart_position) {
+    if (
+      !userSong ||
+      (currentSong &&
+        userSong &&
+        previousAnswers.includes(userSong) === true) ||
+      (currentSong && currentSong.chart_position < userSong.chart_position)
+    ) {
       setIsIncorrect(true);
-      setLivesLeft(prev => prev - 1);
-      setUserAnswer('');
+      setLivesLeft((prev) => prev - 1);
+      setUserAnswer("");
       return;
     }
 
     setCurrentSong(userSong);
-    setUserAnswer('');
+    setUserAnswer("");
 
-    if (userSong && currentSong && previousAnswers.includes(userSong) === false &&
-      userSong.chart_position >= currentSong.chart_position) {
-      setIsCorrect(true)
-      setPreviousAnswers([...previousAnswers, userSong])
-      setScore(score + 1)
+    if (
+      userSong &&
+      currentSong &&
+      previousAnswers.includes(userSong) === false &&
+      userSong.chart_position >= currentSong.chart_position
+    ) {
+      setIsCorrect(true);
+      setPreviousAnswers([...previousAnswers, userSong]);
+      setScore(score + 1);
       setCurrentSong(userSong);
+    } else {
+      setIsCorrect(true);
+      setPreviousAnswers([...previousAnswers, userSong]);
+      setScore(score + 1);
     }
-
-    else {
-      setIsCorrect(true)
-      setPreviousAnswers([...previousAnswers, userSong])
-      setScore(score + 1)
-    }
-  }
+  };
 
   const reset = () => {
     setCurrentSong(null);
@@ -151,81 +160,67 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
     setModalOpen(false);
     setLost(false);
     setScore(0);
-    setDuration(60)
+    setDuration(60);
     setTimeLeft(60);
     setLost(false);
     setStartModal(false);
     setDemoModal(false);
     setIsActive(true);
-  }
+  };
 
   const openInstructions = () => {
-    setStartModal(false)
-    setLost(false)
-    setModalOpen(!modalOpen)
-  }
-        
-    
+    setStartModal(false);
+    setLost(false);
+    setModalOpen(!modalOpen);
+  };
+
   return (
     <div className={styles.barlowPage}>
       <AppsFooter />
       {!startModal && (
         <>
-           <h1 className={styles.barlowTitle}>Setting the Gary Bar Low</h1>
-           <h2 className={styles.barlowSubtitle}>Demo Version</h2>
-           <button className={styles.barlowBtn}
-          onClick={() => {setDemoModal(true)}}
-          >What&apos;s in the full version?</button>
+          <h1 className={styles.barlowTitle}>Setting the Gary Bar Low</h1>
+          <h2 className={styles.barlowSubtitle}>Demo Version</h2>
+          <button
+            className={styles.barlowBtn}
+            onClick={() => {
+              setDemoModal(true);
+            }}
+          >
+            What&apos;s in the full version?
+          </button>
+          <BarlowAppLinks />
         </>
       )}
       {/* modals */}
-      {demoModal && (
-        <DemoModal 
-        setDemoModal={setDemoModal}/>
-      )}
+      {demoModal && <DemoModal setDemoModal={setDemoModal} />}
       {startModal && (
-        <StartModal
-        setStartModal={setStartModal}
-        setIsActive={setIsActive}
-        />
+        <StartModal setStartModal={setStartModal} setIsActive={setIsActive} />
       )}
-      {modalOpen && (
-        <Modal
-        setModalOpen={setModalOpen}
-        />
-      )}
-      {lost && (
-        <LoseModal
-        setLost={setLost}
-        reset={reset}
-        score={score}
-        />
-      )}
-      
+      {modalOpen && <Modal setModalOpen={setModalOpen} />}
+      {lost && <LoseModal setLost={setLost} reset={reset} score={score} />}
+
       <main className={styles.gameUI}>
-      <div className={styles.btns}>
-      <button className={styles.barlowBtn}
-      onClick={() => {openInstructions()}}
-      disabled={!isActive}
-      >What do I do here?</button>
-      <RestartBtn
-      reset={reset}
-      />
-      </div>
-      {timeVisible && (
-        <div className='flex-row'>
-       <Countdown 
-       timeLeft={timeLeft}
-      />
-      <Score 
-      score={score}
-      />
-      </div>
-      )}
-      
-      <form 
-      className={styles.form}
-      onSubmit={checkAnswer}>
+        <div className={styles.btns}>
+          <button
+            className={styles.barlowBtn}
+            onClick={() => {
+              openInstructions();
+            }}
+            disabled={!isActive}
+          >
+            What do I do here?
+          </button>
+          <RestartBtn reset={reset} />
+        </div>
+        {timeVisible && (
+          <div className="flex-row">
+            <Countdown timeLeft={timeLeft} />
+            <Score score={score} />
+          </div>
+        )}
+
+        <form className={styles.form} onSubmit={checkAnswer}>
           <input
             className={styles.barlowInput}
             name="userAnswer"
@@ -243,24 +238,20 @@ const BarlowPage: React.FC<JsonData> = ({items}) => {
         </form>
         {isCorrect && (
           <div>
-          <p>Correct!</p>
-          You have set the Gary Bar.
-          </div>          
+            <p>Correct!</p>
+            You have set the Gary Bar.
+          </div>
         )}
         {isIncorrect && (
           <div>
-          <p>Wrong!</p>
-          You have {livesLeft} wrong answers left.
-          </div>          
+            <p>Wrong!</p>
+            You have {livesLeft} wrong answers left.
+          </div>
         )}
       </main>
-      {isActive && (
-      <BarlowFlicker 
-      score={score}/>
-      )}
-     
+      {isActive && <BarlowFlicker score={score} />}
     </div>
   );
-}
+};
 
 export default BarlowPage;

@@ -68,7 +68,8 @@
 .light,
 .rngApp,
 .sfngApp,
-.drWhoQuiz {
+.drWhoQuiz,
+.barlow {
   position: relative;
   text-align: center;
 }
@@ -81,11 +82,26 @@
   line-height: 3;
 }
 
+.appStoreHeader {
+  text-align: center;
+  border-bottom: red 1px solid;
+  margin-bottom: 10px;
+}
+
+.appStoreSection1 {
+  width: 50%;
+}
+.appStoreSection2 {
+  width: 10%;
+}
+
 .appStoreLinks {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  padding-left: 40px;
+  justify-items: center;
+  border-bottom: red 1px solid;
+  margin-bottom: 10px;
 }
 
 .googlePlayLogo {
@@ -163,8 +179,9 @@
   display: flex;
   font-size: 70px;
   font-weight: 900;
-  font-family: "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family:
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 .d,

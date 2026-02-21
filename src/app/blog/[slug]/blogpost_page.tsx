@@ -13,10 +13,13 @@ import { useGlobalState } from "@/app/context/GlobalStateContext";
 import { SampleImageComponentProps, Post } from "@/app/ui/types";
 import RSSFEED from "@/app/ui/rss";
 
-const BlogpostPage = () => {
+type BlogpostPageProps = {
+  slug: string;
+};
+
+const BlogpostPage = ({ slug }: BlogpostPageProps) => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
   const [postData, setPostData] = useState<Post | null>(null);
-  const { slug } = useParams();
 
   useEffect(() => {
     createClient

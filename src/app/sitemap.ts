@@ -48,6 +48,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
     },
     {
+      url: "https://andrewblair.co.uk/apps/barlow",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.7,
+    },
+    {
       url: "https://andrewblair.co.uk/apps/sci-fi-name-generator",
       lastModified: new Date(),
       changeFrequency: "yearly",
