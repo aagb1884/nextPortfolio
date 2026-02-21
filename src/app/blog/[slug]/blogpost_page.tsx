@@ -1,5 +1,4 @@
 "use client";
-import { useParams } from "next/navigation";
 import { useState, useEffect } from "react";
 import createClient from "../blog_components/client";
 import BlogNav from "../blog_components/blog-nav";
