@@ -3,10 +3,14 @@ import Image from "next/image";
 import appStore from "@/images/App_Store_(iOS)_2017.png";
 import googleplay from "@/images/google_play.png";
 import styles from "@/app/styles/barlow.module.css";
+import KoFiLink from "@/app/ui/KoFi";
 const BarlowAppLinks = () => {
   return (
     <div className={styles.appStoreLinks}>
-      <Link href="#" className={styles.barlowLink}>
+      <Link
+        href="https://apps.apple.com/gb/app/setting-the-gary-barlow/id6756266140"
+        className={styles.barlowLink}
+      >
         <Image
           src={appStore}
           alt="iOS app store logo"
@@ -16,7 +20,11 @@ const BarlowAppLinks = () => {
         />{" "}
         <p>Apple/iOS</p>
       </Link>
-      <Link href="#" className={styles.barlowLink}>
+      <KoFiLink />
+      <Link
+        href="https://play.google.com/store/apps/details?id=com.aagb1884.setBarlow"
+        className={styles.barlowLink}
+      >
         <Image
           src={googleplay}
           alt="google play logo"

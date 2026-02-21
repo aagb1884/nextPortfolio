@@ -158,8 +158,6 @@ const AppsPage = () => {
             <i>Derek Adams Management Simulator</i> and{" "}
             <i>Rangers Manager Simulator</i> are probably not suitable for work.
           </aside>
-          {/* <EuroBingoAppLinks />
-          <BFGeneratorAppLinks /> */}
           <AppLinks />
         </section>
       </div>

@@ -3,6 +3,7 @@ interface modalProps {
 }
 import styles from "@/app/styles/barlow.module.css";
 import BarlowAppLinks from "./BarlowAppLinks";
+
 const DemoModal: React.FC<modalProps> = ({ setDemoModal }) => {
   return (
     <div className={styles.startModalWrapper}>

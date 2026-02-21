@@ -66,7 +66,7 @@
   padding: 5px;
   margin: 5px;
   border-radius: 5px;
-  color: white;
+  color: black;
 }
 
 /* modal */
@@ -115,11 +115,16 @@
 }
 
 .sModalTxt,
+.sModalStr,
 .score {
   color: white;
   -webkit-text-stroke-width: 0.1px;
   -webkit-text-stroke-color: green;
   font-family: var(--font-londrina-solid);
+}
+
+.sModalStr {
+  line-height: 1;
 }
 
 /* flicker */

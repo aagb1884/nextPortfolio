@@ -18,7 +18,13 @@ const appInfo = [
     androidLink:
       "https://play.google.com/store/apps/details?id=com.aagb1884.BigFinishGeneratorApp",
   },
-  { name: "Setting the Gary Bar Low", iosLink: "#", androidLink: "#" },
+  {
+    name: "Setting the Gary Bar Low",
+    iosLink:
+      "https://apps.apple.com/gb/app/setting-the-gary-barlow/id6756266140",
+    androidLink:
+      "https://play.google.com/store/apps/details?id=com.aagb1884.setBarlow",
+  },
 ];
 
 const mappedAppInfo = appInfo.map((app, index) => {
