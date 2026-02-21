@@ -4,7 +4,7 @@ export const metadata = {
   title: "Setting the Gary Bar Low - Demo",
   openGraph: {
     title: "Setting the Gary Bar Low - Demo",
-    description: "A demo version of a game I'm working on.",
+    description: "A demo version of a game I've made.",
   },
 };
 
