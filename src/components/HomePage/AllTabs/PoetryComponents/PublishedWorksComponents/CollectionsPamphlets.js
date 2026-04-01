@@ -45,8 +45,9 @@ const CollectionsPamphlets = () => {
         </li>
         <li>
           <i>polblar Tmolkop</i>, 2026 (The Braag){" "}
-          <a href="https://thebraag.co/">
-            <ExternalLinkImage />
+          <a href="https://thebraag.co/product/polblar-tmolkop/">
+            [Buy Here
+            <ExternalLinkImage />]
           </a>
           <br />
         </li>
