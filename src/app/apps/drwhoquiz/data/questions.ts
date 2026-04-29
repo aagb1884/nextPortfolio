@@ -1326,7 +1326,8 @@ export const rounds: Round[] = [
         question:
           "True or False: the Daleks appeared in the very first Doctor Who story?",
         answers: ["False", "No", "Wrong"],
-        officialAnswer: "False, they appeared in the second ever Doctor Who story.",
+        officialAnswer:
+          "False, they appeared in the second ever Doctor Who story.",
         tags: ["Classic"],
       },
     ],
@@ -4469,6 +4470,14 @@ export const rounds: Round[] = [
       {
         question: "Season 20 and Death In Heaven",
         answers: ["Sanjeev Bhaskar"],
+      },
+      {
+        question: "Season 21 and The Day of the Doctor",
+        answers: ["Joanna Page"],
+      },
+      {
+        question: "Season 21 and Lucky Day",
+        answers: ["Joel Dommett"],
       },
       {
         question: "New Year Treat #5 and The Well",
