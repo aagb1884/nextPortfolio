@@ -2,16 +2,17 @@
 import { useState } from "react";
 import { EditorState } from "./components/types";
 import { Preview } from "./components/preview";
+import styles from "@/app/styles/whoTitle.module.css";
 import background from "@/app/images/fourth_title_card.png";
+import { Input } from "./components/input";
 
-export default async function WhoTitleGenerator() {
+export default function WhoTitleGenerator() {
   const [state, setState] = useState<EditorState>({
     text: "Invincible",
-    color: "#ebed00",
-    showCredits: true,
-    showWatermark: true,
+    color: "#ffff",
     background: background,
-    fontSize: 24,
+    font: "var(--font-della-respira)",
+    fontSize: 36,
     outline: 0,
     subtitleOffset: 0,
     outlineColor: "black",
@@ -20,9 +21,10 @@ export default async function WhoTitleGenerator() {
   });
 
   return (
-    <div>
+    <div className={styles.whoTitleContainer}>
       <p>Who Generator page</p>
       <Preview state={state} />
+      <Input state={state} setState={setState} />
     </div>
   );
 }
