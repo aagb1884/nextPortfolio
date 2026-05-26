@@ -6,8 +6,7 @@ export interface EditorState {
   background: string | StaticImageData;
   font: string;
   fontSize: number;
-  outline: number;
-  outlineColor: string;
+  textShadow: string;
   effect: string | null;
   generating: boolean;
   subtitleOffset: number;

@@ -21,6 +21,7 @@ export function Preview(props: { state: EditorState }) {
             fontFamily: state.font,
             color: state.color,
             fontSize: state.fontSize,
+            textShadow: state.textShadow,
           }}
         >
           {state.text}

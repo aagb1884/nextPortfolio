@@ -22,9 +22,8 @@ export function Input(props: InputProps) {
           background: state.background,
           font: state.font,
           fontSize: state.fontSize,
-          outline: state.outline,
+          textShadow: state.textShadow,
           subtitleOffset: state.subtitleOffset,
-          outlineColor: state.outlineColor,
           effect: state.effect,
           generating: state.generating,
         })

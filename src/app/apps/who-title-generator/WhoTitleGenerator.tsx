@@ -13,9 +13,8 @@ export default function WhoTitleGenerator() {
     background: background,
     font: "var(--font-della-respira)",
     fontSize: 36,
-    outline: 0,
+    textShadow: "1px 1px 2px black",
     subtitleOffset: 0,
-    outlineColor: "black",
     effect: null,
     generating: false,
   });
