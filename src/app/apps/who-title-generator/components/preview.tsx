@@ -2,12 +2,17 @@ import { EditorState } from "./types";
 import Image from "next/image";
 import styles from "@/app/styles/whoTitle.module.css";
 
-export function Preview(props: { state: EditorState }) {
-  const { state } = props;
+type PreviewProps = {
+  state: EditorState;
+  ref: HTMLElement
+};
+
+export function Preview(props: PreviewProps) {
+  const { state, ref } = props;
 
   return (
     <>
-      <div className={styles.titlePreview}>
+      <div className={styles.titlePreview} ref={ref}>
         <Image
           className={styles.titleImage}
           src={state.background}
