@@ -8,7 +8,7 @@ export const metadata = {
   },
 };
 
-const BarlowLandingPage = () => {
+const WhoTitleLandingPage = () => {
   return <WhoTitleGenerator />;
 };
-export default BarlowLandingPage;
+export default WhoTitleLandingPage;
