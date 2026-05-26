@@ -4413,7 +4413,7 @@ export const rounds: Round[] = [
       },
       {
         question: "Season 2 and The Tsuranga Conundrum",
-        answers: ["Ben Bailey Smith"],
+        answers: ["Ben Bailey Smith", "Doc Brown"],
       },
       {
         question: "Season 5 and Eve Of The Daleks",
@@ -4481,7 +4481,7 @@ export const rounds: Round[] = [
       },
       {
         question: "New Year Treat #5 and The Well",
-        answers: ["Rose Ayling-Ellis"],
+        answers: ["Rose Ayling-Ellis", "Rose Ayling Ellis"],
       },
     ],
   },
