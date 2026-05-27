@@ -28,12 +28,6 @@ export function Input(props: InputProps) {
           generating: state.generating,
         })
       }
-      // onKeyDown={(e) => {
-      //   if (e.key === "Enter") {
-      //     e.preventDefault();
-      //     handleAnswerSubmit();
-      //   }
-      // }}
     />
   );
 }

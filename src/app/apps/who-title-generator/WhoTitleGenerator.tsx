@@ -15,7 +15,7 @@ const options = {
 
 export default function WhoTitleGenerator() {
   const [state, setState] = useState<EditorState>({
-    text: "Invincible",
+    text: "Your Title Here",
     color: "#ffff",
     background: background,
     font: "var(--font-della-respira)",
@@ -26,6 +26,8 @@ export default function WhoTitleGenerator() {
     generating: false,
   });
   const cardRef = useRef<HTMLElement>(null);
+
+  const imageFileName = state.text.toLowerCase().split(" ").join("_");
 
   const prepareURL = async () => {
     const cardElement = cardRef.current;
@@ -44,7 +46,7 @@ export default function WhoTitleGenerator() {
       // as far as I know this is a quick and dirty solution
       const anchor = document.createElement("a");
       anchor.href = asURL;
-      anchor.download = "your-card.jpeg";
+      anchor.download = `${imageFileName}.jpeg`;
       anchor.click();
       anchor.remove();
       // maybe this part should set state with `setURLData(asURL)`

@@ -1,10 +1,11 @@
 import { EditorState } from "./types";
 import Image from "next/image";
 import styles from "@/app/styles/whoTitle.module.css";
+import { RefObject } from "react";
 
 type PreviewProps = {
   state: EditorState;
-  ref: HTMLElement
+  ref: RefObject<HTMLElement> | undefined;
 };
 
 export function Preview(props: PreviewProps) {
@@ -12,25 +13,27 @@ export function Preview(props: PreviewProps) {
 
   return (
     <>
-      <div className={styles.titlePreview} ref={ref}>
-        <Image
-          className={styles.titleImage}
-          src={state.background}
-          alt="Doctor Who title card"
-          width={500}
-          height={500}
-        ></Image>
-        <p
-          className={styles.titleText}
-          style={{
-            fontFamily: state.font,
-            color: state.color,
-            fontSize: state.fontSize,
-            textShadow: state.textShadow,
-          }}
-        >
-          {state.text}
-        </p>
+      <div className={styles.titlePreview}>
+        <article ref={ref}>
+          <Image
+            className={styles.titleImage}
+            src={state.background}
+            alt="Doctor Who title card"
+            width={500}
+            height={500}
+          ></Image>
+          <p
+            className={styles.titleText}
+            style={{
+              fontFamily: state.font,
+              color: state.color,
+              fontSize: state.fontSize,
+              textShadow: state.textShadow,
+            }}
+          >
+            {state.text}
+          </p>
+        </article>
       </div>
     </>
   );
