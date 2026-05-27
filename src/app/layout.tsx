@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import {
   oxanium,
   hubotSans,
@@ -12,16 +11,77 @@ import {
   notable,
   tektur,
   oswald,
+  digital,
+  axiformaReg,
+  eurostile,
+  ContaxPro75Bold,
+  futuraBold,
+  futuraXtaBold,
+  futuraBook,
+  displayMedium,
+  optiFormulaOne,
+  univers,
+  sfmovie,
 } from "./fonts";
 import { GlobalStateProvider } from "./context/GlobalStateContext";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import "./styles/globals.css";
 
-const digital = localFont({
-  src: "./fonts/digital-7.ttf",
-  variable: "--font-digital",
-  weight: "100 400 900",
-});
+// const digital = localFont({
+//   src: "./fonts/digital-7.ttf",
+//   variable: "--font-digital",
+//   weight: "100 400 900",
+// });
+// const axiformaReg = localFont({
+//   src: "./fonts/AxiformaRegular.otf",
+//   variable: "--font-axiformaReg",
+//   weight: "100 400 900",
+// });
+// const eurostile = localFont({
+//   src: "./fonts/Eurostile.otf",
+//   variable: "--font-eurostile",
+//   weight: "100 400 900",
+// });
+// const ContaxPro75Bold = localFont({
+//   src: "./fonts/ContaxPro75Bold.otf",
+//   variable: "--font-contaxpro",
+//   weight: "100 400 900",
+// });
+// const futuraBold = localFont({
+//   src: "./fonts/FuturaBold.otf",
+//   variable: "--font-futuraBold",
+//   weight: "100 400 900",
+// });
+// const futuraXtaBold = localFont({
+//   src: "./fonts/FuturaExtraBold.otf",
+//   variable: "--font-futuraXtaBold",
+//   weight: "100 400 900",
+// });
+// const displayMedium = localFont({
+//   src: "./fonts/Display-Medium.otf",
+//   variable: "--font-displaymedium",
+//   weight: "100 400 900",
+// });
+// const optiFormulaOne = localFont({
+//   src: "./opti-formula-one.otf",
+//   variable: "--font-optione",
+//   weight: "100 400 900",
+// });
+// const univers = localFont({
+//   src: "./Univers-Condensed-Light.otf",
+//   variable: "--font-univers",
+//   weight: "100 400 900",
+// });
+// const futuraBook = localFont({
+//   src: "./fonts/Futura-Book.ttf",
+//   variable: "--font-futuraBook",
+//   weight: "100 400 900",
+// });
+// const sfmovie = localFont({
+//   src: "./fonts/SFMoviePoster.ttf",
+//   variable: "--font-sfmovie",
+//   weight: "100 400 900",
+// });
 
 export const metadata: Metadata = {
   title: "Andrew Blair's Website",
@@ -66,9 +126,14 @@ export default function RootLayout({
       <html lang="en" suppressHydrationWarning>
         <body
           className={`${hubotSans.variable} ${sigmar.variable} ${oswald.variable}
-     ${digital.variable} ${tangerine.variable} ${tektur.variable}
+      ${digital.variable} ${tangerine.variable} ${tektur.variable}
       ${oxanium.variable} ${p2p.variable} ${dellaRespira.variable} 
-      ${londrina_sketch.variable} ${londrina_solid.variable} ${notable.variable}`}
+      ${londrina_sketch.variable} ${londrina_solid.variable} ${notable.variable} 
+      ${axiformaReg.variable} ${eurostile.variable} ${ContaxPro75Bold.variable}
+      ${futuraBold.variable} ${futuraXtaBold.variable} ${futuraBook.variable}
+      ${displayMedium.variable} ${optiFormulaOne.variable} ${univers.variable}
+      ${sfmovie.variable}
+      `}
         >
           {children}
         </body>

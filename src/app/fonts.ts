@@ -11,6 +11,7 @@ import {
   Tektur,
   Oswald,
 } from "next/font/google";
+import localFont from "next/font/local";
 
 export const sigmar = Sigmar({
   subsets: ["latin"],
@@ -78,4 +79,60 @@ export const oswald = Oswald({
   subsets: ["latin"],
   variable: "--font-oswald",
   weight: "400",
+});
+
+export const digital = localFont({
+  src: "./fonts/digital-7.ttf",
+  variable: "--font-digital",
+  weight: "100 400 900",
+});
+export const axiformaReg = localFont({
+  src: "./fonts/AxiformaRegular.otf",
+  variable: "--font-axiformaReg",
+  weight: "100 400 900",
+});
+export const eurostile = localFont({
+  src: "./fonts/Eurostile.otf",
+  variable: "--font-eurostile",
+  weight: "100 400 900",
+});
+export const ContaxPro75Bold = localFont({
+  src: "./fonts/ContaxPro75BoldSC.otf",
+  variable: "--font-contaxpro",
+  weight: "100 400 900",
+});
+export const futuraBold = localFont({
+  src: "./fonts/FuturaBold.otf",
+  variable: "--font-futuraBold",
+  weight: "100 400 900",
+});
+export const futuraXtaBold = localFont({
+  src: "./fonts/FuturaExtraBold.otf",
+  variable: "--font-futuraXtaBold",
+  weight: "100 400 900",
+});
+export const displayMedium = localFont({
+  src: "./fonts/Display-Medium.otf",
+  variable: "--font-displaymedium",
+  weight: "100 400 900",
+});
+export const optiFormulaOne = localFont({
+  src: "./fonts/opti-formula-one.otf",
+  variable: "--font-optione",
+  weight: "100 400 900",
+});
+export const univers = localFont({
+  src: "./fonts/Univers-Condensed-Light.otf",
+  variable: "--font-univers",
+  weight: "100 400 900",
+});
+export const futuraBook = localFont({
+  src: "./fonts/Futura-Book.ttf",
+  variable: "--font-futuraBook",
+  weight: "100 400 900",
+});
+export const sfmovie = localFont({
+  src: "./fonts/SFMoviePoster.ttf",
+  variable: "--font-sfmovie",
+  weight: "100 400 900",
 });

@@ -1,5 +1,4 @@
 import { EditorState } from "./types";
-import Image from "next/image";
 import styles from "@/app/styles/whoTitle.module.css";
 import { RefObject } from "react";
 
@@ -15,13 +14,12 @@ export function Preview(props: PreviewProps) {
     <>
       <div className={styles.titlePreview}>
         <article ref={ref}>
-          <Image
+          {/* eslint-disable-next-line @next/next-eslint/no-img-element */}
+          <img
             className={styles.titleImage}
             src={state.background}
-            alt="Doctor Who title card"
-            width={500}
-            height={500}
-          ></Image>
+            alt={state.alt}
+          ></img>
           <p
             className={styles.titleText}
             style={{

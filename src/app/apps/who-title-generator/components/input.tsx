@@ -9,17 +9,19 @@ type InputProps = {
 export function Input(props: InputProps) {
   const { state, setState } = props;
   return (
-    <input
-      type="text"
-      value={state.text}
-      id="input"
-      placeholder="Type your answer here..."
+    <textarea
+      id="title-input"
+      maxLength={80}
+      placeholder="Type story title here...(80 characters max)"
       className={styles.textbox}
       onChange={(e) =>
         setState({
+          name: state.name,
           text: e.target.value,
           color: state.color,
+          writerCredit: state.writerCredit,
           background: state.background,
+          alt: state.alt,
           font: state.font,
           fontSize: state.fontSize,
           textShadow: state.textShadow,

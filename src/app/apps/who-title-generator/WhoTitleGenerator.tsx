@@ -3,29 +3,20 @@ import { useState, useRef } from "react";
 import { EditorState } from "./components/types";
 import { Preview } from "./components/preview";
 import styles from "@/app/styles/whoTitle.module.css";
-import background from "@/app/images/fourth_title_card.png";
 import { Input } from "./components/input";
 import html2canvas from "html2canvas";
+import { titleData } from "./data";
 
 const options = {
-  allowTaint: true,
+  allowTaint: false,
+  logging: false,
   useCORS: true,
   backgroundColor: "rgba(0,0,0,0)",
   removeContainer: true,
 };
 
 export default function WhoTitleGenerator() {
-  const [state, setState] = useState<EditorState>({
-    text: "Your Title Here",
-    color: "#ffff",
-    background: background,
-    font: "var(--font-della-respira)",
-    fontSize: 36,
-    textShadow: "1px 1px 2px black",
-    subtitleOffset: 0,
-    effect: null,
-    generating: false,
-  });
+  const [state, setState] = useState<EditorState>(titleData[0]);
   const cardRef = useRef<HTMLElement>(null);
 
   const imageFileName = state.text.toLowerCase().split(" ").join("_");
@@ -72,20 +63,43 @@ export default function WhoTitleGenerator() {
     }, "image/png");
   };
 
+  const handleFilter = (filterTerm: EditorState) => {
+    setState(filterTerm);
+  };
+
   return (
     <div className={styles.whoTitleContainer}>
-      <h1>Who Generator page</h1>
+      <h1 className={styles.titleTitle}>Doctor Who Title Card Generator</h1>
+      <select
+        onChange={(e) => {
+          const selected = titleData.find((ele) => ele.name === e.target.value);
+          if (selected) handleFilter(selected);
+        }}
+        className={styles.titleSelect}
+        aria-label="Filter Title Card"
+      >
+        {titleData.map((ele, key) => (
+          <option value={ele.name} key={key}>
+            {ele.name}
+          </option>
+        ))}
+      </select>
       <Preview state={state} ref={cardRef} />
       <Input state={state} setState={setState} />
-      <button onClick={prepareURL}>Download</button>
-      <button
-        onClick={async () => {
-          if (!cardRef.current) return;
-          await copyArticleToClipboard(cardRef.current);
-        }}
-      >
-        Copy
-      </button>
+      <div className={styles.btns}>
+        <button className={styles.titleBtn} onClick={prepareURL}>
+          Download
+        </button>
+        <button
+          className={styles.titleBtn}
+          onClick={async () => {
+            if (!cardRef.current) return;
+            await copyArticleToClipboard(cardRef.current);
+          }}
+        >
+          Copy
+        </button>
+      </div>
     </div>
   );
 }

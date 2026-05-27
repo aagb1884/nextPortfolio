@@ -2,11 +2,7 @@
   position: absolute;
   min-height: 100vh;
   width: 100%;
-  /* background: linear-gradient(
-    rgb(52, 51, 62) 0%,
-    rgb(31, 78, 89) 35%,
-    rgb(47, 40, 183) 100%
-  ); */
+  background-color: thistle;
   border-radius: 2px;
   top: 0;
   overflow-y: auto;
@@ -16,9 +12,18 @@
   align-items: center;
 }
 
+.titleTitle {
+  text-align: center;
+  margin: 5px;
+}
+
+.titleSelect {
+  margin: 5px;
+}
 .titlePreview {
   position: relative;
   text-align: center;
+  width: 90%;
 }
 
 .titleImage {
@@ -28,8 +33,10 @@
   border: 1px solid black;
   border-radius: 3px;
   border-style: groove;
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
   opacity: 0.8;
   transition: opacity 0.3s ease-in-out;
   position: relative;
@@ -59,9 +66,26 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 10px 20px;
+  padding: 20px 20px;
   font-size: 25px;
   font-weight: bold;
   transition: opacity 0.3s ease-in-out;
   z-index: 1;
+  width: 80%;
+  height: auto;
+}
+
+.textbox {
+  padding: 5px;
+  width: 75%;
+  height: 12%;
+}
+
+.btns {
+  justify-content: center;
+}
+
+.titleBtn {
+  margin: 5px;
+  padding: 5px;
 }
