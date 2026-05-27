@@ -5,6 +5,7 @@ import { Preview } from "./components/preview";
 import styles from "@/app/styles/whoTitle.module.css";
 import background from "@/app/images/fourth_title_card.png";
 import { Input } from "./components/input";
+import html2canvas from "html2canvas";
 
 const options = {
   allowTaint: true,
@@ -57,12 +58,34 @@ export default function WhoTitleGenerator() {
     }
   };
 
+  const copyArticleToClipboard = async (
+    element: HTMLElement
+  ): Promise<void> => {
+    const canvas = await html2canvas(element);
+
+    canvas.toBlob(async (blob) => {
+      if (!blob) throw new Error("Failed to capture screenshot");
+
+      await navigator.clipboard.write([
+        new ClipboardItem({ "image/png": blob }),
+      ]);
+    }, "image/png");
+  };
+
   return (
     <div className={styles.whoTitleContainer}>
       <h1>Who Generator page</h1>
       <Preview state={state} ref={cardRef} />
       <Input state={state} setState={setState} />
       <button onClick={prepareURL}>Download</button>
+      <button
+        onClick={async () => {
+          if (!cardRef.current) return;
+          await copyArticleToClipboard(cardRef.current);
+        }}
+      >
+        Copy
+      </button>
     </div>
   );
 }
