@@ -1,6 +1,8 @@
+import { letterSpacing } from "html2canvas/dist/types/css/property-descriptors/letter-spacing";
+
 export interface EditorState {
   name: string;
-  text: string;
+  text?: string;
   textAllCaps?: string;
   writerCredit: boolean;
   writer?: string;
@@ -11,10 +13,12 @@ export interface EditorState {
   fontSize: number;
   textShadow?: string;
   effect: string | null;
-  generating: boolean;
   subtitleOffset: number;
   styling?: string;
   width?: string;
   outline?: string;
   outlineColour?: string;
+  letterSpacing?: number;
+  top?: string;
+  fontWeight?: number | string;
 }

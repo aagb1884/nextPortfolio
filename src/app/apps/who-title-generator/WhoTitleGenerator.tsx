@@ -19,7 +19,7 @@ export default function WhoTitleGenerator() {
   const [state, setState] = useState<EditorState>(titleData[0]);
   const cardRef = useRef<HTMLElement>(null);
 
-  const imageFileName = state.text.toLowerCase().split(" ").join("_");
+  const imageFileName = state.text?.toLowerCase().split(" ").join("_");
 
   const prepareURL = async () => {
     const cardElement = cardRef.current;
@@ -74,7 +74,7 @@ export default function WhoTitleGenerator() {
   };
 
   const handleFilter = (filterTerm: EditorState) => {
-    setState(filterTerm);
+    setState({ ...filterTerm, text: state.text });
   };
 
   return (

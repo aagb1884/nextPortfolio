@@ -14,21 +14,7 @@ export function Input(props: InputProps) {
       maxLength={80}
       placeholder="Type story title here...(80 characters max)"
       className={styles.textbox}
-      onChange={(e) =>
-        setState({
-          name: state.name,
-          text: e.target.value,
-          color: state.color,
-          writerCredit: state.writerCredit,
-          background: state.background,
-          alt: state.alt,
-          font: state.font,
-          fontSize: state.fontSize,
-          subtitleOffset: state.subtitleOffset,
-          effect: state.effect,
-          generating: state.generating,
-        })
-      }
+      onChange={(e) => setState({ ...state, text: e.target.value })}
     />
   );
 }
