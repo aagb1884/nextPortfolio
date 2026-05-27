@@ -27,6 +27,10 @@ export function Preview(props: PreviewProps) {
               color: state.color,
               fontSize: state.fontSize,
               textShadow: state.textShadow,
+              width: state.width ?? "80%",
+              textTransform: state.textAllCaps ?? "none",
+              WebkitTextStrokeWidth: state.outline ?? "",
+              WebkitTextStrokeColor: state.outlineColour ?? "",
             }}
           >
             {state.text}

@@ -52,15 +52,25 @@ export default function WhoTitleGenerator() {
   const copyArticleToClipboard = async (
     element: HTMLElement
   ): Promise<void> => {
-    const canvas = await html2canvas(element);
+    try {
+      const canvas = await html2canvas(element);
 
-    canvas.toBlob(async (blob) => {
-      if (!blob) throw new Error("Failed to capture screenshot");
+      const blob = await new Promise<Blob>((resolve, reject) => {
+        canvas.toBlob((blob) => {
+          if (!blob) reject(new Error("Failed to capture screenshot"));
+          else resolve(blob);
+        }, "image/png");
+      });
 
       await navigator.clipboard.write([
         new ClipboardItem({ "image/png": blob }),
       ]);
-    }, "image/png");
+
+      alert("Copied to clipboard!");
+    } catch (err) {
+      console.error("Unable to copy to clipboard.", err);
+      alert("Copy to clipboard failed.");
+    }
   };
 
   const handleFilter = (filterTerm: EditorState) => {

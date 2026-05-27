@@ -24,7 +24,6 @@ export function Input(props: InputProps) {
           alt: state.alt,
           font: state.font,
           fontSize: state.fontSize,
-          textShadow: state.textShadow,
           subtitleOffset: state.subtitleOffset,
           effect: state.effect,
           generating: state.generating,
