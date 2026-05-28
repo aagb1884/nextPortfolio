@@ -40,7 +40,8 @@
 .titlePreview {
   position: relative;
   text-align: center;
-  max-width: 90%;
+  max-width: 80%;
+  height: auto;
 }
 
 .titleImage {
@@ -71,9 +72,10 @@
 }
 
 .textbox {
-  padding: 5px;
+  padding: 40px 0px;
   width: 75%;
-  height: 12%;
+  height: 20%;
+  resize: both;
 }
 
 .btns {
