@@ -141,3 +141,8 @@ export const heroic = localFont({
   variable: "--font-heroic",
   weight: "lighter 100 400 900",
 });
+export const postant = localFont({
+  src: "./fonts/postant1.ttf",
+  variable: "--font-postant",
+  weight: "lighter 100 400 900",
+});

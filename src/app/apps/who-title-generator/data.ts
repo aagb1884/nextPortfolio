@@ -69,6 +69,7 @@ export const titleData: EditorState[] = [
   {
     name: "Fourth and Fifth Doctor (1980 - 1984)",
     writerCredit: false,
+    color: "transparent",
     background: "/images/drWhoTitles/fifth_title.png",
     alt: "Fifth Doctor Title Starscape",
     font: "var(--font-optione)",
@@ -79,6 +80,7 @@ export const titleData: EditorState[] = [
   {
     name: "Sixth Doctor (1984 - 1986)",
     writerCredit: false,
+    color: "transparent",
     background: "/images/drWhoTitles/sixth_title.png",
     alt: "Sixth Doctor Title Starscape",
     font: "var(--font-optione)",
@@ -97,6 +99,18 @@ export const titleData: EditorState[] = [
     fontSize: 18,
     textShadow: "1px 1px 2px black",
     top: "70%",
+  },
+  {
+    name: "Eighth Doctor (1996)",
+    textAllCaps: "uppercase",
+    writerCredit: true,
+    color: "#ffff",
+    background: "/images/drWhoTitles/eighth.png",
+    alt: "Eighth Doctor Title Sequence",
+    font: "var(--font-postant)",
+    fontSize: 32,
+    textShadow: "1px 1px 2px black",
+    top: "50%",
   },
   {
     name: "Ninth and Tenth Doctors (2005 - 2010)",
@@ -152,9 +166,7 @@ export const titleData: EditorState[] = [
     name: "Thirteenth Doctor (2018 - 2022)",
     textAllCaps: "uppercase",
     writerCredit: true,
-    color: "transparent",
-    textBackground:
-      "linear-gradient(108deg,rgba(245, 233, 182, 1) 0%, rgba(245, 233, 182, 1) 18%, rgba(122, 62, 66, 1) 25%, rgba(245, 233, 182, 1) 32%, rgba(245, 233, 182, 1) 68%, rgba(122, 62, 66, 1) 75%, rgba(245, 233, 182, 1) 82%)",
+    color: "#f5e9b6",
     background: "/images/drWhoTitles/thirteenth_title.png",
     alt: "Thirteenth Doctor Title Card",
     font: "var(--font-axiformaReg)",
@@ -163,7 +175,6 @@ export const titleData: EditorState[] = [
     textShadow: "1px 1px 2px black",
     width: "90%",
     top: "45%",
-    brightness: "brightness(1.5)",
   },
   {
     name: "Fourteenth and Fifteenth Doctors (2023 - 2025)",
