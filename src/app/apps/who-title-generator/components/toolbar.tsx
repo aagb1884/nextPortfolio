@@ -44,8 +44,8 @@ export function Toolbar(props: StateProps) {
         <input
           type="range"
           id="height-input"
-          min={0}
-          max={100}
+          min={25}
+          max={75}
           className={styles.heightInput}
           defaultValue={state.top}
           onChange={(e) => setState({ ...state, top: `${e.target.value}%` })}

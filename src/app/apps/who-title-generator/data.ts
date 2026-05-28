@@ -151,7 +151,7 @@ export const titleData: EditorState[] = [
     fontWeight: 100,
   },
   {
-    name: "Twelth Doctor (2014 - 2017)",
+    name: "Twelfth Doctor (2014 - 2017)",
     writerCredit: true,
     textAllCaps: "capitalize",
     color: "#ffff",
