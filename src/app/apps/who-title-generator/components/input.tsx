@@ -6,9 +6,8 @@ export function Input(props: StateProps) {
   return (
     <textarea
       id="title-input"
-      maxLength={80}
-      // rows={5}
-      placeholder="Type story title here...(80 characters max)"
+      maxLength={200}
+      placeholder="Type story title here...(200 characters max)"
       className={styles.textbox}
       onChange={(e) => setState({ ...state, text: e.target.value })}
     />

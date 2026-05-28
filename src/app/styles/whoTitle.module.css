@@ -23,13 +23,26 @@
 }
 
 .toolbar {
-  display: flex;
-  flex-direction: row;
   width: 50%;
   font-size: x-small;
-  margin: 5px;
-  align-items: center;
   color: black;
+  flex-direction: column;
+}
+
+.toolbar,
+.sliders,
+.btnRow,
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+.sliders,
+.btnRow {
+  flex-direction: row;
+  width: 100%;
 }
 
 .fontSizeInput {
