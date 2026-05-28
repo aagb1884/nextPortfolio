@@ -35,6 +35,7 @@ export function Preview(props: PreviewProps) {
               textTransform: state.textAllCaps ?? "none",
               WebkitTextStrokeWidth: state.outline ?? "",
               WebkitTextStrokeColor: state.outlineColour ?? "",
+              whiteSpace: "pre-wrap",
             }}
           >
             {state.text}
