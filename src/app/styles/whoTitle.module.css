@@ -20,6 +20,21 @@
 .titleSelect {
   margin: 5px;
 }
+
+.toolbar {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  font-size: x-small;
+  margin: 5px;
+  align-items: center;
+}
+
+.fontSizeInput {
+  width: 50px;
+  margin: 5px;
+}
+
 .titlePreview {
   position: relative;
   text-align: center;

@@ -1,5 +1,3 @@
-import { letterSpacing } from "html2canvas/dist/types/css/property-descriptors/letter-spacing";
-
 export interface EditorState {
   name: string;
   text?: string;
@@ -22,3 +20,8 @@ export interface EditorState {
   top?: string;
   fontWeight?: number | string;
 }
+
+export type StateProps = {
+  state: EditorState;
+  setState: (state: EditorState) => void;
+};

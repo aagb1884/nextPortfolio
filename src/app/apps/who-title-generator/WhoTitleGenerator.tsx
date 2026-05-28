@@ -6,6 +6,7 @@ import styles from "@/app/styles/whoTitle.module.css";
 import { Input } from "./components/input";
 import html2canvas from "html2canvas";
 import { titleData } from "./data";
+import { Toolbar } from "./components/toolbar";
 
 const options = {
   allowTaint: false,
@@ -94,6 +95,7 @@ export default function WhoTitleGenerator() {
           </option>
         ))}
       </select>
+      <Toolbar state={state} setState={setState} />
       <Preview state={state} ref={cardRef} />
       <Input state={state} setState={setState} />
       <div className={styles.btns}>

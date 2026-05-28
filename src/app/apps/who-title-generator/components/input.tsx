@@ -1,12 +1,7 @@
-import { EditorState } from "./types";
+import { StateProps } from "./types";
 import styles from "@/app/styles/whoTitle.module.css";
 
-type InputProps = {
-  state: EditorState;
-  setState: (state: EditorState) => void;
-};
-
-export function Input(props: InputProps) {
+export function Input(props: StateProps) {
   const { state, setState } = props;
   return (
     <textarea

@@ -14,7 +14,6 @@ export function Preview(props: PreviewProps) {
     <>
       <div className={styles.titlePreview}>
         <article ref={ref}>
-          {/* eslint-disable-next-line @next/next-eslint/no-img-element */}
           <img
             className={styles.titleImage}
             src={state.background}
