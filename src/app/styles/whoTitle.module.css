@@ -43,6 +43,7 @@
 .btnRow {
   flex-direction: row;
   width: 100%;
+  z-index: 2;
 }
 
 .fontSizeInput {
