@@ -30,7 +30,7 @@ export function Preview(props: PreviewProps) {
               letterSpacing: state.letterSpacing ?? 0,
               top: state.top ?? "50%",
               fontWeight: state.fontWeight ?? "auto",
-              textTransform: state.textAllCaps ?? "",
+              textTransform: state.textAllCaps ?? "none",
               WebkitTextStrokeWidth: state.outline ?? "",
               WebkitTextStrokeColor: state.outlineColour ?? "",
             }}

@@ -1,7 +1,7 @@
 export interface EditorState {
   name: string;
   text?: string;
-  textAllCaps?: string;
+  textAllCaps?: React.CSSProperties["textTransform"] | undefined;
   writerCredit: boolean;
   writer?: string;
   color?: string;
@@ -10,8 +10,6 @@ export interface EditorState {
   font: string;
   fontSize: number;
   textShadow?: string;
-  effect: string | null;
-  subtitleOffset: number;
   styling?: string;
   width?: string;
   outline?: string;
