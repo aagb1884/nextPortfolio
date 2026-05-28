@@ -4,7 +4,7 @@ export const metadata = {
   title: "Doctor Who Title Generator",
   openGraph: {
     title: "Doctor Who Title Generator",
-    description: "A basic Doctor Who title card generator.",
+    description: "A test version of a Doctor Who title card generator.",
   },
 };
 
