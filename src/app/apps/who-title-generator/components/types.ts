@@ -5,6 +5,7 @@ export interface EditorState {
   writerCredit: boolean;
   writer?: string;
   color?: string;
+  textBackground?: string;
   background: string;
   alt: string;
   font: string;
@@ -17,6 +18,7 @@ export interface EditorState {
   letterSpacing?: number;
   top?: string;
   fontWeight?: number | string;
+  brightness?: string;
 }
 
 export type StateProps = {
