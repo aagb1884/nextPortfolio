@@ -12,6 +12,7 @@ export function Toolbar(props: StateProps) {
           type="number"
           id="font-size-input"
           maxLength={3}
+          min={1}
           max={200}
           defaultValue={state.fontSize}
           className={styles.fontSizeInput}

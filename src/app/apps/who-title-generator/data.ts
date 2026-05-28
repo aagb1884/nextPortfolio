@@ -133,7 +133,7 @@ export const titleData: EditorState[] = [
     alt: "Eleventh Doctor Title Vortex",
     font: "var(--font-sfmovie)",
     fontSize: 24,
-    textShadow: "1px 1px 2px black",
+    textShadow: "3px 3px 6px black",
     letterSpacing: 10,
     top: "70%",
   },
