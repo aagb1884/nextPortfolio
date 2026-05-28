@@ -17,6 +17,7 @@ export interface EditorState {
   outlineColour?: string;
   letterSpacing?: number;
   top?: string;
+  left?: string;
   fontWeight?: number | string;
   brightness?: string;
 }

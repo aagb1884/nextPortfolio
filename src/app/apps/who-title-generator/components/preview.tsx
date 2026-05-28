@@ -29,6 +29,7 @@ export function Preview(props: PreviewProps) {
               width: state.width ?? "80%",
               letterSpacing: state.letterSpacing ?? 0,
               top: state.top ?? "50%",
+              left: state.left ?? "50%",
               fontWeight: state.fontWeight ?? "auto",
               filter: state.brightness ?? "none",
               textTransform: state.textAllCaps ?? "none",
