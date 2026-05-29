@@ -7,6 +7,8 @@ import { Input } from "./components/input";
 import html2canvas from "html2canvas";
 import { titleData } from "./data";
 import { Toolbar } from "./components/toolbar";
+import AppsFooter from "../components/AppsFooter";
+import KoFiLink from "@/app/ui/KoFi";
 
 const options = {
   allowTaint: false,
@@ -112,6 +114,10 @@ export default function WhoTitleGenerator() {
           Copy
         </button>
       </div>
+      <footer className={styles.whoTitleFooter}>
+        <AppsFooter />
+        <KoFiLink />
+      </footer>
     </div>
   );
 }

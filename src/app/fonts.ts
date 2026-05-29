@@ -89,60 +89,60 @@ export const digital = localFont({
 export const axiformaReg = localFont({
   src: "./fonts/AxiformaRegular.otf",
   variable: "--font-axiformaReg",
-  weight: "lighter 100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
 export const eurostile = localFont({
   src: "./fonts/Eurostile.otf",
   variable: "--font-eurostile",
-  weight: "lighter 100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
 export const ContaxPro75Bold = localFont({
   src: "./fonts/Contax.ttf",
   variable: "--font-contaxpro",
-  weight: "lighter 100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
 export const futuraBold = localFont({
   src: "./fonts/FuturaBold.otf",
   variable: "--font-futuraBold",
-  weight: "lighter 100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
 export const futuraXtaBold = localFont({
   src: "./fonts/FuturaExtraBold.otf",
   variable: "--font-futuraXtaBold",
-  weight: "lighter 100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
 export const displayMedium = localFont({
   src: "./fonts/Display-Medium.otf",
   variable: "--font-displaymedium",
-  weight: "lighter 100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
 export const optiFormulaOne = localFont({
   src: "./fonts/opti-formula-one.otf",
   variable: "--font-optione",
-  weight: "100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
 export const univers = localFont({
   src: "./fonts/Univers-Condensed-Light.otf",
   variable: "--font-univers",
-  weight: "lighter 100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
 export const futuraBook = localFont({
-  src: "./fonts/Futura-Book.ttf",
+  src: "./fonts/FuturaStd-Light.otf",
   variable: "--font-futuraBook",
-  weight: "lighter 100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
 export const sfmovie = localFont({
   src: "./fonts/SFMoviePoster.ttf",
   variable: "--font-sfmovie",
-  weight: "lighter 100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
 export const heroic = localFont({
   src: "./fonts/heroic-condensed-book.ttf",
   variable: "--font-heroic",
-  weight: "lighter 100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
 export const postant = localFont({
   src: "./fonts/postant1.ttf",
   variable: "--font-postant",
-  weight: "lighter 100 400 900",
+  weight: "lighter 100 normal bold bolder",
 });
