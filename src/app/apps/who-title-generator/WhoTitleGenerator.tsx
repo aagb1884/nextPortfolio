@@ -20,6 +20,7 @@ const options = {
 
 export default function WhoTitleGenerator() {
   const [state, setState] = useState<EditorState>(titleData[0]);
+  const [stateObject, setStateObject] = useState(0);
   const cardRef = useRef<HTMLElement>(null);
 
   const imageFileName = state.text?.toLowerCase().split(" ").join("_");
@@ -77,7 +78,16 @@ export default function WhoTitleGenerator() {
   };
 
   const handleFilter = (filterTerm: EditorState) => {
-    setState({ ...filterTerm, text: state.text });
+    setState({
+      ...filterTerm,
+      text: state.text,
+      fontWeight: state.fontWeight,
+      writer: state.writer,
+    });
+  };
+
+  const clearState = () => {
+    setState({ ...titleData[stateObject], text: "Doctor Who Title Generator" });
   };
 
   return (
@@ -86,7 +96,13 @@ export default function WhoTitleGenerator() {
       <select
         onChange={(e) => {
           const selected = titleData.find((ele) => ele.name === e.target.value);
-          if (selected) handleFilter(selected);
+          const selectedIndex = titleData.findIndex(
+            (ele) => ele.name === e.target.value
+          );
+          if (selected) {
+            handleFilter(selected);
+            setStateObject(selectedIndex);
+          }
         }}
         className={styles.titleSelect}
         aria-label="Filter Title Card"
@@ -103,6 +119,14 @@ export default function WhoTitleGenerator() {
       <div className={styles.btns}>
         <button className={styles.titleBtn} onClick={prepareURL}>
           Download
+        </button>
+        <button
+          className={styles.clrBtn}
+          onClick={() => {
+            clearState();
+          }}
+        >
+          Reset
         </button>
         <button
           className={styles.titleBtn}
