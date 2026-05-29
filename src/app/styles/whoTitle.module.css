@@ -98,9 +98,14 @@
   justify-content: center;
 }
 
-.titleBtn {
+.titleBtn,
+.clrBtn {
   margin: 5px;
   padding: 5px;
+}
+
+.clrBtn {
+  background-color: plum;
 }
 
 .whoTitleFooter {
@@ -122,6 +127,10 @@
   align-items: center;
 }
 
+.writerInput {
+  padding: 5px;
+}
+
 @media only screen and (min-width: 850px) {
   .textbox {
     padding: 40px 0px;
@@ -129,5 +138,7 @@
 
   .writerInputDiv {
     flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
   }
 }

@@ -114,8 +114,9 @@ export const titleData: EditorState[] = [
     fontSize: 32,
     textShadow: "1px 1px 2px black",
     top: "50%",
-    writerTop: "65%",
+    writerTop: "70%",
     writerFont: 12,
+    writtenBy: "by",
   },
   {
     name: "Ninth and Tenth Doctors (2005 - 2010)",

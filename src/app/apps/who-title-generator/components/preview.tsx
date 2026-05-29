@@ -10,6 +10,8 @@ type PreviewProps = {
 export function Preview(props: PreviewProps) {
   const { state, ref } = props;
 
+  const showCredit = state.writer !== undefined && state.writer?.length !== 0;
+
   return (
     <>
       <div className={styles.titlePreview}>
@@ -56,7 +58,9 @@ export function Preview(props: PreviewProps) {
                   textTransform: state.textAllCaps ?? "none",
                 }}
               >
-                {state.writer !== undefined ? state.writtenBy : ""}{" "}
+                {state.writer !== undefined && showCredit
+                  ? state.writtenBy
+                  : ""}{" "}
                 {state.writer}
               </p>
             </>
