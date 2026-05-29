@@ -2,6 +2,7 @@ import { EditorState } from "./components/types";
 export const titleData: EditorState[] = [
   {
     name: "Select A Title Sequence",
+    textAllCaps: "none",
     text: "Doctor Who Title Generator",
     writerCredit: false,
     color: "#ffff",
