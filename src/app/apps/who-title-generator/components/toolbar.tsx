@@ -38,6 +38,20 @@ export function Toolbar(props: StateProps) {
           />
           Caps Optional
         </label>
+        <select
+          onChange={(e) => {
+            setState({ ...state, fontWeight: e.target.value });
+          }}
+        >
+          <option value="normal" disabled selected>
+            Font Weight
+          </option>
+          <option value="100">Lighter</option>
+          <option value="lighter">Light</option>
+          <option value="normal">Normal</option>
+          <option value="bold">Bold</option>
+          <option value="bolder">Bolder</option>
+        </select>
       </div>
       <div className={styles.sliders}>
         Move Up/Down:
