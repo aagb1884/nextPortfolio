@@ -97,7 +97,7 @@ export const eurostile = localFont({
   weight: "lighter 100 400 900",
 });
 export const ContaxPro75Bold = localFont({
-  src: "./fonts/ContaxPro75BoldSC.otf",
+  src: "./fonts/Contax.ttf",
   variable: "--font-contaxpro",
   weight: "lighter 100 400 900",
 });
