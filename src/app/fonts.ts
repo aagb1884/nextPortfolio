@@ -10,6 +10,7 @@ import {
   Londrina_Solid,
   Tektur,
   Oswald,
+  Bebas_Neue,
 } from "next/font/google";
 import localFont from "next/font/local";
 
@@ -78,6 +79,12 @@ export const tektur = Tektur({
 export const oswald = Oswald({
   subsets: ["latin"],
   variable: "--font-oswald",
+  weight: "400",
+});
+
+export const bebas = Bebas_Neue({
+  subsets: ["latin"],
+  variable: "--font-bebas",
   weight: "400",
 });
 

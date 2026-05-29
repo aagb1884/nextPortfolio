@@ -14,7 +14,7 @@ export function Toolbar(props: StateProps) {
           maxLength={3}
           min={1}
           max={200}
-          defaultValue={state.fontSize}
+          value={state.fontSize}
           className={styles.fontSizeInput}
           onChange={(e) =>
             setState({ ...state, fontSize: Number(e.target.value) })
@@ -24,7 +24,6 @@ export function Toolbar(props: StateProps) {
           <input
             type="radio"
             name="caps"
-            value="uppercase"
             onChange={() => setState({ ...state, textAllCaps: "uppercase" })}
           />
           All Caps
@@ -33,7 +32,6 @@ export function Toolbar(props: StateProps) {
           <input
             type="radio"
             name="caps"
-            value="none"
             onChange={() => setState({ ...state, textAllCaps: "none" })}
           />
           Caps Optional
@@ -42,8 +40,9 @@ export function Toolbar(props: StateProps) {
           onChange={(e) => {
             setState({ ...state, fontWeight: e.target.value });
           }}
+          value={state.fontWeight ?? "auto"}
         >
-          <option value="normal" disabled selected>
+          <option value="auto" disabled>
             Font Weight
           </option>
           <option value="100">Lighter</option>

@@ -4,14 +4,18 @@ export interface EditorState {
   textAllCaps?: React.CSSProperties["textTransform"] | undefined;
   writerCredit: boolean;
   writer?: string;
+  writerTop?: string;
+  writerFont?: number;
+  writerCaps?: React.CSSProperties["textTransform"] | undefined;
+  writtenBy?: string;
+  creditFlex?: React.CSSProperties["flexDirection"] | undefined;
   color?: string;
-  textBackground?: string;
+  // textBackground?: string;
   background: string;
   alt: string;
   font: string;
   fontSize: number;
   textShadow?: string;
-  styling?: string;
   width?: string;
   outline?: string;
   outlineColour?: string;
@@ -19,7 +23,7 @@ export interface EditorState {
   top?: string;
   left?: string;
   fontWeight?: number | string;
-  brightness?: string;
+  // brightness?: string;
 }
 
 export type StateProps = {

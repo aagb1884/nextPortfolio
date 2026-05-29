@@ -30,8 +30,8 @@ export function Preview(props: PreviewProps) {
               letterSpacing: state.letterSpacing ?? 0,
               top: state.top ?? "50%",
               left: state.left ?? "50%",
-              fontWeight: state.fontWeight ?? "auto",
-              filter: state.brightness ?? "none",
+              fontWeight: state.fontWeight,
+              // filter: state.brightness ?? "none",
               textTransform: state.textAllCaps ?? "none",
               WebkitTextStrokeWidth: state.outline ?? "",
               WebkitTextStrokeColor: state.outlineColour ?? "",
@@ -40,6 +40,27 @@ export function Preview(props: PreviewProps) {
           >
             {state.text}
           </p>
+          {state.writerCredit && (
+            <>
+              <p
+                className={styles.titleText}
+                style={{
+                  color: state.color,
+                  fontFamily: state.font,
+                  top: state.writerTop,
+                  left: state.left,
+                  fontSize: state.writerFont,
+                  fontWeight: state.fontWeight,
+                  textShadow: state.textShadow,
+                  letterSpacing: state.letterSpacing,
+                  textTransform: state.textAllCaps ?? "none",
+                }}
+              >
+                {state.writer !== undefined ? state.writtenBy : ""}{" "}
+                {state.writer}
+              </p>
+            </>
+          )}
         </article>
       </div>
     </>
