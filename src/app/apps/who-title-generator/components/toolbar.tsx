@@ -20,23 +20,19 @@ export function Toolbar(props: StateProps) {
             setState({ ...state, fontSize: Number(e.target.value) })
           }
         />
-        <label className={styles.label}>
-          <input
-            type="radio"
-            name="caps"
-            onChange={() => setState({ ...state, textAllCaps: "uppercase" })}
-          />
-          All Caps
-        </label>
-        <label className={styles.label}>
-          <input
-            type="radio"
-            name="caps"
-            onChange={() => setState({ ...state, textAllCaps: "none" })}
-          />
-          Caps Optional
-        </label>
+        Case:
         <select
+          className={styles.select}
+          onChange={(e: any) => {
+            setState({ ...state, textAllCaps: e.currentTarget.value });
+          }}
+          value={state.textAllCaps ?? "none"}
+        >
+          <option value="none">Custom</option>
+          <option value="uppercase">ALL CAPS</option>
+        </select>
+        <select
+          className={styles.select}
           onChange={(e) => {
             setState({ ...state, fontWeight: e.target.value });
           }}
@@ -46,9 +42,6 @@ export function Toolbar(props: StateProps) {
             Font Weight
           </option>
           <option value="100">Lighter</option>
-          <option value="lighter">Light</option>
-          <option value="normal">Normal</option>
-          <option value="bold">Bold</option>
           <option value="bolder">Bolder</option>
         </select>
       </div>
