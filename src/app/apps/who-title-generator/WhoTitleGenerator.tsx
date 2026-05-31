@@ -14,7 +14,7 @@ const options = {
   allowTaint: false,
   logging: false,
   useCORS: true,
-  backgroundColor: "rgba(0,0,0,0)",
+  backgroundColor: "transparent",
   removeContainer: true,
 };
 
@@ -38,11 +38,11 @@ export default function WhoTitleGenerator() {
 
       const result = await html2canvas.default(cardElement, options);
 
-      const asURL = result.toDataURL("image/jpeg");
+      const asURL = result.toDataURL("image/png");
       // as far as I know this is a quick and dirty solution
       const anchor = document.createElement("a");
       anchor.href = asURL;
-      anchor.download = `${imageFileName}.jpeg`;
+      anchor.download = `${imageFileName}.png`;
       anchor.click();
       anchor.remove();
       // maybe this part should set state with `setURLData(asURL)`
@@ -73,7 +73,7 @@ export default function WhoTitleGenerator() {
       alert("Copied to clipboard!");
     } catch (err) {
       console.error("Unable to copy to clipboard.", err);
-      alert("Copy to clipboard failed.");
+      alert(`Copy to clipboard failed. ${err}`);
     }
   };
 
