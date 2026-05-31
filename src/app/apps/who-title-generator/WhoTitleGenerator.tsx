@@ -14,7 +14,7 @@ const options = {
   allowTaint: false,
   logging: false,
   useCORS: true,
-  backgroundColor: "transparent",
+  backgroundColor: null,
   removeContainer: true,
 };
 
@@ -73,7 +73,7 @@ export default function WhoTitleGenerator() {
       alert("Copied to clipboard!");
     } catch (err) {
       console.error("Unable to copy to clipboard.", err);
-      alert(`Copy to clipboard failed. ${err}`);
+      alert(`Copy to clipboard failed.`);
     }
   };
 
