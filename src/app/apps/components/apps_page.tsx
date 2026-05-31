@@ -13,6 +13,7 @@ import rng from "../../../../public/images/rng.png";
 import drWhoQuiz from "../../../../public/images/drWhoQuiz/Doctor-Who-Quiz-Logo.png";
 import sfng from "@/app/images/scifinamegen.png";
 import barlow from "../barlow/opengraph-image.png";
+import whoTitles from "../who-title-generator/opengraph-image.jpeg";
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
 import AppLinks from "./appLinks";
@@ -93,11 +94,11 @@ const AppsPage = () => {
               />
             </Link>
           </div>
-          <div className={styles.poetRemixer}>
-            <Link href="/apps/poetremixer">
+          <div className={styles.whoTitleGenerator}>
+            <Link href="/apps/who-title-generator">
               <Image
-                src={poetRemixer}
-                alt="poetRemixer tool link"
+                src={whoTitles}
+                alt="Who Title Generator link"
                 className={styles.buttonImage}
               />
             </Link>
@@ -113,6 +114,15 @@ const AppsPage = () => {
                 Scottish Football Simulators
                 <ExternalLinkImage />
               </div>
+            </Link>
+          </div>
+          <div className={styles.poetRemixer}>
+            <Link href="/apps/poetremixer">
+              <Image
+                src={poetRemixer}
+                alt="poetRemixer tool link"
+                className={styles.buttonImage}
+              />
             </Link>
           </div>
           <div className={styles.drWhoQuiz}>

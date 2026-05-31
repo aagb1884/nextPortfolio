@@ -20,6 +20,7 @@ export function Preview(props: PreviewProps) {
             className={styles.titleImage}
             src={state.background}
             alt={state.alt}
+            rel="preload"
           ></img>
           <p
             className={styles.titleText}
