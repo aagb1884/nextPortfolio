@@ -117,9 +117,14 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
                   Science Fiction Name Generator
                 </Link>
               </li>
-              {/* <li>
+              <li>
+                <Link href="/apps/who-title-generator">
+                  Doctor Who Title Card Generator
+                </Link>
+              </li>
+              <li>
                 <Link href="/apps/barlow">Setting the Gary Bar Low</Link>
-            </li> */}
+              </li>
               <li>
                 <Link href="/apps/wesley-snopes">Wesley Snopes</Link>
               </li>
