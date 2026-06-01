@@ -64,31 +64,43 @@ export default function WhoTitleGenerator() {
       <Preview state={state} ref={cardRef} />
       <Input state={state} setState={setState} />
       <div className={styles.btns}>
-        <button
+        <div className={styles.btnRow}>
+          {/* <button
           className={styles.titleBtn}
           onClick={() => {
             prepareURL(cardRef, imageFileName, options);
           }}
         >
           Download
-        </button>
-        <button
-          className={styles.clrBtn}
-          onClick={() => {
-            clearState();
+        </button> */}
+
+          <button
+            className={styles.titleBtn}
+            title="Opens in a new tab"
+            onClick={async () => {
+              if (!cardRef.current) return;
+              await openImageInNewTab(cardRef.current);
+            }}
+          >
+            Create Image
+          </button>
+          <button
+            className={styles.clrBtn}
+            onClick={() => {
+              clearState();
+            }}
+          >
+            Reset
+          </button>
+        </div>
+        <p
+          style={{
+            fontSize: "smaller",
+            marginBottom: 10,
           }}
         >
-          Reset
-        </button>
-        <button
-          className={styles.titleBtn}
-          onClick={async () => {
-            if (!cardRef.current) return;
-            await openImageInNewTab(cardRef.current);
-          }}
-        >
-          Open Image in New Tab
-        </button>
+          Image will open in a new tab for copying/downloading.
+        </p>
       </div>
       <footer className={styles.whoTitleFooter}>
         <AppsFooter />
