@@ -21,8 +21,6 @@ export default function WhoTitleGenerator() {
     useCORS: true,
     backgroundColor: null,
     removeContainer: true,
-    scrollX: -window.scrollX,
-    scrollY: -window.scrollY,
     windowWidth: document.documentElement.offsetWidth,
     windowHeight: document.documentElement.offsetHeight,
   };

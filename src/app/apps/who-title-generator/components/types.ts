@@ -37,8 +37,6 @@ export type html2canvasOptions = {
   useCORS: boolean;
   backgroundColor: string | null;
   removeContainer: boolean;
-  scrollX: number;
-  scrollY: number;
   windowWidth: number;
   windowHeight: number;
 };

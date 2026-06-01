@@ -2,18 +2,6 @@ import { RefObject } from "react";
 import html2canvas from "html2canvas";
 import { html2canvasOptions } from "./components/types";
 
-// const options = {
-//   allowTaint: true,
-//   logging: false,
-//   useCORS: true,
-//   backgroundColor: null,
-//   removeContainer: true,
-//   scrollX: -window.scrollX,
-//   scrollY: -window.scrollY,
-//   windowWidth: document.documentElement.offsetWidth,
-//   windowHeight: document.documentElement.offsetHeight,
-// };
-
 export const prepareURL = async (
   cardRef: RefObject<HTMLElement>,
   fileName: string | undefined,
@@ -47,24 +35,26 @@ export const prepareURL = async (
 export const openImageInNewTab = async (
   element: HTMLElement
 ): Promise<void> => {
-  const win = window.open("", "_blank");
-  try {
-    const canvas = await html2canvas(element, { x: 0 });
+  if (typeof window !== undefined) {
+    const win = window.open("", "_blank");
+    try {
+      const canvas = await html2canvas(element, { x: 0 });
 
-    const blob = await new Promise<Blob>((resolve, reject) => {
-      canvas.toBlob((blob) => {
-        if (!blob) reject(new Error("Failed to capture screenshot"));
-        else resolve(blob);
-      }, "image/png");
-    });
+      const blob = await new Promise<Blob>((resolve, reject) => {
+        canvas.toBlob((blob) => {
+          if (!blob) reject(new Error("Failed to capture screenshot"));
+          else resolve(blob);
+        }, "image/png");
+      });
 
-    const url = URL.createObjectURL(blob);
-    if (win !== null) {
-      win.scrollTo(0, 0);
-      win.location.href = url;
+      const url = URL.createObjectURL(blob);
+      if (win !== null) {
+        //   win.scrollTo(0, 0);
+        win.location.href = url;
+      }
+    } catch (err) {
+      console.error("Unable to create image.", err);
+      alert(`Image creation failed.`);
     }
-  } catch (err) {
-    console.error("Unable to create image.", err);
-    alert(`Image creation failed.`);
   }
 };
