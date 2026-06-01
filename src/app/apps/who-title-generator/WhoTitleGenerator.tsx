@@ -58,7 +58,7 @@ export default function WhoTitleGenerator() {
   ): Promise<void> => {
     try {
       const canvas = await html2canvas(element);
-      const win = window.open("", "_blank");
+      const win = window.open();
       const blob = await new Promise<Blob>((resolve, reject) => {
         canvas.toBlob((blob) => {
           if (!blob) reject(new Error("Failed to capture screenshot"));
