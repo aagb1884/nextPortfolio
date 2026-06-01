@@ -71,8 +71,6 @@ export default function WhoTitleGenerator() {
       if (win !== null) {
         win.location.href = url;
       }
-
-      window.open(url, "_blank");
     } catch (err) {
       console.error("Unable to create image.", err);
       alert(`Image creation failed.`);
