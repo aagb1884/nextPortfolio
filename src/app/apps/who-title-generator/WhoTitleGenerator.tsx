@@ -1,7 +1,7 @@
 "use client";
 import { useState, useRef } from "react";
 import { EditorState } from "./components/types";
-import { prepareURL, openImageInNewTab } from "./functions";
+import { openImageInNewTab } from "./functions";
 import { Preview } from "./components/preview";
 import { Input } from "./components/input";
 import { titleData } from "./data";
@@ -15,15 +15,15 @@ export default function WhoTitleGenerator() {
   const [stateObject, setStateObject] = useState(0);
   const cardRef = useRef<HTMLElement>(null);
 
-  const options = {
-    allowTaint: true,
-    logging: false,
-    useCORS: true,
-    backgroundColor: null,
-    removeContainer: true,
-  };
+  // const options = {
+  //   allowTaint: true,
+  //   logging: false,
+  //   useCORS: true,
+  //   backgroundColor: null,
+  //   removeContainer: true,
+  // };
 
-  const imageFileName = state.text?.toLowerCase().split(" ").join("_");
+  // const imageFileName = state.text?.toLowerCase().split(" ").join("_");
 
   const handleFilter = (filterTerm: EditorState) => {
     setState({
