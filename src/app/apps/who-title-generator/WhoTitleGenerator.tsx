@@ -1,81 +1,33 @@
 "use client";
 import { useState, useRef } from "react";
 import { EditorState } from "./components/types";
+import { prepareURL, openImageInNewTab } from "./functions";
 import { Preview } from "./components/preview";
-import styles from "@/app/styles/whoTitle.module.css";
 import { Input } from "./components/input";
-import html2canvas from "html2canvas";
 import { titleData } from "./data";
 import { Toolbar } from "./components/toolbar";
+import styles from "@/app/styles/whoTitle.module.css";
 import AppsFooter from "../components/AppsFooter";
 import KoFiLink from "@/app/ui/KoFi";
-
-const options = {
-  allowTaint: false,
-  logging: false,
-  useCORS: true,
-  backgroundColor: null,
-  removeContainer: true,
-};
 
 export default function WhoTitleGenerator() {
   const [state, setState] = useState<EditorState>(titleData[0]);
   const [stateObject, setStateObject] = useState(0);
   const cardRef = useRef<HTMLElement>(null);
 
+  const options = {
+    allowTaint: true,
+    logging: false,
+    useCORS: true,
+    backgroundColor: null,
+    removeContainer: true,
+    scrollX: -window.scrollX,
+    scrollY: -window.scrollY,
+    windowWidth: document.documentElement.offsetWidth,
+    windowHeight: document.documentElement.offsetHeight,
+  };
+
   const imageFileName = state.text?.toLowerCase().split(" ").join("_");
-
-  const prepareURL = async () => {
-    const cardElement = cardRef.current;
-
-    if (!cardElement) return;
-
-    try {
-      // lazy load this package
-      const html2canvas = await import(
-        /* webpackPrefetch: true */ "html2canvas"
-      );
-
-      const result = await html2canvas.default(cardElement, options);
-
-      const asURL = result.toDataURL("image/png");
-      // as far as I know this is a quick and dirty solution
-      const anchor = document.createElement("a");
-      anchor.href = asURL;
-      anchor.download = `${imageFileName}.png`;
-      anchor.click();
-      anchor.remove();
-      // maybe this part should set state with `setURLData(asURL)`
-      // and when that's set to something you show the download button
-      // which has `href=URLData`, so that people can click on it
-    } catch (reason) {
-      console.log(reason);
-    }
-  };
-
-  const copyArticleToClipboard = async (
-    element: HTMLElement
-  ): Promise<void> => {
-    const win = window.open("", "_blank");
-    try {
-      const canvas = await html2canvas(element);
-
-      const blob = await new Promise<Blob>((resolve, reject) => {
-        canvas.toBlob((blob) => {
-          if (!blob) reject(new Error("Failed to capture screenshot"));
-          else resolve(blob);
-        }, "image/png");
-      });
-
-      const url = URL.createObjectURL(blob);
-      if (win !== null) {
-        win.location.href = url;
-      }
-    } catch (err) {
-      console.error("Unable to create image.", err);
-      alert(`Image creation failed.`);
-    }
-  };
 
   const handleFilter = (filterTerm: EditorState) => {
     setState({
@@ -104,7 +56,6 @@ export default function WhoTitleGenerator() {
             setStateObject(selectedIndex);
           }
         }}
-        className={styles.titleSelect}
         aria-label="Filter Title Card"
       >
         {titleData.map((ele, key) => (
@@ -117,7 +68,12 @@ export default function WhoTitleGenerator() {
       <Preview state={state} ref={cardRef} />
       <Input state={state} setState={setState} />
       <div className={styles.btns}>
-        <button className={styles.titleBtn} onClick={prepareURL}>
+        <button
+          className={styles.titleBtn}
+          onClick={() => {
+            prepareURL(cardRef, imageFileName, options);
+          }}
+        >
           Download
         </button>
         <button
@@ -132,7 +88,7 @@ export default function WhoTitleGenerator() {
           className={styles.titleBtn}
           onClick={async () => {
             if (!cardRef.current) return;
-            await copyArticleToClipboard(cardRef.current);
+            await openImageInNewTab(cardRef.current);
           }}
         >
           Open Image in New Tab
