@@ -30,3 +30,11 @@ export type StateProps = {
   state: EditorState;
   setState: (state: EditorState) => void;
 };
+
+export type html2canvasOptions = {
+  allowTaint: boolean;
+  logging: boolean;
+  useCORS: boolean;
+  backgroundColor: string | null;
+  removeContainer: boolean;
+};
