@@ -66,14 +66,11 @@ export default function WhoTitleGenerator() {
         }, "image/png");
       });
 
-      await navigator.clipboard.write([
-        new ClipboardItem({ "image/png": blob }),
-      ]);
-
-      alert("Copied to clipboard!");
+      const url = URL.createObjectURL(blob);
+      window.open(url, "_blank");
     } catch (err) {
-      console.error("Unable to copy to clipboard.", err);
-      alert(`Copy to clipboard failed.`);
+      console.error("Unable to create image.", err);
+      alert(`Image creation failed.`);
     }
   };
 
@@ -135,7 +132,7 @@ export default function WhoTitleGenerator() {
             await copyArticleToClipboard(cardRef.current);
           }}
         >
-          Copy
+          Open Image in New Tab
         </button>
       </div>
       <footer className={styles.whoTitleFooter}>
