@@ -10,7 +10,6 @@ export const prepareURL = async (
   const cardElement = cardRef.current;
 
   if (!cardElement) return;
-
   try {
     // lazy load this package
     const html2canvas = await import(/* webpackPrefetch: true */ "html2canvas");

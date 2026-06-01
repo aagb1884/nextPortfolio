@@ -21,8 +21,6 @@ export default function WhoTitleGenerator() {
     useCORS: true,
     backgroundColor: null,
     removeContainer: true,
-    windowWidth: document.documentElement.offsetWidth,
-    windowHeight: document.documentElement.offsetHeight,
   };
 
   const imageFileName = state.text?.toLowerCase().split(" ").join("_");
