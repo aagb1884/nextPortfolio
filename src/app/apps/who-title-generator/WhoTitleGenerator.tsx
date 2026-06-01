@@ -58,7 +58,7 @@ export default function WhoTitleGenerator() {
   ): Promise<void> => {
     try {
       const canvas = await html2canvas(element);
-
+      const win = window.open("", "_blank");
       const blob = await new Promise<Blob>((resolve, reject) => {
         canvas.toBlob((blob) => {
           if (!blob) reject(new Error("Failed to capture screenshot"));
@@ -67,6 +67,10 @@ export default function WhoTitleGenerator() {
       });
 
       const url = URL.createObjectURL(blob);
+      if (win !== null) {
+        win.location = url;
+      }
+
       window.open(url, "_blank");
     } catch (err) {
       console.error("Unable to create image.", err);
