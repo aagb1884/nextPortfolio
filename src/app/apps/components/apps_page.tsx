@@ -94,15 +94,6 @@ const AppsPage = () => {
               />
             </Link>
           </div>
-          <div className={styles.whoTitleGenerator}>
-            <Link href="/apps/who-title-generator">
-              <Image
-                src={whoTitles}
-                alt="Who Title Generator link"
-                className={styles.buttonImage}
-              />
-            </Link>
-          </div>
           <div className={styles.derekAdams}>
             <Link href="https://scottish-football-simulators.co.uk/">
               <Image
@@ -130,6 +121,15 @@ const AppsPage = () => {
               <Image
                 src={drWhoQuiz}
                 alt="Dr Who quiz link"
+                className={styles.buttonImage}
+              />
+            </Link>
+          </div>
+          <div className={styles.whoTitleGenerator}>
+            <Link href="/apps/who-title-generator">
+              <Image
+                src={whoTitles}
+                alt="Who Title Generator link"
                 className={styles.buttonImage}
               />
             </Link>
