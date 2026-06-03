@@ -116,15 +116,6 @@ const AppsPage = () => {
               />
             </Link>
           </div>
-          <div className={styles.drWhoQuiz}>
-            <Link href="/apps/drwhoquiz">
-              <Image
-                src={drWhoQuiz}
-                alt="Dr Who quiz link"
-                className={styles.buttonImage}
-              />
-            </Link>
-          </div>
           <div className={styles.whoTitleGenerator}>
             <Link href="/apps/who-title-generator">
               <Image
@@ -139,6 +130,15 @@ const AppsPage = () => {
               <Image
                 src={barlow}
                 alt="Setting the Barlow link"
+                className={styles.buttonImage}
+              />
+            </Link>
+          </div>
+          <div className={styles.drWhoQuiz}>
+            <Link href="/apps/drwhoquiz">
+              <Image
+                src={drWhoQuiz}
+                alt="Dr Who quiz link"
                 className={styles.buttonImage}
               />
             </Link>
