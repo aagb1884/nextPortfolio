@@ -9,6 +9,7 @@ import { Toolbar } from "./components/toolbar";
 import styles from "@/app/styles/whoTitle.module.css";
 import AppsFooter from "../components/AppsFooter";
 import KoFiLink from "@/app/ui/KoFi";
+import { useWindowDimensions } from "../drwhoquiz/data/functions";
 
 export default function WhoTitleGenerator() {
   const [state, setState] = useState<EditorState>(titleData[0]);
@@ -25,12 +26,19 @@ export default function WhoTitleGenerator() {
 
   // const imageFileName = state.text?.toLowerCase().split(" ").join("_");
 
+  const { width } = useWindowDimensions();
+  const mobile = width !== undefined && width < 485;
+
   const handleFilter = (filterTerm: EditorState) => {
     setState({
       ...filterTerm,
       text: state.text,
       fontWeight: state.fontWeight,
       writer: state.writer,
+      fontSize:
+        !mobile && width !== undefined
+          ? filterTerm.fontSize + 20
+          : filterTerm.fontSize,
     });
   };
 
@@ -48,11 +56,10 @@ export default function WhoTitleGenerator() {
             (ele) => ele.name === e.target.value
           );
           if (selected) {
-            handleFilter(selected);
             setStateObject(selectedIndex);
+            handleFilter(selected);
           }
         }}
-        aria-label="Filter Title Card"
       >
         {titleData.map((ele, key) => (
           <option value={ele.name} key={key}>
