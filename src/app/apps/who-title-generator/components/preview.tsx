@@ -39,6 +39,7 @@ export function Preview(props: PreviewProps) {
               WebkitTextStrokeWidth: state.outline ?? "",
               WebkitTextStrokeColor: state.outlineColour ?? "",
               whiteSpace: "pre-wrap",
+              fontStyle: state.style ?? "",
             }}
           >
             {state.text}

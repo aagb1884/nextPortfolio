@@ -176,7 +176,9 @@ const BarlowPage: React.FC<JsonData> = ({ items }) => {
 
   return (
     <div className={styles.barlowPage}>
-      <AppsFooter />
+      <div style={{ zIndex: 6 }}>
+        <AppsFooter />
+      </div>
       {!startModal && (
         <>
           <h1 className={styles.barlowTitle}>Setting the Gary Bar Low</h1>

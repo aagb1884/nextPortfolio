@@ -216,4 +216,17 @@ export const titleData: EditorState[] = [
     writerCaps: "uppercase",
     writtenBy: "WRITTEN BY",
   },
+  {
+    name: "K9 and Company (1981)",
+    writerCredit: false,
+    color: "#02ff01",
+    background: "/images/drWhoTitles/k9.png",
+    alt: "K9 and Company Title Card",
+    font: "var(--font-optiEnraged)",
+    fontSize: 25,
+    top: "75%",
+    textShadow: "2px 1px 1px #1eb923",
+    textAllCaps: "uppercase",
+    style: "italic",
+  },
 ];

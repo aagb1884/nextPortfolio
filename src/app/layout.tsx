@@ -25,6 +25,7 @@ import {
   heroic,
   postant,
   bebas,
+  optiEnragedBold,
 } from "./fonts";
 import { GlobalStateProvider } from "./context/GlobalStateContext";
 import { GoogleAnalytics } from "@next/third-parties/google";
@@ -80,6 +81,7 @@ export default function RootLayout({
       ${futuraBold.variable} ${futuraXtaBold.variable} ${futuraBook.variable}
       ${displayMedium.variable} ${optiFormulaOne.variable} ${univers.variable}
       ${sfmovie.variable} ${heroic.variable} ${postant.variable} ${bebas.variable}
+      ${optiEnragedBold.variable}
       `}
         >
           {children}
