@@ -112,6 +112,7 @@ export const futuraBold = localFont({
   src: "./fonts/FuturaBold.otf",
   variable: "--font-futuraBold",
   weight: "lighter 100 normal bold bolder",
+  fallback: ["Trebuchet MS"],
 });
 export const futuraXtaBold = localFont({
   src: "./fonts/FuturaExtraBold.otf",
@@ -151,5 +152,10 @@ export const heroic = localFont({
 export const postant = localFont({
   src: "./fonts/postant1.ttf",
   variable: "--font-postant",
+  weight: "lighter 100 normal bold bolder",
+});
+export const optiEnragedBold = localFont({
+  src: "./fonts/OPTIEnraged-BoldAD.otf",
+  variable: "--font-optiEnraged",
   weight: "lighter 100 normal bold bolder",
 });

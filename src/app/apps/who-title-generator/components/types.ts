@@ -23,6 +23,7 @@ export interface EditorState {
   top?: string;
   left?: string;
   fontWeight?: number | string;
+  style?: string;
   // brightness?: string;
 }
 
