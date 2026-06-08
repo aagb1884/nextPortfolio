@@ -229,4 +229,17 @@ export const titleData: EditorState[] = [
     textAllCaps: "uppercase",
     style: "italic",
   },
+  {
+    name: "Torchwood (2009)",
+    writerCredit: false,
+    color: "black",
+    background: "/images/drWhoTitles/torchwood.png",
+    alt: "Torchwood Title Card",
+    font: "var(--font-torchwood)",
+    fontSize: 14,
+    fontWeight: 100,
+    width: "90%",
+    top: "70%",
+    textAllCaps: "uppercase",
+  },
 ];

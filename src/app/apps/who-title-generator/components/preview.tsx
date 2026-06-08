@@ -33,7 +33,7 @@ export function Preview(props: PreviewProps) {
               letterSpacing: state.letterSpacing ?? 0,
               top: state.top ?? "50%",
               left: state.left ?? "50%",
-              fontWeight: state.fontWeight,
+              fontWeight: state.fontWeight ?? "normal",
               // filter: state.brightness ?? "none",
               textTransform: state.textAllCaps ?? "none",
               WebkitTextStrokeWidth: state.outline ?? "",
