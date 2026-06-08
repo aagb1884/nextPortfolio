@@ -159,3 +159,8 @@ export const optiEnragedBold = localFont({
   variable: "--font-optiEnraged",
   weight: "lighter 100 normal bold bolder",
 });
+export const torchwood = localFont({
+  src: "./fonts/torchwood_font.ttf",
+  variable: "--font-torchwood",
+  weight: "lighter 100 normal bold bolder",
+});
