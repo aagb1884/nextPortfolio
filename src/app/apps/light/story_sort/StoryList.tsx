@@ -192,7 +192,6 @@ const StoryList: React.FC<FilterProps> = ({ activeWhoTab }) => {
   function handleDragEnd(event: DragEndEvent) {
     setTimeVisible(false);
     setScore(0);
-    console.log(event);
     const { active, over } = event;
     //handles item replacing itself
     if (active.id === over?.id) {

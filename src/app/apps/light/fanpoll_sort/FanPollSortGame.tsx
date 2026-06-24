@@ -135,7 +135,7 @@ const FanPollList: React.FC<FilterProps> = ({ activeWhoTab }) => {
   // button functions
   function checkAnswers() {
     const correctOrder = [...FanPollList].sort(
-      (a, b) => a.ranking - b.ranking || a.id - b.id
+      (a, b) => (a.ranking ?? 0) - (b.ranking ?? 0) || a.id - b.id
     );
     const newCorrectStates: Record<number, boolean> = {};
 
