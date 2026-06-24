@@ -26,7 +26,7 @@ export const stories: Story[] = [
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 107,
     tags: "junkyard, coal hill, cavemen, stone age",
-    desc: "brief description",
+    desc: "brief description inc incarnation, year",
     image: "/public/images/etc.",
   },
   {

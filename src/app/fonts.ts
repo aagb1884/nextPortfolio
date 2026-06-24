@@ -141,3 +141,8 @@ export const heroic = localFont({
   variable: "--font-heroic",
   weight: "lighter 100 400 900",
 });
+export const teletext = localFont({
+  src: "./fonts/EuropeanTeletext.ttf",
+  variable: "--font-teletext",
+  weight: "lighter 100 400 900",
+});

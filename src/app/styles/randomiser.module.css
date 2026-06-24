@@ -1,0 +1,195 @@
+.randomiser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: #b1b7b0;
+}
+
+.bg {
+  object-fit: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+}
+
+.scanner {
+  position: absolute;
+  top: 10%;
+  height: 40%;
+  width: 70%;
+  /* width: auto;
+  height: auto; */
+  background-color: black;
+  z-index: 2;
+  font-family: var(--font-teletext);
+  color: white;
+  font-size: x-large;
+}
+
+.controls {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.rotor {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  border: 1px solid black;
+  height: 300px;
+  width: 150px;
+}
+
+.glowRtr {
+  height: 250px;
+  width: 20%;
+  background-color: rgba(244, 137, 117, 0.9);
+  border: 2px solid rgba(149, 53, 37, 0.9);
+  -webkit-box-shadow: 0px 0px 105px 35px rgba(149, 53, 37, 0.9);
+  -moz-box-shadow: 0px 0px 105px 25px rgba(149, 53, 37, 0.9);
+  box-shadow: 0px 0px 105px 15px rgba(149, 53, 37, 0.9);
+}
+
+.console {
+  bottom: 0px;
+  position: absolute;
+  width: 75%;
+  height: 200px;
+  background: linear-gradient(to bottom, #dbdbdb, #f9f9f9, #dbdbdb);
+  --shine-deg: 45deg;
+  transform: perspective(10px) rotateX(1deg);
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding-bottom: 20px;
+  z-index: 5;
+}
+
+.randomiserBox {
+  border: 1px black solid;
+  height: 40px;
+  width: 150px;
+  background: linear-gradient(
+    45deg,
+    #999 5%,
+    #fff 10%,
+    #ccc 30%,
+    #ddd 50%,
+    #ccc 70%,
+    #fff 80%,
+    #999 95%
+  );
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: rgba(255, 46, 46, 0.4);
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-box-shadow: 0px 0px 105px 35px rgba(255, 46, 46, 0.9);
+  -moz-box-shadow: 0px 0px 105px 25px rgba(255, 46, 46, 0.9);
+  box-shadow: 0px 0px 105px 15px rgba(255, 46, 46, 0.9);
+}
+
+/* toggle  */
+.randomiserToggle {
+  max-height: 200px;
+  display: flex;
+  justify-content: center;
+  transform: rotate(90deg);
+  margin-bottom: 20px;
+}
+
+.toggle {
+  width: 60px;
+  height: 20px;
+  z-index: 5;
+}
+
+.toggle > label {
+  display: flex;
+  align-items: center;
+}
+
+.toggle > label > span {
+  margin: 0 auto;
+}
+
+/* Hide default HTML checkbox */
+.toggle > input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: black;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  margin-right: 5px;
+  border-radius: 20%;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  border-radius: 5px;
+  left: 3px;
+  bottom: -2.5px;
+  background-color: rgb(242, 27, 27);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: rgb(38, 39, 83);
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px rgb(38, 39, 83);
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+@media only screen and (min-width: 700px) {
+  .scanner {
+    width: 40%;
+    left: 50%;
+  }
+  .console {
+    width: 500px;
+    left: -5%;
+  }
+  .controls {
+    width: 500px;
+  }
+}
