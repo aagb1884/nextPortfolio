@@ -1,12 +1,25 @@
-'use client'
+"use client";
 import { Story, stories } from "../data/stories";
 import React from "react";
 import { useState, useEffect } from "react";
 import SortableStory from "../components/SortableStory";
 import Countdown from "../components/countdown";
 import Filter from "../components/Filter";
-import { DndContext, DragEndEvent, KeyboardSensor, PointerSensor, TouchSensor, closestCenter, useSensor, useSensors } from "@dnd-kit/core";
-import { SortableContext, arrayMove, sortableKeyboardCoordinates } from "@dnd-kit/sortable";
+import {
+  DndContext,
+  DragEndEvent,
+  KeyboardSensor,
+  PointerSensor,
+  TouchSensor,
+  closestCenter,
+  useSensor,
+  useSensors,
+} from "@dnd-kit/core";
+import {
+  SortableContext,
+  arrayMove,
+  sortableKeyboardCoordinates,
+} from "@dnd-kit/sortable";
 import styles from "../../../styles/drwho.module.css";
 import Difficulty from "../components/DifficultySelect";
 import FanPollInstructionsModal from "./FanPollInstructionModal";
@@ -16,23 +29,25 @@ import FilterEra from "../components/FilterByEra";
 import WhoLoading from "../components/Loading";
 
 interface FilterProps {
-    activeWhoTab: string;
-  }
+  activeWhoTab: string;
+}
 
-const FanPollList: React.FC<FilterProps> = ({activeWhoTab}) => {
-  const [filter, setFilter] = useState<string>('All');
-  const [filterEra, setFilterEra] = useState<string>('All');
+const FanPollList: React.FC<FilterProps> = ({ activeWhoTab }) => {
+  const [filter, setFilter] = useState<string>("All");
+  const [filterEra, setFilterEra] = useState<string>("All");
   const [FanPollList, setFanPollList] = useState<Story[]>([]);
   const [score, setScore] = useState<number>(0);
   const [timeVisible, setTimeVisible] = useState<boolean>(false);
   const [duration, setDuration] = useState<number | string>(120);
   const [timeLeft, setTimeLeft] = useState<number>(120);
   const [isActive, setIsActive] = useState<boolean>(false);
-  const [showInstructions, setShowInstructions] = useState<boolean>(false)
-  const [showWin, setShowWin] = useState<boolean>(false)
-  const [showLose, setShowLose] = useState<boolean>(false)
-  const [showLoading, setShowLoading] = useState<boolean>(false)
-  const [correctStates, setCorrectStates] = useState<Record<number, boolean>>({});
+  const [showInstructions, setShowInstructions] = useState<boolean>(false);
+  const [showWin, setShowWin] = useState<boolean>(false);
+  const [showLose, setShowLose] = useState<boolean>(false);
+  const [showLoading, setShowLoading] = useState<boolean>(false);
+  const [correctStates, setCorrectStates] = useState<Record<number, boolean>>(
+    {}
+  );
 
   //timer
   const handleSetDuration = (): void => {
@@ -42,98 +57,99 @@ const FanPollList: React.FC<FilterProps> = ({activeWhoTab}) => {
     }
   };
 
-useEffect(() => {
-  handleSetDuration();
-}, [duration])
+  useEffect(() => {
+    handleSetDuration();
+  }, [duration]);
 
-const setTimer = (time: number) => {
-  setDuration(time);
-  handleSetDuration();
-  if (isActive) {
-    reset();
-  }
-}
+  const setTimer = (time: number) => {
+    setDuration(time);
+    handleSetDuration();
+    if (isActive) {
+      reset();
+    }
+  };
 
-useEffect(() => {
-  if (isActive && timeLeft > 0 && score !== 8) {
-    setTimeVisible(true);
-    const timerId = setInterval(() => {
-      setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
-    }, 1000);
-    
-    return () => clearInterval(timerId);
-  } else if (isActive && timeLeft === 0) {
-    setShowInstructions(false);
-    setShowLose(!showLose)
-  }
+  useEffect(() => {
+    if (isActive && timeLeft > 0 && score !== 8) {
+      setTimeVisible(true);
+      const timerId = setInterval(() => {
+        setTimeLeft((prevTimeLeft) => prevTimeLeft - 1);
+      }, 1000);
+
+      return () => clearInterval(timerId);
+    } else if (isActive && timeLeft === 0) {
+      setShowInstructions(false);
+      setShowLose(!showLose);
+    }
   }, [isActive, timeLeft]);
-  
+
   // filter
   const handleFilter = (filterTerm: string) => {
     setFilter(filterTerm);
-    setFilterEra('All');
+    setFilterEra("All");
     if (isActive) {
       reset();
     }
-  }
+  };
 
   const handleFilterEra = (filterTerm: string) => {
     setFilterEra(filterTerm);
-    setFilter('All');
+    setFilter("All");
     if (isActive) {
       reset();
     }
-  }
+  };
 
-  let filteredStories = [...stories].filter(story => story.ranking > 0);
-  if (filter !== 'All' || filterEra !== 'All'){
+  let filteredStories = [...stories].filter(
+    (story) => story.ranking !== undefined
+  );
+  if (filter !== "All" || filterEra !== "All") {
     filteredStories = stories.filter((story) => {
-      const scoresOnly = story.ranking > 0  
-      const doctorMatch = story.doctor === filter || filter === 'All';
-      const eraMatch = story.era === filterEra || filterEra === 'All';
+      const doctorMatch = story.doctor === filter || filter === "All";
+      const eraMatch = story.era === filterEra || filterEra === "All";
 
-      return (
-        doctorMatch && eraMatch && scoresOnly
-      )
-    })
+      return doctorMatch && eraMatch;
+    });
   }
-
 
   //get stories
-  function getRandomStories(){
+  function getRandomStories() {
     return [...filteredStories]
-    .map(value => ({value, sort: Math.random()}))
-    .sort((a, b) => a.sort - b.sort)
-    .map(({ value }) => value)
-    .slice(0,8)
-  } 
+      .map((value) => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value)
+      .slice(0, 8);
+  }
 
   useEffect(() => {
     const newRandomStories = getRandomStories();
-    setFanPollList(newRandomStories)
-  }, [filter, filterEra])
+    setFanPollList(newRandomStories);
+  }, [filter, filterEra]);
 
- 
   useEffect(() => {
     if (score === 8) {
-      setShowWin(!showWin)
+      setShowWin(!showWin);
     }
-  }, [score])
+  }, [score]);
 
-// button functions
-  function checkAnswers(){
-    const correctOrder = [...FanPollList].sort((a, b) => a.ranking - b.ranking || a.id - b.id) 
+  // button functions
+  function checkAnswers() {
+    const correctOrder = [...FanPollList].sort(
+      (a, b) => a.ranking - b.ranking || a.id - b.id
+    );
     const newCorrectStates: Record<number, boolean> = {};
 
     FanPollList.forEach((story, index) => {
-        newCorrectStates[story.id] = story === correctOrder[index];
-      });
-  
+      newCorrectStates[story.id] = story === correctOrder[index];
+    });
+
     setCorrectStates(newCorrectStates);
-    const score = Object.values(newCorrectStates).filter((isCorrect) => isCorrect).length;
+    const score = Object.values(newCorrectStates).filter(
+      (isCorrect) => isCorrect
+    ).length;
     setScore(score);
     setTimeout(() => {
-      setScore(0)
+      setScore(0);
       setCorrectStates({});
     }, 1700);
   }
@@ -143,20 +159,20 @@ useEffect(() => {
     setShowWin(false);
     setIsActive(false);
     setCorrectStates({});
-    setShowLoading(true)
+    setShowLoading(true);
     setTimeout(() => {
       setIsActive(true);
-      setShowLoading(false)
-    }, 2000)
+      setShowLoading(false);
+    }, 2000);
     setTimeLeft(typeof duration === "number" ? duration : 0);
     setFanPollList(getRandomStories());
     setTimeVisible(false);
     setScore(0);
-  }
+  };
 
   const clearAll = () => {
-    setFilter('All');
-    setFilterEra('All');
+    setFilter("All");
+    setFilterEra("All");
     setShowLose(false);
     setShowWin(false);
     setIsActive(false);
@@ -164,121 +180,120 @@ useEffect(() => {
     setTimeLeft(typeof duration === "number" ? duration : 0);
     setTimeVisible(false);
     setScore(0);
-  }
+  };
 
-  
-
-//dnd functions
+  //dnd functions
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(TouchSensor),
-    useSensor(KeyboardSensor,{
-      coordinateGetter: sortableKeyboardCoordinates
-    }) 
-  )
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  );
 
-  function handleDragEnd(event: DragEndEvent){
+  function handleDragEnd(event: DragEndEvent) {
     setTimeVisible(false);
     setScore(0);
-    console.log(event)
-    const {active, over}=event;
+    console.log(event);
+    const { active, over } = event;
     //handles item replacing itself
-    if (active.id===over?.id){
-      return
+    if (active.id === over?.id) {
+      return;
     }
-    setFanPollList(stories=>{
-      const itemOriginalPos = stories.findIndex((item)=>item.id===active.id)
-      const itemNewPos = stories.findIndex((item)=>item.id===over?.id)
+    setFanPollList((stories) => {
+      const itemOriginalPos = stories.findIndex(
+        (item) => item.id === active.id
+      );
+      const itemNewPos = stories.findIndex((item) => item.id === over?.id);
 
-      return arrayMove(stories, itemOriginalPos, itemNewPos)
-    })
+      return arrayMove(stories, itemOriginalPos, itemNewPos);
+    });
   }
-
 
   return (
     <div className={styles.drWhoDndContainerFanPoll}>
-      <p>Help them sort these <i>Doctor Who</i> TV stories in descending order of a 2020 fan poll ranking.</p>
+      <p>
+        Help them sort these <i>Doctor Who</i> TV stories in descending order of
+        a 2020 fan poll ranking.
+      </p>
       <div className={styles.dropdownMenus}>
-      <Difficulty 
-      duration={duration}
-      setTimer={setTimer} />
-      <div className={styles.filters}>
-      <Filter 
-      filter={filter}
-      handleFilter={handleFilter}
-      activeWhoTab={activeWhoTab}
-      />
-      <FilterEra 
-      filterEra={filterEra}
-      handleFilterEra={handleFilterEra}
-      />
-      </div>
+        <Difficulty duration={duration} setTimer={setTimer} />
+        <div className={styles.filters}>
+          <Filter
+            filter={filter}
+            handleFilter={handleFilter}
+            activeWhoTab={activeWhoTab}
+          />
+          <FilterEra filterEra={filterEra} handleFilterEra={handleFilterEra} />
+        </div>
       </div>
       <div className={styles.buttonRow}>
-      <button
-      onClick={() => {setShowInstructions(!showInstructions)}}
-      className={styles.dndBtn}
-      >How to play</button>
-        {timeVisible && (
-       <Countdown 
-       timeLeft={timeLeft}
-      />
-     )}
-      <button 
-      onClick={() => {setIsActive(true)}}
-      className={styles.dndBtn}
-        >BEGIN</button>
+        <button
+          onClick={() => {
+            setShowInstructions(!showInstructions);
+          }}
+          className={styles.dndBtn}
+        >
+          How to play
+        </button>
+        {timeVisible && <Countdown timeLeft={timeLeft} />}
+        <button
+          onClick={() => {
+            setIsActive(true);
+          }}
+          className={styles.dndBtn}
+        >
+          BEGIN
+        </button>
       </div>
       {showInstructions && (
         <FanPollInstructionsModal
-        showInstructions={showInstructions}
-        setShowInstructions={setShowInstructions}/>
-      )}
-      {showWin && (
-        <WinModal
-        reset={reset}
+          showInstructions={showInstructions}
+          setShowInstructions={setShowInstructions}
         />
       )}
-      {showLose && (
-        <LoseModal
-        reset={reset}
-        />
-      )}
-      {showLoading && (
-        <WhoLoading />
-      )}
+      {showWin && <WinModal reset={reset} />}
+      {showLose && <LoseModal reset={reset} />}
+      {showLoading && <WhoLoading />}
       {isActive && (
         <>
-      <ul className={styles.dndContextUl}>
-        <DndContext 
-        collisionDetection={closestCenter}
-        onDragEnd={handleDragEnd}
-        sensors={sensors}
-        >
-        <SortableContext items={stories}>
-        {FanPollList.map((story: Story) => (
-          <SortableStory 
-          story={story} key={story.id} 
-          isCorrect={correctStates[story.id] || false}/>
-        ))}
-        </SortableContext>
-        </DndContext>
-      </ul>
-      <div className={styles.dndButtonDiv}>
-      <button onClick={checkAnswers}
-      disabled={!timeVisible}
-      className={styles.checkScoreBtn}>Have I the right (answers)?</button>
-     <button onClick={reset}
-     className={styles.resetBtn}>Try again</button>
-     <button onClick={clearAll}
-     className={styles.clearBtn}>Clear all</button>
-     </div>
-     <div>
-     </div>
-     </>
-    )}
+          <ul className={styles.dndContextUl}>
+            <DndContext
+              collisionDetection={closestCenter}
+              onDragEnd={handleDragEnd}
+              sensors={sensors}
+            >
+              <SortableContext items={stories}>
+                {FanPollList.map((story: Story) => (
+                  <SortableStory
+                    story={story}
+                    key={story.id}
+                    isCorrect={correctStates[story.id] || false}
+                  />
+                ))}
+              </SortableContext>
+            </DndContext>
+          </ul>
+          <div className={styles.dndButtonDiv}>
+            <button
+              onClick={checkAnswers}
+              disabled={!timeVisible}
+              className={styles.checkScoreBtn}
+            >
+              Have I the right (answers)?
+            </button>
+            <button onClick={reset} className={styles.resetBtn}>
+              Try again
+            </button>
+            <button onClick={clearAll} className={styles.clearBtn}>
+              Clear all
+            </button>
+          </div>
+          <div></div>
+        </>
+      )}
     </div>
   );
-}
+};
 
 export default FanPollList;
