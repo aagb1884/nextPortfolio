@@ -148,7 +148,9 @@ const AiList: React.FC<FilterProps> = ({ activeWhoTab }) => {
 
   // button functions
   function checkAnswers() {
-    const correctOrder = [...AiList].sort((a, b) => b.ai - a.ai || a.id - b.id);
+    const correctOrder = [...AiList].sort(
+      (a, b) => (b.ai ?? 0) - (a.ai ?? 0) || a.id - b.id
+    );
     const newCorrectStates: Record<number, boolean> = {};
 
     AiList.forEach((story, index) => {
