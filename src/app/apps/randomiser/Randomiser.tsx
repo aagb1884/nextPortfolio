@@ -38,6 +38,8 @@ function Randomiser() {
   }, [active]);
 
   console.log("story", story);
+  const missing = story?.tags?.includes("missing");
+  const animated = story?.tags?.includes("animated");
 
   return (
     <div className={styles.randomiser}>
@@ -64,7 +66,10 @@ function Randomiser() {
                 type="checkbox"
                 checked={active}
                 onChange={() => {
-                  setActive(!active);
+                  setActive((prev) => !prev);
+                  setTimeout(() => {
+                    setActive(false);
+                  }, 1000);
                 }}
               />
               <span className={styles.slider}></span>
@@ -74,8 +79,17 @@ function Randomiser() {
       </div>
 
       <div className={styles.scanner}>
-        <p>{story?.name}</p>
-        <p>{`A ${story?.doctor} Doctor story.`}</p>
+        {story && (
+          <div>
+            <p>{story?.name}</p>
+            <ul>
+              <li>{`A ${story?.doctor} Doctor story.`}</li>
+              <li>{story?.series}</li>
+              {missing && <li>This story has missing episodes.</li>}
+              {animated && <li>This story has missing episodes animated.</li>}
+            </ul>
+          </div>
+        )}
       </div>
     </div>
   );
