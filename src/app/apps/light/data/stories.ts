@@ -11,7 +11,7 @@ export interface Story {
   tags?: string;
   multipart?: boolean;
   series: string;
-  desc?: string;
+  length: string;
   image?: string;
 }
 
@@ -27,8 +27,8 @@ export const stories: Story[] = [
     ranking: 107,
     tags: "junkyard, coal hill, cavemen, stone age",
     series: "Season 1 (1963 - 64)",
-    desc: "brief description inc incarnation, year",
-    image: "/public/images/etc.",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 2,
@@ -41,6 +41,8 @@ export const stories: Story[] = [
     ranking: 53,
     tags: "daleks, skaro, thals, pulp, monsters",
     series: "Season 1 (1963 - 64)",
+    length: "7 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 3,
@@ -53,6 +55,8 @@ export const stories: Story[] = [
     ranking: 190,
     tags: "tardis, bottle episode",
     series: "Season 1 (1963 - 64)",
+    length: "2 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 4,
@@ -63,8 +67,10 @@ export const stories: Story[] = [
     ai: 60.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 108,
-    tags: "China, Pure Historical, missing episodes",
+    tags: "China, Pure Historical, missing",
     series: "Season 1 (1963 - 64)",
+    length: "7 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 5,
@@ -77,6 +83,8 @@ export const stories: Story[] = [
     ranking: 208,
     tags: "pulp, monsters, aliens, quest",
     series: "Season 1 (1963 - 64)",
+    length: "6 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 6,
@@ -89,6 +97,8 @@ export const stories: Story[] = [
     ranking: 55,
     tags: "Pure historical, fixed points",
     series: "Season 1 (1963 - 64)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 7,
@@ -101,6 +111,8 @@ export const stories: Story[] = [
     ranking: 271,
     tags: "aliens, future",
     series: "Season 1 (1963 - 64)",
+    length: "6 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 8,
@@ -111,8 +123,10 @@ export const stories: Story[] = [
     ai: 54.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 213,
-    tags: "pure historical, france, missing episodes, animated",
+    tags: "pure historical, france, missing, animated",
     series: "Season 1 (1963 - 64)",
+    length: "6 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 9,
@@ -125,6 +139,8 @@ export const stories: Story[] = [
     ranking: 260,
     tags: "shrinking",
     series: "Season 2 (1964 - 65)",
+    length: "3 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 10,
@@ -137,6 +153,8 @@ export const stories: Story[] = [
     ranking: 49,
     tags: "war, daleks, monsters, pulp, companion departure, earth invasion, future",
     series: "Season 2 (1964 - 65)",
+    length: "6 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 11,
@@ -149,6 +167,8 @@ export const stories: Story[] = [
     ranking: 169,
     tags: "future, new companion, monsters, aliens",
     series: "Season 2 (1964 - 65)",
+    length: "2 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 12,
@@ -161,6 +181,8 @@ export const stories: Story[] = [
     ranking: 115,
     tags: "pure historical, comedy,",
     series: "Season 2 (1964 - 65)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 13,
@@ -173,6 +195,8 @@ export const stories: Story[] = [
     ranking: 261,
     tags: "aliens, monsters",
     series: "Season 2 (1964 - 65)",
+    length: "6 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 14,
@@ -183,8 +207,10 @@ export const stories: Story[] = [
     ai: 49.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 175,
-    tags: "pure historical, missing episodes",
+    tags: "pure historical, missing",
     series: "Season 2 (1964 - 65)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 15,
@@ -197,6 +223,8 @@ export const stories: Story[] = [
     ranking: 262,
     tags: "future",
     series: "Season 2 (1964 - 65)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 16,
@@ -209,6 +237,8 @@ export const stories: Story[] = [
     ranking: 189,
     tags: "daleks, monsters, pulp, companion departure",
     series: "Season 2 (1964 - 65)",
+    length: "6 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 17,
@@ -221,6 +251,8 @@ export const stories: Story[] = [
     ranking: 63,
     tags: "pseudo-historical, comedy, new companion",
     series: "Season 2 (1964 - 65)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 18,
@@ -231,8 +263,10 @@ export const stories: Story[] = [
     ai: 54.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 267,
-    tags: "future, aliens, missing episodes, animated",
+    tags: "future, aliens, missing, animated",
     series: "Season 3 (1965 - 66)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 19,
@@ -243,8 +277,10 @@ export const stories: Story[] = [
     ai: 54,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 180,
-    tags: "doctor-lite, daleks, pulp, future, missing episodes, future",
+    tags: "doctor-lite, daleks, pulp, future, missing, future",
     series: "Season 3 (1965 - 66)",
+    length: "1 x 25 minute episode",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 20,
@@ -255,8 +291,10 @@ export const stories: Story[] = [
     ai: 50,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 199,
-    tags: "pseudo-historical, comedy, companion departure, missing episodes, new companion",
+    tags: "pseudo-historical, comedy, companion departure, missing, new companion",
     series: "Season 3 (1965 - 66)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 21,
@@ -267,8 +305,10 @@ export const stories: Story[] = [
     ai: 51,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 44,
-    tags: "missing episodes, daleks, aliens, monsters, future, pulp, companion departure, one-off companion, future",
+    tags: "missing, daleks, aliens, monsters, future, pulp, companion departure, one-off companion, future",
     series: "Season 3 (1965 - 66)",
+    length: "12 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 22,
@@ -279,8 +319,10 @@ export const stories: Story[] = [
     ai: 51.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 148,
-    tags: "pure historical, missing episodes, new companion",
+    tags: "pure historical, missing, new companion",
     series: "Season 3 (1965 - 66)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 23,
@@ -293,6 +335,8 @@ export const stories: Story[] = [
     ranking: 219,
     tags: "aliens, monsters, future",
     series: "Season 3 (1965 - 66)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 24,
@@ -303,8 +347,10 @@ export const stories: Story[] = [
     ai: 46,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 224,
-    tags: "fantasy, godlike, missing episodes, animated",
+    tags: "fantasy, godlike, missing, animated",
     series: "Season 3 (1965 - 66)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 25,
@@ -317,6 +363,8 @@ export const stories: Story[] = [
     ranking: 237,
     tags: "pseudo-historical, comedy, western",
     series: "Season 3 (1965 - 66)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 26,
@@ -327,8 +375,10 @@ export const stories: Story[] = [
     ai: 48.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 239,
-    tags: "missing episodes, animated, companion departure",
+    tags: "missing, animated, companion departure",
     series: "Season 3 (1965 - 66)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 27,
@@ -341,6 +391,8 @@ export const stories: Story[] = [
     ranking: 91,
     tags: "companion departure, new companion, earth invasion, robots",
     series: "Season 3 (1965 - 66)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 28,
@@ -351,8 +403,10 @@ export const stories: Story[] = [
     ai: 44.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 249,
-    tags: "pure historical, pirates",
+    tags: "pure historical, pirates, missing",
     series: "Season 4 (1966 - 67)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 29,
@@ -363,8 +417,10 @@ export const stories: Story[] = [
     ai: 48,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 69,
-    tags: "cybermen, earth invasion, regeneration, b-u-s, future",
+    tags: "cybermen, earth invasion, regeneration, b-u-s, future, missing, animated",
     series: "Season 4 (1966 - 67)",
+    length: "4 x 25 minute episodes",
+    image: "/images/randomiser/first.svg",
   },
   {
     id: 30,
@@ -375,8 +431,9 @@ export const stories: Story[] = [
     ai: 45.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 37,
-    tags: "future, daleks, post-regen, colony, future",
+    tags: "future, daleks, post-regen, colony, future, missing, animated",
     series: "Season 4 (1966 - 67)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 31,
@@ -387,8 +444,9 @@ export const stories: Story[] = [
     ai: 47,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 211,
-    tags: "pure historical, scotland, new companion",
+    tags: "pure historical, scotland, new companion, missing",
     series: "Season 4 (1966 - 67)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 32,
@@ -399,8 +457,9 @@ export const stories: Story[] = [
     ai: 46.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 275,
-    tags: "camp, mad scientist",
+    tags: "camp, mad scientist, missing, animated",
     series: "Season 4 (1966 - 67)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 33,
@@ -411,8 +470,9 @@ export const stories: Story[] = [
     ai: 52.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 101,
-    tags: "cybermen, future, b-u-s",
+    tags: "cybermen, future, b-u-s, missing, animated",
     series: "Season 4 (1966 - 67)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 34,
@@ -423,8 +483,9 @@ export const stories: Story[] = [
     ai: 50,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 136,
-    tags: "colony, future",
+    tags: "colony, future, missing, animated",
     series: "Season 4 (1966 - 67)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 35,
@@ -435,8 +496,9 @@ export const stories: Story[] = [
     ai: 52.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 117,
-    tags: "companion departure",
+    tags: "companion departure, missing, animated",
     series: "Season 4 (1966 - 67)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 36,
@@ -447,8 +509,9 @@ export const stories: Story[] = [
     ai: 52,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 40,
-    tags: "new companion, daleks, skaro, pseudo-historical",
+    tags: "new companion, daleks, skaro, pseudo-historical, missing, animated",
     series: "Season 4 (1966 - 67)",
+    length: "7 x 25 minute episodes",
   },
   {
     id: 37,
@@ -461,6 +524,7 @@ export const stories: Story[] = [
     ranking: 25,
     tags: "cybermen, b-u-s, future",
     series: "Season 5 (1967 - 68)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 38,
@@ -471,8 +535,9 @@ export const stories: Story[] = [
     ai: 51,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 92,
-    tags: "b-u-s, pseudo-historical, horror, missing episodes, animated",
+    tags: "b-u-s, pseudo-historical, horror, missing, animated",
     series: "Season 5 (1967 - 68)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 39,
@@ -483,8 +548,9 @@ export const stories: Story[] = [
     ai: 51,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 161,
-    tags: "b-u-s, green monster, future, missing episodes, animated",
+    tags: "b-u-s, green monster, future, missing, animated",
     series: "Season 5 (1967 - 68)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 40,
@@ -497,6 +563,7 @@ export const stories: Story[] = [
     ranking: 47,
     tags: "future",
     series: "Season 5 (1967 - 68)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 41,
@@ -507,8 +574,9 @@ export const stories: Story[] = [
     ai: 53.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 38,
-    tags: "b-u-s, horror, missing episodes, animated",
+    tags: "b-u-s, horror, missing, animated",
     series: "Season 5 (1967 - 68)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 42,
@@ -519,8 +587,9 @@ export const stories: Story[] = [
     ai: 56,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 75,
-    tags: "companion departure, b-u-s, horror, missing episodes, animated",
+    tags: "companion departure, b-u-s, horror, missing, animated",
     series: "Season 5 (1967 - 68)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 43,
@@ -531,8 +600,9 @@ export const stories: Story[] = [
     ai: 56,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 206,
-    tags: "new companion, cybermen, b-u-s, future, missing episodes",
+    tags: "new companion, cybermen, b-u-s, future, missing",
     series: "Season 5 (1967 - 68)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 44,
@@ -545,6 +615,7 @@ export const stories: Story[] = [
     ranking: 281,
     tags: "aliens",
     series: "Season 6 (1968 - 69)",
+    length: "5 x 25 minute episodes",
   },
   {
     id: 45,
@@ -557,6 +628,7 @@ export const stories: Story[] = [
     ranking: 70,
     tags: "fantasy",
     series: "Season 6 (1968 - 69)",
+    length: "5 x 25 minute episodes",
   },
   {
     id: 46,
@@ -567,8 +639,9 @@ export const stories: Story[] = [
     ai: 51.5,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 34,
-    tags: "earth invasion, UNIT, cybermen, missing episodes, animated",
+    tags: "earth invasion, UNIT, cybermen, missing, animated",
     series: "Season 6 (1968 - 69)",
+    length: "8 x 25 minute episodes",
   },
   {
     id: 47,
@@ -581,6 +654,7 @@ export const stories: Story[] = [
     ranking: 229,
     tags: "aliens",
     series: "Season 6 (1968 - 69)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 48,
@@ -593,6 +667,7 @@ export const stories: Story[] = [
     ranking: 141,
     tags: "earth invasion, green monster, future",
     series: "Season 6 (1968 - 69)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 49,
@@ -603,8 +678,9 @@ export const stories: Story[] = [
     ai: 54,
     ai_type: "Audience Research Dept. (1963 - 1981)",
     ranking: 287,
-    tags: "future, missing episodes",
+    tags: "future, missing",
     series: "Season 6 (1968 - 69)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 50,
@@ -617,6 +693,7 @@ export const stories: Story[] = [
     ranking: 9,
     tags: "gallifrey, companion departure, regeneration",
     series: "Season 6 (1968 - 69)",
+    length: "10 x 25 minute episodes",
   },
   {
     id: 51,
@@ -629,6 +706,7 @@ export const stories: Story[] = [
     ranking: 31,
     tags: "earth invasion, new companion, post-regen, UNIT, horror",
     series: "Season 7 (1970)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 52,
@@ -641,6 +719,7 @@ export const stories: Story[] = [
     ranking: 52,
     tags: "UNIT, green monster, horror",
     series: "Season 7 (1970)",
+    length: "7 x 25 minute episodes",
   },
   {
     id: 53,
@@ -653,6 +732,7 @@ export const stories: Story[] = [
     ranking: 110,
     tags: "UNIT, horror",
     series: "Season 7 (1970)",
+    length: "7 x 25 minute episodes",
   },
   {
     id: 54,
@@ -665,6 +745,7 @@ export const stories: Story[] = [
     ranking: 20,
     tags: "UNIT, alternate timeline, green monster, horror",
     series: "Season 7 (1970)",
+    length: "7 x 25 minute episodes",
   },
   {
     id: 55,
@@ -677,6 +758,7 @@ export const stories: Story[] = [
     ranking: 72,
     tags: "earth invasion, new companion, UNIT, master, horror",
     series: "Season 8 (1971)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 56,
@@ -689,6 +771,7 @@ export const stories: Story[] = [
     ranking: 103,
     tags: "UNIT, master, horror",
     series: "Season 8 (1971)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 57,
@@ -701,6 +784,7 @@ export const stories: Story[] = [
     ranking: 165,
     tags: "earth invasion, UNIT, master",
     series: "Season 8 (1971)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 58,
@@ -713,6 +797,7 @@ export const stories: Story[] = [
     ranking: 234,
     tags: "colony, master, green monster, future",
     series: "Season 8 (1971)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 59,
@@ -725,6 +810,7 @@ export const stories: Story[] = [
     ranking: 50,
     tags: "UNIT, master, horror",
     series: "Season 8 (1971)",
+    length: "5 x 25 minute episodes",
   },
   {
     id: 60,
@@ -737,6 +823,7 @@ export const stories: Story[] = [
     ranking: 81,
     tags: "UNIT, daleks, alternate timeline",
     series: "Season 9 (1972)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 61,
@@ -749,6 +836,7 @@ export const stories: Story[] = [
     ranking: 95,
     tags: "green monster, future",
     series: "Season 9 (1972)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 62,
@@ -761,6 +849,7 @@ export const stories: Story[] = [
     ranking: 66,
     tags: "master, ",
     series: "Season 9 (1972)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 63,
@@ -773,6 +862,7 @@ export const stories: Story[] = [
     ranking: 258,
     tags: "future",
     series: "Season 9 (1972)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 64,
@@ -785,6 +875,7 @@ export const stories: Story[] = [
     ranking: 269,
     tags: "UNIT, master",
     series: "Season 9 (1972)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 65,
@@ -797,6 +888,7 @@ export const stories: Story[] = [
     ranking: 46,
     tags: "UNIT, time lords",
     series: "Season 10 (1972 - 73)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 66,
@@ -809,6 +901,7 @@ export const stories: Story[] = [
     ranking: 61,
     tags: "green monster",
     series: "Season 10 (1972 - 73)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 67,
@@ -821,6 +914,7 @@ export const stories: Story[] = [
     ranking: 139,
     tags: "master, daleks, green monster, future",
     series: "Season 10 (1972 - 73)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 68,
@@ -833,6 +927,7 @@ export const stories: Story[] = [
     ranking: 145,
     tags: "pulp, daleks, future",
     series: "Season 10 (1972 - 73)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 69,
@@ -845,6 +940,7 @@ export const stories: Story[] = [
     ranking: 28,
     tags: "green monster, companion departure, UNIT, horror",
     series: "Season 10 (1972 - 73)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 70,
@@ -857,6 +953,7 @@ export const stories: Story[] = [
     ranking: 54,
     tags: "new companion, pseudo-historical, sontarans",
     series: "Season 11 (1973 - 74)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 71,
@@ -869,6 +966,7 @@ export const stories: Story[] = [
     ranking: 96,
     tags: "dinosaur, UNIT",
     series: "Season 11 (1973 - 74)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 72,
@@ -881,6 +979,7 @@ export const stories: Story[] = [
     ranking: 173,
     tags: "pulp, daleks, future",
     series: "Season 11 (1973 - 74)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 73,
@@ -893,6 +992,7 @@ export const stories: Story[] = [
     ranking: 255,
     tags: "green monster, future",
     series: "Season 11 (1973 - 74)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 74,
@@ -905,6 +1005,7 @@ export const stories: Story[] = [
     ranking: 84,
     tags: "companion departure, regeneration, UNIT",
     series: "Season 11 (1973 - 74)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 75,
@@ -917,6 +1018,7 @@ export const stories: Story[] = [
     ranking: 134,
     tags: "new companion, post-regen, UNIT",
     series: "Season 12 (1974 - 75)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 76,
@@ -929,6 +1031,7 @@ export const stories: Story[] = [
     ranking: 23,
     tags: "green monster, b-u-s, future, horror",
     series: "Season 12 (1974 - 75)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 77,
@@ -941,6 +1044,7 @@ export const stories: Story[] = [
     ranking: 137,
     tags: "future, horror, sontarans",
     series: "Season 12 (1974 - 75)",
+    length: "2 x 25 minute episodes",
   },
   {
     id: 78,
@@ -953,6 +1057,7 @@ export const stories: Story[] = [
     ranking: 4,
     tags: "green monster, daleks, war, skaro, horror",
     series: "Season 12 (1974 - 75)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 79,
@@ -965,6 +1070,7 @@ export const stories: Story[] = [
     ranking: 196,
     tags: "cybermen, future",
     series: "Season 12 (1974 - 75)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 80,
@@ -977,6 +1083,7 @@ export const stories: Story[] = [
     ranking: 29,
     tags: "earth invasion, companion departure, UNIT, horror",
     series: "Season 13 (1975 - 76)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 81,
@@ -989,6 +1096,7 @@ export const stories: Story[] = [
     ranking: 151,
     tags: "future, monster, horror",
     series: "Season 13 (1975 - 76)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 82,
@@ -1001,6 +1109,7 @@ export const stories: Story[] = [
     ranking: 10,
     tags: "pseudo-historical, horror",
     series: "Season 13 (1975 - 76)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 83,
@@ -1013,6 +1122,7 @@ export const stories: Story[] = [
     ranking: 170,
     tags: "earth invasion, UNIT",
     series: "Season 13 (1975 - 76)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 84,
@@ -1025,6 +1135,7 @@ export const stories: Story[] = [
     ranking: 43,
     tags: "time lords, horror",
     series: "Season 13 (1975 - 76)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 85,
@@ -1037,6 +1148,7 @@ export const stories: Story[] = [
     ranking: 27,
     tags: "UNIT, green monster, horror",
     series: "Season 13 (1975 - 76)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 86,
@@ -1049,6 +1161,7 @@ export const stories: Story[] = [
     ranking: 156,
     tags: "pseudo-historical",
     series: "Season 14 (1976 - 77)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 87,
@@ -1061,6 +1174,7 @@ export const stories: Story[] = [
     ranking: 127,
     tags: "companion departure",
     series: "Season 14 (1976 - 77)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 88,
@@ -1073,6 +1187,7 @@ export const stories: Story[] = [
     ranking: 33,
     tags: "gallifrey, time lords, master, horror",
     series: "Season 14 (1976 - 77)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 89,
@@ -1085,6 +1200,7 @@ export const stories: Story[] = [
     ranking: 113,
     tags: "new companion, colony, future",
     series: "Season 14 (1976 - 77)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 90,
@@ -1097,6 +1213,7 @@ export const stories: Story[] = [
     ranking: 8,
     tags: "future, horror",
     series: "Season 14 (1976 - 77)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 91,
@@ -1109,6 +1226,7 @@ export const stories: Story[] = [
     ranking: 14,
     tags: "pseudo-historical, horror",
     series: "Season 14 (1976 - 77)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 92,
@@ -1121,6 +1239,7 @@ export const stories: Story[] = [
     ranking: 32,
     tags: "b-u-s, pseudo-historical, green monster, horror",
     series: "Season 15 (1977 - 78)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 93,
@@ -1133,6 +1252,7 @@ export const stories: Story[] = [
     ranking: 221,
     tags: "future",
     series: "Season 15 (1977 - 78)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 94,
@@ -1145,6 +1265,7 @@ export const stories: Story[] = [
     ranking: 146,
     tags: "b-u-s, horror",
     series: "Season 15 (1977 - 78)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 95,
@@ -1157,6 +1278,7 @@ export const stories: Story[] = [
     ranking: 182,
     tags: "colony, future",
     series: "Season 15 (1977 - 78)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 96,
@@ -1169,6 +1291,7 @@ export const stories: Story[] = [
     ranking: 288,
     tags: "",
     series: "Season 15 (1977 - 78)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 97,
@@ -1181,6 +1304,7 @@ export const stories: Story[] = [
     ranking: 225,
     tags: "gallifrey, time lords, sontarans, companion departure, sontarans",
     series: "Season 15 (1977 - 78)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 98,
@@ -1193,6 +1317,7 @@ export const stories: Story[] = [
     ranking: 129,
     tags: "key to time, new companion",
     series: "Season 16 (1978 - 79)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 99,
@@ -1205,6 +1330,7 @@ export const stories: Story[] = [
     ranking: 111,
     tags: "pirates, key to time",
     series: "Season 16 (1978 - 79)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 100,
@@ -1217,6 +1343,7 @@ export const stories: Story[] = [
     ranking: 68,
     tags: "key to time",
     series: "Season 16 (1978 - 79)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 101,
@@ -1229,6 +1356,7 @@ export const stories: Story[] = [
     ranking: 106,
     tags: "key to time",
     series: "Season 16 (1978 - 79)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 102,
@@ -1241,6 +1369,7 @@ export const stories: Story[] = [
     ranking: 256,
     tags: "green monster, key to time",
     series: "Season 16 (1978 - 79)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 103,
@@ -1253,6 +1382,7 @@ export const stories: Story[] = [
     ranking: 259,
     tags: "war, key to time",
     series: "Season 16 (1978 - 79)",
+    length: "6 x 25 minute episodes",
   },
   {
     id: 104,
@@ -1265,6 +1395,7 @@ export const stories: Story[] = [
     ranking: 178,
     tags: "pulp, daleks, skaro",
     series: "Season 17 (1979 - 80)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 105,
@@ -1277,6 +1408,7 @@ export const stories: Story[] = [
     ranking: 2,
     tags: "green monster",
     series: "Season 17 (1979 - 80)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 106,
@@ -1289,6 +1421,7 @@ export const stories: Story[] = [
     ranking: 238,
     tags: "green monster",
     series: "Season 17 (1979 - 80)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 107,
@@ -1301,6 +1434,7 @@ export const stories: Story[] = [
     ranking: 203,
     tags: "",
     series: "Season 17 (1979 - 80)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 108,
@@ -1313,6 +1447,7 @@ export const stories: Story[] = [
     ranking: 257,
     tags: "",
     series: "Season 17 (1979 - 80)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 109,
@@ -1325,6 +1460,7 @@ export const stories: Story[] = [
     ranking: 197,
     tags: "green monster",
     series: "Season 18 (1980 - 81)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 110,
@@ -1337,6 +1473,7 @@ export const stories: Story[] = [
     ranking: 264,
     tags: "green monster",
     series: "Season 18 (1980 - 81)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 111,
@@ -1349,6 +1486,7 @@ export const stories: Story[] = [
     ranking: 119,
     tags: "new companion",
     series: "Season 18 (1980 - 81)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 112,
@@ -1361,6 +1499,7 @@ export const stories: Story[] = [
     ranking: 89,
     tags: "horror",
     series: "Season 18 (1980 - 81)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 113,
@@ -1373,6 +1512,7 @@ export const stories: Story[] = [
     ranking: 109,
     tags: "companion departure",
     series: "Season 18 (1980 - 81)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 114,
@@ -1385,6 +1525,7 @@ export const stories: Story[] = [
     ranking: 83,
     tags: "master",
     series: "Season 18 (1980 - 81)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 115,
@@ -1397,6 +1538,7 @@ export const stories: Story[] = [
     ranking: 57,
     tags: "universe, new companion, regeneration, master",
     series: "Season 18 (1980 - 81)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 116,
@@ -1409,6 +1551,7 @@ export const stories: Story[] = [
     ranking: 143,
     tags: "post-regen, master",
     series: "Season 19 (1982)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 117,
@@ -1421,6 +1564,7 @@ export const stories: Story[] = [
     ranking: 253,
     tags: "green monster",
     series: "Season 19 (1982)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 118,
@@ -1433,6 +1577,7 @@ export const stories: Story[] = [
     ranking: 60,
     tags: "",
     series: "Season 19 (1982)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 119,
@@ -1445,6 +1590,7 @@ export const stories: Story[] = [
     ranking: 102,
     tags: "pseudo-historical",
     series: "Season 19 (1982)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 120,
@@ -1457,6 +1603,7 @@ export const stories: Story[] = [
     ranking: 176,
     tags: "pure historical",
     series: "Season 19 (1982)",
+    length: "2 x 25 minute episodes",
   },
   {
     id: 121,
@@ -1469,6 +1616,7 @@ export const stories: Story[] = [
     ranking: 19,
     tags: "earth invasion, companion departure, cybermen, future",
     series: "Season 19 (1982)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 122,
@@ -1481,6 +1629,7 @@ export const stories: Story[] = [
     ranking: 289,
     tags: "master",
     series: "Season 19 (1982)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 123,
@@ -1493,6 +1642,7 @@ export const stories: Story[] = [
     ranking: 272,
     tags: "gallifrey, time lords",
     series: "Season 20 (1983)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 124,
@@ -1505,6 +1655,7 @@ export const stories: Story[] = [
     ranking: 128,
     tags: "",
     series: "Season 20 (1983)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 125,
@@ -1517,6 +1668,7 @@ export const stories: Story[] = [
     ranking: 114,
     tags: "new companion, horror",
     series: "Season 20 (1983)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 126,
@@ -1529,6 +1681,7 @@ export const stories: Story[] = [
     ranking: 245,
     tags: "companion departure",
     series: "Season 20 (1983)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 127,
@@ -1541,6 +1694,7 @@ export const stories: Story[] = [
     ranking: 78,
     tags: "",
     series: "Season 20 (1983)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 128,
@@ -1553,6 +1707,7 @@ export const stories: Story[] = [
     ranking: 265,
     tags: "master, pseudo-historical",
     series: "Season 20 (1983)",
+    length: "2 x 25 minute episodes",
   },
   {
     id: 129,
@@ -1565,6 +1720,7 @@ export const stories: Story[] = [
     ranking: 17,
     tags: "gallifrey, time lords, daleks, cybermen, master",
     series: "20th Anniversary Special (1983)",
+    length: "1 x 90 minute episode",
   },
   {
     id: 130,
@@ -1577,6 +1733,7 @@ export const stories: Story[] = [
     ranking: 277,
     tags: "b-u-s, green monster, future",
     series: "Season 21 (1984)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 131,
@@ -1589,6 +1746,7 @@ export const stories: Story[] = [
     ranking: 183,
     tags: "horror",
     series: "Season 21 (1984)",
+    length: "2 x 25 minute episodes",
   },
   {
     id: 132,
@@ -1601,6 +1759,7 @@ export const stories: Story[] = [
     ranking: 166,
     tags: "b-u-s, future, horror",
     series: "Season 21 (1984)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 133,
@@ -1613,6 +1772,7 @@ export const stories: Story[] = [
     ranking: 82,
     tags: "companion departure, daleks, future",
     series: "Season 21 (1984)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 134,
@@ -1625,6 +1785,7 @@ export const stories: Story[] = [
     ranking: 194,
     tags: "new companion, companion departure, master",
     series: "Season 21 (1984)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 135,
@@ -1637,6 +1798,7 @@ export const stories: Story[] = [
     ranking: 1,
     tags: "regeneration, horror",
     series: "Season 21 (1984)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 136,
@@ -1649,6 +1811,7 @@ export const stories: Story[] = [
     ranking: 295,
     tags: "post-regen",
     series: "Season 21 (1984)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 137,
@@ -1661,6 +1824,7 @@ export const stories: Story[] = [
     ranking: 205,
     tags: "cybermen",
     series: "Season 22 (1985)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 138,
@@ -1673,6 +1837,7 @@ export const stories: Story[] = [
     ranking: 100,
     tags: "future, colony, horror",
     series: "Season 22 (1985)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 139,
@@ -1685,6 +1850,7 @@ export const stories: Story[] = [
     ranking: 193,
     tags: "rani, master, pseudo-historical",
     series: "Season 22 (1985)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 140,
@@ -1697,6 +1863,7 @@ export const stories: Story[] = [
     ranking: 159,
     tags: "sontarans",
     series: "Season 22 (1985)",
+    length: "3 x 45 minute episodes",
   },
   {
     id: 141,
@@ -1709,6 +1876,7 @@ export const stories: Story[] = [
     ranking: 286,
     tags: "green monster",
     series: "Season 22 (1985)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 142,
@@ -1721,6 +1889,7 @@ export const stories: Story[] = [
     ranking: 58,
     tags: "daleks, future, horror",
     series: "Season 22 (1985)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 143,
@@ -1733,6 +1902,7 @@ export const stories: Story[] = [
     ranking: 163,
     tags: "gallifrey, time lords, master, companion departure, new companion, green monster, future",
     series: "Season 23 (1986)",
+    length: "14 x 25 minute episodes",
   },
   {
     id: 144,
@@ -1745,6 +1915,7 @@ export const stories: Story[] = [
     ranking: 284,
     tags: "regeneration, post-regen, rani",
     series: "Season 24 (1987)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 145,
@@ -1757,6 +1928,7 @@ export const stories: Story[] = [
     ranking: 244,
     tags: "future",
     series: "Season 24 (1987)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 146,
@@ -1769,6 +1941,7 @@ export const stories: Story[] = [
     ranking: 266,
     tags: "b-u-s, pseudo-historical",
     series: "Season 24 (1987)",
+    length: "3 x 25 minute episodes",
   },
   {
     id: 147,
@@ -1781,6 +1954,7 @@ export const stories: Story[] = [
     ranking: 228,
     tags: "new companion, companion departure, future",
     series: "Season 24 (1987)",
+    length: "3 x 25 minute episodes",
   },
   {
     id: 148,
@@ -1793,6 +1967,7 @@ export const stories: Story[] = [
     ranking: 5,
     tags: "daleks, pseudo-historical",
     series: "Season 25 (1988)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 149,
@@ -1805,6 +1980,7 @@ export const stories: Story[] = [
     ranking: 123,
     tags: "colony, future",
     series: "Season 25 (1988)",
+    length: "3 x 25 minute episodes",
   },
   {
     id: 150,
@@ -1817,6 +1993,7 @@ export const stories: Story[] = [
     ranking: 250,
     tags: "cybermen",
     series: "Season 25 (1988)",
+    length: "3 x 25 minute episodes",
   },
   {
     id: 151,
@@ -1829,6 +2006,7 @@ export const stories: Story[] = [
     ranking: 80,
     tags: "horror",
     series: "Season 25 (1988)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 152,
@@ -1841,6 +2019,7 @@ export const stories: Story[] = [
     ranking: 171,
     tags: "UNIT, future, alternate timeline",
     series: "Season 26 (1989)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 153,
@@ -1853,6 +2032,7 @@ export const stories: Story[] = [
     ranking: 71,
     tags: "pseudo-historical",
     series: "Season 26 (1989)",
+    length: "3 x 25 minute episodes",
   },
   {
     id: 154,
@@ -1865,6 +2045,7 @@ export const stories: Story[] = [
     ranking: 13,
     tags: "pseudo-historical, alternate timeline, horror",
     series: "Season 26 (1989)",
+    length: "4 x 25 minute episodes",
   },
   {
     id: 155,
@@ -1877,6 +2058,7 @@ export const stories: Story[] = [
     ranking: 59,
     tags: "master",
     series: "Season 26 (1989)",
+    length: "3 x 25 minute episodes",
   },
   {
     id: 156,
@@ -1889,6 +2071,7 @@ export const stories: Story[] = [
     ranking: 177,
     tags: "regeneration, post-regen, one-off companion, master",
     series: "TV Movie (1996)",
+    length: "1 x 89 minute episode",
   },
   {
     id: 157,
@@ -1901,6 +2084,7 @@ export const stories: Story[] = [
     ranking: 76,
     tags: "earth invasion, new companion",
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 158,
@@ -1913,6 +2097,7 @@ export const stories: Story[] = [
     ranking: 152,
     tags: "future",
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 159,
@@ -1925,6 +2110,7 @@ export const stories: Story[] = [
     ranking: 104,
     tags: "earth invasion, pseudo-historical, horror",
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 160,
@@ -1937,6 +2123,7 @@ export const stories: Story[] = [
     ranking: 198,
     multipart: true,
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 161,
@@ -1949,6 +2136,7 @@ export const stories: Story[] = [
     ranking: 198,
     multipart: true,
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 162,
@@ -1961,6 +2149,7 @@ export const stories: Story[] = [
     ranking: 16,
     tags: "daleks, b-u-s, horror",
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 163,
@@ -1973,6 +2162,7 @@ export const stories: Story[] = [
     ranking: 246,
     tags: "future",
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 164,
@@ -1985,6 +2175,7 @@ export const stories: Story[] = [
     ranking: 73,
     tags: "b-u-s, pseudo-historical",
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 165,
@@ -1997,6 +2188,7 @@ export const stories: Story[] = [
     ranking: 7,
     multipart: true,
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 166,
@@ -2009,6 +2201,7 @@ export const stories: Story[] = [
     ranking: 7,
     multipart: true,
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 167,
@@ -2021,6 +2214,7 @@ export const stories: Story[] = [
     ranking: 164,
     tags: "green monster",
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 168,
@@ -2033,6 +2227,7 @@ export const stories: Story[] = [
     ranking: 11,
     multipart: true,
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 169,
@@ -2045,6 +2240,7 @@ export const stories: Story[] = [
     ranking: 11,
     multipart: true,
     series: "Series 1 (2005)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 170,
@@ -2057,6 +2253,7 @@ export const stories: Story[] = [
     ranking: 99,
     tags: "earth invasion, post-regen, UNIT",
     series: "Christmas Special (2005)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 171,
@@ -2069,6 +2266,7 @@ export const stories: Story[] = [
     ranking: 230,
     tags: "future",
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 172,
@@ -2081,6 +2279,7 @@ export const stories: Story[] = [
     ranking: 126,
     tags: "b-u-s, pseudo-historical, horror",
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 173,
@@ -2093,6 +2292,7 @@ export const stories: Story[] = [
     ranking: 41,
     tags: "",
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 174,
@@ -2105,6 +2305,7 @@ export const stories: Story[] = [
     ranking: 36,
     tags: "pseudo-historical, future",
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 175,
@@ -2117,6 +2318,7 @@ export const stories: Story[] = [
     ranking: 147,
     multipart: true,
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 176,
@@ -2129,6 +2331,7 @@ export const stories: Story[] = [
     ranking: 147,
     multipart: true,
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 177,
@@ -2141,6 +2344,7 @@ export const stories: Story[] = [
     ranking: 251,
     tags: "pseudo-historical",
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 178,
@@ -2153,6 +2357,7 @@ export const stories: Story[] = [
     ranking: 48,
     multipart: true,
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 179,
@@ -2165,6 +2370,7 @@ export const stories: Story[] = [
     ranking: 48,
     multipart: true,
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 180,
@@ -2177,6 +2383,7 @@ export const stories: Story[] = [
     ranking: 252,
     tags: "",
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 181,
@@ -2189,6 +2396,7 @@ export const stories: Story[] = [
     ranking: 294,
     tags: "",
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 182,
@@ -2201,6 +2409,7 @@ export const stories: Story[] = [
     ranking: 64,
     multipart: true,
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 183,
@@ -2213,6 +2422,7 @@ export const stories: Story[] = [
     ranking: 64,
     multipart: true,
     series: "Series 2 (2006)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 184,
@@ -2225,6 +2435,7 @@ export const stories: Story[] = [
     ranking: 131,
     tags: "one-off companion",
     series: "Christmas Special (2006)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 185,
@@ -2237,6 +2448,7 @@ export const stories: Story[] = [
     ranking: 88,
     tags: "new companion",
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 186,
@@ -2249,6 +2461,7 @@ export const stories: Story[] = [
     ranking: 168,
     tags: "pseudo-historical",
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 187,
@@ -2261,6 +2474,7 @@ export const stories: Story[] = [
     ranking: 140,
     tags: "future",
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 188,
@@ -2273,6 +2487,7 @@ export const stories: Story[] = [
     ranking: 263,
     multipart: true,
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 189,
@@ -2285,6 +2500,7 @@ export const stories: Story[] = [
     ranking: 263,
     multipart: true,
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 190,
@@ -2297,6 +2513,7 @@ export const stories: Story[] = [
     ranking: 273,
     tags: "",
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 191,
@@ -2309,6 +2526,7 @@ export const stories: Story[] = [
     ranking: 222,
     tags: "b-u-s, future",
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 192,
@@ -2321,6 +2539,7 @@ export const stories: Story[] = [
     ranking: 12,
     multipart: true,
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 193,
@@ -2333,6 +2552,7 @@ export const stories: Story[] = [
     ranking: 12,
     multipart: true,
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 194,
@@ -2345,6 +2565,7 @@ export const stories: Story[] = [
     ranking: 3,
     tags: "horror, angels",
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 195,
@@ -2357,6 +2578,7 @@ export const stories: Story[] = [
     ranking: 56,
     tags: "future",
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 196,
@@ -2369,6 +2591,7 @@ export const stories: Story[] = [
     ranking: 56,
     multipart: true,
     series: "Series 3 (2007)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 197,
@@ -2381,6 +2604,7 @@ export const stories: Story[] = [
     ranking: 56,
     multipart: true,
     series: "Series 3 (2007)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 198,
@@ -2393,6 +2617,7 @@ export const stories: Story[] = [
     ranking: 157,
     tags: "one-off companion",
     series: "Christmas Special (2007)",
+    length: "1 x 72 minute episode",
   },
   {
     id: 199,
@@ -2405,6 +2630,7 @@ export const stories: Story[] = [
     ranking: 77,
     tags: "new companion",
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 200,
@@ -2417,6 +2643,7 @@ export const stories: Story[] = [
     ranking: 67,
     tags: "pseudo-historical",
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 201,
@@ -2429,6 +2656,7 @@ export const stories: Story[] = [
     ranking: 105,
     tags: "future",
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 202,
@@ -2441,6 +2669,7 @@ export const stories: Story[] = [
     ranking: 174,
     multipart: true,
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 203,
@@ -2453,6 +2682,7 @@ export const stories: Story[] = [
     ranking: 174,
     multipart: true,
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 204,
@@ -2465,6 +2695,7 @@ export const stories: Story[] = [
     ranking: 223,
     tags: "future",
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 205,
@@ -2477,6 +2708,7 @@ export const stories: Story[] = [
     ranking: 90,
     tags: "pseudo-historical, comedy",
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 206,
@@ -2489,6 +2721,7 @@ export const stories: Story[] = [
     ranking: 24,
     multipart: true,
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 207,
@@ -2501,6 +2734,7 @@ export const stories: Story[] = [
     ranking: 24,
     multipart: true,
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 208,
@@ -2513,6 +2747,7 @@ export const stories: Story[] = [
     ranking: 18,
     tags: "b-u-s, future, horror",
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 209,
@@ -2525,6 +2760,7 @@ export const stories: Story[] = [
     ranking: 22,
     tags: "UNIT, alternate timeline, horror",
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 210,
@@ -2537,6 +2773,7 @@ export const stories: Story[] = [
     ranking: 35,
     multipart: true,
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 211,
@@ -2549,6 +2786,7 @@ export const stories: Story[] = [
     ranking: 35,
     multipart: true,
     series: "Series 4 (2008)",
+    length: "1 x 63 minute episode",
   },
   {
     id: 212,
@@ -2561,6 +2799,7 @@ export const stories: Story[] = [
     ranking: 204,
     tags: "one-off companion, cybermen, pseudo-historical",
     series: "Specials (2008 - 2010)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 213,
@@ -2573,6 +2812,7 @@ export const stories: Story[] = [
     ranking: 231,
     tags: "one-off companion, UNIT",
     series: "Specials (2008 - 2010)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 214,
@@ -2585,6 +2825,7 @@ export const stories: Story[] = [
     ranking: 39,
     tags: "one-off companion, b-u-s, future, horror",
     series: "Specials (2008 - 2010)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 215,
@@ -2597,6 +2838,7 @@ export const stories: Story[] = [
     ranking: 112,
     tags: "companion departure, one-off companion, regeneration, gallifrey, time lords, master",
     series: "Specials (2008 - 2010)",
+    length: "1 x 60 minute episode, 1 x 75 minute episode",
   },
   {
     id: 216,
@@ -2609,6 +2851,7 @@ export const stories: Story[] = [
     ranking: 26,
     tags: "earth invasion, new companion, post-regen",
     series: "Series 5 (2010)",
+    length: "1 x 65 minute episode",
   },
   {
     id: 217,
@@ -2621,6 +2864,7 @@ export const stories: Story[] = [
     ranking: 212,
     tags: "future",
     series: "Series 5 (2010)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 218,
@@ -2633,6 +2877,7 @@ export const stories: Story[] = [
     ranking: 248,
     tags: "daleks, pseudo-historical",
     series: "Series 5 (2010)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 219,
@@ -2645,6 +2890,7 @@ export const stories: Story[] = [
     ranking: 51,
     multipart: true,
     series: "Series 5 (2010)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 220,
@@ -2657,6 +2903,7 @@ export const stories: Story[] = [
     ranking: 51,
     multipart: true,
     series: "Series 5 (2010)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 221,
@@ -2669,6 +2916,7 @@ export const stories: Story[] = [
     ranking: 195,
     tags: "pseudo-historical",
     series: "Series 5 (2010)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 222,
@@ -2681,6 +2929,7 @@ export const stories: Story[] = [
     ranking: 120,
     tags: "alternate timeline",
     series: "Series 5 (2010)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 223,
@@ -2693,6 +2942,7 @@ export const stories: Story[] = [
     ranking: 215,
     multipart: true,
     series: "Series 5 (2010)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 224,
@@ -2705,6 +2955,7 @@ export const stories: Story[] = [
     ranking: 215,
     multipart: true,
     series: "Series 5 (2010)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 225,
@@ -2717,6 +2968,7 @@ export const stories: Story[] = [
     ranking: 15,
     tags: "pseudo-historical",
     series: "Series 5 (2010)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 226,
@@ -2729,6 +2981,7 @@ export const stories: Story[] = [
     ranking: 158,
     tags: "comedy",
     series: "Series 5 (2010)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 227,
@@ -2741,6 +2994,7 @@ export const stories: Story[] = [
     ranking: 42,
     multipart: true,
     series: "Series 5 (2010)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 228,
@@ -2753,6 +3007,7 @@ export const stories: Story[] = [
     ranking: 42,
     multipart: true,
     series: "Series 5 (2010)",
+    length: "1 x 55 minute episode",
   },
   {
     id: 229,
@@ -2765,6 +3020,7 @@ export const stories: Story[] = [
     ranking: 98,
     tags: "future",
     series: "Christmas Special (2010)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 230,
@@ -2777,6 +3033,7 @@ export const stories: Story[] = [
     ranking: 74,
     multipart: true,
     series: "Series 6a (2011)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 231,
@@ -2789,6 +3046,7 @@ export const stories: Story[] = [
     ranking: 74,
     multipart: true,
     series: "Series 6a (2011)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 232,
@@ -2801,6 +3059,7 @@ export const stories: Story[] = [
     ranking: 278,
     tags: "pirates, b-u-s, pseudo-historical",
     series: "Series 6a (2011)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 233,
@@ -2813,6 +3072,7 @@ export const stories: Story[] = [
     ranking: 62,
     tags: "",
     series: "Series 6a (2011)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 234,
@@ -2825,6 +3085,7 @@ export const stories: Story[] = [
     ranking: 241,
     multipart: true,
     series: "Series 6a (2011)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 235,
@@ -2837,6 +3098,7 @@ export const stories: Story[] = [
     ranking: 241,
     multipart: true,
     series: "Series 6a (2011)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 236,
@@ -2849,6 +3111,7 @@ export const stories: Story[] = [
     ranking: 149,
     tags: "b-u-s, future, sontarans",
     series: "Series 6a (2011)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 237,
@@ -2861,6 +3124,7 @@ export const stories: Story[] = [
     ranking: 227,
     tags: "pseudo-historical",
     series: "Series 6b (2011)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 238,
@@ -2873,6 +3137,7 @@ export const stories: Story[] = [
     ranking: 243,
     tags: "horror",
     series: "Series 6b (2011)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 239,
@@ -2885,6 +3150,7 @@ export const stories: Story[] = [
     ranking: 85,
     tags: "future",
     series: "Series 6b (2011)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 240,
@@ -2897,6 +3163,7 @@ export const stories: Story[] = [
     ranking: 138,
     tags: "",
     series: "Series 6b (2011)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 241,
@@ -2909,6 +3176,7 @@ export const stories: Story[] = [
     ranking: 242,
     tags: "cybermen, comedy",
     series: "Series 6b (2011)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 242,
@@ -2921,6 +3189,7 @@ export const stories: Story[] = [
     ranking: 218,
     tags: "alternate timeline",
     series: "Series 6b (2011)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 243,
@@ -2932,6 +3201,7 @@ export const stories: Story[] = [
     ranking: 285,
     tags: "one-off companion, pseudo-historical",
     series: "Christmas Special (2011)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 244,
@@ -2943,6 +3213,7 @@ export const stories: Story[] = [
     ranking: 154,
     tags: "daleks, skaro",
     series: "Series 7a (2012)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 245,
@@ -2954,6 +3225,7 @@ export const stories: Story[] = [
     ranking: 217,
     tags: "future",
     series: "Series 7a (2012)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 246,
@@ -2965,6 +3237,7 @@ export const stories: Story[] = [
     ranking: 216,
     tags: "western, pseudo-historical",
     series: "Series 7a (2012)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 247,
@@ -2976,6 +3249,7 @@ export const stories: Story[] = [
     ranking: 220,
     tags: "earth invasion, UNIT",
     series: "Series 7a (2012)",
+    length: "1 x 41 minute episode",
   },
   {
     id: 248,
@@ -2987,6 +3261,7 @@ export const stories: Story[] = [
     ranking: 142,
     tags: "companion departure, pseudo-historical, angels",
     series: "Series 7a (2012)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 249,
@@ -2998,6 +3273,7 @@ export const stories: Story[] = [
     ranking: 132,
     tags: "new companion, pseudo-historical, sontarans",
     series: "Christmas Special (2012)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 250,
@@ -3009,6 +3285,7 @@ export const stories: Story[] = [
     ranking: 192,
     tags: "earth invasion, new companion, UNIT",
     series: "Series 7b (2013)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 251,
@@ -3020,6 +3297,7 @@ export const stories: Story[] = [
     ranking: 247,
     tags: "aliens",
     series: "Series 7b (2013)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 252,
@@ -3031,6 +3309,7 @@ export const stories: Story[] = [
     ranking: 188,
     tags: "b-u-s, pseudo-historical, green monster",
     series: "Series 7b (2013)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 253,
@@ -3042,6 +3321,7 @@ export const stories: Story[] = [
     ranking: 179,
     tags: "pseudo-historical, horror",
     series: "Series 7b (2013)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 254,
@@ -3053,6 +3333,7 @@ export const stories: Story[] = [
     ranking: 276,
     tags: "",
     series: "Series 7b (2013)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 255,
@@ -3064,6 +3345,7 @@ export const stories: Story[] = [
     ranking: 153,
     tags: "pseudo-historical, horror",
     series: "Series 7b (2013)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 256,
@@ -3075,6 +3357,7 @@ export const stories: Story[] = [
     ranking: 279,
     tags: "cybermen, b-u-s, future",
     series: "Series 7b (2013)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 257,
@@ -3086,6 +3369,7 @@ export const stories: Story[] = [
     ranking: 94,
     tags: "sontarans",
     series: "Series 7b (2013)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 258,
@@ -3097,6 +3381,7 @@ export const stories: Story[] = [
     ranking: 6,
     tags: "regeneration, gallifrey, UNIT, daleks",
     series: "50th Anniversary Special (2013)",
+    length: "1 x 75 minute episode",
   },
   {
     id: 259,
@@ -3108,6 +3393,7 @@ export const stories: Story[] = [
     ranking: 135,
     tags: "regeneration, daleks, cybermen, b-u-s, sontarans, angels",
     series: "Christmas Special (2013)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 260,
@@ -3119,6 +3405,7 @@ export const stories: Story[] = [
     ranking: 144,
     tags: "post-regen, pseudo-historical, sontarans",
     series: "Series 8 (2014)",
+    length: "1 x 75 minute episode",
   },
   {
     id: 261,
@@ -3130,6 +3417,7 @@ export const stories: Story[] = [
     ranking: 201,
     tags: "daleks, future",
     series: "Series 8 (2014)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 262,
@@ -3141,6 +3429,7 @@ export const stories: Story[] = [
     ranking: 226,
     tags: "pseudo-historical, comedy",
     series: "Series 8 (2014)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 263,
@@ -3152,6 +3441,7 @@ export const stories: Story[] = [
     ranking: 124,
     tags: "future, horror",
     series: "Series 8 (2014)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 264,
@@ -3163,6 +3453,7 @@ export const stories: Story[] = [
     ranking: 186,
     tags: "",
     series: "Series 8 (2014)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 265,
@@ -3174,6 +3465,7 @@ export const stories: Story[] = [
     ranking: 235,
     tags: "coal hill",
     series: "Series 8 (2014)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 266,
@@ -3185,6 +3477,7 @@ export const stories: Story[] = [
     ranking: 280,
     tags: "future",
     series: "Series 8 (2014)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 267,
@@ -3196,6 +3489,7 @@ export const stories: Story[] = [
     ranking: 45,
     tags: "horror",
     series: "Series 8 (2014)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 268,
@@ -3207,6 +3501,7 @@ export const stories: Story[] = [
     ranking: 65,
     tags: "horror",
     series: "Series 8 (2014)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 269,
@@ -3218,6 +3513,7 @@ export const stories: Story[] = [
     ranking: 290,
     tags: "fantasy",
     series: "Series 8 (2014)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 270,
@@ -3229,6 +3525,7 @@ export const stories: Story[] = [
     ranking: 130,
     multipart: true,
     series: "Series 8 (2014)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 271,
@@ -3240,6 +3537,7 @@ export const stories: Story[] = [
     ranking: 130,
     multipart: true,
     series: "Series 8 (2014)",
+    length: "1 x 57 minute episode",
   },
   {
     id: 272,
@@ -3251,6 +3549,7 @@ export const stories: Story[] = [
     ranking: 185,
     tags: "b-u-s, horror",
     series: "Christmas Special (2014)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 273,
@@ -3262,6 +3561,7 @@ export const stories: Story[] = [
     ranking: 122,
     multipart: true,
     series: "Series 9 (2015)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 274,
@@ -3273,6 +3573,7 @@ export const stories: Story[] = [
     ranking: 122,
     multipart: true,
     series: "Series 9 (2015)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 275,
@@ -3284,6 +3585,7 @@ export const stories: Story[] = [
     ranking: 121,
     multipart: true,
     series: "Series 9 (2015)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 276,
@@ -3295,6 +3597,7 @@ export const stories: Story[] = [
     ranking: 121,
     multipart: true,
     series: "Series 9 (2015)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 277,
@@ -3306,6 +3609,7 @@ export const stories: Story[] = [
     ranking: 232,
     tags: "pseudo-historical",
     series: "Series 9 (2015)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 278,
@@ -3317,6 +3621,7 @@ export const stories: Story[] = [
     ranking: 274,
     tags: "pseudo-historical",
     series: "Series 9 (2015)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 279,
@@ -3328,6 +3633,7 @@ export const stories: Story[] = [
     ranking: 118,
     multipart: true,
     series: "Series 9 (2015)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 280,
@@ -3339,6 +3645,7 @@ export const stories: Story[] = [
     ranking: 118,
     multipart: true,
     series: "Series 9 (2015)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 281,
@@ -3350,6 +3657,7 @@ export const stories: Story[] = [
     ranking: 282,
     tags: "future, horror",
     series: "Series 9 (2015)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 282,
@@ -3361,6 +3669,7 @@ export const stories: Story[] = [
     ranking: 150,
     tags: "",
     series: "Series 9 (2015)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 283,
@@ -3372,6 +3681,7 @@ export const stories: Story[] = [
     ranking: 30,
     multipart: true,
     series: "Series 9 (2015)",
+    length: "1 x 54 minute episode",
   },
   {
     id: 284,
@@ -3383,6 +3693,7 @@ export const stories: Story[] = [
     ranking: 200,
     multipart: true,
     series: "Series 9 (2015)",
+    length: "1 x 61 minute episode",
   },
   {
     id: 285,
@@ -3394,6 +3705,7 @@ export const stories: Story[] = [
     ranking: 160,
     tags: "future",
     series: "Christmas Special (2015)",
+    length: "1 x 55 minute episode",
   },
   {
     id: 286,
@@ -3405,6 +3717,7 @@ export const stories: Story[] = [
     ranking: 233,
     tags: "earth invasion, new companion, UNIT",
     series: "Christmas Special (2016)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 287,
@@ -3416,6 +3729,7 @@ export const stories: Story[] = [
     ranking: 87,
     tags: "new companion, daleks",
     series: "Series 10 (2017)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 288,
@@ -3427,6 +3741,7 @@ export const stories: Story[] = [
     ranking: 191,
     tags: "future, colony",
     series: "Series 10 (2017)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 289,
@@ -3438,6 +3753,7 @@ export const stories: Story[] = [
     ranking: 133,
     tags: "pseudo-historical",
     series: "Series 10 (2017)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 290,
@@ -3449,6 +3765,7 @@ export const stories: Story[] = [
     ranking: 187,
     tags: "",
     series: "Series 10 (2017)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 291,
@@ -3460,6 +3777,7 @@ export const stories: Story[] = [
     ranking: 116,
     tags: "future, horror",
     series: "Series 10 (2017)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 292,
@@ -3471,6 +3789,7 @@ export const stories: Story[] = [
     ranking: 155,
     tags: "earth invasion, master, alternate timeline",
     series: "Series 10 (2017)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 293,
@@ -3482,6 +3801,7 @@ export const stories: Story[] = [
     ranking: 210,
     tags: "earth invasion",
     series: "Series 10 (2017)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 294,
@@ -3493,6 +3813,7 @@ export const stories: Story[] = [
     ranking: 254,
     tags: "earth invasion, master, alternate timeline",
     series: "Series 10 (2017)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 295,
@@ -3504,6 +3825,7 @@ export const stories: Story[] = [
     ranking: 172,
     tags: "pseudo-historical, green monster",
     series: "Series 10 (2017)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 296,
@@ -3515,6 +3837,7 @@ export const stories: Story[] = [
     ranking: 240,
     tags: "pseudo-historical",
     series: "Series 10 (2017)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 297,
@@ -3526,6 +3849,7 @@ export const stories: Story[] = [
     ranking: 21,
     multipart: true,
     series: "Series 10 (2017)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 298,
@@ -3537,6 +3861,7 @@ export const stories: Story[] = [
     ranking: 21,
     multipart: true,
     series: "Series 10 (2017)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 299,
@@ -3548,6 +3873,7 @@ export const stories: Story[] = [
     ranking: 125,
     tags: "companion departure, regeneration, daleks, pseudo-historical",
     series: "Christmas Special (2017)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 300,
@@ -3559,6 +3885,7 @@ export const stories: Story[] = [
     ranking: 167,
     tags: "new companion, post-regen",
     series: "Series 11 (2018)",
+    length: "1 x 64 minute episode",
   },
   {
     id: 302,
@@ -3570,6 +3897,7 @@ export const stories: Story[] = [
     ranking: 268,
     tags: "",
     series: "Series 11 (2018)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 303,
@@ -3581,6 +3909,7 @@ export const stories: Story[] = [
     ranking: 93,
     tags: "pseudo-historical",
     series: "Series 11 (2018)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 304,
@@ -3592,6 +3921,7 @@ export const stories: Story[] = [
     ranking: 283,
     tags: "horror",
     series: "Series 11 (2018)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 305,
@@ -3603,6 +3933,7 @@ export const stories: Story[] = [
     ranking: 291,
     tags: "b-u-s, future",
     series: "Series 11 (2018)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 306,
@@ -3614,6 +3945,7 @@ export const stories: Story[] = [
     ranking: 162,
     tags: "pseudo-historical",
     series: "Series 11 (2018)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 307,
@@ -3625,6 +3957,7 @@ export const stories: Story[] = [
     ranking: 209,
     tags: "future",
     series: "Series 11 (2018)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 308,
@@ -3636,6 +3969,7 @@ export const stories: Story[] = [
     ranking: 202,
     tags: "pseudo-historical",
     series: "Series 11 (2018)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 309,
@@ -3647,6 +3981,7 @@ export const stories: Story[] = [
     ranking: 214,
     tags: "",
     series: "Series 11 (2018)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 310,
@@ -3658,6 +3993,7 @@ export const stories: Story[] = [
     ranking: 292,
     tags: "future",
     series: "Series 11 (2018)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 311,
@@ -3669,6 +4005,7 @@ export const stories: Story[] = [
     ranking: 181,
     tags: "daleks",
     series: "New Year Special (2019)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 312,
@@ -3680,6 +4017,7 @@ export const stories: Story[] = [
     ranking: 86,
     tags: "earth invasion, master",
     series: "Series 12 (2020)",
+    length: "2 x 60 minute episode",
   },
   {
     id: 313,
@@ -3691,6 +4029,7 @@ export const stories: Story[] = [
     ranking: 293,
     tags: "future, horror",
     series: "Series 12 (2020)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 314,
@@ -3702,6 +4041,7 @@ export const stories: Story[] = [
     ranking: 207,
     tags: "pseudo-historical",
     series: "Series 12 (2020)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 315,
@@ -3713,6 +4053,7 @@ export const stories: Story[] = [
     ranking: 79,
     tags: "",
     series: "Series 12 (2020)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 316,
@@ -3724,6 +4065,7 @@ export const stories: Story[] = [
     ranking: 270,
     tags: "horror",
     series: "Series 12 (2020)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 317,
@@ -3735,6 +4077,7 @@ export const stories: Story[] = [
     ranking: 236,
     tags: "pseudo-historical, future",
     series: "Series 12 (2020)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 318,
@@ -3746,6 +4089,7 @@ export const stories: Story[] = [
     ranking: 97,
     tags: "cybermen, pseudo-historical, horror",
     series: "Series 12 (2020)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 319,
@@ -3757,6 +4101,7 @@ export const stories: Story[] = [
     ranking: 184,
     multipart: true,
     series: "Series 12 (2020)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 320,
@@ -3768,6 +4113,7 @@ export const stories: Story[] = [
     ranking: 184,
     multipart: true,
     series: "Series 12 (2020)",
+    length: "1 x 65 minute episode",
   },
   {
     id: 321,
@@ -3778,6 +4124,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "companion departure, daleks",
     series: "New Year Special (2021)",
+    length: "1 x 70 minute episode",
   },
   {
     id: 322,
@@ -3788,6 +4135,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "new companion",
     series: "Series 13/Flux (2021)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 323,
@@ -3798,6 +4146,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "earth invasion, pseudo-historical, sontarans",
     series: "Series 13/Flux (2021)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 324,
@@ -3808,6 +4157,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "daleks",
     series: "Series 13/Flux (2021)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 325,
@@ -3818,6 +4168,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "pseudo-historical, horror, angels",
     series: "Series 13/Flux (2021)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 326,
@@ -3828,6 +4179,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "UNIT, sontarans",
     series: "Series 13/Flux (2021)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 327,
@@ -3838,6 +4190,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "UNIT, daleks, cybermen, sontarans",
     series: "Series 13/Flux (2021)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 328,
@@ -3848,6 +4201,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "daleks, b-u-s",
     series: "Specials (2022)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 329,
@@ -3858,6 +4212,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "pseudo-historical, green monster",
     series: "Specials (2022)",
+    length: "1 x 50 minute episode",
   },
   {
     id: 330,
@@ -3867,6 +4222,7 @@ export const stories: Story[] = [
     ai: 82,
     ai_type: "GfK (2013 - Present Day)",
     series: "Specials (2022)",
+    length: "1 x 90 minute episode",
   },
   {
     id: 331,
@@ -3877,6 +4233,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "post-regen, UNIT",
     series: "60th Anniversary Specials (2023)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 332,
@@ -3887,6 +4244,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "horror",
     series: "60th Anniversary Specials (2023)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 333,
@@ -3897,6 +4255,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "companion departure, regeneration, UNIT",
     series: "60th Anniversary Specials (2023)",
+    length: "1 x 60 minute episode",
   },
   {
     id: 334,
@@ -3907,6 +4266,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "new companion, green monster, fantasy",
     series: "Christmas Special (2023)",
+    length: "1 x 55 minute episode",
   },
   {
     id: 335,
@@ -3917,6 +4277,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "future",
     series: "Season 1 (2024)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 336,
@@ -3927,6 +4288,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "pseudo-historical",
     series: "Season 1 (2024)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 337,
@@ -3937,6 +4299,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "future",
     series: "Season 1 (2024)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 338,
@@ -3947,6 +4310,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "alternate timeline, horror",
     series: "Season 1 (2024)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 339,
@@ -3957,6 +4321,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "colony",
     series: "Season 1 (2024)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 340,
@@ -3967,6 +4332,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "pseudo-historical",
     series: "Season 1 (2024)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 341,
@@ -3977,6 +4343,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     multipart: true,
     series: "Season 1 (2024)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 342,
@@ -3987,6 +4354,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     multipart: true,
     series: "Season 1 (2024)",
+    length: "1 x 55 minute episode",
   },
   {
     id: 343,
@@ -3997,6 +4365,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     tags: "one-off companion",
     series: "Christmas Special (2024)",
+    length: "1 x 55 minute episode",
   },
   {
     id: 344,
@@ -4005,6 +4374,7 @@ export const stories: Story[] = [
     era: "2005 - Present Day",
     tags: "new companion, ",
     series: "Season 2 (2025)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 345,
@@ -4013,6 +4383,7 @@ export const stories: Story[] = [
     era: "2005 - Present Day",
     tags: "pseudo-historical",
     series: "Season 2 (2025)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 346,
@@ -4021,6 +4392,7 @@ export const stories: Story[] = [
     era: "2005 - Present Day",
     tags: "future, horror",
     series: "Season 2 (2025)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 347,
@@ -4029,6 +4401,7 @@ export const stories: Story[] = [
     era: "2005 - Present Day",
     tags: "UNIT",
     series: "Season 2 (2025)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 348,
@@ -4037,6 +4410,7 @@ export const stories: Story[] = [
     era: "2005 - Present Day",
     tags: "",
     series: "Season 2 (2025)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 349,
@@ -4045,6 +4419,7 @@ export const stories: Story[] = [
     era: "2005 - Present Day",
     tags: "future",
     series: "Season 2 (2025)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 350,
@@ -4053,6 +4428,7 @@ export const stories: Story[] = [
     era: "2005 - Present Day",
     multipart: true,
     series: "Season 2 (2025)",
+    length: "1 x 45 minute episode",
   },
   {
     id: 351,
@@ -4061,6 +4437,7 @@ export const stories: Story[] = [
     era: "2005 - Present Day",
     multipart: true,
     series: "Season 2 (2025)",
+    length: "1 x 65 minute episode",
   },
   {
     id: 352,
@@ -4068,6 +4445,7 @@ export const stories: Story[] = [
     doctor: "Ninth",
     tags: "UNIT, green monster",
     series: "Series 1 (2005)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 353,
@@ -4075,6 +4453,7 @@ export const stories: Story[] = [
     doctor: "Ninth",
     tags: "pseudo-historical, horror, new companion",
     series: "Series 1 (2005)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 354,
@@ -4082,6 +4461,7 @@ export const stories: Story[] = [
     doctor: "Ninth",
     tags: "regeneration, daleks, b-u-s, future",
     series: "Series 1 (2005)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 355,
@@ -4089,6 +4469,7 @@ export const stories: Story[] = [
     doctor: "Tenth",
     tags: "cybermen, alternate timeline, companion departure, horror",
     series: "Series 2 (2006)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 356,
@@ -4096,6 +4477,7 @@ export const stories: Story[] = [
     doctor: "Tenth",
     tags: "future, horror",
     series: "Series 2 (2006)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 357,
@@ -4103,6 +4485,7 @@ export const stories: Story[] = [
     doctor: "Tenth",
     tags: "companion departure, daleks, cybermen",
     series: "Series 2 (2006)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 358,
@@ -4110,6 +4493,7 @@ export const stories: Story[] = [
     doctor: "Tenth",
     tags: "daleks, pseudo-historical",
     series: "Series 3 (2007)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 359,
@@ -4117,13 +4501,15 @@ export const stories: Story[] = [
     doctor: "Tenth",
     tags: "b-u-s, pseudo-historical",
     series: "Series 3 (2007)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 360,
-    name: "The Sound of Drums/The Last of the Time Lords",
+    name: "Utopia/The Sound of Drums/The Last of the Time Lords",
     doctor: "Tenth",
     tags: "master, companion departure, alternate timeline",
     series: "Series 3 (2007)",
+    length: "2 x 45 minute episode, 1 x 50 minute episode",
   },
   {
     id: 361,
@@ -4131,6 +4517,7 @@ export const stories: Story[] = [
     doctor: "Tenth",
     tags: "UNIT, sontarans",
     series: "Series 4 (2008)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 362,
@@ -4138,6 +4525,7 @@ export const stories: Story[] = [
     doctor: "Tenth",
     tags: "alternate timeline, river song, future",
     series: "Series 4 (2008)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 363,
@@ -4145,6 +4533,7 @@ export const stories: Story[] = [
     doctor: "Tenth",
     tags: "companion departure, UNIT, daleks",
     series: "Series 4 (2008)",
+    length: "1 x 45 minute episode, 1 x 63 minute episode",
   },
   {
     id: 364,
@@ -4152,6 +4541,7 @@ export const stories: Story[] = [
     doctor: "Eleventh",
     tags: "future, angels",
     series: "Series 5 (2010)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 365,
@@ -4159,6 +4549,7 @@ export const stories: Story[] = [
     doctor: "Eleventh",
     tags: "green monster, future",
     series: "Series 5 (2010)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 366,
@@ -4166,6 +4557,7 @@ export const stories: Story[] = [
     doctor: "Eleventh",
     tags: "cybermen, sontarans, pseudo-historical, daleks, alternate timeline",
     series: "Series 5 (2010)",
+    length: "1 x 45 minute episode, 1 x 55 minute episode",
   },
   {
     id: 367,
@@ -4173,6 +4565,7 @@ export const stories: Story[] = [
     doctor: "Eleventh",
     tags: "pseudo-historical, horror, silence",
     series: "Series 6a (2011)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 368,
@@ -4180,6 +4573,7 @@ export const stories: Story[] = [
     doctor: "Eleventh",
     tags: "b-u-s, future, horror",
     series: "Series 6a (2011)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 369,
@@ -4187,6 +4581,7 @@ export const stories: Story[] = [
     doctor: "Twelfth",
     tags: "UNIT, cybermen, master, horror",
     series: "Series 8 (2014)",
+    length: "1 x 45 minute episode, 1 x 50 minute episode",
   },
   {
     id: 370,
@@ -4194,6 +4589,7 @@ export const stories: Story[] = [
     doctor: "Twelfth",
     tags: "UNIT, daleks, master, skaro",
     series: "Series 9 (2015)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 371,
@@ -4201,6 +4597,7 @@ export const stories: Story[] = [
     doctor: "Twelfth",
     tags: "b-u-s, future, horror, pseudo-historical, aliens",
     series: "Series 9 (2015)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 372,
@@ -4208,6 +4605,7 @@ export const stories: Story[] = [
     doctor: "Twelfth",
     tags: "UNIT, aliens",
     series: "Series 9 (2015)",
+    length: "2 x 45 minute episodes",
   },
   {
     id: 373,
@@ -4215,6 +4613,7 @@ export const stories: Story[] = [
     doctor: "Twelfth",
     tags: "gallifrey, time lords, companion departure",
     series: "Series 9 (2015)",
+    length: "2 x 60 minute episodes",
   },
   {
     id: 374,
@@ -4222,13 +4621,15 @@ export const stories: Story[] = [
     doctor: "Twelfth",
     tags: "companion departure, cybermen, master, b-u-s, horror",
     series: "Series 10 (2016)",
+    length: "1 x 45 minute episode, 1 x 60 minute episode",
   },
   {
     id: 375,
-    name: "Ascension of the Cybermen/The Timeless Child",
+    name: "Ascension of the Cybermen/The Timeless Children",
     doctor: "Thirteenth",
     tags: "earth invasion, cybermen, future, gallifrey, time lords, master",
     series: "Series 12 (2020)",
+    length: "1 x 50 minute episode, 1 x 65 minute episode",
   },
   {
     id: 376,
@@ -4236,6 +4637,7 @@ export const stories: Story[] = [
     doctor: "Fifteenth",
     tags: "companion departure, UNIT",
     series: "Season 1 (2024)",
+    length: "1 x 45 minute episode, 1 x 55 minute episode",
   },
   {
     id: 377,
@@ -4243,5 +4645,56 @@ export const stories: Story[] = [
     doctor: "Fifteenth",
     tags: "companion departure, regeneration, UNIT, alternate timeline",
     series: "Season 2 (2025)",
+    length: "1 x 45 minute episode, 1 x 65 minute episode",
+  },
+  {
+    id: 378,
+    name: "The Trial of a Time Lord: The Mysterious Planet",
+    prodCode: "7A",
+    doctor: "Sixth",
+    era: "1963 - 1996",
+    tags: "time lords, future",
+    series: "Season 23 (1986)",
+    length: "4 x 25 minute episodes",
+  },
+  {
+    id: 379,
+    name: "The Trial of a Time Lord: Mindwarp",
+    prodCode: "7B",
+    doctor: "Sixth",
+    era: "1963 - 1996",
+    tags: " time lords, future, aliens",
+    series: "Season 23 (1986)",
+    length: "4 x 25 minute episodes",
+  },
+  {
+    id: 380,
+    name: "The Trial of a Time Lord: Terror of the Vervoids",
+    prodCode: "7C",
+    doctor: "Sixth",
+    era: "1963 - 1996",
+    tags: "time lords, future, monsters",
+    series: "Season 23 (1986)",
+    length: "4 x 25 minute episodes",
+  },
+  {
+    id: 381,
+    name: "The Trial of a Time Lord: Ultimate Foe",
+    prodCode: "7C",
+    doctor: "Sixth",
+    era: "1963 - 1996",
+    tags: "gallifrey, time lords, master",
+    series: "Season 23 (1986)",
+    length: "2 x 25 minute episodes",
+  },
+  {
+    id: 382,
+    name: "Shada",
+    prodCode: "5M",
+    doctor: "Fourth",
+    era: "1963 - 1996",
+    tags: "time lords, missing, animated",
+    series: "Infinite Recursion Error.",
+    length: "6 x 25 minute episodes, probably",
   },
 ];

@@ -10,17 +10,9 @@ function Randomiser() {
   const [active, setActive] = useState<boolean>(false);
   const [story, setStory] = useState<Story>();
 
-  let filteredStories = [...stories].filter(
+  const filteredStories = [...stories].filter(
     (story) => story.multipart !== true
   );
-  // if (filter !== "All" || filterEra !== "All") {
-  //   filteredStories = stories.filter((story) => {
-  //     const doctorMatch = story.doctor === filter || filter === "All";
-  //     const eraMatch = story.era === filterEra || filterEra === "All";
-
-  //     return doctorMatch && eraMatch;
-  //   });
-  // }
 
   function getRandomStory() {
     const randomStory = [...filteredStories]
@@ -60,6 +52,19 @@ function Randomiser() {
             <span className={styles.dot} />
             <span className={styles.dot} />
           </div>
+          <div className={styles.consoleLayout}>
+            <div className={styles.consoleScreen}>
+              {story?.image && (
+                <Image
+                  src={story?.image}
+                  alt={`${story.doctor} Doctor image`}
+                  width={40}
+                  height={60}
+                />
+              )}
+            </div>
+          </div>
+
           <div className={styles.randomiserToggle}>
             <label className={styles.toggle}>
               <input
@@ -79,16 +84,24 @@ function Randomiser() {
       </div>
 
       <div className={styles.scanner}>
-        {story && (
+        {story ? (
           <div>
-            <p>{story?.name}</p>
-            <ul>
+            <p className={styles.storyTitle}>{story?.name}</p>
+            <ul className={styles.storyInfo}>
               <li>{`A ${story?.doctor} Doctor story.`}</li>
               <li>{story?.series}</li>
-              {missing && <li>This story has missing episodes.</li>}
+              <li>{story?.length}</li>
+              {missing && !animated && (
+                <li>
+                  This story has missing episodes. Look for audio or
+                  reconstructed versions.
+                </li>
+              )}
               {animated && <li>This story has missing episodes animated.</li>}
             </ul>
           </div>
+        ) : (
+          <p>Awaiting instructions...</p>
         )}
       </div>
     </div>

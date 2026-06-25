@@ -15,19 +15,31 @@
   width: 100%;
 }
 
+/* story */
+
 .scanner {
   position: absolute;
   top: 10%;
   height: 40%;
   width: 70%;
-  /* width: auto;
-  height: auto; */
   background-color: black;
   z-index: 2;
   font-family: var(--font-teletext);
   color: white;
-  font-size: x-large;
+  font-size: 22px;
+  line-height: 2.5;
+  padding: 5px;
 }
+
+.storyTitle {
+  font-weight: bold;
+  font-size: 36px;
+}
+
+.storyInfo {
+  list-style: square inside;
+}
+/* console */
 
 .controls {
   position: absolute;
@@ -73,6 +85,20 @@
   justify-content: space-around;
   padding-bottom: 20px;
   z-index: 5;
+}
+
+.consoleLayout {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  padding: 5px;
+}
+
+.consoleScreen {
+  width: 40px;
+  height: 60px;
+  background-color: black;
 }
 
 .randomiserBox {
