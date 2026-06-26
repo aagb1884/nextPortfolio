@@ -154,13 +154,13 @@
   height: 60px;
   border-radius: 50%;
   border: 3px black solid;
-  background-color: #e5e5f7;
+  background-color: #555;
   opacity: 0.8;
   background-image:
     linear-gradient(black 1px, transparent 1px),
     linear-gradient(90deg, black 1px, transparent 1px),
     linear-gradient(black 0.5px, transparent 0.5px),
-    linear-gradient(90deg, black 0.5px, #e5e5f7 0.5px);
+    linear-gradient(90deg, black 0.5px, #555 0.5px);
   background-size:
     60px 60px,
     60px 60px,

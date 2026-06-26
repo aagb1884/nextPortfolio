@@ -9,6 +9,32 @@ import { Story, stories } from "../light/data/stories";
 function Randomiser() {
   const [active, setActive] = useState<boolean>(false);
   const [story, setStory] = useState<Story>();
+  const [landingAudio] = useState(
+    typeof window !== "undefined"
+      ? new Audio("/audio/randomiser/arrive.wav")
+      : null
+  );
+
+  function playLanding() {
+    if (landingAudio) {
+      landingAudio.volume = 0.2;
+      landingAudio.play();
+    }
+  }
+
+  const [humAudio] = useState(
+    typeof window !== "undefined"
+      ? new Audio("/audio/randomiser/hum.wav")
+      : null
+  );
+
+  function playHum() {
+    if (humAudio) {
+      humAudio.volume = 0.1;
+      humAudio.loop;
+      humAudio.play();
+    }
+  }
 
   const filteredStories = [...stories].filter(
     (story) => story.multipart !== true
@@ -76,6 +102,7 @@ function Randomiser() {
                   disabled={active}
                   onChange={() => {
                     setActive((prev) => !prev);
+                    playLanding();
                     setTimeout(() => {
                       setActive(false);
                     }, 1000);
