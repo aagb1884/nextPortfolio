@@ -434,6 +434,7 @@ export const stories: Story[] = [
     tags: "future, daleks, post-regen, colony, future, missing, animated",
     series: "Season 4 (1966 - 67)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 31,
@@ -447,6 +448,7 @@ export const stories: Story[] = [
     tags: "pure historical, scotland, new companion, missing",
     series: "Season 4 (1966 - 67)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 32,
@@ -460,6 +462,7 @@ export const stories: Story[] = [
     tags: "camp, mad scientist, missing, animated",
     series: "Season 4 (1966 - 67)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 33,
@@ -473,6 +476,7 @@ export const stories: Story[] = [
     tags: "cybermen, future, b-u-s, missing, animated",
     series: "Season 4 (1966 - 67)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 34,
@@ -486,6 +490,7 @@ export const stories: Story[] = [
     tags: "colony, future, missing, animated",
     series: "Season 4 (1966 - 67)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 35,
@@ -499,6 +504,7 @@ export const stories: Story[] = [
     tags: "companion departure, missing, animated",
     series: "Season 4 (1966 - 67)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 36,
@@ -512,6 +518,7 @@ export const stories: Story[] = [
     tags: "new companion, daleks, skaro, pseudo-historical, missing, animated",
     series: "Season 4 (1966 - 67)",
     length: "7 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 37,
@@ -525,6 +532,7 @@ export const stories: Story[] = [
     tags: "cybermen, b-u-s, future",
     series: "Season 5 (1967 - 68)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 38,
@@ -538,6 +546,7 @@ export const stories: Story[] = [
     tags: "b-u-s, pseudo-historical, horror, missing, animated",
     series: "Season 5 (1967 - 68)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 39,
@@ -551,6 +560,7 @@ export const stories: Story[] = [
     tags: "b-u-s, green monster, future, missing, animated",
     series: "Season 5 (1967 - 68)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 40,
@@ -564,6 +574,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Season 5 (1967 - 68)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 41,
@@ -577,6 +588,7 @@ export const stories: Story[] = [
     tags: "b-u-s, horror, missing, animated",
     series: "Season 5 (1967 - 68)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 42,
@@ -590,6 +602,7 @@ export const stories: Story[] = [
     tags: "companion departure, b-u-s, horror, missing, animated",
     series: "Season 5 (1967 - 68)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 43,
@@ -603,6 +616,7 @@ export const stories: Story[] = [
     tags: "new companion, cybermen, b-u-s, future, missing",
     series: "Season 5 (1967 - 68)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 44,
@@ -616,6 +630,7 @@ export const stories: Story[] = [
     tags: "aliens",
     series: "Season 6 (1968 - 69)",
     length: "5 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 45,
@@ -629,6 +644,7 @@ export const stories: Story[] = [
     tags: "fantasy",
     series: "Season 6 (1968 - 69)",
     length: "5 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 46,
@@ -642,6 +658,7 @@ export const stories: Story[] = [
     tags: "earth invasion, UNIT, cybermen, missing, animated",
     series: "Season 6 (1968 - 69)",
     length: "8 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 47,
@@ -655,6 +672,7 @@ export const stories: Story[] = [
     tags: "aliens",
     series: "Season 6 (1968 - 69)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 48,
@@ -668,6 +686,7 @@ export const stories: Story[] = [
     tags: "earth invasion, green monster, future",
     series: "Season 6 (1968 - 69)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 49,
@@ -681,6 +700,7 @@ export const stories: Story[] = [
     tags: "future, missing",
     series: "Season 6 (1968 - 69)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 50,
@@ -694,6 +714,7 @@ export const stories: Story[] = [
     tags: "gallifrey, companion departure, regeneration",
     series: "Season 6 (1968 - 69)",
     length: "10 x 25 minute episodes",
+    image: "/images/randomiser/second.svg",
   },
   {
     id: 51,
@@ -707,6 +728,7 @@ export const stories: Story[] = [
     tags: "earth invasion, new companion, post-regen, UNIT, horror",
     series: "Season 7 (1970)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 52,
@@ -720,6 +742,7 @@ export const stories: Story[] = [
     tags: "UNIT, green monster, horror",
     series: "Season 7 (1970)",
     length: "7 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 53,
@@ -733,6 +756,7 @@ export const stories: Story[] = [
     tags: "UNIT, horror",
     series: "Season 7 (1970)",
     length: "7 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 54,
@@ -746,6 +770,7 @@ export const stories: Story[] = [
     tags: "UNIT, alternate timeline, green monster, horror",
     series: "Season 7 (1970)",
     length: "7 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 55,
@@ -759,6 +784,7 @@ export const stories: Story[] = [
     tags: "earth invasion, new companion, UNIT, master, horror",
     series: "Season 8 (1971)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 56,
@@ -772,6 +798,7 @@ export const stories: Story[] = [
     tags: "UNIT, master, horror",
     series: "Season 8 (1971)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 57,
@@ -785,6 +812,7 @@ export const stories: Story[] = [
     tags: "earth invasion, UNIT, master",
     series: "Season 8 (1971)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 58,
@@ -798,6 +826,7 @@ export const stories: Story[] = [
     tags: "colony, master, green monster, future",
     series: "Season 8 (1971)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 59,
@@ -811,6 +840,7 @@ export const stories: Story[] = [
     tags: "UNIT, master, horror",
     series: "Season 8 (1971)",
     length: "5 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 60,
@@ -824,6 +854,7 @@ export const stories: Story[] = [
     tags: "UNIT, daleks, alternate timeline",
     series: "Season 9 (1972)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 61,
@@ -837,6 +868,7 @@ export const stories: Story[] = [
     tags: "green monster, future",
     series: "Season 9 (1972)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 62,
@@ -850,6 +882,7 @@ export const stories: Story[] = [
     tags: "master, ",
     series: "Season 9 (1972)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 63,
@@ -863,6 +896,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Season 9 (1972)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 64,
@@ -876,6 +910,7 @@ export const stories: Story[] = [
     tags: "UNIT, master",
     series: "Season 9 (1972)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 65,
@@ -889,6 +924,7 @@ export const stories: Story[] = [
     tags: "UNIT, time lords",
     series: "Season 10 (1972 - 73)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 66,
@@ -902,6 +938,7 @@ export const stories: Story[] = [
     tags: "green monster",
     series: "Season 10 (1972 - 73)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 67,
@@ -915,6 +952,7 @@ export const stories: Story[] = [
     tags: "master, daleks, green monster, future",
     series: "Season 10 (1972 - 73)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 68,
@@ -928,6 +966,7 @@ export const stories: Story[] = [
     tags: "pulp, daleks, future",
     series: "Season 10 (1972 - 73)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 69,
@@ -941,6 +980,7 @@ export const stories: Story[] = [
     tags: "green monster, companion departure, UNIT, horror",
     series: "Season 10 (1972 - 73)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 70,
@@ -954,6 +994,7 @@ export const stories: Story[] = [
     tags: "new companion, pseudo-historical, sontarans",
     series: "Season 11 (1973 - 74)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 71,
@@ -967,6 +1008,7 @@ export const stories: Story[] = [
     tags: "dinosaur, UNIT",
     series: "Season 11 (1973 - 74)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 72,
@@ -980,6 +1022,7 @@ export const stories: Story[] = [
     tags: "pulp, daleks, future",
     series: "Season 11 (1973 - 74)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 73,
@@ -993,6 +1036,7 @@ export const stories: Story[] = [
     tags: "green monster, future",
     series: "Season 11 (1973 - 74)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 74,
@@ -1006,6 +1050,7 @@ export const stories: Story[] = [
     tags: "companion departure, regeneration, UNIT",
     series: "Season 11 (1973 - 74)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/third.svg",
   },
   {
     id: 75,
@@ -1019,6 +1064,7 @@ export const stories: Story[] = [
     tags: "new companion, post-regen, UNIT",
     series: "Season 12 (1974 - 75)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 76,
@@ -1032,6 +1078,7 @@ export const stories: Story[] = [
     tags: "green monster, b-u-s, future, horror",
     series: "Season 12 (1974 - 75)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 77,
@@ -1045,6 +1092,7 @@ export const stories: Story[] = [
     tags: "future, horror, sontarans",
     series: "Season 12 (1974 - 75)",
     length: "2 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 78,
@@ -1058,6 +1106,7 @@ export const stories: Story[] = [
     tags: "green monster, daleks, war, skaro, horror",
     series: "Season 12 (1974 - 75)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 79,
@@ -1071,6 +1120,7 @@ export const stories: Story[] = [
     tags: "cybermen, future",
     series: "Season 12 (1974 - 75)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 80,
@@ -1084,6 +1134,7 @@ export const stories: Story[] = [
     tags: "earth invasion, companion departure, UNIT, horror",
     series: "Season 13 (1975 - 76)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 81,
@@ -1097,6 +1148,7 @@ export const stories: Story[] = [
     tags: "future, monster, horror",
     series: "Season 13 (1975 - 76)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 82,
@@ -1110,6 +1162,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, horror",
     series: "Season 13 (1975 - 76)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 83,
@@ -1123,6 +1176,7 @@ export const stories: Story[] = [
     tags: "earth invasion, UNIT",
     series: "Season 13 (1975 - 76)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 84,
@@ -1136,6 +1190,7 @@ export const stories: Story[] = [
     tags: "time lords, horror",
     series: "Season 13 (1975 - 76)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 85,
@@ -1149,6 +1204,7 @@ export const stories: Story[] = [
     tags: "UNIT, green monster, horror",
     series: "Season 13 (1975 - 76)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 86,
@@ -1162,6 +1218,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Season 14 (1976 - 77)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 87,
@@ -1175,6 +1232,7 @@ export const stories: Story[] = [
     tags: "companion departure",
     series: "Season 14 (1976 - 77)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 88,
@@ -1188,6 +1246,7 @@ export const stories: Story[] = [
     tags: "gallifrey, time lords, master, horror",
     series: "Season 14 (1976 - 77)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 89,
@@ -1201,6 +1260,7 @@ export const stories: Story[] = [
     tags: "new companion, colony, future",
     series: "Season 14 (1976 - 77)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 90,
@@ -1214,6 +1274,7 @@ export const stories: Story[] = [
     tags: "future, horror",
     series: "Season 14 (1976 - 77)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 91,
@@ -1227,6 +1288,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, horror",
     series: "Season 14 (1976 - 77)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 92,
@@ -1240,6 +1302,7 @@ export const stories: Story[] = [
     tags: "b-u-s, pseudo-historical, green monster, horror",
     series: "Season 15 (1977 - 78)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 93,
@@ -1253,6 +1316,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Season 15 (1977 - 78)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 94,
@@ -1266,6 +1330,7 @@ export const stories: Story[] = [
     tags: "b-u-s, horror",
     series: "Season 15 (1977 - 78)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 95,
@@ -1279,6 +1344,7 @@ export const stories: Story[] = [
     tags: "colony, future",
     series: "Season 15 (1977 - 78)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 96,
@@ -1292,6 +1358,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Season 15 (1977 - 78)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 97,
@@ -1305,6 +1372,7 @@ export const stories: Story[] = [
     tags: "gallifrey, time lords, sontarans, companion departure, sontarans",
     series: "Season 15 (1977 - 78)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 98,
@@ -1318,6 +1386,7 @@ export const stories: Story[] = [
     tags: "key to time, new companion",
     series: "Season 16 (1978 - 79)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 99,
@@ -1331,6 +1400,7 @@ export const stories: Story[] = [
     tags: "pirates, key to time",
     series: "Season 16 (1978 - 79)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 100,
@@ -1344,6 +1414,7 @@ export const stories: Story[] = [
     tags: "key to time",
     series: "Season 16 (1978 - 79)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 101,
@@ -1357,6 +1428,7 @@ export const stories: Story[] = [
     tags: "key to time",
     series: "Season 16 (1978 - 79)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 102,
@@ -1370,6 +1442,7 @@ export const stories: Story[] = [
     tags: "green monster, key to time",
     series: "Season 16 (1978 - 79)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 103,
@@ -1383,6 +1456,7 @@ export const stories: Story[] = [
     tags: "war, key to time",
     series: "Season 16 (1978 - 79)",
     length: "6 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 104,
@@ -1396,6 +1470,7 @@ export const stories: Story[] = [
     tags: "pulp, daleks, skaro",
     series: "Season 17 (1979 - 80)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 105,
@@ -1409,6 +1484,7 @@ export const stories: Story[] = [
     tags: "green monster",
     series: "Season 17 (1979 - 80)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 106,
@@ -1422,6 +1498,7 @@ export const stories: Story[] = [
     tags: "green monster",
     series: "Season 17 (1979 - 80)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 107,
@@ -1435,6 +1512,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Season 17 (1979 - 80)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 108,
@@ -1448,6 +1526,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Season 17 (1979 - 80)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 109,
@@ -1461,6 +1540,7 @@ export const stories: Story[] = [
     tags: "green monster",
     series: "Season 18 (1980 - 81)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 110,
@@ -1474,6 +1554,7 @@ export const stories: Story[] = [
     tags: "green monster",
     series: "Season 18 (1980 - 81)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 111,
@@ -1487,6 +1568,7 @@ export const stories: Story[] = [
     tags: "new companion",
     series: "Season 18 (1980 - 81)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 112,
@@ -1500,6 +1582,7 @@ export const stories: Story[] = [
     tags: "horror",
     series: "Season 18 (1980 - 81)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 113,
@@ -1513,6 +1596,7 @@ export const stories: Story[] = [
     tags: "companion departure",
     series: "Season 18 (1980 - 81)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 114,
@@ -1526,6 +1610,7 @@ export const stories: Story[] = [
     tags: "master",
     series: "Season 18 (1980 - 81)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 115,
@@ -1539,6 +1624,7 @@ export const stories: Story[] = [
     tags: "universe, new companion, regeneration, master",
     series: "Season 18 (1980 - 81)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fourth.svg",
   },
   {
     id: 116,
@@ -1552,6 +1638,7 @@ export const stories: Story[] = [
     tags: "post-regen, master",
     series: "Season 19 (1982)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 117,
@@ -1565,6 +1652,7 @@ export const stories: Story[] = [
     tags: "green monster",
     series: "Season 19 (1982)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 118,
@@ -1578,6 +1666,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Season 19 (1982)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 119,
@@ -1591,6 +1680,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Season 19 (1982)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 120,
@@ -1604,6 +1694,7 @@ export const stories: Story[] = [
     tags: "pure historical",
     series: "Season 19 (1982)",
     length: "2 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 121,
@@ -1617,6 +1708,7 @@ export const stories: Story[] = [
     tags: "earth invasion, companion departure, cybermen, future",
     series: "Season 19 (1982)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 122,
@@ -1630,6 +1722,7 @@ export const stories: Story[] = [
     tags: "master",
     series: "Season 19 (1982)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 123,
@@ -1643,6 +1736,7 @@ export const stories: Story[] = [
     tags: "gallifrey, time lords",
     series: "Season 20 (1983)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 124,
@@ -1656,6 +1750,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Season 20 (1983)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 125,
@@ -1669,6 +1764,7 @@ export const stories: Story[] = [
     tags: "new companion, horror",
     series: "Season 20 (1983)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 126,
@@ -1682,6 +1778,7 @@ export const stories: Story[] = [
     tags: "companion departure",
     series: "Season 20 (1983)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 127,
@@ -1695,6 +1792,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Season 20 (1983)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 128,
@@ -1708,6 +1806,7 @@ export const stories: Story[] = [
     tags: "master, pseudo-historical",
     series: "Season 20 (1983)",
     length: "2 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 129,
@@ -1721,6 +1820,7 @@ export const stories: Story[] = [
     tags: "gallifrey, time lords, daleks, cybermen, master",
     series: "20th Anniversary Special (1983)",
     length: "1 x 90 minute episode",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 130,
@@ -1734,6 +1834,7 @@ export const stories: Story[] = [
     tags: "b-u-s, green monster, future",
     series: "Season 21 (1984)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 131,
@@ -1747,6 +1848,7 @@ export const stories: Story[] = [
     tags: "horror",
     series: "Season 21 (1984)",
     length: "2 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 132,
@@ -1760,6 +1862,7 @@ export const stories: Story[] = [
     tags: "b-u-s, future, horror",
     series: "Season 21 (1984)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 133,
@@ -1773,6 +1876,7 @@ export const stories: Story[] = [
     tags: "companion departure, daleks, future",
     series: "Season 21 (1984)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 134,
@@ -1786,6 +1890,7 @@ export const stories: Story[] = [
     tags: "new companion, companion departure, master",
     series: "Season 21 (1984)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 135,
@@ -1799,6 +1904,7 @@ export const stories: Story[] = [
     tags: "regeneration, horror",
     series: "Season 21 (1984)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/fifth.svg",
   },
   {
     id: 136,
@@ -1812,6 +1918,7 @@ export const stories: Story[] = [
     tags: "post-regen",
     series: "Season 21 (1984)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 137,
@@ -1825,6 +1932,7 @@ export const stories: Story[] = [
     tags: "cybermen",
     series: "Season 22 (1985)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 138,
@@ -1838,6 +1946,7 @@ export const stories: Story[] = [
     tags: "future, colony, horror",
     series: "Season 22 (1985)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 139,
@@ -1851,6 +1960,7 @@ export const stories: Story[] = [
     tags: "rani, master, pseudo-historical",
     series: "Season 22 (1985)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 140,
@@ -1864,6 +1974,7 @@ export const stories: Story[] = [
     tags: "sontarans",
     series: "Season 22 (1985)",
     length: "3 x 45 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 141,
@@ -1877,6 +1988,7 @@ export const stories: Story[] = [
     tags: "green monster",
     series: "Season 22 (1985)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 142,
@@ -1890,6 +2002,7 @@ export const stories: Story[] = [
     tags: "daleks, future, horror",
     series: "Season 22 (1985)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 143,
@@ -1903,6 +2016,7 @@ export const stories: Story[] = [
     tags: "gallifrey, time lords, master, companion departure, new companion, green monster, future",
     series: "Season 23 (1986)",
     length: "14 x 25 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 144,
@@ -1916,6 +2030,7 @@ export const stories: Story[] = [
     tags: "regeneration, post-regen, rani",
     series: "Season 24 (1987)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 145,
@@ -1929,6 +2044,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Season 24 (1987)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 146,
@@ -1942,6 +2058,7 @@ export const stories: Story[] = [
     tags: "b-u-s, pseudo-historical",
     series: "Season 24 (1987)",
     length: "3 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 147,
@@ -1955,6 +2072,7 @@ export const stories: Story[] = [
     tags: "new companion, companion departure, future",
     series: "Season 24 (1987)",
     length: "3 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 148,
@@ -1968,6 +2086,7 @@ export const stories: Story[] = [
     tags: "daleks, pseudo-historical",
     series: "Season 25 (1988)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 149,
@@ -1981,6 +2100,7 @@ export const stories: Story[] = [
     tags: "colony, future",
     series: "Season 25 (1988)",
     length: "3 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 150,
@@ -1994,6 +2114,7 @@ export const stories: Story[] = [
     tags: "cybermen",
     series: "Season 25 (1988)",
     length: "3 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 151,
@@ -2007,6 +2128,7 @@ export const stories: Story[] = [
     tags: "horror",
     series: "Season 25 (1988)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 152,
@@ -2020,6 +2142,7 @@ export const stories: Story[] = [
     tags: "UNIT, future, alternate timeline",
     series: "Season 26 (1989)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 153,
@@ -2033,6 +2156,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Season 26 (1989)",
     length: "3 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 154,
@@ -2046,6 +2170,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, alternate timeline, horror",
     series: "Season 26 (1989)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 155,
@@ -2059,6 +2184,7 @@ export const stories: Story[] = [
     tags: "master",
     series: "Season 26 (1989)",
     length: "3 x 25 minute episodes",
+    image: "/images/randomiser/seventh.svg",
   },
   {
     id: 156,
@@ -2072,6 +2198,7 @@ export const stories: Story[] = [
     tags: "regeneration, post-regen, one-off companion, master",
     series: "TV Movie (1996)",
     length: "1 x 89 minute episode",
+    image: "/images/randomiser/eighth.svg",
   },
   {
     id: 157,
@@ -2085,6 +2212,7 @@ export const stories: Story[] = [
     tags: "earth invasion, new companion",
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 158,
@@ -2098,6 +2226,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 159,
@@ -2111,6 +2240,7 @@ export const stories: Story[] = [
     tags: "earth invasion, pseudo-historical, horror",
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 160,
@@ -2124,6 +2254,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 161,
@@ -2137,6 +2268,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 162,
@@ -2150,6 +2282,7 @@ export const stories: Story[] = [
     tags: "daleks, b-u-s, horror",
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 163,
@@ -2163,6 +2296,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 164,
@@ -2176,6 +2310,7 @@ export const stories: Story[] = [
     tags: "b-u-s, pseudo-historical",
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 165,
@@ -2189,6 +2324,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 166,
@@ -2202,6 +2338,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 167,
@@ -2215,6 +2352,7 @@ export const stories: Story[] = [
     tags: "green monster",
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 168,
@@ -2228,6 +2366,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 169,
@@ -2241,6 +2380,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 1 (2005)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 170,
@@ -2254,6 +2394,7 @@ export const stories: Story[] = [
     tags: "earth invasion, post-regen, UNIT",
     series: "Christmas Special (2005)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 171,
@@ -2267,6 +2408,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 172,
@@ -2280,6 +2422,7 @@ export const stories: Story[] = [
     tags: "b-u-s, pseudo-historical, horror",
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 173,
@@ -2293,6 +2436,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 174,
@@ -2306,6 +2450,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, future",
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 175,
@@ -2319,6 +2464,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 176,
@@ -2332,6 +2478,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 177,
@@ -2345,6 +2492,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 178,
@@ -2358,6 +2506,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 179,
@@ -2371,6 +2520,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 180,
@@ -2384,6 +2534,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 181,
@@ -2397,6 +2548,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 182,
@@ -2410,6 +2562,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 183,
@@ -2423,6 +2576,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 2 (2006)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 184,
@@ -2436,6 +2590,7 @@ export const stories: Story[] = [
     tags: "one-off companion",
     series: "Christmas Special (2006)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 185,
@@ -2449,6 +2604,7 @@ export const stories: Story[] = [
     tags: "new companion",
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 186,
@@ -2462,6 +2618,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 187,
@@ -2475,6 +2632,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 188,
@@ -2488,6 +2646,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 189,
@@ -2501,6 +2660,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 190,
@@ -2514,6 +2674,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 191,
@@ -2527,6 +2688,7 @@ export const stories: Story[] = [
     tags: "b-u-s, future",
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 192,
@@ -2540,6 +2702,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 193,
@@ -2553,6 +2716,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 194,
@@ -2566,6 +2730,7 @@ export const stories: Story[] = [
     tags: "horror, angels",
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 195,
@@ -2579,6 +2744,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 196,
@@ -2592,6 +2758,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 197,
@@ -2605,6 +2772,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 3 (2007)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 198,
@@ -2618,6 +2786,7 @@ export const stories: Story[] = [
     tags: "one-off companion",
     series: "Christmas Special (2007)",
     length: "1 x 72 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 199,
@@ -2631,6 +2800,7 @@ export const stories: Story[] = [
     tags: "new companion",
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 200,
@@ -2644,6 +2814,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 201,
@@ -2657,6 +2828,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 202,
@@ -2670,6 +2842,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 203,
@@ -2683,6 +2856,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 204,
@@ -2696,6 +2870,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 205,
@@ -2709,6 +2884,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, comedy",
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 206,
@@ -2722,6 +2898,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 207,
@@ -2735,6 +2912,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 208,
@@ -2748,6 +2926,7 @@ export const stories: Story[] = [
     tags: "b-u-s, future, horror",
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 209,
@@ -2761,6 +2940,7 @@ export const stories: Story[] = [
     tags: "UNIT, alternate timeline, horror",
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 210,
@@ -2774,6 +2954,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 211,
@@ -2787,6 +2968,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 4 (2008)",
     length: "1 x 63 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 212,
@@ -2800,6 +2982,7 @@ export const stories: Story[] = [
     tags: "one-off companion, cybermen, pseudo-historical",
     series: "Specials (2008 - 2010)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 213,
@@ -2813,6 +2996,7 @@ export const stories: Story[] = [
     tags: "one-off companion, UNIT",
     series: "Specials (2008 - 2010)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 214,
@@ -2826,6 +3010,7 @@ export const stories: Story[] = [
     tags: "one-off companion, b-u-s, future, horror",
     series: "Specials (2008 - 2010)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 215,
@@ -2839,6 +3024,7 @@ export const stories: Story[] = [
     tags: "companion departure, one-off companion, regeneration, gallifrey, time lords, master",
     series: "Specials (2008 - 2010)",
     length: "1 x 60 minute episode, 1 x 75 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 216,
@@ -2852,6 +3038,7 @@ export const stories: Story[] = [
     tags: "earth invasion, new companion, post-regen",
     series: "Series 5 (2010)",
     length: "1 x 65 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 217,
@@ -2865,6 +3052,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 5 (2010)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 218,
@@ -2878,6 +3066,7 @@ export const stories: Story[] = [
     tags: "daleks, pseudo-historical",
     series: "Series 5 (2010)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 219,
@@ -2891,6 +3080,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 5 (2010)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 220,
@@ -2904,6 +3094,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 5 (2010)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 221,
@@ -2917,6 +3108,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 5 (2010)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 222,
@@ -2930,6 +3122,7 @@ export const stories: Story[] = [
     tags: "alternate timeline",
     series: "Series 5 (2010)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 223,
@@ -2943,6 +3136,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 5 (2010)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 224,
@@ -2956,6 +3150,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 5 (2010)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 225,
@@ -2969,6 +3164,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 5 (2010)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 226,
@@ -2982,6 +3178,7 @@ export const stories: Story[] = [
     tags: "comedy",
     series: "Series 5 (2010)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 227,
@@ -2995,6 +3192,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 5 (2010)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 228,
@@ -3008,6 +3206,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 5 (2010)",
     length: "1 x 55 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 229,
@@ -3021,6 +3220,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Christmas Special (2010)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 230,
@@ -3034,6 +3234,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 6a (2011)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 231,
@@ -3047,6 +3248,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 6a (2011)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 232,
@@ -3060,6 +3262,7 @@ export const stories: Story[] = [
     tags: "pirates, b-u-s, pseudo-historical",
     series: "Series 6a (2011)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 233,
@@ -3073,6 +3276,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 6a (2011)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 234,
@@ -3086,6 +3290,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 6a (2011)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 235,
@@ -3099,6 +3304,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 6a (2011)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 236,
@@ -3112,6 +3318,7 @@ export const stories: Story[] = [
     tags: "b-u-s, future, sontarans",
     series: "Series 6a (2011)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 237,
@@ -3125,6 +3332,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 6b (2011)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 238,
@@ -3138,6 +3346,7 @@ export const stories: Story[] = [
     tags: "horror",
     series: "Series 6b (2011)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 239,
@@ -3151,6 +3360,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 6b (2011)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 240,
@@ -3164,6 +3374,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 6b (2011)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 241,
@@ -3177,6 +3388,7 @@ export const stories: Story[] = [
     tags: "cybermen, comedy",
     series: "Series 6b (2011)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 242,
@@ -3190,6 +3402,7 @@ export const stories: Story[] = [
     tags: "alternate timeline",
     series: "Series 6b (2011)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 243,
@@ -3202,6 +3415,7 @@ export const stories: Story[] = [
     tags: "one-off companion, pseudo-historical",
     series: "Christmas Special (2011)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 244,
@@ -3214,6 +3428,7 @@ export const stories: Story[] = [
     tags: "daleks, skaro",
     series: "Series 7a (2012)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 245,
@@ -3226,6 +3441,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 7a (2012)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 246,
@@ -3238,6 +3454,7 @@ export const stories: Story[] = [
     tags: "western, pseudo-historical",
     series: "Series 7a (2012)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 247,
@@ -3250,6 +3467,7 @@ export const stories: Story[] = [
     tags: "earth invasion, UNIT",
     series: "Series 7a (2012)",
     length: "1 x 41 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 248,
@@ -3262,6 +3480,7 @@ export const stories: Story[] = [
     tags: "companion departure, pseudo-historical, angels",
     series: "Series 7a (2012)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 249,
@@ -3274,6 +3493,7 @@ export const stories: Story[] = [
     tags: "new companion, pseudo-historical, sontarans",
     series: "Christmas Special (2012)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 250,
@@ -3286,6 +3506,7 @@ export const stories: Story[] = [
     tags: "earth invasion, new companion, UNIT",
     series: "Series 7b (2013)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 251,
@@ -3298,6 +3519,7 @@ export const stories: Story[] = [
     tags: "aliens",
     series: "Series 7b (2013)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 252,
@@ -3310,6 +3532,7 @@ export const stories: Story[] = [
     tags: "b-u-s, pseudo-historical, green monster",
     series: "Series 7b (2013)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 253,
@@ -3322,6 +3545,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, horror",
     series: "Series 7b (2013)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 254,
@@ -3334,6 +3558,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 7b (2013)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 255,
@@ -3346,6 +3571,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, horror",
     series: "Series 7b (2013)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 256,
@@ -3358,6 +3584,7 @@ export const stories: Story[] = [
     tags: "cybermen, b-u-s, future",
     series: "Series 7b (2013)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 257,
@@ -3370,6 +3597,7 @@ export const stories: Story[] = [
     tags: "sontarans",
     series: "Series 7b (2013)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 258,
@@ -3382,6 +3610,7 @@ export const stories: Story[] = [
     tags: "regeneration, gallifrey, UNIT, daleks",
     series: "50th Anniversary Special (2013)",
     length: "1 x 75 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 259,
@@ -3394,6 +3623,7 @@ export const stories: Story[] = [
     tags: "regeneration, daleks, cybermen, b-u-s, sontarans, angels",
     series: "Christmas Special (2013)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 260,
@@ -3406,6 +3636,7 @@ export const stories: Story[] = [
     tags: "post-regen, pseudo-historical, sontarans",
     series: "Series 8 (2014)",
     length: "1 x 75 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 261,
@@ -3418,6 +3649,7 @@ export const stories: Story[] = [
     tags: "daleks, future",
     series: "Series 8 (2014)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 262,
@@ -3430,6 +3662,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, comedy",
     series: "Series 8 (2014)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 263,
@@ -3442,6 +3675,7 @@ export const stories: Story[] = [
     tags: "future, horror",
     series: "Series 8 (2014)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 264,
@@ -3454,6 +3688,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 8 (2014)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 265,
@@ -3466,6 +3701,7 @@ export const stories: Story[] = [
     tags: "coal hill",
     series: "Series 8 (2014)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 266,
@@ -3478,6 +3714,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 8 (2014)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 267,
@@ -3490,6 +3727,7 @@ export const stories: Story[] = [
     tags: "horror",
     series: "Series 8 (2014)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 268,
@@ -3502,6 +3740,7 @@ export const stories: Story[] = [
     tags: "horror",
     series: "Series 8 (2014)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 269,
@@ -3514,6 +3753,7 @@ export const stories: Story[] = [
     tags: "fantasy",
     series: "Series 8 (2014)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 270,
@@ -3526,6 +3766,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 8 (2014)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 271,
@@ -3538,6 +3779,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 8 (2014)",
     length: "1 x 57 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 272,
@@ -3550,6 +3792,7 @@ export const stories: Story[] = [
     tags: "b-u-s, horror",
     series: "Christmas Special (2014)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 273,
@@ -3562,6 +3805,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 9 (2015)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 274,
@@ -3574,6 +3818,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 9 (2015)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 275,
@@ -3586,6 +3831,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 9 (2015)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 276,
@@ -3598,6 +3844,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 9 (2015)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 277,
@@ -3610,6 +3857,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 9 (2015)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 278,
@@ -3622,6 +3870,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 9 (2015)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 279,
@@ -3634,6 +3883,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 9 (2015)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 280,
@@ -3646,6 +3896,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 9 (2015)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 281,
@@ -3658,6 +3909,7 @@ export const stories: Story[] = [
     tags: "future, horror",
     series: "Series 9 (2015)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 282,
@@ -3670,6 +3922,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 9 (2015)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 283,
@@ -3682,6 +3935,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 9 (2015)",
     length: "1 x 54 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 284,
@@ -3694,6 +3948,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 9 (2015)",
     length: "1 x 61 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 285,
@@ -3706,6 +3961,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Christmas Special (2015)",
     length: "1 x 55 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 286,
@@ -3718,6 +3974,7 @@ export const stories: Story[] = [
     tags: "earth invasion, new companion, UNIT",
     series: "Christmas Special (2016)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 287,
@@ -3730,6 +3987,7 @@ export const stories: Story[] = [
     tags: "new companion, daleks",
     series: "Series 10 (2017)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 288,
@@ -3742,6 +4000,7 @@ export const stories: Story[] = [
     tags: "future, colony",
     series: "Series 10 (2017)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 289,
@@ -3754,6 +4013,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 10 (2017)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 290,
@@ -3766,6 +4026,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 10 (2017)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 291,
@@ -3778,6 +4039,7 @@ export const stories: Story[] = [
     tags: "future, horror",
     series: "Series 10 (2017)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 292,
@@ -3790,6 +4052,7 @@ export const stories: Story[] = [
     tags: "earth invasion, master, alternate timeline",
     series: "Series 10 (2017)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 293,
@@ -3802,6 +4065,7 @@ export const stories: Story[] = [
     tags: "earth invasion",
     series: "Series 10 (2017)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 294,
@@ -3814,6 +4078,7 @@ export const stories: Story[] = [
     tags: "earth invasion, master, alternate timeline",
     series: "Series 10 (2017)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 295,
@@ -3826,6 +4091,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, green monster",
     series: "Series 10 (2017)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 296,
@@ -3838,6 +4104,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 10 (2017)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 297,
@@ -3850,6 +4117,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 10 (2017)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 298,
@@ -3862,6 +4130,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 10 (2017)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 299,
@@ -3874,6 +4143,7 @@ export const stories: Story[] = [
     tags: "companion departure, regeneration, daleks, pseudo-historical",
     series: "Christmas Special (2017)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 300,
@@ -3886,6 +4156,7 @@ export const stories: Story[] = [
     tags: "new companion, post-regen",
     series: "Series 11 (2018)",
     length: "1 x 64 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 302,
@@ -3898,6 +4169,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 11 (2018)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 303,
@@ -3910,6 +4182,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 11 (2018)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 304,
@@ -3922,6 +4195,7 @@ export const stories: Story[] = [
     tags: "horror",
     series: "Series 11 (2018)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 305,
@@ -3934,6 +4208,7 @@ export const stories: Story[] = [
     tags: "b-u-s, future",
     series: "Series 11 (2018)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 306,
@@ -3946,6 +4221,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 11 (2018)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 307,
@@ -3958,6 +4234,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 11 (2018)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 308,
@@ -3970,6 +4247,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 11 (2018)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 309,
@@ -3982,6 +4260,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 11 (2018)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 310,
@@ -3994,6 +4273,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Series 11 (2018)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 311,
@@ -4006,6 +4286,7 @@ export const stories: Story[] = [
     tags: "daleks",
     series: "New Year Special (2019)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 312,
@@ -4018,6 +4299,7 @@ export const stories: Story[] = [
     tags: "earth invasion, master",
     series: "Series 12 (2020)",
     length: "2 x 60 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 313,
@@ -4030,6 +4312,7 @@ export const stories: Story[] = [
     tags: "future, horror",
     series: "Series 12 (2020)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 314,
@@ -4042,6 +4325,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Series 12 (2020)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 315,
@@ -4054,6 +4338,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Series 12 (2020)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 316,
@@ -4066,6 +4351,7 @@ export const stories: Story[] = [
     tags: "horror",
     series: "Series 12 (2020)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 317,
@@ -4078,6 +4364,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, future",
     series: "Series 12 (2020)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 318,
@@ -4090,6 +4377,7 @@ export const stories: Story[] = [
     tags: "cybermen, pseudo-historical, horror",
     series: "Series 12 (2020)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 319,
@@ -4102,6 +4390,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 12 (2020)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 320,
@@ -4114,6 +4403,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Series 12 (2020)",
     length: "1 x 65 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 321,
@@ -4125,6 +4415,7 @@ export const stories: Story[] = [
     tags: "companion departure, daleks",
     series: "New Year Special (2021)",
     length: "1 x 70 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 322,
@@ -4136,6 +4427,7 @@ export const stories: Story[] = [
     tags: "new companion",
     series: "Series 13/Flux (2021)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 323,
@@ -4147,6 +4439,7 @@ export const stories: Story[] = [
     tags: "earth invasion, pseudo-historical, sontarans",
     series: "Series 13/Flux (2021)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 324,
@@ -4158,6 +4451,7 @@ export const stories: Story[] = [
     tags: "daleks",
     series: "Series 13/Flux (2021)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 325,
@@ -4169,6 +4463,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, horror, angels",
     series: "Series 13/Flux (2021)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 326,
@@ -4180,6 +4475,7 @@ export const stories: Story[] = [
     tags: "UNIT, sontarans",
     series: "Series 13/Flux (2021)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 327,
@@ -4191,6 +4487,7 @@ export const stories: Story[] = [
     tags: "UNIT, daleks, cybermen, sontarans",
     series: "Series 13/Flux (2021)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 328,
@@ -4202,6 +4499,7 @@ export const stories: Story[] = [
     tags: "daleks, b-u-s",
     series: "Specials (2022)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 329,
@@ -4213,6 +4511,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, green monster",
     series: "Specials (2022)",
     length: "1 x 50 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 330,
@@ -4223,6 +4522,7 @@ export const stories: Story[] = [
     ai_type: "GfK (2013 - Present Day)",
     series: "Specials (2022)",
     length: "1 x 90 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 331,
@@ -4234,6 +4534,7 @@ export const stories: Story[] = [
     tags: "post-regen, UNIT",
     series: "60th Anniversary Specials (2023)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/fourteen.svg",
   },
   {
     id: 332,
@@ -4245,6 +4546,7 @@ export const stories: Story[] = [
     tags: "horror",
     series: "60th Anniversary Specials (2023)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/fourteen.svg",
   },
   {
     id: 333,
@@ -4256,6 +4558,7 @@ export const stories: Story[] = [
     tags: "companion departure, regeneration, UNIT",
     series: "60th Anniversary Specials (2023)",
     length: "1 x 60 minute episode",
+    image: "/images/randomiser/fourteen.svg",
   },
   {
     id: 334,
@@ -4267,6 +4570,7 @@ export const stories: Story[] = [
     tags: "new companion, green monster, fantasy",
     series: "Christmas Special (2023)",
     length: "1 x 55 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 335,
@@ -4278,6 +4582,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Season 1 (2024)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 336,
@@ -4289,6 +4594,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Season 1 (2024)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 337,
@@ -4300,6 +4606,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Season 1 (2024)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 338,
@@ -4311,6 +4618,7 @@ export const stories: Story[] = [
     tags: "alternate timeline, horror",
     series: "Season 1 (2024)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 339,
@@ -4322,6 +4630,7 @@ export const stories: Story[] = [
     tags: "colony",
     series: "Season 1 (2024)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 340,
@@ -4333,6 +4642,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Season 1 (2024)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 341,
@@ -4344,6 +4654,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Season 1 (2024)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 342,
@@ -4355,6 +4666,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Season 1 (2024)",
     length: "1 x 55 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 343,
@@ -4366,6 +4678,7 @@ export const stories: Story[] = [
     tags: "one-off companion",
     series: "Christmas Special (2024)",
     length: "1 x 55 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 344,
@@ -4375,6 +4688,7 @@ export const stories: Story[] = [
     tags: "new companion, ",
     series: "Season 2 (2025)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 345,
@@ -4384,6 +4698,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical",
     series: "Season 2 (2025)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 346,
@@ -4393,6 +4708,7 @@ export const stories: Story[] = [
     tags: "future, horror",
     series: "Season 2 (2025)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 347,
@@ -4402,6 +4718,7 @@ export const stories: Story[] = [
     tags: "UNIT",
     series: "Season 2 (2025)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 348,
@@ -4411,6 +4728,7 @@ export const stories: Story[] = [
     tags: "",
     series: "Season 2 (2025)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 349,
@@ -4420,6 +4738,7 @@ export const stories: Story[] = [
     tags: "future",
     series: "Season 2 (2025)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 350,
@@ -4429,6 +4748,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Season 2 (2025)",
     length: "1 x 45 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 351,
@@ -4438,6 +4758,7 @@ export const stories: Story[] = [
     multipart: true,
     series: "Season 2 (2025)",
     length: "1 x 65 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 352,
@@ -4446,6 +4767,7 @@ export const stories: Story[] = [
     tags: "UNIT, green monster",
     series: "Series 1 (2005)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 353,
@@ -4454,6 +4776,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, horror, new companion",
     series: "Series 1 (2005)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 354,
@@ -4462,6 +4785,7 @@ export const stories: Story[] = [
     tags: "regeneration, daleks, b-u-s, future",
     series: "Series 1 (2005)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/ninth.svg",
   },
   {
     id: 355,
@@ -4470,6 +4794,7 @@ export const stories: Story[] = [
     tags: "cybermen, alternate timeline, companion departure, horror",
     series: "Series 2 (2006)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 356,
@@ -4478,6 +4803,7 @@ export const stories: Story[] = [
     tags: "future, horror",
     series: "Series 2 (2006)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 357,
@@ -4486,6 +4812,7 @@ export const stories: Story[] = [
     tags: "companion departure, daleks, cybermen",
     series: "Series 2 (2006)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 358,
@@ -4494,6 +4821,7 @@ export const stories: Story[] = [
     tags: "daleks, pseudo-historical",
     series: "Series 3 (2007)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 359,
@@ -4502,6 +4830,7 @@ export const stories: Story[] = [
     tags: "b-u-s, pseudo-historical",
     series: "Series 3 (2007)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 360,
@@ -4510,6 +4839,7 @@ export const stories: Story[] = [
     tags: "master, companion departure, alternate timeline",
     series: "Series 3 (2007)",
     length: "2 x 45 minute episode, 1 x 50 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 361,
@@ -4518,6 +4848,7 @@ export const stories: Story[] = [
     tags: "UNIT, sontarans",
     series: "Series 4 (2008)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 362,
@@ -4526,6 +4857,7 @@ export const stories: Story[] = [
     tags: "alternate timeline, river song, future",
     series: "Series 4 (2008)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 363,
@@ -4534,6 +4866,7 @@ export const stories: Story[] = [
     tags: "companion departure, UNIT, daleks",
     series: "Series 4 (2008)",
     length: "1 x 45 minute episode, 1 x 63 minute episode",
+    image: "/images/randomiser/tenth.svg",
   },
   {
     id: 364,
@@ -4542,6 +4875,7 @@ export const stories: Story[] = [
     tags: "future, angels",
     series: "Series 5 (2010)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 365,
@@ -4550,6 +4884,7 @@ export const stories: Story[] = [
     tags: "green monster, future",
     series: "Series 5 (2010)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 366,
@@ -4558,6 +4893,7 @@ export const stories: Story[] = [
     tags: "cybermen, sontarans, pseudo-historical, daleks, alternate timeline",
     series: "Series 5 (2010)",
     length: "1 x 45 minute episode, 1 x 55 minute episode",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 367,
@@ -4566,6 +4902,7 @@ export const stories: Story[] = [
     tags: "pseudo-historical, horror, silence",
     series: "Series 6a (2011)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 368,
@@ -4574,6 +4911,7 @@ export const stories: Story[] = [
     tags: "b-u-s, future, horror",
     series: "Series 6a (2011)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/eleventh.svg",
   },
   {
     id: 369,
@@ -4582,6 +4920,7 @@ export const stories: Story[] = [
     tags: "UNIT, cybermen, master, horror",
     series: "Series 8 (2014)",
     length: "1 x 45 minute episode, 1 x 50 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 370,
@@ -4590,6 +4929,7 @@ export const stories: Story[] = [
     tags: "UNIT, daleks, master, skaro",
     series: "Series 9 (2015)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 371,
@@ -4598,6 +4938,7 @@ export const stories: Story[] = [
     tags: "b-u-s, future, horror, pseudo-historical, aliens",
     series: "Series 9 (2015)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 372,
@@ -4606,6 +4947,7 @@ export const stories: Story[] = [
     tags: "UNIT, aliens",
     series: "Series 9 (2015)",
     length: "2 x 45 minute episodes",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 373,
@@ -4614,6 +4956,7 @@ export const stories: Story[] = [
     tags: "gallifrey, time lords, companion departure",
     series: "Series 9 (2015)",
     length: "2 x 60 minute episodes",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 374,
@@ -4622,6 +4965,7 @@ export const stories: Story[] = [
     tags: "companion departure, cybermen, master, b-u-s, horror",
     series: "Series 10 (2016)",
     length: "1 x 45 minute episode, 1 x 60 minute episode",
+    image: "/images/randomiser/twelve.svg",
   },
   {
     id: 375,
@@ -4630,6 +4974,7 @@ export const stories: Story[] = [
     tags: "earth invasion, cybermen, future, gallifrey, time lords, master",
     series: "Series 12 (2020)",
     length: "1 x 50 minute episode, 1 x 65 minute episode",
+    image: "/images/randomiser/thirteen.svg",
   },
   {
     id: 376,
@@ -4638,6 +4983,7 @@ export const stories: Story[] = [
     tags: "companion departure, UNIT",
     series: "Season 1 (2024)",
     length: "1 x 45 minute episode, 1 x 55 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 377,
@@ -4646,6 +4992,7 @@ export const stories: Story[] = [
     tags: "companion departure, regeneration, UNIT, alternate timeline",
     series: "Season 2 (2025)",
     length: "1 x 45 minute episode, 1 x 65 minute episode",
+    image: "/images/randomiser/fifteen.svg",
   },
   {
     id: 378,
@@ -4653,9 +5000,10 @@ export const stories: Story[] = [
     prodCode: "7A",
     doctor: "Sixth",
     era: "1963 - 1996",
-    tags: "time lords, future",
+    tags: "time lords, future, earth",
     series: "Season 23 (1986)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 379,
@@ -4666,6 +5014,7 @@ export const stories: Story[] = [
     tags: " time lords, future, aliens",
     series: "Season 23 (1986)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 380,
@@ -4676,6 +5025,7 @@ export const stories: Story[] = [
     tags: "time lords, future, monsters",
     series: "Season 23 (1986)",
     length: "4 x 25 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 381,
@@ -4686,6 +5036,7 @@ export const stories: Story[] = [
     tags: "gallifrey, time lords, master",
     series: "Season 23 (1986)",
     length: "2 x 25 minute episodes",
+    image: "/images/randomiser/sixth.svg",
   },
   {
     id: 382,
@@ -4696,5 +5047,6 @@ export const stories: Story[] = [
     tags: "time lords, missing, animated",
     series: "Infinite Recursion Error.",
     length: "6 x 25 minute episodes, probably",
+    image: "/images/randomiser/fourth.svg",
   },
 ];
