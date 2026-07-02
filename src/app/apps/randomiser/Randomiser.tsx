@@ -80,36 +80,40 @@ function Randomiser() {
               <span className={styles.dot} />
               <span className={styles.dot} />
             </div>
+            <span className={styles.panel} />
             <div className={styles.consoleLayout}>
-              <div className={styles.consoleScreen}>
-                {story?.image && (
-                  <Image
-                    src={story?.image}
-                    alt={`${story.doctor} Doctor image`}
-                    width={40}
-                    height={60}
-                  />
-                )}
+              <div className={styles.lPanel}>
+                <div className={styles.consoleScreen}>
+                  {story?.image && (
+                    <Image
+                      src={story?.image}
+                      alt={`${story.doctor} Doctor image`}
+                      width={40}
+                      height={60}
+                    />
+                  )}
+                </div>
               </div>
-              <div className={styles.speaker} />
-            </div>
-
-            <div className={styles.randomiserToggle}>
-              <label className={styles.toggle}>
-                <input
-                  type="checkbox"
-                  checked={active}
-                  disabled={active}
-                  onChange={() => {
-                    setActive((prev) => !prev);
-                    playLanding();
-                    setTimeout(() => {
-                      setActive(false);
-                    }, 1000);
-                  }}
-                />
-                <span className={styles.slider}></span>
-              </label>
+              <div className={styles.randomiserToggle}>
+                <label className={styles.toggle}>
+                  <input
+                    type="checkbox"
+                    checked={active}
+                    disabled={active}
+                    onChange={() => {
+                      setActive((prev) => !prev);
+                      playLanding();
+                      setTimeout(() => {
+                        setActive(false);
+                      }, 1000);
+                    }}
+                  />
+                  <span className={styles.slider}></span>
+                </label>
+              </div>
+              <div className={styles.rPanel}>
+                <div className={styles.speaker} />
+              </div>
             </div>
           </div>
           <div className={styles.consoleRight} />
