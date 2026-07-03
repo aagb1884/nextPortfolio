@@ -85,7 +85,12 @@ function Randomiser() {
               <span className={styles.dot} />
               <span className={styles.dot} />
             </div>
-            <span className={styles.panel} />
+            <div className={styles.panel}>
+              <span className={styles.dot} />
+              <span className={styles.dot} />
+              <span className={styles.dot} />
+              <span className={styles.dot} />
+            </div>
             <div className={styles.consoleLayout}>
               <div className={styles.lPanel}>
                 <div className={styles.consoleScreen}>

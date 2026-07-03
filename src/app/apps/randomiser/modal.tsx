@@ -18,18 +18,18 @@ const StartModal: React.FC<modalProps> = ({ setStartModal, playHum }) => {
         <h1 className={styles.modalTitle}>THE RANDOMISER</h1>
         <h2 className={styles.sModalTxt}>How to Use</h2>
         <p className={styles.sModalTxt}>
-          If you aren't sure what Doctor Who story to watch...
+          If you aren&apos;t sure what Doctor Who story to watch...
         </p>
         <p className={styles.sModalTxt}>
-          There's a red lever on the TARDIS console.
+          There&apos;s a red lever on the TARDIS console.
         </p>
         <p className={styles.sModalTxt}>
-          If you pull it, you'll get a random Doctor Who story.
+          If you pull it, you&apos;ll get a random Doctor Who story.
         </p>
 
         <p className={styles.sModalTxt}>You can watch it if you want.</p>
         <p className={styles.sModalTxt}>
-          If you're in the UK, most Doctor Who stories are on BBC I Player.
+          If you&apos;re in the UK, most Doctor Who stories are on BBC I-Player.
         </p>
         <br />
         <p className={styles.sModalTxt}>
@@ -37,7 +37,7 @@ const StartModal: React.FC<modalProps> = ({ setStartModal, playHum }) => {
         </p>
         <p className={styles.sModalStr}>↓↓</p>
         <KoFiLink />
-        <button className={styles.barlowBtn} onClick={begin}>
+        <button className={styles.startBtn} onClick={begin}>
           Let's Get Random
         </button>
       </div>
