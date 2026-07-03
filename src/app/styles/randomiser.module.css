@@ -347,9 +347,6 @@ input:checked + .slider:before {
 
 .startModal {
   position: fixed;
-  /* left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%); */
   width: 90%;
   max-width: 400px;
   max-height: 90vh;
@@ -367,10 +364,15 @@ input:checked + .slider:before {
 }
 
 .sModalTxt,
+.sModalLi,
 .sModalStr,
 .score {
   color: white;
   font-family: var(--font-della-respira);
+}
+
+.sModalLi {
+  text-align: justify;
 }
 
 .sModalStr {
