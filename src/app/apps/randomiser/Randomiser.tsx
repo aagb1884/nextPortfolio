@@ -2,12 +2,14 @@
 import Image from "next/image";
 import styles from "../../styles/randomiser.module.css";
 import AppsFooter from "../components/AppsFooter";
+import StartModal from "./modal";
 import tardisBackground from "../../../../public/images/randomiser/tardis_background.png";
 import { useEffect, useState } from "react";
 import { Story, stories } from "../light/data/stories";
 
 function Randomiser() {
   const [active, setActive] = useState<boolean>(false);
+  const [startModal, setStartModal] = useState<boolean>(true);
   const [story, setStory] = useState<Story>();
   const [landingAudio] = useState(
     typeof window !== "undefined"
@@ -67,6 +69,9 @@ function Randomiser() {
         src={tardisBackground}
         alt="TARDIS Background"
       />
+      {startModal && (
+        <StartModal setStartModal={setStartModal} playHum={playHum} />
+      )}
       <div className={styles.controls}>
         <div className={`${styles.rotor} ${active ? styles.active : ""}`}>
           <span className={styles.glowRtr} />
