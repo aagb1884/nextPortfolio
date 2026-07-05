@@ -11,6 +11,15 @@ function Randomiser() {
   const [active, setActive] = useState<boolean>(false);
   const [startModal, setStartModal] = useState<boolean>(true);
   const [story, setStory] = useState<Story>();
+  const [lightArray, setLightArray] = useState<string[]>([
+    "yellow",
+    "red",
+    "blue",
+    "green",
+  ]);
+
+  // audio
+
   const [landingAudio] = useState(
     typeof window !== "undefined"
       ? new Audio("/audio/randomiser/arrive.wav")
@@ -19,7 +28,7 @@ function Randomiser() {
 
   function playLanding() {
     if (landingAudio) {
-      landingAudio.volume = 0.2;
+      landingAudio.volume = 0.5;
       landingAudio.play();
     }
   }
@@ -33,11 +42,22 @@ function Randomiser() {
   function playHum() {
     if (humAudio) {
       humAudio.volume = 0.1;
-      humAudio.loop;
+      humAudio.loop = true;
       humAudio.play();
     }
   }
 
+  // lights
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setLightArray((prev) => [...prev.slice(1), prev[0]]);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // stories
   const filteredStories = [...stories].filter(
     (story) => story.multipart !== true
   );
@@ -86,10 +106,38 @@ function Randomiser() {
               <span className={styles.dot} />
             </div>
             <div className={styles.panel}>
-              <span className={styles.dot} />
-              <span className={styles.dot} />
-              <span className={styles.dot} />
-              <span className={styles.dot} />
+              <span
+                className={styles.dot}
+                style={{
+                  backgroundColor: lightArray[0],
+                  opacity: 0.4,
+                  boxShadow: `0px 0px 105px 15px ${lightArray[0]}`,
+                }}
+              />
+              <span
+                className={styles.dot}
+                style={{
+                  backgroundColor: lightArray[1],
+                  opacity: 0.4,
+                  boxShadow: `0px 0px 105px 15px ${lightArray[1]}`,
+                }}
+              />
+              <span
+                className={styles.dot}
+                style={{
+                  backgroundColor: lightArray[2],
+                  opacity: 0.4,
+                  boxShadow: `0px 0px 105px 15px ${lightArray[2]}`,
+                }}
+              />
+              <span
+                className={styles.dot}
+                style={{
+                  backgroundColor: lightArray[3],
+                  opacity: 0.4,
+                  boxShadow: `0px 0px 105px 15px ${lightArray[3]}`,
+                }}
+              />
             </div>
             <div className={styles.consoleLayout}>
               <div className={styles.lPanel}>

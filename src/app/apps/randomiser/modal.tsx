@@ -42,7 +42,7 @@ const StartModal: React.FC<modalProps> = ({ setStartModal, playHum }) => {
             <Link href="https://www.amcplus.com/" target="_blank">
               AMC
             </Link>
-            , and 2023 - 2025 stories are on
+            , and 2023 - 2025 stories are on{" "}
             <Link href="https://www.disneyplus.com/" target="_blank">
               Disney +
             </Link>
