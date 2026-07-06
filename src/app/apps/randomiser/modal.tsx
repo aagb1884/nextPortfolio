@@ -14,7 +14,7 @@ const StartModal: React.FC<modalProps> = ({ setStartModal, playHum }) => {
   };
 
   return (
-    <div className={styles.startModalWrapper}>
+    <div className={styles.startModalWrapper} onClick={begin}>
       <div className={styles.startModal}>
         <h1 className={styles.modalTitle}>THE RANDOMISER</h1>
         <h2 className={styles.sModalTxt}>
@@ -64,11 +64,6 @@ const StartModal: React.FC<modalProps> = ({ setStartModal, playHum }) => {
           </li>
         </ul>
         <br />
-        <p className={styles.sModalTxt}>
-          Please consider donating to help me cover my costs.
-        </p>
-        <p className={styles.sModalStr}>↓↓</p>
-        <KoFiLink />
         <button className={styles.startBtn} onClick={begin}>
           Let&apos;s Get Random
         </button>

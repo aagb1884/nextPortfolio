@@ -6,10 +6,17 @@ import StartModal from "./modal";
 import tardisBackground from "../../../../public/images/randomiser/tardis_background.png";
 import { useEffect, useState } from "react";
 import { Story, stories } from "../light/data/stories";
+import FilterModal from "./filterModal";
 
 function Randomiser() {
   const [active, setActive] = useState<boolean>(false);
   const [startModal, setStartModal] = useState<boolean>(true);
+  const [filterModal, setFilterModal] = useState<boolean>(false);
+  const [storyList, setStoryList] = useState<Story[]>(stories);
+  const [filterDoctors, setFilterDoctors] = useState<string[]>([]);
+  const [filterEras, setFilterEras] = useState<string[]>([]);
+  const [filterTerm, setFilterTerm] = useState<string>("");
+
   const [story, setStory] = useState<Story>();
   const [lightArray, setLightArray] = useState<string[]>([
     "yellow",
@@ -17,6 +24,55 @@ function Randomiser() {
     "blue",
     "green",
   ]);
+
+  // filtering
+
+  function getRandomStory() {
+    const randomStory = [...storyList]
+      .map((value) => ({ value, sort: Math.random() }))
+      .sort((a, b) => a.sort - b.sort)
+      .map(({ value }) => value)
+      .slice(0, 1);
+    setStory(randomStory[0]);
+  }
+
+  let filteredStories = [...stories].filter(
+    (story) => story.multipart !== true
+  );
+
+  if (
+    filterTerm.length > 0 ||
+    filterDoctors.length !== 0 ||
+    filterEras.length !== 0
+  ) {
+    filteredStories = filteredStories.filter((story) => {
+      const eraMatch =
+        filterEras.length === 0 || filterEras.includes(story.era);
+
+      const drMatch =
+        filterDoctors.length === 0 ||
+        story.doctor.some((doctor) => filterDoctors.includes(doctor));
+
+      const filterMatch =
+        filterTerm.length === 0 ||
+        (story.tags !== undefined &&
+          story.tags.toLowerCase().includes(filterTerm.toLowerCase()));
+
+      return eraMatch && drMatch && filterMatch;
+    });
+  }
+  useEffect(() => {
+    setStoryList(filteredStories);
+  }, [filteredStories]);
+
+  useEffect(() => {
+    if (active) {
+      getRandomStory();
+    }
+  }, [active]);
+
+  const missing = story?.tags?.includes("missing");
+  const animated = story?.tags?.includes("animated");
 
   // audio
 
@@ -57,30 +113,6 @@ function Randomiser() {
     return () => clearInterval(interval);
   }, []);
 
-  // stories
-  const filteredStories = [...stories].filter(
-    (story) => story.multipart !== true
-  );
-
-  function getRandomStory() {
-    const randomStory = [...filteredStories]
-      .map((value) => ({ value, sort: Math.random() }))
-      .sort((a, b) => a.sort - b.sort)
-      .map(({ value }) => value)
-      .slice(0, 1);
-    setStory(randomStory[0]);
-  }
-
-  useEffect(() => {
-    if (active) {
-      getRandomStory();
-    }
-  }, [active]);
-
-  console.log("story", story);
-  const missing = story?.tags?.includes("missing");
-  const animated = story?.tags?.includes("animated");
-
   return (
     <div className={styles.randomiser}>
       <AppsFooter />
@@ -89,8 +121,20 @@ function Randomiser() {
         src={tardisBackground}
         alt="TARDIS Background"
       />
+      {/* modals */}
       {startModal && (
         <StartModal setStartModal={setStartModal} playHum={playHum} />
+      )}
+      {filterModal && (
+        <FilterModal
+          setFilterModal={setFilterModal}
+          filterTerm={filterTerm}
+          setFilterTerm={setFilterTerm}
+          filterDoctors={filterDoctors}
+          setFilterDoctors={setFilterDoctors}
+          filterEras={filterEras}
+          setFilterEras={setFilterEras}
+        />
       )}
       <div className={styles.controls}>
         <div className={`${styles.rotor} ${active ? styles.active : ""}`}>
@@ -105,36 +149,40 @@ function Randomiser() {
               <span className={styles.dot} />
               <span className={styles.dot} />
             </div>
+            <button
+              className={styles.filterBtn}
+              onClick={() => {
+                setFilterModal((prev) => !prev);
+              }}
+            >
+              FILTERS
+            </button>
             <div className={styles.panel}>
               <span
-                className={styles.dot}
+                className={styles.dot2}
                 style={{
-                  backgroundColor: lightArray[0],
-                  opacity: 0.4,
+                  backgroundColor: `radial-gradient(circle at 1px 20px, #fff, ${lightArray[0]})`,
                   boxShadow: `0px 0px 105px 15px ${lightArray[0]}`,
                 }}
               />
               <span
-                className={styles.dot}
+                className={styles.dot2}
                 style={{
-                  backgroundColor: lightArray[1],
-                  opacity: 0.4,
+                  backgroundColor: `radial-gradient(circle at 1px 20px, #fff, ${lightArray[1]})`,
                   boxShadow: `0px 0px 105px 15px ${lightArray[1]}`,
                 }}
               />
               <span
-                className={styles.dot}
+                className={styles.dot2}
                 style={{
-                  backgroundColor: lightArray[2],
-                  opacity: 0.4,
+                  backgroundColor: `radial-gradient(circle at 1px 20px, #fff, ${lightArray[2]})`,
                   boxShadow: `0px 0px 105px 15px ${lightArray[2]}`,
                 }}
               />
               <span
-                className={styles.dot}
+                className={styles.dot2}
                 style={{
-                  backgroundColor: lightArray[3],
-                  opacity: 0.4,
+                  backgroundColor: `radial-gradient(circle at 1px 20px, #fff, ${lightArray[3]})`,
                   boxShadow: `0px 0px 105px 15px ${lightArray[3]}`,
                 }}
               />
@@ -183,7 +231,7 @@ function Randomiser() {
           <div>
             <p className={styles.storyTitle}>{story?.name}</p>
             <ul className={styles.storyInfo}>
-              <li>{`A ${story?.doctor} Doctor story.`}</li>
+              <li>{`A ${story?.doctor[0]} Doctor story.`}</li>
               <li>{story?.series}</li>
               <li>{story?.length}</li>
               {missing && !animated && (
