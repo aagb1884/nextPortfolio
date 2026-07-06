@@ -4,7 +4,7 @@ import styles from "../../styles/randomiser.module.css";
 import AppsFooter from "../components/AppsFooter";
 import StartModal from "./modal";
 import tardisBackground from "../../../../public/images/randomiser/tardis_background.png";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useMemo } from "react";
 import { Story, stories } from "../light/data/stories";
 import FilterModal from "./filterModal";
 
@@ -36,31 +36,53 @@ function Randomiser() {
     setStory(randomStory[0]);
   }
 
-  let filteredStories = [...stories].filter(
-    (story) => story.multipart !== true
-  );
+  const filteredStories = useMemo(() => {
+    let result = [...stories].filter((story) => story.multipart !== true);
+    if (
+      filterTerm.length > 0 ||
+      filterDoctors.length !== 0 ||
+      filterEras.length !== 0
+    ) {
+      result = result.filter((story) => {
+        const eraMatch =
+          filterEras.length === 0 || filterEras.includes(story.era);
+        const drMatch =
+          filterDoctors.length === 0 || filterDoctors.includes(story.doctor);
+        const filterMatch =
+          filterTerm.length === 0 ||
+          (story.tags !== undefined &&
+            story.tags.toLowerCase().includes(filterTerm.toLowerCase()));
+        return eraMatch && drMatch && filterMatch;
+      });
+    }
+    return result;
+  }, [stories, filterTerm, filterDoctors, filterEras]);
 
-  if (
-    filterTerm.length > 0 ||
-    filterDoctors.length !== 0 ||
-    filterEras.length !== 0
-  ) {
-    filteredStories = filteredStories.filter((story) => {
-      const eraMatch =
-        filterEras.length === 0 || filterEras.includes(story.era);
+  // let filteredStories = [...stories].filter(
+  //   (story) => story.multipart !== true
+  // );
 
-      const drMatch =
-        filterDoctors.length === 0 ||
-        story.doctor.some((doctor) => filterDoctors.includes(doctor));
+  // if (
+  //   filterTerm.length > 0 ||
+  //   filterDoctors.length !== 0 ||
+  //   filterEras.length !== 0
+  // ) {
+  //   filteredStories = filteredStories.filter((story) => {
+  //     const eraMatch =
+  //       filterEras.length === 0 || filterEras.includes(story.era);
 
-      const filterMatch =
-        filterTerm.length === 0 ||
-        (story.tags !== undefined &&
-          story.tags.toLowerCase().includes(filterTerm.toLowerCase()));
+  //     const drMatch =
+  //       filterDoctors.length === 0 ||
+  //       story.doctor.some((doctor) => filterDoctors.includes(doctor));
 
-      return eraMatch && drMatch && filterMatch;
-    });
-  }
+  //     const filterMatch =
+  //       filterTerm.length === 0 ||
+  //       (story.tags !== undefined &&
+  //         story.tags.toLowerCase().includes(filterTerm.toLowerCase()));
+
+  //     return eraMatch && drMatch && filterMatch;
+  //   });
+  // }
   useEffect(() => {
     setStoryList(filteredStories);
   }, [filteredStories]);
