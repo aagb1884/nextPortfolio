@@ -4,7 +4,6 @@ interface modalProps {
 }
 
 import styles from "@/app/styles/randomiser.module.css";
-import KoFiLink from "@/app/ui/KoFi";
 import Link from "next/link";
 
 const StartModal: React.FC<modalProps> = ({ setStartModal, playHum }) => {
