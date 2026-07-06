@@ -119,7 +119,6 @@ const AiList: React.FC<FilterProps> = ({ activeWhoTab }) => {
       const scoresOnly = story.ai !== undefined;
       const doctorMatch =
         story.doctor.some((doctor) => doctor === filter) || filter === "All";
-      // story.doctor.some((doctor) => filterDoctors.includes(doctor));
       const eraMatch = story.era === filterEra || filterEra === "All";
       const aiMatch =
         story.ai_type === filterAIProvider || filterAIProvider === "All";

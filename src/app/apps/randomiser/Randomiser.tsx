@@ -35,7 +35,6 @@ function Randomiser() {
       .slice(0, 1);
     setStory(randomStory[0]);
   }
-
   const filteredStories = useMemo(() => {
     let result = [...stories].filter((story) => story.multipart !== true);
     if (
@@ -47,7 +46,8 @@ function Randomiser() {
         const eraMatch =
           filterEras.length === 0 || filterEras.includes(story.era);
         const drMatch =
-          filterDoctors.length === 0 || filterDoctors.includes(story.doctor);
+          filterDoctors.length === 0 ||
+          story.doctor.some((doctor) => filterDoctors.includes(doctor));
         const filterMatch =
           filterTerm.length === 0 ||
           (story.tags !== undefined &&
@@ -58,31 +58,6 @@ function Randomiser() {
     return result;
   }, [stories, filterTerm, filterDoctors, filterEras]);
 
-  // let filteredStories = [...stories].filter(
-  //   (story) => story.multipart !== true
-  // );
-
-  // if (
-  //   filterTerm.length > 0 ||
-  //   filterDoctors.length !== 0 ||
-  //   filterEras.length !== 0
-  // ) {
-  //   filteredStories = filteredStories.filter((story) => {
-  //     const eraMatch =
-  //       filterEras.length === 0 || filterEras.includes(story.era);
-
-  //     const drMatch =
-  //       filterDoctors.length === 0 ||
-  //       story.doctor.some((doctor) => filterDoctors.includes(doctor));
-
-  //     const filterMatch =
-  //       filterTerm.length === 0 ||
-  //       (story.tags !== undefined &&
-  //         story.tags.toLowerCase().includes(filterTerm.toLowerCase()));
-
-  //     return eraMatch && drMatch && filterMatch;
-  //   });
-  // }
   useEffect(() => {
     setStoryList(filteredStories);
   }, [filteredStories]);
@@ -137,7 +112,9 @@ function Randomiser() {
 
   return (
     <div className={styles.randomiser}>
-      <AppsFooter />
+      <div style={{ zIndex: 50 }}>
+        <AppsFooter />
+      </div>
       <Image
         className={styles.bg}
         src={tardisBackground}

@@ -2761,6 +2761,7 @@ export const stories: Story[] = [
     series: "Series 3 (2007)",
     length: "1 x 45 minute episode",
     image: "/images/randomiser/tenth.svg",
+    multipart: true,
   },
   {
     id: 196,

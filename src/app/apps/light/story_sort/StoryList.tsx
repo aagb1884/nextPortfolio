@@ -104,11 +104,12 @@ const StoryList: React.FC<FilterProps> = ({ activeWhoTab }) => {
 
   if (filter !== "All" || filterEra !== "All") {
     filteredStories = stories.filter((story) => {
+      const noMultipart = story.multipart !== true;
       const doctorMatch =
         story.doctor.some((doctor) => doctor === filter) || filter === "All";
       const eraMatch = story.era === filterEra || filterEra === "All";
 
-      return doctorMatch && eraMatch;
+      return doctorMatch && eraMatch && noMultipart;
     });
   }
 
