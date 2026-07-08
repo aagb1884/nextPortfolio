@@ -305,6 +305,54 @@ const CreditsPage = () => {
             Digital-7 from Digital Fonts. <ExternalLinkImage />{" "}
           </Link>
         </li>
+        <li>
+          <Link
+            target="_blank"
+            href="https://www.fonts4free.net/torchwood-font.html"
+          >
+            Torchwood Font by Sostopher.
+            <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            href="https://www.freefontdownload.org/en/opti-formula-one.font"
+          >
+            OPTI Formula One from freefontdownload.org.
+            <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            href="https://www.whatfontis.com/FF_OPTIEnraged-BoldAD.font"
+          >
+            OPTI Enraged Bold from WhatFontIs.com.
+            <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link target="_blank" href="https://freefonts.co/fonts/futura-bold">
+            Futura Bold from freefonts.co.
+            <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link
+            target="_blank"
+            href="https://freefontsvault.com/eurostile-font/"
+          >
+            Eurostile from freefrontsvault.com.
+            <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link target="_blank" href="https://fonts2u.com/postantiqua.font">
+            Post Antiqua from fonts2u.com.
+            <ExternalLinkImage />{" "}
+          </Link>
+        </li>
       </ul>
       <ul className={styles.cssUl}>
         <h4>Music</h4>

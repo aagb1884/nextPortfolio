@@ -30,6 +30,7 @@
 .appButtonsComponent {
   display: grid;
   grid-template-columns: auto auto auto;
+  justify-items: center;
 }
 
 .designCredit {
@@ -69,7 +70,8 @@
 .rngApp,
 .sfngApp,
 .drWhoQuiz,
-.barlow {
+.barlow,
+.whoTitleGenerator {
   position: relative;
   text-align: center;
 }
@@ -330,6 +332,7 @@
   .buttonImage {
     display: block;
     min-height: 100px;
+    max-height: 138px;
     max-width: 180px;
   }
 
