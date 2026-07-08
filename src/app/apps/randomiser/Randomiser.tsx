@@ -81,7 +81,7 @@ function Randomiser() {
 
   function playLanding() {
     if (landingAudio) {
-      landingAudio.volume = 0.5;
+      landingAudio.volume = 0.2;
       landingAudio.play();
     }
   }
