@@ -164,3 +164,8 @@ export const torchwood = localFont({
   variable: "--font-torchwood",
   weight: "lighter 100 normal bold bolder",
 });
+export const teletext = localFont({
+  src: "./fonts/EuropeanTeletext.ttf",
+  variable: "--font-teletext",
+  weight: "lighter 100 400 900",
+});

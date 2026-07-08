@@ -23,6 +23,7 @@ import {
   univers,
   sfmovie,
   heroic,
+  teletext,
   postant,
   bebas,
   optiEnragedBold,
@@ -81,7 +82,7 @@ export default function RootLayout({
       ${axiformaReg.variable} ${eurostile.variable} ${ContaxPro75Bold.variable}
       ${futuraBold.variable} ${futuraXtaBold.variable} ${futuraBook.variable}
       ${displayMedium.variable} ${optiFormulaOne.variable} ${univers.variable}
-      ${sfmovie.variable} ${heroic.variable} ${postant.variable} ${bebas.variable}
+      ${teletext.variable} ${sfmovie.variable} ${heroic.variable} ${postant.variable} ${bebas.variable}
       ${optiEnragedBold.variable} ${torchwood.variable}
       `}
         >
