@@ -10,6 +10,8 @@ type PreviewProps = {
 export function Preview(props: PreviewProps) {
   const { state, ref } = props;
 
+  const showCredit = state.writer !== undefined && state.writer?.length !== 0;
+
   return (
     <>
       <div className={styles.titlePreview}>
@@ -18,6 +20,7 @@ export function Preview(props: PreviewProps) {
             className={styles.titleImage}
             src={state.background}
             alt={state.alt}
+            rel="preload"
           ></img>
           <p
             className={styles.titleText}
@@ -29,17 +32,41 @@ export function Preview(props: PreviewProps) {
               width: state.width ?? "80%",
               letterSpacing: state.letterSpacing ?? 0,
               top: state.top ?? "50%",
-              fontWeight: state.fontWeight ?? "auto",
-              backgroundImage: state.textBackground ?? "",
-              backgroundClip: state.textBackground ? "text" : "none",
-              filter: state.brightness ?? "none",
+              left: state.left ?? "50%",
+              fontWeight: state.fontWeight ?? "normal",
+              // filter: state.brightness ?? "none",
               textTransform: state.textAllCaps ?? "none",
               WebkitTextStrokeWidth: state.outline ?? "",
               WebkitTextStrokeColor: state.outlineColour ?? "",
+              whiteSpace: "pre-wrap",
+              fontStyle: state.style ?? "",
             }}
           >
             {state.text}
           </p>
+          {state.writerCredit && (
+            <>
+              <p
+                className={styles.titleText}
+                style={{
+                  color: state.color,
+                  fontFamily: state.font,
+                  top: state.writerTop,
+                  left: state.left,
+                  fontSize: state.writerFont,
+                  fontWeight: state.fontWeight,
+                  textShadow: state.textShadow,
+                  letterSpacing: state.letterSpacing,
+                  textTransform: state.textAllCaps ?? "none",
+                }}
+              >
+                {state.writer !== undefined && showCredit
+                  ? state.writtenBy
+                  : ""}{" "}
+                {state.writer}
+              </p>
+            </>
+          )}
         </article>
       </div>
     </>
