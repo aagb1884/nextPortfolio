@@ -92,6 +92,7 @@ const FilterModal: React.FC<modalProps> = ({
             type="text"
             id="freetype"
             name="freetype"
+            className={styles.filterInput}
             value={filterTerm}
             onChange={(e) => {
               setFilterTerm(e.target.value);

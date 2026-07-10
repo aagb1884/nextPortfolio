@@ -430,6 +430,13 @@ input:checked + .slider:before {
   line-height: 1px;
 }
 
+.filterInput,
+.multiSelect,
+.eraSelect {
+  background-color: black;
+  color: white;
+}
+
 .eraSelect {
   height: auto;
   min-height: 30px;
