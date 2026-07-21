@@ -25,13 +25,18 @@ const FilterModal: React.FC<modalProps> = ({
     setFilterEras([]);
   }
   return (
-    <div className={styles.startModalWrapper}>
+    <div
+      className={styles.startModalWrapper}
+      onClick={() => {
+        setFilterModal(false);
+      }}
+    >
       <div className={styles.filterModal}>
-        <h1 className={styles.modalTitle}>SET FILTERS</h1>
-        <p className={styles.sModalTxt}>
+        <h1 className={styles.fModalTitle}>SET FILTERS</h1>
+        <p className={styles.fModalTxt}>
           Filter the story list to limit possible results.
         </p>
-        <p className={styles.sModalTxt}>
+        <p className={styles.fModalTxt}>
           NB. Some filters may result in spoilers.
         </p>
         <div className={styles.doctorSelect}>

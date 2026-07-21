@@ -149,6 +149,42 @@ const CreditsPage = () => {
           </Link>
         </li>
         <li>
+          <Link target="_blank" href="https://icons8.com/icon/2902/voice">
+            Voice <ExternalLinkImage />{" "}
+          </Link>{" "}
+          icon by{" "}
+          <Link target="_blank" href="https://icons8.com">
+            Icons8 <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link target="_blank" href="https://icons8.com/icon/644/mute">
+            Mute <ExternalLinkImage />{" "}
+          </Link>{" "}
+          icon by{" "}
+          <Link target="_blank" href="https://icons8.com">
+            Icons8 <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link target="_blank" href="https://icons8.com/icon/403/pause">
+            Pause <ExternalLinkImage />{" "}
+          </Link>{" "}
+          icon by{" "}
+          <Link target="_blank" href="https://icons8.com">
+            Icons8 <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link target="_blank" href="https://icons8.com/icon/398/play">
+            Play <ExternalLinkImage />{" "}
+          </Link>{" "}
+          icon by{" "}
+          <Link target="_blank" href="https://icons8.com">
+            Icons8 <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
           <Link
             href="https://www.flaticon.com/free-icons/external-link"
             title="external link icons"
