@@ -13,6 +13,7 @@ export interface Story {
   series: string;
   length: string;
   image?: string;
+  extra?: string;
 }
 
 export const stories: Story[] = [
@@ -4477,6 +4478,7 @@ export const stories: Story[] = [
     series: "Series 13/Flux (2021)",
     length: "1 x 50 minute episode",
     image: "/images/randomiser/thirteen.svg",
+    extra: "Episode 1 of a six-part storyline.",
   },
   {
     id: 323,
@@ -4489,6 +4491,7 @@ export const stories: Story[] = [
     series: "Series 13/Flux (2021)",
     length: "1 x 60 minute episode",
     image: "/images/randomiser/thirteen.svg",
+    extra: "Episode 2 of a six-part storyline.",
   },
   {
     id: 324,
@@ -4501,6 +4504,7 @@ export const stories: Story[] = [
     series: "Series 13/Flux (2021)",
     length: "1 x 50 minute episode",
     image: "/images/randomiser/thirteen.svg",
+    extra: "Episode 3 of a six-part storyline.",
   },
   {
     id: 325,
@@ -4513,6 +4517,7 @@ export const stories: Story[] = [
     series: "Series 13/Flux (2021)",
     length: "1 x 50 minute episode",
     image: "/images/randomiser/thirteen.svg",
+    extra: "Episode 4 of a six-part storyline.",
   },
   {
     id: 326,
@@ -4525,6 +4530,7 @@ export const stories: Story[] = [
     series: "Series 13/Flux (2021)",
     length: "1 x 50 minute episode",
     image: "/images/randomiser/thirteen.svg",
+    extra: "Episode 5 of a six-part storyline.",
   },
   {
     id: 327,
@@ -4537,6 +4543,7 @@ export const stories: Story[] = [
     series: "Series 13/Flux (2021)",
     length: "1 x 60 minute episode",
     image: "/images/randomiser/thirteen.svg",
+    extra: "Episode 6 of a six-part storyline.",
   },
   {
     id: 328,
@@ -5084,6 +5091,7 @@ export const stories: Story[] = [
     series: "Season 23 (1986)",
     length: "4 x 25 minute episodes",
     image: "/images/randomiser/sixth.svg",
+    extra: "Episodes 1 - 4 of a fourteen-part story.",
   },
   {
     id: 379,
@@ -5095,6 +5103,7 @@ export const stories: Story[] = [
     series: "Season 23 (1986)",
     length: "4 x 25 minute episodes",
     image: "/images/randomiser/sixth.svg",
+    extra: "Episodes 5 - 8 of a fourteen-part story.",
   },
   {
     id: 380,
@@ -5106,6 +5115,7 @@ export const stories: Story[] = [
     series: "Season 23 (1986)",
     length: "4 x 25 minute episodes",
     image: "/images/randomiser/sixth.svg",
+    extra: "Episodes 9 - 12 of a fourteen-part story.",
   },
   {
     id: 381,
@@ -5117,6 +5127,7 @@ export const stories: Story[] = [
     series: "Season 23 (1986)",
     length: "2 x 25 minute episodes",
     image: "/images/randomiser/sixth.svg",
+    extra: "Episodes 13 - 14 of a fourteen-part story.",
   },
   {
     id: 382,
@@ -5128,5 +5139,6 @@ export const stories: Story[] = [
     series: "Infinite Recursion Error.",
     length: "6 x 25 minute episodes, probably",
     image: "/images/randomiser/fourth.svg",
+    extra: "Original version unfinished. Animations and adaptations available.",
   },
 ];
