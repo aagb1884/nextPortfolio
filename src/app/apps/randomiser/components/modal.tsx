@@ -24,6 +24,10 @@ const StartModal: React.FC<modalProps> = ({ setStartModal, playHum }) => {
           you&apos;ll get a random Doctor Who story.
         </p>
         <p className={styles.sModalTxt}>You can then watch it if you want.</p>
+        <p className={styles.sModalTxt}>
+          If you want to limit your search results, there are filter options.
+        </p>
+        <br />
         <ul>
           <li className={styles.sModalLi}>
             UK: most Doctor Who stories are on{" "}
