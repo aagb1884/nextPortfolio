@@ -28,8 +28,27 @@ const Console: React.FC<consoleProps> = ({
   return (
     <div className={styles.controls}>
       <div className={`${styles.rotor} ${active ? styles.active : ""}`}>
-        <span className={styles.glowRtr} />
-        <span className={styles.glowRtr} />
+        <div className={styles.innerCase}>
+          <div className={styles.innerLid}>
+            <div className={styles.semiRow}>
+              <span className={styles.semi} />
+              <span className={styles.semi} />
+              <span className={styles.semi} />
+            </div>
+            <div className={styles.rtrTop} />
+          </div>
+          <div className={styles.rtrRow}>
+            <span className={styles.glowRtr}>
+              <div className={styles.rtrLight} />
+            </span>
+            <span className={styles.glowRtr}>
+              <div className={styles.rtrLight} />
+            </span>
+            <span className={styles.glowRtr}>
+              <div className={styles.rtrLight} />
+            </span>
+          </div>
+        </div>
       </div>
       <div className={styles.consoleUnit}>
         <div className={styles.consoleLeft} />
