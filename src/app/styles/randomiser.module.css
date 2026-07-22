@@ -10,10 +10,9 @@
 }
 
 .bg {
-  object-fit: cover;
   background-repeat: no-repeat;
   height: 95vh;
-  width: 120%;
+  width: 550%;
 }
 
 /* story */
@@ -21,7 +20,7 @@
 .scanner {
   position: absolute;
   top: 10%;
-  height: 40%;
+  height: 45%;
   width: 95%;
   background-color: rgb(121, 75, 28);
   z-index: 2;
@@ -529,6 +528,10 @@ input:checked + .slider:before {
 
   .consoleRight {
     transform: skew(22deg);
+  }
+
+  .bg {
+    width: 100%;
   }
 }
 
