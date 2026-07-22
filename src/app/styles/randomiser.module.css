@@ -10,10 +10,9 @@
 }
 
 .bg {
-  object-fit: cover;
   background-repeat: no-repeat;
   height: 95vh;
-  width: 100%;
+  width: 550%;
 }
 
 /* story */
@@ -21,9 +20,9 @@
 .scanner {
   position: absolute;
   top: 10%;
-  height: 40%;
+  height: 45%;
   width: 95%;
-  background-color: black;
+  background-color: rgb(121, 75, 28);
   z-index: 2;
   font-family: var(--font-teletext);
   color: white;
@@ -35,6 +34,9 @@
 .storyTitle {
   font-weight: bold;
   font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: underline overline;
+  text-align: center;
 }
 
 .storyInfo {
@@ -444,7 +446,8 @@ input:checked + .slider:before {
   width: 90%;
   max-width: 400px;
   border-radius: 3px;
-  margin: 20px auto;
+  margin-top: 20px;
+  margin-bottom: 40px;
   padding: 20px;
   text-align: center;
   line-height: 2;
@@ -526,6 +529,10 @@ input:checked + .slider:before {
 
   .consoleRight {
     transform: skew(22deg);
+  }
+
+  .bg {
+    width: 100%;
   }
 }
 
