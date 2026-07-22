@@ -13,7 +13,7 @@
   object-fit: cover;
   background-repeat: no-repeat;
   height: 95vh;
-  width: 100%;
+  width: 120%;
 }
 
 /* story */
@@ -23,7 +23,7 @@
   top: 10%;
   height: 40%;
   width: 95%;
-  background-color: black;
+  background-color: rgb(121, 75, 28);
   z-index: 2;
   font-family: var(--font-teletext);
   color: white;
@@ -35,6 +35,9 @@
 .storyTitle {
   font-weight: bold;
   font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: underline overline;
+  text-align: center;
 }
 
 .storyInfo {
