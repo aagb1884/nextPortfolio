@@ -194,16 +194,10 @@
   border-left: 4px groove black;
 }
 
-.consoleRight {
-  transform: skew(14deg);
-  right: 30px;
-  border-right: 4px groove black;
-}
-
 .nodule {
   height: 25px;
   width: 35px;
-  margin: 10px -10px 0px;
+  margin: 10px -5px 0px;
   border-radius: 5rem 5rem 2rem 2rem;
   background: radial-gradient(circle at 1px 20px, #fff, rgb(97, 149, 228));
   transform: rotate(270deg) skew(358deg);
@@ -212,6 +206,83 @@
 .nodBtn {
   width: 40px;
   height: 90px;
+}
+
+.consoleRight {
+  transform: skew(14deg);
+  right: 30px;
+  border-right: 4px groove black;
+}
+
+.telepath {
+  margin: 20px 0 5px;
+  height: 75px;
+  width: 40px;
+  border: 2px black;
+  border-style: ridge ridge ridge none;
+  aspect-ratio: 1 / 1;
+  background-color: #ff5500;
+  background-image:
+    radial-gradient(
+      #802b00,
+      #993300 22%,
+      #b33b00 calc(22%),
+      #b33b00 calc(22% + 1px),
+      transparent calc(22% + 3px)
+    ),
+    radial-gradient(
+      #993300,
+      #b33b00 24%,
+      #cc4400 calc(24%),
+      #cc4400 calc(24% + 1px),
+      transparent calc(24% + 3px)
+    ),
+    radial-gradient(
+      #b33b00,
+      #cc4400 26%,
+      #e64d00 calc(26%),
+      #e64d00 calc(26% + 1px),
+      transparent calc(26% + 3px)
+    ),
+    radial-gradient(
+      #cc4400,
+      #e64d00 28%,
+      #ff5500 calc(28%),
+      #ff5500 calc(28% + 1px),
+      transparent calc(28% + 3px)
+    );
+  background-position:
+    48% 32.5%,
+    46.5% 33%,
+    45% 33.5%,
+    43.5% 34%;
+  background-size: 2000% 2000%;
+  border-radius: min(10vh, 64px);
+  box-shadow:
+    0 0 32px #66220055,
+    0 0 64px #802b0055;
+  box-sizing: border-box;
+}
+
+.grid {
+  margin: 20px 20px 0 5px;
+  height: 71px;
+  width: 30px;
+  background-image:
+    linear-gradient(black 1px, transparent 1px),
+    linear-gradient(90deg, black 1px, transparent 1px),
+    linear-gradient(black 0.5px, transparent 0.5px),
+    linear-gradient(90deg, black 0.5px, #bfbebe 0.5px);
+  background-size:
+    60px 60px,
+    60px 60px,
+    10px 10px,
+    10px 10px;
+  background-position:
+    -1px -1px,
+    -1px -1px,
+    -0.5px -0.5px,
+    -0.5px -0.5px;
 }
 
 .rectangle {
