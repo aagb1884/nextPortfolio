@@ -184,6 +184,7 @@
 .consoleLeft,
 .consoleRight {
   width: 12%;
+  height: 203px;
   border-bottom: 203px solid #ede8e8;
 }
 
@@ -197,6 +198,29 @@
   transform: skew(14deg);
   right: 30px;
   border-right: 4px groove black;
+}
+
+.nodule {
+  height: 25px;
+  width: 35px;
+  margin: 10px -10px 0px;
+  border-radius: 5rem 5rem 2rem 2rem;
+  background: radial-gradient(circle at 1px 20px, #fff, rgb(97, 149, 228));
+  transform: rotate(270deg) skew(358deg);
+}
+
+.nodBtn {
+  width: 40px;
+  height: 90px;
+}
+
+.rectangle {
+  margin: 20px 20px 0 5px;
+  height: 75px;
+  width: 25px;
+  background: radial-gradient(circle at 1px 20px, #817d7d, rgb(30, 29, 29));
+  border: 2px darkgrey;
+  border-style: dashed none dashed dashed;
 }
 
 .consoleLayout {

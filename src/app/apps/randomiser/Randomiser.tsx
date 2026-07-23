@@ -1,14 +1,14 @@
 "use client";
-import Image from "next/image";
+// import Image from "next/image";
 import styles from "../../styles/randomiser.module.css";
 import AppsFooter from "../components/AppsFooter";
 import StartModal from "./components/modal";
 import FilterModal from "./components/filterModal";
 import Scanner from "./components/Scanner";
-import tardisBackground from "../../../../public/images/randomiser/tardis_background.png";
+// import tardisBackground from "../../../../public/images/randomiser/tardis_background.png";
 import { useEffect, useState, useMemo } from "react";
 import { Story, stories } from "../light/data/stories";
-import Console from "./components/Console";
+import Console from "./components/console/Console";
 
 function Randomiser() {
   const [active, setActive] = useState<boolean>(false);
@@ -18,6 +18,7 @@ function Randomiser() {
   const [filterDoctors, setFilterDoctors] = useState<string[]>([]);
   const [filterEras, setFilterEras] = useState<string[]>([]);
   const [filterTerm, setFilterTerm] = useState<string>("");
+  const [helmic, setHelmic] = useState<boolean>(false);
 
   const [story, setStory] = useState<Story>();
   const [lightArray, setLightArray] = useState<string[]>([
@@ -157,8 +158,14 @@ function Randomiser() {
         playLanding={playLanding}
         mute={mute}
         setMute={setMute}
+        setHelmic={setHelmic}
       />
-      <Scanner story={story} missing={missing} animated={animated} />
+      <Scanner
+        story={story}
+        missing={missing}
+        animated={animated}
+        helmic={helmic}
+      />
     </div>
   );
 }

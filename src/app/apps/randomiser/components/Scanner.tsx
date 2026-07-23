@@ -5,12 +5,23 @@ interface scannerProps {
   story: Story | undefined;
   missing: boolean | undefined;
   animated: boolean | undefined;
+  helmic: boolean;
 }
 
-const Scanner: React.FC<scannerProps> = ({ story, missing, animated }) => {
+const Scanner: React.FC<scannerProps> = ({
+  story,
+  missing,
+  animated,
+  helmic,
+}) => {
   return (
     <div className={styles.scanner}>
-      {story ? (
+      {helmic && (
+        <p className={styles.storyTitle}>
+          STOP DOING THAT TO THE HELMIC REGULATOR
+        </p>
+      )}
+      {story && !helmic && (
         <div>
           <p className={styles.storyTitle}>{story?.name}</p>
           <ul className={styles.storyInfo}>
@@ -27,9 +38,8 @@ const Scanner: React.FC<scannerProps> = ({ story, missing, animated }) => {
             {story.extra && <li>{story.extra}</li>}
           </ul>
         </div>
-      ) : (
-        <p>Awaiting instructions...</p>
       )}
+      {!story && !helmic && <p>Awaiting instructions...</p>}
     </div>
   );
 };
