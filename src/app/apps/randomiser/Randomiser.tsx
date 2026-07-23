@@ -128,11 +128,11 @@ function Randomiser() {
       <div style={{ zIndex: 50 }}>
         <AppsFooter />
       </div>
-      <Image
+      {/* <Image
         className={styles.bg}
         src={tardisBackground}
         alt="TARDIS Background"
-      />
+      /> */}
       {/* modals */}
       {startModal && (
         <StartModal setStartModal={setStartModal} playHum={playHum} />

@@ -14,7 +14,7 @@ const StartModal: React.FC<modalProps> = ({ setStartModal, playHum }) => {
 
   return (
     <div className={styles.startModalWrapper} onClick={begin}>
-      <div className={styles.startModal}>
+      <div className={styles.startModal} onClick={(e) => e.stopPropagation()}>
         <h1 className={styles.modalTitle}>THE RANDOMISER</h1>
         <h2 className={styles.sModalTxt}>
           If you aren&apos;t sure what Doctor Who story to watch...
