@@ -2,17 +2,17 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  min-height: 700px;
-  height: auto;
+  justify-content: space-between;
   width: 100%;
+  min-height: 100vh;
   background-color: #b1b7b0;
+  overflow-y: auto;
 }
 
 .bg {
-  background-repeat: no-repeat;
-  height: 95vh;
-  width: 550%;
+  display: none;
+  width: 0px;
+  height: 0px;
 }
 
 /* story */
@@ -171,7 +171,7 @@
 }
 
 .console {
-  width: 75%;
+  width: 60%;
   height: 200px;
   transform: perspective(10px) rotateX(1deg);
   display: flex;
@@ -184,19 +184,138 @@
 .consoleLeft,
 .consoleRight {
   width: 12%;
+  height: 203px;
   border-bottom: 203px solid #ede8e8;
 }
 
 .consoleLeft {
-  transform: skew(344deg);
-  left: 1px;
+  transform: skew(347deg);
+  left: 30px;
   border-left: 4px groove black;
 }
 
+.nodule {
+  height: 25px;
+  width: 35px;
+  margin: 10px -5px 0px;
+  border-radius: 5rem 5rem 2rem 2rem;
+  background: radial-gradient(circle at 1px 20px, #fff, rgb(97, 149, 228));
+  transform: rotate(270deg) skew(358deg);
+}
+
+.nodBtn {
+  width: 40px;
+  height: 90px;
+}
+
 .consoleRight {
-  transform: skew(16deg);
-  right: 1px;
+  transform: skew(14deg);
+  right: 30px;
   border-right: 4px groove black;
+}
+
+.telepath {
+  margin: 20px 0 5px;
+  height: 75px;
+  width: 40px;
+  border: 2px black;
+  border-style: ridge ridge ridge none;
+  aspect-ratio: 1 / 1;
+  background-color: #ff5500;
+  background-image:
+    radial-gradient(
+      #802b00,
+      #993300 22%,
+      #b33b00 calc(22%),
+      #b33b00 calc(22% + 1px),
+      transparent calc(22% + 3px)
+    ),
+    radial-gradient(
+      #993300,
+      #b33b00 24%,
+      #cc4400 calc(24%),
+      #cc4400 calc(24% + 1px),
+      transparent calc(24% + 3px)
+    ),
+    radial-gradient(
+      #b33b00,
+      #cc4400 26%,
+      #e64d00 calc(26%),
+      #e64d00 calc(26% + 1px),
+      transparent calc(26% + 3px)
+    ),
+    radial-gradient(
+      #cc4400,
+      #e64d00 28%,
+      #ff5500 calc(28%),
+      #ff5500 calc(28% + 1px),
+      transparent calc(28% + 3px)
+    );
+  background-position:
+    48% 32.5%,
+    46.5% 33%,
+    45% 33.5%,
+    43.5% 34%;
+  background-size: 2000% 2000%;
+  border-radius: min(10vh, 64px);
+  box-shadow:
+    0 0 32px #66220055,
+    0 0 64px #802b0055;
+  box-sizing: border-box;
+  -webkit-mask-image: linear-gradient(
+    45deg,
+    #000 25%,
+    rgba(0, 0, 0, 0.2) 50%,
+    #000 75%
+  );
+  mask-image: linear-gradient(
+    45deg,
+    #000 25%,
+    rgba(0, 0, 0, 0.2) 50%,
+    #000 75%
+  );
+  -webkit-mask-size: 800%;
+  mask-size: 800%;
+  -webkit-mask-position: 0;
+  mask-position: 0;
+}
+
+.telepath:hover {
+  transition:
+    mask-position 2s ease,
+    -webkit-mask-position 2s ease;
+  -webkit-mask-position: 120%;
+  mask-position: 120%;
+  opacity: 1;
+}
+
+.grid {
+  margin: 20px 20px 0 5px;
+  height: 71px;
+  width: 30px;
+  border: 2px black ridge;
+  background-image:
+    linear-gradient(rgb(25, 2, 2) 1px, transparent 1px),
+    linear-gradient(90deg, black 1px, transparent 1px),
+    linear-gradient(black 0.5px, transparent 0.5px),
+    linear-gradient(90deg, black 0.5px, #d8c9c9 0.5px);
+  background-size:
+    60px 60px,
+    10px 10px;
+  background-position:
+    -1px -1px,
+    -1px -1px,
+    -0.5px -0.5px,
+    -0.5px -0.5px;
+}
+
+.rectangle {
+  margin: 20px 20px 0 5px;
+  height: 75px;
+  width: 25px;
+  background: radial-gradient(circle at 1px 20px, #817d7d, rgb(30, 29, 29));
+  border: 2px darkgrey;
+  border-style: dashed none dashed dashed;
 }
 
 .consoleLayout {
@@ -420,7 +539,7 @@ input:checked + .slider:before {
 
 .modalTitle {
   font-family: var(--font-della-respira);
-  font-size: 4vb;
+  font-size: 5vb;
   color: rgb(255, 255, 255);
   text-shadow:
     0 0.15ch 7px rgba(255, 0, 0, 0.7),
@@ -443,12 +562,14 @@ input:checked + .slider:before {
 .startModal,
 .filterModal {
   position: fixed;
-  width: 90%;
-  max-width: 400px;
+  width: auto;
+  min-width: 250px;
+  min-height: 600px;
+  height: auto;
   border-radius: 3px;
   margin-top: 20px;
   margin-bottom: 40px;
-  padding: 20px;
+  padding: 10px;
   text-align: center;
   line-height: 2;
   z-index: 21;
@@ -467,7 +588,6 @@ input:checked + .slider:before {
   background-color: #dbdbdb;
   color: black;
   font-family: var(--font-della-respira);
-  height: 60vh;
 }
 
 .sModalTxt,
@@ -503,7 +623,12 @@ input:checked + .slider:before {
 .multiSelect,
 .eraSelect {
   padding: 5px;
-  line-height: 1px;
+  position: relative;
+  z-index: 21;
+}
+
+.option {
+  padding: 2px 0px;
 }
 
 .filterInput,
@@ -513,26 +638,63 @@ input:checked + .slider:before {
   color: white;
 }
 
+.filterInput {
+  padding: 5px;
+}
+
 .eraSelect {
   height: auto;
-  min-height: 30px;
+  min-height: 50px;
 }
 
 .multiSelect {
-  height: 250px;
+  height: 350px;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 420px) {
   .consoleLeft {
-    transform: skew(334deg);
+    transform: skew(347deg);
+    left: 30px;
   }
 
   .consoleRight {
-    transform: skew(22deg);
+    transform: skew(13deg);
+    right: 33px;
   }
 
-  .bg {
+  /* .bg {
     width: 100%;
+    background-repeat: no-repeat;
+    height: 95vh;
+    display: block;
+  } */
+
+  .telepath {
+    margin: 4px 3px;
+  }
+}
+
+@media only screen and (min-width: 460px) {
+  .consoleLeft {
+    transform: skew(345deg);
+    left: 40px;
+  }
+
+  .consoleRight {
+    transform: skew(15deg);
+    right: 40px;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .consoleLeft {
+    transform: skew(341deg);
+    left: 50px;
+  }
+
+  .consoleRight {
+    transform: skew(20deg);
+    right: 50px;
   }
 }
 
@@ -553,6 +715,10 @@ input:checked + .slider:before {
   .consoleLeft {
     transform: skew(337deg);
     left: -17%;
+  }
+  .consoleRight {
+    transform: skew(25deg);
+    right: 5px;
   }
   .rotor {
     position: relative;

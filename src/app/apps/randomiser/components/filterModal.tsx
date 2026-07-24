@@ -31,7 +31,7 @@ const FilterModal: React.FC<modalProps> = ({
         setFilterModal(false);
       }}
     >
-      <div className={styles.filterModal}>
+      <div className={styles.filterModal} onClick={(e) => e.stopPropagation()}>
         <h1 className={styles.fModalTitle}>SET FILTERS</h1>
         <p className={styles.fModalTxt}>
           Filter the story list to limit possible results.
@@ -55,21 +55,51 @@ const FilterModal: React.FC<modalProps> = ({
               setFilterDoctors(values);
             }}
           >
-            <option value="First">First</option>
-            <option value="Second">Second</option>
-            <option value="Third">Third</option>
-            <option value="Fourth">Fourth</option>
-            <option value="Fifth">Fifth</option>
-            <option value="Sixth">Sixth</option>
-            <option value="Seventh">Seventh</option>
-            <option value="Eighth">Eighth</option>
-            <option value="Ninth">Ninth</option>
-            <option value="Tenth">Tenth</option>
-            <option value="Eleventh">Eleventh</option>
-            <option value="Twelfth">Twelfth</option>
-            <option value="Thirteenth">Thirteenth</option>
-            <option value="Fourteenth">Fourteenth</option>
-            <option value="Fifteenth">Fifteenth</option>
+            <option className={styles.option} value="First">
+              First
+            </option>
+            <option className={styles.option} value="Second">
+              Second
+            </option>
+            <option className={styles.option} value="Third">
+              Third
+            </option>
+            <option className={styles.option} value="Fourth">
+              Fourth
+            </option>
+            <option className={styles.option} value="Fifth">
+              Fifth
+            </option>
+            <option className={styles.option} value="Sixth">
+              Sixth
+            </option>
+            <option className={styles.option} value="Seventh">
+              Seventh
+            </option>
+            <option className={styles.option} value="Eighth">
+              Eighth
+            </option>
+            <option className={styles.option} value="Ninth">
+              Ninth
+            </option>
+            <option className={styles.option} value="Tenth">
+              Tenth
+            </option>
+            <option className={styles.option} value="Eleventh">
+              Eleventh
+            </option>
+            <option className={styles.option} value="Twelfth">
+              Twelfth
+            </option>
+            <option className={styles.option} value="Thirteenth">
+              Thirteenth
+            </option>
+            <option className={styles.option} value="Fourteenth">
+              Fourteenth
+            </option>
+            <option className={styles.option} value="Fifteenth">
+              Fifteenth
+            </option>
           </select>
           <br />
           <label htmlFor="eras">Select Era(s):</label>
@@ -87,8 +117,12 @@ const FilterModal: React.FC<modalProps> = ({
               setFilterEras(values);
             }}
           >
-            <option value="1963 - 1996">1963 - 1996</option>
-            <option value="2005 - Present Day">2005 - Present Day</option>
+            <option className={styles.option} value="1963 - 1996">
+              1963 - 1996
+            </option>
+            <option className={styles.option} value="2005 - Present Day">
+              2005 - Present Day
+            </option>
           </select>
           <br />
           <label htmlFor="freetype">Filter by Text:</label>
