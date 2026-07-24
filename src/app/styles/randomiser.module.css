@@ -262,6 +262,31 @@
     0 0 32px #66220055,
     0 0 64px #802b0055;
   box-sizing: border-box;
+  -webkit-mask-image: linear-gradient(
+    45deg,
+    #000 25%,
+    rgba(0, 0, 0, 0.2) 50%,
+    #000 75%
+  );
+  mask-image: linear-gradient(
+    45deg,
+    #000 25%,
+    rgba(0, 0, 0, 0.2) 50%,
+    #000 75%
+  );
+  -webkit-mask-size: 800%;
+  mask-size: 800%;
+  -webkit-mask-position: 0;
+  mask-position: 0;
+}
+
+.telepath:hover {
+  transition:
+    mask-position 2s ease,
+    -webkit-mask-position 2s ease;
+  -webkit-mask-position: 120%;
+  mask-position: 120%;
+  opacity: 1;
 }
 
 .grid {
@@ -270,14 +295,12 @@
   width: 30px;
   border: 2px black ridge;
   background-image:
-    linear-gradient(rgb(175, 99, 99) 1px, transparent 1px),
+    linear-gradient(rgb(25, 2, 2) 1px, transparent 1px),
     linear-gradient(90deg, black 1px, transparent 1px),
     linear-gradient(black 0.5px, transparent 0.5px),
     linear-gradient(90deg, black 0.5px, #d8c9c9 0.5px);
   background-size:
     60px 60px,
-    60px 60px,
-    10px 10px,
     10px 10px;
   background-position:
     -1px -1px,
@@ -628,21 +651,50 @@ input:checked + .slider:before {
   height: 350px;
 }
 
-@media only screen and (min-width: 480px) {
+@media only screen and (min-width: 420px) {
   .consoleLeft {
-    transform: skew(334deg);
+    transform: skew(347deg);
+    left: 30px;
   }
 
   .consoleRight {
-    transform: skew(27deg);
-    right: 10px;
+    transform: skew(13deg);
+    right: 33px;
   }
 
-  .bg {
+  /* .bg {
     width: 100%;
     background-repeat: no-repeat;
     height: 95vh;
     display: block;
+  } */
+
+  .telepath {
+    margin: 4px 3px;
+  }
+}
+
+@media only screen and (min-width: 460px) {
+  .consoleLeft {
+    transform: skew(345deg);
+    left: 40px;
+  }
+
+  .consoleRight {
+    transform: skew(15deg);
+    right: 40px;
+  }
+}
+
+@media only screen and (min-width: 540px) {
+  .consoleLeft {
+    transform: skew(341deg);
+    left: 50px;
+  }
+
+  .consoleRight {
+    transform: skew(20deg);
+    right: 50px;
   }
 }
 
@@ -663,6 +715,10 @@ input:checked + .slider:before {
   .consoleLeft {
     transform: skew(337deg);
     left: -17%;
+  }
+  .consoleRight {
+    transform: skew(25deg);
+    right: 5px;
   }
   .rotor {
     position: relative;

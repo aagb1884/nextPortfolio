@@ -9,6 +9,9 @@ const webLinks: string[] = [
   "colin+baker+cake+sitting",
   "danvanista",
   "wilfred+mott+browser+history",
+  "chris+chibnall+christmas+album",
+  "terrance+dicks%27+most+popular+anecdotes",
+  "in+castrovalva+where+does+the+master+get+that+pneumatic+lift+from",
 ];
 
 const Right: React.FC<rightProps> = ({ setTelepath }) => {
