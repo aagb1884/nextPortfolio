@@ -6,6 +6,7 @@ interface scannerProps {
   missing: boolean | undefined;
   animated: boolean | undefined;
   helmic: boolean;
+  telepath: boolean;
 }
 
 const Scanner: React.FC<scannerProps> = ({
@@ -13,6 +14,7 @@ const Scanner: React.FC<scannerProps> = ({
   missing,
   animated,
   helmic,
+  telepath,
 }) => {
   return (
     <div className={styles.scanner}>
@@ -21,7 +23,10 @@ const Scanner: React.FC<scannerProps> = ({
           STOP DOING THAT TO THE HELMIC REGULATOR
         </p>
       )}
-      {story && !helmic && (
+      {telepath && (
+        <p className={styles.storyTitle}>ACTIVATING TELEPATHIC CIRCUITS...</p>
+      )}
+      {story && !helmic && !telepath && (
         <div>
           <p className={styles.storyTitle}>{story?.name}</p>
           <ul className={styles.storyInfo}>
@@ -39,7 +44,7 @@ const Scanner: React.FC<scannerProps> = ({
           </ul>
         </div>
       )}
-      {!story && !helmic && <p>Awaiting instructions...</p>}
+      {!story && !helmic && !telepath && <p>Awaiting instructions...</p>}
     </div>
   );
 };

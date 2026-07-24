@@ -1,9 +1,34 @@
 import styles from "@/app/styles/randomiser.module.css";
 
-const Right = () => {
+interface rightProps {
+  setTelepath: (b: boolean) => void;
+}
+
+const webLinks: string[] = [
+  "john+levene+feet+pics",
+  "colin+baker+cake+sitting",
+  "danvanista",
+  "wilfred+mott+browser+history",
+];
+
+const Right: React.FC<rightProps> = ({ setTelepath }) => {
+  const telepathTime = () => {
+    setTelepath(true);
+    const randomWebLink = webLinks[Math.floor(Math.random() * webLinks.length)];
+    setTimeout(() => {
+      window.open(`https://www.ecosia.org/search?q=${randomWebLink}`)?.focus();
+      setTelepath(false);
+    }, 4000);
+  };
+
   return (
     <div className={styles.consoleRight}>
-      <div className={styles.telepath} />
+      <div
+        className={styles.telepath}
+        onClick={() => {
+          telepathTime();
+        }}
+      />
       <div className={styles.grid} />
     </div>
   );

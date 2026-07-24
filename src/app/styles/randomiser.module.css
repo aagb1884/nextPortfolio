@@ -268,11 +268,12 @@
   margin: 20px 20px 0 5px;
   height: 71px;
   width: 30px;
+  border: 2px black ridge;
   background-image:
-    linear-gradient(black 1px, transparent 1px),
+    linear-gradient(rgb(175, 99, 99) 1px, transparent 1px),
     linear-gradient(90deg, black 1px, transparent 1px),
     linear-gradient(black 0.5px, transparent 0.5px),
-    linear-gradient(90deg, black 0.5px, #bfbebe 0.5px);
+    linear-gradient(90deg, black 0.5px, #d8c9c9 0.5px);
   background-size:
     60px 60px,
     60px 60px,
