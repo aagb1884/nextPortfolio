@@ -552,10 +552,11 @@ input:checked + .slider:before {
   left: 0;
   top: 0;
   width: 100vw;
-  height: 100vh;
+  height: 100%;
   z-index: 20;
   display: flex;
   align-items: center;
+  align-content: center;
   justify-content: center;
 }
 
@@ -616,8 +617,13 @@ input:checked + .slider:before {
   background-color: red;
 }
 
-.doctorSelect {
+.filters {
   column-count: 2;
+}
+
+.itemSelect {
+  display: flex;
+  flex-direction: column;
 }
 
 .multiSelect,
@@ -726,5 +732,12 @@ input:checked + .slider:before {
   }
   .controls {
     width: 500px;
+  }
+
+  .filterModal,
+  .startModal {
+    max-width: 70%;
+    max-height: 40%;
+    margin-top: 50px;
   }
 }
