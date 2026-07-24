@@ -15,14 +15,20 @@ const webLinks: string[] = [
 ];
 
 const Right: React.FC<rightProps> = ({ setTelepath }) => {
-  const telepathTime = () => {
+  function telepathTime() {
     setTelepath(true);
+    const newTab = window.open("", "_blank");
     const randomWebLink = webLinks[Math.floor(Math.random() * webLinks.length)];
     setTimeout(() => {
-      window.open(`https://www.ecosia.org/search?q=${randomWebLink}`)?.focus();
+      if (newTab) {
+        newTab.location.href = `https://www.ecosia.org/search?q=${randomWebLink}`;
+        newTab.focus();
+      } else {
+        console.log("woops");
+      }
       setTelepath(false);
     }, 4000);
-  };
+  }
 
   return (
     <div className={styles.consoleRight}>
