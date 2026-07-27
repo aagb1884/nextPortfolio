@@ -38,7 +38,7 @@ const Scanner: React.FC<scannerProps> = ({
       )}
       {searchLink && searchTerm && (
         <div>
-          <p>"{searchTerm}"</p>
+          <p>&quot;{searchTerm}&quot;</p>
           <p>Do you want to search for this?</p>
           <p
             className={styles.yes}
