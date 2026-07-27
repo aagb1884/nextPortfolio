@@ -1,4 +1,4 @@
-import { isIos, isAndroid } from "@/app/functions/device";
+import { isIos, isAndroid, isIpadOS } from "@/app/functions/device";
 import styles from "@/app/styles/randomiser.module.css";
 
 interface rightProps {
@@ -22,7 +22,7 @@ const Right: React.FC<rightProps> = ({
   setSearchLink,
   setSearchTerm,
 }) => {
-  const mobile = isIos() || isAndroid();
+  const mobile = isIos() || isAndroid() || isIpadOS();
 
   function telepathTime() {
     setTelepath(true);
