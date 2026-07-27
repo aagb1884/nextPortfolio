@@ -12,10 +12,13 @@ interface consoleProps {
   playLanding: () => void;
   mute: boolean;
   setMute: React.Dispatch<React.SetStateAction<boolean>>;
+  helmic: boolean;
   setHelmic: (b: boolean) => void;
   setTelepath: (b: boolean) => void;
   setSearchLink: (b: boolean) => void;
   setSearchTerm: (b: string) => void;
+  helmicTally: number;
+  setHelmicTally: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const Console: React.FC<consoleProps> = ({
@@ -27,10 +30,13 @@ const Console: React.FC<consoleProps> = ({
   playLanding,
   mute,
   setMute,
+  helmic,
   setHelmic,
   setTelepath,
   setSearchLink,
   setSearchTerm,
+  helmicTally,
+  setHelmicTally,
 }) => {
   return (
     <div className={styles.controls}>
@@ -44,10 +50,13 @@ const Console: React.FC<consoleProps> = ({
         playLanding={playLanding}
         mute={mute}
         setMute={setMute}
+        helmic={helmic}
         setHelmic={setHelmic}
         setTelepath={setTelepath}
         setSearchLink={setSearchLink}
         setSearchTerm={setSearchTerm}
+        helmicTally={helmicTally}
+        setHelmicTally={setHelmicTally}
       />
     </div>
   );

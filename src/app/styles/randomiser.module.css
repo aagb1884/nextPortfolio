@@ -294,24 +294,60 @@
   opacity: 1;
 }
 
-.grid {
+.gridSurround {
+  background-color: transparent;
+  border: #ede8e8 solid 2px;
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
   margin: 20px 20px 0 5px;
-  height: 71px;
   width: 30px;
-  border: 2px black ridge;
-  background-image:
-    linear-gradient(rgb(25, 2, 2) 1px, transparent 1px),
-    linear-gradient(90deg, black 1px, transparent 1px),
-    linear-gradient(black 0.5px, transparent 0.5px),
-    linear-gradient(90deg, black 0.5px, #d8c9c9 0.5px);
-  background-size:
-    60px 60px,
-    10px 10px;
-  background-position:
-    -1px -1px,
-    -1px -1px,
-    -0.5px -0.5px,
-    -0.5px -0.5px;
+  height: 30px;
+}
+
+.grid {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background: #333;
+  border: 5px red groove;
+  transition: transform 60s;
+  position: absolute;
+  z-index: 4;
+  mask:
+    radial-gradient(
+        11.55px at calc(100% + 1.1px) 50%,
+        #0000 calc(99% - 1px),
+        #000 calc(101% - 1px) 99%,
+        #0000 101%
+      )
+      calc(50% - 6px + 0.5px) calc(50% - 22px) / 12px 44px,
+    radial-gradient(
+        11.55px at -1.1px 50%,
+        #0000 calc(99% - 1px),
+        #000 calc(101% - 1px) 99%,
+        #0000 101%
+      )
+      calc(50% + 6px) 50%/12px 44px;
+}
+
+.grid.spin {
+  transform: scale(1.5) rotate(7800deg);
+  mask:
+    radial-gradient(
+        11.55px at calc(100% + 1.1px) 50%,
+        #fa494900 calc(99% - 2px),
+        #ef3838 calc(101% - 2px) 99%,
+        #9f585800 101%
+      )
+      calc(50% - 6px + 0.5px) calc(50% - 22px) / 12px 44px,
+    radial-gradient(
+        11.55px at -1.1px 50%,
+        #fa494900 calc(99% - 2px),
+        #ef3838 calc(101% - 2px) 99%,
+        #9f585800 101%
+      )
+      calc(50% + 6px) 50%/12px 44px;
 }
 
 .rectangle {
@@ -706,6 +742,11 @@ input:checked + .slider:before {
   .consoleRight {
     transform: skew(20deg);
     right: 50px;
+  }
+
+  .gridSurround {
+    width: 50px;
+    height: 50px;
   }
 }
 

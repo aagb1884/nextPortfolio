@@ -19,6 +19,7 @@ function Randomiser() {
   const [filterEras, setFilterEras] = useState<string[]>([]);
   const [filterTerm, setFilterTerm] = useState<string>("");
   const [helmic, setHelmic] = useState<boolean>(false);
+  const [helmicTally, setHelmicTally] = useState<number>(-1);
   const [telepath, setTelepath] = useState<boolean>(false);
   const [searchLink, setSearchLink] = useState<boolean>(false);
   const [searchTerm, setSearchTerm] = useState<string | undefined>(undefined);
@@ -161,16 +162,20 @@ function Randomiser() {
         playLanding={playLanding}
         mute={mute}
         setMute={setMute}
+        helmic={helmic}
         setHelmic={setHelmic}
         setTelepath={setTelepath}
         setSearchLink={setSearchLink}
         setSearchTerm={setSearchTerm}
+        helmicTally={helmicTally}
+        setHelmicTally={setHelmicTally}
       />
       <Scanner
         story={story}
         missing={missing}
         animated={animated}
         helmic={helmic}
+        helmicTally={helmicTally}
         telepath={telepath}
         searchLink={searchLink}
         searchTerm={searchTerm}
