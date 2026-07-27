@@ -25,13 +25,8 @@ const FilterModal: React.FC<modalProps> = ({
     setFilterEras([]);
   }
   return (
-    <div
-      className={styles.startModalWrapper}
-      onClick={() => {
-        setFilterModal(false);
-      }}
-    >
-      <div className={styles.filterModal} onClick={(e) => e.stopPropagation()}>
+    <div className={styles.startModalWrapper}>
+      <div className={styles.filterModal}>
         <h1 className={styles.fModalTitle}>SET FILTERS</h1>
         <p className={styles.fModalTxt}>
           Filter the story list to limit possible results.
@@ -140,6 +135,12 @@ const FilterModal: React.FC<modalProps> = ({
               value={filterTerm}
               onChange={(e) => {
                 setFilterTerm(e.target.value);
+              }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  e.preventDefault();
+                  setFilterModal(false);
+                }
               }}
             />
           </div>

@@ -1,28 +1,51 @@
+import { isIos, isAndroid } from "@/app/functions/device";
 import styles from "@/app/styles/randomiser.module.css";
 
 interface rightProps {
   setTelepath: (b: boolean) => void;
+  setSearchLink: (b: boolean) => void;
+  setSearchTerm: (b: string) => void;
 }
 
 const webLinks: string[] = [
-  "john+levene+feet+pics",
-  "colin+baker+cake+sitting",
-  "danvanista",
-  "wilfred+mott+browser+history",
-  "chris+chibnall+christmas+album",
-  "terrance+dicks%27+most+popular+anecdotes",
-  "in+castrovalva+where+does+the+master+get+that+pneumatic+lift+from",
+  "John Levene feet pics",
+  "Colin Baker cake sitting",
+  "Danvanista",
+  "Wilfred Mott browser history",
+  "Chris Chibnall's Christmas album",
+  "Terrance Dicks' most popular anecdotes",
+  "Where does the Master get that pneumatic lift from in Castrovalva",
 ];
 
-const Right: React.FC<rightProps> = ({ setTelepath }) => {
-  const telepathTime = () => {
+const Right: React.FC<rightProps> = ({
+  setTelepath,
+  setSearchLink,
+  setSearchTerm,
+}) => {
+  const mobile = isIos() || isAndroid();
+
+  function telepathTime() {
     setTelepath(true);
     const randomWebLink = webLinks[Math.floor(Math.random() * webLinks.length)];
-    setTimeout(() => {
-      window.open(`https://www.ecosia.org/search?q=${randomWebLink}`)?.focus();
-      setTelepath(false);
-    }, 4000);
-  };
+    if (!mobile) {
+      setTelepath(true);
+      setTimeout(() => {
+        setTelepath(false);
+        window.open(
+          `https://www.ecosia.org/search?q=${randomWebLink}`,
+          "_blank"
+        );
+      }, 4000);
+    } else {
+      setTelepath(true);
+      setTimeout(() => {
+        setTelepath(false);
+        setSearchLink(true);
+      }, 2000);
+      setSearchLink(false);
+      setSearchTerm(randomWebLink);
+    }
+  }
 
   return (
     <div className={styles.consoleRight}>
