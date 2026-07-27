@@ -20,6 +20,8 @@ function Randomiser() {
   const [filterTerm, setFilterTerm] = useState<string>("");
   const [helmic, setHelmic] = useState<boolean>(false);
   const [telepath, setTelepath] = useState<boolean>(false);
+  const [searchLink, setSearchLink] = useState<boolean>(false);
+  const [searchTerm, setSearchTerm] = useState<string | undefined>(undefined);
 
   const [story, setStory] = useState<Story>();
   const [lightArray, setLightArray] = useState<string[]>([
@@ -161,6 +163,8 @@ function Randomiser() {
         setMute={setMute}
         setHelmic={setHelmic}
         setTelepath={setTelepath}
+        setSearchLink={setSearchLink}
+        setSearchTerm={setSearchTerm}
       />
       <Scanner
         story={story}
@@ -168,6 +172,9 @@ function Randomiser() {
         animated={animated}
         helmic={helmic}
         telepath={telepath}
+        searchLink={searchLink}
+        searchTerm={searchTerm}
+        setSearchLink={setSearchLink}
       />
     </div>
   );

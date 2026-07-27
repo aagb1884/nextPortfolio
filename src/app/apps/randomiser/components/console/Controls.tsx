@@ -17,6 +17,8 @@ interface controlsProps {
   setMute: React.Dispatch<React.SetStateAction<boolean>>;
   setHelmic: (b: boolean) => void;
   setTelepath: (b: boolean) => void;
+  setSearchLink: (b: boolean) => void;
+  setSearchTerm: (b: string) => void;
 }
 
 const Controls: React.FC<controlsProps> = ({
@@ -30,6 +32,8 @@ const Controls: React.FC<controlsProps> = ({
   setMute,
   setHelmic,
   setTelepath,
+  setSearchLink,
+  setSearchTerm,
 }) => {
   return (
     <div className={styles.consoleUnit}>
@@ -128,7 +132,11 @@ const Controls: React.FC<controlsProps> = ({
           </div>
         </div>
       </div>
-      <Right setTelepath={setTelepath} />
+      <Right
+        setTelepath={setTelepath}
+        setSearchLink={setSearchLink}
+        setSearchTerm={setSearchTerm}
+      />
     </div>
   );
 };

@@ -14,6 +14,8 @@ interface consoleProps {
   setMute: React.Dispatch<React.SetStateAction<boolean>>;
   setHelmic: (b: boolean) => void;
   setTelepath: (b: boolean) => void;
+  setSearchLink: (b: boolean) => void;
+  setSearchTerm: (b: string) => void;
 }
 
 const Console: React.FC<consoleProps> = ({
@@ -27,6 +29,8 @@ const Console: React.FC<consoleProps> = ({
   setMute,
   setHelmic,
   setTelepath,
+  setSearchLink,
+  setSearchTerm,
 }) => {
   return (
     <div className={styles.controls}>
@@ -42,6 +46,8 @@ const Console: React.FC<consoleProps> = ({
         setMute={setMute}
         setHelmic={setHelmic}
         setTelepath={setTelepath}
+        setSearchLink={setSearchLink}
+        setSearchTerm={setSearchTerm}
       />
     </div>
   );

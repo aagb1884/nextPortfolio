@@ -7,6 +7,9 @@ interface scannerProps {
   animated: boolean | undefined;
   helmic: boolean;
   telepath: boolean;
+  searchLink: boolean;
+  searchTerm: string | undefined;
+  setSearchLink: (b: boolean) => void;
 }
 
 const Scanner: React.FC<scannerProps> = ({
@@ -15,7 +18,14 @@ const Scanner: React.FC<scannerProps> = ({
   animated,
   helmic,
   telepath,
+  searchLink,
+  searchTerm,
+  setSearchLink,
 }) => {
+  const search = () => {
+    window.open(`https://www.ecosia.org/search?q=${searchTerm}`, "_blank");
+    setSearchLink(false);
+  };
   return (
     <div className={styles.scanner}>
       {helmic && (
@@ -26,7 +36,29 @@ const Scanner: React.FC<scannerProps> = ({
       {telepath && (
         <p className={styles.storyTitle}>ACTIVATING TELEPATHIC CIRCUITS...</p>
       )}
-      {story && !helmic && !telepath && (
+      {searchLink && searchTerm && (
+        <div>
+          <p>"{searchTerm}"</p>
+          <p>Do you want to search for this?</p>
+          <p
+            className={styles.yes}
+            onClick={() => {
+              search();
+            }}
+          >
+            Yes
+          </p>
+          <p
+            className={styles.no}
+            onClick={() => {
+              setSearchLink(false);
+            }}
+          >
+            No
+          </p>
+        </div>
+      )}
+      {story && !helmic && !telepath && !searchLink && (
         <div>
           <p className={styles.storyTitle}>{story?.name}</p>
           <ul className={styles.storyInfo}>
@@ -44,7 +76,9 @@ const Scanner: React.FC<scannerProps> = ({
           </ul>
         </div>
       )}
-      {!story && !helmic && !telepath && <p>Awaiting instructions...</p>}
+      {!story && !helmic && !telepath && !searchLink && (
+        <p>Awaiting instructions...</p>
+      )}
     </div>
   );
 };
