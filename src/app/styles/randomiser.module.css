@@ -636,6 +636,20 @@ input:checked + .slider:before {
   cursor: pointer;
 }
 
+.filterBtns {
+  display: flex;
+  flex-direction: column;
+  margin: 5px;
+}
+
+.repeats {
+  display: flex;
+  flex-direction: row;
+  margin: 5px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 /* modals */
 
 .modalTitle {

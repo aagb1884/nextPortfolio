@@ -23,6 +23,7 @@ function Randomiser() {
   const [telepath, setTelepath] = useState<boolean>(false);
   const [searchLink, setSearchLink] = useState<boolean>(false);
   const [searchTerm, setSearchTerm] = useState<string | undefined>(undefined);
+  const [repeats, setRepeats] = useState<boolean>(true);
 
   const [story, setStory] = useState<Story>();
   const [lightArray, setLightArray] = useState<string[]>([
@@ -40,8 +41,17 @@ function Randomiser() {
       .sort((a, b) => a.sort - b.sort)
       .map(({ value }) => value)
       .slice(0, 1);
+    const index = storyList.indexOf(randomStory[0]);
     setStory(randomStory[0]);
+    if (!repeats && storyList.length > 0) {
+      const newArray = [
+        ...storyList.slice(0, index),
+        ...storyList.slice(index + 1),
+      ];
+      setStoryList(newArray);
+    }
   }
+  console.log(storyList.length);
   const filteredStories = useMemo(() => {
     let result = [...stories].filter((story) => story.multipart !== true);
     if (
@@ -151,6 +161,10 @@ function Randomiser() {
           setFilterDoctors={setFilterDoctors}
           filterEras={filterEras}
           setFilterEras={setFilterEras}
+          repeats={repeats}
+          setRepeats={setRepeats}
+          setStoryList={setStoryList}
+          filteredStories={filteredStories}
         />
       )}
       <Console
