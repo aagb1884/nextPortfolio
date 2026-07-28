@@ -1,11 +1,11 @@
 "use client";
-// import Image from "next/image";
+import Image from "next/image";
 import styles from "../../styles/randomiser.module.css";
 import AppsFooter from "../components/AppsFooter";
 import StartModal from "./components/modal";
 import FilterModal from "./components/filterModal";
 import Scanner from "./components/Scanner";
-// import tardisBackground from "../../../../public/images/randomiser/tardis_background.png";
+import tardisBackground from "../../../../public/images/randomiser/tardis_background.png";
 import { useEffect, useState, useMemo } from "react";
 import { Story, stories } from "../light/data/stories";
 import Console from "./components/console/Console";
@@ -19,6 +19,7 @@ function Randomiser() {
   const [filterEras, setFilterEras] = useState<string[]>([]);
   const [filterTerm, setFilterTerm] = useState<string>("");
   const [helmic, setHelmic] = useState<boolean>(false);
+  const [helmicTally, setHelmicTally] = useState<number>(-1);
   const [telepath, setTelepath] = useState<boolean>(false);
   const [searchLink, setSearchLink] = useState<boolean>(false);
   const [searchTerm, setSearchTerm] = useState<string | undefined>(undefined);
@@ -132,11 +133,11 @@ function Randomiser() {
       <div style={{ zIndex: 50 }}>
         <AppsFooter />
       </div>
-      {/* <Image
+      <Image
         className={styles.bg}
         src={tardisBackground}
         alt="TARDIS Background"
-      /> */}
+      />
       {/* modals */}
       {startModal && (
         <StartModal setStartModal={setStartModal} playHum={playHum} />
@@ -161,16 +162,20 @@ function Randomiser() {
         playLanding={playLanding}
         mute={mute}
         setMute={setMute}
+        helmic={helmic}
         setHelmic={setHelmic}
         setTelepath={setTelepath}
         setSearchLink={setSearchLink}
         setSearchTerm={setSearchTerm}
+        helmicTally={helmicTally}
+        setHelmicTally={setHelmicTally}
       />
       <Scanner
         story={story}
         missing={missing}
         animated={animated}
         helmic={helmic}
+        helmicTally={helmicTally}
         telepath={telepath}
         searchLink={searchLink}
         searchTerm={searchTerm}

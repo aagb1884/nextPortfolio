@@ -294,24 +294,77 @@
   opacity: 1;
 }
 
-.grid {
-  margin: 20px 20px 0 5px;
-  height: 71px;
+.gridSurround {
+  background-color: transparent;
+  border: #ede8e8 solid 2px;
+  position: absolute;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 30px 20px 0 5px;
   width: 30px;
-  border: 2px black ridge;
-  background-image:
-    linear-gradient(rgb(25, 2, 2) 1px, transparent 1px),
-    linear-gradient(90deg, black 1px, transparent 1px),
-    linear-gradient(black 0.5px, transparent 0.5px),
-    linear-gradient(90deg, black 0.5px, #d8c9c9 0.5px);
-  background-size:
-    60px 60px,
-    10px 10px;
-  background-position:
-    -1px -1px,
-    -1px -1px,
-    -0.5px -0.5px,
-    -0.5px -0.5px;
+  height: 30px;
+}
+
+.grid {
+  height: 50px;
+  width: 30px;
+  border-radius: 50%;
+  background: #333;
+  border: 5px red groove;
+  transition: transform 60s;
+  position: absolute;
+  z-index: 4;
+  mask:
+    radial-gradient(
+        11.55px at calc(100% + 1.1px) 50%,
+        #0000 calc(99% - 1px),
+        #000 calc(101% - 1px) 99%,
+        #0000 101%
+      )
+      calc(50% - 6px + 0.5px) calc(50% - 22px) / 12px 44px,
+    radial-gradient(
+        11.55px at -1.1px 50%,
+        #0000 calc(99% - 1px),
+        #000 calc(101% - 1px) 99%,
+        #0000 101%
+      )
+      calc(50% + 6px) 50%/12px 44px;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(720deg) scale(1.2);
+  }
+}
+@keyframes inverse {
+  to {
+    transform: rotate(-720deg) scale(1.2);
+  }
+}
+
+.grid.spin {
+  animation: spin 5s linear infinite;
+}
+.grid.inverse {
+  animation: inverse 5s linear infinite;
+}
+.grid.spin,
+.grid.inverse {
+  mask:
+    radial-gradient(
+        11.55px at calc(100% + 1.1px) 50%,
+        #fa494900 calc(99% - 2px),
+        #ef3838 calc(101% - 2px) 99%,
+        #9f585800 101%
+      )
+      calc(50% - 6px + 0.5px) calc(50% - 22px) / 12px 44px,
+    radial-gradient(
+        11.55px at -1.1px 50%,
+        #fa494900 calc(99% - 2px),
+        #ef3838 calc(101% - 2px) 99%,
+        #9f585800 101%
+      )
+      calc(50% + 6px) 50%/12px 44px;
 }
 
 .rectangle {
@@ -319,8 +372,33 @@
   height: 75px;
   width: 25px;
   background: radial-gradient(circle at 1px 20px, #817d7d, rgb(30, 29, 29));
-  border: 2px darkgrey;
-  border-style: dashed none dashed dashed;
+  border: 2px darkgrey dashed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.rectGrid {
+  height: 20px;
+  width: 30px;
+  border: 1px black solid;
+  background-color: #c1a6a6;
+  background-image:
+    linear-gradient(black 0.5px, transparent 0.5px),
+    linear-gradient(90deg, black 0.5px, transparent 0.5px),
+    linear-gradient(black 0.5px, transparent 0.5px),
+    linear-gradient(90deg, black 0.5px, #c1a6a6 1px);
+  background-size:
+    60px 60px,
+    60px 60px,
+    5px 5px,
+    5px 5px;
+  background-position:
+    -1px -1px,
+    -1px -1px,
+    -0.5px -0.5px,
+    -0.5px -0.5px;
 }
 
 .consoleLayout {
@@ -673,13 +751,6 @@ input:checked + .slider:before {
     right: 33px;
   }
 
-  /* .bg {
-    width: 100%;
-    background-repeat: no-repeat;
-    height: 95vh;
-    display: block;
-  } */
-
   .telepath {
     margin: 4px 3px;
   }
@@ -706,6 +777,11 @@ input:checked + .slider:before {
   .consoleRight {
     transform: skew(20deg);
     right: 50px;
+  }
+
+  .gridSurround {
+    width: 50px;
+    height: 50px;
   }
 }
 
@@ -744,5 +820,12 @@ input:checked + .slider:before {
     max-width: 70%;
     max-height: 40%;
     margin-top: 50px;
+  }
+
+  .bg {
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 95vh;
+    display: block;
   }
 }

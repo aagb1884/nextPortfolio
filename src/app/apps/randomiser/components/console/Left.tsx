@@ -1,19 +1,29 @@
 import styles from "@/app/styles/randomiser.module.css";
 
 interface leftProps {
+  helmic: boolean;
   setHelmic: (b: boolean) => void;
+  helmicTally: number;
+  setHelmicTally: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const Left: React.FC<leftProps> = ({ setHelmic }) => {
+const Left: React.FC<leftProps> = ({
+  helmic,
+  setHelmic,
+  helmicTally,
+  setHelmicTally,
+}) => {
   const timeout = () => {
     setHelmic(true);
     setTimeout(() => {
       setHelmic(false);
     }, 4000);
+    setHelmicTally((prev) => prev + 1);
   };
   return (
     <div className={styles.consoleLeft}>
       <button
+        disabled={helmicTally >= 4 || helmic}
         className={styles.nodBtn}
         onClick={() => {
           timeout();
@@ -23,7 +33,9 @@ const Left: React.FC<leftProps> = ({ setHelmic }) => {
 
         <div className={styles.nodule} />
       </button>
-      <div className={styles.rectangle} />
+      <div className={styles.rectangle}>
+        <span className={styles.rectGrid} />
+      </div>
     </div>
   );
 };

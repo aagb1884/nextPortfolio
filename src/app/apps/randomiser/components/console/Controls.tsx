@@ -15,10 +15,13 @@ interface controlsProps {
   playLanding: () => void;
   mute: boolean;
   setMute: React.Dispatch<React.SetStateAction<boolean>>;
+  helmic: boolean;
   setHelmic: (b: boolean) => void;
   setTelepath: (b: boolean) => void;
   setSearchLink: (b: boolean) => void;
   setSearchTerm: (b: string) => void;
+  helmicTally: number;
+  setHelmicTally: React.Dispatch<React.SetStateAction<number>>;
 }
 
 const Controls: React.FC<controlsProps> = ({
@@ -30,14 +33,22 @@ const Controls: React.FC<controlsProps> = ({
   playLanding,
   mute,
   setMute,
+  helmic,
   setHelmic,
   setTelepath,
   setSearchLink,
   setSearchTerm,
+  helmicTally,
+  setHelmicTally,
 }) => {
   return (
     <div className={styles.consoleUnit}>
-      <Left setHelmic={setHelmic} />
+      <Left
+        helmic={helmic}
+        setHelmic={setHelmic}
+        helmicTally={helmicTally}
+        setHelmicTally={setHelmicTally}
+      />
       <div className={styles.console}>
         <div className={styles.randomiserBox}>
           <span className={styles.dot} />

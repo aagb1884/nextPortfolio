@@ -6,6 +6,7 @@ interface scannerProps {
   missing: boolean | undefined;
   animated: boolean | undefined;
   helmic: boolean;
+  helmicTally: number;
   telepath: boolean;
   searchLink: boolean;
   searchTerm: string | undefined;
@@ -17,6 +18,7 @@ const Scanner: React.FC<scannerProps> = ({
   missing,
   animated,
   helmic,
+  helmicTally,
   telepath,
   searchLink,
   searchTerm,
@@ -26,12 +28,18 @@ const Scanner: React.FC<scannerProps> = ({
     window.open(`https://www.ecosia.org/search?q=${searchTerm}`, "_blank");
     setSearchLink(false);
   };
+  const helmicPhrases: string[] = [
+    "YOU'RE GIVING THAT HELMIC REGULATOR QUITE A TWIST",
+    "YOU'RE GIVING THAT HELMIC REGULATOR QUITE A TWIST",
+    "STOP DOING THAT TO THE HELMIC REGULATOR",
+    "NO REALLY, STOP DOING THAT TO THE HELMIC REGULATOR",
+    "LANDING PARAMETERS UPDATED: 500 MILES FROM TARGET DESTINATION (ROUGHLY THE DISTANCE BETWEEN CROYDON AND ABERDEEN) ACCEPTABLE",
+  ];
+
   return (
     <div className={styles.scanner}>
       {helmic && (
-        <p className={styles.storyTitle}>
-          STOP DOING THAT TO THE HELMIC REGULATOR
-        </p>
+        <p className={styles.storyTitle}>{helmicPhrases[helmicTally]}</p>
       )}
       {telepath && (
         <p className={styles.storyTitle}>ACTIVATING TELEPATHIC CIRCUITS...</p>

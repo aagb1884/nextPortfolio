@@ -1,5 +1,5 @@
-import { isIos, isAndroid } from "@/app/functions/device";
 import styles from "@/app/styles/randomiser.module.css";
+import { useState, useEffect } from "react";
 
 interface rightProps {
   setTelepath: (b: boolean) => void;
@@ -13,8 +13,13 @@ const webLinks: string[] = [
   "Danvanista",
   "Wilfred Mott browser history",
   "Chris Chibnall's Christmas album",
-  "Terrance Dicks' most popular anecdotes",
+  "Terrance Dicks on a jet ski",
   "Where does the Master get that pneumatic lift from in Castrovalva",
+  "is Gary Downie in Hell?",
+  "Has Katy Manning ever been glamping?",
+  "baby ood deviant art",
+  "am I related to Patrick Troughton?",
+  "cybermen in little white shorts",
 ];
 
 const Right: React.FC<rightProps> = ({
@@ -22,30 +27,22 @@ const Right: React.FC<rightProps> = ({
   setSearchLink,
   setSearchTerm,
 }) => {
-  const mobile = isIos() || isAndroid();
-
   function telepathTime() {
     setTelepath(true);
     const randomWebLink = webLinks[Math.floor(Math.random() * webLinks.length)];
-    if (!mobile) {
-      setTelepath(true);
-      setTimeout(() => {
-        setTelepath(false);
-        window.open(
-          `https://www.ecosia.org/search?q=${randomWebLink}`,
-          "_blank"
-        );
-      }, 4000);
-    } else {
-      setTelepath(true);
-      setTimeout(() => {
-        setTelepath(false);
-        setSearchLink(true);
-      }, 2000);
-      setSearchLink(false);
-      setSearchTerm(randomWebLink);
-    }
+    setTelepath(true);
+    setTimeout(() => {
+      setTelepath(false);
+      setSearchLink(true);
+    }, 2000);
+    setSearchLink(false);
+    setSearchTerm(randomWebLink);
   }
+  const [isSpinning, setIsSpinning] = useState<boolean>(false);
+  useEffect(() => {
+    const timeout = setTimeout(() => setIsSpinning(true), 500);
+    return () => clearTimeout(timeout);
+  }, []);
 
   return (
     <div className={styles.consoleRight}>
@@ -55,7 +52,12 @@ const Right: React.FC<rightProps> = ({
           telepathTime();
         }}
       />
-      <div className={styles.grid} />
+      <div className={styles.gridSurround}>
+        <div className={`${styles.grid} ${isSpinning ? styles.spin : ""}`} />
+      </div>
+      <div className={styles.gridSurround}>
+        <div className={`${styles.grid} ${isSpinning ? styles.inverse : ""}`} />
+      </div>
     </div>
   );
 };
