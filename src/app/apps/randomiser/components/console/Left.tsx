@@ -5,6 +5,8 @@ interface leftProps {
   setHelmic: (b: boolean) => void;
   helmicTally: number;
   setHelmicTally: React.Dispatch<React.SetStateAction<number>>;
+  telepath: boolean;
+  searchLink: boolean;
 }
 
 const Left: React.FC<leftProps> = ({
@@ -12,6 +14,8 @@ const Left: React.FC<leftProps> = ({
   setHelmic,
   helmicTally,
   setHelmicTally,
+  telepath,
+  searchLink,
 }) => {
   const timeout = () => {
     setHelmic(true);
@@ -23,7 +27,7 @@ const Left: React.FC<leftProps> = ({
   return (
     <div className={styles.consoleLeft}>
       <button
-        disabled={helmicTally >= 4 || helmic}
+        disabled={helmicTally >= 4 || helmic || telepath || searchLink}
         className={styles.nodBtn}
         onClick={() => {
           timeout();

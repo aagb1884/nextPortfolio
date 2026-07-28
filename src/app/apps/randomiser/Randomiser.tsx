@@ -164,7 +164,9 @@ function Randomiser() {
         setMute={setMute}
         helmic={helmic}
         setHelmic={setHelmic}
+        telepath={telepath}
         setTelepath={setTelepath}
+        searchLink={searchLink}
         setSearchLink={setSearchLink}
         setSearchTerm={setSearchTerm}
         helmicTally={helmicTally}

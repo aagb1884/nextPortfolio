@@ -14,7 +14,9 @@ interface consoleProps {
   setMute: React.Dispatch<React.SetStateAction<boolean>>;
   helmic: boolean;
   setHelmic: (b: boolean) => void;
+  telepath: boolean;
   setTelepath: (b: boolean) => void;
+  searchLink: boolean;
   setSearchLink: (b: boolean) => void;
   setSearchTerm: (b: string) => void;
   helmicTally: number;
@@ -32,7 +34,9 @@ const Console: React.FC<consoleProps> = ({
   setMute,
   helmic,
   setHelmic,
+  telepath,
   setTelepath,
+  searchLink,
   setSearchLink,
   setSearchTerm,
   helmicTally,
@@ -52,7 +56,9 @@ const Console: React.FC<consoleProps> = ({
         setMute={setMute}
         helmic={helmic}
         setHelmic={setHelmic}
+        telepath={telepath}
         setTelepath={setTelepath}
+        searchLink={searchLink}
         setSearchLink={setSearchLink}
         setSearchTerm={setSearchTerm}
         helmicTally={helmicTally}
