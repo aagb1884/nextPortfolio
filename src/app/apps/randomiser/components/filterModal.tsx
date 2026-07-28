@@ -1,4 +1,5 @@
 import styles from "@/app/styles/randomiser.module.css";
+import { Story } from "../../light/data/stories";
 
 interface modalProps {
   setFilterModal: (filterTerm: boolean) => void;
@@ -8,6 +9,10 @@ interface modalProps {
   setFilterDoctors: (searchTerm: string[]) => void;
   filterEras: string[];
   setFilterEras: (searchTerm: string[]) => void;
+  repeats: boolean;
+  setRepeats: React.Dispatch<React.SetStateAction<boolean>>;
+  setStoryList: (s: Story[]) => void;
+  filteredStories: Story[];
 }
 
 const FilterModal: React.FC<modalProps> = ({
@@ -18,11 +23,17 @@ const FilterModal: React.FC<modalProps> = ({
   setFilterDoctors,
   filterEras,
   setFilterEras,
+  repeats,
+  setRepeats,
+  setStoryList,
+  filteredStories,
 }) => {
   function clearState() {
     setFilterTerm("");
     setFilterDoctors([]);
     setFilterEras([]);
+    setRepeats(true);
+    setStoryList(filteredStories);
   }
   return (
     <div className={styles.startModalWrapper}>
@@ -144,14 +155,29 @@ const FilterModal: React.FC<modalProps> = ({
               }}
             />
           </div>
-          <button
-            className={styles.clrBtn}
-            onClick={() => {
-              clearState();
-            }}
-          >
-            Clear Filters
-          </button>
+          <div className={styles.filterBtns}>
+            <label className={styles.repeats}>
+              No Repeats:
+              <input
+                type="checkbox"
+                id="repeats"
+                name="repeats"
+                checked={!repeats}
+                onChange={() => {
+                  setRepeats((prev) => !prev);
+                }}
+              />
+            </label>
+
+            <button
+              className={styles.clrBtn}
+              onClick={() => {
+                clearState();
+              }}
+            >
+              Reset
+            </button>
+          </div>
         </div>
         <button
           className={styles.startBtn}
