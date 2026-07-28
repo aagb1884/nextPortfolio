@@ -211,6 +211,12 @@
 .nodBtn {
   width: 40px;
   height: 90px;
+  cursor: pointer;
+}
+
+.nodBtn:disabled {
+  background-color: #000;
+  cursor: none;
 }
 
 .consoleRight {
@@ -283,6 +289,14 @@
   mask-size: 800%;
   -webkit-mask-position: 0;
   mask-position: 0;
+  cursor: pointer;
+}
+
+.telepath:disabled {
+  cursor: none;
+  background-color: grey;
+  transition: none;
+  mask: none;
 }
 
 .telepath:hover {
@@ -529,6 +543,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 /* toggle  */
@@ -575,6 +590,9 @@
   transition: 0.4s;
   margin-right: 5px;
   border-radius: 20%;
+}
+.slider.disable {
+  cursor: none;
 }
 
 .slider:before {

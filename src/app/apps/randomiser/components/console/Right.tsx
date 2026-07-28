@@ -5,6 +5,9 @@ interface rightProps {
   setTelepath: (b: boolean) => void;
   setSearchLink: (b: boolean) => void;
   setSearchTerm: (b: string) => void;
+  telepath: boolean;
+  searchLink: boolean;
+  helmic: boolean;
 }
 
 const webLinks: string[] = [
@@ -20,12 +23,17 @@ const webLinks: string[] = [
   "baby ood deviant art",
   "am I related to Patrick Troughton?",
   "cybermen in little white shorts",
+  "is it canon confirmed that time lords have junk?",
+  "Chris Bidmead in a Sinclair C5",
 ];
 
 const Right: React.FC<rightProps> = ({
   setTelepath,
   setSearchLink,
   setSearchTerm,
+  telepath,
+  searchLink,
+  helmic,
 }) => {
   function telepathTime() {
     setTelepath(true);
@@ -46,8 +54,9 @@ const Right: React.FC<rightProps> = ({
 
   return (
     <div className={styles.consoleRight}>
-      <div
+      <button
         className={styles.telepath}
+        disabled={telepath || searchLink || helmic}
         onClick={() => {
           telepathTime();
         }}

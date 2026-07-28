@@ -17,7 +17,9 @@ interface controlsProps {
   setMute: React.Dispatch<React.SetStateAction<boolean>>;
   helmic: boolean;
   setHelmic: (b: boolean) => void;
+  telepath: boolean;
   setTelepath: (b: boolean) => void;
+  searchLink: boolean;
   setSearchLink: (b: boolean) => void;
   setSearchTerm: (b: string) => void;
   helmicTally: number;
@@ -35,7 +37,9 @@ const Controls: React.FC<controlsProps> = ({
   setMute,
   helmic,
   setHelmic,
+  telepath,
   setTelepath,
+  searchLink,
   setSearchLink,
   setSearchTerm,
   helmicTally,
@@ -48,6 +52,8 @@ const Controls: React.FC<controlsProps> = ({
         setHelmic={setHelmic}
         helmicTally={helmicTally}
         setHelmicTally={setHelmicTally}
+        telepath={telepath}
+        searchLink={searchLink}
       />
       <div className={styles.console}>
         <div className={styles.randomiserBox}>
@@ -111,7 +117,7 @@ const Controls: React.FC<controlsProps> = ({
               <input
                 type="checkbox"
                 checked={active}
-                disabled={active}
+                disabled={active || helmic || telepath || searchLink}
                 onChange={() => {
                   setActive((prev) => !prev);
                   playLanding();
@@ -120,7 +126,9 @@ const Controls: React.FC<controlsProps> = ({
                   }, 1000);
                 }}
               />
-              <span className={styles.slider}></span>
+              <span
+                className={`${styles.slider} ${active || helmic || telepath || searchLink ? styles.disable : ""}`}
+              ></span>
             </label>
           </div>
           <div className={styles.rPanel}>
@@ -147,6 +155,9 @@ const Controls: React.FC<controlsProps> = ({
         setTelepath={setTelepath}
         setSearchLink={setSearchLink}
         setSearchTerm={setSearchTerm}
+        helmic={helmic}
+        telepath={telepath}
+        searchLink={searchLink}
       />
     </div>
   );
