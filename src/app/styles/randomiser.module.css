@@ -372,8 +372,7 @@
   height: 75px;
   width: 25px;
   background: radial-gradient(circle at 1px 20px, #817d7d, rgb(30, 29, 29));
-  border: 2px darkgrey;
-  border-style: dashed none dashed dashed;
+  border: 2px darkgrey dashed;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -382,7 +381,7 @@
 
 .rectGrid {
   height: 20px;
-  width: 25px;
+  width: 30px;
   border: 1px black solid;
   background-color: #c1a6a6;
   background-image:
@@ -752,13 +751,6 @@ input:checked + .slider:before {
     right: 33px;
   }
 
-  /* .bg {
-    width: 100%;
-    background-repeat: no-repeat;
-    height: 95vh;
-    display: block;
-  } */
-
   .telepath {
     margin: 4px 3px;
   }
@@ -828,5 +820,12 @@ input:checked + .slider:before {
     max-width: 70%;
     max-height: 40%;
     margin-top: 50px;
+  }
+
+  .bg {
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 95vh;
+    display: block;
   }
 }
