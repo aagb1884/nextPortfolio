@@ -300,13 +300,13 @@
   position: absolute;
   border-radius: 50%;
   overflow: hidden;
-  margin: 20px 20px 0 5px;
+  margin: 30px 20px 0 5px;
   width: 30px;
   height: 30px;
 }
 
 .grid {
-  height: 30px;
+  height: 50px;
   width: 30px;
   border-radius: 50%;
   background: #333;
@@ -336,9 +336,20 @@
     transform: rotate(720deg) scale(1.2);
   }
 }
+@keyframes inverse {
+  to {
+    transform: rotate(-720deg) scale(1.2);
+  }
+}
 
 .grid.spin {
   animation: spin 5s linear infinite;
+}
+.grid.inverse {
+  animation: inverse 5s linear infinite;
+}
+.grid.spin,
+.grid.inverse {
   mask:
     radial-gradient(
         11.55px at calc(100% + 1.1px) 50%,
@@ -363,6 +374,32 @@
   background: radial-gradient(circle at 1px 20px, #817d7d, rgb(30, 29, 29));
   border: 2px darkgrey;
   border-style: dashed none dashed dashed;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.rectGrid {
+  height: 20px;
+  width: 25px;
+  border: 1px black solid;
+  background-color: #c1a6a6;
+  background-image:
+    linear-gradient(black 0.5px, transparent 0.5px),
+    linear-gradient(90deg, black 0.5px, transparent 0.5px),
+    linear-gradient(black 0.5px, transparent 0.5px),
+    linear-gradient(90deg, black 0.5px, #c1a6a6 1px);
+  background-size:
+    60px 60px,
+    60px 60px,
+    5px 5px,
+    5px 5px;
+  background-position:
+    -1px -1px,
+    -1px -1px,
+    -0.5px -0.5px,
+    -0.5px -0.5px;
 }
 
 .consoleLayout {

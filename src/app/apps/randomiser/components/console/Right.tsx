@@ -55,6 +55,9 @@ const Right: React.FC<rightProps> = ({
       <div className={styles.gridSurround}>
         <div className={`${styles.grid} ${isSpinning ? styles.spin : ""}`} />
       </div>
+      <div className={styles.gridSurround}>
+        <div className={`${styles.grid} ${isSpinning ? styles.inverse : ""}`} />
+      </div>
     </div>
   );
 };

@@ -33,7 +33,9 @@ const Left: React.FC<leftProps> = ({
 
         <div className={styles.nodule} />
       </button>
-      <div className={styles.rectangle} />
+      <div className={styles.rectangle}>
+        <span className={styles.rectGrid} />
+      </div>
     </div>
   );
 };
