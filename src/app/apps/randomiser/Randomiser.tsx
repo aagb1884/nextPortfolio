@@ -51,7 +51,7 @@ function Randomiser() {
       setStoryList(newArray);
     }
   }
-  console.log(storyList.length);
+
   const filteredStories = useMemo(() => {
     let result = [...stories].filter((story) => story.multipart !== true);
     if (
