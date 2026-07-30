@@ -27,7 +27,12 @@ const webLinks: string[] = [
   "Chris Bidmead in a Sinclair C5",
   "cult of skaro kidnapping pigs",
   "has the doctor ever visited greggs?",
-  "",
+  "bob holmes sontaran reproduction theories",
+  "jodie whittaker singing coldplay to a dog",
+  "does anyone else have the dream where ur watching Mind Robber and ur bum falls off?",
+  "what does 'tom's putting it in now' refer to?",
+  "are dr who podcasts all the same guy?",
+  "do i have to read lungbarrow?",
 ];
 
 const Right: React.FC<rightProps> = ({
