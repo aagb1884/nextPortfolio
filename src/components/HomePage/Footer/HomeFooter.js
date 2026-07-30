@@ -98,14 +98,22 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
               <li>
                 <Link href="/apps/light">Doctor Who Game Page</Link>
               </li>
+
               <li>
-                <Link href="/apps/eurovision-bingo">Eurovision Bingo</Link>
-              </li>
-              <li>
-                <Link href="/apps/poetremixer">PoetRemixer Tool</Link>
+                <Link href="/apps/who-title-generator">
+                  Doctor Who Title Card Generator
+                </Link>
               </li>
               <li>
                 <Link href="/apps/drwhoquiz">Doctor Who Quizzes</Link>
+              </li>
+              <li>
+                <Link href="/apps/randomiser">The Randomiser</Link>
+              </li>
+              <li>
+                <Link href="/apps/sci-fi-name-generator">
+                  Science Fiction Name Generator
+                </Link>
               </li>
             </ul>
             <ul className={styles.appsClmLinks2}>
@@ -113,14 +121,10 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
                 <Link href="/apps/rap-name-generator">Rap Name Generator</Link>
               </li>
               <li>
-                <Link href="/apps/sci-fi-name-generator">
-                  Science Fiction Name Generator
-                </Link>
+                <Link href="/apps/eurovision-bingo">Eurovision Bingo</Link>
               </li>
               <li>
-                <Link href="/apps/who-title-generator">
-                  Doctor Who Title Card Generator
-                </Link>
+                <Link href="/apps/poetremixer">PoetRemixer Tool</Link>
               </li>
               <li>
                 <Link href="/apps/barlow">Setting the Gary Bar Low</Link>

@@ -108,6 +108,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
     },
     {
+      url: "https://andrewblair.co.uk/apps/randomiser",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.7,
+      images: [],
+    },
+    {
       url: "https://andrewblair.co.uk/credits",
       lastModified: new Date(),
       changeFrequency: "yearly",

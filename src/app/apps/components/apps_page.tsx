@@ -14,6 +14,7 @@ import drWhoQuiz from "../../../../public/images/drWhoQuiz/Doctor-Who-Quiz-Logo.
 import sfng from "@/app/images/scifinamegen.png";
 import barlow from "../barlow/opengraph-image.png";
 import whoTitles from "../who-title-generator/opengraph-image.jpeg";
+import randomiser from "../randomiser/opengraph-image.png";
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
 import AppLinks from "./appLinks";
@@ -85,6 +86,15 @@ const AppsPage = () => {
               />
             </Link>
           </div>
+          <div className={styles.drWhoQuiz}>
+            <Link href="/apps/drwhoquiz">
+              <Image
+                src={drWhoQuiz}
+                alt="Dr Who quiz link"
+                className={styles.buttonImage}
+              />
+            </Link>
+          </div>
           <div className={styles.sfngApp}>
             <Link href="/apps/sci-fi-name-generator">
               <Image
@@ -134,11 +144,12 @@ const AppsPage = () => {
               />
             </Link>
           </div>
-          <div className={styles.drWhoQuiz}>
-            <Link href="/apps/drwhoquiz">
+
+          <div className={styles.randomiserApp}>
+            <Link href="/apps/randomiser">
               <Image
-                src={drWhoQuiz}
-                alt="Dr Who quiz link"
+                src={randomiser}
+                alt="Randomiser App Link"
                 className={styles.buttonImage}
               />
             </Link>
