@@ -33,6 +33,7 @@ const webLinks: string[] = [
   "what does 'tom's putting it in now' refer to?",
   "are dr who podcasts all the same guy?",
   "do i have to read lungbarrow?",
+  "will i be able to understand doctor who if i don't know what a twink is?",
 ];
 
 const Right: React.FC<rightProps> = ({
