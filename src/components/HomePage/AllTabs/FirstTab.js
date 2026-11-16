@@ -15,7 +15,7 @@ const FirstTab = () => {
           16 week development course at CodeClan.
         </p>
         <p>
-          I spent my time after tthe course looking for work and developing my
+          I spent my time after the course looking for work and developing my
           own projects, building this site to host them.
         </p>
         <p>
