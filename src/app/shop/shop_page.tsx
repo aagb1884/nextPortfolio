@@ -8,6 +8,7 @@ import { shopData } from "@/data/shopdata";
 import Image from "next/image";
 import Link from "next/link";
 import ExternalLinkImage from "../ui/ExternalLink";
+import KoFiLink from "../ui/KoFi";
 
 const ShopPage = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
@@ -44,11 +45,16 @@ const ShopPage = () => {
       </header>
       <main className={styles.itemList}>
         <ul>{mappedShopInfo} </ul>
-        <p>* Items available on a 'Pay What You Want' basis.</p>
       </main>
+      <p>* Items available on a &apos;Pay What You Want'&apos; basis.</p>
+      <p>
+        If, for whatever reason, you want to give me money but not in exchange
+        for goods and services, I have a ko-fi page.
+      </p>
+      <KoFiLink />
       <p>
         I also have free apps available to download, please leave a review if
-        you have time.
+        you have the time/inclination.
       </p>
       <AppLinks />
       <HomeFooter
