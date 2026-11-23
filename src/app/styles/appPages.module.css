@@ -97,6 +97,10 @@
   width: 10%;
 }
 
+.disabled {
+  filter: grayscale(1);
+}
+
 .appStoreLinks {
   display: flex;
   flex-direction: row;

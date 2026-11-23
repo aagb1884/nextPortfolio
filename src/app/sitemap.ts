@@ -21,6 +21,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ],
     },
     {
+      url: "https://andrewblair.co.uk/shop",
+      lastModified: new Date(),
+      changeFrequency: "yearly",
+      priority: 0.8,
+      images: [
+        "https://andrewblair.co.uk/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Favatar_ab.d7ee2f77.png&amp;w=256&amp;q=75",
+      ],
+    },
+    {
       url: "https://andrewblair.co.uk/apps",
       lastModified: new Date(),
       changeFrequency: "yearly",
