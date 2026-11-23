@@ -3,8 +3,9 @@ import BingoCard from "../eurovision-bingo/ebingo_components/BingoCard";
 import styles from "../../styles/euroBingo.module.css";
 import AppsFooter from "../components/AppsFooter";
 import KoFiLink from "@/app/ui/KoFi";
+import { Metadata } from "next";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Eurovision Bingo",
   openGraph: {
     title: "Eurovision Bingo",

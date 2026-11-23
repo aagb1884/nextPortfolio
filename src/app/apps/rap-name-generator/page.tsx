@@ -1,6 +1,7 @@
+import { Metadata } from "next";
 import RapNameGenerator from "./components/rap_name_generator";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Rap Name Generator",
   openGraph: {
     title: "Rap Name Generator",

@@ -1,7 +1,15 @@
+import { Metadata } from "next";
 import SciFiNameContainer from "./SciFiNameContainer";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "The Science Fiction Name Generator",
+  keywords: [
+    "sci-fi",
+    "science fiction",
+    "made up name",
+    "name generator",
+    "character name",
+  ],
   openGraph: {
     title: "The Science Fiction Name Generator",
     description:

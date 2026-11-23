@@ -1,12 +1,12 @@
 import styles from "../../styles/whoQuiz.module.css";
 import AppsFooter from "../components/AppsFooter";
 import KoFiLink from "@/app/ui/KoFi";
-import backgroundVortex from "../../../../public/images/drWhoQuiz/vortex.jpg"
+import backgroundVortex from "../../../../public/images/drWhoQuiz/vortex.jpg";
 import Image from "next/image";
 import MainQuizPageContent from "./content";
+import { Metadata } from "next";
 
-
-export const metadata = {
+export const metadata: Metadata = {
   title: "Doctor Who Quiz",
   openGraph: {
     title: "Doctor Who Quiz",
@@ -17,16 +17,16 @@ export const metadata = {
 
 const drWhoQuiz = () => {
   return (
-  <div className={styles.mainContainer}>
-  <div className={styles.backgroundVortexDiv}>
-    <Image src={backgroundVortex} fill={true} alt="Background Vortex" />
-  </div>
-    <MainQuizPageContent />
-  <footer className={styles.whoQuizFooter}>
-    <AppsFooter />
-    <KoFiLink />
-  </footer>
-</div>
+    <div className={styles.mainContainer}>
+      <div className={styles.backgroundVortexDiv}>
+        <Image src={backgroundVortex} fill={true} alt="Background Vortex" />
+      </div>
+      <MainQuizPageContent />
+      <footer className={styles.whoQuizFooter}>
+        <AppsFooter />
+        <KoFiLink />
+      </footer>
+    </div>
   );
 };
 
