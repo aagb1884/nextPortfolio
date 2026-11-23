@@ -46,7 +46,7 @@ const ShopPage = () => {
       <main className={styles.itemList}>
         <ul>{mappedShopInfo} </ul>
       </main>
-      <p>* Items available on a &apos;Pay What You Want'&apos; basis.</p>
+      <p>* Items available on a &apos;Pay What You Want&apos; basis.</p>
       <p>
         If, for whatever reason, you want to give me money but not in exchange
         for goods and services, I have a ko-fi page.
