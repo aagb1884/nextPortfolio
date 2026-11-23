@@ -55,3 +55,26 @@
   border-radius: 5px;
   background-color: yellow;
 }
+
+@media only screen and (max-width: 470px) {
+  .itemList {
+    margin-top: 0px;
+    text-align: center;
+  }
+
+  .shopItem {
+    flex-direction: column;
+  }
+
+  .itemInfo {
+    max-width: 100%;
+    margin: 0;
+    align-items: center;
+  }
+
+  .itemLink {
+    width: 40%;
+    margin: 10px;
+    justify-content: center;
+  }
+}

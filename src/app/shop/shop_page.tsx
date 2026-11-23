@@ -16,10 +16,18 @@ const ShopPage = () => {
   const mappedShopInfo = shopData.map((item, index) => {
     return (
       <li key={index} className={styles.shopItem}>
+        <Image
+          className={styles.itemImg}
+          src={item.img}
+          alt={`${item.name} Cover`}
+          width={145}
+          height={250}
+        />
         <div className={styles.itemInfo}>
           <h2>
             {item.name} - {item.price} ({item.format})
           </h2>
+
           <p>{item.desc}</p>
           <div className={styles.itemLink}>
             <Link href={item.url} className={styles.buyBtn}>
@@ -28,13 +36,6 @@ const ShopPage = () => {
             <ExternalLinkImage />
           </div>
         </div>
-        <Image
-          className={styles.itemImg}
-          src={item.img}
-          alt={`${item.name} Cover`}
-          width={145}
-          height={250}
-        />
       </li>
     );
   });
