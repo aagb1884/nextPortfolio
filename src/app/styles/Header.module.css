@@ -1,41 +1,39 @@
-
-.Heading{
+.Heading {
   width: auto;
   height: auto;
   font-size: 50px;
-  }
-  
+}
+
 .fancy {
   -webkit-text-stroke-width: 0.5px;
   -webkit-text-stroke-color: white;
   @supports (background-clip: text) or (-webkit-background-clip: text) {
-    background-image: 
-      url("https://www.publicdomainpictures.net/pictures/480000/nahled/sternenhimmel-sterne-himmel-nacht-1668774086Mem.jpg");
+    background-image: url("https://www.publicdomainpictures.net/pictures/480000/nahled/sternenhimmel-sterne-himmel-nacht-1668774086Mem.jpg");
     background-size: 110% auto;
     background-position: center;
     color: transparent;
     -webkit-background-clip: text;
     background-clip: text;
-	animation: parallax 60s ease infinite alternate;
+    animation: parallax 60s ease infinite alternate;
   }
 }
 @keyframes parallax {
-	0% {
-	  background-position: 0 0;
-	}
-	70% {
-	  background-position: 80 200px;
-	}
+  0% {
+    background-position: 0 0;
   }
+  70% {
+    background-position: 80 200px;
+  }
+}
 
-.headerSection{
-  color: #E8F0F2;
+.headerSection {
+  color: #e8f0f2;
   font-size: large;
   font-weight: bold;
   text-align: center;
 }
-  
-.links{
+
+.links {
   justify-content: center;
   margin-left: 15px;
   justify-content: space-around;
@@ -82,20 +80,34 @@
   color: transparent;
 }
 
-  
 @media only screen and (max-width: 650px) {
-  .Heading{
+  .Heading {
     font-size: 35px;
-    }
   }
+}
 
-  @media only screen and (max-width: 500px) {
-   
-  .Heading{
+@media only screen and (max-width: 500px) {
+  .Heading {
     width: auto;
     height: auto;
     align-items: center;
     font-size: 25px;
     padding: 5px;
-    }
   }
+}
+
+.webring {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.webringLinks {
+  display: flex;
+  flex-direction: row;
+}
+
+.webringText {
+  font-size: x-small;
+}

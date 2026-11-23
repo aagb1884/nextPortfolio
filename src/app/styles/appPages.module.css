@@ -375,6 +375,10 @@
     font-size: 40px;
     font-weight: 600;
   }
+
+  .appStoreSection1 {
+    line-height: 1.3;
+  }
 }
 @media only screen and (max-width: 400px) {
   .bouncingText {

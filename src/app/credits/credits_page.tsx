@@ -186,6 +186,18 @@ const CreditsPage = () => {
         </li>
         <li>
           <Link
+            target="_blank"
+            href="https://icons8.com/icon/QHJ0cVJXSlCx/shop"
+          >
+            Shop <ExternalLinkImage />{" "}
+          </Link>{" "}
+          icon by{" "}
+          <Link target="_blank" href="https://icons8.com">
+            Icons8 <ExternalLinkImage />{" "}
+          </Link>
+        </li>
+        <li>
+          <Link
             href="https://www.flaticon.com/free-icons/external-link"
             title="external link icons"
           >

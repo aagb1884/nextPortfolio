@@ -6,7 +6,8 @@ import github from "../../../../public/images/icons8-github-96.png";
 import apps from "../../../../public/images/application.png";
 import contactForm from "../../../../public/images/icons8-email-96.png";
 import blog from "../../../../public/images/icons8-blog-96.png";
-import styles from "../../../app/styles/Header.module.css";
+import shop from "../../../../public/images/icons8-shop-96.png";
+import styles from "@/app/styles/Header.module.css";
 import Link from "next/link";
 
 const HeaderLinks = ({ showForm, setShowForm }) => {
@@ -44,6 +45,12 @@ const HeaderLinks = ({ showForm, setShowForm }) => {
           {/* <li><a href="https://www.linkedin.com/in/andrew-blair-3604a0273/"><Image src={linkedin} title="LinkedIn Profile" alt="linked-in" width={50}  ></Image></a></li> */}
           <li>
             <Webring />
+          </li>
+          <li>
+            <Link href="/shop">
+              <Image src={shop} title="Shop Page" alt="blog" width={50}></Image>
+              <p className={styles.webringText}>Shop</p>
+            </Link>
           </li>
           <li>
             <Link href="/blog">

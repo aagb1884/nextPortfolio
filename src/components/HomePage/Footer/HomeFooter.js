@@ -83,6 +83,7 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
               Contact Form
             </li>
           </ul>
+          <Link href="/shop">Shop</Link>
         </div>
 
         <div className={styles.appsClms}>
