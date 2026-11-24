@@ -1,6 +1,6 @@
 import styles from "@/app/styles/randomiser.module.css";
 import Image from "next/image";
-import { Story } from "../../../light/data/stories";
+import { Story } from "../../../../../data/whoStories";
 import muteBtn from "../../../../../../public/images/icons8-mute-50.png";
 import voiceBtn from "../../../../../../public/images/icons8-voice-50.png";
 import Right from "./Right";

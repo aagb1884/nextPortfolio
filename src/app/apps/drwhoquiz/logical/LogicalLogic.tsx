@@ -17,7 +17,11 @@ import {
 import styles from "@/app/styles/whoQuiz.module.css";
 import Link from "next/link";
 import { useState, useEffect, useRef } from "react";
-import { CyberQuestion, CyberRound, plotPoint } from "../data/questions";
+import {
+  CyberQuestion,
+  CyberRound,
+  plotPoint,
+} from "../../../../data/whoQuiz/questions";
 import SocialMediaShare from "../components/SocialMediaShare";
 import InstructionsModal from "../components/modals/InstructionsModal";
 import CreditsModal from "../components/modals/CreditsModal";

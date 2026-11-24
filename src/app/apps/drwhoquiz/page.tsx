@@ -1,4 +1,4 @@
-import styles from "../../styles/whoQuiz.module.css";
+import styles from "@/app/styles/whoQuiz.module.css";
 import AppsFooter from "../components/AppsFooter";
 import KoFiLink from "@/app/ui/KoFi";
 import backgroundVortex from "../../../../public/images/drWhoQuiz/vortex.jpg";

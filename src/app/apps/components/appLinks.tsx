@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../../styles/appPages.module.css";
+import styles from "@/app/styles/appPages.module.css";
 import Image from "next/image";
 import appStore from "@/images/App_Store_(iOS)_2017.png";
 import googleplay from "@/images/google_play.png";

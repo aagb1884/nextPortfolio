@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./styles/page.module.css";
+import styles from "@/app/styles/page.module.css";
 import { useRef } from "react";
 import HeaderLinks from "@/app/components/Header/HeaderLinks";
 import ContactForm from "@/app/components/home/ContactForm";

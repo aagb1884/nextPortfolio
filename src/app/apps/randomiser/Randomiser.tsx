@@ -1,13 +1,13 @@
 "use client";
 import Image from "next/image";
-import styles from "../../styles/randomiser.module.css";
+import styles from "@/app/styles/randomiser.module.css";
 import AppsFooter from "../components/AppsFooter";
 import StartModal from "./components/modal";
 import FilterModal from "./components/filterModal";
 import Scanner from "./components/Scanner";
 import tardisBackground from "../../../../public/images/randomiser/tardis_background.png";
 import { useEffect, useState, useMemo } from "react";
-import { Story, stories } from "../light/data/stories";
+import { Story, stories } from "../../../data/whoStories";
 import Console from "./components/console/Console";
 
 function Randomiser() {

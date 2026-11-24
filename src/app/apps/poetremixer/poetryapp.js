@@ -1,28 +1,26 @@
-'use client'
-import styles from "../../styles/poetremix.module.css";
-import MainContainer from './components/MainContainer';
-import Modal from './components/modal';
-import { useState } from 'react';
+"use client";
+import styles from "@/app/styles/poetremix.module.css";
+import MainContainer from "./components/MainContainer";
+import Modal from "./components/modal";
+import { useState } from "react";
 import AppsFooter from "../components/AppsFooter";
 
 function PoetryApp() {
-  const [modalOpen, setModalOpen] = useState(true)
+  const [modalOpen, setModalOpen] = useState(true);
 
   return (
     <div className={styles.poetryApp}>
-       <div className={styles.poetFooter}>
-      <AppsFooter />
+      <div className={styles.poetFooter}>
+        <AppsFooter />
       </div>
       <div className={styles.title}>
-        <p className={styles.poetr}>poetr</p><p className={styles.emixer}>EMIXER  </p><p className={styles.tool}> Tool</p>
+        <p className={styles.poetr}>poetr</p>
+        <p className={styles.emixer}>EMIXER </p>
+        <p className={styles.tool}> Tool</p>
       </div>
-     
-      {modalOpen && (
-          <Modal
-          setModalOpen={setModalOpen} />
-        )}
+
+      {modalOpen && <Modal setModalOpen={setModalOpen} />}
       <MainContainer />
-     
     </div>
   );
 }

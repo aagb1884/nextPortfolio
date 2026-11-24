@@ -1,6 +1,6 @@
 "use client";
 import styles from "@/app/styles/whoQuiz.module.css";
-import { Question } from "../../data/questions";
+import { Question } from "../../../../../data/whoQuiz/questions";
 import Image from "next/image";
 import { useState, useRef, useEffect } from "react";
 
@@ -102,20 +102,21 @@ const WrongAnswersModal: React.FC<modalProps> = ({
               ))}
             </ul>
             {wrongAnswer?.officialAnswer && (
-              <p style={{marginTop: "5%"}}>
+              <p style={{ marginTop: "5%" }}>
                 <i>{wrongAnswer.officialAnswer}</i>
               </p>
             )}
           </div>
         )}
         {!wrongAnswer?.options && (
-        <p className={styles.wrongAnswer}>
-          <i>
-            {wrongAnswer?.officialAnswer 
-              ? wrongAnswer?.officialAnswer
-              : wrongAnswer?.answers[0]}
-          </i>
-        </p>)}
+          <p className={styles.wrongAnswer}>
+            <i>
+              {wrongAnswer?.officialAnswer
+                ? wrongAnswer?.officialAnswer
+                : wrongAnswer?.answers[0]}
+            </i>
+          </p>
+        )}
         <div className={styles.buttonRow}>
           <button
             className={`${styleBck}`}

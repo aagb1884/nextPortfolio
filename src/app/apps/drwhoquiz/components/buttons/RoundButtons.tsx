@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "@/app/styles/whoQuiz.module.css";
-import { roundBtn } from "../../data/round-btns";
+import { roundBtn } from "../../../../../data/whoQuiz/round-btns";
 import NavBar from "../NavBar";
 
 type rndBtnProps = {

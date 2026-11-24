@@ -5,7 +5,7 @@ import {
   EmailShareButton,
   EmailIcon,
 } from "react-share";
-import styles from "../../../styles/BFApp.module.css";
+import styles from "@/app/styles/BFApp.module.css";
 import Image from "next/image";
 
 interface Props {

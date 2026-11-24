@@ -4,7 +4,7 @@ interface FilterProps {
   activeWhoTab: string;
 }
 
-import styles from "../../../styles/drwho.module.css";
+import styles from "@/app/styles/drwho.module.css";
 
 const Filter: React.FC<FilterProps> = ({
   filter,

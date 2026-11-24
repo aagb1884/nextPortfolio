@@ -1,11 +1,11 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import styles from "@/app/styles/whoQuiz.module.css";
-import { Question } from "../data/questions";
+import { Question } from "../../../../data/whoQuiz/questions";
 import Image from "next/image";
 import Countdown from "@/app/ui/Countdown";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
-import { handleAudio } from "../data/functions";
+import { handleAudio } from "../../../../data/whoQuiz/functions";
 import { Skip } from "./buttons/Skip";
 import { Submit } from "./buttons/Submit";
 

@@ -3,10 +3,10 @@ import Header from "./components/header";
 import RoundButtons from "./components/buttons/RoundButtons";
 import InstructionsModal from "./components/modals/InstructionsModal";
 import CreditsModal from "./components/modals/CreditsModal";
-import styles from "../../styles/whoQuiz.module.css";
+import styles from "@/app/styles/whoQuiz.module.css";
 import { useEffect, useState } from "react";
-import { useWindowDimensions } from "./data/functions";
-import { roundBtn, roundBtns } from "./data/round-btns";
+import { useWindowDimensions } from "../../../data/whoQuiz/functions";
+import { roundBtn, roundBtns } from "../../../data/whoQuiz/round-btns";
 
 const MainQuizPageContent = () => {
   const [showInstructionsModal, setShowInstructionsModal] =

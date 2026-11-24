@@ -1,8 +1,8 @@
-import { Story } from "../data/stories";
+import { Story } from "../../../../data/whoStories";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import React from "react";
-import styles from "../../../styles/drwho.module.css";
+import styles from "@/app/styles/drwho.module.css";
 
 interface StoryProps {
   story: Story;
@@ -10,21 +10,25 @@ interface StoryProps {
 }
 
 const SortableStory: React.FC<StoryProps> = ({ story, isCorrect }) => {
-  const { listeners, transform, transition, attributes, setNodeRef } = 
-  useSortable({id: story.id})
+  const { listeners, transform, transition, attributes, setNodeRef } =
+    useSortable({ id: story.id });
 
   const style = {
     transition,
-    transform:CSS.Transform.toString(transform)
-  }
-  
+    transform: CSS.Transform.toString(transform),
+  };
+
   return (
-    <li ref={setNodeRef} {...listeners} {...attributes}
-    style={style}
-    className={isCorrect ? styles.storyInfoCorrect : styles.storyInfo}>
-        {story.name}
+    <li
+      ref={setNodeRef}
+      {...listeners}
+      {...attributes}
+      style={style}
+      className={isCorrect ? styles.storyInfoCorrect : styles.storyInfo}
+    >
+      {story.name}
     </li>
   );
-}
+};
 
-export default SortableStory
+export default SortableStory;

@@ -2,7 +2,7 @@
 import { useState } from "react";
 import styles from "@/app/styles/whoQuiz.module.css";
 import ShareButton from "../../big-finish-generator/bf_components/ShareButton";
-import { Question } from "../data/questions";
+import { Question } from "../../../../data/whoQuiz/questions";
 import Image from "next/image";
 import diamond_wall from "../../../../../public/images/drWhoQuiz/diamond_wall.png";
 import { WrongButton } from "./buttons/WrongButton";

@@ -1,5 +1,5 @@
 import styles from "@/app/styles/randomiser.module.css";
-import { Story } from "../../light/data/stories";
+import { Story } from "../../../../data/whoStories";
 
 interface scannerProps {
   story: Story | undefined;

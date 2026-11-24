@@ -2,7 +2,7 @@ import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
 import React from "react";
 import styles from "@/app/styles/whoQuiz.module.css";
-import { plotPoint } from "../data/questions";
+import { plotPoint } from "../../../../data/whoQuiz/questions";
 
 interface StoryProps {
   plotPoint: plotPoint;

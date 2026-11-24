@@ -4,7 +4,7 @@ import { ClassicBtn } from "./buttons/ClassicBtn";
 import { NewWhoBtn } from "./buttons/NewWhoBtn";
 import { AudioRounds } from "./buttons/AudioBtn";
 import { PictureRounds } from "./buttons/ImageBtn";
-import { roundBtn, roundBtns } from "../data/round-btns";
+import { roundBtn, roundBtns } from "../../../../data/whoQuiz/round-btns";
 import { MultipleChoice } from "./buttons/MultipleChoice";
 
 type navBarProps = {

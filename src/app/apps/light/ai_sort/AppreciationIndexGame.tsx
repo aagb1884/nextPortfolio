@@ -1,5 +1,5 @@
 "use client";
-import { Story, stories } from "../data/stories";
+import { Story, stories } from "../../../../data/whoStories";
 import React from "react";
 import { useState, useEffect } from "react";
 import SortableStory from "../components/SortableStory";
@@ -20,7 +20,7 @@ import {
   arrayMove,
   sortableKeyboardCoordinates,
 } from "@dnd-kit/sortable";
-import styles from "../../../styles/drwho.module.css";
+import styles from "@/app/styles/drwho.module.css";
 import Difficulty from "../components/DifficultySelect";
 import AiInstructionsModal from "./AiInstructionsModal";
 import WinModal from "../components/Win";

@@ -1,7 +1,7 @@
 import styles from "@/app/styles/whoQuiz.module.css";
 import Image from "next/image";
 import shuffle from "../../../../../../public/images/drWhoQuiz/icons8-shuffle-48.png";
-import { roundBtn } from "../../data/round-btns";
+import { roundBtn } from "../../../../../data/whoQuiz/round-btns";
 
 interface btnProps {
   mobile: boolean;

@@ -1,6 +1,6 @@
 "use client";
 import styles from "@/app/styles/whoQuiz.module.css";
-import { Question, DeathImages } from "../../data/questions";
+import { Question, DeathImages } from "../../../../../data/whoQuiz/questions";
 
 interface GoodgeProps {
   setModalOpen: (filterTerm: boolean) => void;

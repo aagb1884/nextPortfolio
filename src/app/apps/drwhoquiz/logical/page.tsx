@@ -4,7 +4,7 @@ import backgroundVortex from "../../../../../public/images/drWhoQuiz/vortex.jpg"
 import AppsFooter from "../../components/AppsFooter";
 import KoFiLink from "@/app/ui/KoFi";
 import LogicalLogic from "./LogicalLogic";
-import { LogicalRound } from "../data/questions";
+import { LogicalRound } from "../../../../data/whoQuiz/questions";
 
 const Page = () => {
   return (

@@ -1,17 +1,11 @@
-import styles from "../../../styles/drwho.module.css";
+import styles from "@/app/styles/drwho.module.css";
 
 interface CountdownProps {
   timeLeft: number;
 }
 
-const Countdown: React.FC<CountdownProps>= ({timeLeft}) => {
- 
+const Countdown: React.FC<CountdownProps> = ({ timeLeft }) => {
+  return <div className={styles.coundown}>{timeLeft}</div>;
+};
 
-    return ( 
-        <div className={styles.coundown}>
-          {timeLeft}
-        </div>
-     );
-}
- 
 export default Countdown;

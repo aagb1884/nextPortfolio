@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { rounds } from "../data/questions";
+import { rounds } from "../../../../data/whoQuiz/questions";
 import { notFound } from "next/navigation";
 import styles from "@/app/styles/whoQuiz.module.css";
 import backgroundVortex from "../../../../../public/images/drWhoQuiz/vortex.jpg";

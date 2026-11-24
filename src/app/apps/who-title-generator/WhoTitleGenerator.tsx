@@ -9,7 +9,7 @@ import { Toolbar } from "./components/toolbar";
 import styles from "@/app/styles/whoTitle.module.css";
 import AppsFooter from "../components/AppsFooter";
 import KoFiLink from "@/app/ui/KoFi";
-import { useWindowDimensions } from "../drwhoquiz/data/functions";
+import { useWindowDimensions } from "../../../data/whoQuiz/functions";
 
 export default function WhoTitleGenerator() {
   const [state, setState] = useState<EditorState>(titleData[0]);

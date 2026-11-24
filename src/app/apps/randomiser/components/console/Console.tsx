@@ -1,5 +1,5 @@
 import styles from "@/app/styles/randomiser.module.css";
-import { Story } from "../../../light/data/stories";
+import { Story } from "../../../../../data/whoStories";
 import Rotor from "./Rotor";
 import Controls from "./Controls";
 
