@@ -1,6 +1,6 @@
 import Header from "./TitleHeading";
 import AboutMe from "../About Me";
-import Webring from "@/components/Webring";
+import Webring from "../../..components/Webring";
 import Image from "next/image";
 import github from "../../../../public/images/icons8-github-96.png";
 import apps from "../../../../public/images/application.png";
