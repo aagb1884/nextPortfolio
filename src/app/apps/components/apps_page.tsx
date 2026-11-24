@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import ExternalLinkImage from "../../ui/ExternalLink";
-import styles from "../../styles/appPages.module.css";
+import ExternalLinkImage from "@/app/ui/ExternalLink";
+import styles from "@/app/styles/appPages.module.css";
 import euroBingoGif from "../../../../public/images/eurovision_bingo_button.gif";
 import bigFinishGif from "../../../../public/images/bigFinish/untempered_schism.gif";
 import deekPrime from "../../../../public/images/deekPrime.jpg";
@@ -15,10 +15,10 @@ import sfng from "@/app/images/scifinamegen.png";
 import barlow from "../barlow/opengraph-image.png";
 import whoTitles from "../who-title-generator/opengraph-image.jpeg";
 import randomiser from "../randomiser/opengraph-image.png";
-import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
+import HomeFooter from "@/app/components/Footer/HomeFooter";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
-import AppLinks from "./appLinks";
-import ExternalLink from "@/components/ExternalLink";
+import AppLinks from "@/app/apps/components/appLinks";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const AppsPage = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();

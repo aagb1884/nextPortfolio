@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Link from "next/link";
-import Minimise from "../../Minimise";
-import styles from "../../../../app/styles/tabs.module.css";
-import ExternalLink from "@/components/ExternalLink";
+import Minimise from "@/app/ui/Minimise";
+import styles from "@/app/styles/tabs.module.css";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const EurovisionBingo = () => {
   const [isVisible, setIsVisible] = useState(false);

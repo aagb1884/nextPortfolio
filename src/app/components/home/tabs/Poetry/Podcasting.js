@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Minimise from "../../Minimise";
-import styles from "../../../../app/styles/tabs.module.css";
-import ExternalLink from "@/components/ExternalLink";
+import Minimise from "@/app/ui/Minimise";
+import styles from "@/app/styles/tabs.module.css";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const Podcasting = () => {
   const [isVisible, setIsVisible] = useState(false);

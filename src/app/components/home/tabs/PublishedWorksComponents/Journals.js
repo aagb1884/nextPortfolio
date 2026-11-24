@@ -1,5 +1,5 @@
-import ExternalLink from "@/components/ExternalLink";
-import styles from "../../../../../app/styles/tabs.module.css";
+import ExternalLink from "@/app/components/ExternalLink";
+import styles from "@/app/styles/tabs.module.css";
 
 const Journals = () => {
   return (

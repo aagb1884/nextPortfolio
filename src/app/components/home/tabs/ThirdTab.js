@@ -1,9 +1,9 @@
 import React from "react";
-import Podcasting from "../AllTabs/PoetryComponents/Podcasting";
-import PublishedWorks from "../AllTabs/PoetryComponents/PublishedWorks";
-import LiveEvents from "../AllTabs/PoetryComponents/LiveEvents";
-import styles from "../../../app/styles/tabs.module.css";
-import ExternalLink from "@/components/ExternalLink";
+import Podcasting from "@/app/components/home/tabs/Poetry/Podcasting";
+import PublishedWorks from "@/app/components/home/tabs/Poetry/PublishedWorks";
+import LiveEvents from "@/app/components/home/tabs/Poetry/LiveEvents";
+import styles from "@/app/styles/tabs.module.css";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const ThirdTab = () => {
   return (

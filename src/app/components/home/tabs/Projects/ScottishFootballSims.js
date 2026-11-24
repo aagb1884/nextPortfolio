@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Image from "next/image";
-import sfs from "../../../../../public/images/sfs.png";
-import Minimise from "@/components/HomePage/Minimise";
+import sfs from "../../../../../../public/images/sfs.png";
+import Minimise from "@/app/ui/Minimise";
 import styles from "@/app/styles/tabs.module.css";
-import ExternalLink from "@/components/ExternalLink";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const ScottishFootballSims = () => {
   const [isVisible, setIsVisible] = useState(false);

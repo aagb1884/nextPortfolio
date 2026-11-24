@@ -1,8 +1,8 @@
 "use client";
-import styles from "../styles/credits.module.css";
-import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
+import styles from "@/app/styles/credits.module.css";
+import HomeFooter from "@/app/components/Footer/HomeFooter";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
-import ExternalLink from "@/components/ExternalLink";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const CreditsPage = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();

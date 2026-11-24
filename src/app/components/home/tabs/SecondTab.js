@@ -1,14 +1,17 @@
 import Image from "next/image";
-import styles from "../../../app/styles/tabs.module.css";
-import { DotButton, useDotButton } from "../Embla/EmblaCarouselDotButton";
+import styles from "@/app/styles/tabs.module.css";
+import {
+  DotButton,
+  useDotButton,
+} from "@/app/components/home/Embla/EmblaCarouselDotButton";
 import {
   PrevButton,
   NextButton,
   usePrevNextButtons,
-} from "../Embla/EmblaCarouselArrowButtons";
+} from "@/app/components/home/Embla/EmblaCarouselArrowButtons";
 import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
-import ExternalLink from "@/components/ExternalLink";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const images = [
   "/images/slideshow/lotr_fandom.png",

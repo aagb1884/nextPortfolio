@@ -1,13 +1,13 @@
 "use client";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
-import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
-import AppLinks from "../apps/components/appLinks";
-import Header from "@/components/HomePage/Header/TitleHeading";
+import HomeFooter from "@/app/components/Footer/HomeFooter";
+import AppLinks from "@/app/apps/components/appLinks";
+import Header from "@/app/components/Header/TitleHeading";
 import styles from "@/app/styles/shopPage.module.css";
 import { shopData } from "@/data/shopdata";
 import Image from "next/image";
-import KoFiLink from "../ui/KoFi";
-import ExternalLink from "@/components/ExternalLink";
+import KoFiLink from "@/app/ui/KoFi";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const ShopPage = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();

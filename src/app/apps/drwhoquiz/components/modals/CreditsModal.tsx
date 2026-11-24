@@ -2,7 +2,7 @@
 import Link from "next/link";
 import { modalProps } from "../../../barlow/components/modal";
 import styles from "@/app/styles/whoQuiz.module.css";
-import ExternalLink from "@/components/ExternalLink";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
   return (

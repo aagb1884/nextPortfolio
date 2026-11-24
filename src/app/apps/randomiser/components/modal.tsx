@@ -4,7 +4,7 @@ interface modalProps {
 }
 
 import styles from "@/app/styles/randomiser.module.css";
-import ExternalLink from "@/components/ExternalLink";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const StartModal: React.FC<modalProps> = ({ setStartModal, playHum }) => {
   const begin = () => {

@@ -1,10 +1,10 @@
 import React from "react";
 
-import EurovisionBingo from "../AllTabs/Projects/EurovisionBingo";
-import AllApps from "../AllTabs/Projects/AllApps";
-import ScottishFootballSims from "../AllTabs/Projects/ScottishFootballSims";
-import PoetRemixer from "../AllTabs/Projects/PoetRemixer";
-import styles from "../../../app/styles/tabs.module.css";
+import EurovisionBingo from "@/app/components/home/tabs/Projects/EurovisionBingo";
+import AllApps from "@/app/components/home/tabs/Projects/AllApps";
+import ScottishFootballSims from "@/app/components/home/tabs/Projects/ScottishFootballSims";
+import PoetRemixer from "@/app/components/home/tabs/Projects/PoetRemixer";
+import styles from "@/app/styles/tabs.module.css";
 
 const FirstTab = () => {
   return (
