@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import ExternalLinkImage from "../../ui/ExternalLink";
-import styles from "../../styles/appPages.module.css";
+import ExternalLinkImage from "@/app/ui/ExternalLink";
+import styles from "@/app/styles/appPages.module.css";
 import euroBingoGif from "../../../../public/images/eurovision_bingo_button.gif";
 import bigFinishGif from "../../../../public/images/bigFinish/untempered_schism.gif";
 import deekPrime from "../../../../public/images/deekPrime.jpg";
@@ -15,9 +15,10 @@ import sfng from "@/app/images/scifinamegen.png";
 import barlow from "../barlow/opengraph-image.png";
 import whoTitles from "../who-title-generator/opengraph-image.jpeg";
 import randomiser from "../randomiser/opengraph-image.png";
-import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
+import HomeFooter from "@/app/components/Footer/HomeFooter";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
-import AppLinks from "./appLinks";
+import AppLinks from "@/app/apps/components/appLinks";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const AppsPage = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
@@ -157,26 +158,28 @@ const AppsPage = () => {
         </section>
         <section className={styles.appsLandingCopy}>
           <aside className={styles.designCredit}>
-            Bouncing Text animation by{" "}
-            <Link href="https://lenadesign.org/2021/05/18/css-bouncing-text-animation/">
-              Lena Design <ExternalLinkImage />
-            </Link>
+            Bouncing Text animation by&nbsp;
+            <ExternalLink
+              href="https://lenadesign.org/2021/05/18/css-bouncing-text-animation/"
+              text="Lena Design"
+            />
           </aside>
           <p>
-            Nine (and counting) apps; some requiring esoteric knowledge of{" "}
+            Nine (and counting) apps; some requiring esoteric knowledge of&nbsp;
             <i>Doctor Who</i>, others less so.
           </p>
           <p>
-            You can find more information on each on my{" "}
-            <Link href="https://github.com/aagb1884">
-              GitHub page <ExternalLinkImage />
-            </Link>
+            You can find more information on each on my&nbsp;
+            <ExternalLink
+              href="https://github.com/aagb1884"
+              text="GitHub page"
+            />
             .
           </p>
           <br />
           <aside>
-            NB. <i>Wesley Snopes</i>, the{" "}
-            <i>Derek Adams Management Simulator</i> and{" "}
+            NB. <i>Wesley Snopes</i>, the&nbsp;
+            <i>Derek Adams Management Simulator</i> and&nbsp;
             <i>Rangers Manager Simulator</i> are probably not suitable for work.
           </aside>
           <AppLinks />

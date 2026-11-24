@@ -47,15 +47,6 @@
   flex-direction: row;
 }
 
-.buyBtn {
-  max-width: fit-content;
-  width: auto;
-  padding: 5px;
-  border: red solid 2px;
-  border-radius: 5px;
-  background-color: yellow;
-}
-
 @media only screen and (max-width: 470px) {
   .itemList {
     margin-top: 0px;

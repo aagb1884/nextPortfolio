@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Blog() {
+export default function Shop() {
   return (
     <div>
       <ShopPage />

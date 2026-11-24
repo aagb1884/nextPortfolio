@@ -1,14 +1,13 @@
 "use client";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
-import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
-import AppLinks from "../apps/components/appLinks";
-import Header from "@/components/HomePage/Header/TitleHeading";
+import HomeFooter from "@/app/components/Footer/HomeFooter";
+import AppLinks from "@/app/apps/components/appLinks";
+import Header from "@/app/components/Header/TitleHeading";
 import styles from "@/app/styles/shopPage.module.css";
 import { shopData } from "@/data/shopdata";
 import Image from "next/image";
-import Link from "next/link";
-import ExternalLinkImage from "../ui/ExternalLink";
-import KoFiLink from "../ui/KoFi";
+import KoFiLink from "@/app/ui/KoFi";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const ShopPage = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
@@ -30,10 +29,18 @@ const ShopPage = () => {
 
           <p>{item.desc}</p>
           <div className={styles.itemLink}>
-            <Link href={item.url} className={styles.buyBtn}>
-              <p>Buy Here</p>
-            </Link>
-            <ExternalLinkImage />
+            <ExternalLink
+              href={item.url}
+              styles={{
+                maxWidth: "fit-content",
+                width: "auto",
+                padding: "5px",
+                border: "red solid 2px",
+                borderRadius: "5px",
+                backgroundColor: "yellow",
+              }}
+              text="Buy Here"
+            />
           </div>
         </div>
       </li>

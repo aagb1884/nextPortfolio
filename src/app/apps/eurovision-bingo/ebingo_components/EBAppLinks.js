@@ -16,7 +16,8 @@ const EBAppLinks = () => {
           className={styles.iosAppStoreLogo}
           width={40}
           height={40}
-        />{" "}
+        />
+        &nbsp;
         <p>Apple/iOS</p>
       </Link>
       <Link

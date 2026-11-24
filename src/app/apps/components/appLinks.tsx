@@ -3,27 +3,7 @@ import styles from "../../styles/appPages.module.css";
 import Image from "next/image";
 import appStore from "@/images/App_Store_(iOS)_2017.png";
 import googleplay from "@/images/google_play.png";
-
-const appInfo = [
-  {
-    name: "Eurovision Bingo",
-    iosLink: "https://apps.apple.com/gb/app/eurovision-bingo/id6479647899",
-  },
-  {
-    name: "The Big Finish Boxset Generator",
-    iosLink:
-      "https://apps.apple.com/gb/app/big-finish-boxset-generator/id6497484877",
-    androidLink:
-      "https://play.google.com/store/apps/details?id=com.aagb1884.BigFinishGeneratorApp",
-  },
-  {
-    name: "Setting the Gary Bar Low",
-    iosLink:
-      "https://apps.apple.com/gb/app/setting-the-gary-barlow/id6756266140",
-    androidLink:
-      "https://play.google.com/store/apps/details?id=com.aagb1884.setBarlow",
-  },
-];
+import { appInfo } from "@/data/appLinkData";
 
 const mappedAppInfo = appInfo.map((app, index) => {
   return (
