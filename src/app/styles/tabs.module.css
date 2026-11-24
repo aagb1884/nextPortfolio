@@ -36,6 +36,9 @@
 .projectDescription > li {
   list-style: none;
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
 
 .techStack {
@@ -245,6 +248,12 @@
   }
   .projectDescription {
     font-size: 12px;
+  }
+
+  .projectDescription > li {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 
   .FirstTab > summary > p,

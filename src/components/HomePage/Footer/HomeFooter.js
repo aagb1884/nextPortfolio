@@ -1,10 +1,10 @@
 "use client";
-import ExternalLinkImage from "@/app/ui/ExternalLink";
 import styles from "../../../app/styles/footer.module.css";
 import Link from "next/link";
 import KoFiLink from "@/app/ui/KoFi";
 import createClient from "../../../app/blog/blog_components/client";
 import React, { useEffect, useState } from "react";
+import ExternalLink from "@/components/ExternalLink";
 
 const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
   const [allPostsData, setAllPosts] = useState([]);
@@ -134,9 +134,10 @@ const HomeFooter = ({ goToContactForm, goToTab, contact, tabs }) => {
                 <Link href="/apps/wesley-snopes">Wesley Snopes</Link>
               </li>
               <li>
-                <Link href="https://scottish-football-simulators.co.uk/">
-                  Scottish Football Simulators <ExternalLinkImage />
-                </Link>
+                <ExternalLink
+                  href="https://scottish-football-simulators.co.uk/"
+                  text="Scottish Football Simulators"
+                />
               </li>
             </ul>
           </div>

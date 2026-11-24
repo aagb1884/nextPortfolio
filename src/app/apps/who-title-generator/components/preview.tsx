@@ -62,7 +62,8 @@ export function Preview(props: PreviewProps) {
               >
                 {state.writer !== undefined && showCredit
                   ? state.writtenBy
-                  : ""}{" "}
+                  : ""}
+                &nbsp;
                 {state.writer}
               </p>
             </>

@@ -13,7 +13,7 @@ const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
       <div className={styles.startModal}>
         <h2 className={styles.sModalHTxt}>Quiz Credits</h2>
         <p className={styles.sModalTxt}>
-          Quizzes written by <Link href="/">Andrew Blair</Link> and{" "}
+          Quizzes written by <Link href="/">Andrew Blair</Link> and&nbsp;
           <Link href="https://bsky.app/profile/markharrison.bsky.social">
             Mark Harrison
           </Link>
@@ -24,8 +24,8 @@ const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
         </p>
         <br />
         <p className={styles.sModalTxt}>
-          <i>Doctor Who</i>, <i>Torchwood</i>, <i>The Sarah Jane Adventures</i>{" "}
-          and <i>K9 and Company</i> are copyright of the BBC.
+          <i>Doctor Who</i>, <i>Torchwood</i>, <i>The Sarah Jane Adventures</i>
+          &nbsp; and <i>K9 and Company</i> are copyright of the BBC.
         </p>
         <p className={styles.sModalTxt}>
           The TARDIS is a trademark of the BBC.
@@ -34,7 +34,7 @@ const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
           The Daleks are a trademark of the Terry Nation Estate.
         </p>
         <p className={styles.sModalTxt}>
-          Exploding Dalek illustration by{" "}
+          Exploding Dalek illustration by&nbsp;
           <Link href="https://tardis.fandom.com/wiki/Roy_Knipe">Roy Knipe</Link>
           .
         </p>
@@ -58,7 +58,9 @@ const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
             </Link>
           </li>
           <li>
-            <Link href="http://www.shannonsullivan.com/doctorwho/">A Brief History of Time Travel</Link>
+            <Link href="http://www.shannonsullivan.com/doctorwho/">
+              A Brief History of Time Travel
+            </Link>
           </li>
         </ul>
         <button className={styles.btn} onClick={() => setModalOpen(false)}>

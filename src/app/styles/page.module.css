@@ -239,9 +239,12 @@ a.secondary {
     justify-content: space-around;
   }
 
-  #externalLink {
-    width: 10px;
-    height: 10px;
+  .externalLink {
+    display: inline-block;
+    width: 0.75em;
+    height: 0.75em;
+    margin-left: 0.25em;
+    vertical-align: baseline;
   }
 
   .koFi > a > img {

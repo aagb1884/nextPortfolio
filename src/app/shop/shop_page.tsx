@@ -6,9 +6,8 @@ import Header from "@/components/HomePage/Header/TitleHeading";
 import styles from "@/app/styles/shopPage.module.css";
 import { shopData } from "@/data/shopdata";
 import Image from "next/image";
-import Link from "next/link";
-import ExternalLinkImage from "../ui/ExternalLink";
 import KoFiLink from "../ui/KoFi";
+import ExternalLink from "@/components/ExternalLink";
 
 const ShopPage = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
@@ -30,10 +29,18 @@ const ShopPage = () => {
 
           <p>{item.desc}</p>
           <div className={styles.itemLink}>
-            <Link href={item.url} className={styles.buyBtn}>
-              <p>Buy Here</p>
-            </Link>
-            <ExternalLinkImage />
+            <ExternalLink
+              href={item.url}
+              styles={{
+                maxWidth: "fit-content",
+                width: "auto",
+                padding: "5px",
+                border: "red solid 2px",
+                borderRadius: "5px",
+                backgroundColor: "yellow",
+              }}
+              text="Buy Here"
+            />
           </div>
         </div>
       </li>

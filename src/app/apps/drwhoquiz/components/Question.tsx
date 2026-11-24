@@ -154,7 +154,8 @@ const QuestionComponent = ({
                   />
                   {option}
                 </label>
-              ))}{" "}
+              ))}
+              &nbsp;
             </div>
           )}
           <Submit handleAnswerSubmit={handleAnswerSubmit} />

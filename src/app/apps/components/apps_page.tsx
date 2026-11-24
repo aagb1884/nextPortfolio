@@ -157,17 +157,17 @@ const AppsPage = () => {
         </section>
         <section className={styles.appsLandingCopy}>
           <aside className={styles.designCredit}>
-            Bouncing Text animation by{" "}
+            Bouncing Text animation by&nbsp;
             <Link href="https://lenadesign.org/2021/05/18/css-bouncing-text-animation/">
               Lena Design <ExternalLinkImage />
             </Link>
           </aside>
           <p>
-            Nine (and counting) apps; some requiring esoteric knowledge of{" "}
+            Nine (and counting) apps; some requiring esoteric knowledge of&nbsp;
             <i>Doctor Who</i>, others less so.
           </p>
           <p>
-            You can find more information on each on my{" "}
+            You can find more information on each on my&nbsp;
             <Link href="https://github.com/aagb1884">
               GitHub page <ExternalLinkImage />
             </Link>
@@ -175,8 +175,8 @@ const AppsPage = () => {
           </p>
           <br />
           <aside>
-            NB. <i>Wesley Snopes</i>, the{" "}
-            <i>Derek Adams Management Simulator</i> and{" "}
+            NB. <i>Wesley Snopes</i>, the&nbsp;
+            <i>Derek Adams Management Simulator</i> and&nbsp;
             <i>Rangers Manager Simulator</i> are probably not suitable for work.
           </aside>
           <AppLinks />

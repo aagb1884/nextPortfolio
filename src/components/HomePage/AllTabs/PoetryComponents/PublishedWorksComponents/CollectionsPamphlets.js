@@ -1,5 +1,5 @@
+import ExternalLink from "@/components/ExternalLink";
 import styles from "../../../../../app/styles/tabs.module.css";
-import ExternalLinkImage from "@/app/ui/ExternalLink";
 
 const CollectionsPamphlets = () => {
   return (
@@ -14,41 +14,45 @@ const CollectionsPamphlets = () => {
         </li>
         <li>
           <i>The R-Pattz Facttz 2020</i>, 2020 (Speculative Books) [Out of
-          Print]
+          Print]{" "}
+          <ExternalLink
+            href="https://andrewblair.bigcartel.com/product/the-r-pattz-facttz-2020"
+            text="[Buy Here]"
+          />
           <br />
-          <a href="https://emmalee1.wordpress.com/2020/11/04/the-r-pattz-facttz-andrew-blair-speculative-books-book-review/">
-            Emma Lee Review
-            <ExternalLinkImage />
-          </a>
+          <ExternalLink
+            href="https://emmalee1.wordpress.com/2020/11/04/the-r-pattz-facttz-andrew-blair-speculative-books-book-review/"
+            text="Emma Lee Review"
+          />
           <br />
-          <a href="https://www.sphinxreview.co.uk/index.php/opoi-reviews-2020/andrew-blair-the-r-pattz-facttz">
-            OPOI Review
-            <ExternalLinkImage />
-          </a>
+          <ExternalLink
+            href="https://www.sphinxreview.co.uk/index.php/opoi-reviews-2020/andrew-blair-the-r-pattz-facttz"
+            text="OPOI Review"
+          />
         </li>
         <li>
-          <i>An Intense Young Man at An Open Mic Night</i>, 2024
-          (Self-Published){" "}
-          <a href="https://ko-fi.com/s/582ed13a4b">
-            [Buy Here
-            <ExternalLinkImage />]
-          </a>
-          <br />
-        </li>
-        <li>
-          <i>The R-Pattz Facttz 2020</i>, 2025 (Self-Published){" "}
-          <a href="https://ko-fi.com/s/096171bd41">
-            [Buy Here
-            <ExternalLinkImage />]
-          </a>
+          <i>An Intense Young Man at An Open Mic Night</i>, 2024 (ebook,
+          Self-Published)&nbsp;
+          <ExternalLink
+            href="https://ko-fi.com/s/582ed13a4b"
+            text="[Buy Here]"
+          />
           <br />
         </li>
         <li>
-          <i>polblar Tmolkop</i>, 2026 (The Braag){" "}
-          <a href="https://thebraag.co/product/polblar-tmolkop/">
-            [Buy Here
-            <ExternalLinkImage />]
-          </a>
+          <i>The R-Pattz Facttz 2020</i>, 2025 (ebook, Self-Published)&nbsp;
+          <ExternalLink
+            href="https://ko-fi.com/s/096171bd41"
+            text="[Buy Here]"
+          />
+          <br />
+        </li>
+        <li>
+          <i>polblar Tmolkop</i>, 2026 (The Braag)&nbsp;
+          <ExternalLink
+            href="https://thebraag.co/product/polblar-tmolkop/"
+            text="[Buy Here]"
+          />
           <br />
         </li>
       </ul>

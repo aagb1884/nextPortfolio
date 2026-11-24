@@ -30,33 +30,33 @@ const StartModal: React.FC<modalProps> = ({ setStartModal, playHum }) => {
         <br />
         <ul>
           <li className={styles.sModalLi}>
-            UK: most Doctor Who stories are on{" "}
+            UK: most Doctor Who stories are on&nbsp;
             <Link href="https://www.bbc.co.uk/iplayer" target="_blank">
               BBC I-Player
             </Link>
             .
           </li>
           <li className={styles.sModalLi}>
-            America: most 1963 - 1996 Doctor Who stories are on{" "}
+            America: most 1963 - 1996 Doctor Who stories are on&nbsp;
             <Link href="https://www.britbox.com/" target="_blank">
               Britbox
             </Link>
-            , 2005 - 2022 stories are on{" "}
+            , 2005 - 2022 stories are on&nbsp;
             <Link href="https://www.amcplus.com/" target="_blank">
               AMC
             </Link>
-            , and 2023 - 2025 stories are on{" "}
+            , and 2023 - 2025 stories are on&nbsp;
             <Link href="https://www.disneyplus.com/" target="_blank">
               Disney +
             </Link>
             .
           </li>
           <li className={styles.sModalLi}>
-            Australia: most 1963 - 1996 Doctor Who stories are on{" "}
+            Australia: most 1963 - 1996 Doctor Who stories are on&nbsp;
             <Link href="https://www.britbox.com/" target="_blank">
               Britbox
-            </Link>{" "}
-            and 2023 - 2025 stories are on{" "}
+            </Link>
+            &nbsp; and 2023 - 2025 stories are on&nbsp;
             <Link href="https://www.disneyplus.com/" target="_blank">
               Disney +
             </Link>

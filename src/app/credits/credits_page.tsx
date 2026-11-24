@@ -1,9 +1,8 @@
 "use client";
 import styles from "../styles/credits.module.css";
-import Link from "next/link";
-import ExternalLinkImage from "../ui/ExternalLink";
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
+import ExternalLink from "@/components/ExternalLink";
 
 const CreditsPage = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
@@ -15,535 +14,307 @@ const CreditsPage = () => {
       <ul className={styles.creditsUl}>
         <h4>Icons</h4>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://icons8.com/icon/xUOnLwv6j89J/beard"
-          >
-            Beard <ExternalLinkImage />{" "}
-          </Link>
+            text="Beard"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://icons8.com/icon/pwQ5RLL0yJgu/email"
-          >
-            Email <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+            text="Email"
+          />
         </li>
         <li>
-          <Link target="_blank" href="https://icons8.com/icon/63777/github">
-            GitHub <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+          <ExternalLink
+            href="https://icons8.com/icon/63777/github"
+            text="Github"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://icons8.com/icon/xuvGCOXi8Wyg/linkedin"
-          >
-            LinkedIn <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+            text="LinkedIn"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.flaticon.com/free-icon/application_5996260?term=app&page=1&position=61&origin=tag&related_id=5996260"
-          >
-            Apps Icon <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://www.flaticon.com/authors/anggara">
-            FlatIcon <ExternalLinkImage />{" "}
-          </Link>
+            text="Apps Icon"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://icons8.com/icon/18734/copy-to-clipboard"
-          >
-            Copy to Clipboard <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+            text="Copy to Clipboard"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://icons8.com/icon/1OU2pduLotIA/blog"
-          >
-            Blog <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+            text="Blog"
+          />
         </li>
         <li>
-          <Link target="_blank" href="https://icons8.com/icon/13841/rss">
-            RSS <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+          <ExternalLink href="https://icons8.com/icon/13841/rs" text="RSS" />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://icons8.com/icon/QqQ9t0fbQ4Yw/shuffle"
-          >
-            Shuffle <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+            text="Shuffle"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://icons8.com/icon/iWO20ZvCeU53/audio"
-          >
-            Audio <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+            text="Audio"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://icons8.com/icon/83271/multiple-choice"
-          >
-            Multiple Choice <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+            text="Multiple Choice"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://icons8.com/icon/QcJO6lyhsxBi/image"
-          >
-            Image <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+            text="Image"
+          />
         </li>
         <li>
-          <Link target="_blank" href="https://icons8.com/icon/2902/voice">
-            Voice <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+          <ExternalLink
+            href="https://icons8.com/icon/2902/voice"
+            text="Voice"
+          />
         </li>
         <li>
-          <Link target="_blank" href="https://icons8.com/icon/644/mute">
-            Mute <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+          <ExternalLink href="https://icons8.com/icon/644/mute" text="Mute" />
         </li>
         <li>
-          <Link target="_blank" href="https://icons8.com/icon/403/pause">
-            Pause <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+          <ExternalLink href="https://icons8.com/icon/403/pause" text="Pause" />
         </li>
         <li>
-          <Link target="_blank" href="https://icons8.com/icon/398/play">
-            Play <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+          <ExternalLink href="https://icons8.com/icon/398/play" text="Play" />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://icons8.com/icon/QHJ0cVJXSlCx/shop"
-          >
-            Shop <ExternalLinkImage />{" "}
-          </Link>{" "}
-          icon by{" "}
-          <Link target="_blank" href="https://icons8.com">
-            Icons8 <ExternalLinkImage />{" "}
-          </Link>
+            text="Shop"
+          />
         </li>
         <li>
-          <Link
+          <ExternalLink
             href="https://www.flaticon.com/free-icons/external-link"
-            title="external link icons"
-          >
-            External link icons created by Yudhi Restu - Flaticon{" "}
-            <ExternalLinkImage />{" "}
-          </Link>
+            text="External link icons created by Yudhi Restu - Flaticon"
+          />
         </li>
       </ul>
       <ul className={styles.imagesUl}>
         <h4>Images</h4>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.publicdomainpictures.net/en/view-image.php?image=475095&picture=starry-stars-sky-night"
-          >
-            Starry Stars Sky Night <ExternalLinkImage />{" "}
-          </Link>{" "}
-          image by{" "}
-          <Link
-            target="_blank"
-            href="https://www.publicdomainpictures.net/en/browse-author.php?a=149229"
-          >
-            Andrea Stöckel <ExternalLinkImage />{" "}
-          </Link>
+            text="Starry Stars Sky Night"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://commons.wikimedia.org/wiki/File:Next_Store_at_Castlepoint.jpg"
-          >
-            Next Store at Castlepoint by Dorsetdude <ExternalLinkImage />.{" "}
-          </Link>
+            text="Next Store at Castlepoint by Dorsetdude"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/photo/portrait-of-smiling-blonde-woman-19161819/"
-          >
-            Smiling Blonde Woman by Karina Rymarchuk <ExternalLinkImage />.{" "}
-          </Link>
+            text="Smiling Blonde Woman by Karina Rymarchuk"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/photo/person-feeling-pain-in-the-knee-11349880/"
-          >
-            Person feeling pain in the knee by Towfiqu barbhuiya{" "}
-            <ExternalLinkImage />.{" "}
-          </Link>
+            text="Person feeling pain in the knee by Towfiqu barbhuiya"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://stocksnap.io/photo/heidelberg-germany-WXMQNKRE6Y"
-          >
-            Heidelberg <ExternalLinkImage />.{" "}
-          </Link>{" "}
-          <Link target="_blank" href="https://stocksnap.io/author/29367">
-            Roman Kraft <ExternalLinkImage />
-          </Link>
+            text="Heidelberg"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://commons.wikimedia.org/wiki/File:Progress_Live_2011_Tour,_Sunderland_Stadium_of_Light_Gary_Barlow_(5783550505).jpg"
-          >
-            Progress Live 2011 Tour, Sunderland Stadium of Light Gary Barlow{" "}
-            <ExternalLinkImage />.{" "}
-          </Link>{" "}
-          <Link
-            target="_blank"
-            href="https://www.flickr.com/people/22017657@N05"
-          >
-            vagueonthehow <ExternalLinkImage />
-          </Link>
+            text="Progress Live 2011 Tour, Sunderland Stadium of Light Gary Barlow"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.flickr.com/photos/creative_stock/5227842611"
-          >
-            electronic circuit board <ExternalLinkImage />.{" "}
-          </Link>{" "}
-          <Link
-            target="_blank"
-            href="https://www.flickr.com/photos/creative_stock/"
-          >
-            Creativity103 <ExternalLinkImage />
-          </Link>
+            text="electronic circuit board"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://commons.wikimedia.org/wiki/File:Doctor_Who_logo_1963-1967path.svg"
-          >
-            Doctor Who logo 1963 - 1967 <ExternalLinkImage />.{" "}
-          </Link>{" "}
-          <Link
-            target="_blank"
-            href="https://de.wikipedia.org/wiki/Benutzer:JoKalliauer"
-          >
-            Johannes Kalliauer <ExternalLinkImage />
-          </Link>
+            text="Doctor Who logo 1963 - 1967"
+          />
         </li>
         <li>
-          <Link target="_blank" href="https://www.throup.org.uk/doctor_who.php">
-            Doctor Who logo 2005 <ExternalLinkImage />{" "}
-          </Link>{" "}
+          <ExternalLink
+            href="https://www.throup.org.uk/doctor_who.php"
+            text="Doctor Who logo 2005"
+          />
         </li>
       </ul>
       <ul className={styles.cssUl}>
         <h4>CSS</h4>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://lenadesign.org/2021/05/18/css-bouncing-text-animation/"
-          >
-            Bouncing Text Animation <ExternalLinkImage />{" "}
-          </Link>
+            text="Bouncing Text Animation"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://codepen.io/TajShireen/pen/LYyOzJL"
-          >
-            Metallic Bordered Text <ExternalLinkImage />{" "}
-          </Link>{" "}
-          by{" "}
-          <Link target="_blank" href="https://codepen.io/TajShireen">
-            Shireen Taj <ExternalLinkImage />{" "}
-          </Link>
+            text="Metallic Bordered Text"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://codepen.io/Linklvarotrigo/pen/PoKMyNO"
-          >
-            text-color-animation <ExternalLinkImage />{" "}
-          </Link>{" "}
-          by{" "}
-          <Link target="_blank" href="https://codepen.io/Linklvarotrigo">
-            Alvaro <ExternalLinkImage />{" "}
-          </Link>
+            text="text-color-animation"
+          />
         </li>
       </ul>
       <ul className={styles.cssUl}>
         <h4>Fonts</h4>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.1001fonts.com/digital-fonts.html"
-          >
-            Digital-7 from Digital Fonts. <ExternalLinkImage />{" "}
-          </Link>
+            text="Digital-7 from Digital Fonts."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.fonts4free.net/torchwood-font.html"
-          >
-            Torchwood Font by Sostopher.
-            <ExternalLinkImage />{" "}
-          </Link>
+            text="Torchwood Font by Sostopher."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.freefontdownload.org/en/opti-formula-one.font"
-          >
-            OPTI Formula One from freefontdownload.org.
-            <ExternalLinkImage />{" "}
-          </Link>
+            text="OPTI Formula One from freefontdownload.org."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.whatfontis.com/FF_OPTIEnraged-BoldAD.font"
-          >
-            OPTI Enraged Bold from WhatFontIs.com.
-            <ExternalLinkImage />{" "}
-          </Link>
+            text="OPTI Enraged Bold from WhatFontIs.com."
+          />
         </li>
         <li>
-          <Link target="_blank" href="https://freefonts.co/fonts/futura-bold">
-            Futura Bold from freefonts.co.
-            <ExternalLinkImage />{" "}
-          </Link>
+          <ExternalLink
+            href="https://freefonts.co/fonts/futura-bold"
+            text="Futura Bold from freefonts.co."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://freefontsvault.com/eurostile-font/"
-          >
-            Eurostile from freefrontsvault.com.
-            <ExternalLinkImage />{" "}
-          </Link>
+            text="Eurostile from freefrontsvault.com."
+          />
         </li>
         <li>
-          <Link target="_blank" href="https://fonts2u.com/postantiqua.font">
-            Post Antiqua from fonts2u.com.
-            <ExternalLinkImage />{" "}
-          </Link>
+          <ExternalLink
+            href="https://fonts2u.com/postantiqua.font"
+            text="Post Antiqua from fonts2u.com."
+          />
         </li>
       </ul>
       <ul className={styles.cssUl}>
         <h4>Music</h4>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://pixabay.com/users/lorenzobuczek-16982400/?utm_source=link-attribution&utm_medium=referral&utm_campaign=music&utm_content=147363"
-          >
-            Vivaldi&apos;s Four Seasons
-          </Link>{" "}
-          from{" "}
-          <Link href="https://pixabay.com/users/lorenzobuczek-16982400/">
-            Lorenzo Buczek on Pixabay <ExternalLinkImage />{" "}
-          </Link>
+            text="Vivaldi's Four Seasons"
+          />
         </li>
       </ul>
       <ul className={styles.cssUl}>
         <h4>Video</h4>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/video/a-man-is-standing-in-front-of-a-building-4782045/"
-          >
-            A Man is Standing in front of a building
-          </Link>
-          . Video by cottonbro studio.
-          <ExternalLinkImage />
+            text="A Man is Standing in front of a building - video by cottonbro studio."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/video/a-man-riding-a-bike-in-the-corridor-7969625/"
-          >
-            Man riding bike in the corridor
-          </Link>
-          . Video by cottonbro studio.
-          <ExternalLinkImage />
+            text="Man riding bike in the corridor - video by cottonbro studio"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/video/a-woman-in-black-is-doing-a-skateboard-trick-4594927/"
-          >
-            Woman doing a skateboard trick
-          </Link>
-          . Video by cottonbro studio.
-          <ExternalLinkImage />
+            text="Woman doing a skateboard trick -  video by cottonbro studio"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/video/man-rapping-7972147/"
-          >
-            Man rapping
-          </Link>
-          . Video by cottonbro studio.
-          <ExternalLinkImage />
+            text="Man rapping -  video by cottonbro studio"
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/video/a-hip-hop-dancer-2675513/"
-          >
-            A hip hop dancer
-          </Link>
-          . Video by Mixkit - Free Video Assets.
-          <ExternalLinkImage />
+            text="Hip hop dancer - video by Mixkit - Free Video Assets."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/video/neon-club-disco-led-18557111/"
-          >
-            Neon lighting
-          </Link>
-          . Video by Pachon in Motion.
-          <ExternalLinkImage />
+            text="Neon lighting - video by Pachon in Motion."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/video/white-noise-and-random-patterns-flashing-8482774/"
-          >
-            A hip hop dancer
-          </Link>
-          . Video by Davis Vidal.
-          <ExternalLinkImage />
+            text="Distorted static with flashing lines and patterns - video by Davis Vidal."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/video/a-computer-hard-drive-part-spinning-in-operation-3289546/"
-          >
-            A computer hard drive spinning
-          </Link>
-          . Video by Paice Street.
-          <ExternalLinkImage />
+            text="A computer hard drive spinning - video by Paice Street."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/video/close-up-of-gears-on-a-machine-in-a-factory-10040029/"
-          >
-            Gears on a machine
-          </Link>
-          . Video by Los Muertos Crew.
-          <ExternalLinkImage />
+            text="Gears on a machine - video by Los Muertos Crew."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://www.pexels.com/video/a-person-operating-audio-mixer-7586157/"
-          >
-            Audio mixing
-          </Link>
-          . Video by Los Muertos Crew.
-          <ExternalLinkImage />
+            text="Audio mixing - video by Los Muertos Crew."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://pixabay.com/videos/sound-recording-microphone-121114/"
-          >
-            Sound recording
-          </Link>{" "}
-          from{" "}
-          <Link href="https://pixabay.com/users/blackmarketmusic-2976878/">
-            {" "}
-            Black Market Music on Pixabay <ExternalLinkImage />{" "}
-          </Link>
+            text="Sound recording - video by Black Market Music on Pixabay."
+          />
         </li>
         <li>
-          <Link
-            target="_blank"
+          <ExternalLink
             href="https://pixabay.com/videos/dj-scratch-scratching-hang-up-7382/"
-          >
-            DJ Scratching
-          </Link>{" "}
-          from{" "}
-          <Link href="https://pixabay.com/users/mrganso-607585/">
-            {" "}
-            Mr Ganso on Pixabay <ExternalLinkImage />{" "}
-          </Link>
+            text="DJ Scratching - video by Mr Ganso on Pixabay."
+          />
         </li>
       </ul>
       <HomeFooter
