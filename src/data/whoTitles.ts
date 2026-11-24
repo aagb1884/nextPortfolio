@@ -1,4 +1,4 @@
-import { EditorState } from "./components/types";
+import { EditorState } from "../app/apps/who-title-generator/components/types";
 export const titleData: EditorState[] = [
   {
     name: "Select A Title Sequence",

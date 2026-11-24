@@ -1,10 +1,10 @@
 "use client";
 import styles from "@/app/styles/BFApp.module.css";
-import BFFooter from "../big-finish-generator/bf_components/BFFooter";
-import BFHeader from "../big-finish-generator/bf_components/BFHeader";
-import ClearAll from "../big-finish-generator/bf_components/ClearAll";
-import ShareButton from "../big-finish-generator/bf_components/ShareButton";
-import SocialMediaShare from "../big-finish-generator/bf_components/SocialMediaShare";
+import BFFooter from "./bf_components/BFFooter";
+import BFHeader from "./bf_components/BFHeader";
+import ClearAll from "./bf_components/ClearAll";
+import ShareButton from "./bf_components/ShareButton";
+import SocialMediaShare from "./bf_components/SocialMediaShare";
 import MainCharacter from "../../../data/bfLists/MainCharacter";
 import SupportingCharacter from "../../../data/bfLists/SupportingCharacter";
 import Villain from "../../../data/bfLists/Villain";

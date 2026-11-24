@@ -4,7 +4,7 @@ import { EditorState } from "./components/types";
 import { openImageInNewTab } from "./functions";
 import { Preview } from "./components/preview";
 import { Input } from "./components/input";
-import { titleData } from "./data";
+import { titleData } from "../../../data/whoTitles";
 import { Toolbar } from "./components/toolbar";
 import styles from "@/app/styles/whoTitle.module.css";
 import AppsFooter from "../components/AppsFooter";

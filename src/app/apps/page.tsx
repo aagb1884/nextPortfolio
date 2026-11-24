@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import AppsPage from "./components/apps_page";
+import AppsPage from "./apps_page";
 
 export const metadata: Metadata = {
   title: "Andrew Blair's Apps Page",

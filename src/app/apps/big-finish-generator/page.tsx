@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import BfGenPage from "../components/bf_gen_page";
+import BfGenPage from "./bf_gen_page";
 
 export const metadata: Metadata = {
   title: "The Big Finish Boxset Generator",

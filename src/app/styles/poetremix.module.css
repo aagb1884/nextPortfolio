@@ -6,9 +6,7 @@
   height: 100vh;
 }
 
-
 /* header */
-
 
 .title {
   display: flex;
@@ -24,10 +22,10 @@
 .poetr {
   font-family: var(--font-tangerine);
 }
-.emixer{
+.emixer {
   font-family: var(--font-oxanium);
 }
-.tool{
+.tool {
   font-family: var(--font-p2p);
   margin-left: 1%;
 }
@@ -46,11 +44,13 @@
   margin-top: 5px;
 }
 
-.column1, .column3 {
+.column1,
+.column3 {
   width: 40%;
 }
-.column2, .column4 {
-  width: 10%
+.column2,
+.column4 {
+  width: 10%;
 }
 
 .poemInput {
@@ -60,11 +60,12 @@
   overflow-y: scroll;
   margin: 2% 5%;
   padding: 1%;
-  background-color:mintcream;
+  background-color: mintcream;
   color: black;
 }
 
-.buttonsColumn, .remixButtons{
+.buttonsColumn,
+.remixButtons {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -72,7 +73,8 @@
   color: black;
 }
 
-.buttonsColumn > div > button, .remixButtons > div > button {
+.buttonsColumn > div > button,
+.remixButtons > div > button {
   font-size: 10px;
   color: black;
 }
@@ -91,15 +93,21 @@
   background-color: greenyellow;
 }
 
-.splitBtns, .reverseBtns, .randomiseBtns, .miscBtns, .sortBtns {
+.splitBtns,
+.reverseBtns,
+.randomiseBtns,
+.miscBtns,
+.sortBtns {
   margin: 5px;
 }
 
-.verbs > button, .adj > button, .nouns > button {
+.verbs > button,
+.adj > button,
+.nouns > button {
   color: black;
 }
 
-.remixButtons{
+.remixButtons {
   margin-right: 20%;
 }
 
@@ -107,7 +115,6 @@
   color: gray;
   font-style: italic;
 }
-
 
 .remixedPoem {
   max-width: 90%;
@@ -136,7 +143,8 @@
   width: 100%;
 } */
 
-.clearAllBtn, .clearRemixBtn {
+.clearAllBtn,
+.clearRemixBtn {
   background-color: red;
   color: black;
   border: 2px solid black;
@@ -145,7 +153,9 @@
   width: 100%;
 }
 
-.verbs, .nouns, .adj {
+.verbs,
+.nouns,
+.adj {
   margin: 1px;
   padding: 3px;
 }
@@ -182,7 +192,7 @@
 }
 
 .splitBtns > button {
-  background-color: rgb(208, 168, 246);  
+  background-color: rgb(208, 168, 246);
   border: 2px solid black;
   margin: 1px;
   padding: 2px;
@@ -190,15 +200,16 @@
 }
 
 .reverseBtns > button {
-  background-color:rgb(180, 250, 180);
+  background-color: rgb(180, 250, 180);
   border: 2px solid black;
   margin: 1px;
   padding: 2px;
   width: 100%;
-} 
+}
 
-.randomiseBtns > button, .randomiseBtn {
-  background-color:rgb(243, 237, 184);
+.randomiseBtns > button,
+.randomiseBtn {
+  background-color: rgb(243, 237, 184);
   border: 2px solid black;
   margin: 1px;
   padding: 2px;
@@ -232,12 +243,15 @@
     padding-top: 0;
   }
 
-  .column1, .column2, .column3, .column4 {
+  .column1,
+  .column2,
+  .column3,
+  .column4 {
     width: 100%;
   }
 
-
-  .poemInput, .remixedPoem {
+  .poemInput,
+  .remixedPoem {
     min-width: 80%;
     min-height: 180px;
     max-height: 200px;
@@ -248,8 +262,14 @@
     margin-right: 0;
   }
 
-  .splitBtns, .reverseBtns, .randomiseBtns, 
-  .miscBtns, .sortBtns, .verbs, .nouns, .adj {
+  .splitBtns,
+  .reverseBtns,
+  .randomiseBtns,
+  .miscBtns,
+  .sortBtns,
+  .verbs,
+  .nouns,
+  .adj {
     display: flex;
     flex-direction: row;
   }
@@ -257,7 +277,6 @@
   .wordTypes {
     margin: 5px;
   }
-
 }
 
 .modalWrapper {
@@ -285,13 +304,15 @@
 }
 
 .modalExitBtn {
-  text-align: left;
+  text-align: center;
   font-size: 1rem;
   width: 70%;
   border: 1px solid black;
   text-decoration: none;
   padding: 0.5rem 0.5rem;
   margin: 0.5rem;
+  border-radius: 5px;
+  filter: drop-shadow(0 0 0.15rem crimson);
 }
 .modalExitBtn:hover {
   cursor: pointer;
