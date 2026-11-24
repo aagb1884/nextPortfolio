@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { modalProps } from "../../../barlow/components/modal";
 import styles from "@/app/styles/whoQuiz.module.css";
+import ExternalLink from "@/components/ExternalLink";
 
 const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
   return (
@@ -14,9 +15,10 @@ const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
         <h2 className={styles.sModalHTxt}>Quiz Credits</h2>
         <p className={styles.sModalTxt}>
           Quizzes written by <Link href="/">Andrew Blair</Link> and&nbsp;
-          <Link href="https://bsky.app/profile/markharrison.bsky.social">
-            Mark Harrison
-          </Link>
+          <ExternalLink
+            href="https://bsky.app/profile/markharrison.bsky.social"
+            text="Mark Harrison"
+          />
           .
         </p>
         <p className={styles.sModalTxt}>
@@ -35,7 +37,10 @@ const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
         </p>
         <p className={styles.sModalTxt}>
           Exploding Dalek illustration by&nbsp;
-          <Link href="https://tardis.fandom.com/wiki/Roy_Knipe">Roy Knipe</Link>
+          <ExternalLink
+            href="https://tardis.fandom.com/wiki/Roy_Knipe"
+            text="Roy Knipe"
+          />
           .
         </p>
         <br />
@@ -45,22 +50,28 @@ const CreditsModal: React.FC<modalProps> = ({ setModalOpen }) => {
         <ul>
           Sources:
           <li>
-            <Link href="https://tardis.fandom.com/">TARDIS Fandom</Link>
+            <ExternalLink
+              href="https://tardis.fandom.com/"
+              text="TARDIS Fandom"
+            />
           </li>
           <li>
-            <Link href="https://tardis.wiki/wiki/Doctor_Who_Wiki">
-              TARDIS Wiki
-            </Link>
+            <ExternalLink
+              href="https://tardis.wiki/wiki/Doctor_Who_Wiki"
+              text="TARDIS Wiki"
+            />
           </li>
           <li>
-            <Link href="http://www.chakoteya.net/DoctorWho/">
-              chakoteya.net Transcripts
-            </Link>
+            <ExternalLink
+              href="http://www.chakoteya.net/DoctorWho/"
+              text="chakoteya.net Transcripts"
+            />
           </li>
           <li>
-            <Link href="http://www.shannonsullivan.com/doctorwho/">
-              A Brief History of Time Travel
-            </Link>
+            <ExternalLink
+              href="http://www.shannonsullivan.com/doctorwho/"
+              text="A Brief History of Time Travel"
+            />
           </li>
         </ul>
         <button className={styles.btn} onClick={() => setModalOpen(false)}>

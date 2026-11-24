@@ -18,6 +18,7 @@ import randomiser from "../randomiser/opengraph-image.png";
 import HomeFooter from "@/components/HomePage/Footer/HomeFooter";
 import { useGlobalState } from "@/app/context/GlobalStateContext";
 import AppLinks from "./appLinks";
+import ExternalLink from "@/components/ExternalLink";
 
 const AppsPage = () => {
   const { goToContactForm, goToTab, contact, tabs } = useGlobalState();
@@ -158,9 +159,10 @@ const AppsPage = () => {
         <section className={styles.appsLandingCopy}>
           <aside className={styles.designCredit}>
             Bouncing Text animation by&nbsp;
-            <Link href="https://lenadesign.org/2021/05/18/css-bouncing-text-animation/">
-              Lena Design <ExternalLinkImage />
-            </Link>
+            <ExternalLink
+              href="https://lenadesign.org/2021/05/18/css-bouncing-text-animation/"
+              text="Lena Design"
+            />
           </aside>
           <p>
             Nine (and counting) apps; some requiring esoteric knowledge of&nbsp;
@@ -168,9 +170,10 @@ const AppsPage = () => {
           </p>
           <p>
             You can find more information on each on my&nbsp;
-            <Link href="https://github.com/aagb1884">
-              GitHub page <ExternalLinkImage />
-            </Link>
+            <ExternalLink
+              href="https://github.com/aagb1884"
+              text="GitHub page"
+            />
             .
           </p>
           <br />
